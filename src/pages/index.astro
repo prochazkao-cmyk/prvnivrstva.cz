@@ -133,25 +133,25 @@ const materialReads = [
     href: '/clanky/suseni-filamentu-kdy-jak-cim/',
     title: 'Sušení filamentu',
     meta: 'Článek · kdy a čím',
-    swatch: '#17150f',
+    swatch: '#ff4d00',
   },
   {
     href: '/rady-a-tipy/vlhky-filament/',
     title: 'Křupání není tryska',
     meta: 'Rada · vlhká cívka',
-    swatch: '#f4f1ea',
+    swatch: '#d9912a',
   },
   {
     href: '/rady-a-tipy/petg-prvni-vrstva/',
     title: 'PETG první vrstva',
     meta: 'Rada · ať se nesvaří s PEI',
-    swatch: '#ff6b35',
+    swatch: '#2e7fb8',
   },
   {
     href: '/rady-a-tipy/petg-a-struny/',
     title: 'PETG se táhne',
     meta: 'Rada · míň ofuku než u PLA',
-    swatch: '#3d6fbf',
+    swatch: '#23916b',
   },
 ];
 
@@ -255,8 +255,13 @@ const jsonLd = {
           }
         </ol>
 
-        <p class="kicker section-kicker-gap">L01 · Stroje</p>
-        <h2 id="zebricek-title" class="display">Nejlepší 3D tiskárny právě teď</h2>
+        <div class="section-head">
+          <div>
+            <p class="kicker section-kicker-gap">L01 · Stroje</p>
+            <h2 id="zebricek-title" class="display">Nejlepší 3D tiskárny právě teď</h2>
+          </div>
+          <a class="section-link" href="/stroje/">Všechny stroje</a>
+        </div>
         <p class="lede">
           Pořadí pro běžnou dílnu. Stejná známka neznamená stejný stroj — štítek říká, k čemu sedí.
         </p>
@@ -280,21 +285,26 @@ const jsonLd = {
           </ul>
           <a class="btn btn-accent" href="/clanky/suseni-filamentu-kdy-jak-cim/">Otevřít text o sušení</a>
         </div>
-        <ul class="material-list">
-          {
-            materialReads.map((item) => (
-              <li>
-                <a href={item.href}>
-                  <span class="swatch" style={`background:${item.swatch}`} aria-hidden="true" />
-                  <span>
+        <div class="material-table">
+          <p class="material-cols">
+            <span>Text</span>
+            <span>O čem</span>
+          </p>
+          <ul class="material-list">
+            {
+              materialReads.map((item) => (
+                <li>
+                  <a href={item.href}>
+                    <span class="swatch" style={`background:${item.swatch}`} aria-hidden="true" />
                     <strong>{item.title}</strong>
                     <small>{item.meta}</small>
-                  </span>
-                </a>
-              </li>
-            ))
-          }
-        </ul>
+                    <span class="material-go" aria-hidden="true">→</span>
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -326,8 +336,13 @@ const jsonLd = {
 
     <section class="band" id="poradna" aria-labelledby="poradna-title">
       <div class="page">
-        <p class="kicker section-kicker-gap">L04 · Tisková poradna</p>
-        <h2 id="poradna-title" class="display">Něco se pokazilo? Najdeme proč.</h2>
+        <div class="section-head">
+          <div>
+            <p class="kicker section-kicker-gap">L04 · Tisková poradna</p>
+            <h2 id="poradna-title" class="display">Něco se pokazilo? Najdeme proč.</h2>
+          </div>
+          <a class="section-link" href="/rady-a-tipy/">Celý atlas</a>
+        </div>
         <p class="lede">Osm potíží, osm textů. Filtr hledá v názvu a popisu, fotku za vás nepřečte.</p>
         <label class="atlas-search">
           <span class="sr-only">Hledat v poradně</span>
@@ -346,9 +361,6 @@ const jsonLd = {
             ))
           }
         </div>
-        <p class="meta">
-          <a href="/rady-a-tipy/">Všechny rady a tipy</a>
-        </p>
       </div>
     </section>
 
@@ -379,21 +391,28 @@ const jsonLd = {
 
     <section class="band" id="naradi" aria-labelledby="naradi-title">
       <div class="page">
-        <p class="kicker section-kicker-gap">L06 · Nástroje</p>
-        <h2 id="naradi-title" class="display">Kalkulačka a tři postupy</h2>
+        <div class="section-head">
+          <div>
+            <p class="kicker section-kicker-gap">L06 · Nástroje</p>
+            <h2 id="naradi-title" class="display">Kalkulačky pro dílnu</h2>
+          </div>
+        </div>
         <div class="tool-grid">
           <PrintCost />
           <a class="tool-card" href="/rady-a-tipy/kalibrace-flow/">
             <strong>Kalibrace průtoku</strong>
             <p>Z naměřené stěny spočítáte flow. Postup je v textu, ne v černé krabičce.</p>
+            <span class="tool-chip">výpočet v textu</span>
           </a>
           <a class="tool-card" href="/rady-a-tipy/z-offset/">
             <strong>Z-offset</strong>
             <p>Papír je hrubý start. Pravda je tvar první čáry.</p>
+            <span class="tool-chip">tvar čáry</span>
           </a>
           <a class="tool-card" href="/stroje/">
             <strong>Tiskárny vedle sebe</strong>
             <p>Čtyři profily a tabulka kinematiky, komory a softwaru.</p>
+            <span class="tool-chip">4 stroje</span>
           </a>
         </div>
       </div>
