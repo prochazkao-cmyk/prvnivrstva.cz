@@ -34,7 +34,7 @@ const nextAction =
     : materialIntent
       ? { href: '/materialy/', eyebrow: 'Materiál', title: 'Otevřít materiálovou referenci', copy: 'Porovnejte tiskové rozsahy, sušení, enclosure a hlavní kompromisy se zdroji.' }
       : article.category === 'rady-a-tipy'
-        ? { href: '/#poradna', eyebrow: 'Další symptom', title: 'Vrátit se do tiskové poradny', copy: 'Vyberte další problém podle toho, co na výtisku skutečně vidíte.' }
+        ? { href: '/problemy/', eyebrow: 'Další symptom', title: 'Vrátit se do tiskové poradny', copy: 'Vyberte další problém podle toho, co na výtisku skutečně vidíte.' }
         : { href: '/nastroje/', eyebrow: 'Další krok', title: 'Otevřít nástroje pro dílnu', copy: 'Spočítejte cenu výtisku, flow nebo pokračujte do praktické reference.' };
 
 const jsonLd: Record<string, unknown> = {
