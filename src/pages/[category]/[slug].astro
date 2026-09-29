@@ -3,6 +3,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
 import { getArticles, toArticle } from '../../lib/articles';
 import { categoryOrder, isCategory, type CategoryId } from '../../lib/categories';
+import { pickRelated } from '../../lib/related';
 
 type Entry =
   | CollectionEntry<'clanky'>
@@ -50,9 +51,7 @@ if (!isCategory(category)) {
 
 const article = toArticle(category, entry);
 const { Content } = await render(entry);
-const related = (await getArticles(category))
-  .filter((item) => item.href !== article.href)
-  .slice(0, 3);
+const related = pickRelated(article, await getArticles(), 4);
 ---
 
 <ArticleLayout article={article} related={related}>
