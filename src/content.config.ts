@@ -7,6 +7,7 @@ const articleSchema = z.object({
   description: z.string(),
   publishedAt: z.coerce.date(),
   updatedAt: z.coerce.date().optional(),
+  reviewedAt: z.coerce.date().optional(),
   author: z.string().default('Redakce První vrstvy'),
   featured: z.boolean().default(false),
   hero: z.boolean().default(false),
@@ -18,6 +19,9 @@ const articleSchema = z.object({
   verdict: z.string().optional(),
   score: z.number().min(1).max(10).optional(),
   note: z.string().optional(),
+  evidence: z.enum(['redakce', 'vyrobce', 'vlastni-mereni', 'kombinace', 'demo']).default('redakce'),
+  sourceNote: z.string().optional(),
+  disclosure: z.string().optional(),
 });
 
 function articles(directory: string) {

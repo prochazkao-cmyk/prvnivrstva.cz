@@ -1,0 +1,154 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const description =
+  'Jak První vrstva odděluje vlastní měření, údaje výrobce, redakční zkušenost, odhad a demonstrační data.';
+---
+
+<BaseLayout title="Jak testujeme" description={description}>
+  <main id="obsah" class="page section-page">
+    <nav class="crumbs" aria-label="Drobečková navigace">
+      <a href="/">Úvod</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Jak testujeme</span>
+    </nav>
+
+    <p class="kicker">Metodika · důvěra</p>
+    <h1 class="page-title">Měření, zkušenost a odhad nejsou totéž.</h1>
+    <p class="lede">
+      Když něco změříme, označíme to jako měření. Když opisujeme technickou specifikaci, řekneme, že je od výrobce. A když jde o redakční názor, neskrýváme ho za desetinné místo.
+    </p>
+
+    <div class="method-grid">
+      <section>
+        <span>01</span>
+        <h2>Vlastní měření</h2>
+        <p>
+          Hodnota vznikla při našem testu za popsaných podmínek. U výsledku má být dohledatelný stroj, materiál, profil, firmware a způsob měření, pokud mohou výsledek ovlivnit.
+        </p>
+      </section>
+      <section>
+        <span>02</span>
+        <h2>Údaj výrobce</h2>
+        <p>
+          Rozměr, teplotní limit nebo jiná specifikace převzatá z dokumentace není naše měření. Před nákupem doporučujeme ověřit aktuální revizi přímo u výrobce.
+        </p>
+      </section>
+      <section>
+        <span>03</span>
+        <h2>Redakční zkušenost</h2>
+        <p>
+          Praktický závěr z používání, servisu nebo práce v dílně. Může být velmi užitečný, ale není to laboratorní číslo. Proto ho jako laboratorní číslo neprezentujeme.
+        </p>
+      </section>
+      <section>
+        <span>04</span>
+        <h2>Odhad a demo</h2>
+        <p>
+          Odhad ceny, návrh skóre nebo demonstrační hodnota slouží pro orientaci či vývoj webu. Musí být viditelně označená a nesmí se tvářit jako živý ceník nebo hotový test.
+        </p>
+      </section>
+    </div>
+
+    <div class="article-body method-copy">
+      <h2>Co chceme u recenzí měřit</h2>
+      <p>Metodika se bude rozšiřovat podle kategorie produktu. U FDM tiskáren dává smysl sledovat zejména:</p>
+      <ul>
+        <li>opakovatelnou kvalitu první vrstvy,</li>
+        <li>rozměrovou přesnost na stejném testovacím dílu,</li>
+        <li>reálný čas stejné úlohy, ne jen marketingovou rychlost,</li>
+        <li>hlučnost při definovaném režimu a vzdálenosti,</li>
+        <li>spotřebu při zahřátí a během reprezentativního tisku,</li>
+        <li>spolehlivost delších a opakovaných tisků,</li>
+        <li>servisovatelnost, dostupnost dílů a kvalitu dokumentace,</li>
+        <li>software a celý workflow od modelu po hotový díl.</li>
+      </ul>
+
+      <h2>Skóre není fyzikální veličina</h2>
+      <p>
+        Číselné skóre je zkratka redakčního verdiktu. Nesmí předstírat přesnost, kterou nemáme. Proto nezveřejníme číselnou známku u stroje, kde máme jen koncept karty nebo neověřený profil.
+      </p>
+
+      <h2>Produkty od výrobců a partnerů</h2>
+      <p>
+        Zapůjčený nebo poskytnutý produkt může být testován stejně jako vlastní kus. U článku ale uvedeme vztah k produktu. Zapůjčení, affiliate ani sponzorství nesmí kupovat skóre, pořadí nebo závěr.
+      </p>
+
+      <h2>Aktualizace</h2>
+      <p>
+        Firmware, slicer a revize hardwaru mohou závěr změnit. Proto mají články datum publikace, aktualizace a tam, kde je to důležité, i datum poslední redakční kontroly.
+      </p>
+    </div>
+
+    <aside class="method-cta">
+      <div>
+        <p class="kicker">Našli jste chybu?</p>
+        <h2>Opravíme ji raději než budeme mít „pravdu“.</h2>
+      </div>
+      <a class="btn btn-ink" href="/o-nas/">Kontakt na redakci</a>
+    </aside>
+  </main>
+</BaseLayout>
+
+<style>
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 2.5rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-line);
+  }
+
+  .method-grid section {
+    background: var(--color-card);
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .method-grid span {
+    color: var(--color-accent-ink);
+    font-size: .76rem;
+    font-weight: 760;
+    letter-spacing: .08em;
+  }
+
+  .method-grid h2 {
+    margin: .7rem 0 .5rem;
+    font-size: 1.35rem;
+  }
+
+  .method-grid p {
+    margin: 0;
+    color: var(--color-ink-soft);
+  }
+
+  .method-copy {
+    margin-top: 3rem;
+    max-width: 68ch;
+  }
+
+  .method-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    padding: 1.5rem 0;
+  }
+
+  .method-cta h2 {
+    margin: .4rem 0 0;
+    max-width: 22em;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    line-height: 1.05;
+  }
+
+  @media (max-width: 720px) {
+    .method-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

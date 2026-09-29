@@ -1,0 +1,205 @@
+html[data-brand-theme='prusa'] {
+  --color-paper: #f3efe6;
+  --color-card: #fffdf8;
+  --color-line: #e4ddd2;
+  --color-accent: #ff6b35;
+  --color-accent-ink: #b8431f;
+  --color-cyan: #5cffd6;
+}
+
+html[data-brand-theme='bambu'] {
+  --color-paper: #f1f4f1;
+  --color-card: #fbfdfb;
+  --color-line: #d9e1dc;
+  --color-accent: #0aa889;
+  --color-accent-ink: #006c59;
+  --color-cyan: #56d6bd;
+}
+
+html[data-brand-theme='bambu'] body {
+  background: var(--color-paper);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  .site-header,
+  .rank-card,
+  .hero-feature,
+  .material-band {
+    transition:
+      background-color 220ms ease,
+      border-color 220ms ease,
+      color 220ms ease;
+  }
+}
+
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: 0.35rem;
+  border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 999px;
+  padding: 0.16rem;
+  background: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+.theme-choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: inherit;
+  padding: 0.25rem 0.48rem;
+  font-size: 0.72rem;
+  font-weight: 650;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0.68;
+}
+
+.theme-choice[aria-pressed='true'] {
+  background: var(--color-card);
+  color: var(--color-ink);
+  box-shadow: 0 1px 1px rgba(17, 17, 16, 0.08), 0 4px 12px rgba(17, 17, 16, 0.07);
+  opacity: 1;
+}
+
+.theme-dot {
+  width: 0.46rem;
+  height: 0.46rem;
+  border-radius: 999px;
+  box-shadow: 0 0 0 1px rgba(17, 17, 16, 0.12);
+}
+
+.theme-dot-prusa {
+  background: #ff6b35;
+}
+
+.theme-dot-bambu {
+  background: #0aa889;
+}
+
+.theme-switch-mobile {
+  margin: 0.65rem 0 0;
+  align-self: flex-start;
+}
+
+.hero-title,
+.display,
+.page-title {
+  font-family: 'Iowan Old Style', 'Baskerville', 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+}
+
+.hero {
+  position: relative;
+  overflow: clip;
+}
+
+.hero .extrusion-trace {
+  position: absolute;
+  right: -7rem;
+  bottom: -2rem;
+  width: min(52rem, 68vw);
+  color: var(--color-accent);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+.extrusion-trace {
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.extrusion-trace path:nth-child(2) {
+  opacity: 0.76;
+}
+
+.extrusion-trace path:nth-child(3) {
+  opacity: 0.52;
+}
+
+.extrusion-trace .trace-route {
+  stroke-width: 2;
+  stroke-dasharray: 8 10;
+  opacity: 0.7;
+}
+
+.extrusion-trace .trace-node {
+  fill: var(--color-paper);
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+/* The signature nozzle illustration follows the chosen accent without using manufacturer artwork. */
+.hero-scene .bead {
+  stroke: var(--color-accent) !important;
+}
+
+.hero-scene .bead-base {
+  stroke: var(--color-accent-ink) !important;
+}
+
+html[data-brand-theme='bambu'] .hero-scene [fill='#ff4d00'],
+html[data-brand-theme='bambu'] .hero-scene [fill='#ff7a3c'],
+html[data-brand-theme='bambu'] .hero-scene [fill='#ff8a4a'] {
+  fill: var(--color-accent) !important;
+}
+
+html[data-brand-theme='bambu'] .hero-scene .nozzle {
+  filter:
+    drop-shadow(0 16px 14px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 2px 6px color-mix(in srgb, var(--color-accent) 35%, transparent)) !important;
+}
+
+html[data-brand-theme='bambu'] .hero-feature-photo,
+html[data-brand-theme='bambu'] .rank-photo {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 12px,
+      rgba(17, 35, 30, 0.055) 12px 13px
+    ),
+    linear-gradient(180deg, #f0f5f1, #e5eee8);
+}
+
+.rank-card:hover,
+.hero-feature:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 55%, transparent) !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .extrusion-trace .trace-route {
+    stroke-dasharray: 9 12;
+    animation: extrusion-dash 18s linear infinite;
+  }
+}
+
+@keyframes extrusion-dash {
+  to {
+    stroke-dashoffset: -168;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-desktop .theme-switch {
+    display: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero .extrusion-trace {
+    right: -14rem;
+    bottom: -1rem;
+    width: 44rem;
+    opacity: 0.14;
+  }
+}

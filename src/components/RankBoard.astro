@@ -13,7 +13,7 @@ const Heading = cardHeading;
 
 <div data-rank-board>
   <div class="rank-toolbar">
-    <div class="filter-row" role="group" aria-label="Filtr žebříčku">
+    <div class="filter-row" role="group" aria-label="Filtr strojů">
       {
         rankFilters.map((filter, index) => (
           <button
@@ -40,7 +40,7 @@ const Heading = cardHeading;
           data-price={card.priceFrom ?? ''}
         >
           <div class="rank-photo">
-            <span class="badge-num">#{card.order}</span>
+            <span class="badge-num">PV {String(card.order).padStart(2, '0')}</span>
             <span class="badge-cat">{card.badge}</span>
             <span class="photo-label">{card.photoLabel}</span>
           </div>
@@ -50,7 +50,7 @@ const Heading = cardHeading;
             </Heading>
             <p class="rank-spec">{card.specLine}</p>
             <div class="rank-score">
-              {card.score !== null ? (
+              {card.score !== null && !card.scoreDraft ? (
                 <span class="score-orb">
                   {formatScoreBadge(card.score)}
                   <span class="sr-only"> z 10</span>
@@ -61,7 +61,7 @@ const Heading = cardHeading;
                 </span>
               )}
               <div>
-                <p class="score-kicker">Redakce</p>
+                <p class="score-kicker">{card.scoreDraft ? 'Bez ověřené známky' : 'Redakční skóre'}</p>
                 {card.reviewHref ? (
                   <a class="score-caption" href={card.reviewHref}>
                     {card.scoreCaption}

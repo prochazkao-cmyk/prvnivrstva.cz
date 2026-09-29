@@ -1,0 +1,150 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../lib/site';
+
+const description =
+  'Informace pro výrobce, distributory a firmy, které chtějí spolupracovat s První vrstvou bez vlivu na redakční verdikt.';
+const mail = `mailto:${site.email}?subject=${encodeURIComponent('Spolupráce s První Vrstvou')}`;
+---
+
+<BaseLayout title="Spolupráce" description={description}>
+  <main id="obsah" class="page section-page">
+    <nav class="crumbs" aria-label="Drobečková navigace">
+      <a href="/">Úvod</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Spolupráce</span>
+    </nav>
+
+    <p class="kicker">Pro výrobce · distributory · firmy</p>
+    <h1 class="page-title">Spolupráce ano. Koupený verdikt ne.</h1>
+    <p class="lede">
+      Pokud máte produkt, data nebo zkušenost, která českým tiskařům pomůže udělat lepší rozhodnutí, chceme o ní vědět. Komerční vztah ale musí být čitelný a oddělený od hodnocení.
+    </p>
+
+    <div class="partner-grid">
+      <section>
+        <span>01</span>
+        <h2>Produkt k testu</h2>
+        <p>
+          Tiskárna, filament, sušička, tryska, skener nebo software. Uvedeme, zda byl produkt zapůjčen, poskytnut nebo koupen redakcí.
+        </p>
+      </section>
+      <section>
+        <span>02</span>
+        <h2>Technická data</h2>
+        <p>
+          Datasheet, změna firmwaru, servisní informace nebo oprava faktické chyby jsou vítané. Zdroj ale zůstane označený jako zdroj výrobce.
+        </p>
+      </section>
+      <section>
+        <span>03</span>
+        <h2>Placené partnerství</h2>
+        <p>
+          Sponzorovaný formát, newsletter nebo banner může existovat, až pro něj bude vhodné publikum. Vždy bude jasně označený a oddělený od redakčního skóre.
+        </p>
+      </section>
+      <section>
+        <span>04</span>
+        <h2>Affiliate a leady</h2>
+        <p>
+          Odkaz může vydělávat provizi pouze tehdy, když přirozeně navazuje na rozhodnutí čtenáře. Provize nesmí měnit pořadí, doporučení ani slabiny produktu.
+        </p>
+      </section>
+    </div>
+
+    <div class="article-body partner-copy">
+      <h2>Co si u nás koupit nejde</h2>
+      <ul>
+        <li>lepší skóre nebo vyšší pozici v přehledu,</li>
+        <li>odstranění relevantní slabiny z recenze,</li>
+        <li>skrytý advertorial vydávaný za nezávislý test,</li>
+        <li>falešné „nejlepší“ ocenění bez kritéria a metodiky.</li>
+      </ul>
+
+      <h2>Co naopak firmy dostanou</h2>
+      <p>
+        Publikum, které nepřišlo kvůli náhodnému banneru, ale protože právě řeší tiskárnu, materiál, závadu nebo výrobní workflow. To je hodnotnější než velké číslo návštěv bez nákupního nebo technického záměru.
+      </p>
+
+      <h2>Co poslat v prvním e-mailu</h2>
+      <ul>
+        <li>co přesně nabízíte k testu nebo spolupráci,</li>
+        <li>pro koho je produkt určený a čím se liší,</li>
+        <li>technický podklad nebo odkaz na dokumentaci,</li>
+        <li>zda jde o zápůjčku, dar, placené partnerství nebo jen redakční tip,</li>
+        <li>kontakt na člověka, který umí odpovědět na technické otázky.</li>
+      </ul>
+    </div>
+
+    <aside class="partner-cta">
+      <div>
+        <p class="kicker">Máte něco, co stojí za ověření?</p>
+        <h2>Napište konkrétně. Ozveme se konkrétně.</h2>
+      </div>
+      <a class="btn btn-accent" href={mail}>Nabídnout spolupráci →</a>
+    </aside>
+  </main>
+</BaseLayout>
+
+<style>
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 2.5rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-line);
+  }
+
+  .partner-grid section {
+    background: var(--color-card);
+    padding: clamp(1.25rem, 3vw, 2rem);
+  }
+
+  .partner-grid span {
+    color: var(--color-accent-ink);
+    font-size: .76rem;
+    font-weight: 760;
+    letter-spacing: .08em;
+  }
+
+  .partner-grid h2 {
+    margin: .7rem 0 .5rem;
+    font-size: 1.35rem;
+  }
+
+  .partner-grid p {
+    margin: 0;
+    color: var(--color-ink-soft);
+  }
+
+  .partner-copy {
+    margin-top: 3rem;
+    max-width: 68ch;
+  }
+
+  .partner-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    margin-top: 4rem;
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    padding: 1.5rem 0;
+  }
+
+  .partner-cta h2 {
+    margin: .4rem 0 0;
+    max-width: 22em;
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    line-height: 1.05;
+  }
+
+  @media (max-width: 720px) {
+    .partner-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

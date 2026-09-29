@@ -1,31 +1,77 @@
 ---
-title: "PETG se táhne, protože ho chladíte jako PLA"
-description: "Míň ofuku, sušší cívka, a první vrstvu nemačkat jako u PLA. Hladké PEI umí PETG přivařit k desce."
+title: "PETG dělá struny — než zvednete retrakci, zkontrolujte tyhle čtyři věci"
+description: "PETG stringing často není problém jedné hodnoty v sliceru. Začněte vlhkostí, teplotou, travel pohyby a až potom dolaďujte retrakci."
 publishedAt: 2026-09-18
+updatedAt: 2026-09-29
+reviewedAt: 2026-09-29
+level: "začátečník"
+technologies:
+  - "FDM"
 tags:
-  - PETG
-  - stringing
-  - chlazení
+  - "quick-win"
+  - "PETG"
+  - "stringing"
+  - "retrakce"
+  - "vlhkost"
+  - "troubleshooting"
+evidence: "redakce"
+sourceNote: "Redakční diagnostický postup. Přesné teploty a limity retrakce vždy ověřte pro konkrétní filament a extruder."
 ---
 
 import Takeaway from '../../components/Takeaway.astro';
 
-PETG není „PLA, co víc vydrží“. Chová se mastněji, teče dýl a k některým deskám se váže tak, že odejde povrch podložky. Struny — tenké nitky mezi ostrůvky — skoro vždycky znamenají jednu ze tří věcí: moc horkou trysku, moc ofuku ve špatnou chvíli, nebo vodu v cívce. V tom pořadí je lákavé vrtat retrakci. V tom pořadí je to taky často zbytečné.
+## Rychlá odpověď
 
-## Ofuk
+Když PETG táhne pavučiny mezi dvěma částmi modelu, **nezvyšujte retrakci naslepo**. Projděte problém v tomto pořadí:
 
-PLA chce ofuk, aby převisy ztuhly. PETG při stejném ofuku špatně svařuje vrstvy a táhne vlákno, protože povrch taveniny se chová nervózně. Začněte s ofukem dílu na 0–20 %. Převis, který padá, si zaslouží lokálně víc. Celý díl „pro jistotu na 100 %“ je zvyk z PLA profilu, který jste přejmenovali na PETG a nic jiného nezměnili.
+1. je filament suchý,
+2. není teplota zbytečně vysoká,
+3. travel pohyby dávají smysl,
+4. teprve potom dolaďte retrakci.
 
-Teplota trysky většinou 230–250 °C, deska 70–85 °C. Když se to táhne a výtisk je lesklý až slizký, zkuste srazit trysku o 5 °C dřív, než zdvojnásobíte retrakci. Retrakce u bowdenu a u přímého extruderu nejsou stejné číslo. Cizí profil s 8 mm retrakce na přímém náhonu vám udělá zácpu, ne čistý roh.
+Pokud filament u trysky praská, bublá nebo dělá nepravidelný matný povrch, začněte článkem [Vlhký filament](/rady-a-tipy/vlhky-filament/). Mokré PETG umí udělat víc strun, než spraví jakákoli rozumná retrakce.
 
-## První vrstva a deska
+## 1. Vlhkost první, slicer druhý
 
-U PLA se vyplatí vrstvu pořádně rozmáčknout. U PETG míň. Moc nízký offset z PETG udělá patku, která drží líp než fólie pod ní. Hladké PEI a PETG je známá dvojice: po vychladnutí někdy nejde sundat nic, někdy jde sundat i kus desky. Texturované PEI, nebo tenká vrstva lepidla jako separátor, je nuda, která šetří podložku. Lepidlo tady není „aby to drželo“. Je „aby to pustilo“.
+PETG přijímá vlhkost ze vzduchu. Voda se v hotendu mění v páru a tavenina pak neteče konzistentně. Výsledkem nejsou jen struny, ale často i drobné bubliny a horší povrch.
 
-Rychlost obvodů držte níž než u PLA profilu, ze kterého jste vyšli. PETG odpustí méně přejezdů naprázdno přes už vytištěný detail. Zkuste zapnout zvedání trysky při přejezdu (Z-hop), ale malé. Velký hop jen nosí kapku na špičce o dům dál.
+**Diagnostický test:** usušte část cívky a vytiskněte stejný model se stejným profilem. Pokud se výsledek výrazně zlepší, problém nebyl primárně v retrakci.
 
-Voda v cívce dělá z PETG struny i při slušném profilu. Když už jste teplotu a ofuk srovnali a nitky zůstávají, nechte cívku usušit. Postup je v textu [Křupání v extruderu](/rady-a-tipy/vlhky-filament/).
+## 2. Teplota
+
+Vyšší teplota snižuje viskozitu taveniny a může stringing zhoršit. Pokud tisknete na horní hraně doporučeného rozsahu a nemáte důvod tam být, zkuste malý krok dolů.
+
+Nedělejte velké skoky. Sledujte zároveň spojení vrstev a kvalitu povrchu. Cílem není „nejnižší teplota bez strun“, ale teplota, při které díl zůstává mechanicky i vizuálně v pořádku.
+
+## 3. Travel a cesta trysky
+
+Struny vznikají hlavně při přejezdu přes prázdný prostor. Slicer může některé přejezdy vést uvnitř již vytištěné oblasti nebo omezit zbytečné cestování nad volným prostorem.
+
+Nepřehánějte to ale s funkcemi typu „avoid crossing“ na úkor extrémně dlouhých přejezdů. Delší cesta může problém jen přesunout.
+
+## 4. Retrakce až nakonec
+
+Přímý extruder a bowden potřebují jiné hodnoty. U direct drive bývá obvykle potřeba menší retrakce než u dlouhého bowdenu.
+
+Ladění:
+
+- měňte jeden parametr,
+- dělejte malé kroky,
+- používejte stejný testovací model,
+- zapisujte si výsledek.
+
+Příliš velká nebo příliš častá retrakce může zhoršit stabilitu toku, přidat mezery po návratu trysky a u některých hotendů zvýšit riziko ucpávání.
+
+## Co ještě ovlivňuje výsledek
+
+- příliš nízká rychlost travelu,
+- unikající materiál z přehřáté trysky,
+- nekonzistentní flow,
+- opotřebená nebo znečištěná tryska,
+- profil převzatý z jiného stroje bez úprav.
 
 <Takeaway>
-PETG nechlaďte jako PLA. Nejdřív míň ofuku a suchá cívka, teprve potom retrakce. Na hladké PEI počítejte se separátorem, ať první vrstva nepřebije cenu desky.
+Nejdřív usušte PETG a ověřte teplotu. Pak zkontrolujte travel. Retrakci dolaďujte až nakonec a po malých krocích. Jakmile struny zmizí bez nových vad, přestaňte ladit.
 </Takeaway>
+
+Pokud máte zároveň problém s první vrstvou, neřešte oba problémy jedním profilem. Nejprve stabilizujte [PETG první vrstvu](/rady-a-tipy/petg-prvni-vrstva/) a stringing dolaďte zvlášť.

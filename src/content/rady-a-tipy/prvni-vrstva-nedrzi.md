@@ -2,10 +2,18 @@
 title: "První vrstva nedrží. Než koupíte novou desku, změřte tohle"
 description: "Většina odlepených výtisků není špatná podložka. Je to výška trysky, špína, průvan, nebo rychlost, kterou profil zdědil od někoho jiného."
 publishedAt: 2026-09-22
+updatedAt: 2026-09-29
+reviewedAt: 2026-09-29
+level: "začátečník"
+technologies:
+  - "FDM"
 tags:
   - první vrstva
   - adheze
   - deska
+  - troubleshooting
+evidence: "redakce"
+sourceNote: "Redakční diagnostický postup. Teploty a péči o povrch vždy ověřte pro konkrétní materiál a podložku."
 ---
 
 Nová PEI deska je nejdražší způsob, jak odložit diagnostiku o týden. Když první vrstva nedrží, projděte čtyři věci v tomhle pořadí. Až když projdou a díl se pořád odlepí, řešte povrch.
@@ -16,19 +24,21 @@ Tryska musí vrstvu lehce rozmáčknout. Nitka má být sploštělá, jednotliv�
 
 ## 2. Deska je špinavá, i když vypadá čistě
 
-Isopropanol stáhne mastnotu. Cukr z prstů, zbytky lepidla a prach z brusného filamentu ne. Jednou za čas podložku umyjte saponátem na nádobí, teplou vodou, a nechte uschnout. Neutírejte ji hadrem z dílny, kterým jste předtím mazali tyče.
+Isopropanol stáhne část mastnoty. Cukr z prstů, zbytky lepidla a prach z dílny mohou na povrchu zůstat. Jednou za čas podložku umyjte způsobem, který doporučuje výrobce konkrétního povrchu, a nechte ji dobře uschnout. Neutírejte ji hadrem z dílny, kterým jste předtím mazali tyče.
 
-Texturované PEI drží PLA a PETG často líp než hladké, a taky se líp pouští po vychladnutí. Hladké PEI umí PETG přivařit tak, že odejde kus folie. Na hladké podložce u PETG počítejte s oddělovací vrstvou (tyčinka, tenký film lepidla), ne s „čím víc přitlačím, tím líp“.
+Texturované a hladké PEI se chovají jinak podle materiálu. U PETG může být na hladkém povrchu vhodná separační vrstva; cílem není „čím víc přitlačím, tím líp“.
 
 ## 3. Teplota desky podle materiálu, ne podle zvyku
 
-Orientačně: PLA 55–60 °C, PETG 70–85 °C, ABS 100–110 °C. Když jedete PLA na 80 °C, protože „to tak bylo u PETG“, první vrstva se sloní a rohy se chovají divně. Když jedete ABS na 60 °C, protože profil je od PLA, nepřilepí se nic.
+Nastavení berte z ověřeného profilu nebo doporučení výrobce konkrétního filamentu. PLA, PETG i ABS/ASA mají jiné teplotní potřeby a univerzální číslo neexistuje.
+
+Pokud profil fungoval a problém se objevil po změně materiálu, začněte právě zde — ne nákupem nové podložky.
 
 ## 4. Rychlost a průvan
 
-První vrstva 15–30 mm/s. Profily psané na CoreXY umí první vrstvu poslat zbytečně rychle, hlavně když jste jen přepnuli průměr trysky a nic jiného. Ofuk dílu na první vrstvě vypněte. Okno za zády tiskárny je taky ofuk, jen ho nemáte v sliceru.
+První vrstva není místo pro rekord. Pokud stopa vypadá správně, ale nestíhá přilnout, zpomalte ji a sledujte změnu. Ofuk dílu na začátku tisku nastavujte podle materiálu a profilu. Otevřené okno nebo proud studeného vzduchu může u citlivějších materiálů přidat další proměnnou.
 
 <aside class="takeaway">
   <p class="takeaway-label">Praktický závěr</p>
-  <p>Nejdřív sploštělá první vrstva, čistá deska saponátem a správná teplota podložky. Nový plát kupujte, až tohle třikrát za sebou selže na suchém filamentu a bez průvanu.</p>
+  <p>Nejdřív zkontrolujte tvar první čáry, čistotu podložky, teplotní profil a rychlost. Měňte jednu věc najednou. Nový plát kupujte až tehdy, když víte, že problém není v nastavení nebo znečištění.</p>
 </aside>
