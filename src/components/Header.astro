@@ -38,7 +38,17 @@ function isCurrent(href: string): boolean {
           </a>
         ))
       }
-      <a class="nav-cta" href="/#zebricek">Žebříček</a>
+      <div class="theme-switch" role="group" aria-label="Barevný styl webu">
+        <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
+          <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
+          Bambu
+        </button>
+        <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
+          <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
+          Průša
+        </button>
+      </div>
+      <a class="nav-cta" href="/#poradna">Vyřešit problém</a>
     </nav>
 
     <details class="nav-mobile">
@@ -55,7 +65,17 @@ function isCurrent(href: string): boolean {
             </a>
           ))
         }
-        <a class="nav-cta" href="/#zebricek">Otevřít žebříček</a>
+        <div class="theme-switch theme-switch-mobile" role="group" aria-label="Barevný styl webu">
+          <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
+            <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
+            Bambu
+          </button>
+          <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
+            <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
+            Průša
+          </button>
+        </div>
+        <a class="nav-cta" href="/#poradna">Vyřešit problém</a>
       </nav>
     </details>
   </div>
@@ -64,8 +84,9 @@ function isCurrent(href: string): boolean {
 <script>
   const headers = document.querySelectorAll<HTMLElement>('[data-header]');
   const hero = document.querySelector('.hero');
+  const themeButtons = document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]');
 
-  const update = () => {
+  const updateHeader = () => {
     const scrolled = window.scrollY > 8;
     for (const header of headers) {
       header.classList.toggle('is-scrolled', scrolled);
@@ -80,7 +101,32 @@ function isCurrent(href: string): boolean {
     }
   };
 
-  update();
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
+  const applyTheme = (theme: 'prusa' | 'bambu', persist = true) => {
+    document.documentElement.dataset.brandTheme = theme;
+    for (const button of themeButtons) {
+      button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
+    }
+    const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
+    if (meta) meta.content = theme === 'bambu' ? '#f1f4f1' : '#f3efe6';
+    if (persist) {
+      try {
+        localStorage.setItem('pv-theme', theme);
+      } catch {}
+      window.dispatchEvent(new CustomEvent('pv:theme-selected', { detail: { theme } }));
+    }
+  };
+
+  const initialTheme = document.documentElement.dataset.brandTheme === 'bambu' ? 'bambu' : 'prusa';
+  applyTheme(initialTheme, false);
+
+  for (const button of themeButtons) {
+    button.addEventListener('click', () => {
+      const theme = button.dataset.themeChoice === 'bambu' ? 'bambu' : 'prusa';
+      applyTheme(theme);
+    });
+  }
+
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
+  window.addEventListener('resize', updateHeader);
 </script>
