@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../lib/site';
+
+const description =
+  'První vrstva je redakční rozcestník 3D tisku pro Česko a EU. Píšeme z dílny, ne z tiskové zprávy.';
+---
+
+<BaseLayout title="O nás" description={description}>
+  <main id="obsah" class="mx-auto max-w-6xl px-5 py-10">
+    <nav class="crumbs" aria-label="Drobečková navigace">
+      <a href="/">Úvod</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">O nás</span>
+    </nav>
+    <p class="kicker">Redakce</p>
+    <h1 class="mt-2 max-w-[16ch] font-serif text-[clamp(2.4rem,5vw,3.8rem)] leading-none font-semibold tracking-tight">
+      Píšeme, jako bychom stáli u stejné tiskárny.
+    </h1>
+    <div class="article-body mt-8 max-w-[68ch]">
+      <p>
+        {site.name} je katalog a redakce 3D tisku pro lidi v Česku a EU, kteří už mají (nebo brzy
+        budou mít) stroj na stole. Nejsme obchod. Neprodáváme tiskárny, filament ani „komunitu“.
+      </p>
+      <h2>Jak vypadá text, který sem pustíme</h2>
+      <ul>
+        <li>Je v češtině a dá se podle něj něco udělat ještě ten večer.</li>
+        <li>Řekne, kdy rada neplatí. Uzavřená tiskárna a otevřený rám nejsou stejný problém.</li>
+        <li>Recenze je poznámka s verdiktem, ne unboxing. Když test nemáme, nenapíšeme, že máme.</li>
+        <li>Novinka musí změnit nákup, údržbu, nebo způsob, jakým čtete reklamu. Jinak do rubriky nepatří.</li>
+      </ul>
+      <h2>Co tu schválně není</h2>
+      <p>
+        Slevové kódy, žebříčky „nejlepší tiskárna 2026“ bez kritéria a převyprávěné specifikace z
+        webu výrobce. Srovnání Prusa a Bambu je u nás otázka servisu a komory, ne otázka loga.
+      </p>
+      <h2>Kontakt</h2>
+      <p>
+        Schránka <a href={`mailto:${site.email}`}>{site.email}</a> je zatím zástupná — adresa, na
+        kterou redakce míří, ne potvrzení, že už v ní někdo čte. Až bude ostře, bude to tahle.
+      </p>
+    </div>
+  </main>
+</BaseLayout>

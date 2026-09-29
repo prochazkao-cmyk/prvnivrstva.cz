@@ -1,0 +1,57 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import { getArticles, toArticle } from '../../lib/articles';
+import { categoryOrder, isCategory, type CategoryId } from '../../lib/categories';
+
+type Entry =
+  | CollectionEntry<'clanky'>
+  | CollectionEntry<'rady-a-tipy'>
+  | CollectionEntry<'recenze'>
+  | CollectionEntry<'novinky'>
+  | CollectionEntry<'technologie'>;
+
+export async function getStaticPaths() {
+  const groups = await Promise.all(
+    categoryOrder.map(async (category) => {
+      const entries =
+        category === 'clanky'
+          ? await getCollection('clanky')
+          : category === 'rady-a-tipy'
+            ? await getCollection('rady-a-tipy')
+            : category === 'recenze'
+              ? await getCollection('recenze')
+              : category === 'novinky'
+                ? await getCollection('novinky')
+                : await getCollection('technologie');
+      return entries
+        .filter((entry) => !entry.data.draft)
+        .map((entry) => ({
+          params: { category, slug: entry.id },
+          props: { entry, category },
+        }));
+    }),
+  );
+  return groups.flat();
+}
+
+interface Props {
+  entry: Entry;
+  category: CategoryId;
+}
+
+const { entry, category } = Astro.props;
+if (!isCategory(category)) {
+  throw new Error(`Neznámá rubrika: ${category}`);
+}
+
+const article = toArticle(category, entry);
+const { Content } = await render(entry);
+const related = (await getArticles(category))
+  .filter((item) => item.href !== article.href)
+  .slice(0, 3);
+---
+
+<ArticleLayout article={article} related={related}>
+  <Content />
+</ArticleLayout>
