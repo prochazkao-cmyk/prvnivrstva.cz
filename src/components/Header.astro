@@ -1,7 +1,13 @@
 ---
+import BrandMark from './BrandMark.astro';
 import { categoryOrder, categories } from '../lib/categories';
 import { site } from '../lib/site';
 
+interface Props {
+  tone?: 'overlay' | 'solid';
+}
+
+const { tone = 'solid' } = Astro.props;
 const pathname = Astro.url.pathname;
 const links = [
   ...categoryOrder.map((id) => ({ href: categories[id].href, label: categories[id].label })),
@@ -17,50 +23,64 @@ function isCurrent(href: string): boolean {
 ---
 
 <a class="skip-link" href="#obsah">Přeskočit na obsah</a>
-<header class="site-header sticky top-0 z-40 border-t-8 border-copper bg-ink text-paper">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 lg:py-4">
-    <a href="/" class="flex min-w-0 items-center gap-3 text-paper no-underline">
-      <img src="/logo.svg" width="44" height="44" alt="" />
-      <span class="min-w-0">
-        <span class="block font-serif text-2xl leading-none font-semibold tracking-tight">
-          {site.name}
-        </span>
-        <span class="mt-1 hidden text-sm text-[#ddd6c8] sm:block">{site.tagline}</span>
-      </span>
+<header class:list={['site-header', { 'is-light': tone === 'solid' }]} data-header={tone}>
+  <div class="page header-bar">
+    <a href="/" class="brand">
+      <BrandMark />
+      <span class="brand-name">{site.name}</span>
     </a>
 
-    <nav class="nav-desktop hidden items-center gap-x-4 xl:flex" aria-label="Hlavní">
+    <nav class="nav-desktop" aria-label="Hlavní">
       {
         links.map((link) => (
-          <a
-            class="nav-link"
-            href={link.href}
-            aria-current={isCurrent(link.href) ? 'page' : undefined}
-          >
+          <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
             {link.label}
           </a>
         ))
       }
+      <a class="nav-cta" href="/#zebricek">Žebříček</a>
     </nav>
 
-    <details class="nav-mobile xl:hidden">
-      <summary class="inline-flex items-center gap-2 py-2">
+    <details class="nav-mobile">
+      <summary>
+        <span class="menu-icon" aria-hidden="true"></span>
         <span class="label-closed">Menu</span>
         <span class="label-open">Zavřít</span>
       </summary>
-      <nav class="absolute inset-x-0 top-full border-t border-white/15 bg-ink px-5 py-4" aria-label="Hlavní, mobilní">
+      <nav aria-label="Hlavní, mobilní">
         {
           links.map((link) => (
-            <a
-              class="nav-link block py-2 text-lg"
-              href={link.href}
-              aria-current={isCurrent(link.href) ? 'page' : undefined}
-            >
+            <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
               {link.label}
             </a>
           ))
         }
+        <a class="nav-cta" href="/#zebricek">Otevřít žebříček</a>
       </nav>
     </details>
   </div>
 </header>
+
+<script>
+  const headers = document.querySelectorAll<HTMLElement>('[data-header]');
+  const hero = document.querySelector('.hero');
+
+  const update = () => {
+    const scrolled = window.scrollY > 8;
+    for (const header of headers) {
+      header.classList.toggle('is-scrolled', scrolled);
+      if (header.dataset.header !== 'overlay') continue;
+      if (!hero) {
+        header.classList.add('is-light');
+        continue;
+      }
+      const headerBottom = header.getBoundingClientRect().bottom;
+      const heroBottom = hero.getBoundingClientRect().bottom;
+      header.classList.toggle('is-light', heroBottom <= headerBottom + 1);
+    }
+  };
+
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+</script>

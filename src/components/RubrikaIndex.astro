@@ -1,0 +1,31 @@
+---
+import { categories, categoryOrder, type CategoryId } from '../lib/categories';
+import { textCount } from '../lib/format';
+
+interface Props {
+  counts?: Partial<Record<CategoryId, number>>;
+}
+
+const { counts } = Astro.props;
+---
+
+<ol class="rubrika-index">
+  {
+    categoryOrder.map((id, index) => {
+      const category = categories[id];
+      const number = String(index + 1).padStart(2, '0');
+      return (
+        <li>
+          <a href={category.href}>
+            <span class="rubrika-num">{number}</span>
+            <span class="rubrika-name">{category.label}</span>
+            <span class="rubrika-desc">{category.description}</span>
+            {counts && counts[id] !== undefined && (
+              <span class="rubrika-count">{textCount(counts[id] ?? 0)}</span>
+            )}
+          </a>
+        </li>
+      );
+    })
+  }
+</ol>

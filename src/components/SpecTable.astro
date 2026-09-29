@@ -1,0 +1,59 @@
+---
+import { formatPriceCzk } from '../lib/format';
+import type { RankCard } from '../lib/rankings';
+
+interface Props {
+  cards: RankCard[];
+}
+
+const { cards } = Astro.props;
+
+const rows: { label: string; value: (card: RankCard) => string }[] = [
+  { label: 'Kinematika', value: (card) => card.kinematics },
+  { label: 'Objem', value: (card) => card.volume },
+  { label: 'Komora', value: (card) => card.chamber },
+  { label: 'Materiál', value: (card) => card.multi },
+  { label: 'Software', value: (card) => card.software },
+  { label: 'Úroveň', value: (card) => card.level },
+];
+---
+
+<div class="spec-scroll">
+  <table class="spec-table">
+    <thead>
+      <tr>
+        <th scope="col">Profil</th>
+        {
+          cards.map((card) => (
+            <th scope="col">
+              <a href={card.href}>{card.name}</a>
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        rows.map((row) => (
+          <tr>
+            <th scope="row">{row.label}</th>
+            {cards.map((card) => (
+              <td>{row.value(card)}</td>
+            ))}
+          </tr>
+        ))
+      }
+      <tr>
+        <th scope="row">Cena od</th>
+        {
+          cards.map((card) => (
+            <td>
+              {card.priceFrom !== null ? formatPriceCzk(card.priceFrom) : '—'}
+              <span class="spec-price">{card.priceCaption}</span>
+            </td>
+          ))
+        }
+      </tr>
+    </tbody>
+  </table>
+</div>

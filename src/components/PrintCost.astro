@@ -1,0 +1,49 @@
+---
+/** Workshop estimate. Every number comes from the fields on the page. */
+---
+
+<form class="calc" data-calc>
+  <h3 class="calc-title">Cena výtisku</h3>
+  <p class="calc-lead">Gramy a cenu cívky zadáte vy. Výsledek je součin, ne nabídka obchodu.</p>
+  <div class="calc-fields">
+    <label>
+      Gramy
+      <input name="grams" type="number" min="0" step="1" value="126" inputmode="decimal" />
+    </label>
+    <label>
+      Kč / kg
+      <input name="perKg" type="number" min="0" step="1" value="600" inputmode="decimal" />
+    </label>
+  </div>
+  <p class="calc-out" data-out>75,60 Kč</p>
+  <p class="calc-note">Předvyplněný příklad: 126 g × 600 Kč/kg. Elektřina a čas v tom nejsou.</p>
+</form>
+
+<script>
+  const price = new Intl.NumberFormat('cs-CZ', {
+    style: 'currency',
+    currency: 'CZK',
+    maximumFractionDigits: 2,
+  });
+
+  function bind(form: HTMLFormElement) {
+    const grams = form.querySelector<HTMLInputElement>('[name="grams"]');
+    const perKg = form.querySelector<HTMLInputElement>('[name="perKg"]');
+    const out = form.querySelector<HTMLElement>('[data-out]');
+    const render = () => {
+      const g = Number(grams?.value);
+      const kg = Number(perKg?.value);
+      if (!out) return;
+      if (!Number.isFinite(g) || !Number.isFinite(kg) || g < 0 || kg < 0) {
+        out.textContent = '—';
+        return;
+      }
+      out.textContent = price.format((g / 1000) * kg);
+    };
+    grams?.addEventListener('input', render);
+    perKg?.addEventListener('input', render);
+    render();
+  }
+
+  document.querySelectorAll<HTMLFormElement>('[data-calc]').forEach((form) => bind(form));
+</script>
