@@ -33,7 +33,12 @@ const Heading = cardHeading;
   <div class="rank-grid">
     {
       cards.map((card) => (
-        <article class="rank-card" data-card data-tags={card.filters.join(',')}>
+        <article
+          class="rank-card"
+          data-card
+          data-tags={card.filters.join(',')}
+          data-price={card.priceFrom ?? ''}
+        >
           <div class="rank-photo">
             <span class="badge-num">#{card.order}</span>
             <span class="badge-cat">{card.badge}</span>
@@ -107,30 +112,78 @@ const Heading = cardHeading;
 <script>
   import { machineCount } from '../lib/format';
 
+  type RankState = { budget: string; who: string; material: string };
+
   function bind(board: HTMLElement) {
+    const root = board.closest<HTMLElement>('[data-rank-root]') ?? board;
     const buttons = [...board.querySelectorAll<HTMLButtonElement>('[data-filter]')];
     const cards = [...board.querySelectorAll<HTMLElement>('[data-card]')];
     const empty = board.querySelector<HTMLElement>('[data-empty]');
     const count = board.querySelector<HTMLElement>('[data-count]');
+    const budget = root.querySelector<HTMLSelectElement>('[data-budget]');
+    const who = root.querySelector<HTMLSelectElement>('[data-who]');
+    const material = root.querySelector<HTMLSelectElement>('[data-material]');
+    const state: RankState = { budget: 'all', who: 'all', material: 'all' };
 
-    const apply = (filter: string) => {
+    const chipFor = (next: RankState) => {
+      const active = [next.budget, next.who, next.material].filter((value) => value !== 'all');
+      if (active.length === 0) return 'all';
+      if (active.length === 1 && active[0] !== 'do-15000' && active[0] !== 'pla') return active[0];
+      return '';
+    };
+
+    const apply = () => {
       let visible = 0;
       for (const card of cards) {
         const tags = (card.dataset.tags ?? '').split(',').filter(Boolean);
-        const show = filter === 'all' || tags.includes(filter);
+        const price = Number(card.dataset.price);
+        const ceiling = state.budget === 'do-10000' ? 10000 : state.budget === 'do-15000' ? 15000 : null;
+        const budgetOk = ceiling === null || (Number.isFinite(price) && price > 0 && price <= ceiling);
+        const show =
+          budgetOk &&
+          (state.who === 'all' || tags.includes(state.who)) &&
+          (state.material === 'all' || tags.includes(state.material));
         card.hidden = !show;
         if (show) visible += 1;
       }
       if (empty) empty.hidden = visible !== 0;
       if (count) count.textContent = machineCount(visible);
+      const chip = chipFor(state);
       for (const button of buttons) {
-        button.setAttribute('aria-pressed', button.dataset.filter === filter ? 'true' : 'false');
+        button.setAttribute('aria-pressed', button.dataset.filter === chip ? 'true' : 'false');
       }
+      if (budget) budget.value = state.budget;
+      if (who) who.value = state.who;
+      if (material) material.value = state.material;
+    };
+
+    const readSelects = () => {
+      state.budget = budget?.value ?? 'all';
+      state.who = who?.value ?? 'all';
+      state.material = material?.value ?? 'all';
+      apply();
     };
 
     for (const button of buttons) {
-      button.addEventListener('click', () => apply(button.dataset.filter ?? 'all'));
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter ?? 'all';
+        state.budget = 'all';
+        state.who = 'all';
+        state.material = 'all';
+        if (filter === 'do-10000') state.budget = 'do-10000';
+        else if (filter === 'zacatecnik') state.who = 'zacatecnik';
+        else if (filter === 'uzavrene' || filter === 'multimaterial' || filter === 'resin') state.material = filter;
+        apply();
+      });
     }
+
+    for (const select of [budget, who, material]) {
+      select?.addEventListener('change', readSelects);
+    }
+    root.querySelector('[data-finder-go]')?.addEventListener('click', () => {
+      readSelects();
+      board.querySelector('.rank-grid')?.scrollIntoView({ block: 'nearest' });
+    });
   }
 
   document.querySelectorAll<HTMLElement>('[data-rank-board]').forEach((board) => bind(board));

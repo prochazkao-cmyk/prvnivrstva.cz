@@ -2,22 +2,158 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import HeroPrint from '../components/HeroPrint.astro';
+import PrintCost from '../components/PrintCost.astro';
 import RankBoard from '../components/RankBoard.astro';
-import RubrikaIndex from '../components/RubrikaIndex.astro';
 import { getArticles } from '../lib/articles';
-import { categoryOrder } from '../lib/categories';
-import { machineCount } from '../lib/format';
+import { formatReading } from '../lib/format';
 import { buildRankCards } from '../lib/rankings';
 import { site } from '../lib/site';
 
 const articles = await getArticles();
 const cards = buildRankCards(articles.filter((article) => article.category === 'stroje'));
 const lead = articles.find((article) => article.hero) ?? articles.find((article) => article.featured) ?? articles[0];
-const reading = articles.filter((article) => article.href !== lead?.href).slice(0, 4);
-const news = articles.find((article) => article.category === 'novinky' && article.href !== lead?.href);
-const counts = Object.fromEntries(
-  categoryOrder.map((id) => [id, articles.filter((article) => article.category === id).length]),
-);
+const reading = articles.filter((article) => article.href !== lead?.href).slice(0, 3);
+const news = articles.find((article) => article.category === 'novinky');
+
+const principles = [
+  {
+    n: '01',
+    title: 'Píšeme z dílny',
+    text: 'Unboxing sem nepatří. Když test nemáme, nenapíšeme, že máme.',
+  },
+  {
+    n: '02',
+    title: 'Verdikt, ne krabice',
+    text: 'Profil řekne, komu stroj sedí a jakou daň za něj platíte.',
+  },
+  {
+    n: '03',
+    title: 'Známku nejde koupit',
+    text: 'Affiliate odkazy tu nejsou. Na skóre nemá obchod vliv.',
+  },
+  {
+    n: '04',
+    title: 'Cenu označíme jako odhad',
+    text: 'Částky v žebříčku jsou redakční koncept, ne nabídka e-shopu.',
+  },
+];
+
+const guide = [
+  {
+    n: '01',
+    title: 'Základy: co je 3D tisk a jakou technologií',
+    href: '/technologie/fdm/',
+    note: 'FDM',
+  },
+  {
+    n: '02',
+    title: 'První tisk krok za krokem',
+    href: '/rady-a-tipy/prvni-vrstva-nedrzi/',
+    note: 'deska a offset',
+  },
+  {
+    n: '03',
+    title: 'Materiály: PETG, vlhkost, sušení',
+    href: '/clanky/suseni-filamentu-kdy-jak-cim/',
+    note: 'cívka',
+  },
+  {
+    n: '04',
+    title: 'Slicer: flow a tloušťka stěny',
+    href: '/rady-a-tipy/kalibrace-flow/',
+    note: 'kalibrace',
+  },
+  {
+    n: '05',
+    title: 'Volba stroje: Prusa a Bambu',
+    href: '/clanky/prusa-vs-bambu-lab-srovnani/',
+    note: 'ekosystém',
+  },
+  {
+    n: '06',
+    title: 'Když se tisk pokazí',
+    href: '#poradna',
+    note: 'poradna níž',
+  },
+];
+
+const atlas = [
+  {
+    title: 'Warping',
+    href: '/clanky/warping-u-abs-priciny-a-checklist/',
+    text: 'Rohy se zvedají a odlepují od podložky.',
+    tags: 'ABS · komora',
+  },
+  {
+    title: 'Stringing',
+    href: '/rady-a-tipy/stringing-retrakce/',
+    text: 'Vlasy a pavučinky mezi díly výtisku.',
+    tags: 'retrakce · teplota',
+  },
+  {
+    title: 'První vrstva nedrží',
+    href: '/rady-a-tipy/prvni-vrstva-nedrzi/',
+    text: 'Filament se nelepí, nebo se první čára trhá.',
+    tags: 'Z-offset · deska',
+  },
+  {
+    title: 'Sloní noha',
+    href: '/rady-a-tipy/elephant-foot/',
+    text: 'Spodní vrstvy jsou rozpláclé do stran.',
+    tags: 'teplota podložky',
+  },
+  {
+    title: 'Vlhký filament',
+    href: '/rady-a-tipy/vlhky-filament/',
+    text: 'Praskání, bubliny, matný povrch.',
+    tags: 'sušení · skladování',
+  },
+  {
+    title: 'PETG se táhne',
+    href: '/rady-a-tipy/petg-a-struny/',
+    text: 'Chladíte ho jako PLA a on se táhne.',
+    tags: 'ofuk · PETG',
+  },
+  {
+    title: 'Z-offset',
+    href: '/rady-a-tipy/z-offset/',
+    text: 'První čára je buď ve vzduchu, nebo rozmazaná.',
+    tags: 'výška trysky',
+  },
+  {
+    title: 'Špatné flow',
+    href: '/rady-a-tipy/kalibrace-flow/',
+    text: 'Stěny nemají tloušťku, kterou jste kreslili.',
+    tags: 'extruze',
+  },
+];
+
+const materialReads = [
+  {
+    href: '/clanky/suseni-filamentu-kdy-jak-cim/',
+    title: 'Sušení filamentu',
+    meta: 'Článek · kdy a čím',
+    swatch: '#17150f',
+  },
+  {
+    href: '/rady-a-tipy/vlhky-filament/',
+    title: 'Křupání není tryska',
+    meta: 'Rada · vlhká cívka',
+    swatch: '#f4f1ea',
+  },
+  {
+    href: '/rady-a-tipy/petg-prvni-vrstva/',
+    title: 'PETG první vrstva',
+    meta: 'Rada · ať se nesvaří s PEI',
+    swatch: '#ff6b35',
+  },
+  {
+    href: '/rady-a-tipy/petg-a-struny/',
+    title: 'PETG se táhne',
+    meta: 'Rada · míň ofuku než u PLA',
+    swatch: '#3d6fbf',
+  },
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -33,17 +169,43 @@ const jsonLd = {
   <main id="obsah">
     <section class="hero" aria-labelledby="hero-title">
       <div class="page">
-        <p class="kicker kicker-light">L01 · Redakce</p>
-        <h1 id="hero-title" class="hero-title">
-          První vrstva,<br />která drží.
-        </h1>
-        <p class="hero-dek">
-          Redakční rozcestník 3D tisku pro Česko a EU. {machineCount(cards.length)} v katalogu — u
-          každého víme, proč ho doporučit a komu ne.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-light" href="#zebricek">Žebříček strojů</a>
-          <a class="btn btn-text" href="/stroje/">Celý katalog →</a>
+        <div class="hero-top">
+          <div>
+            <p class="kicker kicker-light">L00 · vrstva 0,20 mm</p>
+            <h1 id="hero-title" class="hero-title">
+              Všechno o 3D tisku.<br />
+              Česky. <span class="hero-mark">Z dílny.</span>
+            </h1>
+            <p class="hero-dek">
+              Profily strojů, průvodce a poradna pro Česko a EU. Nezávislá redakce: píšeme, co drží na
+              desce, ne co stojí v letáku.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-light" href="#zebricek">Najít tiskárnu <span aria-hidden="true">→</span></a>
+              <a class="btn btn-ghost" href="#pruvodce">Začít průvodcem</a>
+            </div>
+            <p class="bench">
+              <span>Právě v dílně</span>
+              {
+                cards.map((card, index) => (
+                  <>
+                    {index > 0 && <span aria-hidden="true">·</span>}
+                    <a href={card.href}>{card.name}</a>
+                  </>
+                ))
+              }
+            </p>
+          </div>
+          {
+            lead && (
+              <a class="hero-feature" href={lead.href}>
+                <span class="hero-feature-kicker">Z dílny</span>
+                <span class="hero-feature-title">{lead.title}</span>
+                <span class="hero-feature-meta">{lead.description}</span>
+                <span class="hero-feature-foot">{formatReading(lead.readingMinutes)}</span>
+              </a>
+            )
+          }
         </div>
       </div>
       <div class="hero-stage">
@@ -52,8 +214,48 @@ const jsonLd = {
     </section>
 
     <section class="band" id="zebricek" aria-labelledby="zebricek-title">
-      <div class="page">
-        <p class="kicker section-kicker-gap">L02 · Stroje</p>
+      <div class="page" data-rank-root>
+        <form class="finder" action="#zebricek">
+          <p class="finder-line">
+            <span>Hledám tiskárnu</span>
+            <select data-budget aria-label="Cenový strop">
+              <option value="all">bez cenového stropu</option>
+              <option value="do-10000">do 10 000 Kč</option>
+              <option value="do-15000">do 15 000 Kč</option>
+            </select>
+            <span>pro</span>
+            <select data-who aria-label="Pro koho">
+              <option value="all">kohokoli</option>
+              <option value="zacatecnik">začátečníka</option>
+            </select>
+            <span>a tisknu hlavně</span>
+            <select data-material aria-label="Materiál">
+              <option value="all">cokoli</option>
+              <option value="pla">PLA a PETG</option>
+              <option value="uzavrene">technické materiály</option>
+              <option value="multimaterial">víc materiálů</option>
+              <option value="resin">resin</option>
+            </select>
+          </p>
+          <button class="btn btn-accent" type="button" data-finder-go>Ukázat doporučení</button>
+          <p class="finder-note">
+            Strop počítá redakční odhad z karet, ne ceník obchodu. Pod 10 000 Kč v katalogu schválně nikdo není.
+          </p>
+        </form>
+
+        <ol class="principles">
+          {
+            principles.map((item) => (
+              <li>
+                <span>{item.n}</span>
+                <strong>{item.title}</strong>
+                <p>{item.text}</p>
+              </li>
+            ))
+          }
+        </ol>
+
+        <p class="kicker section-kicker-gap">L01 · Stroje</p>
         <h2 id="zebricek-title" class="display">Nejlepší 3D tiskárny právě teď</h2>
         <p class="lede">
           Pořadí pro běžnou dílnu. Stejná známka neznamená stejný stroj — štítek říká, k čemu sedí.
@@ -62,12 +264,91 @@ const jsonLd = {
       </div>
     </section>
 
-    <section class="band" id="rubriky" style="padding-top: 0" aria-labelledby="rubriky-title">
+    <section class="material-band" aria-labelledby="material-title">
+      <div class="page material-grid">
+        <div>
+          <p class="kicker kicker-light">L02 · Materiál</p>
+          <h2 id="material-title" class="display display-light">Stejná cívka. Jiný výsledek, když je mokrá.</h2>
+          <p class="material-lead">
+            Srovnávač cen e-shopů tu není. Máme texty o tom, co filament udělá ve stroji — sušení, PETG a
+            první vrstva, která se nesmí svařit s deskou.
+          </p>
+          <ul class="check-list">
+            <li>Sušení dřív, než budete honit retrakci</li>
+            <li>PETG nechladit jako PLA</li>
+            <li>Cenu cívky si dosadíte vy, v kalkulačce níž</li>
+          </ul>
+          <a class="btn btn-accent" href="/clanky/suseni-filamentu-kdy-jak-cim/">Otevřít text o sušení</a>
+        </div>
+        <ul class="material-list">
+          {
+            materialReads.map((item) => (
+              <li>
+                <a href={item.href}>
+                  <span class="swatch" style={`background:${item.swatch}`} aria-hidden="true" />
+                  <span>
+                    <strong>{item.title}</strong>
+                    <small>{item.meta}</small>
+                  </span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    <section class="band" id="pruvodce" aria-labelledby="pruvodce-title">
+      <div class="page guide-layout">
+        <div class="guide-copy">
+          <p class="kicker section-kicker-gap">L03 · Průvodce</p>
+          <h2 id="pruvodce-title" class="display">Kompletní průvodce 3D tiskem. Vrstva po vrstvě.</h2>
+          <p class="lede">
+            Šest textů, které už leží na webu. Od toho, co je FDM, po volbu stroje. Žádný uzavřený kurz.
+          </p>
+          <a class="btn btn-ink" href="/technologie/">Všechny technologie</a>
+        </div>
+        <ol class="guide-stack">
+          {
+            guide.map((step) => (
+              <li>
+                <a href={step.href}>
+                  <span>{step.n}</span>
+                  <strong>{step.title}</strong>
+                  <small>{step.note}</small>
+                </a>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    <section class="band" id="poradna" style="padding-top: 0" aria-labelledby="poradna-title">
       <div class="page">
-        <p class="kicker section-kicker-gap">L03 · Rubriky</p>
-        <h2 id="rubriky-title" class="display">Šest šuplíků.</h2>
-        <p class="lede">Každý text má praktický závěr. Žádný unboxing, žádný slevový kód.</p>
-        <RubrikaIndex counts={counts} />
+        <p class="kicker section-kicker-gap">L04 · Tisková poradna</p>
+        <h2 id="poradna-title" class="display">Něco se pokazilo? Najdeme proč.</h2>
+        <p class="lede">Osm potíží, osm textů. Filtr hledá v názvu a popisu, fotku za vás nepřečte.</p>
+        <label class="atlas-search">
+          <span class="sr-only">Hledat v poradně</span>
+          <input data-atlas-search type="search" placeholder='Popište problém: „rohy se odlepují“' />
+        </label>
+        <p class="atlas-empty" data-atlas-empty hidden>Nic z poradny k tomu nepasuje. Zkuste kratší slovo, třeba PETG nebo vrstva.</p>
+        <div class="atlas-grid" data-atlas>
+          {
+            atlas.map((item) => (
+              <a class="atlas-card" href={item.href} data-atlas-card>
+                <span class="atlas-mark" aria-hidden="true" />
+                <strong>{item.title}</strong>
+                <p>{item.text}</p>
+                <small>{item.tags}</small>
+              </a>
+            ))
+          }
+        </div>
+        <p class="meta">
+          <a href="/rady-a-tipy/">Všechny rady a tipy</a>
+        </p>
       </div>
     </section>
 
@@ -75,7 +356,7 @@ const jsonLd = {
       lead && (
         <section class="band" style="padding-top: 0" aria-labelledby="cteni-title">
           <div class="page">
-            <p class="kicker section-kicker-gap">L04 · Z dílny</p>
+            <p class="kicker section-kicker-gap">L05 · Z dílny</p>
             <h2 id="cteni-title" class="display">Co číst, když vybíráte</h2>
             <div class="story-list">
               <ArticleCard article={lead} heading="h3" variant="lead" />
@@ -83,49 +364,95 @@ const jsonLd = {
                 <ArticleCard article={article} heading="h3" variant="row" />
               ))}
             </div>
+            {
+              news && (
+                <p class="news-line">
+                  <span>Novinky</span>
+                  <a href={news.href}>{news.title}</a>
+                </p>
+              )
+            }
           </div>
         </section>
       )
     }
 
-    {
-      news && (
-        <section class="band" style="padding-top: 0" aria-labelledby="novinky-title">
-          <div class="page">
-            <p class="kicker section-kicker-gap">Novinky</p>
-            <h2 id="novinky-title" class="display">
-              <a href={news.href}>{news.title}</a>
-            </h2>
-            <p class="lede">{news.description}</p>
-            <p class="meta">
-              <a href="/novinky/">Celá rubrika</a>
-            </p>
-          </div>
-        </section>
-      )
-    }
+    <section class="band" id="naradi" style="padding-top: 0" aria-labelledby="naradi-title">
+      <div class="page">
+        <p class="kicker section-kicker-gap">L06 · Nástroje</p>
+        <h2 id="naradi-title" class="display">Kalkulačka a tři postupy</h2>
+        <div class="tool-grid">
+          <PrintCost />
+          <a class="tool-card" href="/rady-a-tipy/kalibrace-flow/">
+            <strong>Kalibrace průtoku</strong>
+            <p>Z naměřené stěny spočítáte flow. Postup je v textu, ne v černé krabičce.</p>
+          </a>
+          <a class="tool-card" href="/rady-a-tipy/z-offset/">
+            <strong>Z-offset</strong>
+            <p>Papír je hrubý start. Pravda je tvar první čáry.</p>
+          </a>
+          <a class="tool-card" href="/stroje/">
+            <strong>Tiskárny vedle sebe</strong>
+            <p>Čtyři profily a tabulka kinematiky, komory a softwaru.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="mail-band" aria-labelledby="mail-title">
+      <div class="page mail-grid">
+        <div>
+          <h2 id="mail-title">První vrstva.<br />Zatím bez čtvrtečního mailu.</h2>
+          <p>
+            Newsletter neběží. Schránka {site.email} je zástupná — adresa, na kterou redakce míří, ne
+            potvrzení, že už v ní někdo čte.
+          </p>
+        </div>
+        <a class="mail-address" href={`mailto:${site.email}`}>{site.email}</a>
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
+<script>
+  const input = document.querySelector<HTMLInputElement>('[data-atlas-search]');
+  const cards = [...document.querySelectorAll<HTMLElement>('[data-atlas-card]')];
+  const empty = document.querySelector<HTMLElement>('[data-atlas-empty]');
+  const normalize = (value: string) =>
+    value
+      .toLocaleLowerCase('cs')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '');
+
+  input?.addEventListener('input', () => {
+    const query = normalize(input.value.trim());
+    let visible = 0;
+    for (const card of cards) {
+      const haystack = normalize(card.textContent ?? '');
+      const show = query.length === 0 || haystack.includes(query);
+      card.hidden = !show;
+      if (show) visible += 1;
+    }
+    if (empty) empty.hidden = visible !== 0;
+  });
+</script>
+
 <style>
-  #novinky-title a,
-  .display a {
+  .display a,
+  .news-line a,
+  .meta a {
     color: inherit;
     text-decoration: none;
   }
 
-  #novinky-title a:hover {
+  .news-line a:hover,
+  .meta a:hover,
+  .display a:hover {
     color: var(--color-accent-ink);
   }
 
   .meta a {
     color: var(--color-accent-ink);
     font-weight: 620;
-    text-decoration: none;
-  }
-
-  .meta a:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
   }
 </style>

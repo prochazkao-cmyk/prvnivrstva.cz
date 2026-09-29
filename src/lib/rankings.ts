@@ -15,6 +15,8 @@ export const rankFilters = [
 ] as const;
 
 export type RankFilterId = Exclude<(typeof rankFilters)[number]['id'], 'all'>;
+/** Extra card tags used by the homepage finder, not by the chip row. */
+export type RankTag = RankFilterId | 'pla';
 
 export const editorialNote =
   'Pořadí je redakční pohled pro běžnou dílnu, ne součet známek. Známka s odkazem na recenzi pochází z publikovaného textu. Ostatní známky a všechny ceny („od … Kč“) jsou redakční koncept k září 2026 — zaokrouhlený odhad, ne ceník obchodu. Specifikace jsou orientační, ověřte revizi u výrobce.';
@@ -34,7 +36,7 @@ export interface RankCard {
   reviewHref?: string;
   priceFrom: number | null;
   priceCaption: string;
-  filters: RankFilterId[];
+  filters: RankTag[];
   photoLabel: string;
   kinematics: string;
   volume: string;
@@ -59,7 +61,7 @@ const profiles: Omit<RankCard, 'href'>[] = [
     reviewHref: '/recenze/prusa-mk4s/',
     priceFrom: 19000,
     priceCaption: 'redakční odhad · kit',
-    filters: ['zacatecnik'],
+    filters: ['zacatecnik', 'pla'],
     photoLabel: '[FOTO: Prusa MK4S]',
     kinematics: 'Cartesian, pohyblivá deska',
     volume: '250 × 210 × 220 mm',
@@ -82,7 +84,7 @@ const profiles: Omit<RankCard, 'href'>[] = [
     reviewHref: '/recenze/bambu-p1s/',
     priceFrom: 15000,
     priceCaption: 'redakční odhad · P1S bez AMS',
-    filters: ['zacatecnik', 'uzavrene', 'multimaterial'],
+    filters: ['zacatecnik', 'uzavrene', 'multimaterial', 'pla'],
     photoLabel: '[FOTO: Bambu Lab P1S]',
     kinematics: 'CoreXY',
     volume: 'cca 256 × 256 × 256 mm',
