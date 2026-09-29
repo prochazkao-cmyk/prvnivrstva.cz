@@ -34,11 +34,19 @@ const json = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : null;
 ---
 
 <!doctype html>
-<html lang={site.lang} class:list={{ 'tone-dark': tone === 'dark' }}>
+<html lang={site.lang} class:list={{ 'tone-dark': tone === 'dark' }} data-brand-theme="prusa">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
+    <script is:inline>
+      try {
+        const saved = localStorage.getItem('pv-theme');
+        if (saved === 'prusa' || saved === 'bambu') {
+          document.documentElement.dataset.brandTheme = saved;
+        }
+      } catch {}
+    </script>
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow'} />
