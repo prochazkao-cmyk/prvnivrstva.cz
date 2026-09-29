@@ -1,32 +1,43 @@
 ---
-title: "SLA: detail, který se platí chemií"
-description: "Pryskyřice umí hranu, kterou FDM nezvládne. Umí taky alergii, isopropylalkohol a díl, který bez dovytvrzení dál měkne."
-publishedAt: 2026-03-11
+title: "SLA — resinový tisk pro detail, ne pro každou dílnu"
+description: "Stereolitografie a MSLA vytvrzují tekutý resin světlem. Obrovský detail, chemická realita a jiný workflow než filament."
+publishedAt: 2026-09-29
+level: "začátečník"
+technologies:
+  - "SLA"
 tags:
-  - SLA
-  - pryskyřice
-  - bezpečnost
+  - "primer"
+  - "sla"
+  - "resin"
+  - "orientace"
 ---
+## Co to je
 
-SLA (a příbuzné MSLA, tedy tiskárny s LCD, které si lidi domů reálně kupují) vytvrzuje tekutou pryskyřici světlem. Vrstva je tenčí než u FDM, hrana je ostřejší, miniatury, formy a drobné mechanické detaily vypadají jako jiná liga. Stolní stroj je dnes běžně k dostání. Běžně k dostání není trpělivost na mytí a vytvrzení.
+**SLA** původně znamená laserové vytvrzování fotopolymeru. V hobby se často říká „SLA“ i **MSLA/LCD** a DLP — resin v kádi, světlo po vrstvách, stavba na platformě nahoru/dolů. Výsledek: jemné detaily, hladké povrchy, přesné malé díly.
 
-## Co z toho leze
+## Jak to funguje (stručně)
 
-Díl je po tisku mokrý. Patří do myčky nebo nádoby s isopropylalkoholem (případně s prostředkem, který výrobce pryskyřice výslovně dovolí), v rukavicích, ne v holé ruce „jen na chvíli“. Pak UV vytvrzení. Díl, který jen oschnul na parapetu, může být zvenku tvrdý a uvnitř pořád nedovytvrzený. U věcí na kůži, do pusy nebo k jídlu na tohle není odpověď „nějaká pryskyřice“. Je odpověď „konkrétní certifikovaný materiál a postup“, a když ho nemáte, takový díl nedělejte.
+1. Model se slicuje s podporami (typicky „ze stropu“ platformy).  
+2. UV/laser vytvrdí vrstvu resin.  
+3. Separace od FEP/filmu, další vrstva.  
+4. Wash (IPA nebo alternativa), post-cure UV, odstranění supportů.
 
-Podpory u SLA jsou tenké a husté. Sedí skoro na každé převislé ploše, protože pryskyřice nemá sama o sobě co držet. Po sundání zbydou stopy. Počítejte s nimi v orientaci dílu, ne až při broušení o půlnoci.
+Bez wash/cure není díl hotový — je to toxický polo-produkt.
 
-## Bezpečnost není dodatek
+## Pro koho
 
-Tekutá pryskyřice je senzibilizátor. Část lidí po měsících „vždyť mi nic nebylo“ skončí s reakcí, která už neodejde. Nitrilové rukavice, brýle, větrání, žádný koberec pod tiskárnou. Hadřík od pryskyřice nepatří do koše v koupelně, kde na něj sáhne někdo jiný. Nevytvrzená pryskyřice a špinavý isopropylalkohol nepatří do výlevky. Vytvrďte zbytky na slunci nebo pod lampou, pevný odpad teprve pak vyhoďte podle toho, co snese váš svoz. Když si nejste jistí, je to nebezpečný odpad, ne „trocha chemie“.
+- Miniatury, šperky (castable), dentální aplikace (validované systémy), jemné prototypy vzhledu.  
+- Kdo zvládne BOZP: rukavice, ventilace, likvidace odpadu.  
+- Profi: Formlabs a podobné, když počítáte čas a opakovatelnost.
 
-Fólie ve vaničce je spotřební věc. Díra v ní znamená pryskyřici v displeji a opravu, která stojí víc než cívka PLA.
+## Limity
 
-## Kdy ne
+- Chemická zátěž a odpad — ne „plug and play jako PLA“.  
+- Křehčí standard resiny vs. správně vytištěný PETG (existují tough/flex — za cenu).  
+- Menší build, vyšší cena materiálu na cm³.  
+- Dlouhodobá UV stabilita venku bývá horší bez správného resin/lakování.  
+- Levný hobby stroj ≠ nulový čas; FEP, leveling, supports se učí.
 
-Velký užitkový díl, ráz, venkovní ASA, cokoliv, co má být levné a velké. Pryskyřice je křehčí než PETG, dokud nekoupíte speciální „tough“ směs, a ani ta není nylon z práškové tiskárny. Velký objem je taky drahý: platí se celá vana materiálu, ne jen díl.
+## Praktický závěr
 
-<aside class="takeaway">
-  <p class="takeaway-label">Praktický závěr</p>
-  <p>SLA berte na detail a počítejte s mytím, UV vytvrzením a chemií mimo dřez. Na držák do dílny je skoro vždycky rozumnější FDM.</p>
-</aside>
+Zvolte SLA, když **vyhrává detail a povrch**, ne když chcete držák na zeď. Spočítejte consumables + ochranu zdraví. Hobby figurky = levnější MSLA + disciplína; klientská přesnost = zvažte Formlabs-class workflow.

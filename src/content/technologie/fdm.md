@@ -1,28 +1,43 @@
 ---
-title: "FDM: stroj, který máte na stole"
-description: "Tavený filament, viditelné vrstvy, nejlevnější cesta k užitkovému dílu. Kde končí a proč první vrstva rozhoduje víc než slogan o rychlosti."
-publishedAt: 2026-03-04
+title: "FDM — co to je, pro koho a kde končí limity"
+description: "Fused Deposition Modeling je nejrozšířenější domácí a dílenský 3D tisk. Jak funguje, pro koho sedí a co od něj nečekat."
+publishedAt: 2026-09-29
+level: "začátečník"
+technologies:
+  - "FDM"
 tags:
-  - FDM
-  - FFF
-  - technologie
+  - "primer"
+  - "fdm"
+  - "orientace"
 ---
+## Co to je
 
-FDM (taky FFF) pokládá roztavený filament vrstvu po vrstvě. PLA, PETG, ABS, ASA, TPU, nylon — pořád je to stejný princip, jen jiná teplota, jiné smrštění a jiná trpělivost. Když někdo v Česku řekne „3D tiskárna“ bez přívlastku, myslí skoro vždycky tohle.
+**FDM** (Fused Deposition Modeling; někdy FFF) taví termoplastický filament a klade ho vrstvu po vrstvě tryskou. Stroje: Prusa, Bambu, Creality, Ultimaker… Materiály: PLA, PETG, ABS/ASA, TPU, Nylon, kompozity.
 
-## Kdy dává smysl
+Jednoduchá představa: přesný tavicí „lepící pistolový“ plotter ve 3D.
 
-Držáky, kryty, přípravky, náhradní knoflík, krabička na desku, díl, který má vydržet pád na zem a nemusí vypadat jako výlisek. Tolerance v desetinách milimetru, když je stroj seřízený. Díra na šroub M3 vyjde, když s ní slicer počítá a když nejste na hraně toho, co tryska 0,4 mm ještě zvládne. Tenká stěna na jeden obvod je sázka.
+## Jak to funguje (stručně)
 
-Povrch bude mít vrstvy. Dají se brousit, tmelit, nebo schovat orientací dílu. Kdo potřebuje hladkou organickou plochu nebo písmo menší než rozumná výška vrstvy, je u špatné technologie. To je práce pro [SLA](/technologie/sla/).
+1. Slicer nakrájí model na vrstvy a dráhy (G-code).  
+2. Extruder tlačí filament do hotendu.  
+3. Tryska vytlačuje taveninu; osa Z stoupá po vrstvách.  
+4. Chlazení, adheze k bedu a kalibrace rozhodují o kvalitě.
 
-## Co vás bude stát víc než cívka
+Klíčové páky: teplota, flow, rychlost, chlazení, mechanická tuhost rámu.
 
-Čas a seřízení. První vrstva, suchý filament, správný materiál na správném rámu. Otevřená tiskárna a velké ABS k sobě nepatří — proč, je v textu [ABS se kroutí od rohů](/clanky/abs-se-krouti/). Uzavřená tiskárna sama o sobě není vyhřívaná komora.
+## Pro koho
 
-Rychlostní reklama říká, jak rychle umí jelit pohyb. Neříká, jak vypadá díl, když při tom drží rozměry. Pro dílnu je užitečnější otázka: kolik dílů týdně potřebuju a kdo stroj seřídí, když se první vrstva rozjede.
+- Hobby, školy, prototypy, přípravky do dílny, náhradní díly.  
+- Kdo chce levný provoz (PLA/PETG) a široký výběr strojů.  
+- Funkční mechanika ve větších rozměrech levněji než SLA.
 
-<aside class="takeaway">
-  <p class="takeaway-label">Praktický závěr</p>
-  <p>FDM berte na užitkové díly, přípravky a věci, kterým vrstvy nevadí. Nejdřív seřiďte první vrstvu a sušte materiál. Až potom řešte, jestli je stroj „nejrychlejší“.</p>
-</aside>
+## Limity
+
+- Viditelné vrstvy; izotropie horší než u práškových technologií (pevnost mezi vrstvami slabší).  
+- Overhangy a mosty chtějí supports / ladění.  
+- Engineering materiály chtějí enclosure, sušení, někdy abrazivní trysky.  
+- Jemné detaily a hladký „injection“ vzhled → spíš SLA nebo post-processing.
+
+## Praktický závěr
+
+Začněte FDM, pokud potřebujete **užitečné kusy za rozumné peníze**. Naučte se první vrstvu, sušení a jeden materiál pořádně (PLA → PETG → teprve ABS). Až budete narážet na detail nebo hladkost, přidejte resin — nevyměňujte FDM za SLA slepě.

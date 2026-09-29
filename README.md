@@ -71,11 +71,14 @@ Texty leží v `src/content/` po rubrikách. Tvar frontmatteru je v `src/content
 | --- | --- |
 | Články | `/clanky/` |
 | Rady a tipy | `/rady-a-tipy/` |
+| Stroje | `/stroje/` |
 | Recenze | `/recenze/` |
 | Novinky | `/novinky/` |
 | Technologie | `/technologie/` |
 
 O webu je statická stránka `/o-nas/`.
+
+Redakční podklady (ne stránky webu) jsou v `docs/STRUKTURA.md` a `docs/INDEX.md`. `STRUKTURA.md` popisuje i rubriky, které v tomhle vydání ještě nemají vlastní cestu. Živé jsou jen složky v `src/content/`.
 
 ## Značka
 

@@ -28,7 +28,7 @@ Náhradní díl „v úterý z velkoobchodu za rohem“ taky nepočítejte jako 
 
 Fronta dílů, PLA a PETG, občas ASA, a více barev bez toho, abyste se stali správcem MMU. Dílně, kde tiskárnu obsluhuje víc lidí a nikdo z nich nechce být ten, kdo „tomu rozumí“, sedne líp než otevřený kit.
 
-Když vedle ní stojí otázka MK4S, neporovnávejte rychlost na krabici. Porovnejte, jestli potřebujete komoru hned a jestli vám vadí, že do firmwaru neuvidíte. Delší kontext je v textu [Prusa, nebo Bambu](/clanky/prusa-nebo-bambu/).
+Když vedle ní stojí otázka MK4S, neporovnávejte rychlost na krabici. Porovnejte, jestli potřebujete komoru hned a jestli vám vadí, že do firmwaru neuvidíte. Delší kontext je v textu [Prusa vs Bambu Lab](/clanky/prusa-vs-bambu-lab-srovnani/). Profil P1S a X1C je v rubrice [Stroje](/stroje/bambu-p1s-x1c/).
 
 <aside class="takeaway">
   <p class="takeaway-label">Praktický závěr</p>

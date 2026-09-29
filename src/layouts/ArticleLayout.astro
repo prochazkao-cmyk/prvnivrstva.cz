@@ -66,6 +66,11 @@ if (article.score !== undefined) {
       <p class="kicker">
         <a href={category.href}>{category.label}</a>
         {article.product && <span class="text-muted normal-case tracking-normal"> · {article.product}</span>}
+        {
+          !article.product && article.technologies.length > 0 && (
+            <span class="text-muted normal-case tracking-normal"> · {article.technologies.join(', ')}</span>
+          )
+        }
       </p>
       <h1 class="mt-3 max-w-[20ch] font-serif text-[clamp(2.2rem,5vw,3.6rem)] leading-[1.05] font-semibold tracking-tight">
         {article.title}
@@ -83,6 +88,14 @@ if (article.score !== undefined) {
         }
         <span aria-hidden="true">·</span>
         <span>{formatReading(article.readingMinutes)}</span>
+        {
+          article.level && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span>Úroveň: {article.level}</span>
+            </>
+          )
+        }
         <span aria-hidden="true">·</span>
         <span>{article.author}</span>
       </p>
