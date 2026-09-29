@@ -31,3 +31,6 @@ jobs:
 
       - name: Production build
         run: npm run build
+
+      - name: Internal links
+        run: npm run check:links
