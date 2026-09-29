@@ -15,6 +15,14 @@ const category = categories[article.category as CategoryId];
 const canonical = new URL(article.href, Astro.site).href;
 const modified = article.updatedAt ?? article.publishedAt;
 
+const evidenceLabels: Record<Article['evidence'], string> = {
+  redakce: 'Redakční průvodce',
+  vyrobce: 'Technické údaje výrobce',
+  'vlastni-mereni': 'Vlastní měření První Vrstvy',
+  kombinace: 'Kombinace měření, specifikací a redakční zkušenosti',
+  demo: 'Demonstrační / neověřená data',
+};
+
 const jsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': article.score !== undefined ? 'Review' : 'Article',
@@ -98,6 +106,31 @@ if (article.score !== undefined) {
         <span>{article.author}</span>
       </p>
 
+      <aside class="trust-strip" aria-label="Původ a stav informací">
+        <div>
+          <span class="trust-label">Původ informací</span>
+          <strong>{evidenceLabels[article.evidence]}</strong>
+        </div>
+        {article.sourceNote && (
+          <div>
+            <span class="trust-label">Podklad</span>
+            <span>{article.sourceNote}</span>
+          </div>
+        )}
+        {article.reviewedAt && (
+          <div>
+            <span class="trust-label">Naposledy zkontrolováno</span>
+            <span>{formatDate(article.reviewedAt)}</span>
+          </div>
+        )}
+        {article.disclosure && (
+          <div>
+            <span class="trust-label">Vztah k produktu</span>
+            <span>{article.disclosure}</span>
+          </div>
+        )}
+      </aside>
+
       {article.note && <p class="note-banner">{article.note}</p>}
 
       {
@@ -155,5 +188,34 @@ if (article.score !== undefined) {
     font-weight: 520;
     letter-spacing: 0;
     text-transform: none;
+  }
+
+  .trust-strip {
+    display: grid;
+    gap: .9rem;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+    padding: 1rem 0;
+  }
+
+  .trust-strip > div {
+    display: grid;
+    gap: .2rem;
+  }
+
+  .trust-label {
+    color: var(--color-muted);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+  }
+
+  .trust-strip strong,
+  .trust-strip span:not(.trust-label) {
+    font-size: .88rem;
+    line-height: 1.45;
   }
 </style>
