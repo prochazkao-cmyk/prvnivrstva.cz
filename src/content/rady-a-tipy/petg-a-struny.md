@@ -1,0 +1,77 @@
+---
+title: "PETG dělá struny — než zvednete retrakci, zkontrolujte tyhle čtyři věci"
+description: "PETG stringing často není problém jedné hodnoty v sliceru. Začněte vlhkostí, teplotou, travel pohyby a až potom dolaďujte retrakci."
+publishedAt: 2026-09-29
+reviewedAt: 2026-09-29
+level: "začátečník"
+technologies:
+  - "FDM"
+tags:
+  - "quick-win"
+  - "petg"
+  - "stringing"
+  - "retrakce"
+  - "vlhkost"
+  - "troubleshooting"
+evidence: "redakce"
+sourceNote: "Redakční diagnostický postup. Přesné teploty a limity retrakce vždy ověřte pro konkrétní filament a extruder."
+---
+## Rychlá odpověď
+
+Když PETG táhne pavučiny mezi dvěma částmi modelu, **nezvyšujte retrakci naslepo**. Projděte problém v tomto pořadí:
+
+1. je filament suchý,
+2. není teplota zbytečně vysoká,
+3. travel pohyby dávají smysl,
+4. teprve potom dolaďte retrakci.
+
+Pokud filament u trysky praská, bublá nebo dělá nepravidelný matný povrch, začněte článkem [Vlhký filament](/rady-a-tipy/vlhky-filament/). Mokré PETG umí udělat víc strun, než spraví jakákoli rozumná retrakce.
+
+## 1. Vlhkost první, slicer druhý
+
+PETG přijímá vlhkost ze vzduchu. Voda se v hotendu mění v páru a tavenina pak neteče konzistentně. Výsledkem nejsou jen struny, ale často i drobné bubliny a horší povrch.
+
+**Diagnostický test:** usušte část cívky a vytiskněte stejný model se stejným profilem. Pokud se výsledek výrazně zlepší, problém nebyl primárně v retrakci.
+
+## 2. Teplota
+
+Vyšší teplota snižuje viskozitu taveniny a může stringing zhoršit. Pokud tisknete na horní hraně doporučeného rozsahu a nemáte důvod tam být, zkuste malý krok dolů.
+
+Nedělejte velké skoky. Sledujte zároveň spojení vrstev a kvalitu povrchu. Cílem není „nejnižší teplota bez strun“, ale teplota, při které díl zůstává mechanicky i vizuálně v pořádku.
+
+## 3. Travel a cesta trysky
+
+Struny vznikají hlavně při přejezdu přes prázdný prostor. Slicer může některé přejezdy vést uvnitř již vytištěné oblasti nebo omezit zbytečné cestování nad volným prostorem.
+
+Nepřehánějte to ale s funkcemi typu „avoid crossing“ na úkor extrémně dlouhých přejezdů. Delší cesta může problém jen přesunout.
+
+## 4. Retrakce až nakonec
+
+Přímý extruder a bowden potřebují jiné hodnoty. U direct drive bývá obvykle potřeba menší retrakce než u dlouhého bowdenu.
+
+Ladění:
+
+- měňte jeden parametr,
+- malé kroky,
+- stejný testovací model,
+- zapisujte si výsledek.
+
+Příliš velká nebo příliš častá retrakce může zhoršit stabilitu toku, přidat mezery po návratu trysky a u některých hotendů zvýšit riziko ucpávání.
+
+## Co ještě ovlivňuje výsledek
+
+- příliš nízká rychlost travelu,
+- unikající materiál z přehřáté trysky,
+- nekonzistentní flow,
+- opotřebená nebo znečištěná tryska,
+- profil převzatý z jiného stroje bez úprav.
+
+## Udělej teď
+
+1. Poslechni si tisk: pokud PETG praská, nejdřív suš.
+2. Pokud je suché, sniž teplotu v malém kroku.
+3. Zkontroluj travel strategii.
+4. Teprve potom dolaď retrakci po malých krocích.
+5. Jakmile struny zmizí bez nových vad, přestaň ladit.
+
+Pokud máš zároveň problém s první vrstvou, neřeš oba problémy jedním profilem. Nejprve stabilizuj [PETG první vrstvu](/rady-a-tipy/petg-prvni-vrstva/) a stringing dolaď zvlášť.
