@@ -67,7 +67,6 @@
 
 <style>
   .hero-scene {
-    --extrude: cubic-bezier(0.45, 0.02, 0.2, 1);
     position: relative;
     width: min(100%, 1100px);
     margin-inline: auto;
@@ -84,7 +83,7 @@
   .bead-core {
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
-    animation: draw 8.8s var(--extrude) infinite;
+    animation: draw 6.4s linear infinite;
   }
 
   .bead {
@@ -98,7 +97,7 @@
     left: 0;
     width: clamp(68px, 10cqw, 118px);
     pointer-events: none;
-    animation: extrude 8.8s var(--extrude) infinite;
+    animation: extrude 6.4s linear infinite;
   }
 
   .nozzle {
