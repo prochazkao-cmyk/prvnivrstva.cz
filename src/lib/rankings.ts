@@ -1,12 +1,12 @@
 import type { Article } from './articles';
 
 /**
- * Editorial presentation for stroje cards.
- * Scores and prices that are not backed by a published recenze are drafts:
- * rounded orientation for the layout, not a lab result and not a shop price.
+ * Editorial presentation for machine cards.
+ * Unverified concepts never render as a numeric score in the UI.
+ * PriceFrom is an editorial orientation only, never a live shop price.
  */
 export const rankFilters = [
-  { id: 'all', label: 'Celkově' },
+  { id: 'all', label: 'Přehled' },
   { id: 'do-10000', label: 'Do 10 000 Kč' },
   { id: 'zacatecnik', label: 'Pro začátečníky' },
   { id: 'uzavrene', label: 'Uzavřené / technické materiály' },
@@ -19,7 +19,7 @@ export type RankFilterId = Exclude<(typeof rankFilters)[number]['id'], 'all'>;
 export type RankTag = RankFilterId | 'pla';
 
 export const editorialNote =
-  'Pořadí je redakční pohled pro běžnou dílnu, ne součet známek. Známka s odkazem na recenzi pochází z publikovaného textu. Ostatní známky a všechny ceny („od … Kč“) jsou redakční koncept k září 2026 — zaokrouhlený odhad, ne ceník obchodu. Specifikace jsou orientační, ověřte revizi u výrobce.';
+  'Pořadí karet je redakční orientace pro běžnou dílnu, ne laboratorní žebříček. Číselná známka se zobrazuje jen tam, kde odkazuje na publikovaný verdikt. Ceny („od … Kč“) jsou zaokrouhlený redakční odhad k září 2026, ne živý ceník. Technické specifikace před nákupem ověřte u výrobce.';
 
 export interface RankCard {
   id: string;
@@ -30,7 +30,7 @@ export interface RankCard {
   specLine: string;
   blurb: string;
   score: number | null;
-  /** False only when the number is taken from a published recenze. */
+  /** True when the number is only an internal/editorial concept and must not render as a score. */
   scoreDraft: boolean;
   scoreCaption: string;
   reviewHref?: string;
@@ -51,90 +51,90 @@ const profiles: Omit<RankCard, 'href'>[] = [
     id: 'prusa-mk4s',
     name: 'Prusa MK4S',
     order: 1,
-    badge: 'Volba redakce',
+    badge: 'Otevřená dílna',
     specLine: 'Cartesian · 250×210×220 mm · otevřená',
     blurb:
-      'Otevřená, opravitelná, servis z Prahy. Denní stroj na PLA a PETG — na velké ABS počítejte s boxem.',
+      'Otevřená a servisovatelná platforma pro PLA a PETG. Pokud už dnes potřebujete komoru, dívejte se jinam.',
     score: 8,
     scoreDraft: false,
-    scoreCaption: 'recenze MK4S',
+    scoreCaption: 'publikovaný verdikt MK4S',
     reviewHref: '/recenze/prusa-mk4s/',
     priceFrom: 19000,
     priceCaption: 'redakční odhad · kit',
     filters: ['zacatecnik', 'pla'],
-    photoLabel: '[FOTO: Prusa MK4S]',
+    photoLabel: 'PROFIL STROJE',
     kinematics: 'Cartesian, pohyblivá deska',
     volume: '250 × 210 × 220 mm',
     chamber: 'Volitelná, není z výroby',
-    multi: 'MMU — strmější než AMS',
-    software: 'PrusaSlicer, otevřenější servis',
+    multi: 'MMU',
+    software: 'PrusaSlicer',
     level: 'Začátečník',
   },
   {
     id: 'bambu-p1s-x1c',
     name: 'Bambu Lab P1S / X1C',
     order: 2,
-    badge: 'Rychlý start',
+    badge: 'Rychlý ekosystém',
     specLine: 'CoreXY · 256×256×256 mm · uzavřená',
     blurb:
-      'Rychlá uzavřená CoreXY a AMS skoro bez ladění. Daň je firmware, do kterého vás výrobce nepustí.',
+      'Rychlá uzavřená CoreXY s pohodlným multimateriálovým ekosystémem. Kompromisem je uzavřenější software a servisní filozofie.',
     score: 8,
     scoreDraft: false,
-    scoreCaption: 'recenze P1S',
+    scoreCaption: 'publikovaný verdikt P1S',
     reviewHref: '/recenze/bambu-p1s/',
     priceFrom: 15000,
     priceCaption: 'redakční odhad · P1S bez AMS',
     filters: ['zacatecnik', 'uzavrene', 'multimaterial', 'pla'],
-    photoLabel: '[FOTO: Bambu Lab P1S]',
+    photoLabel: 'PROFIL STROJE',
     kinematics: 'CoreXY',
     volume: 'cca 256 × 256 × 256 mm',
     chamber: 'Z výroby, pasivní',
     multi: 'AMS',
-    software: 'Bambu Studio, uzavřenější ekosystém',
+    software: 'Bambu Studio',
     level: 'Začátečník',
   },
   {
     id: 'creality-k1-k1c',
     name: 'Creality K1 / K1C',
     order: 3,
-    badge: 'Nejlepší poměr',
+    badge: 'CoreXY za nižší vstup',
     specLine: 'CoreXY · cca 220×220×220 mm · uzavřená',
     blurb:
-      'Rychlé CoreXY za dobré peníze. Bere se jako platforma k doladění, ne jako hotový luxus.',
+      'Rychlé CoreXY za nižší vstupní cenu. Dává smysl uživateli, který počítá s větší ochotou ladit a ověřovat revizi stroje.',
     score: 7,
     scoreDraft: true,
-    scoreCaption: 'redakční koncept',
+    scoreCaption: 'známku zatím nezveřejňujeme',
     priceFrom: 12000,
     priceCaption: 'redakční odhad · K1',
     filters: ['uzavrene'],
-    photoLabel: '[FOTO: Creality K1]',
+    photoLabel: 'PROFIL STROJE',
     kinematics: 'CoreXY',
     volume: 'cca 220 × 220 × 220 mm',
     chamber: 'Z výroby',
     multi: 'Ne jako hlavní důvod nákupu',
-    software: 'Creality Print, často Orca',
+    software: 'Creality Print / Orca',
     level: 'Pokročilý',
   },
   {
     id: 'formlabs-form-4',
     name: 'Formlabs Form 4',
     order: 4,
-    badge: 'Resin pro dílnu',
-    specLine: 'Resin · kompaktní komora · PreForm',
+    badge: 'Resin workflow',
+    specLine: 'Resin · uzavřený pracovní proces · PreForm',
     blurb:
-      'Resinové workflow pro dílnu, která platí za opakovatelnost. Na občasné figurky je to overkill.',
+      'Profesionálněji pojatý resinový workflow pro dílnu, která platí za opakovatelnost a návazný proces. Na občasné figurky je to jiná kategorie nákupu.',
     score: 8,
     scoreDraft: true,
-    scoreCaption: 'redakční koncept',
+    scoreCaption: 'známku zatím nezveřejňujeme',
     priceFrom: 90000,
     priceCaption: 'redakční odhad · stroj',
     filters: ['resin'],
-    photoLabel: '[FOTO: Formlabs Form 4]',
-    kinematics: 'Resin (LFS / MSLA)',
-    volume: 'Menší než FDM — ověřte u výrobce',
+    photoLabel: 'PROFIL STROJE',
+    kinematics: 'Resin',
+    volume: 'Ověřte aktuální specifikaci výrobce',
     chamber: 'Uzavřený materiálový ekosystém',
-    multi: 'Knihovna resinu Formlabs',
-    software: 'PreForm, wash / cure',
+    multi: 'Materiálový systém Formlabs',
+    software: 'PreForm',
     level: 'Profi',
   },
 ];
@@ -142,6 +142,7 @@ const profiles: Omit<RankCard, 'href'>[] = [
 function fallback(article: Article, order: number): RankCard {
   const name = article.product ?? article.title;
   const filters: RankFilterId[] = article.level === 'začátečník' ? ['zacatecnik'] : [];
+  const hasPublishedScore = article.score !== undefined && article.evidence !== 'demo';
   return {
     id: article.id,
     href: article.href,
@@ -151,12 +152,12 @@ function fallback(article: Article, order: number): RankCard {
     specLine: [article.technologies.join(' · '), article.level].filter(Boolean).join(' · ') || 'Viz profil',
     blurb: article.description,
     score: article.score ?? null,
-    scoreDraft: article.score === undefined,
-    scoreCaption: article.score === undefined ? 'známku doplníme' : 'z textu',
+    scoreDraft: !hasPublishedScore,
+    scoreCaption: hasPublishedScore ? 'z publikovaného textu' : 'bez ověřené známky',
     priceFrom: null,
     priceCaption: 'cena v profilu',
     filters,
-    photoLabel: `[FOTO: ${name}]`,
+    photoLabel: 'PROFIL STROJE',
     kinematics: article.technologies[0] ?? '—',
     volume: 'Viz profil',
     chamber: 'Viz profil',
