@@ -1,0 +1,137 @@
+---
+import { formatPriceCzk, formatScoreBadge, machineCount } from '../lib/format';
+import { editorialNote, rankFilters, type RankCard } from '../lib/rankings';
+
+interface Props {
+  cards: RankCard[];
+  cardHeading?: 'h2' | 'h3';
+}
+
+const { cards, cardHeading = 'h3' } = Astro.props;
+const Heading = cardHeading;
+---
+
+<div data-rank-board>
+  <div class="rank-toolbar">
+    <div class="filter-row" role="group" aria-label="Filtr žebříčku">
+      {
+        rankFilters.map((filter, index) => (
+          <button
+            type="button"
+            class="chip"
+            data-filter={filter.id}
+            aria-pressed={index === 0 ? 'true' : 'false'}
+          >
+            {filter.label}
+          </button>
+        ))
+      }
+    </div>
+    <p class="rank-count" data-count aria-live="polite">{machineCount(cards.length)}</p>
+  </div>
+
+  <div class="rank-grid">
+    {
+      cards.map((card) => (
+        <article class="rank-card" data-card data-tags={card.filters.join(',')}>
+          <div class="rank-photo">
+            <span class="badge-num">#{card.order}</span>
+            <span class="badge-cat">{card.badge}</span>
+            <span class="photo-label">{card.photoLabel}</span>
+          </div>
+          <div class="rank-body">
+            <Heading class="rank-name">
+              <a href={card.href}>{card.name}</a>
+            </Heading>
+            <p class="rank-spec">{card.specLine}</p>
+            <div class="rank-score">
+              {card.score !== null ? (
+                <span class="score-orb">
+                  {formatScoreBadge(card.score)}
+                  <span class="sr-only"> z 10</span>
+                </span>
+              ) : (
+                <span class="score-orb score-orb-empty" aria-hidden="true">
+                  —
+                </span>
+              )}
+              <div>
+                <p class="score-kicker">Redakce</p>
+                {card.reviewHref ? (
+                  <a class="score-caption" href={card.reviewHref}>
+                    {card.scoreCaption}
+                  </a>
+                ) : (
+                  <p class="score-caption">{card.scoreCaption}</p>
+                )}
+              </div>
+            </div>
+            <p class="rank-blurb">{card.blurb}</p>
+            <div class="rank-foot">
+              <div>
+                {card.priceFrom !== null ? (
+                  <p class="price">
+                    <span class="price-prefix">od</span>
+                    {formatPriceCzk(card.priceFrom)}
+                  </p>
+                ) : (
+                  <p class="price">{card.priceCaption}</p>
+                )}
+                {card.priceFrom !== null && <p class="price-note">{card.priceCaption}</p>}
+              </div>
+              <a class="arrow-btn" href={card.href} aria-label={`Otevřít profil: ${card.name}`}>
+                <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                  <path
+                    d="M3 8h10M9 4l4 4-4 4"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <p class="rank-empty" data-empty hidden>
+    V tomhle řezu teď nemáme stroj, který bychom sem férově zařadili.
+  </p>
+  <p class="editorial-note">{editorialNote}</p>
+</div>
+
+<script>
+  import { machineCount } from '../lib/format';
+
+  function bind(board: HTMLElement) {
+    const buttons = [...board.querySelectorAll<HTMLButtonElement>('[data-filter]')];
+    const cards = [...board.querySelectorAll<HTMLElement>('[data-card]')];
+    const empty = board.querySelector<HTMLElement>('[data-empty]');
+    const count = board.querySelector<HTMLElement>('[data-count]');
+
+    const apply = (filter: string) => {
+      let visible = 0;
+      for (const card of cards) {
+        const tags = (card.dataset.tags ?? '').split(',').filter(Boolean);
+        const show = filter === 'all' || tags.includes(filter);
+        card.hidden = !show;
+        if (show) visible += 1;
+      }
+      if (empty) empty.hidden = visible !== 0;
+      if (count) count.textContent = machineCount(visible);
+      for (const button of buttons) {
+        button.setAttribute('aria-pressed', button.dataset.filter === filter ? 'true' : 'false');
+      }
+    };
+
+    for (const button of buttons) {
+      button.addEventListener('click', () => apply(button.dataset.filter ?? 'all'));
+    }
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-rank-board]').forEach((board) => bind(board));
+</script>

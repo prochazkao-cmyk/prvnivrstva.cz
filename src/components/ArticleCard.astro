@@ -11,13 +11,7 @@ interface Props {
   titleId?: string;
 }
 
-const {
-  article,
-  heading = 'h2',
-  variant = 'row',
-  showCategory = true,
-  titleId,
-} = Astro.props;
+const { article, heading = 'h2', variant = 'row', showCategory = true, titleId } = Astro.props;
 
 const Tag = heading;
 const category = categories[article.category];
@@ -60,17 +54,3 @@ const category = categories[article.category];
     }
   </p>
 </article>
-
-<style>
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-</style>

@@ -7,17 +7,15 @@ const description =
 ---
 
 <BaseLayout title="O nás" description={description}>
-  <main id="obsah" class="mx-auto max-w-6xl px-5 py-10">
+  <main id="obsah" class="page section-page">
     <nav class="crumbs" aria-label="Drobečková navigace">
       <a href="/">Úvod</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">O nás</span>
     </nav>
     <p class="kicker">Redakce</p>
-    <h1 class="mt-2 max-w-[16ch] font-serif text-[clamp(2.4rem,5vw,3.8rem)] leading-none font-semibold tracking-tight">
-      Píšeme, jako bychom stáli u stejné tiskárny.
-    </h1>
-    <div class="article-body mt-8 max-w-[68ch]">
+    <h1 class="page-title">Píšeme, jako bychom stáli u stejné tiskárny.</h1>
+    <div class="article-body" style="margin-top: 2rem; max-width: 68ch">
       <p>
         {site.name} je katalog a redakce 3D tisku pro lidi v Česku a EU, kteří už mají (nebo brzy
         budou mít) stroj na stole. Nejsme obchod. Neprodáváme tiskárny, filament ani „komunitu“.
@@ -33,6 +31,7 @@ const description =
       <p>
         Slevové kódy, žebříčky „nejlepší tiskárna 2026“ bez kritéria a převyprávěné specifikace z
         webu výrobce. Srovnání Prusa a Bambu je u nás otázka servisu a komory, ne otázka loga.
+        Ceny v katalogu strojů jsou redakční odhad, ne nabídka obchodu.
       </p>
       <h2>Kontakt</h2>
       <p>

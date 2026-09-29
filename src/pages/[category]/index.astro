@@ -1,9 +1,12 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleCard from '../../components/ArticleCard.astro';
+import RankBoard from '../../components/RankBoard.astro';
+import SpecTable from '../../components/SpecTable.astro';
 import { getArticles } from '../../lib/articles';
 import { categories, categoryOrder, isCategory } from '../../lib/categories';
 import { textCount } from '../../lib/format';
+import { buildRankCards } from '../../lib/rankings';
 import type { CategoryId } from '../../lib/categories';
 
 export async function getStaticPaths() {
@@ -20,36 +23,38 @@ if (!categoryParam || !isCategory(categoryParam)) {
 const categoryId = categoryParam as CategoryId;
 const category = categories[categoryId];
 const articles = await getArticles(categoryId);
+const cards = categoryId === 'stroje' ? buildRankCards(articles) : [];
 ---
 
 <BaseLayout title={category.label} description={category.intro}>
-  <main id="obsah" class="mx-auto max-w-6xl px-5 py-10">
+  <main id="obsah" class="page section-page">
     <nav class="crumbs" aria-label="Drobečková navigace">
       <a href="/">Úvod</a>
       <span aria-hidden="true">/</span>
       <span aria-current="page">{category.label}</span>
     </nav>
     <p class="kicker">Rubrika</p>
-    <h1 class="mt-2 font-serif text-[clamp(2.4rem,5vw,3.8rem)] leading-none font-semibold tracking-tight">
-      {category.label}
-    </h1>
-    <p class="mt-4 max-w-[62ch] text-xl leading-snug text-ink-soft">{category.intro}</p>
+    <h1 class="page-title">{category.label}</h1>
+    <p class="lede">{category.intro}</p>
     <p class="meta">{textCount(articles.length)}</p>
 
     {
-      articles.length === 0 ? (
-        <p class="mt-10 border-t border-ink pt-6">V téhle rubrice zatím nic neleží.</p>
+      categoryId === 'stroje' ? (
+        <>
+          <RankBoard cards={cards} cardHeading="h2" />
+          <h2 class="subhead">Srovnání v číslech</h2>
+          <p class="lede">
+            Stejné stroje, vedle sebe. Hodnoty jsou z profilů a jsou orientační — před nákupem ověřte
+            aktuální revizi u výrobce.
+          </p>
+          <SpecTable cards={cards} />
+        </>
+      ) : articles.length === 0 ? (
+        <p class="lede">V téhle rubrice zatím nic neleží.</p>
       ) : (
-        <div class="mt-8 divide-y divide-line border-y border-ink">
+        <div class="story-list">
           {articles.map((article) => (
-            <div class="py-6">
-              <ArticleCard
-                article={article}
-                heading="h2"
-                variant="row"
-                showCategory={false}
-              />
-            </div>
+            <ArticleCard article={article} heading="h2" variant="row" showCategory={false} />
           ))}
         </div>
       )

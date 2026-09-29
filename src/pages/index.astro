@@ -1,24 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
+import HeroPrint from '../components/HeroPrint.astro';
+import RankBoard from '../components/RankBoard.astro';
+import RubrikaIndex from '../components/RubrikaIndex.astro';
 import { getArticles } from '../lib/articles';
-import { categories, categoryOrder } from '../lib/categories';
-import { textCount } from '../lib/format';
+import { categoryOrder } from '../lib/categories';
+import { machineCount } from '../lib/format';
+import { buildRankCards } from '../lib/rankings';
 import { site } from '../lib/site';
 
 const articles = await getArticles();
-const hero = articles.find((article) => article.hero) ?? articles[0];
-const featured = articles
-  .filter((article) => article.featured && article.href !== hero?.href)
-  .slice(0, 2);
-const shown = new Set([hero?.href, ...featured.map((article) => article.href)]);
-const tips = articles
-  .filter((article) => article.category === 'rady-a-tipy' && !shown.has(article.href))
-  .slice(0, 4);
-const news = articles.find((article) => article.category === 'novinky');
+const cards = buildRankCards(articles.filter((article) => article.category === 'stroje'));
+const lead = articles.find((article) => article.hero) ?? articles.find((article) => article.featured) ?? articles[0];
+const reading = articles.filter((article) => article.href !== lead?.href).slice(0, 4);
+const news = articles.find((article) => article.category === 'novinky' && article.href !== lead?.href);
 const counts = Object.fromEntries(
   categoryOrder.map((id) => [id, articles.filter((article) => article.category === id).length]),
-) as Record<(typeof categoryOrder)[number], number>;
+);
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -30,86 +29,103 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title={`${site.name} — ${site.tagline}`} description={site.description} jsonLd={jsonLd}>
+<BaseLayout title={`${site.name} — ${site.tagline}`} description={site.description} jsonLd={jsonLd} tone="dark">
   <main id="obsah">
-    <section class="mx-auto max-w-6xl px-5 pt-10 pb-6" aria-labelledby="hero-title">
-      <p class="text-sm font-bold tracking-[0.14em] text-copper-ink uppercase">Vybrané</p>
-      {
-        hero && (
-          <div class="mt-4 grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(18rem,0.9fr)] lg:gap-12">
-            <ArticleCard article={hero} heading="h1" variant="lead" titleId="hero-title" />
-            <div class="layer-panel flex flex-col gap-6 p-5">
-              {featured.map((article) => (
-                <ArticleCard article={article} heading="h2" variant="side" />
-              ))}
-            </div>
-          </div>
-        )
-      }
-    </section>
-
-    <section class="mx-auto max-w-6xl px-5 py-10" aria-labelledby="rubriky-title">
-      <div class="flex flex-wrap items-end justify-between gap-3 border-t border-ink pt-6">
-        <h2 id="rubriky-title" class="font-serif text-3xl font-semibold tracking-tight">Rubriky</h2>
-        <p class="max-w-md text-muted">Šest šuplíků. Každý text má praktický závěr.</p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="page">
+        <p class="kicker kicker-light">L01 · Redakce</p>
+        <h1 id="hero-title" class="hero-title">
+          První vrstva,<br />která drží.
+        </h1>
+        <p class="hero-dek">
+          Redakční rozcestník 3D tisku pro Česko a EU. {machineCount(cards.length)} v katalogu — u
+          každého víme, proč ho doporučit a komu ne.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-light" href="#zebricek">Žebříček strojů</a>
+          <a class="btn btn-text" href="/stroje/">Celý katalog →</a>
+        </div>
       </div>
-      <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {
-          categoryOrder.map((id, index) => {
-            const category = categories[id];
-            const number = String(index + 1).padStart(2, '0');
-            return (
-              <a class="rubrika" href={category.href}>
-                <span class="rubrika-num">{number}</span>
-                <span class="rubrika-label">{category.label}</span>
-                <span class="rubrika-desc">{category.description}</span>
-                <span class="rubrika-count">{textCount(counts[id])}</span>
-              </a>
-            );
-          })
-        }
+      <div class="hero-stage">
+        <HeroPrint />
       </div>
     </section>
 
-    <section class="mx-auto max-w-6xl px-5 py-6 pb-12" aria-labelledby="tipy-title">
-      <div class="flex flex-wrap items-end justify-between gap-3 border-t border-ink pt-6">
-        <h2 id="tipy-title" class="font-serif text-3xl font-semibold tracking-tight">
-          Rady, které jdou zkusit dnes
-        </h2>
-        <a class="font-semibold text-copper-ink underline underline-offset-4" href="/rady-a-tipy/">
-          Všechny rady
-        </a>
+    <section class="band" id="zebricek" aria-labelledby="zebricek-title">
+      <div class="page">
+        <p class="kicker section-kicker-gap">L02 · Stroje</p>
+        <h2 id="zebricek-title" class="display">Nejlepší 3D tiskárny právě teď</h2>
+        <p class="lede">
+          Pořadí pro běžnou dílnu. Stejná známka neznamená stejný stroj — štítek říká, k čemu sedí.
+        </p>
+        <RankBoard cards={cards} cardHeading="h3" />
       </div>
-      <div class="mt-2 divide-y divide-line border-b border-line">
-        {
-          tips.map((article) => (
-            <div class="py-5">
-              <ArticleCard article={article} heading="h3" variant="row" showCategory={false} />
-            </div>
-          ))
-        }
+    </section>
+
+    <section class="band" id="rubriky" style="padding-top: 0" aria-labelledby="rubriky-title">
+      <div class="page">
+        <p class="kicker section-kicker-gap">L03 · Rubriky</p>
+        <h2 id="rubriky-title" class="display">Šest šuplíků.</h2>
+        <p class="lede">Každý text má praktický závěr. Žádný unboxing, žádný slevový kód.</p>
+        <RubrikaIndex counts={counts} />
       </div>
     </section>
 
     {
-      news && (
-        <section class="bg-moss text-paper" aria-labelledby="novinky-title">
-          <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 md:flex-row md:items-end md:justify-between">
-            <div class="max-w-3xl">
-              <p class="kicker kicker-on-dark">Novinky</p>
-              <h2 id="novinky-title" class="mt-2 font-serif text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
-                <a class="text-paper no-underline hover:text-[#f0c2a4]" href={news.href}>
-                  {news.title}
-                </a>
-              </h2>
-              <p class="mt-3 text-lg text-[#efe8dc]">{news.description}</p>
+      lead && (
+        <section class="band" style="padding-top: 0" aria-labelledby="cteni-title">
+          <div class="page">
+            <p class="kicker section-kicker-gap">L04 · Z dílny</p>
+            <h2 id="cteni-title" class="display">Co číst, když vybíráte</h2>
+            <div class="story-list">
+              <ArticleCard article={lead} heading="h3" variant="lead" />
+              {reading.map((article) => (
+                <ArticleCard article={article} heading="h3" variant="row" />
+              ))}
             </div>
-            <a class="shrink-0 font-semibold text-[#f0c2a4] underline underline-offset-4" href="/novinky/">
-              Celá rubrika
-            </a>
+          </div>
+        </section>
+      )
+    }
+
+    {
+      news && (
+        <section class="band" style="padding-top: 0" aria-labelledby="novinky-title">
+          <div class="page">
+            <p class="kicker section-kicker-gap">Novinky</p>
+            <h2 id="novinky-title" class="display">
+              <a href={news.href}>{news.title}</a>
+            </h2>
+            <p class="lede">{news.description}</p>
+            <p class="meta">
+              <a href="/novinky/">Celá rubrika</a>
+            </p>
           </div>
         </section>
       )
     }
   </main>
 </BaseLayout>
+
+<style>
+  #novinky-title a,
+  .display a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  #novinky-title a:hover {
+    color: var(--color-accent-ink);
+  }
+
+  .meta a {
+    color: var(--color-accent-ink);
+    font-weight: 620;
+    text-decoration: none;
+  }
+
+  .meta a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>
