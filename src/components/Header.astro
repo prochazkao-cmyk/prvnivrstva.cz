@@ -10,10 +10,10 @@ const { tone = 'solid' } = Astro.props;
 const pathname = Astro.url.pathname;
 const links = [
   { href: '/#zebricek', label: 'Tiskárny' },
+  { href: '/materialy/', label: 'Materiály' },
   { href: '/#poradna', label: 'Problémy' },
   { href: '/rady-a-tipy/', label: 'Návody' },
-  { href: '/technologie/', label: 'Technologie' },
-  { href: '/clanky/', label: 'Články' },
+  { href: '/nastroje/', label: 'Nástroje' },
 ];
 
 function isCurrent(href: string): boolean {
@@ -68,6 +68,8 @@ function isCurrent(href: string): boolean {
             </a>
           ))
         }
+        <a class="nav-link" href="/clanky/">Články</a>
+        <a class="nav-link" href="/technologie/">Technologie</a>
         <a class="nav-link" href="/novinky/">Novinky</a>
         <a class="nav-link" href="/recenze/">Recenze</a>
         <a class="nav-link" href="/o-nas/">O nás</a>
