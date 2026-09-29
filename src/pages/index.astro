@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import HeroPrint from '../components/HeroPrint.astro';
 import PrintCost from '../components/PrintCost.astro';
 import RankBoard from '../components/RankBoard.astro';
 import { getArticles } from '../lib/articles';
@@ -128,28 +127,28 @@ const atlas = [
   },
 ];
 
-const materialReads = [
+const filamentSamples = [
   {
     href: '/clanky/suseni-filamentu-kdy-jak-cim/',
-    title: 'Sušení filamentu',
+    title: 'PLA · sušení',
     meta: 'Článek · kdy a čím',
-    swatch: '#ff4d00',
+    swatch: '#ff6b35',
   },
   {
     href: '/rady-a-tipy/vlhky-filament/',
-    title: 'Křupání není tryska',
-    meta: 'Rada · vlhká cívka',
+    title: 'PETG · vlhkost',
+    meta: 'Rada · křupání z cívky',
     swatch: '#d9912a',
   },
   {
     href: '/rady-a-tipy/petg-prvni-vrstva/',
-    title: 'PETG první vrstva',
+    title: 'PETG · první vrstva',
     meta: 'Rada · ať se nesvaří s PEI',
     swatch: '#2e7fb8',
   },
   {
     href: '/rady-a-tipy/petg-a-struny/',
-    title: 'PETG se táhne',
+    title: 'PETG · stringing',
     meta: 'Rada · míň ofuku než u PLA',
     swatch: '#23916b',
   },
@@ -165,24 +164,25 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title={`${site.name} — ${site.tagline}`} description={site.description} jsonLd={jsonLd} tone="dark">
+<BaseLayout title={`${site.name} — ${site.tagline}`} description={site.description} jsonLd={jsonLd}>
   <main id="obsah">
     <section class="hero" aria-labelledby="hero-title">
       <div class="page">
         <div class="hero-top">
           <div class="hero-copy">
-            <p class="kicker kicker-light">L00 · vrstva 0,20 mm</p>
+            <p class="kicker">L00 · vrstva 0,20 mm</p>
             <h1 id="hero-title" class="hero-title">
               Všechno o 3D tisku.<br />
-              Česky. <span class="hero-mark">Z dílny.</span>
+              Česky. Poctivě.<br />
+              <span class="hero-mark">Z dílny.</span>
             </h1>
             <p class="hero-dek">
               Profily strojů, průvodce a poradna pro Česko a EU. Nezávislá redakce: píšeme, co drží na
               desce, ne co stojí v letáku.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-light" href="#zebricek">Najít tiskárnu <span aria-hidden="true">→</span></a>
-              <a class="btn btn-ghost" href="#pruvodce">Začít průvodcem</a>
+              <a class="btn btn-ink" href="#zebricek">Najít tiskárnu <span aria-hidden="true">→</span></a>
+              <a class="btn btn-line" href="#pruvodce">Začít průvodcem</a>
             </div>
             <p class="bench">
               <span>Právě v dílně</span>
@@ -199,7 +199,10 @@ const jsonLd = {
           {
             lead && (
               <a class="hero-feature" href={lead.href}>
-                <span class="hero-feature-kicker">Z dílny</span>
+                <span class="hero-feature-photo">
+                  <span class="hero-feature-kicker">Z dílny</span>
+                  <span class="hero-feature-shot">[foto: dílna]</span>
+                </span>
                 <span class="hero-feature-title">{lead.title}</span>
                 <span class="hero-feature-meta">{lead.description}</span>
                 <span class="hero-feature-foot">{formatReading(lead.readingMinutes)}</span>
@@ -207,9 +210,6 @@ const jsonLd = {
             )
           }
         </div>
-      </div>
-      <div class="hero-stage">
-        <HeroPrint />
       </div>
     </section>
 
@@ -272,33 +272,34 @@ const jsonLd = {
     <section class="material-band" aria-labelledby="material-title">
       <div class="page material-grid">
         <div>
-          <p class="kicker kicker-light">L02 · Materiál</p>
-          <h2 id="material-title" class="display display-light">Stejná cívka. Jiný výsledek, když je mokrá.</h2>
+          <p class="kicker kicker-light">L02 · Filament</p>
+          <h2 id="material-title" class="display display-light">Cívka vedle cívky. Ceny v tabulce jsou ukázka.</h2>
           <p class="material-lead">
-            Srovnávač cen e-shopů tu není. Máme texty o tom, co filament udělá ve stroji — sušení, PETG a
-            první vrstva, která se nesmí svařit s deskou.
+            Živý ceník e-shopů tu neběží. Řádky vpravo jsou ukázková data, ať je vidět srovnání. Odkazy
+            vedou na skutečné texty: sušení, vlhkost a PETG.
           </p>
           <ul class="check-list">
             <li>Sušení dřív, než budete honit retrakci</li>
             <li>PETG nechladit jako PLA</li>
-            <li>Cenu cívky si dosadíte vy, v kalkulačce níž</li>
+            <li>Skutečnou cenu cívky si dosadíte v kalkulačce níž</li>
           </ul>
           <a class="btn btn-accent" href="/clanky/suseni-filamentu-kdy-jak-cim/">Otevřít text o sušení</a>
         </div>
         <div class="material-table">
+          <p class="material-caption">Ukázková data · ne ceník obchodu</p>
           <p class="material-cols">
-            <span>Text</span>
-            <span>O čem</span>
+            <span>Filament</span>
+            <span>Cena</span>
           </p>
           <ul class="material-list">
             {
-              materialReads.map((item) => (
+              filamentSamples.map((item) => (
                 <li>
                   <a href={item.href}>
                     <span class="swatch" style={`background:${item.swatch}`} aria-hidden="true" />
                     <strong>{item.title}</strong>
                     <small>{item.meta}</small>
-                    <span class="material-go" aria-hidden="true">→</span>
+                    <em class="material-price">ukázka</em>
                   </a>
                 </li>
               ))
