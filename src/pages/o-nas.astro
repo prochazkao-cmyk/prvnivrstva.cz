@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../lib/site';
 
 const description =
-  'První vrstva je redakční rozcestník 3D tisku pro Česko a EU. Píšeme z dílny, ne z tiskové zprávy.';
+  'První vrstva je redakční rozcestník 3D tisku pro Česko a EU. Píšeme z dílny, ukazujeme původ dat a oddělujeme redakci od komerce.';
 ---
 
 <BaseLayout title="O nás" description={description}>
@@ -15,28 +15,42 @@ const description =
     </nav>
     <p class="kicker">Redakce</p>
     <h1 class="page-title">Píšeme, jako bychom stáli u stejné tiskárny.</h1>
+    <p class="lede">
+      První vrstva má jednu práci: zkrátit cestu od problému nebo rozhodnutí ke konkrétnímu dalšímu kroku.
+    </p>
+
     <div class="article-body" style="margin-top: 2rem; max-width: 68ch">
       <p>
-        {site.name} je katalog a redakce 3D tisku pro lidi v Česku a EU, kteří už mají (nebo brzy
-        budou mít) stroj na stole. Nejsme obchod. Neprodáváme tiskárny, filament ani „komunitu“.
+        {site.name} je katalog a redakce 3D tisku pro lidi v Česku a EU, kteří už mají — nebo brzy budou mít — stroj na stole. Nechceme přepisovat tiskové zprávy. Chceme vysvětlit, co v dílně funguje, kde je kompromis a co má cenu ověřit dřív, než utratíte peníze nebo další večer laděním.
       </p>
+
       <h2>Jak vypadá text, který sem pustíme</h2>
       <ul>
         <li>Je v češtině a dá se podle něj něco udělat ještě ten večer.</li>
         <li>Řekne, kdy rada neplatí. Uzavřená tiskárna a otevřený rám nejsou stejný problém.</li>
-        <li>Recenze je poznámka s verdiktem, ne unboxing. Když test nemáme, nenapíšeme, že máme.</li>
-        <li>Novinka musí změnit nákup, údržbu, nebo způsob, jakým čtete reklamu. Jinak do rubriky nepatří.</li>
+        <li>Recenze je text s verdiktem a slabinami, ne unboxingová óda.</li>
+        <li>Když test nebo měření nemáme, nenapíšeme, že ho máme.</li>
+        <li>Novinka musí změnit nákup, údržbu nebo workflow. Jinak je to jen další launch.</li>
       </ul>
+
+      <h2>Původ dat je součást obsahu</h2>
+      <p>
+        Vlastní měření, údaj výrobce, redakční zkušenost, odhad a demo nejsou totéž. U článků proto postupně zobrazujeme, z čeho závěr vznikl. Podrobnosti jsou na stránce <a href="/metodika/">Jak testujeme</a>.
+      </p>
+
       <h2>Co tu schválně není</h2>
       <p>
-        Slevové kódy, žebříčky „nejlepší tiskárna 2026“ bez kritéria a převyprávěné specifikace z
-        webu výrobce. Srovnání Prusa a Bambu je u nás otázka servisu a komory, ne otázka loga.
-        Ceny v katalogu strojů jsou redakční odhad, ne nabídka obchodu.
+        Skryté advertorialy, falešná laboratorní přesnost a pořadí koupené partnerem. Když použijeme redakční odhad ceny, označíme ho jako odhad. Když dostaneme produkt od výrobce, vztah k produktu má být u textu dohledatelný.
       </p>
+
+      <h2>Firmy a výrobci</h2>
+      <p>
+        Produkt k testu, technický podklad nebo placená spolupráce mohou dávat smysl. Nemohou ale kupovat skóre ani odstranění relevantní slabiny. Pravidla a kontakt jsou na stránce <a href="/spoluprace/">Spolupráce</a>.
+      </p>
+
       <h2>Kontakt</h2>
       <p>
-        Schránka <a href={`mailto:${site.email}`}>{site.email}</a> je zatím zástupná — adresa, na
-        kterou redakce míří, ne potvrzení, že už v ní někdo čte. Až bude ostře, bude to tahle.
+        Redakční tip, opravu faktické chyby nebo nabídku spolupráce pošlete na <a href={`mailto:${site.email}`}>{site.email}</a>.
       </p>
     </div>
   </main>
