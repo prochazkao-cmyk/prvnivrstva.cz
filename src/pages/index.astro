@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { getArticles } from '../lib/articles';
+import { categories, categoryOrder } from '../lib/categories';
+import { textCount } from '../lib/format';
+import { site } from '../lib/site';
+
+const articles = await getArticles();
+const hero = articles.find((article) => article.hero) ?? articles[0];
+const featured = articles
+  .filter((article) => article.featured && article.href !== hero?.href)
+  .slice(0, 2);
+const shown = new Set([hero?.href, ...featured.map((article) => article.href)]);
+const tips = articles
+  .filter((article) => article.category === 'rady-a-tipy' && !shown.has(article.href))
+  .slice(0, 4);
+const news = articles.find((article) => article.category === 'novinky');
+const counts = Object.fromEntries(
+  categoryOrder.map((id) => [id, articles.filter((article) => article.category === id).length]),
+) as Record<(typeof categoryOrder)[number], number>;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: site.name,
+  url: site.url,
+  description: site.description,
+  inLanguage: 'cs',
+};
+---
+
+<BaseLayout title={`${site.name} — ${site.tagline}`} description={site.description} jsonLd={jsonLd}>
+  <main id="obsah">
+    <section class="mx-auto max-w-6xl px-5 pt-10 pb-6" aria-labelledby="hero-title">
+      <p class="text-sm font-bold tracking-[0.14em] text-copper-ink uppercase">Vybrané</p>
+      {
+        hero && (
+          <div class="mt-4 grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(18rem,0.9fr)] lg:gap-12">
+            <ArticleCard article={hero} heading="h1" variant="lead" titleId="hero-title" />
+            <div class="layer-panel flex flex-col gap-6 p-5">
+              {featured.map((article) => (
+                <ArticleCard article={article} heading="h2" variant="side" />
+              ))}
+            </div>
+          </div>
+        )
+      }
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-10" aria-labelledby="rubriky-title">
+      <div class="flex flex-wrap items-end justify-between gap-3 border-t border-ink pt-6">
+        <h2 id="rubriky-title" class="font-serif text-3xl font-semibold tracking-tight">Rubriky</h2>
+        <p class="max-w-md text-muted">Pět šuplíků. Nic víc. Každý text má praktický závěr.</p>
+      </div>
+      <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          categoryOrder.map((id, index) => {
+            const category = categories[id];
+            const number = String(index + 1).padStart(2, '0');
+            return (
+              <a class="rubrika" href={category.href}>
+                <span class="rubrika-num">{number}</span>
+                <span class="rubrika-label">{category.label}</span>
+                <span class="rubrika-desc">{category.description}</span>
+                <span class="rubrika-count">{textCount(counts[id])}</span>
+              </a>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    <section class="mx-auto max-w-6xl px-5 py-6 pb-12" aria-labelledby="tipy-title">
+      <div class="flex flex-wrap items-end justify-between gap-3 border-t border-ink pt-6">
+        <h2 id="tipy-title" class="font-serif text-3xl font-semibold tracking-tight">
+          Rady, které jdou zkusit dnes
+        </h2>
+        <a class="font-semibold text-copper-ink underline underline-offset-4" href="/rady-a-tipy/">
+          Všechny rady
+        </a>
+      </div>
+      <div class="mt-2 divide-y divide-line border-b border-line">
+        {
+          tips.map((article) => (
+            <div class="py-5">
+              <ArticleCard article={article} heading="h3" variant="row" showCategory={false} />
+            </div>
+          ))
+        }
+      </div>
+    </section>
+
+    {
+      news && (
+        <section class="bg-moss text-paper" aria-labelledby="novinky-title">
+          <div class="mx-auto flex max-w-6xl flex-col gap-6 px-5 py-10 md:flex-row md:items-end md:justify-between">
+            <div class="max-w-3xl">
+              <p class="kicker kicker-on-dark">Novinky</p>
+              <h2 id="novinky-title" class="mt-2 font-serif text-3xl leading-tight font-semibold tracking-tight md:text-4xl">
+                <a class="text-paper no-underline hover:text-[#f0c2a4]" href={news.href}>
+                  {news.title}
+                </a>
+              </h2>
+              <p class="mt-3 text-lg text-[#efe8dc]">{news.description}</p>
+            </div>
+            <a class="shrink-0 font-semibold text-[#f0c2a4] underline underline-offset-4" href="/novinky/">
+              Celá rubrika
+            </a>
+          </div>
+        </section>
+      )
+    }
+  </main>
+</BaseLayout>

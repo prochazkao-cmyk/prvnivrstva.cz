@@ -1,0 +1,66 @@
+---
+import { categoryOrder, categories } from '../lib/categories';
+import { site } from '../lib/site';
+
+const pathname = Astro.url.pathname;
+const links = [
+  ...categoryOrder.map((id) => ({ href: categories[id].href, label: categories[id].label })),
+  { href: '/o-nas/', label: 'O nás' },
+];
+
+function isCurrent(href: string): boolean {
+  const path = pathname.length > 1 && pathname.endsWith('/') ? pathname.slice(0, -1) : pathname;
+  const target = href.length > 1 && href.endsWith('/') ? href.slice(0, -1) : href;
+  if (target === '/') return path === '/';
+  return path === target || path.startsWith(`${target}/`);
+}
+---
+
+<a class="skip-link" href="#obsah">Přeskočit na obsah</a>
+<header class="site-header sticky top-0 z-40 border-t-8 border-copper bg-ink text-paper">
+  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3 lg:py-4">
+    <a href="/" class="flex min-w-0 items-center gap-3 text-paper no-underline">
+      <img src="/logo.svg" width="44" height="44" alt="" />
+      <span class="min-w-0">
+        <span class="block font-serif text-2xl leading-none font-semibold tracking-tight">
+          {site.name}
+        </span>
+        <span class="mt-1 hidden text-sm text-[#ddd6c8] sm:block">{site.tagline}</span>
+      </span>
+    </a>
+
+    <nav class="nav-desktop hidden items-center gap-x-5 lg:flex" aria-label="Hlavní">
+      {
+        links.map((link) => (
+          <a
+            class="nav-link"
+            href={link.href}
+            aria-current={isCurrent(link.href) ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <details class="nav-mobile lg:hidden">
+      <summary class="inline-flex items-center gap-2 py-2">
+        <span class="label-closed">Menu</span>
+        <span class="label-open">Zavřít</span>
+      </summary>
+      <nav class="absolute inset-x-0 top-full border-t border-white/15 bg-ink px-5 py-4" aria-label="Hlavní, mobilní">
+        {
+          links.map((link) => (
+            <a
+              class="nav-link block py-2 text-lg"
+              href={link.href}
+              aria-current={isCurrent(link.href) ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+    </details>
+  </div>
+</header>

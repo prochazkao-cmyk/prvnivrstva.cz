@@ -1,0 +1,50 @@
+---
+import { categories, categoryOrder } from '../lib/categories';
+import { site } from '../lib/site';
+---
+
+<footer class="bg-ink text-paper">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-12 md:grid-cols-[1.4fr_1fr_1fr]">
+    <div>
+      <p class="font-serif text-2xl font-semibold tracking-tight">{site.name}</p>
+      <p class="mt-3 max-w-sm text-[#ddd6c8]">
+        Katalog a redakce 3D tisku pro Česko a EU. Píšeme z dílny: co drží na desce, co se vyplatí
+        opravovat a co je jen nápis na krabici.
+      </p>
+    </div>
+    <div>
+      <p class="text-xs font-bold tracking-[0.14em] text-[#f0c2a4] uppercase">Rubriky</p>
+      <ul class="mt-3 space-y-2">
+        {
+          categoryOrder.map((id) => (
+            <li>
+              <a class="footer-link" href={categories[id].href}>
+                {categories[id].label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
+      <p class="text-xs font-bold tracking-[0.14em] text-[#f0c2a4] uppercase">Kontakt</p>
+      <p class="mt-3 text-[#ddd6c8]">
+        Redakční schránka je zatím zástupná. Až poběží, bude to tahle adresa:
+      </p>
+      <p class="mt-2">
+        <a class="footer-link font-semibold" href={`mailto:${site.email}`}>{site.email}</a>
+      </p>
+      <p class="mt-6">
+        <a class="footer-link" href="/o-nas/">O nás</a>
+      </p>
+    </div>
+  </div>
+  <div class="border-t border-white/15">
+    <div
+      class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 text-sm text-[#c9c1b3]"
+    >
+      <p>© {new Date().getFullYear()} {site.name}</p>
+      <a class="footer-link" href="/sitemap-index.xml">Mapa stránek</a>
+    </div>
+  </div>
+</footer>
