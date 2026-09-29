@@ -1,0 +1,17 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<svg class:list={['extrusion-trace', className]} viewBox="0 0 760 250" aria-hidden="true" focusable="false">
+  <path d="M34 208C13 160 28 92 76 54c54-43 145-48 205-16 54 29 75 91 45 132-24 32-73 42-105 20-27-18-29-55-5-77 25-24 69-20 88 8 28 42 2 99-48 119" />
+  <path d="M56 208C39 166 52 111 92 78c45-37 119-41 169-15 44 24 61 74 37 107-20 26-59 34-85 17-22-15-24-44-4-62 20-19 56-16 72 7 22 33 1 79-39 96" />
+  <path d="M78 208c-12-33-2-75 30-101 35-29 92-32 131-12 34 19 48 57 29 82-15 20-45 26-65 13-17-11-18-33-3-47 16-14 43-12 55 5 17 25 1 59-29 72" />
+  <path d="M347 222c77-34 110-119 187-150 57-23 129-7 192 48" class="trace-route" />
+  <circle cx="349" cy="222" r="5" class="trace-node" />
+  <circle cx="534" cy="72" r="5" class="trace-node" />
+  <circle cx="726" cy="120" r="5" class="trace-node" />
+</svg>
