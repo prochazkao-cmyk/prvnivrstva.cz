@@ -1,34 +1,74 @@
 ---
-title: "Prusa MK4S po dílně: spolehlivá, ne nejrychlejší"
-description: "Otevřený rám, loadcell na první vrstvě a servis z Prahy. Na velké ABS to není stroj. Na roky v dílně pořád ano."
+title: "Original Prusa MK4S: otevřená pracovní tiskárna, ne náhrada za komoru"
+description: "MK4S má 250 × 210 × 220 mm, Nextruder, loadcell a otevřený firmware. Silná volba pro běžnou dílnu, pokud komoru nepotřebujete jako součást stroje."
 publishedAt: 2026-06-14
+updatedAt: 2026-09-29
+reviewedAt: 2026-09-29
 product: "Original Prusa MK4S"
-verdict: "Berte ji, když chcete otevřený stroj na PLA a PETG, který půjčíte i člověku, co jinak netiskne. Na uzavřené materiály počítejte s cestou k CORE One+, ne s dalším brinem."
+verdict: "Dává smysl, když chcete otevřený, servisovatelný stroj na PLA, PETG a běžnou dílenskou práci. Pokud je uzavřená nebo řízená komora základní požadavek, začněte výběr u jiné konstrukce."
 score: 8
-note: "Pracovní poznámka, ne laboratorní srovnání. Nemáme za sebou řízený test na stovkách hodin proti všem konkurentům. Známka říká, komu stroj dává smysl, ne pořadí v žebříčku."
+note: "Redakční verdikt, ne laboratorní srovnání. Nemáme řízený test stovek hodin proti všem konkurentům; známka shrnuje použitelnost a kompromisy tohoto konkrétního profilu."
 tags:
   - Prusa
   - MK4S
   - recenze
+  - FDM
+level: "začátečník"
+technologies:
+  - "FDM"
+evidence: "kombinace"
+sourceNote: "Technické specifikace ověřeny 29. 9. 2026 na oficiální produktové stránce a Knowledge Base Prusa; praktické závěry jsou redakční."
 ---
 
-MK4S je pořád ten Prusa stroj, který lidi myslí, když řeknou „i3, ale současná“. Nextruder, input shaping, loadcell. Otevřený rám. Objem 250 × 210 × 220 mm. Vedle CoreXY beden není rychlá. Vedle vlastního MK3S+ je to jiná první vrstva.
+MK4S je klasická otevřená kartézská tiskárna postavená kolem přímého extruderu Nextruder a loadcell senzoru pro kalibraci první vrstvy. Oficiální specifikace uvádí tiskový objem **250 × 210 × 220 mm**, maximální teplotu trysky 290 °C a podložky 120 °C. Firmware je podle Prusa Research otevřený a zdrojové kódy jsou veřejně dostupné.
 
-## Co se v dílně projeví jako první
+To jsou fakta. Důležitější otázka ale zní: **komu tenhle typ stroje dává smysl dnes, kdy jsou běžné i uzavřené CoreXY tiskárny?**
 
-První vrstva. Sonda si změří sílu dotyku a většina lidí, které k ní postavíte, odjede čtverec, který drží, aniž byste jim vysvětlovali papírek. To je důvod, proč ji půjčit. Ne maximální rychlost z reklamního řádku.
+## Co je na MK4S praktické
 
-Druhé je ticho kolem náhradních dílů. Tryska, ventilátor, plát, kabely — pořád se k tomu chováte jako ke stroji, který má vydržet dýl než jedna produktová řada. Oficiální přestavba na CORE One+ znamená, že MK4S není slepá větev, když později budete potřebovat komoru. Není to důvod kupovat MK4S, když komoru potřebujete už teď. Je to důvod nebát se, že za dva roky skončí v šuplíku bez cesty dál.
+### První vrstva a běžný provoz
 
-## Kde narazíte
+Loadcell měří kontakt trysky s podložkou a automatická kalibrace snižuje množství ručního ladění před běžným tiskem. To je užitečnější vlastnost než samotné marketingové maximum rychlosti: stroj má být připravený vytisknout další díl bez opakovaného rituálu.
 
-ABS a ASA ve větším půdorysu. Otevřený rám, průvan, roh nahoře. Brim to oddálí, nevyřeší. Podrobněji v textu [Warping u ABS](/clanky/warping-u-abs-priciny-a-checklist/). Širší profil stroje je v rubrice [Stroje](/stroje/prusa-mk4s/).
+### Servis a dokumentace
 
-Rychlost. Když vedle stojí P1S a obě jedou stejný užitkový díl, Bambu je hotová dřív. Když vedle stojí člověk, který chce večer tisknout a ráno mít díl, ne graf, na MK4S taky dojedete. Rozdíl je v tom, kolik večerů týdně to děláte a jestli je čas stroje váš úzký profil.
+Prusa nabízí veřejnou Knowledge Base, montážní a servisní postupy a dlouhodobě zveřejňuje firmware. Pro člověka, který chce zařízení chápat a opravovat, je to jiný typ vztahu ke stroji než uzavřenější spotřební elektronika.
 
-MMU, pokud ho připojíte, pořád chce víc trpělivosti než AMS. Když je více barev hlavní důvod nákupu, tohle není vaše kapitola. Když je hlavní důvod „ať to za pět let pořád umím seřídit“, je.
+Neznamená to, že každý servis bude levný nebo že nic nepokazíte. Znamená to, že cesta k dokumentaci a konstrukci je čitelná.
+
+### Otevřený rám je výhoda i limit
+
+Pro PLA a PETG je otevřená konstrukce jednoduchá a přístupná. Pro materiály citlivé na teplotní stabilitu okolí je to naopak omezení. Výrobce uvádí podporu ABS, ASA, HIPS a PA ve spojení s volitelným Original Prusa Enclosure a filtrací; samotná MK4S **nemá vestavěnou komoru**.
+
+Pokud je velké ASA nebo jiný materiál náročný na stabilní tepelné prostředí váš denní chleba, neřešte to jen silnějším brimem. Začněte u konstrukce stroje a prostředí. Viz [Warping u ABS — příčiny a checklist](/clanky/warping-u-abs-priciny-a-checklist/).
+
+## Co s rychlostí
+
+MK4S podporuje Input Shaper a Pressure Advance a používá vysokoprůtokovou 0,4mm trysku. To ale neznamená, že jedna hodnota „mm/s“ rozhodne mezi dvěma tiskárnami.
+
+Pro dílnu je podstatnější čas stejného reálného dílu, spolehlivost fronty a práce obsluhy. Dokud nemáme vlastní opakovaný benchmark stejného modelu na více strojích, nebudeme z reklamních maxim vyrábět pořadí.
+
+## Multimateriál
+
+MK4S podporuje volitelné MMU3. Jestli je vícemateriálový tisk hlavní důvod nákupu, porovnávejte **celý workflow**: zavádění materiálu, odpad, spolehlivost výměn, prostor a obsluhu. Ne jen počet barev v produktové tabulce.
+
+## Ověřené technické body
+
+- tiskový objem: 250 × 210 × 220 mm,
+- Nextruder, direct drive,
+- loadcell a automatické mesh bed leveling,
+- max. tryska 290 °C, podložka 120 °C,
+- bez vestavěné komory; enclosure je volitelný doplněk,
+- MMU3 je volitelné příslušenství,
+- firmware MK4 platformy je open-source.
+
+## Zdroje
+
+- [Prusa Research — Original Prusa MK4S, technické parametry](https://www.prusa3d.com/product/original-prusa-mk4s-kit/)
+- [Prusa Knowledge Base — MK4S](https://help.prusa3d.com/product/mk4s)
+- [Prusa Research — Open-source at Prusa Research](https://www.prusa3d.com/page/open-source-at-prusa-research_236812/)
 
 <aside class="takeaway">
   <p class="takeaway-label">Praktický závěr</p>
-  <p>MK4S berte jako otevřenou pracovní tiskárnu s výbornou první vrstvou a jasnou cestou k dílům. Velké ABS na ní neplánujte. Když komoru potřebujete hned, dívejte se na CORE One+, ne na silnější brim.</p>
+  <p>MK4S dává smysl jako otevřená, dokumentovaná pracovní tiskárna. Pokud potřebujete komoru jako základní součást procesu, neplaťte za otevřený stroj s plánem, že problém „nějak obejdete“ — porovnejte rovnou uzavřenou konstrukci.</p>
 </aside>
