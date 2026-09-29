@@ -40,6 +40,14 @@ const category = categories[article.category];
     <span aria-hidden="true">·</span>
     <span>{formatReading(article.readingMinutes)}</span>
     {
+      article.level && (
+        <>
+          <span aria-hidden="true">·</span>
+          <span>{article.level}</span>
+        </>
+      )
+    }
+    {
       article.score !== undefined && (
         <>
           <span aria-hidden="true">·</span>

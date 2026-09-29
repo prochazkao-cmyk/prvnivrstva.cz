@@ -1,28 +1,44 @@
 ---
-title: "MJF: práškový nylon, jiná ekonomika než SLS"
-description: "HP Multi Jet Fusion taky spéká nylon bez podpor. Pro kusovou dílnu je to zase zakázka. Rozdíl proti SLS poznáte na nabídce, ne na zkratce."
-publishedAt: 2026-03-25
+title: "MJF — Multi Jet Fusion ve zkratce"
+description: "HP Multi Jet Fusion je prášková technologie s agentem a teplem — rychlé série, izotropnější díly, typicky přes výrobní službu."
+publishedAt: 2026-09-29
+level: "pokročilý"
+technologies:
+  - "MJF"
 tags:
-  - MJF
-  - nylon
-  - technologie
+  - "primer"
+  - "mjf"
+  - "orientace"
 ---
+## Co to je
 
-MJF (Multi Jet Fusion, proces HP) na prášek nanese činidla a pak ho prohřeje infračervenou lampou. Tam, kde je fusing agent, se prášek speče. Tam, kde je detailing agent, se spékání zastaví ostřeji. Výsledek je zase nylonový díl bez klasických podpor, podobně jako u [SLS](/technologie/sls/).
+**MJF** (Multi Jet Fusion) od HP pracuje s práškem (často PA12/PA11): po ploše se nanáší fusing/detailing agenty a energie speče vrstvu. Výsledek jsou práškové polymerové díly vhodné na funkční prototypy i krátké až střední série.
 
-Surový povrch bývá jemně zrnitý, často šedý. Studia ho běžně barví, typicky na černo. Obarvený díl vypadá hotověji než bílý SLS, není to ale vstřikolis. Hrana je pořád hrana z prášku. Těsnění, závit v plastu a tenká stěna mají limity, které vám má říct ten, kdo stroj provozuje, ne obecný článek.
+Běžný uživatel MJF **nevlastní** — posílá STL do výrobní služby (bureau / HP partner).
 
-## Kdy se vyplatí poptat
+## Jak to funguje (stručně)
 
-Funkční díly z PA12, složitá geometrie, série, která je moc malá na formu a moc velká na to, abyste ji hlídali na jedné stolní FDM. MJF bývá zajímavé, když zakázka naplní build — platíte prostor ve stroji, ne jen vaše tři díly, a cena za kus padá, když prostor sdílíte s cizí zakázkou. U jednoho prototypu může být SLS nebo i dobře seřízený stolní nylon levnější a rychlejší. U padesáti stejných spon se poměr otočí. Nechte si nacenit obojí.
+1. Vrstva prášku.  
+2. Inkjet hlava aplikuje agenty.  
+3. Energetický průchod speče vybrané oblasti.  
+4. Unpack, chlazení, čištění, případně barvení / vapour smoothing.
 
-FDM nylon s uhlíkem na uzavřené tiskárně pořád vyhraje, když potřebujete jeden držák zítra a máte stroj, který to umí. MJF vyhraje, když potřebujete deset stejných a nechcete řešit podpory, smrštění otevřeného rámu a anizotropii vrstev. Vrstvy u MJF jsou, ale pevnost je ve víc směrech slušnější než u FDM, kde díl praskne po vrstvě, jakmile ho namáháte špatným směrem.
+Packing density v jobu ovlivňuje cenu — bureau skládá více zákazníků do jedné várky.
 
-## Co napsat do poptávky
+## Pro koho
 
-Materiál (PA12, nebo plněný, když ho potřebujete), jestli má být díl barvený, jaké teplotě a jakému zatížení bude čelit, a která stěna je funkční. „Černý nylon, ať to vypadá“ bez tloušťky stěny je způsob, jak dostat krásný a křehký díl. Když je díl těsný na sestavu, pošlete i protikus. Práškový proces nemá stejné přídavky jako vaše FDM, které „vždycky udělá díru o dvě desetiny větší“.
+- Startupy a firmy potřebující desítky až stovky funkčních kusů.  
+- Díly s lepší izotropií než typické FDM.  
+- Když SLS-like vlastnosti dávají smysl, ale volíte konkrétní MJF dodavatele/materiál.
 
-<aside class="takeaway">
-  <p class="takeaway-label">Praktický závěr</p>
-  <p>MJF berte jako zakázkový nylon bez podpor, často výhodný až od série. U jednoho kusu si nechte nacenit i SLS. Do poptávky pište materiál, barvení a zatížení, ne jen barvu.</p>
-</aside>
+## Limity
+
+- Není to desktop hobby technologie.  
+- Design rules (tloušťky, mezery, práškové únikové otvory) je potřeba respektovat.  
+- Povrch práškový; estetika chce post-pro.  
+- Lead time a MOQ logika bureau.  
+- Materiálová škála užší než „všechny filamenty na světě“.
+
+## Praktický závěr
+
+MJF je **výrobní služba**, ne další filamentová tiskárna do garáže. Použijte ho, když FDM nestačí mechanicky/objemem a nechcete řešit vlastní práškovou infrastrukturu. Než objednáte sérii, ověřte design rules dodavatele na jednom prototypu.

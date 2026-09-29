@@ -22,7 +22,7 @@ Druhé je ticho kolem náhradních dílů. Tryska, ventilátor, plát, kabely �
 
 ## Kde narazíte
 
-ABS a ASA ve větším půdorysu. Otevřený rám, průvan, roh nahoře. Brim to oddálí, nevyřeší. Podrobněji v textu [ABS se kroutí od rohů](/clanky/abs-se-krouti/).
+ABS a ASA ve větším půdorysu. Otevřený rám, průvan, roh nahoře. Brim to oddálí, nevyřeší. Podrobněji v textu [Warping u ABS](/clanky/warping-u-abs-priciny-a-checklist/). Širší profil stroje je v rubrice [Stroje](/stroje/prusa-mk4s/).
 
 Rychlost. Když vedle stojí P1S a obě jedou stejný užitkový díl, Bambu je hotová dřív. Když vedle stojí člověk, který chce večer tisknout a ráno mít díl, ne graf, na MK4S taky dojedete. Rozdíl je v tom, kolik večerů týdně to děláte a jestli je čas stroje váš úzký profil.
 

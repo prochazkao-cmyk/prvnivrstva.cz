@@ -12,6 +12,8 @@ const articleSchema = z.object({
   hero: z.boolean().default(false),
   draft: z.boolean().default(false),
   tags: z.array(z.string()).default([]),
+  level: z.enum(['začátečník', 'pokročilý', 'profi']).optional(),
+  technologies: z.array(z.string()).default([]),
   product: z.string().optional(),
   verdict: z.string().optional(),
   score: z.number().min(1).max(10).optional(),
@@ -31,6 +33,7 @@ function articles(directory: string) {
 export const collections = {
   clanky: articles('clanky'),
   'rady-a-tipy': articles('rady-a-tipy'),
+  stroje: articles('stroje'),
   recenze: articles('recenze'),
   novinky: articles('novinky'),
   technologie: articles('technologie'),

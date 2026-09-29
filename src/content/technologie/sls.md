@@ -1,28 +1,44 @@
 ---
-title: "SLS: nylon bez podpor, většinou mimo dílnu"
-description: "Laser spéká prášek. Podpory netřeba, povrch je zrnitý, stroj do garáže si nekupujete. Kupujete díl u někoho, kdo prášek už má."
-publishedAt: 2026-03-18
+title: "SLS — prášek, laser a díly bez supportů"
+description: "Selective Laser Sintering spéká nylonový prášek laserem. Žádné klasické supports, průmyslová logika, jiná cenová liga než desktop FDM."
+publishedAt: 2026-09-29
+level: "pokročilý"
+technologies:
+  - "SLS"
 tags:
-  - SLS
-  - nylon
-  - technologie
+  - "primer"
+  - "sls"
+  - "orientace"
 ---
+## Co to je
 
-SLS (selective laser sintering) spéká laserem plastový prášek, nejčastěji nylon PA12, někdy PA11 nebo plněný prášek. Neosvícený prášek kolem dílu ho drží. Podpory, jak je znáte z FDM, odpadají. Dá se tisknout kloub, který je už smontovaný, nebo díl s vnitřním kanálem, který byste na FDM podpírali do zoufalství.
+**SLS** (Selective Laser Sintering) spéká práškový polymer (nejčastěji PA12 nylon) laserem po vrstvách v temperované komoře. Okolní prášek slouží jako podpora — složité geometrie a pohyblivé sestavy „v jednom jobu“ jsou běžné.
 
-Povrch je zrnitý, trochu jako jemné kamenivo. Na pohled to není výlisek. Na funkci — spony, kryty, díly, které mají pružit a vrátit se — je to často lepší než cokoliv z stolního PLA.
+Desktop SLS existuje, ale většina kvalitní práce pořád žije ve **service bureau** nebo průmyslových strojích.
 
-## Proč to nemáte vedle SLA
+## Jak to funguje (stručně)
 
-Stroj je drahý, prášek se musí předehřívat, část nepoužitého prášku se recykluje v přesném poměru a zbytek je odpad, který se nechová jako cívka v šuplíku. Existují menší „stolní“ SLS, pořád jsou to desítky až stovky tisíc a pořád je to dílna s odsáváním, ne police nad ponkem. Pro jednoho člověka s občasnou sponou z nylonu je správná cesta zakázka.
+1. Tenká vrstva prášku.  
+2. Laser speče průřez.  
+3. Další vrstva prášku, opakování.  
+4. Po jobu chladnutí (kritické), unpacking, bead blast / čištění.
 
-Když poptáváte, ptejte se na materiál (PA12 není „nylon“ jako nylonová struna z FDM), na tloušťku stěny, kterou ještě garantují, a na to, jestli díl půjde barvit. Surový SLS je typicky bílý až šedý a mastí se od prášku, dokud ho pořádně neočistí. To očištění je součást ceny. Když v nabídce chybí, chybí i v dílu, který vám přijde.
+Orientace a packing více dílů do cake ovlivňují cenu i kvalitu.
 
-## SLS, nebo MJF
+## Pro koho
 
-Obojí je práškový nylon bez klasických podpor. Rozdíl v dílně, která jen objednává, je často menší než rozdíl mezi dvěma nabídkami. [MJF](/technologie/mjf/) mívá jiný povrch a jinou ekonomiku série. Když vám dvě studia pošlou cenu, porovnejte materiál, dodací dobu a to, jestli díl snese vaši teplotu. Neporovnávejte zkratky.
+- Funkční prototypy a koncové díly z nylonu.  
+- Složité tvary, pantové mechanismy, mřížky.  
+- Firmy, které nechtějí vlastnit chemii a stroj — objednají u bureau.
 
-<aside class="takeaway">
-  <p class="takeaway-label">Praktický závěr</p>
-  <p>SLS objednávejte na funkční nylon, který nemá být hladký jako výlisek a nechce se podpírat. Stroj si kvůli tomu nekupujte. V poptávce pište materiál a tloušťku stěny, ne jen „vytiskněte STL“.</p>
-</aside>
+## Limity
+
+- Povrch zrnitý (powder look); barvení/impregnace zvlášť.  
+- Cena a dostupnost vs. FDM.  
+- Teplotní a rozměrové chování nylonu — design musí respektovat technologii.  
+- Práce s práškem: zdraví, úklid, vybavení — ne hobby stůl vedle kávovaru.  
+- Domácí SLS je stále kompromis oproti průmyslu.
+
+## Praktický závěr
+
+SLS volte, když potřebujete **nylonovou geometrii bez support hell** a FDM/SLA nestačí. Nejdřív vyzkoušejte service bureau na jednom dílu, než investujete do vlastního práškového stroje.

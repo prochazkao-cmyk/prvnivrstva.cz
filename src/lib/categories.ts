@@ -1,6 +1,7 @@
 export const categoryOrder = [
   'clanky',
   'rady-a-tipy',
+  'stroje',
   'recenze',
   'novinky',
   'technologie',
@@ -32,6 +33,14 @@ export const categories: Record<CategoryId, Category> = {
     description: 'Krátké postupy, které jdou zkusit ještě dnes.',
     intro:
       'Jedna potíž, jeden postup. Žádné „10 hacků, které musíte znát“. Když rada potřebuje výjimku, napíšeme ji.',
+  },
+  stroje: {
+    id: 'stroje',
+    label: 'Stroje',
+    href: '/stroje/',
+    description: 'Profily tiskáren. Komu sedí a kde je kompromis.',
+    intro:
+      'Přehledy strojů, ne unboxing. Silné stránky, slabiny a komu dává smysl — bez laboratorního protokolu. Hlubší verdikt, když ho máme, zůstává v recenzích.',
   },
   recenze: {
     id: 'recenze',

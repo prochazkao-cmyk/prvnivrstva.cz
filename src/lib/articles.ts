@@ -12,6 +12,8 @@ export interface Article {
   featured: boolean;
   hero: boolean;
   tags: string[];
+  level?: string;
+  technologies: string[];
   product?: string;
   verdict?: string;
   score?: number;
@@ -23,6 +25,7 @@ export interface Article {
 type AnyEntry =
   | CollectionEntry<'clanky'>
   | CollectionEntry<'rady-a-tipy'>
+  | CollectionEntry<'stroje'>
   | CollectionEntry<'recenze'>
   | CollectionEntry<'novinky'>
   | CollectionEntry<'technologie'>;
@@ -52,6 +55,8 @@ export function toArticle(category: CategoryId, entry: AnyEntry): Article {
     featured: entry.data.featured,
     hero: entry.data.hero,
     tags: entry.data.tags,
+    level: entry.data.level,
+    technologies: entry.data.technologies,
     product: entry.data.product,
     verdict: entry.data.verdict,
     score: entry.data.score,
@@ -67,6 +72,8 @@ async function loadCategory(category: CategoryId): Promise<AnyEntry[]> {
       return getCollection('clanky');
     case 'rady-a-tipy':
       return getCollection('rady-a-tipy');
+    case 'stroje':
+      return getCollection('stroje');
     case 'recenze':
       return getCollection('recenze');
     case 'novinky':
@@ -84,7 +91,11 @@ export async function getArticles(category?: CategoryId): Promise<Article[]> {
       return entries.filter((entry) => !entry.data.draft).map((entry) => toArticle(id, entry));
     }),
   );
-  return groups.flat().sort((a, b) => b.publishedAt.getTime() - a.publishedAt.getTime());
+  return groups.flat().sort((a, b) => {
+    const byDate = b.publishedAt.getTime() - a.publishedAt.getTime();
+    if (byDate !== 0) return byDate;
+    return a.title.localeCompare(b.title, 'cs');
+  });
 }
 
 export function categoryById(id: CategoryId) {
