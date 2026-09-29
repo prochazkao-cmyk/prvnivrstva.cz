@@ -1,0 +1,88 @@
+---
+interface Props {
+  kind: 'first-layer' | 'warp' | 'string' | 'foot' | 'wet' | 'flow' | 'clog' | 'shift' | 'plate';
+}
+
+const { kind } = Astro.props;
+---
+
+<svg class="symptom-icon" viewBox="0 0 140 92" aria-hidden="true" focusable="false">
+  <path class="bed" d="M12 76h116" />
+  {kind === 'first-layer' && (
+    <>
+      <path d="M22 66c13-12 31-11 43 0s31 12 53 0" />
+      <path d="M22 57c13-12 31-11 43 0s31 12 53 0" />
+      <path class="accent" d="M25 47h90" />
+      <path d="M64 15h18l-3 17-6 8h-4l-6-8z" />
+    </>
+  )}
+  {kind === 'warp' && (
+    <>
+      <path d="M25 68c12 0 13-11 22-17h47c9 6 10 17 21 17v8H25Z" />
+      <path class="accent" d="m26 65-11-13m100 13 10-13" />
+    </>
+  )}
+  {kind === 'string' && (
+    <>
+      <path d="M24 29h27v47H24zm65 0h27v47H89z" />
+      <path class="accent" d="M51 37c13 3 23-7 38 2M51 50c18-7 22 9 38 1M51 62c15 7 25-6 38 2" />
+    </>
+  )}
+  {kind === 'foot' && (
+    <>
+      <path d="M39 20h62v43l14 13H25l14-13Z" />
+      <path class="accent" d="M25 76h90" />
+    </>
+  )}
+  {kind === 'wet' && (
+    <>
+      <path d="M24 64c18-11 31-18 46-33 13 13 28 23 46 33" />
+      <circle class="accent-fill" cx="54" cy="47" r="4" />
+      <circle class="accent-fill" cx="78" cy="39" r="3" />
+      <circle class="accent-fill" cx="93" cy="52" r="5" />
+      <path d="M60 16c3 7-6 9-2 17m23-22c4 9-7 12-2 21" />
+    </>
+  )}
+  {kind === 'flow' && (
+    <>
+      {[30, 41, 52, 63].map((y) => <path d={`M20 ${y}h34m13 0h53`} />)}
+      <path class="accent" d="M55 26v41M65 26v41" />
+    </>
+  )}
+  {kind === 'clog' && (
+    <>
+      <path d="M49 14h42l-5 29-12 17H66L54 43Z" />
+      <path class="accent" d="M70 59v17" />
+      <path d="m60 40 20-12m-18 20 22-13" />
+      <circle class="accent-fill" cx="70" cy="43" r="4" />
+    </>
+  )}
+  {kind === 'shift' && (
+    <>
+      <path d="M27 59h60v17H27zm15-18h60v18H42zm-8-18h60v18H34z" />
+      <path class="accent" d="M103 33h24m-8-8 8 8-8 8" />
+    </>
+  )}
+  {kind === 'plate' && (
+    <>
+      <path d="M23 57 72 30l46 27-49 19Z" />
+      <path class="accent" d="M38 55c18-10 36-13 62 0" />
+      <path d="M46 34c-5-8-1-16 7-20m20 11c-4-7 0-13 7-17" />
+    </>
+  )}
+</svg>
+
+<style>
+  .symptom-icon {
+    width: 100%;
+    height: auto;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .symptom-icon .bed { stroke: var(--color-muted); }
+  .symptom-icon .accent { stroke: var(--color-accent); stroke-width: 3; }
+  .symptom-icon .accent-fill { fill: var(--color-accent); stroke: none; }
+</style>
