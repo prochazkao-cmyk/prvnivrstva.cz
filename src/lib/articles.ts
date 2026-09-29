@@ -8,6 +8,7 @@ export interface Article {
   description: string;
   publishedAt: Date;
   updatedAt?: Date;
+  reviewedAt?: Date;
   author: string;
   featured: boolean;
   hero: boolean;
@@ -18,6 +19,9 @@ export interface Article {
   verdict?: string;
   score?: number;
   note?: string;
+  evidence: 'redakce' | 'vyrobce' | 'vlastni-mereni' | 'kombinace' | 'demo';
+  sourceNote?: string;
+  disclosure?: string;
   readingMinutes: number;
   href: string;
 }
@@ -51,6 +55,7 @@ export function toArticle(category: CategoryId, entry: AnyEntry): Article {
     description: entry.data.description,
     publishedAt: entry.data.publishedAt,
     updatedAt: entry.data.updatedAt,
+    reviewedAt: entry.data.reviewedAt,
     author: entry.data.author,
     featured: entry.data.featured,
     hero: entry.data.hero,
@@ -61,6 +66,9 @@ export function toArticle(category: CategoryId, entry: AnyEntry): Article {
     verdict: entry.data.verdict,
     score: entry.data.score,
     note: entry.data.note,
+    evidence: entry.data.evidence,
+    sourceNote: entry.data.sourceNote,
+    disclosure: entry.data.disclosure,
     readingMinutes: readingMinutesFromBody(entry.body),
     href: `/${category}/${entry.id}/`,
   };
