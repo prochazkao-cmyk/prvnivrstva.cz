@@ -1,0 +1,219 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ExtrusionTrace from '../components/ExtrusionTrace.astro';
+import RankBoard from '../components/RankBoard.astro';
+import { getArticles } from '../lib/articles';
+import { buildRankCards } from '../lib/rankings';
+
+const description =
+  'Výběr 3D tiskárny podle rozpočtu, zkušenosti a materiálu. Redakční profily, transparentní odhady a srovnání konstrukce, komory, multimateriálu a softwaru.';
+
+const articles = await getArticles('stroje');
+const cards = buildRankCards(articles);
+---
+
+<BaseLayout title="Výběr 3D tiskárny" description={description}>
+  <main id="obsah">
+    <section class="printer-hero">
+      <div class="page printer-hero-grid">
+        <div>
+          <p class="kicker">Výběr stroje · podle práce</p>
+          <h1 class="page-title">Nejlepší tiskárna neexistuje. Existuje lepší volba pro váš díl.</h1>
+          <p class="lede">
+            Nejdřív rozpočet, materiál a ochota servisovat. Až potom značka. Číselné skóre zobrazujeme jen tam, kde za ním stojí publikovaný redakční verdikt.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-ink" href="#vyber">Najít stroj</a>
+            <a class="btn btn-line" href="#srovnani">Porovnat parametry</a>
+          </div>
+        </div>
+        <div class="printer-volume-art" aria-hidden="true">
+          <div class="wire wire-a"><span>250</span></div>
+          <div class="wire wire-b"><span>256</span></div>
+          <div class="wire wire-c"><span>220</span></div>
+          <p>BUILD VOLUME / mm</p>
+        </div>
+      </div>
+      <ExtrusionTrace />
+    </section>
+
+    <section class="band" id="vyber" aria-labelledby="vyber-title">
+      <div class="page" data-rank-root>
+        <div class="finder-copy">
+          <p class="kicker section-kicker-gap">Rozhodovací filtr</p>
+          <h2 id="vyber-title" class="display">Co budete skutečně tisknout?</h2>
+          <p class="lede">Filtr pracuje jen s profily, které na webu opravdu máme. Když kombinaci neumíme doporučit, raději zobrazíme prázdný výsledek než náhodného vítěze.</p>
+        </div>
+
+        <form class="finder printer-finder" action="#vyber">
+          <p class="finder-line">
+            <span>Hledám tiskárnu</span>
+            <select data-budget aria-label="Cenový strop">
+              <option value="all">bez cenového stropu</option>
+              <option value="do-10000">do 10 000 Kč</option>
+              <option value="do-15000">do 15 000 Kč</option>
+            </select>
+            <span>pro</span>
+            <select data-who aria-label="Pro koho">
+              <option value="all">kohokoli</option>
+              <option value="zacatecnik">začátečníka</option>
+            </select>
+            <span>a tisknu hlavně</span>
+            <select data-material aria-label="Materiál nebo použití">
+              <option value="all">cokoli</option>
+              <option value="pla">PLA a PETG</option>
+              <option value="uzavrene">technické materiály</option>
+              <option value="multimaterial">víc materiálů / barev</option>
+              <option value="resin">resin</option>
+            </select>
+          </p>
+          <button class="btn btn-accent" type="button" data-finder-go>Ukázat odpovídající stroje</button>
+          <p class="finder-note">Ceny jsou redakční orientace k datu profilu, ne živý ceník. Před nákupem ověřte aktuální konfiguraci a cenu výrobce/prodejce.</p>
+        </form>
+
+        <RankBoard cards={cards} cardHeading="h3" />
+      </div>
+    </section>
+
+    <section class="compare-band" id="srovnani" aria-labelledby="compare-title">
+      <div class="page">
+        <div class="section-head">
+          <div>
+            <p class="kicker kicker-light">Srovnávací matice</p>
+            <h2 id="compare-title" class="display display-light">Jeden řádek = jedna praktická otázka.</h2>
+          </div>
+        </div>
+        <div class="compare-scroll" role="region" aria-label="Srovnání tiskáren" tabindex="0">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Otázka</th>
+                {cards.map((card) => <th><a href={card.href}>{card.name}</a></th>)}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Kinematika</th>
+                {cards.map((card) => <td>{card.kinematics}</td>)}
+              </tr>
+              <tr>
+                <th>Tiskový objem</th>
+                {cards.map((card) => <td>{card.volume}</td>)}
+              </tr>
+              <tr>
+                <th>Komora</th>
+                {cards.map((card) => <td>{card.chamber}</td>)}
+              </tr>
+              <tr>
+                <th>Více materiálů / barev</th>
+                {cards.map((card) => <td>{card.multi}</td>)}
+              </tr>
+              <tr>
+                <th>Software</th>
+                {cards.map((card) => <td>{card.software}</td>)}
+              </tr>
+              <tr>
+                <th>Komu sedí</th>
+                {cards.map((card) => <td>{card.level}</td>)}
+              </tr>
+              <tr>
+                <th>Orientační vstup</th>
+                {cards.map((card) => <td>{card.priceFrom ? `od ${new Intl.NumberFormat('cs-CZ').format(card.priceFrom)} Kč` : 'viz profil'}</td>)}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="compare-note">Tabulka není specifikační databáze výrobce. Je to praktická orientace z redakčních profilů; detail a zdroje jsou na stránce konkrétního stroje/recenze.</p>
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="choose-title">
+      <div class="page choose-grid">
+        <div>
+          <p class="kicker section-kicker-gap">Čtyři otázky před nákupem</p>
+          <h2 id="choose-title" class="display">Co rozhodne víc než marketingová rychlost.</h2>
+        </div>
+        <ol class="choose-list">
+          <li><span>01</span><strong>Jaké materiály budou běžné?</strong><p>PLA/PETG nepotřebují stejný stroj jako velké ASA díly nebo resinové miniatury.</p></li>
+          <li><span>02</span><strong>Chcete zařízení používat, nebo i opravovat?</strong><p>Dokumentace, dostupnost dílů a servisní filozofie mají po roce větší cenu než launch video.</p></li>
+          <li><span>03</span><strong>Je multimateriál hlavní workflow?</strong><p>Porovnávejte celý systém, odpad a obsluhu, ne jen tiskárnu bez příslušenství.</p></li>
+          <li><span>04</span><strong>Kolik stojí váš čas?</strong><p>Levnější hardware může být dražší, pokud každý týden vyžaduje ladění, které nechcete dělat.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="decision-band">
+      <div class="page decision-grid">
+        <div>
+          <p class="kicker kicker-light">Po nákupu</p>
+          <h2 class="display display-light">Stroj je jen začátek workflow.</h2>
+        </div>
+        <div class="decision-links">
+          <a href="/materialy/">Vybrat materiál <span>→</span></a>
+          <a href="/problemy/">Otevřít atlas problémů <span>→</span></a>
+          <a href="/nastroje/">Spočítat náklad výtisku <span>→</span></a>
+          <a href="/metodika/">Jak vzniká hodnocení <span>→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .printer-hero {
+    position: relative;
+    overflow: clip;
+    border-bottom: 1px solid var(--color-line);
+    padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  }
+  .printer-hero-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .printer-hero :global(.extrusion-trace) { position: absolute; right: -10rem; bottom: -5rem; width: min(58rem,72vw); color: var(--color-accent); opacity: .1; pointer-events: none; }
+
+  .printer-volume-art { position: relative; min-height: 22rem; border-bottom: 1px solid var(--color-line); }
+  .wire { position: absolute; bottom: 3.5rem; border: 2px solid var(--color-accent); background: color-mix(in srgb, var(--color-accent) 4%, transparent); }
+  .wire::before { content: ''; position: absolute; width: 3.5rem; height: 3.5rem; right: -2.35rem; top: -1.75rem; border-top: 2px solid var(--color-accent); border-right: 2px solid var(--color-accent); transform: skewY(35deg); opacity: .65; }
+  .wire::after { content: ''; position: absolute; width: 3.5rem; height: calc(100% + 1.75rem); right: -3.5rem; top: -1.75rem; border: 1px solid var(--color-line); border-left: 0; transform: skewY(-35deg); transform-origin: left top; }
+  .wire span { position: absolute; left: .4rem; bottom: .3rem; color: var(--color-accent-ink); font-size: .7rem; font-weight: 760; }
+  .wire-a { width: 10.5rem; height: 8.7rem; left: 5%; opacity: .55; }
+  .wire-b { width: 12rem; height: 11rem; left: 31%; z-index: 2; }
+  .wire-c { width: 9rem; height: 9rem; left: 60%; opacity: .72; }
+  .printer-volume-art p { position: absolute; right: 0; bottom: .4rem; margin: 0; color: var(--color-muted); font-size: .7rem; font-weight: 760; letter-spacing: .1em; }
+
+  .finder-copy { max-width: 60rem; }
+  .printer-finder { margin-top: 1.5rem; }
+
+  .compare-band { background: var(--color-night); color: #f5f5f7; padding-block: clamp(3.5rem,7vw,6rem); }
+  .compare-scroll { margin-top: 1.5rem; overflow-x: auto; border: 1px solid rgba(255,255,255,.16); }
+  .compare-table { width: 100%; min-width: 900px; border-collapse: collapse; color: #f5f5f7; }
+  .compare-table th, .compare-table td { border-right: 1px solid rgba(255,255,255,.12); border-bottom: 1px solid rgba(255,255,255,.12); padding: .85rem 1rem; text-align: left; vertical-align: top; }
+  .compare-table th:first-child { position: sticky; left: 0; z-index: 2; width: 13rem; background: var(--color-night); color: var(--color-accent); }
+  .compare-table thead th { background: color-mix(in srgb, var(--color-accent) 8%, var(--color-night)); }
+  .compare-table thead th:first-child { z-index: 3; }
+  .compare-table a { color: #fff; text-decoration: none; }
+  .compare-table a:hover { color: var(--color-accent); }
+  .compare-table td { color: rgba(245,245,247,.74); }
+  .compare-note { margin: 1rem 0 0; max-width: 65rem; color: rgba(245,245,247,.55); font-size: .82rem; }
+
+  .choose-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: clamp(2rem,6vw,6rem); }
+  .choose-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; margin: 0; padding: 0; list-style: none; background: var(--color-line); border: 1px solid var(--color-line); }
+  .choose-list li { display: grid; align-content: start; gap: .3rem; background: var(--color-card); padding: 1rem; }
+  .choose-list span { color: var(--color-accent-ink); font-size: .7rem; font-weight: 760; }
+  .choose-list p { margin: 0; color: var(--color-muted); font-size: .88rem; line-height: 1.45; }
+
+  .decision-band { background: var(--color-night); color: #f5f5f7; padding-block: clamp(3.5rem,7vw,6rem); }
+  .decision-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: clamp(2rem,6vw,6rem); align-items: start; }
+  .decision-links { display: grid; border-top: 1px solid rgba(255,255,255,.18); }
+  .decision-links a { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(255,255,255,.18); padding: 1rem 0; color: #fff; font-weight: 650; text-decoration: none; }
+  .decision-links a span { color: var(--color-accent); }
+
+  @media (max-width: 850px) {
+    .printer-hero-grid, .choose-grid, .decision-grid { grid-template-columns: 1fr; }
+    .printer-volume-art { min-height: 18rem; max-width: 34rem; }
+  }
+  @media (max-width: 600px) {
+    .choose-list { grid-template-columns: 1fr; }
+    .wire-a { left: 0; transform: scale(.82); transform-origin: left bottom; }
+    .wire-b { left: 24%; transform: scale(.82); transform-origin: left bottom; }
+    .wire-c { left: 52%; transform: scale(.82); transform-origin: left bottom; }
+  }
+</style>
