@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ExtrusionTrace from '../components/ExtrusionTrace.astro';
+import PrintCost from '../components/PrintCost.astro';
+import FlowCorrection from '../components/FlowCorrection.astro';
+
+const description =
+  'Praktické kalkulačky pro 3D tisk: odhad nákladu výtisku, korekce flow a odkazy na kalibraci první vrstvy a materiálová data.';
+---
+
+<BaseLayout title="Nástroje" description={description}>
+  <main id="obsah">
+    <section class="tools-hero">
+      <div class="page tools-hero-grid">
+        <div>
+          <p class="kicker">Nástroje · bez černé skříňky</p>
+          <h1 class="page-title">Spočítejte to dřív, než to budete odhadovat od oka.</h1>
+          <p class="lede">
+            Výpočty jsou záměrně jednoduché a průhledné. Každé číslo pochází z polí, která vidíte — žádná skrytá marže ani „AI doporučená cena“.
+          </p>
+        </div>
+        <div class="formula-poster" aria-hidden="true">
+          <span>INPUT</span>
+          <strong>DATA</strong>
+          <i>→</i>
+          <span>VZOREC</span>
+          <strong>VÝSLEDEK</strong>
+        </div>
+      </div>
+      <ExtrusionTrace />
+    </section>
+
+    <section class="band" aria-labelledby="naklad-title">
+      <div class="page tool-layout">
+        <div class="tool-intro">
+          <p class="kicker section-kicker-gap">T01 · Náklad</p>
+          <h2 id="naklad-title" class="display">Kolik vás ten díl opravdu stojí?</h2>
+          <p class="lede">
+            Samotný filament je často nejviditelnější, ale ne jediný náklad. Tady můžete přidat energii, čas stroje, přípravu a rezervu na zmetek.
+          </p>
+          <ul class="tool-rules">
+            <li>Stroj [Kč/h] je vaše vlastní sazba opotřebení/odpisu.</li>
+            <li>Práce je aktivní čas člověka, ne celá doba tisku.</li>
+            <li>Rezerva na zmetek není marže.</li>
+          </ul>
+        </div>
+        <PrintCost />
+      </div>
+    </section>
+
+    <section class="band band-alt" aria-labelledby="flow-title">
+      <div class="page tool-layout tool-layout-reverse">
+        <div class="tool-intro">
+          <p class="kicker section-kicker-gap">T02 · Extruze</p>
+          <h2 id="flow-title" class="display">Flow není pocit. Je to korekce z měření.</h2>
+          <p class="lede">
+            Jednoduchý poměr dává smysl jen tehdy, když víte, co a jak měříte. Proto je vedle kalkulačky i odkaz na celý postup a omezení metody.
+          </p>
+        </div>
+        <FlowCorrection />
+      </div>
+    </section>
+
+    <section class="band" aria-labelledby="quick-title">
+      <div class="page">
+        <div class="section-head">
+          <div>
+            <p class="kicker section-kicker-gap">T03 · Reference</p>
+            <h2 id="quick-title" class="display">Když není potřeba kalkulačka, potřebujete správný postup.</h2>
+          </div>
+        </div>
+        <div class="tool-links">
+          <a href="/materialy/">
+            <span>01</span>
+            <strong>Teploty a sušení materiálů</strong>
+            <p>PLA, PETG, ASA a TPU se zdrojem a jasným upozorněním, že datasheet konkrétní cívky má přednost.</p>
+          </a>
+          <a href="/rady-a-tipy/z-offset/">
+            <span>02</span>
+            <strong>Z-offset podle první čáry</strong>
+            <p>Papírek nebo sonda jsou start. Výsledek je geometrie skutečně vytlačené první vrstvy.</p>
+          </a>
+          <a href="/#zebricek">
+            <span>03</span>
+            <strong>Výběr tiskárny podle použití</strong>
+            <p>Rozpočet, uživatel a materiál. Filtrovaný přehled místo univerzálního vítěze.</p>
+          </a>
+          <a href="/metodika/">
+            <span>04</span>
+            <strong>Jak vznikají data</strong>
+            <p>Rozdíl mezi měřením, údajem výrobce, redakční zkušeností a odhadem.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .tools-hero {
+    position: relative;
+    overflow: clip;
+    border-bottom: 1px solid var(--color-line);
+    padding-block: clamp(3.5rem, 7vw, 6.5rem);
+  }
+
+  .tools-hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: center;
+  }
+
+  .tools-hero :global(.extrusion-trace) {
+    position: absolute;
+    right: -10rem;
+    bottom: -5rem;
+    width: min(55rem, 70vw);
+    color: var(--color-accent);
+    opacity: .1;
+    pointer-events: none;
+  }
+
+  .formula-poster {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: .25rem 1.5rem;
+    border-block: 1px solid var(--color-line);
+    padding-block: 1.1rem;
+    transform: rotate(-2deg);
+  }
+
+  .formula-poster span { color: var(--color-muted); font-size: .72rem; font-weight: 760; letter-spacing: .1em; }
+  .formula-poster strong { grid-column: 1; font-family: 'Iowan Old Style','Baskerville','Times New Roman',serif; font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: -.05em; line-height: .9; }
+  .formula-poster i { grid-column: 2; grid-row: 1 / span 4; align-self: center; color: var(--color-accent); font-size: 3rem; font-style: normal; }
+
+  .tool-layout { display: grid; grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); gap: clamp(2rem,6vw,6rem); align-items: start; }
+  .tool-layout-reverse { grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); }
+  .band-alt { background: color-mix(in srgb, var(--color-accent) 4%, var(--color-paper)); border-block: 1px solid var(--color-line); }
+  .tool-rules { margin: 1.2rem 0 0; padding-left: 1.2rem; color: var(--color-ink-soft); }
+  .tool-rules li { margin: .45rem 0; }
+  .tool-rules li::marker { color: var(--color-accent); }
+
+  .tool-links { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 1px; margin-top: 2rem; border: 1px solid var(--color-line); background: var(--color-line); }
+  .tool-links a { display: grid; grid-template-columns: auto 1fr; gap: .25rem .8rem; background: var(--color-card); padding: clamp(1.2rem,3vw,1.8rem); color: var(--color-ink); text-decoration: none; }
+  .tool-links a > span { color: var(--color-accent-ink); font-size: .72rem; font-weight: 760; }
+  .tool-links strong { font-size: 1.18rem; }
+  .tool-links p { grid-column: 2; margin: .25rem 0 0; color: var(--color-muted); line-height: 1.45; }
+  .tool-links a:hover strong { color: var(--color-accent-ink); }
+
+  @media (max-width: 840px) {
+    .tools-hero-grid, .tool-layout, .tool-layout-reverse { grid-template-columns: 1fr; }
+    .formula-poster { max-width: 30rem; }
+    .tool-links { grid-template-columns: 1fr; }
+  }
+</style>
