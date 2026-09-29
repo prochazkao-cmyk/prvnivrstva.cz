@@ -20,6 +20,19 @@ html[data-brand-theme='bambu'] body {
   background: var(--color-paper);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  .site-header,
+  .rank-card,
+  .hero-feature,
+  .material-band {
+    transition:
+      background-color 220ms ease,
+      border-color 220ms ease,
+      color 220ms ease;
+  }
+}
+
 .theme-switch {
   display: inline-flex;
   align-items: center;
@@ -124,6 +137,43 @@ html[data-brand-theme='bambu'] body {
   fill: var(--color-paper);
   stroke: currentColor;
   stroke-width: 2;
+}
+
+/* The signature nozzle illustration follows the chosen accent without using manufacturer artwork. */
+.hero-scene .bead {
+  stroke: var(--color-accent) !important;
+}
+
+.hero-scene .bead-base {
+  stroke: var(--color-accent-ink) !important;
+}
+
+html[data-brand-theme='bambu'] .hero-scene [fill='#ff4d00'],
+html[data-brand-theme='bambu'] .hero-scene [fill='#ff7a3c'],
+html[data-brand-theme='bambu'] .hero-scene [fill='#ff8a4a'] {
+  fill: var(--color-accent) !important;
+}
+
+html[data-brand-theme='bambu'] .hero-scene .nozzle {
+  filter:
+    drop-shadow(0 16px 14px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 2px 6px color-mix(in srgb, var(--color-accent) 35%, transparent)) !important;
+}
+
+html[data-brand-theme='bambu'] .hero-feature-photo,
+html[data-brand-theme='bambu'] .rank-photo {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0 12px,
+      rgba(17, 35, 30, 0.055) 12px 13px
+    ),
+    linear-gradient(180deg, #f0f5f1, #e5eee8);
+}
+
+.rank-card:hover,
+.hero-feature:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 55%, transparent) !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
