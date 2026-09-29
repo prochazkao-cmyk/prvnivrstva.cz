@@ -1,22 +1,72 @@
 ---
-/** Workshop estimate. Every number comes from the fields on the page. */
+/**
+ * Workshop estimate. Every number comes from editable fields on the page.
+ * This is deliberately transparent: no shop prices, no hidden multipliers.
+ */
 ---
 
 <form class="calc" data-calc>
-  <h3 class="calc-title">Cena výtisku</h3>
-  <p class="calc-lead">Gramy a cenu cívky zadáte vy. Výsledek je součin, ne nabídka obchodu.</p>
-  <div class="calc-fields">
+  <div class="calc-head">
+    <div>
+      <p class="calc-kicker">Kalkulačka</p>
+      <h3 class="calc-title">Reálnější cena výtisku</h3>
+    </div>
+    <span class="calc-status">živý výpočet</span>
+  </div>
+  <p class="calc-lead">Materiál je jen začátek. Přidejte energii, čas stroje, vlastní práci a rezervu na zmetek.</p>
+
+  <div class="calc-fields calc-fields-wide">
     <label>
-      Gramy
+      Materiál [g]
       <input name="grams" type="number" min="0" step="1" value="126" inputmode="decimal" />
     </label>
     <label>
-      Kč / kg
+      Filament [Kč/kg]
       <input name="perKg" type="number" min="0" step="1" value="600" inputmode="decimal" />
     </label>
+    <label>
+      Tisk [h]
+      <input name="hours" type="number" min="0" step="0.1" value="5" inputmode="decimal" />
+    </label>
+    <label>
+      Průměrný příkon [W]
+      <input name="watts" type="number" min="0" step="1" value="100" inputmode="decimal" />
+    </label>
+    <label>
+      Elektřina [Kč/kWh]
+      <input name="kwh" type="number" min="0" step="0.1" value="6.5" inputmode="decimal" />
+    </label>
+    <label>
+      Stroj [Kč/h]
+      <input name="machine" type="number" min="0" step="1" value="10" inputmode="decimal" />
+    </label>
+    <label>
+      Práce [min]
+      <input name="laborMin" type="number" min="0" step="1" value="10" inputmode="decimal" />
+    </label>
+    <label>
+      Práce [Kč/h]
+      <input name="laborRate" type="number" min="0" step="10" value="300" inputmode="decimal" />
+    </label>
+    <label>
+      Rezerva na zmetek [%]
+      <input name="reserve" type="number" min="0" max="100" step="1" value="5" inputmode="decimal" />
+    </label>
   </div>
-  <p class="calc-out" data-out>75,60 Kč</p>
-  <p class="calc-note">Předvyplněný příklad: 126 g × 600 Kč/kg. Elektřina a čas v tom nejsou.</p>
+
+  <div class="calc-breakdown" aria-live="polite">
+    <span><small>Materiál</small><strong data-material>—</strong></span>
+    <span><small>Elektřina</small><strong data-energy>—</strong></span>
+    <span><small>Stroj</small><strong data-machine>—</strong></span>
+    <span><small>Práce</small><strong data-labor>—</strong></span>
+    <span><small>Rezerva</small><strong data-reserve>—</strong></span>
+  </div>
+
+  <div class="calc-total">
+    <span>Odhad nákladu</span>
+    <p class="calc-out" data-out>—</p>
+  </div>
+  <p class="calc-note">Předvyplněná čísla jsou příklad, ne naše doporučená sazba. DPH, balení, doprava, modelování a obchodní marže v odhadu nejsou.</p>
 </form>
 
 <script>
@@ -27,23 +77,121 @@
   });
 
   function bind(form: HTMLFormElement) {
-    const grams = form.querySelector<HTMLInputElement>('[name="grams"]');
-    const perKg = form.querySelector<HTMLInputElement>('[name="perKg"]');
+    const field = (name: string) => form.querySelector<HTMLInputElement>(`[name="${name}"]`);
     const out = form.querySelector<HTMLElement>('[data-out]');
+    const materialOut = form.querySelector<HTMLElement>('[data-material]');
+    const energyOut = form.querySelector<HTMLElement>('[data-energy]');
+    const machineOut = form.querySelector<HTMLElement>('[data-machine]');
+    const laborOut = form.querySelector<HTMLElement>('[data-labor]');
+    const reserveOut = form.querySelector<HTMLElement>('[data-reserve]');
+
+    const inputs = [...form.querySelectorAll<HTMLInputElement>('input[type="number"]')];
+    const n = (name: string) => Number(field(name)?.value);
+    const valid = (values: number[]) => values.every((value) => Number.isFinite(value) && value >= 0);
+
     const render = () => {
-      const g = Number(grams?.value);
-      const kg = Number(perKg?.value);
-      if (!out) return;
-      if (!Number.isFinite(g) || !Number.isFinite(kg) || g < 0 || kg < 0) {
-        out.textContent = '—';
+      const values = [n('grams'), n('perKg'), n('hours'), n('watts'), n('kwh'), n('machine'), n('laborMin'), n('laborRate'), n('reserve')];
+      if (!valid(values) || n('reserve') > 100) {
+        if (out) out.textContent = '—';
         return;
       }
-      out.textContent = price.format((g / 1000) * kg);
+
+      const material = (n('grams') / 1000) * n('perKg');
+      const energy = n('hours') * (n('watts') / 1000) * n('kwh');
+      const machine = n('hours') * n('machine');
+      const labor = (n('laborMin') / 60) * n('laborRate');
+      const subtotal = material + energy + machine + labor;
+      const reserve = subtotal * (n('reserve') / 100);
+      const total = subtotal + reserve;
+
+      if (materialOut) materialOut.textContent = price.format(material);
+      if (energyOut) energyOut.textContent = price.format(energy);
+      if (machineOut) machineOut.textContent = price.format(machine);
+      if (laborOut) laborOut.textContent = price.format(labor);
+      if (reserveOut) reserveOut.textContent = price.format(reserve);
+      if (out) out.textContent = price.format(total);
     };
-    grams?.addEventListener('input', render);
-    perKg?.addEventListener('input', render);
+
+    inputs.forEach((input) => input.addEventListener('input', render));
     render();
   }
 
   document.querySelectorAll<HTMLFormElement>('[data-calc]').forEach((form) => bind(form));
 </script>
+
+<style>
+  .calc-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  .calc-kicker {
+    margin: 0 0 .25rem;
+    color: var(--color-accent-ink);
+    font-size: .68rem;
+    font-weight: 760;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  .calc-status {
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-accent) 14%, var(--color-card));
+    padding: .32rem .55rem;
+    color: var(--color-accent-ink);
+    font-size: .7rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .calc-fields-wide {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .calc-breakdown {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 1rem;
+    background: var(--color-line);
+    border: 1px solid var(--color-line);
+  }
+
+  .calc-breakdown span {
+    display: grid;
+    gap: .2rem;
+    background: var(--color-card);
+    padding: .65rem;
+  }
+
+  .calc-breakdown small {
+    color: var(--color-muted);
+    font-size: .67rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+
+  .calc-breakdown strong { font-variant-numeric: tabular-nums; }
+
+  .calc-total {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1.1rem;
+    border-top: 1px solid var(--color-line);
+    padding-top: .85rem;
+  }
+
+  .calc-total > span { color: var(--color-muted); font-size: .82rem; font-weight: 700; text-transform: uppercase; }
+  .calc-total .calc-out { margin: 0; }
+
+  @media (max-width: 760px) {
+    .calc-fields-wide { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .calc-breakdown { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .calc-breakdown span:last-child { grid-column: 1 / -1; }
+    .calc-total { align-items: flex-start; flex-direction: column; }
+  }
+</style>
