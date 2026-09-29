@@ -8,19 +8,45 @@
 
 <div class="hero-scene">
   <svg class="hero-bed" viewBox="0 0 1200 240" aria-hidden="true">
-    <ellipse cx="600" cy="214" rx="430" ry="14" fill="rgba(0,0,0,0.45)"></ellipse>
-    <rect x="48" y="58" width="1104" height="132" rx="18" fill="#121216"></rect>
-    <rect x="72" y="40" width="1056" height="28" rx="5" fill="#1b1b20"></rect>
-    <rect x="72" y="40" width="1056" height="3" fill="#3a3a42"></rect>
-    <g stroke="rgba(255,255,255,0.045)" stroke-width="1">
+    <defs>
+      <linearGradient id="pv-plate" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2a2a30"></stop>
+        <stop offset="0.18" stop-color="#141418"></stop>
+        <stop offset="1" stop-color="#0a0a0c"></stop>
+      </linearGradient>
+      <linearGradient id="pv-lip" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#3a3a42"></stop>
+        <stop offset="1" stop-color="#121216"></stop>
+      </linearGradient>
+      <filter id="pv-bead-glow" x="-12%" y="-180%" width="124%" height="460%">
+        <feGaussianBlur stdDeviation="3.2" result="blur"></feGaussianBlur>
+        <feMerge>
+          <feMergeNode in="blur"></feMergeNode>
+          <feMergeNode in="SourceGraphic"></feMergeNode>
+        </feMerge>
+      </filter>
+    </defs>
+    <ellipse cx="600" cy="214" rx="460" ry="16" fill="rgba(0,0,0,0.55)"></ellipse>
+    <rect x="48" y="62" width="1104" height="128" rx="16" fill="#0c0c0e"></rect>
+    <rect x="64" y="48" width="1072" height="108" rx="14" fill="url(#pv-plate)"></rect>
+    <rect x="64" y="48" width="1072" height="10" rx="5" fill="url(#pv-lip)"></rect>
+    <rect x="78" y="48" width="1044" height="2" fill="rgba(255,255,255,0.28)"></rect>
+    <g stroke="rgba(255,255,255,0.05)" stroke-width="1">
       <line x1="96" x2="1104" y1="78" y2="78"></line>
-      <line x1="96" x2="1104" y1="96" y2="96"></line>
-      <line x1="96" x2="1104" y1="114" y2="114"></line>
-      <line x1="96" x2="1104" y1="132" y2="132"></line>
-      <line x1="96" x2="1104" y1="150" y2="150"></line>
+      <line x1="96" x2="1104" y1="98" y2="98"></line>
+      <line x1="96" x2="1104" y1="118" y2="118"></line>
+      <line x1="96" x2="1104" y1="138" y2="138"></line>
     </g>
-    <path d="M150 62 H1050" fill="none" stroke="rgba(255,77,0,0.22)" stroke-width="4" stroke-linecap="round"></path>
-    <path d="M170 72 H1030" fill="none" stroke="rgba(255,77,0,0.1)" stroke-width="3" stroke-linecap="round"></path>
+    <path d="M160 70 H1040" fill="none" stroke="rgba(255,77,0,0.16)" stroke-width="7" stroke-linecap="round"></path>
+    <path d="M176 82 H1024" fill="none" stroke="rgba(255,77,0,0.08)" stroke-width="5" stroke-linecap="round"></path>
+    <path
+      class="bead-base"
+      pathLength="1"
+      d="M140 30 H1060"
+      fill="none"
+      stroke="#9a2800"
+      stroke-width="14"
+      stroke-linecap="round"></path>
     <path
       class="bead"
       pathLength="1"
@@ -28,39 +54,53 @@
       fill="none"
       stroke="#ff4d00"
       stroke-width="8"
-      stroke-linecap="round"></path>
+      stroke-linecap="round"
+      filter="url(#pv-bead-glow)"></path>
     <path
       class="bead-core"
       pathLength="1"
       d="M140 30 H1060"
       fill="none"
-      stroke="#ffd2b8"
-      stroke-width="2.5"
+      stroke="#ffe7d6"
+      stroke-width="2.2"
       stroke-linecap="round"></path>
   </svg>
   <div class="nozzle-mover" aria-hidden="true">
     <svg class="nozzle" viewBox="0 0 80 164">
       <defs>
-        <linearGradient id="pv-brass" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stop-color="#f3d7b0"></stop>
-          <stop offset="1" stop-color="#b58145"></stop>
+        <linearGradient id="pv-brass" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffe7c4"></stop>
+          <stop offset="0.45" stop-color="#e0b072"></stop>
+          <stop offset="1" stop-color="#8d6230"></stop>
         </linearGradient>
+        <linearGradient id="pv-block" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#2a2a30"></stop>
+          <stop offset="0.5" stop-color="#4a4a54"></stop>
+          <stop offset="1" stop-color="#1a1a1e"></stop>
+        </linearGradient>
+        <radialGradient id="pv-led" cx="50%" cy="50%" r="50%">
+          <stop offset="0" stop-color="#eafff8"></stop>
+          <stop offset="0.45" stop-color="#5cffd6"></stop>
+          <stop offset="1" stop-color="#0a3d32"></stop>
+        </radialGradient>
       </defs>
       <rect x="34" y="0" width="12" height="26" rx="3" fill="#2c2c32"></rect>
       <rect x="37.5" y="0" width="5" height="36" rx="2" fill="#ff4d00"></rect>
-      <rect x="27" y="26" width="26" height="50" rx="3" fill="#3c3c44"></rect>
-      <rect x="16" y="32" width="48" height="5" rx="1" fill="#5a5a64"></rect>
-      <rect x="16" y="42" width="48" height="5" rx="1" fill="#4a4a52"></rect>
-      <rect x="16" y="52" width="48" height="5" rx="1" fill="#5a5a64"></rect>
-      <rect x="16" y="62" width="48" height="5" rx="1" fill="#4a4a52"></rect>
-      <rect x="35" y="76" width="10" height="16" fill="#9a9aa2"></rect>
-      <rect x="37.5" y="76" width="5" height="16" fill="#ff4d00" opacity="0.9"></rect>
-      <rect x="15" y="90" width="50" height="36" rx="6" fill="#141416" stroke="#32323a"></rect>
+      <rect x="27" y="26" width="26" height="50" rx="3" fill="url(#pv-block)"></rect>
+      <rect x="16" y="32" width="48" height="5" rx="1" fill="#6a6a74"></rect>
+      <rect x="16" y="42" width="48" height="5" rx="1" fill="#3e3e46"></rect>
+      <rect x="16" y="52" width="48" height="5" rx="1" fill="#6a6a74"></rect>
+      <rect x="16" y="62" width="48" height="5" rx="1" fill="#3e3e46"></rect>
+      <rect x="35" y="76" width="10" height="16" fill="#b7b7c0"></rect>
+      <rect x="37.5" y="76" width="5" height="16" fill="#ff7a3c"></rect>
+      <rect x="15" y="90" width="50" height="36" rx="6" fill="#101012" stroke="#3a3a44"></rect>
+      <rect x="18" y="94" width="8" height="28" rx="2" fill="rgba(255,255,255,0.08)"></rect>
       <rect x="22" y="104" width="20" height="6" rx="2" fill="#2a2a30"></rect>
-      <circle class="led" cx="54" cy="107" r="3.1" fill="#5cffd6"></circle>
+      <circle class="led" cx="54" cy="107" r="3.4" fill="url(#pv-led)"></circle>
       <path d="M27 126h26l-6 28h-14l-6-28z" fill="url(#pv-brass)"></path>
+      <path d="M33 127h6l-1 20h-3.2L33 127z" fill="rgba(255,255,255,0.45)"></path>
       <path d="M36 128h8l-1.6 22h-4.8L36 128z" fill="#ff4d00"></path>
-      <rect x="36.5" y="152" width="7" height="12" rx="3.5" fill="#ff7a3c"></rect>
+      <rect x="36.2" y="152" width="7.6" height="12" rx="3.6" fill="#ff8a4a"></rect>
     </svg>
   </div>
 </div>
@@ -68,7 +108,7 @@
 <style>
   .hero-scene {
     position: relative;
-    width: min(100%, 1100px);
+    width: min(100%, 1280px);
     margin-inline: auto;
     container-type: inline-size;
   }
@@ -80,14 +120,19 @@
   }
 
   .bead,
-  .bead-core {
+  .bead-core,
+  .bead-base {
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
-    animation: draw 6.4s linear infinite;
+    animation:
+      draw-stroke 7.6s linear infinite,
+      draw-fade 7.6s linear infinite;
   }
 
-  .bead {
-    filter: drop-shadow(0 0 7px rgba(255, 77, 0, 0.55));
+  .bead-base {
+    animation:
+      draw-stroke 7.6s linear infinite,
+      draw-fade-base 7.6s linear infinite;
   }
 
   .nozzle-mover {
@@ -95,27 +140,44 @@
     z-index: 1;
     top: 12.5%;
     left: 0;
-    width: clamp(68px, 10cqw, 118px);
+    width: clamp(72px, 10.5cqw, 124px);
     pointer-events: none;
-    animation: extrude 6.4s linear infinite;
+    animation: extrude 7.6s linear infinite;
   }
 
   .nozzle {
     display: block;
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.35));
+    filter:
+      drop-shadow(0 16px 14px rgba(0, 0, 0, 0.5))
+      drop-shadow(0 2px 6px rgba(255, 77, 0, 0.28));
   }
 
+  .nozzle-mover::before,
   .nozzle-mover::after {
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -6px;
-    width: 46%;
-    height: 14px;
     transform: translateX(-50%);
-    background: radial-gradient(ellipse, rgba(255, 77, 0, 0.75), transparent 70%);
+    pointer-events: none;
+  }
+
+  .nozzle-mover::before {
+    bottom: 6%;
+    width: 180%;
+    height: 46%;
+    background: radial-gradient(ellipse, rgba(255, 77, 0, 0.55), transparent 68%);
+    filter: blur(10px);
+    z-index: -1;
+  }
+
+  .nozzle-mover::after {
+    bottom: -2px;
+    width: 70%;
+    height: 16px;
+    background: radial-gradient(ellipse, rgba(255, 150, 70, 0.95), rgba(255, 77, 0, 0.2) 46%, transparent 72%);
+    filter: blur(1px);
   }
 
   .led {
@@ -123,25 +185,41 @@
     transform-box: fill-box;
   }
 
-  @keyframes draw {
-    0% {
+  @keyframes draw-stroke {
+    0%,
+    5% {
       stroke-dashoffset: 1;
-      opacity: 1;
     }
-    74% {
+    76%,
+    100% {
       stroke-dashoffset: 0;
-      opacity: 1;
     }
-    88% {
-      stroke-dashoffset: 0;
-      opacity: 1;
-    }
-    96% {
-      stroke-dashoffset: 0;
+  }
+
+  @keyframes draw-fade {
+    0% {
       opacity: 0;
     }
+    5%,
+    88% {
+      opacity: 1;
+    }
+    95%,
     100% {
-      stroke-dashoffset: 1;
+      opacity: 0;
+    }
+  }
+
+  @keyframes draw-fade-base {
+    0% {
+      opacity: 0;
+    }
+    5%,
+    88% {
+      opacity: 0.5;
+    }
+    95%,
+    100% {
       opacity: 0;
     }
   }
@@ -149,31 +227,35 @@
   @keyframes extrude {
     0% {
       transform: translate3d(11.667cqw, -100%, 0) translateX(-50%);
+      opacity: 0;
+    }
+    5% {
+      transform: translate3d(11.667cqw, -100%, 0) translateX(-50%);
       opacity: 1;
     }
-    74%,
+    76%,
     88% {
       transform: translate3d(88.333cqw, -100%, 0) translateX(-50%);
       opacity: 1;
     }
-    96% {
+    95% {
       transform: translate3d(88.333cqw, -100%, 0) translateX(-50%);
       opacity: 0;
     }
-    97% {
+    96% {
       transform: translate3d(11.667cqw, -100%, 0) translateX(-50%);
       opacity: 0;
     }
     100% {
       transform: translate3d(11.667cqw, -100%, 0) translateX(-50%);
-      opacity: 1;
+      opacity: 0;
     }
   }
 
   @keyframes led-pulse {
     0%,
     100% {
-      opacity: 0.45;
+      opacity: 0.55;
     }
     50% {
       opacity: 1;
@@ -182,27 +264,28 @@
 
   @media (prefers-reduced-motion: no-preference) {
     .led {
-      animation: led-pulse 2.6s ease-in-out infinite;
+      animation: led-pulse 2.4s ease-in-out infinite;
     }
 
     @supports (animation-timeline: scroll()) {
       .hero-scene {
         animation: scene-drift linear both;
         animation-timeline: view();
-        animation-range: exit 0% exit 45%;
+        animation-range: exit 0% exit 40%;
       }
     }
   }
 
   @keyframes scene-drift {
     to {
-      transform: translateY(-28px);
+      transform: translateY(-22px);
     }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .bead,
     .bead-core,
+    .bead-base,
     .nozzle-mover,
     .led,
     .hero-scene {
@@ -213,6 +296,11 @@
     .bead-core {
       stroke-dashoffset: 0;
       opacity: 1;
+    }
+
+    .bead-base {
+      stroke-dashoffset: 0;
+      opacity: 0.5;
     }
 
     .nozzle-mover {

@@ -38,10 +38,12 @@ function isCurrent(href: string): boolean {
           </a>
         ))
       }
+      <a class="nav-cta" href="/#zebricek">Žebříček</a>
     </nav>
 
     <details class="nav-mobile">
       <summary>
+        <span class="menu-icon" aria-hidden="true"></span>
         <span class="label-closed">Menu</span>
         <span class="label-open">Zavřít</span>
       </summary>
@@ -53,26 +55,32 @@ function isCurrent(href: string): boolean {
             </a>
           ))
         }
+        <a class="nav-cta" href="/#zebricek">Otevřít žebříček</a>
       </nav>
     </details>
   </div>
 </header>
 
 <script>
-  const headers = document.querySelectorAll<HTMLElement>('[data-header="overlay"]');
-  for (const header of headers) {
-    const hero = document.querySelector('.hero');
-    const update = () => {
+  const headers = document.querySelectorAll<HTMLElement>('[data-header]');
+  const hero = document.querySelector('.hero');
+
+  const update = () => {
+    const scrolled = window.scrollY > 8;
+    for (const header of headers) {
+      header.classList.toggle('is-scrolled', scrolled);
+      if (header.dataset.header !== 'overlay') continue;
       if (!hero) {
         header.classList.add('is-light');
-        return;
+        continue;
       }
       const headerBottom = header.getBoundingClientRect().bottom;
       const heroBottom = hero.getBoundingClientRect().bottom;
       header.classList.toggle('is-light', heroBottom <= headerBottom + 1);
-    };
-    update();
-    window.addEventListener('scroll', update, { passive: true });
-    window.addEventListener('resize', update);
-  }
+    }
+  };
+
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
 </script>
