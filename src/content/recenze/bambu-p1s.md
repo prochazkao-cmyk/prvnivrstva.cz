@@ -1,36 +1,78 @@
 ---
-title: "Bambu Lab P1S: tiskne dřív, než stihnete otevřít příručku"
-description: "Uzavřená CoreXY, která z krabice dělá díly. Daň je pasivní komora a firmware, do kterého vás výrobce nepustí."
+title: "Bambu Lab P1S: rychlý uzavřený CoreXY, ale ne vyhřívaná komora"
+description: "P1S nabízí 256 × 256 × 256 mm, uzavřenou konstrukci a silný Bambu workflow. Komora ale není aktivně vyhřívaná a firmware je uzavřený."
 publishedAt: 2026-05-02
+updatedAt: 2026-09-29
+reviewedAt: 2026-09-29
 product: "Bambu Lab P1S"
-verdict: "Berte ji, když chcete hotové výtisky a AMS, a přijímáte uzavřený ekosystém. Neberte ji jako vyhřívanou komoru ani jako stroj, který si za pět let přestavíte podle vlastního cfg."
+verdict: "Dává smysl, když chcete rychlý uzavřený desktopový stroj, pohodlný software a možnost AMS. Pokud je zásadní otevřený firmware nebo aktivně řízená vyhřívaná komora, hledejte jinou kategorii stroje."
 score: 8
-note: "Pracovní poznámka, ne laboratorní srovnání. Známka není průměr z tabulky testů. Je to redakční orientace: komu se P1S vyplatí a jakou smlouvu s výrobcem tím podepisujete."
+note: "Redakční verdikt, ne laboratorní srovnání. Známka nevznikla jako průměr z kontrolovaného benchmarku všech konkurentů."
 tags:
   - Bambu Lab
   - P1S
   - recenze
+  - FDM
+level: "začátečník"
+technologies:
+  - "FDM"
+evidence: "kombinace"
+sourceNote: "Technické specifikace a síťové režimy ověřeny 29. 9. 2026 v oficiální dokumentaci Bambu Lab; praktické závěry jsou redakční."
 ---
 
-P1S je důvod, proč část dílen přestala řešit, jestli „umí tisknout“, a začala řešit, jestli stíhá frontu. Uzavřený CoreXY, 256 × 256 × 256 mm, z krabice slušný profil. AMS, když ho k ní postavíte, je pro hodně lidí ten skutečný výrobek. Tiskárna je k němu stolní spotřebič.
+P1S je uzavřená CoreXY tiskárna s oficiálním tiskovým objemem **256 × 256 × 256 mm**. Výrobce uvádí celokovový hotend, maximální teplotu trysky 300 °C, podložku do 100 °C, komorový ventilátor a filtr s aktivním uhlím.
 
-To není urážka. Spotřebič, který ráno udělá držák a odpoledne kryt, má v dílně větší cenu než koníček, u kterého se ladí PID.
+Důležitý detail: **uzavřený kryt není totéž jako aktivně vyhřívaná komora**. P1S má enclosure a řízení ventilace, ne samostatné topení komory. To je potřeba vědět dřív, než ji začnete srovnávat se strojem, který teplotu komory aktivně řídí.
 
-## Co od ní nechtějte
+## Proč je P1S pro řadu lidí jednoduchá volba
 
-Aktivní komoru. P1S je zavřená, není vyhřívaná tak jako stroj s řízenou teplotou komory. Menší ABS a ASA na ní dávají smysl. Velké ploché díly pořád umí zvednout roh, jen později než na otevřeném rámu. Když je inženýrský nylon váš denní chleba, porovnávejte s něčím, co komoru topí, ne s pocitem „vždyť má dvířka“.
+### Workflow
 
-Otevřený `printer.cfg`. Uvnitř je příbuzný Klipperu a zvenku k němu nemáte běžný konfigurační soubor. Třetí strany — jiný slicer než oficiální, cizí displej, čistě lokální režim — závisejí na tom, co firmware zrovna povolí. V posledním roce se ten prostor zúžil. Než na tom postavíte proces pro víc lidí, ověřte si aktuální LAN a cloud na tom kusu, který kupujete. Novější P2S tu smlouvu nemění na otevřený stroj. Mění výbavu, ne filozofii.
+Bambu Studio, síťové funkce a volitelné AMS dávají dohromady ekosystém, ve kterém je cesta od sliceru k hotovému dílu velmi krátká. To je pro domácnost, školu i menší dílnu reálná hodnota: méně času stráveného správou tiskárny může být důležitější než možnost upravovat každý interní parametr.
 
-Náhradní díl „v úterý z velkoobchodu za rohem“ taky nepočítejte jako samozřejmost. Počítejte s tím, že měníte celky a že dostupnost řeší výrobce, ne nejbližší obchod se šrouby.
+### Uzavřená konstrukce
 
-## Kdy jo
+Enclosure pomáhá omezit průvan a stabilizovat prostředí kolem dílu oproti otevřenému rámu. Neřeší ale automaticky každý warping. Velký plochý ASA/ABS díl pořád závisí na geometrii, podložce, profilu a tepelné stabilitě.
 
-Fronta dílů, PLA a PETG, občas ASA, a více barev bez toho, abyste se stali správcem MMU. Dílně, kde tiskárnu obsluhuje víc lidí a nikdo z nich nechce být ten, kdo „tomu rozumí“, sedne líp než otevřený kit.
+Pokud se rohy zvedají, pokračujte přes [diagnostiku warpingu](/clanky/warping-u-abs-priciny-a-checklist/), ne přes univerzální „je to zavřené, musí to fungovat“.
 
-Když vedle ní stojí otázka MK4S, neporovnávejte rychlost na krabici. Porovnejte, jestli potřebujete komoru hned a jestli vám vadí, že do firmwaru neuvidíte. Delší kontext je v textu [Prusa vs Bambu Lab](/clanky/prusa-vs-bambu-lab-srovnani/). Profil P1S a X1C je v rubrice [Stroje](/stroje/bambu-p1s-x1c/).
+## Firmware a síť: co je fakt
+
+Bambu Lab uvádí, že firmware tiskáren je **vyvíjený in-house a zůstává closed-source**. To je jiná filozofie než u stroje s veřejným firmwarem.
+
+Zároveň výrobce nabízí **LAN Only Mode**. V aktuálním bezpečnostním dokumentu Bambu Lab popisuje režim, ve kterém tiskárna neiniciuje externí připojení a klient komunikuje s tiskárnou v lokální síti; výrobce také uvádí možnost úplně offline tisku přes lokální médium.
+
+Takže korektní zkratka není „P1S musí do cloudu“. Korektní zkratka je: **ekosystém je uzavřenější, ale lokální/offline workflow existuje**.
+
+## Co není důvod věřit slepě
+
+Oficiální maximum 500 mm/s nebo 20 m/s² samo o sobě neříká, za jak dlouho bude hotový váš díl v požadované kvalitě. Stejně jako u jiných strojů je pro dílnu důležitější čas stejného modelu, volumetrický průtok, akcelerace, materiál a profil.
+
+Dokud nemáme vlastní opakovaný benchmark stejného G-code/ekvivalentního profilu napříč stroji, nebudeme z maxima na produktové stránce dělat „o X % rychlejší“.
+
+## AMS jako součást rozhodnutí
+
+Jestli chcete více barev nebo automatické přepínání cívek, AMS je podstatná část Bambu workflow. Při srovnání s jiným systémem proto neporovnávejte jen tiskárnu bez příslušenství — porovnávejte celý proces, cenu, odpad a způsob práce s materiálem.
+
+## Ověřené technické body
+
+- tiskový objem: 256 × 256 × 256 mm,
+- CoreXY, uzavřený kryt,
+- max. tryska 300 °C, podložka 100 °C,
+- komorový ventilátor a aktivní uhlíkový filtr,
+- komora není aktivně vyhřívaná samostatným topením,
+- Bambu Studio je oficiální slicer,
+- LAN Only Mode je oficiálně podporovaný,
+- firmware je podle Bambu Lab in-house a closed-source.
+
+## Zdroje
+
+- [Bambu Lab — P1S Quick Start Guide / specifications](https://cdn1.bambulab.com/documentation/quick-start-59b0cefdc0fc4/P1S/English%20version-Quick%20Start%20Guide%20for%20P1S.pdf)
+- [Bambu Lab — Security White Paper, LAN Only Mode](https://cdn1.bambulab.com/trust-center/file/bambulab-security-whitepaper-en.pdf)
+- [Bambu Lab — To open, or not to open](https://blog.bambulab.com/to-open-or-not-to-open-that-is-the-question/)
+- [Bambu Lab — Custom Firmware Plan and Our Principles on Ecosystem](https://blog.bambulab.com/custom-firmware-plan-and-our-principles-on-ecosystem/)
 
 <aside class="takeaway">
   <p class="takeaway-label">Praktický závěr</p>
-  <p>P1S kupujte jako rychlý uzavřený spotřebič s AMS, ne jako opravitelnou komoru. Když potřebujete vyhřívanou komoru nebo vlastní firmware, je to jiný nákup.</p>
+  <p>P1S kupujte jako rychlý uzavřený desktopový systém s pohodlným workflow a možností AMS. Nekupujte ji s představou aktivně vyhřívané komory nebo plně otevřeného firmwaru. A pokud je cloud vaše obava, rozhodujte se podle aktuálního LAN/offline režimu, ne podle starých zkratek.</p>
 </aside>
