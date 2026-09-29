@@ -1,39 +1,56 @@
 ---
 title: "Křupání v extruderu není špatná tryska. Filament je mokrý"
-description: "PETG, nylon a TPU pijí vodu. Než budete honit retrakci a měnit trysku, usušte cívku a přestaňte ji skladovat na polici nad radiátorem."
+description: "PETG, nylon a TPU přijímají vlhkost. Než budete honit retrakci a měnit trysku, usušte cívku a ověřte, jestli problém zmizí."
 publishedAt: 2026-09-08
+updatedAt: 2026-09-29
+reviewedAt: 2026-09-29
+level: "začátečník"
+technologies:
+  - "FDM"
 tags:
   - sušení
   - PETG
   - nylon
+  - troubleshooting
+evidence: "redakce"
+sourceNote: "Orientační redakční postup. Přesnou teplotu a dobu sušení vždy vezměte z datasheetu konkrétního materiálu a výrobce."
 ---
 
-Vlhký filament v hotendu vaří. Voda se změní v páru, tavenina prská, povrch je matný a děravý, vrstvy drží hůř a u PETG se objeví struny, které retrakce nespraví. Křupání nebo bublání u trysky berte jako diagnózu, ne jako „dneska má stroj náladu“.
+Vlhký filament může v hotendu prskat, tvořit bublinky, zhoršit povrch a zvýšit stringing. Když u trysky slyšíte křupání nebo vidíte nepravidelný tok, berte vlhkost jako jednu z prvních věcí k ověření.
 
-PLA vodu bere pomaleji, ale taky. PETG, nylon, TPU a PVA rychleji. Cívka otevřená v srpnu na balkóně a v září pořád „úplně v pohodě“ v pohodě není. Podzimní dílna bez odvlhčovače je přesně období, kdy se to začne dít lidem, kteří přes léto neměli problém.
+PLA vlhkost obvykle přijímá pomaleji než PETG, TPU, nylon nebo PVA, ale žádný otevřený filament není vůči prostředí úplně imunní.
 
 ## Čím sušit a čím ne
 
-Sušička filamentu nebo sušička potravin s rozumným termostatem. Trouba v kuchyni je špatný nástroj: termostat přestřelí, cívka změkne a filament se slepí. Když jinou možnost nemáte, chcete teploměr přímo u cívky, ne víru v knoflík.
+Nejbezpečnější je sušička filamentu nebo zařízení, které skutečně drží nastavenou teplotu. Domácí trouba může přestřelovat a poškodit filament nebo cívku.
 
-Orientačně, než si ověříte list od výrobce konkrétní značky:
+Orientační rozsahy berte jen jako start a **před sušením ověřte doporučení výrobce konkrétní cívky**:
 
-| Materiál | Teplota | Jak dlouho, když už prská |
+| Materiál | Orientační teplota | Typická doba |
 | --- | --- | --- |
 | PLA | 45–50 °C | 4–6 h |
-| PETG | 60–65 °C | 4–6 h |
-| TPU | 50–55 °C | 6 h i víc |
-| Nylon | 70–80 °C | často přes noc |
+| PETG | 55–65 °C | 4–6 h |
+| TPU | 45–55 °C | 4–8 h |
+| Nylon | 65–80 °C | často 6–12 h |
 
-Nepřekračujte teplotu, při které cívka nebo filament změkne. „Víc stupňů = rychleji suché“ platí jen do okamžiku, kdy máte jeden kus místo cívky.
+Nepřekračujte teplotu, při které může filament nebo samotná cívka měknout. Vyšší teplota není automaticky lepší sušení.
+
+## Jak poznat, že problém opravdu byla voda
+
+Použijte stejný model, profil i tiskárnu před a po sušení. Sledujte:
+
+- praskání u trysky,
+- počet strun mezi ostrůvky,
+- stabilitu povrchu,
+- pravidelnost extruze.
+
+Pokud se po sušení výrazně zlepší stejný tisk bez dalších změn, máte mnohem silnější důkaz než po deseti náhodných úpravách retrakce.
 
 ## Sklad, ne jednorázový obřad
 
-Usušená cívka na polici do rána zase pije. Box s těsněním a silikagelem, nebo cívka rovnou v sušičce, ze které tisknete. Silikagel, který už zrůžověl nebo zezelenal podle typu, vodu netáhne — regenerujte ho, nebo ho vyměňte. Vakuový pytel bez pohlcovače vlhkosti je jen pomalejší police.
-
-Když po sušení struny u PETG zmizí a povrch se srovná, nebyla to tryska. Byla to voda. Retrakci v tu chvíli nechte být.
+Usušená cívka může znovu přijímat vlhkost. Těsný box s vysoušedlem nebo tisk přímo ze sušičky dává u citlivějších materiálů větší smysl než opakované sušení po každém problému.
 
 <aside class="takeaway">
   <p class="takeaway-label">Praktický závěr</p>
-  <p>Praská to u trysky? Nejdřív usušte cívku a uložte ji do sucha. Až potom řešte retrakci, teplotu a „špatnou šarži“.</p>
+  <p>Praská to u trysky a povrch je nepravidelný? Nejdřív ověřte vlhkost kontrolovaným sušením. Až potom řešte retrakci, flow a výměnu trysky.</p>
 </aside>
