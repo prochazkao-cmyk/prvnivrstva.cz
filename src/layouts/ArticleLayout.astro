@@ -28,24 +28,35 @@ const materialIntent = lowerTags.some((tag) =>
   ['pla', 'petg', 'asa', 'abs', 'tpu', 'nylon', 'filament', 'sušení', 'vlhkost'].some((needle) => tag.includes(needle)),
 );
 
+const hasReviewProtocol =
+  article.category === 'recenze' &&
+  Boolean(article.testDuration) &&
+  article.printHours !== undefined &&
+  Array.isArray(article.failures) &&
+  ['vlastni-mereni', 'kombinace'].includes(article.evidence);
+const publishScore = hasReviewProtocol && article.score !== undefined;
+
 const nextAction =
   article.category === 'recenze' || article.category === 'stroje'
-    ? { href: '/#zebricek', eyebrow: 'Rozhodujete se?', title: 'Porovnat stroje podle použití', copy: 'Rozpočet, zkušenost a materiál jsou užitečnější filtr než jeden univerzální vítěz.' }
+    ? { href: '/clanky/prusa-vs-bambu-lab-srovnani/', eyebrow: 'Rozhodujete se?', title: 'Porovnat stroje v kontextu', copy: 'Verdikt jedné tiskárny dává smysl až vedle alternativ, jejich slabin a způsobu použití.' }
     : materialIntent
-      ? { href: '/materialy/', eyebrow: 'Materiál', title: 'Otevřít materiálovou referenci', copy: 'Porovnejte tiskové rozsahy, sušení, enclosure a hlavní kompromisy se zdroji.' }
+      ? { href: '/materialy/', eyebrow: 'Materiál', title: 'Otevřít materiálovou referenci', copy: 'Porovnejte tiskové rozsahy, sušení, komoru a hlavní kompromisy se zdroji.' }
       : article.category === 'rady-a-tipy'
         ? { href: '/problemy/', eyebrow: 'Další symptom', title: 'Vrátit se do tiskové poradny', copy: 'Vyberte další problém podle toho, co na výtisku skutečně vidíte.' }
         : { href: '/nastroje/', eyebrow: 'Další krok', title: 'Otevřít nástroje pro dílnu', copy: 'Spočítejte cenu výtisku, flow nebo pokračujte do praktické reference.' };
 
+const authorIsPerson = article.author !== 'Redakce První vrstvy' && article.author !== 'Redakce První vrstvy';
 const jsonLd: Record<string, unknown> = {
   '@context': 'https://schema.org',
-  '@type': article.score !== undefined ? 'Review' : 'Article',
+  '@type': publishScore ? 'Review' : 'Article',
   headline: article.title,
   description: article.description,
   datePublished: article.publishedAt.toISOString(),
   dateModified: modified.toISOString(),
   inLanguage: 'cs',
-  author: { '@type': 'Organization', name: article.author },
+  author: authorIsPerson
+    ? { '@type': 'Person', name: article.author }
+    : { '@type': 'Organization', name: article.author },
   publisher: {
     '@type': 'Organization',
     name: site.name,
@@ -55,7 +66,7 @@ const jsonLd: Record<string, unknown> = {
   mainEntityOfPage: canonical,
 };
 
-if (article.score !== undefined) {
+if (publishScore) {
   jsonLd.itemReviewed = {
     '@type': 'Product',
     name: article.product ?? article.title,
@@ -117,7 +128,11 @@ if (article.score !== undefined) {
           )
         }
         <span aria-hidden="true">·</span>
-        <span>{article.author}</span>
+        {
+          authorIsPerson && article.author.toLocaleLowerCase('cs').includes('ondřej')
+            ? <a href="/autor/ondrej-prochazka/">{article.author}</a>
+            : <span>{article.author}</span>
+        }
       </p>
 
       <aside class="trust-strip" aria-label="Původ a stav informací">
@@ -143,17 +158,40 @@ if (article.score !== undefined) {
             <span>{article.disclosure}</span>
           </div>
         )}
+        {article.affiliate && (
+          <div>
+            <span class="trust-label">Affiliate</span>
+            <span>Článek může obsahovat označené provizní odkazy. Nemění verdikt ani pořadí.</span>
+          </div>
+        )}
       </aside>
+
+      {
+        article.category === 'recenze' && hasReviewProtocol && (
+          <aside class="review-protocol" aria-label="Testovací protokol">
+            <p class="trust-label">Testovací protokol</p>
+            <div class="review-protocol-grid">
+              <div><span>Délka testu</span><strong>{article.testDuration}</strong></div>
+              <div><span>Čas tisku</span><strong>{article.printHours} h</strong></div>
+              <div>
+                <span>Závady během testu</span>
+                <strong>{article.failures && article.failures.length > 0 ? article.failures.join(' · ') : 'Bez zaznamenané závady'}</strong>
+              </div>
+            </div>
+            <a href="/metodika/">Jak testujeme →</a>
+          </aside>
+        )
+      }
 
       {article.note && <p class="note-banner">{article.note}</p>}
 
       {
-        (article.verdict || article.score !== undefined) && (
+        (article.verdict || publishScore) && (
           <div class="verdict">
-            {article.score !== undefined && (
+            {publishScore && (
               <p class="score-orb" style="margin: 0">
-                {formatScoreBadge(article.score)}
-                <span class="sr-only">Hodnocení {formatScore(article.score)}</span>
+                {formatScoreBadge(article.score!)}
+                <span class="sr-only">Hodnocení {formatScore(article.score!)}</span>
               </p>
             )}
             {article.verdict && <p class="lede" style="margin: 0">{article.verdict}</p>}
@@ -214,6 +252,8 @@ if (article.score !== undefined) {
     text-transform: none;
   }
 
+  .meta a { color: inherit; text-underline-offset: 3px; }
+
   .trust-strip {
     display: grid;
     gap: .9rem;
@@ -243,6 +283,21 @@ if (article.score !== undefined) {
     line-height: 1.45;
   }
 
+  .review-protocol {
+    margin-top: 1rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-card);
+    padding: 1rem 1.15rem;
+  }
+
+  .review-protocol > p { margin: 0 0 .7rem; }
+  .review-protocol-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .8rem; }
+  .review-protocol-grid > div { display: grid; gap: .18rem; }
+  .review-protocol-grid span { color: var(--color-muted); font-size: .75rem; }
+  .review-protocol-grid strong { font-size: .9rem; line-height: 1.35; }
+  .review-protocol > a { display: inline-block; margin-top: .8rem; color: var(--color-accent-ink); font-size: .84rem; font-weight: 700; }
+
   .article-next {
     display: flex;
     align-items: end;
@@ -263,6 +318,7 @@ if (article.score !== undefined) {
   .related-head { margin-top: .35rem !important; }
 
   @media (max-width: 680px) {
+    .review-protocol-grid { grid-template-columns: 1fr; }
     .article-next { align-items: flex-start; flex-direction: column; }
   }
 </style>
