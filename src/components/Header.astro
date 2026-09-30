@@ -43,14 +43,12 @@ function isCurrent(href: string): boolean {
       <a class="header-search" href="/problemy/" aria-label="Hledat řešení a problémy">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
       </a>
-      <div class="theme-switch theme-switch-persistent" role="group" aria-label="Vizuální preference Prusa nebo Bambu">
-        <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
+      <div class="theme-switch theme-switch-persistent" role="group" aria-label="Barevný režim">
+        <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false" aria-label="Zelený režim">
           <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
-          Bambu
         </button>
-        <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
+        <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true" aria-label="Oranžový režim">
           <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
-          Průša
         </button>
       </div>
       <a class="nav-cta nav-cta-desktop" href="/#temata">Pro lepší 3D tisk <span aria-hidden="true">→</span></a>
