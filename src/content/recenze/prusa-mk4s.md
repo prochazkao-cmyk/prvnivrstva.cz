@@ -2,12 +2,11 @@
 title: "Original Prusa MK4S: otevřená pracovní tiskárna, ne náhrada za komoru"
 description: "MK4S má 250 × 210 × 220 mm, Nextruder, loadcell a otevřený firmware. Silná volba pro běžnou dílnu, pokud komoru nepotřebujete jako součást stroje."
 publishedAt: 2026-06-14
-updatedAt: 2026-09-29
-reviewedAt: 2026-09-29
+updatedAt: 2026-09-30
+reviewedAt: 2026-09-30
 product: "Original Prusa MK4S"
 verdict: "Dává smysl, když chcete otevřený, servisovatelný stroj na PLA, PETG a běžnou dílenskou práci. Pokud je uzavřená nebo řízená komora základní požadavek, začněte výběr u jiné konstrukce."
-score: 8
-note: "Redakční verdikt, ne laboratorní srovnání. Nemáme řízený test stovek hodin proti všem konkurentům; známka shrnuje použitelnost a kompromisy tohoto konkrétního profilu."
+note: "Redakční profil a praktický kontext, ne plný test podle metodiky První Vrstvy. Číselnou známku zveřejníme až s evidovanou délkou testu, hodinami tisku, vlastními fotografiemi a testovacím protokolem."
 tags:
   - Prusa
   - MK4S
@@ -17,7 +16,9 @@ level: "začátečník"
 technologies:
   - "FDM"
 evidence: "kombinace"
-sourceNote: "Technické specifikace ověřeny 29. 9. 2026 na oficiální produktové stránce a Knowledge Base Prusa; praktické závěry jsou redakční."
+sourceNote: "Technické specifikace ověřeny 30. 9. 2026 na oficiální produktové stránce a Knowledge Base Prusa; praktické závěry jsou redakční."
+disclosure: "Redakční obsah bez placeného vlivu na verdikt. Tento profil zatím není označen jako plný redakční test."
+affiliate: false
 ---
 
 MK4S je klasická otevřená kartézská tiskárna postavená kolem přímého extruderu Nextruder a loadcell senzoru pro kalibraci první vrstvy. Oficiální specifikace uvádí tiskový objem **250 × 210 × 220 mm**, maximální teplotu trysky 290 °C a podložky 120 °C. Firmware je podle Prusa Research otevřený a zdrojové kódy jsou veřejně dostupné.

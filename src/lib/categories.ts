@@ -46,9 +46,9 @@ export const categories: Record<CategoryId, Category> = {
     id: 'recenze',
     label: 'Recenze',
     href: '/recenze/',
-    description: 'Poznámky z dílny. Žádné unboxingové ódy.',
+    description: 'Testy z dílny s jasným původem dat a bez koupitelné známky.',
     intro:
-      'Orientační verdikty, ne laboratorní protokol. Píšeme, komu stroj dává smysl a jakou daň za něj zaplatíte — časem, díly, nebo uzavřeným firmware.',
+      'Plná recenze dostane číselnou známku až s testovacím protokolem: délka testu, hodiny tisku, vlastní fotografie a zaznamenané závady. Text bez těchto podkladů je transparentně označený jako redakční profil, ne jako plný test.',
   },
   novinky: {
     id: 'novinky',
