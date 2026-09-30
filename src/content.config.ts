@@ -22,6 +22,10 @@ const articleSchema = z.object({
   evidence: z.enum(['redakce', 'vyrobce', 'vlastni-mereni', 'kombinace', 'demo']).default('redakce'),
   sourceNote: z.string().optional(),
   disclosure: z.string().optional(),
+  testDuration: z.string().optional(),
+  printHours: z.number().nonnegative().optional(),
+  failures: z.array(z.string()).optional(),
+  affiliate: z.boolean().default(false),
 });
 
 function articles(directory: string) {
