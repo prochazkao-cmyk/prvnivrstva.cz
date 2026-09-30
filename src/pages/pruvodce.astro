@@ -5,11 +5,11 @@ import { site } from '../lib/site';
 const lessons = [
   {
     n: '01',
-    title: 'Začněte výběrem, ne parametry',
-    copy: 'Co je FDM a sedm otázek, které je lepší vyřešit před objednávkou první tiskárny.',
+    title: 'Začněte technologií a použitím',
+    copy: 'Nejdřív zjistěte rozdíl mezi FDM, resinem a SLS. Potom si odpovězte na sedm otázek před objednávkou první tiskárny.',
     links: [
+      { href: '/clanky/co-je-3d-tisk-fdm-resin-sls/', label: 'Co je 3D tisk: FDM, resin, SLS' },
       { href: '/clanky/jak-vybrat-prvni-3d-tiskarnu-7-otazek/', label: 'Jak vybrat první tiskárnu' },
-      { href: '/technologie/fdm/', label: 'Jak funguje FDM' },
     ],
   },
   {
@@ -24,10 +24,10 @@ const lessons = [
   {
     n: '03',
     title: 'Slicer a průtok',
-    copy: 'Co měnit ve sliceru, co nechat být a jak ověřit průtok měřením místo náhodného ladění.',
+    copy: 'Začněte oficiálním profilem stroje. Pokročilé ladění přidávejte až ve chvíli, kdy umíte říct proč.',
     links: [
+      { href: '/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/', label: 'PrusaSlicer, Bambu Studio, nebo OrcaSlicer?' },
       { href: '/rady-a-tipy/kalibrace-flow/', label: 'Kalibrace flow' },
-      { href: '/nastroje/', label: 'Dílenské kalkulačky' },
     ],
   },
   {
@@ -35,8 +35,8 @@ const lessons = [
     title: 'Materiály',
     copy: 'PLA, PETG, ASA a TPU podle použití, teploty, vlhkosti a nároků na prostředí.',
     links: [
-      { href: '/materialy/', label: 'Materiálová reference' },
-      { href: '/clanky/suseni-filamentu-kdy-jak-cim/', label: 'Kdy filament sušit' },
+      { href: '/clanky/pla-petg-asa-tpu-ktery-material-kdy/', label: 'Který materiál kdy' },
+      { href: '/materialy/', label: 'Materiálová reference a zdroje' },
     ],
   },
   {
@@ -45,16 +45,17 @@ const lessons = [
     copy: 'Když už víte, co budete tisknout, dává smysl řešit servis, software, otevřenost a multimateriál.',
     links: [
       { href: '/clanky/prusa-vs-bambu-lab-srovnani/', label: 'Prusa vs. Bambu Lab' },
-      { href: '/stroje/', label: 'Profily strojů' },
+      { href: '/nakupni-radci/', label: 'Nákupní rádci' },
     ],
   },
   {
     n: '06',
-    title: 'Když se tisk pokazí',
-    copy: 'Symptom → pravděpodobná příčina → jeden diagnostický krok → ověření výsledku.',
+    title: 'Když se tisk nebo stroj pokazí',
+    copy: 'Symptom → pravděpodobná příčina → jeden diagnostický krok → ověření výsledku. Chybové kódy řešte podle přesného čísla.',
     links: [
-      { href: '/problemy/', label: 'Otevřít tiskovou poradnu' },
-      { href: '/rady-a-tipy/', label: 'Všechny praktické postupy' },
+      { href: '/problemy/', label: 'Tisková poradna podle symptomu' },
+      { href: '/rady-a-tipy/bambu-lab-hms-chybove-kody-cesky/', label: 'Bambu HMS kódy' },
+      { href: '/rady-a-tipy/prusa-chybove-kody-cesky/', label: 'Prusa chybové kódy' },
     ],
   },
 ];
@@ -68,7 +69,7 @@ const jsonLd = {
 };
 ---
 
-<BaseLayout title="Kompletní průvodce 3D tiskem" description="Šest navazujících lekcí od výběru první tiskárny po diagnostiku vad. Praktický průvodce První Vrstvy pro začátečníky." jsonLd={jsonLd}>
+<BaseLayout title="Kompletní průvodce 3D tiskem" description="Šest navazujících lekcí od výběru první technologie po diagnostiku vad a chybových kódů. Praktický průvodce První Vrstvy pro začátečníky." jsonLd={jsonLd}>
   <main id="obsah" class="page section-page guide-hub">
     <p class="kicker">PRŮVODCE 01–06</p>
     <h1 class="page-title">Od první tiskárny k vlastnímu workflow.</h1>
