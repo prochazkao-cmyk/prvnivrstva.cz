@@ -7,7 +7,7 @@ draft: true
 tags:
   - nákupní rádce
   - 3D tiskárny
-  - 2026
+  - "2026"
 level: "začátečník"
 evidence: "redakce"
 ---
