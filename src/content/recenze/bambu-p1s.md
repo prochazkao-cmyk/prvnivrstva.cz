@@ -2,12 +2,11 @@
 title: "Bambu Lab P1S: rychlý uzavřený CoreXY, ale ne vyhřívaná komora"
 description: "P1S nabízí 256 × 256 × 256 mm, uzavřenou konstrukci a silný Bambu workflow. Komora ale není aktivně vyhřívaná a firmware je uzavřený."
 publishedAt: 2026-05-02
-updatedAt: 2026-09-29
-reviewedAt: 2026-09-29
+updatedAt: 2026-09-30
+reviewedAt: 2026-09-30
 product: "Bambu Lab P1S"
 verdict: "Dává smysl, když chcete rychlý uzavřený desktopový stroj, pohodlný software a možnost AMS. Pokud je zásadní otevřený firmware nebo aktivně řízená vyhřívaná komora, hledejte jinou kategorii stroje."
-score: 8
-note: "Redakční verdikt, ne laboratorní srovnání. Známka nevznikla jako průměr z kontrolovaného benchmarku všech konkurentů."
+note: "Redakční profil a praktický kontext, ne plný test podle metodiky První Vrstvy. Číselnou známku zveřejníme až s evidovanou délkou testu, hodinami tisku, vlastními fotografiemi a testovacím protokolem."
 tags:
   - Bambu Lab
   - P1S
@@ -17,7 +16,9 @@ level: "začátečník"
 technologies:
   - "FDM"
 evidence: "kombinace"
-sourceNote: "Technické specifikace a síťové režimy ověřeny 29. 9. 2026 v oficiální dokumentaci Bambu Lab; praktické závěry jsou redakční."
+sourceNote: "Technické specifikace a síťové režimy ověřeny 30. 9. 2026 v oficiální dokumentaci Bambu Lab; praktické závěry jsou redakční."
+disclosure: "Redakční obsah bez placeného vlivu na verdikt. Tento profil zatím není označen jako plný redakční test."
+affiliate: false
 ---
 
 P1S je uzavřená CoreXY tiskárna s oficiálním tiskovým objemem **256 × 256 × 256 mm**. Výrobce uvádí celokovový hotend, maximální teplotu trysky 300 °C, podložku do 100 °C, komorový ventilátor a filtr s aktivním uhlím.
