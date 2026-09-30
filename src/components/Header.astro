@@ -54,13 +54,19 @@ function isCurrent(href: string): boolean {
       <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
     </nav>
 
-    <details class="nav-mobile">
-      <summary>
+    <div class="nav-mobile">
+      <button
+        class="nav-mobile-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        data-mobile-menu-toggle
+      >
         <span class="menu-icon" aria-hidden="true"></span>
-        <span class="label-closed">Menu</span>
-        <span class="label-open">Zavřít</span>
-      </summary>
-      <nav aria-label="Hlavní, mobilní">
+        <span data-menu-label>Menu</span>
+      </button>
+
+      <nav id="mobile-menu" class="nav-mobile-panel" aria-label="Hlavní, mobilní" data-mobile-menu hidden>
         {
           links.map((link) => (
             <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
@@ -85,7 +91,7 @@ function isCurrent(href: string): boolean {
         </div>
         <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
       </nav>
-    </details>
+    </div>
   </div>
 </header>
 
@@ -93,6 +99,9 @@ function isCurrent(href: string): boolean {
   const headers = document.querySelectorAll<HTMLElement>('[data-header]');
   const hero = document.querySelector('.hero');
   const themeButtons = document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]');
+  const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-menu-toggle]');
+  const mobileMenu = document.querySelector<HTMLElement>('[data-mobile-menu]');
+  const mobileLabel = document.querySelector<HTMLElement>('[data-menu-label]');
 
   const updateHeader = () => {
     const scrolled = window.scrollY > 8;
@@ -108,6 +117,36 @@ function isCurrent(href: string): boolean {
       header.classList.toggle('is-light', heroBottom <= headerBottom + 1);
     }
   };
+
+  const closeMobileMenu = () => {
+    if (!mobileToggle || !mobileMenu) return;
+    mobileToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.hidden = true;
+    mobileLabel && (mobileLabel.textContent = 'Menu');
+    document.documentElement.classList.remove('mobile-menu-open');
+  };
+
+  const openMobileMenu = () => {
+    if (!mobileToggle || !mobileMenu) return;
+    mobileToggle.setAttribute('aria-expanded', 'true');
+    mobileMenu.hidden = false;
+    mobileLabel && (mobileLabel.textContent = 'Zavřít');
+    document.documentElement.classList.add('mobile-menu-open');
+  };
+
+  mobileToggle?.addEventListener('click', () => {
+    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+    expanded ? closeMobileMenu() : openMobileMenu();
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMobileMenu));
+  window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeMobileMenu();
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 1240) closeMobileMenu();
+    updateHeader();
+  });
 
   const applyTheme = (theme: 'prusa' | 'bambu', persist = true) => {
     document.documentElement.dataset.brandTheme = theme;
@@ -136,5 +175,4 @@ function isCurrent(href: string): boolean {
 
   updateHeader();
   window.addEventListener('scroll', updateHeader, { passive: true });
-  window.addEventListener('resize', updateHeader);
 </script>
