@@ -41,14 +41,15 @@ function isCurrent(href: string): boolean {
           </a>
         ))
       }
-      <div class="theme-switch" role="group" aria-label="Barevný styl webu">
+      <div class="theme-switch" role="group" aria-label="Vizuální preference Prusa nebo Bambu">
+        <span class="theme-switch-label" aria-hidden="true">Vzhled</span>
+        <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
+          <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
+          PRUSA
+        </button>
         <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
           <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
           Bambu
-        </button>
-        <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
-          <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
-          Průša
         </button>
       </div>
       <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
@@ -79,14 +80,15 @@ function isCurrent(href: string): boolean {
         <a class="nav-link" href="/novinky/">Novinky</a>
         <a class="nav-link" href="/recenze/">Recenze</a>
         <a class="nav-link" href="/o-nas/">O nás</a>
-        <div class="theme-switch theme-switch-mobile" role="group" aria-label="Barevný styl webu">
+        <div class="theme-switch theme-switch-mobile" role="group" aria-label="Vizuální preference Prusa nebo Bambu">
+          <span class="theme-switch-label" aria-hidden="true">Vzhled</span>
+          <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
+            <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
+            PRUSA
+          </button>
           <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
             <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
             Bambu
-          </button>
-          <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
-            <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
-            Průša
           </button>
         </div>
         <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
@@ -154,7 +156,7 @@ function isCurrent(href: string): boolean {
       button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
     }
     const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
-    if (meta) meta.content = theme === 'bambu' ? '#f1f4f1' : '#f3efe6';
+    if (meta) meta.content = theme === 'bambu' ? '#edf2ee' : '#f4eee4';
     if (persist) {
       try {
         localStorage.setItem('pv-theme', theme);
