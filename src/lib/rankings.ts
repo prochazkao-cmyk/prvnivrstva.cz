@@ -2,8 +2,8 @@ import type { Article } from './articles';
 
 /**
  * Editorial presentation for machine cards.
- * Unverified concepts never render as a numeric score in the UI.
- * PriceFrom is an editorial orientation only, never a live shop price.
+ * Numeric scores only come from a published review with a documented test protocol.
+ * Prices stay empty until the CZ/SK comparison feed is live; we never publish editorial estimates as current prices.
  */
 export const rankFilters = [
   { id: 'all', label: 'Přehled' },
@@ -15,11 +15,10 @@ export const rankFilters = [
 ] as const;
 
 export type RankFilterId = Exclude<(typeof rankFilters)[number]['id'], 'all'>;
-/** Extra card tags used by the homepage finder, not by the chip row. */
 export type RankTag = RankFilterId | 'pla';
 
 export const editorialNote =
-  'Pořadí karet je redakční orientace pro běžnou dílnu, ne laboratorní žebříček. Číselná známka se zobrazuje jen tam, kde odkazuje na publikovaný verdikt. Ceny („od … Kč“) jsou zaokrouhlený redakční odhad k září 2026, ne živý ceník. Technické specifikace před nákupem ověřte u výrobce.';
+  'Karty jsou profily podle použití, ne placený žebříček. Číselná známka se zobrazí až z recenze s testovacím protokolem. Ceny zobrazíme až z živých CZ/SK feedů s časem poslední aktualizace; affiliate provize nesmí měnit pořadí.';
 
 export interface RankCard {
   id: string;
@@ -30,7 +29,6 @@ export interface RankCard {
   specLine: string;
   blurb: string;
   score: number | null;
-  /** True when the number is only an internal/editorial concept and must not render as a score. */
   scoreDraft: boolean;
   scoreCaption: string;
   reviewHref?: string;
@@ -53,14 +51,13 @@ const profiles: Omit<RankCard, 'href'>[] = [
     order: 1,
     badge: 'Otevřená dílna',
     specLine: 'Cartesian · 250×210×220 mm · otevřená',
-    blurb:
-      'Otevřená a servisovatelná platforma pro PLA a PETG. Pokud už dnes potřebujete komoru, dívejte se jinam.',
-    score: 8,
-    scoreDraft: false,
-    scoreCaption: 'publikovaný verdikt MK4S',
+    blurb: 'Otevřená a servisovatelná platforma pro PLA a PETG. Pokud už dnes potřebujete komoru, dívejte se jinam.',
+    score: null,
+    scoreDraft: true,
+    scoreCaption: 'bez testovací známky',
     reviewHref: '/recenze/prusa-mk4s/',
-    priceFrom: 19000,
-    priceCaption: 'redakční odhad · kit',
+    priceFrom: null,
+    priceCaption: 'živá CZ cena se připravuje',
     filters: ['zacatecnik', 'pla'],
     photoLabel: 'PROFIL STROJE',
     kinematics: 'Cartesian, pohyblivá deska',
@@ -74,16 +71,15 @@ const profiles: Omit<RankCard, 'href'>[] = [
     id: 'bambu-p1s-x1c',
     name: 'Bambu Lab P1S / X1C',
     order: 2,
-    badge: 'Rychlý ekosystém',
+    badge: 'Uzavřený ekosystém',
     specLine: 'CoreXY · 256×256×256 mm · uzavřená',
-    blurb:
-      'Rychlá uzavřená CoreXY s pohodlným multimateriálovým ekosystémem. Kompromisem je uzavřenější software a servisní filozofie.',
-    score: 8,
-    scoreDraft: false,
-    scoreCaption: 'publikovaný verdikt P1S',
+    blurb: 'Uzavřená CoreXY s pohodlným multimateriálovým ekosystémem. Kompromisem je uzavřenější software a servisní filozofie.',
+    score: null,
+    scoreDraft: true,
+    scoreCaption: 'bez testovací známky',
     reviewHref: '/recenze/bambu-p1s/',
-    priceFrom: 15000,
-    priceCaption: 'redakční odhad · P1S bez AMS',
+    priceFrom: null,
+    priceCaption: 'živá CZ cena se připravuje',
     filters: ['zacatecnik', 'uzavrene', 'multimaterial', 'pla'],
     photoLabel: 'PROFIL STROJE',
     kinematics: 'CoreXY',
@@ -97,15 +93,14 @@ const profiles: Omit<RankCard, 'href'>[] = [
     id: 'creality-k1-k1c',
     name: 'Creality K1 / K1C',
     order: 3,
-    badge: 'CoreXY za nižší vstup',
+    badge: 'CoreXY profil',
     specLine: 'CoreXY · cca 220×220×220 mm · uzavřená',
-    blurb:
-      'Rychlé CoreXY za nižší vstupní cenu. Dává smysl uživateli, který počítá s větší ochotou ladit a ověřovat revizi stroje.',
-    score: 7,
+    blurb: 'Profil stroje pro uživatele, který počítá s větší ochotou ladit a ověřovat konkrétní revizi stroje.',
+    score: null,
     scoreDraft: true,
-    scoreCaption: 'známku zatím nezveřejňujeme',
-    priceFrom: 12000,
-    priceCaption: 'redakční odhad · K1',
+    scoreCaption: 'bez testovací známky',
+    priceFrom: null,
+    priceCaption: 'živá CZ cena se připravuje',
     filters: ['uzavrene'],
     photoLabel: 'PROFIL STROJE',
     kinematics: 'CoreXY',
@@ -121,13 +116,12 @@ const profiles: Omit<RankCard, 'href'>[] = [
     order: 4,
     badge: 'Resin workflow',
     specLine: 'Resin · uzavřený pracovní proces · PreForm',
-    blurb:
-      'Profesionálněji pojatý resinový workflow pro dílnu, která platí za opakovatelnost a návazný proces. Na občasné figurky je to jiná kategorie nákupu.',
-    score: 8,
+    blurb: 'Profesionálněji pojatý resinový workflow pro dílnu, která platí za opakovatelnost a návazný proces. Na občasné figurky je to jiná kategorie nákupu.',
+    score: null,
     scoreDraft: true,
-    scoreCaption: 'známku zatím nezveřejňujeme',
-    priceFrom: 90000,
-    priceCaption: 'redakční odhad · stroj',
+    scoreCaption: 'bez testovací známky',
+    priceFrom: null,
+    priceCaption: 'živá CZ cena se připravuje',
     filters: ['resin'],
     photoLabel: 'PROFIL STROJE',
     kinematics: 'Resin',
@@ -151,11 +145,11 @@ function fallback(article: Article, order: number): RankCard {
     badge: 'Profil',
     specLine: [article.technologies.join(' · '), article.level].filter(Boolean).join(' · ') || 'Viz profil',
     blurb: article.description,
-    score: article.score ?? null,
+    score: hasPublishedScore ? article.score ?? null : null,
     scoreDraft: !hasPublishedScore,
-    scoreCaption: hasPublishedScore ? 'z publikovaného textu' : 'bez ověřené známky',
+    scoreCaption: hasPublishedScore ? 'z publikovaného testu' : 'bez testovací známky',
     priceFrom: null,
-    priceCaption: 'cena v profilu',
+    priceCaption: 'živá CZ cena se připravuje',
     filters,
     photoLabel: 'PROFIL STROJE',
     kinematics: article.technologies[0] ?? '—',
