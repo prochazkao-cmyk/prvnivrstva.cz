@@ -1,0 +1,89 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { offers, totalPrice, uniqueShopCount } from '../data/offers';
+
+const shopCount = uniqueShopCount();
+const isLive = shopCount >= 3 && offers.length > 0;
+const grouped = new Map<string, typeof offers>();
+for (const offer of offers) {
+  const group = grouped.get(offer.productId) ?? [];
+  group.push(offer);
+  grouped.set(offer.productId, group);
+}
+---
+
+<BaseLayout
+  title="Srovnávač cen 3D tisku"
+  description="Lokální ceny 3D tiskáren a filamentů včetně dopravy, dostupnosti a času poslední aktualizace."
+  noindex={!isLive}
+>
+  <main id="obsah" class="page section-page compare-page">
+    <p class="kicker">CENY V ČR A SR</p>
+    <h1 class="page-title">Srovnávač bez falešných „aktuálních cen“.</h1>
+    <p class="lede">Cena má smysl jen s obchodem, dopravou, dostupností a časem aktualizace. Dokud nemáme stabilní feed alespoň ze tří obchodů, stránku nepouštíme do vyhledávání a nevyplňujeme ji odhady.</p>
+
+    {!isLive ? (
+      <section class="compare-gate" aria-labelledby="gate-title">
+        <span>{shopCount}/3</span>
+        <div>
+          <h2 id="gate-title">Datová brána ještě není splněná.</h2>
+          <p>Napojíme pouze XML, API nebo affiliate feedy, které obchod poskytne nebo jejich použití povolí. Pořadí nabídek bude určovat zvolený cenový klíč, ne výše provize.</p>
+        </div>
+      </section>
+    ) : (
+      <section aria-label="Aktuální nabídky">
+        {[...grouped.entries()].map(([productId, productOffers]) => (
+          <article class="offer-group">
+            <h2>{productOffers[0]?.productName ?? productId}</h2>
+            <table>
+              <thead><tr><th>Obchod</th><th>Cena</th><th>Doprava</th><th>Celkem</th><th>Stav</th><th>Aktualizace</th></tr></thead>
+              <tbody>
+                {productOffers.sort((a, b) => totalPrice(a) - totalPrice(b)).map((offer) => (
+                  <tr>
+                    <td><a href={offer.affiliateUrl ?? offer.url} rel="sponsored nofollow">{offer.shopName}</a></td>
+                    <td>{offer.price.toLocaleString('cs-CZ')} {offer.currency}</td>
+                    <td>{offer.shippingPrice === undefined ? '—' : `${offer.shippingPrice.toLocaleString('cs-CZ')} ${offer.currency}`}</td>
+                    <td><strong>{totalPrice(offer).toLocaleString('cs-CZ')} {offer.currency}</strong></td>
+                    <td>{offer.inStock ? (offer.stockLabel ?? 'Skladem') : (offer.stockLabel ?? 'Není skladem')}</td>
+                    <td><time datetime={offer.fetchedAt}>{new Date(offer.fetchedAt).toLocaleString('cs-CZ')}</time></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </article>
+        ))}
+      </section>
+    )}
+
+    <section class="method" aria-labelledby="method-title">
+      <p class="kicker">PRAVIDLA</p>
+      <h2 id="method-title">Co srovnávač nikdy nesmí dělat.</h2>
+      <ul>
+        <li>Provize nesmí měnit pořadí.</li>
+        <li>Starou cenu nesmíme vydávat za živou.</li>
+        <li>Dopravu nesmíme schovat, pokud rozhoduje o nejlevnější nabídce.</li>
+        <li>Produkty různých variant nesmíme sloučit jen proto, že mají podobný název.</li>
+        <li>Affiliate odkaz musí být označený.</li>
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .compare-page { padding-bottom: clamp(3rem, 7vw, 6rem); }
+  .compare-gate { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: center; margin: 2rem 0 4rem; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-card); padding: clamp(1rem, 3vw, 1.5rem); }
+  .compare-gate > span { display: grid; place-items: center; width: 5rem; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent); color: #1a0d08; font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: 1.7rem; font-weight: 700; }
+  .compare-gate h2 { margin: 0; font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: clamp(1.5rem, 3vw, 2.3rem); letter-spacing: -.035em; }
+  .compare-gate p { max-width: 55rem; margin: .35rem 0 0; color: var(--color-muted); }
+  .offer-group { margin-top: 2rem; overflow-x: auto; }
+  .offer-group h2 { font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: 2rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  th, td { border-bottom: 1px solid var(--color-line); padding: .75rem .55rem; text-align: left; white-space: nowrap; }
+  th { color: var(--color-muted); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+  td a { color: var(--color-ink); font-weight: 700; }
+  .method { margin-top: 4rem; }
+  .method h2 { margin: .45rem 0 1rem; font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.04em; }
+  .method ul { max-width: 55rem; padding-left: 1.2rem; }
+  .method li { margin: .45rem 0; }
+  @media (max-width: 620px) { .compare-gate { grid-template-columns: 1fr; } }
+</style>
