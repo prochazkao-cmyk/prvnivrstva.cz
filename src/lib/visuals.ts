@@ -76,16 +76,6 @@ export const problemVisuals: Record<string, VisualAsset> = {
  * See CONTENT_CREDITS.md.
  */
 export const editorialVisuals = {
-  heroWarm: {
-    src: '/media/editorial/hero-first-layer-warm.jpg',
-    alt: 'Makro trysky kladoucí první vrstvu na texturovanou podložku',
-    source: 'Ilustrační záběr',
-  },
-  heroCool: {
-    src: '/media/editorial/hero-first-layer-cool.jpg',
-    alt: 'Makro první vrstvy v uzavřené tiskové komoře',
-    source: 'Ilustrační záběr',
-  },
   workshop: {
     src: '/media/editorial/workshop-bench.jpg',
     alt: 'Dílenský stůl se dvěma FDM tiskárnami, nářadím a filamentem',
