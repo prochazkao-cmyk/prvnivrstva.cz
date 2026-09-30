@@ -22,6 +22,10 @@ export interface Article {
   evidence: 'redakce' | 'vyrobce' | 'vlastni-mereni' | 'kombinace' | 'demo';
   sourceNote?: string;
   disclosure?: string;
+  testDuration?: string;
+  printHours?: number;
+  failures?: string[];
+  affiliate: boolean;
   readingMinutes: number;
   href: string;
 }
@@ -69,6 +73,10 @@ export function toArticle(category: CategoryId, entry: AnyEntry): Article {
     evidence: entry.data.evidence,
     sourceNote: entry.data.sourceNote,
     disclosure: entry.data.disclosure,
+    testDuration: entry.data.testDuration,
+    printHours: entry.data.printHours,
+    failures: entry.data.failures,
+    affiliate: entry.data.affiliate,
     readingMinutes: readingMinutesFromBody(entry.body),
     href: `/${category}/${entry.id}/`,
   };
