@@ -9,11 +9,11 @@ interface Props {
 const { tone = 'solid' } = Astro.props;
 const pathname = Astro.url.pathname;
 const links = [
-  { href: '/#zebricek', label: 'Tiskárny' },
+  { href: '/recenze/', label: 'Testy tiskáren' },
   { href: '/materialy/', label: 'Materiály' },
-  { href: '/problemy/', label: 'Problémy' },
-  { href: '/rady-a-tipy/', label: 'Návody' },
-  { href: '/nastroje/', label: 'Nástroje' },
+  { href: '/rady-a-tipy/z-offset/', label: 'Kalibrace' },
+  { href: '/clanky/prusa-vs-bambu-lab-srovnani/', label: 'Srovnání' },
+  { href: '/rady-a-tipy/', label: 'Tipy a návody' },
 ];
 
 function isCurrent(href: string): boolean {
@@ -34,72 +34,48 @@ function isCurrent(href: string): boolean {
     </a>
 
     <nav class="nav-desktop" aria-label="Hlavní">
-      {
-        links.map((link) => (
-          <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
-            {link.label}
-          </a>
-        ))
-      }
-      <div class="theme-switch" role="group" aria-label="Vizuální preference Prusa nebo Bambu">
-        <span class="theme-switch-label" aria-hidden="true">Vzhled</span>
-        <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
-          <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
-          PRUSA
-        </button>
+      {links.map((link) => (
+        <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>{link.label}</a>
+      ))}
+    </nav>
+
+    <div class="header-actions">
+      <div class="theme-switch theme-switch-persistent" role="group" aria-label="Vizuální preference Prusa nebo Bambu">
         <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
           <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
           Bambu
         </button>
+        <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
+          <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
+          Průša
+        </button>
       </div>
-      <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
-    </nav>
+      <a class="nav-cta nav-cta-desktop" href="/#zebricek">Pro lepší 3D tisk <span aria-hidden="true">→</span></a>
 
-    <div class="nav-mobile">
-      <button
-        class="nav-mobile-toggle"
-        type="button"
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        data-mobile-menu-toggle
-      >
-        <span class="menu-icon" aria-hidden="true"></span>
-        <span data-menu-label>Menu</span>
-      </button>
+      <div class="nav-mobile">
+        <button class="nav-mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-menu-toggle>
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span data-menu-label>Menu</span>
+        </button>
 
-      <nav id="mobile-menu" class="nav-mobile-panel" aria-label="Hlavní, mobilní" data-mobile-menu hidden>
-        {
-          links.map((link) => (
-            <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
-              {link.label}
-            </a>
-          ))
-        }
-        <a class="nav-link" href="/clanky/">Články</a>
-        <a class="nav-link" href="/technologie/">Technologie</a>
-        <a class="nav-link" href="/novinky/">Novinky</a>
-        <a class="nav-link" href="/recenze/">Recenze</a>
-        <a class="nav-link" href="/o-nas/">O nás</a>
-        <div class="theme-switch theme-switch-mobile" role="group" aria-label="Vizuální preference Prusa nebo Bambu">
-          <span class="theme-switch-label" aria-hidden="true">Vzhled</span>
-          <button class="theme-choice" type="button" data-theme-choice="prusa" aria-pressed="true">
-            <span class="theme-dot theme-dot-prusa" aria-hidden="true"></span>
-            PRUSA
-          </button>
-          <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
-            <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
-            Bambu
-          </button>
-        </div>
-        <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
-      </nav>
+        <nav id="mobile-menu" class="nav-mobile-panel" aria-label="Hlavní, mobilní" data-mobile-menu hidden>
+          {links.map((link) => (
+            <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>{link.label}</a>
+          ))}
+          <a class="nav-link" href="/problemy/">Problémy</a>
+          <a class="nav-link" href="/nastroje/">Nástroje</a>
+          <a class="nav-link" href="/clanky/">Články</a>
+          <a class="nav-link" href="/o-nas/">O nás</a>
+          <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
+        </nav>
+      </div>
     </div>
   </div>
 </header>
 
 <script>
   const headers = document.querySelectorAll<HTMLElement>('[data-header]');
-  const hero = document.querySelector('.hero');
+  const hero = document.querySelector('.hero, .cover');
   const themeButtons = document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]');
   const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-menu-toggle]');
   const mobileMenu = document.querySelector<HTMLElement>('[data-mobile-menu]');
@@ -158,9 +134,7 @@ function isCurrent(href: string): boolean {
     const meta = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
     if (meta) meta.content = theme === 'bambu' ? '#edf2ee' : '#f4eee4';
     if (persist) {
-      try {
-        localStorage.setItem('pv-theme', theme);
-      } catch {}
+      try { localStorage.setItem('pv-theme', theme); } catch {}
       window.dispatchEvent(new CustomEvent('pv:theme-selected', { detail: { theme } }));
     }
   };
