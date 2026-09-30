@@ -2,14 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ExtrusionTrace from '../components/ExtrusionTrace.astro';
 import { site } from '../lib/site';
-import { machineVisuals, materialVisuals, problemVisuals } from '../lib/visuals';
+import { editorialVisuals, machineVisuals, problemVisuals } from '../lib/visuals';
 
-const heroPrusa = 'https://images.unsplash.com/photo-1742971500442-8fb8610dfbf5?auto=format&fit=crop&fm=jpg&q=84&w=2400';
-const heroBambu = 'https://images.unsplash.com/photo-1762579318096-8e9bc45b8feb?auto=format&fit=crop&fm=jpg&q=84&w=2400';
-const workshop = 'https://images.unsplash.com/photo-1758435170505-e9b2772348c1?auto=format&fit=crop&fm=jpg&q=82&w=2200';
-const handPrint = 'https://images.unsplash.com/photo-1741764595674-3511fd1e2613?auto=format&fit=crop&fm=jpg&q=82&w=1800';
-const workshopSpools = 'https://images.unsplash.com/photo-1760446410955-86c0446b9be2?auto=format&fit=crop&fm=jpg&q=82&w=1800';
-const firstLayer = 'https://help.prusa3d.com/wp-content/uploads/First-Layer-Calibration-05-800x318.jpg';
+const communityPrints = [
+  editorialVisuals.printToolHolder,
+  editorialVisuals.printLamp,
+  editorialVisuals.printHinge,
+  editorialVisuals.printBins,
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -37,11 +37,11 @@ const jsonLd = {
         </div>
 
         <div class="ref-hero-media">
-          <img class="theme-shot prusa-shot" src={heroPrusa} alt="Makro detail trysky 3D tiskárny při tisku" fetchpriority="high" decoding="async" />
-          <img class="theme-shot bambu-shot" src={heroBambu} alt="Makro detail tiskové hlavy Bambu Lab při tisku" fetchpriority="high" decoding="async" />
+          <img class="theme-shot prusa-shot" src={editorialVisuals.heroWarm.src} alt={editorialVisuals.heroWarm.alt} fetchpriority="high" decoding="async" />
+          <img class="theme-shot bambu-shot" src={editorialVisuals.heroCool.src} alt={editorialVisuals.heroCool.alt} fetchpriority="high" decoding="async" />
           <p class="ref-handnote">Všechno<br />začíná první<br />vrstvou.</p>
           <p class="ref-smallnote">Malé detaily.<br /><strong>Velké možnosti.</strong></p>
-          <span class="ref-photo-credit">Foto: Unsplash</span>
+          <span class="ref-photo-credit">{editorialVisuals.heroWarm.source}</span>
         </div>
       </div>
       <ExtrusionTrace className="ref-hero-trace" />
@@ -83,18 +83,18 @@ const jsonLd = {
         </div>
 
         <figure class="ref-project-photo ref-project-workshop">
-          <img src={workshop} alt="Pracovní stůl s 3D tiskárnou a nářadím" loading="lazy" decoding="async" />
-          <figcaption>Reálná dílna · Unsplash</figcaption>
+          <img src={editorialVisuals.workshop.src} alt={editorialVisuals.workshop.alt} loading="lazy" decoding="async" />
+          <figcaption>{editorialVisuals.workshop.source}</figcaption>
         </figure>
         <figure class="ref-project-photo ref-project-hand">
-          <img src={handPrint} alt="Ruka držící čerstvě vytištěný 3D díl" loading="lazy" decoding="async" />
+          <img src={editorialVisuals.handPrint.src} alt={editorialVisuals.handPrint.alt} loading="lazy" decoding="async" />
         </figure>
         <figure class="ref-project-photo ref-project-spools">
-          <img class="theme-shot prusa-shot" src={materialVisuals.prusament.src} alt={materialVisuals.prusament.alt} loading="lazy" decoding="async" />
-          <img class="theme-shot bambu-shot" src={materialVisuals.bambu.src} alt={materialVisuals.bambu.alt} loading="lazy" decoding="async" />
+          <img class="theme-shot prusa-shot" src={editorialVisuals.filamentWarm.src} alt={editorialVisuals.filamentWarm.alt} loading="lazy" decoding="async" />
+          <img class="theme-shot bambu-shot" src={editorialVisuals.filamentCool.src} alt={editorialVisuals.filamentCool.alt} loading="lazy" decoding="async" />
         </figure>
         <figure class="ref-project-photo ref-project-object">
-          <img src={workshopSpools} alt="3D tiskárna, filamenty a hotové výtisky na pracovním stole" loading="lazy" decoding="async" />
+          <img src={editorialVisuals.printsBench.src} alt={editorialVisuals.printsBench.alt} loading="lazy" decoding="async" />
         </figure>
       </div>
       <ExtrusionTrace className="ref-project-trace" />
@@ -131,8 +131,8 @@ const jsonLd = {
         <article class="ref-number-card ref-quality-card">
           <small>Kvalita tisku</small>
           <div class="quality-pair">
-            <div><img src={firstLayer} alt="Hrubší vrstvy 3D tisku" loading="lazy" decoding="async" /><b>0,32 mm</b><span>Rychlejší tisk</span></div>
-            <div><img src={firstLayer} alt="Jemnější vrstvy 3D tisku" loading="lazy" decoding="async" /><b>0,08 mm</b><span>Více detailů</span></div>
+            <div><img src={editorialVisuals.layerCoarse.src} alt={editorialVisuals.layerCoarse.alt} loading="lazy" decoding="async" /><b>0,32 mm</b><span>Rychlejší tisk</span></div>
+            <div><img src={editorialVisuals.layerFine.src} alt={editorialVisuals.layerFine.alt} loading="lazy" decoding="async" /><b>0,08 mm</b><span>Více detailů</span></div>
           </div>
         </article>
       </div>
@@ -159,13 +159,13 @@ const jsonLd = {
           </a>
           <a class="ref-topic-card" href="/materialy/">
             <div class="ref-topic-photo">
-              <img class="theme-shot prusa-shot" src={materialVisuals.prusament.src} alt={materialVisuals.prusament.alt} loading="lazy" decoding="async" />
-              <img class="theme-shot bambu-shot" src={materialVisuals.bambu.src} alt={materialVisuals.bambu.alt} loading="lazy" decoding="async" />
+              <img class="theme-shot prusa-shot" src={editorialVisuals.filamentWarm.src} alt={editorialVisuals.filamentWarm.alt} loading="lazy" decoding="async" />
+              <img class="theme-shot bambu-shot" src={editorialVisuals.filamentCool.src} alt={editorialVisuals.filamentCool.alt} loading="lazy" decoding="async" />
             </div>
             <div><strong>Materiály</strong><p>Vlastnosti, použití, nastavení a srovnání filamentů.</p><span>→</span></div>
           </a>
           <a class="ref-topic-card" href="/rady-a-tipy/z-offset/">
-            <div class="ref-topic-photo"><img src={firstLayer} alt="Kalibrace první vrstvy 3D tisku" loading="lazy" decoding="async" /></div>
+            <div class="ref-topic-photo"><img src={editorialVisuals.bedCalibration.src} alt={editorialVisuals.bedCalibration.alt} loading="lazy" decoding="async" /></div>
             <div><strong>Kalibrace</strong><p>Postupně, srozumitelně a s měřitelnými výsledky.</p><span>→</span></div>
           </a>
           <a class="ref-topic-card" href="/clanky/prusa-vs-bambu-lab-srovnani/">
@@ -185,6 +185,14 @@ const jsonLd = {
     </section>
 
     <section class="ref-community" aria-labelledby="community-title">
+      <div class="page ref-community-prints">
+        {communityPrints.map((shot) => (
+          <figure>
+            <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
+          </figure>
+        ))}
+      </div>
+      <p class="page ref-community-credit">Ilustrační záběry výtisků</p>
       <div class="page ref-community-grid">
         <div><p class="ref-eyebrow">KOMUNITA / ZKUŠENOSTI / LEPŠÍ VÝSLEDKY</p><h2 id="community-title">Společně tvoříme lepší 3D tisk.</h2></div>
         <p>Přidejte se k lidem, kteří sdílí zkušenosti, řeší problémy a posouvají 3D tisk dál.</p>

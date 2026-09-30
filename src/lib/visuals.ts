@@ -70,6 +70,84 @@ export const problemVisuals: Record<string, VisualAsset> = {
   },
 };
 
+/**
+ * Realistic editorial stand-ins for homepage photo gaps.
+ * Not documentary photos of this workshop and not manufacturer assets.
+ * See CONTENT_CREDITS.md.
+ */
+export const editorialVisuals = {
+  heroWarm: {
+    src: '/media/editorial/hero-first-layer-warm.jpg',
+    alt: 'Makro trysky kladoucí první vrstvu na texturovanou podložku',
+    source: 'Ilustrační záběr',
+  },
+  heroCool: {
+    src: '/media/editorial/hero-first-layer-cool.jpg',
+    alt: 'Makro první vrstvy v uzavřené tiskové komoře',
+    source: 'Ilustrační záběr',
+  },
+  workshop: {
+    src: '/media/editorial/workshop-bench.jpg',
+    alt: 'Dílenský stůl se dvěma FDM tiskárnami, nářadím a filamentem',
+    source: 'Ilustrační záběr',
+  },
+  handPrint: {
+    src: '/media/editorial/hand-printed-part.jpg',
+    alt: 'Ruka držící čerstvě vytištěný funkční díl',
+    source: 'Ilustrační záběr',
+  },
+  filamentWarm: {
+    src: '/media/editorial/filament-spools-warm.jpg',
+    alt: 'Detail cívek filamentu v teplém světle dílny',
+    source: 'Ilustrační záběr',
+  },
+  filamentCool: {
+    src: '/media/editorial/filament-spools-cool.jpg',
+    alt: 'Detail matných cívek filamentu v chladnějším světle',
+    source: 'Ilustrační záběr',
+  },
+  printsBench: {
+    src: '/media/editorial/prints-on-bench.jpg',
+    alt: 'Hotové výtisky na pracovním stole',
+    source: 'Ilustrační záběr',
+  },
+  layerCoarse: {
+    src: '/media/editorial/first-layer-coarse.jpg',
+    alt: 'Hrubší první vrstva s mezerami mezi linkami',
+    source: 'Ilustrační záběr',
+  },
+  layerFine: {
+    src: '/media/editorial/first-layer-fine.jpg',
+    alt: 'Jemná první vrstva, linky se dotýkají',
+    source: 'Ilustrační záběr',
+  },
+  bedCalibration: {
+    src: '/media/editorial/bed-calibration.jpg',
+    alt: 'Kalibrační čtverec první vrstvy na texturované podložce',
+    source: 'Ilustrační záběr',
+  },
+  printToolHolder: {
+    src: '/media/editorial/print-tool-holder.jpg',
+    alt: 'Vytištěný držák na nářadí',
+    source: 'Ilustrační záběr',
+  },
+  printLamp: {
+    src: '/media/editorial/print-lamp.jpg',
+    alt: 'Vytištěné geometrické stínidlo',
+    source: 'Ilustrační záběr',
+  },
+  printHinge: {
+    src: '/media/editorial/print-hinge.jpg',
+    alt: 'Vytištěný náhradní klip',
+    source: 'Ilustrační záběr',
+  },
+  printBins: {
+    src: '/media/editorial/print-bins.jpg',
+    alt: 'Vytištěné přihrádky na spojovací materiál',
+    source: 'Ilustrační záběr',
+  },
+} as const satisfies Record<string, VisualAsset>;
+
 export const materialVisuals = {
   prusament: {
     src: 'https://backend.prusa3d.com/cdn-cgi/image/format%3Dauto%2Cquality%3D85/wp-content/uploads/prusament05.jpg',
