@@ -4,6 +4,9 @@ import ExtrusionTrace from '../components/ExtrusionTrace.astro';
 import { site } from '../lib/site';
 import { editorialVisuals, machineVisuals, problemVisuals } from '../lib/visuals';
 
+const heroPrusa = 'https://images.unsplash.com/photo-1742971500442-8fb8610dfbf5?auto=format&fit=crop&fm=jpg&q=84&w=2400';
+const heroBambu = 'https://images.unsplash.com/photo-1762579318096-8e9bc45b8feb?auto=format&fit=crop&fm=jpg&q=84&w=2400';
+
 const communityPrints = [
   editorialVisuals.printToolHolder,
   editorialVisuals.printLamp,
@@ -37,11 +40,11 @@ const jsonLd = {
         </div>
 
         <div class="ref-hero-media">
-          <img class="theme-shot prusa-shot" src={editorialVisuals.heroWarm.src} alt={editorialVisuals.heroWarm.alt} fetchpriority="high" decoding="async" />
-          <img class="theme-shot bambu-shot" src={editorialVisuals.heroCool.src} alt={editorialVisuals.heroCool.alt} fetchpriority="high" decoding="async" />
+          <img class="theme-shot prusa-shot" src={heroPrusa} alt="Makro detail trysky 3D tiskárny při tisku" fetchpriority="high" decoding="async" />
+          <img class="theme-shot bambu-shot" src={heroBambu} alt="Makro detail tiskové hlavy Bambu Lab při tisku" fetchpriority="high" decoding="async" />
           <p class="ref-handnote">Všechno<br />začíná první<br />vrstvou.</p>
           <p class="ref-smallnote">Malé detaily.<br /><strong>Velké možnosti.</strong></p>
-          <span class="ref-photo-credit">{editorialVisuals.heroWarm.source}</span>
+          <span class="ref-photo-credit">Foto: Unsplash</span>
         </div>
       </div>
       <ExtrusionTrace className="ref-hero-trace" />
