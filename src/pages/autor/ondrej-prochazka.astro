@@ -1,0 +1,82 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../lib/site';
+
+const description = 'Kdo ručí za technické texty První vrstvy: servisní praxe, střet zájmů, způsob kontroly faktů a redakční odpovědnost.';
+---
+
+<BaseLayout title="Ondřej Procházka — autor a servisní praxe" description={description}>
+  <main id="obsah" class="page section-page">
+    <nav class="crumbs" aria-label="Drobečková navigace">
+      <a href="/">Úvod</a><span aria-hidden="true">/</span><a href="/o-nas/">O nás</a><span aria-hidden="true">/</span><span aria-current="page">Ondřej Procházka</span>
+    </nav>
+
+    <p class="kicker">Autor · servisní praxe</p>
+    <h1 class="page-title">Za technický verdikt ručí člověk, ne generátor textu.</h1>
+    <p class="lede">
+      Ondřej Procházka je servisní technik 3D tiskáren a provozovatel servisních projektů ServisPrusa a servis Bambu Lab. Na První vrstvě kontroluje fakta, měření a finální verdikty.
+    </p>
+
+    <div class="author-grid">
+      <section class="author-card author-card-main">
+        <p class="kicker">Co je moje práce</p>
+        <h2>Přinést materiál, který nejde vyrobit jen rešerší.</h2>
+        <ul>
+          <li>servisní případy a fotografie vad,</li>
+          <li>měření na konkrétním stroji,</li>
+          <li>diktovaný kontext z dílny,</li>
+          <li>kontrola technických tvrzení a závěru.</li>
+        </ul>
+      </section>
+      <section class="author-card">
+        <p class="kicker">Co dělá AI</p>
+        <h2>Rešerši a koncept.</h2>
+        <p>AI může připravit osnovu, dohledat dokumentaci nebo zpracovat přepis. Nemá nahrazovat vlastní test, měření ani servisní zkušenost.</p>
+      </section>
+      <section class="author-card">
+        <p class="kicker">Střet zájmů</p>
+        <h2>Servisní vazby přiznáváme.</h2>
+        <p>První vrstva souvisí se servisní praxí v ekosystémech Prusa i Bambu Lab. Proto musí být servisní vazba veřejná a nesmí ovlivňovat skóre, pořadí nebo závěr recenze.</p>
+      </section>
+    </div>
+
+    <div class="article-body author-copy">
+      <h2>Jak vzniká článek podepsaný autorem</h2>
+      <p>Nejdřív vznikne surovina: servisní deník, fotka, měření, diktování nebo dokumentace výrobce. Z ní může AI připravit koncept. Finální kontrola ale patří člověku — ověřit fakta, měření a verdikt.</p>
+
+      <h2>Co u recenzí chceme zveřejňovat</h2>
+      <p>U skutečné recenze má být dohledatelné, jak dlouho byl stroj testovaný, kolik času strávil tiskem, co se během testu pokazilo a které fotografie jsou vlastní. Tam, kde tyto údaje zatím nemáme, web nemá předstírat plnohodnotný test.</p>
+
+      <h2>Počet oprav a testovaných strojů</h2>
+      <p>Tento údaj zveřejníme až ve chvíli, kdy ho budeme umět průběžně a ověřitelně aktualizovat. Marketingové číslo bez evidence by šlo proti vlastní metodice.</p>
+
+      <h2>Metodika a spolupráce</h2>
+      <p>Jak rozlišujeme vlastní měření, údaj výrobce a redakční zkušenost, popisuje stránka <a href="/metodika/">Jak testujeme</a>. Pravidla pro zápůjčky, affiliate a sponzorovaný obsah jsou na stránce <a href="/spoluprace/">Spolupráce</a>.</p>
+
+      <h2>Kontakt</h2>
+      <p>Opravy faktických chyb a technické podklady můžete poslat na <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
+    </div>
+  </main>
+</BaseLayout>
+
+<style>
+  .author-grid {
+    display: grid;
+    grid-template-columns: 1.25fr .75fr .75fr;
+    gap: .7rem;
+    margin-top: 2.5rem;
+  }
+  .author-card {
+    border: 1px solid var(--color-line);
+    border-radius: 1.2rem;
+    background: var(--color-card);
+    padding: clamp(1.2rem, 2.5vw, 2rem);
+    box-shadow: var(--shadow-card);
+  }
+  .author-card-main { background: color-mix(in srgb, var(--color-card) 88%, var(--theme-soft)); }
+  .author-card h2 { margin: .65rem 0 .8rem; font-size: clamp(1.45rem, 2.4vw, 2.1rem); line-height: 1.06; letter-spacing: -.04em; }
+  .author-card p, .author-card li { color: var(--color-ink-soft); line-height: 1.55; }
+  .author-card ul { margin: .8rem 0 0; padding-left: 1.1rem; }
+  .author-copy { max-width: 68ch; margin-top: 3rem; }
+  @media (max-width: 900px) { .author-grid { grid-template-columns: 1fr; } }
+</style>

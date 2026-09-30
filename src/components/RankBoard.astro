@@ -1,6 +1,7 @@
 ---
 import { formatPriceCzk, formatScoreBadge, machineCount } from '../lib/format';
 import { editorialNote, rankFilters, type RankCard } from '../lib/rankings';
+import { machineVisuals } from '../lib/visuals';
 
 interface Props {
   cards: RankCard[];
@@ -32,74 +33,79 @@ const Heading = cardHeading;
 
   <div class="rank-grid">
     {
-      cards.map((card) => (
-        <article
-          class="rank-card"
-          data-card
-          data-tags={card.filters.join(',')}
-          data-price={card.priceFrom ?? ''}
-        >
-          <div class="rank-photo">
-            <span class="badge-num">PV {String(card.order).padStart(2, '0')}</span>
-            <span class="badge-cat">{card.badge}</span>
-            <span class="photo-label">{card.photoLabel}</span>
-          </div>
-          <div class="rank-body">
-            <Heading class="rank-name">
-              <a href={card.href}>{card.name}</a>
-            </Heading>
-            <p class="rank-spec">{card.specLine}</p>
-            <div class="rank-score">
-              {card.score !== null && !card.scoreDraft ? (
-                <span class="score-orb">
-                  {formatScoreBadge(card.score)}
-                  <span class="sr-only"> z 10</span>
-                </span>
-              ) : (
-                <span class="score-orb score-orb-empty" aria-hidden="true">
-                  —
-                </span>
-              )}
-              <div>
-                <p class="score-kicker">{card.scoreDraft ? 'Bez ověřené známky' : 'Redakční skóre'}</p>
-                {card.reviewHref ? (
-                  <a class="score-caption" href={card.reviewHref}>
-                    {card.scoreCaption}
-                  </a>
+      cards.map((card) => {
+        const visual = machineVisuals[card.id];
+        return (
+          <article
+            class="rank-card"
+            data-card
+            data-tags={card.filters.join(',')}
+            data-price={card.priceFrom ?? ''}
+          >
+            <div class:list={['rank-photo', { 'has-real-photo': Boolean(visual) }]}>
+              {visual && <img src={visual.src} alt={visual.alt} loading="lazy" decoding="async" referrerpolicy="no-referrer" />}
+              <span class="badge-num">PV {String(card.order).padStart(2, '0')}</span>
+              <span class="badge-cat">{card.badge}</span>
+              {visual ? <span class="photo-credit">{visual.source}</span> : <span class="photo-label">{card.photoLabel}</span>}
+              <span class="photo-scanline" aria-hidden="true" />
+            </div>
+            <div class="rank-body">
+              <Heading class="rank-name">
+                <a href={card.href}>{card.name}</a>
+              </Heading>
+              <p class="rank-spec">{card.specLine}</p>
+              <div class="rank-score">
+                {card.score !== null && !card.scoreDraft ? (
+                  <span class="score-orb">
+                    {formatScoreBadge(card.score)}
+                    <span class="sr-only"> z 10</span>
+                  </span>
                 ) : (
-                  <p class="score-caption">{card.scoreCaption}</p>
+                  <span class="score-orb score-orb-empty" aria-hidden="true">
+                    —
+                  </span>
                 )}
+                <div>
+                  <p class="score-kicker">{card.scoreDraft ? 'Bez ověřené známky' : 'Redakční skóre'}</p>
+                  {card.reviewHref ? (
+                    <a class="score-caption" href={card.reviewHref}>
+                      {card.scoreCaption}
+                    </a>
+                  ) : (
+                    <p class="score-caption">{card.scoreCaption}</p>
+                  )}
+                </div>
+              </div>
+              <p class="rank-blurb">{card.blurb}</p>
+              <div class="rank-foot">
+                <div>
+                  {card.priceFrom !== null ? (
+                    <p class="price">
+                      <span class="price-prefix">od</span>
+                      {formatPriceCzk(card.priceFrom)}
+                    </p>
+                  ) : (
+                    <p class="price">{card.priceCaption}</p>
+                  )}
+                  {card.priceFrom !== null && <p class="price-note">{card.priceCaption}</p>}
+                </div>
+                <a class="arrow-btn" href={card.href} aria-label={`Otevřít profil: ${card.name}`}>
+                  <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
               </div>
             </div>
-            <p class="rank-blurb">{card.blurb}</p>
-            <div class="rank-foot">
-              <div>
-                {card.priceFrom !== null ? (
-                  <p class="price">
-                    <span class="price-prefix">od</span>
-                    {formatPriceCzk(card.priceFrom)}
-                  </p>
-                ) : (
-                  <p class="price">{card.priceCaption}</p>
-                )}
-                {card.priceFrom !== null && <p class="price-note">{card.priceCaption}</p>}
-              </div>
-              <a class="arrow-btn" href={card.href} aria-label={`Otevřít profil: ${card.name}`}>
-                <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
-                  <path
-                    d="M3 8h10M9 4l4 4-4 4"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </article>
-      ))
+          </article>
+        );
+      })
     }
   </div>
 

@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { site } from '../lib/site';
 
 const description =
-  'První vrstva je redakční rozcestník 3D tisku pro Česko a EU. Píšeme z dílny, ukazujeme původ dat a oddělujeme redakci od komerce.';
+  'První vrstva je nezávislá česká redakce o 3D tisku pro Česko a Slovensko. Stavíme na servisní praxi, měření, lokálních datech a transparentní metodice.';
 ---
 
 <BaseLayout title="O nás" description={description}>
@@ -14,33 +14,49 @@ const description =
       <span aria-current="page">O nás</span>
     </nav>
     <p class="kicker">Redakce</p>
-    <h1 class="page-title">Píšeme, jako bychom stáli u stejné tiskárny.</h1>
+    <h1 class="page-title">Měření z dílny. Lokální data. Verdikt, za který někdo ručí.</h1>
     <p class="lede">
-      První vrstva má jednu práci: zkrátit cestu od problému nebo rozhodnutí ke konkrétnímu dalšímu kroku.
+      První vrstva má zkrátit cestu od problému nebo nákupního rozhodnutí ke konkrétnímu dalšímu kroku — pro čtenáře v Česku a na Slovensku.
     </p>
 
-    <div class="article-body" style="margin-top: 2rem; max-width: 68ch">
+    <div class="about-pillars">
+      <section><span>01</span><strong>Autor z praxe</strong><p>Servisní technik, který tiskárny opravuje a vidí opakující se závady.</p></section>
+      <section><span>02</span><strong>Lokální data</strong><p>Ceny v Kč, dostupnost, česká záruka a servisní realita mají větší hodnotu než globální katalog.</p></section>
+      <section><span>03</span><strong>Člověk kontroluje verdikt</strong><p>AI může pomoci s rešerší a konceptem. Fakta, měření a závěr kontroluje člověk.</p></section>
+    </div>
+
+    <div class="article-body about-copy">
+      <h2>Co má být naše výhoda</h2>
       <p>
-        {site.name} je katalog a redakce 3D tisku pro lidi v Česku a EU, kteří už mají — nebo brzy budou mít — stroj na stole. Nechceme přepisovat tiskové zprávy. Chceme vysvětlit, co v dílně funguje, kde je kompromis a co má cenu ověřit dřív, než utratíte peníze nebo další večer laděním.
+        Nechceme být česká kopie zahraničního magazínu. Hodnotu mají věci, které se nedají jednoduše přeložit: vlastní měření, servisní zkušenosti, lokální ceny, dostupnost a fotografie skutečných vad.
       </p>
 
       <h2>Jak vypadá text, který sem pustíme</h2>
       <ul>
-        <li>Je v češtině a dá se podle něj něco udělat ještě ten večer.</li>
-        <li>Řekne, kdy rada neplatí. Uzavřená tiskárna a otevřený rám nejsou stejný problém.</li>
-        <li>Recenze je text s verdiktem a slabinami, ne unboxingová óda.</li>
+        <li>První věta odpoví na otázku. Kdo chce jen verdikt, má ho rychle.</li>
+        <li>Každé tvrzení o kvalitě má číslo, fotografii nebo konkrétní zkušenost.</li>
+        <li>Začátečníka nezesměšňujeme. Vysvětlujeme bez zbytečných anglicismů.</li>
         <li>Když test nebo měření nemáme, nenapíšeme, že ho máme.</li>
-        <li>Novinka musí změnit nákup, údržbu nebo workflow. Jinak je to jen další launch.</li>
       </ul>
+
+      <h2>Čtyři věci, které spouštíme jako první</h2>
+      <p>
+        Nákupní rádci, recenze tiskáren, kompletní průvodce a tisková poradna. Magazín, komunita a audio přijdou až ve chvíli, kdy bude dost vlastního materiálu, aby nepůsobily prázdně.
+      </p>
 
       <h2>Původ dat je součást obsahu</h2>
       <p>
-        Vlastní měření, údaj výrobce, redakční zkušenost, odhad a demo nejsou totéž. U článků proto postupně zobrazujeme, z čeho závěr vznikl. Podrobnosti jsou na stránce <a href="/metodika/">Jak testujeme</a>.
+        Vlastní měření, údaj výrobce, redakční zkušenost, odhad a demo nejsou totéž. Podrobnosti jsou na stránce <a href="/metodika/">Jak testujeme</a>.
+      </p>
+
+      <h2>Kdo za technický obsah ručí</h2>
+      <p>
+        Autorská a servisní praxe je veřejná na stránce <a href="/autor/ondrej-prochazka/">Ondřej Procházka — autor a servisní praxe</a>. Stejně tak tam přiznáváme vazby na servisní projekty, aby čtenář mohl posoudit případný střet zájmů.
       </p>
 
       <h2>Co tu schválně není</h2>
       <p>
-        Skryté advertorialy, falešná laboratorní přesnost a pořadí koupené partnerem. Když použijeme redakční odhad ceny, označíme ho jako odhad. Když dostaneme produkt od výrobce, vztah k produktu má být u textu dohledatelný.
+        Skryté advertorialy, koupené pořadí a laboratorní přesnost, kterou nemáme. Zapůjčený produkt se označí. Affiliate odkazy se označí. Sponzorovaný obsah není recenze.
       </p>
 
       <h2>Firmy a výrobci</h2>
@@ -49,9 +65,17 @@ const description =
       </p>
 
       <h2>Kontakt</h2>
-      <p>
-        Redakční tip, opravu faktické chyby nebo nabídku spolupráce pošlete na <a href={`mailto:${site.email}`}>{site.email}</a>.
-      </p>
+      <p>Redakční tip nebo opravu faktické chyby pošlete na <a href={`mailto:${site.email}`}>{site.email}</a>.</p>
     </div>
   </main>
 </BaseLayout>
+
+<style>
+  .about-pillars { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:.65rem; margin-top:2.4rem; }
+  .about-pillars section { border:1px solid var(--color-line); border-radius:1rem; background:var(--color-card); padding:1.25rem; }
+  .about-pillars span { color:var(--color-accent); font-weight:800; font-size:.75rem; }
+  .about-pillars strong { display:block; margin-top:.55rem; font-size:1.2rem; letter-spacing:-.03em; }
+  .about-pillars p { color:var(--color-muted); line-height:1.5; }
+  .about-copy { margin-top:3rem; max-width:68ch; }
+  @media(max-width:780px){ .about-pillars{grid-template-columns:1fr;} }
+</style>

@@ -10,21 +10,15 @@ import { site } from '../lib/site';
       <BrandMark />
       <p class="footer-name">{site.name}</p>
       <p class="footer-dek">
-        Katalog a redakce 3D tisku pro Česko a EU. Píšeme z dílny: co drží na desce, co se vyplatí opravovat a co je jen nápis na krabici.
+        Nezávislý 3D tisk pro Česko a Slovensko. Servisní zkušenost, vlastní měření, lokální data a obsah, který vede ke konkrétnímu rozhodnutí.
       </p>
     </div>
     <div>
       <p class="kicker kicker-light">Rubriky</p>
       <ul class="footer-links">
-        {
-          categoryOrder.map((id) => (
-            <li>
-              <a class="footer-link" href={categories[id].href}>
-                {categories[id].label}
-              </a>
-            </li>
-          ))
-        }
+        {categoryOrder.map((id) => (
+          <li><a class="footer-link" href={categories[id].href}>{categories[id].label}</a></li>
+        ))}
       </ul>
     </div>
     <div>
@@ -40,6 +34,7 @@ import { site } from '../lib/site';
       <p class="kicker kicker-light">Důvěra a kontakt</p>
       <ul class="footer-links">
         <li><a class="footer-link" href="/metodika/">Jak testujeme</a></li>
+        <li><a class="footer-link" href="/autor/ondrej-prochazka/">Autor a servisní praxe</a></li>
         <li><a class="footer-link" href="/spoluprace/">Spolupráce pro firmy</a></li>
         <li><a class="footer-link" href="/o-nas/">O nás</a></li>
         <li><a class="footer-link" href={`mailto:${site.email}`}>{site.email}</a></li>

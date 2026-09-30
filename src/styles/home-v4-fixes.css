@@ -1,0 +1,84 @@
+/* Small integration fixes for homepage v4. */
+.header-bar {
+  gap: .8rem;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  margin-left: auto;
+}
+
+.theme-switch-persistent {
+  display: inline-flex;
+  flex: none;
+  margin: 0;
+  border-radius: 999px;
+  padding: .16rem;
+  background: color-mix(in srgb, var(--color-card) 92%, transparent);
+}
+
+.theme-switch-persistent .theme-choice {
+  min-height: 2rem;
+  border-radius: 999px;
+  padding: .34rem .62rem;
+  text-transform: none;
+  font-size: .72rem;
+  letter-spacing: -.01em;
+}
+
+.nav-cta-desktop {
+  flex: none;
+  white-space: nowrap;
+}
+
+@media (max-width: 1239px) {
+  .nav-cta-desktop {
+    display: none;
+  }
+
+  .theme-switch-persistent .theme-choice {
+    padding-inline: .5rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .brand-name {
+    display: none;
+  }
+
+  .header-actions {
+    gap: .3rem;
+  }
+
+  .theme-switch-persistent {
+    gap: 0;
+  }
+
+  .theme-switch-persistent .theme-choice {
+    min-height: 1.95rem;
+    padding: .3rem .43rem;
+    font-size: .66rem;
+  }
+
+  .theme-switch-persistent .theme-dot {
+    width: .42rem;
+    height: .42rem;
+  }
+
+  .nav-mobile-toggle {
+    padding-inline: .5rem;
+  }
+
+  .nav-mobile-toggle [data-menu-label] {
+    display: none;
+  }
+}
+
+/* The 1100px cover override in home-v4.css intentionally only needs a smaller left edge. */
+@media (max-width: 1100px) and (min-width: 821px) {
+  .cover-photo {
+    left: 28%;
+  }
+}

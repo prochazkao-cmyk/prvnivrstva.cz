@@ -1,0 +1,833 @@
+/*
+  První Vrstva — visual system v2
+  Two real brand moods, one editorial identity.
+  PRUSA: warm workshop / orange / ink.
+  Bambu: cool precision / jade / charcoal.
+  The common signature is the first-layer / extrusion-line language.
+*/
+
+html[data-brand-theme='prusa'] {
+  --color-paper: #f4eee4;
+  --color-card: #fffaf3;
+  --color-line: #d9cec0;
+  --color-ink: #19130f;
+  --color-ink-soft: #463a31;
+  --color-muted: #76695e;
+  --color-accent: #ff5a1f;
+  --color-accent-ink: #b63a12;
+  --color-night: #1d1510;
+  --color-night-2: #2a1c14;
+  --theme-soft: #f8d9c8;
+  --theme-glow: rgba(255, 90, 31, 0.22);
+  --theme-line: rgba(255, 90, 31, 0.32);
+}
+
+html[data-brand-theme='bambu'] {
+  --color-paper: #edf2ee;
+  --color-card: #f9fcf9;
+  --color-line: #cedbd3;
+  --color-ink: #112019;
+  --color-ink-soft: #354a40;
+  --color-muted: #687a71;
+  --color-accent: #08a47d;
+  --color-accent-ink: #006d54;
+  --color-night: #0e1f19;
+  --color-night-2: #142a22;
+  --theme-soft: #cfece1;
+  --theme-glow: rgba(8, 164, 125, 0.2);
+  --theme-line: rgba(8, 164, 125, 0.3);
+}
+
+html,
+body {
+  background: var(--color-paper);
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 12% -5%, var(--theme-glow), transparent 28rem),
+    linear-gradient(to right, color-mix(in srgb, var(--color-line) 32%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in srgb, var(--color-line) 22%, transparent) 1px, transparent 1px);
+  background-size: auto, 72px 72px, 72px 72px;
+  background-attachment: fixed;
+}
+
+.page {
+  max-width: 88rem;
+}
+
+/* Header — compact editorial masthead */
+.site-header.is-light,
+.site-header.is-light.is-scrolled {
+  background: color-mix(in srgb, var(--color-paper) 90%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--color-ink) 10%, transparent);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--color-ink) 7%, transparent);
+}
+
+.brand-mark {
+  filter: drop-shadow(0 3px 8px var(--theme-glow));
+}
+
+.brand-name {
+  font-weight: 760;
+  letter-spacing: -0.045em;
+}
+
+.nav-desktop {
+  gap: 0.16rem;
+}
+
+.nav-link {
+  font-weight: 620;
+}
+
+.nav-desktop .nav-link:hover,
+.site-header.is-light .nav-desktop .nav-link:hover {
+  background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+  color: var(--color-accent-ink);
+}
+
+.nav-cta {
+  border: 1px solid color-mix(in srgb, var(--color-accent) 58%, var(--color-ink));
+  background: var(--color-ink);
+  color: #fff;
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--color-ink) 18%, transparent);
+}
+
+.nav-cta:hover {
+  background: var(--color-accent);
+  color: var(--color-night);
+}
+
+/* Theme switch is intentionally prominent: it is a preference, not decoration. */
+.theme-switch {
+  position: relative;
+  gap: 0.2rem;
+  margin-inline: 0.45rem 0.25rem;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 13%, transparent);
+  background: color-mix(in srgb, var(--color-card) 80%, transparent);
+  padding: 0.2rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
+}
+
+.theme-choice {
+  min-height: 2rem;
+  padding: 0.36rem 0.62rem;
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.theme-choice[aria-pressed='true'] {
+  color: #fff;
+  opacity: 1;
+  box-shadow: 0 7px 18px color-mix(in srgb, var(--color-ink) 16%, transparent);
+}
+
+.theme-choice[data-theme-choice='prusa'][aria-pressed='true'] {
+  background: #ff5a1f;
+  color: #24120b;
+}
+
+.theme-choice[data-theme-choice='bambu'][aria-pressed='true'] {
+  background: #08a47d;
+  color: #061b14;
+}
+
+.theme-dot {
+  width: 0.52rem;
+  height: 0.52rem;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-ink) 18%, transparent);
+}
+
+/* Hero — magazine cover, not SaaS */
+.hero {
+  min-height: min(49rem, calc(100svh - var(--header-h)));
+  overflow: hidden;
+  padding-top: clamp(3rem, 6.2vw, 6.5rem);
+  padding-bottom: clamp(3.2rem, 6vw, 5.6rem);
+  background:
+    radial-gradient(circle at 83% 22%, var(--theme-glow), transparent 22rem),
+    linear-gradient(180deg, color-mix(in srgb, var(--color-paper) 96%, white), var(--color-paper));
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: 7rem;
+  pointer-events: none;
+  opacity: 0.34;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0 9px,
+      var(--theme-line) 9px 10px
+    );
+  mask-image: linear-gradient(to top, #000, transparent);
+}
+
+.hero-top {
+  position: relative;
+  z-index: 2;
+  align-items: center;
+  gap: clamp(2.2rem, 5vw, 5.5rem);
+}
+
+.hero-copy {
+  position: relative;
+  max-width: 47rem;
+}
+
+.hero-copy::before {
+  content: 'PV / 001';
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  color: color-mix(in srgb, var(--color-muted) 62%, transparent);
+  font-size: 0.62rem;
+  font-weight: 780;
+  letter-spacing: 0.18em;
+  writing-mode: vertical-rl;
+}
+
+.kicker {
+  color: var(--color-accent-ink);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+}
+
+.kicker::before {
+  width: 2.8rem;
+  height: 4px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--color-accent) 0 9px,
+      transparent 9px 12px
+    );
+}
+
+.hero-title,
+.display,
+.page-title,
+.footer-name {
+  font-family: 'Inter Variable', Inter, 'Segoe UI', sans-serif;
+}
+
+.hero-title {
+  max-width: 9.4em;
+  margin-top: 0.95rem;
+  font-size: clamp(4.25rem, 7.8vw, 7.25rem);
+  font-weight: 790;
+  letter-spacing: -0.079em;
+  line-height: 0.82;
+}
+
+.hero-mark {
+  position: relative;
+  display: inline-block;
+  z-index: 0;
+  background: none;
+  color: var(--color-paper);
+  padding-inline: 0.08em 0.13em;
+}
+
+.hero-mark::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0.08em -0.04em -0.02em -0.02em;
+  background: var(--color-accent);
+  transform: rotate(-1.4deg) skewX(-5deg);
+  border-radius: 0.06em 0.18em 0.08em 0.12em;
+  box-shadow: 0 12px 28px var(--theme-glow);
+}
+
+.hero-dek {
+  max-width: 40rem;
+  margin-top: 1.65rem;
+  color: var(--color-ink-soft);
+  font-size: clamp(1.08rem, 1.5vw, 1.3rem);
+  line-height: 1.52;
+}
+
+.hero-actions {
+  margin-top: 1.8rem;
+  gap: 0.7rem;
+}
+
+.btn {
+  min-height: 3rem;
+  border-radius: 0.88rem;
+  padding-inline: 1.18rem;
+  font-weight: 700;
+}
+
+.btn-ink {
+  background: var(--color-ink);
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--color-ink) 16%, transparent);
+}
+
+.btn-ink:hover {
+  background: var(--color-accent);
+  color: var(--color-night);
+}
+
+.btn-line {
+  border-color: color-mix(in srgb, var(--color-ink) 20%, transparent);
+  background: color-mix(in srgb, var(--color-card) 58%, transparent);
+}
+
+.bench {
+  gap: 0.42rem 0.62rem;
+  margin-top: 1.55rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-line) 88%, transparent);
+  padding-top: 0.85rem;
+  font-size: 0.82rem;
+}
+
+.bench span:first-child {
+  color: var(--color-accent-ink);
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-feature {
+  position: relative;
+  max-width: none;
+  margin-top: 0;
+  overflow: visible;
+  border: 0;
+  border-radius: 1.8rem;
+  background: transparent;
+  box-shadow: none;
+}
+
+.hero-feature:hover {
+  transform: none;
+}
+
+.hero-feature-photo.hero-feature-illustration {
+  position: relative;
+  min-height: 25rem;
+  aspect-ratio: 0.92 / 1;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 10%, transparent);
+  border-radius: 2rem;
+  background-position: center;
+  background-size: cover;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.55) inset,
+    0 26px 70px color-mix(in srgb, var(--color-ink) 18%, transparent);
+}
+
+html[data-brand-theme='prusa'] .hero-feature-photo.hero-feature-illustration {
+  background-image:
+    linear-gradient(180deg, rgba(20, 12, 8, 0.02), rgba(20, 12, 8, 0.22)),
+    url('https://backend.prusa3d.com/cdn-cgi/image/format%3Dauto%2Cquality%3D88/wp-content/uploads/2024/11/core-one-1.jpg');
+}
+
+html[data-brand-theme='bambu'] .hero-feature-photo.hero-feature-illustration {
+  background-image:
+    linear-gradient(180deg, rgba(3, 19, 14, 0.02), rgba(3, 19, 14, 0.18)),
+    url('https://storage.ghost.io/c/8d/d9/8dd9f85b-21c3-4782-bba8-8778cd8f2f93/content/images/size/w1200/2025/03/Frame-1123863753.jpg');
+  background-position: center 48%;
+}
+
+.hero-feature-photo.hero-feature-illustration::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, var(--color-accent) 0 3px, transparent 3px) 1.1rem 1.1rem / 3rem 3rem no-repeat,
+    linear-gradient(180deg, var(--color-accent) 0 3px, transparent 3px) 1.1rem 1.1rem / 3rem 3rem no-repeat,
+    linear-gradient(270deg, var(--color-accent) 0 3px, transparent 3px) calc(100% - 1.1rem) calc(100% - 1.1rem) / 3rem 3rem no-repeat,
+    linear-gradient(0deg, var(--color-accent) 0 3px, transparent 3px) calc(100% - 1.1rem) calc(100% - 1.1rem) / 3rem 3rem no-repeat,
+    linear-gradient(to top, rgba(0,0,0,.48), transparent 40%);
+}
+
+.hero-feature-photo.hero-feature-illustration::after {
+  right: 1rem;
+  bottom: 0.9rem;
+  border: 1px solid rgba(255,255,255,.22);
+  background: rgba(7, 10, 9, 0.66);
+  backdrop-filter: blur(12px);
+  color: rgba(255,255,255,.9);
+  font-size: 0.58rem;
+  letter-spacing: 0.11em;
+}
+
+html[data-brand-theme='prusa'] .hero-feature-photo.hero-feature-illustration::after {
+  content: 'PRUSA MODE · CORE ONE';
+}
+
+html[data-brand-theme='bambu'] .hero-feature-photo.hero-feature-illustration::after {
+  content: 'BAMBU MODE · H2D';
+}
+
+.hero-feature-kicker {
+  top: 1rem;
+  left: 1rem;
+  border: 1px solid rgba(255,255,255,.22);
+  background: color-mix(in srgb, var(--color-accent) 88%, rgba(255,255,255,.1));
+  color: var(--color-night);
+  box-shadow: 0 8px 22px rgba(0,0,0,.16);
+}
+
+.hero-feature-title,
+.hero-feature-meta,
+.hero-feature-foot {
+  padding-inline: 0;
+}
+
+.hero-feature-title {
+  margin-top: 1.05rem;
+  font-size: clamp(1.55rem, 2.1vw, 2.1rem);
+  font-weight: 760;
+  letter-spacing: -0.05em;
+}
+
+.hero-feature-meta {
+  margin-top: 0.4rem;
+  color: var(--color-ink-soft);
+  font-size: 0.92rem;
+}
+
+.hero-feature-foot {
+  margin-top: 0.55rem;
+  color: var(--color-accent-ink);
+  font-size: 0.72rem;
+  font-weight: 760;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero .extrusion-trace {
+  right: -13rem;
+  bottom: -3.5rem;
+  width: min(64rem, 72vw);
+  color: var(--color-accent);
+  opacity: 0.1 !important;
+  transform: rotate(-3deg);
+}
+
+.extrusion-trace .trace-route {
+  animation: none !important;
+  stroke-dasharray: 10 13;
+}
+
+/* Finder — a dark practical console, visually tied to the theme. */
+#zebricek {
+  position: relative;
+  background: color-mix(in srgb, var(--color-paper) 94%, white);
+}
+
+.finder {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2.4rem;
+  border: 0;
+  border-radius: 1.8rem;
+  background: var(--color-night);
+  color: #f7f7f4;
+  padding: clamp(1.35rem, 2.6vw, 2rem);
+  box-shadow: 0 25px 65px color-mix(in srgb, var(--color-night) 21%, transparent);
+}
+
+.finder::after {
+  content: '';
+  position: absolute;
+  right: -4rem;
+  bottom: -5.5rem;
+  width: 22rem;
+  height: 13rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 46%, transparent);
+  border-radius: 48%;
+  box-shadow:
+    0 -10px 0 -9px color-mix(in srgb, var(--color-accent) 36%, transparent),
+    0 -20px 0 -19px color-mix(in srgb, var(--color-accent) 28%, transparent),
+    0 -30px 0 -29px color-mix(in srgb, var(--color-accent) 20%, transparent);
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.finder-line {
+  position: relative;
+  z-index: 1;
+  max-width: 59rem;
+  font-size: clamp(1.25rem, 2.1vw, 1.75rem);
+  font-weight: 640;
+}
+
+.finder select {
+  border-bottom-color: var(--color-accent);
+  color: color-mix(in srgb, var(--color-accent) 80%, white);
+}
+
+.finder select option {
+  color: var(--color-ink);
+}
+
+.finder .btn-accent {
+  position: relative;
+  z-index: 1;
+}
+
+.finder-note {
+  position: relative;
+  z-index: 1;
+  color: rgba(255,255,255,.58);
+}
+
+.principles {
+  gap: 0.8rem;
+}
+
+.principles li {
+  min-height: 9.6rem;
+  border: 1px solid color-mix(in srgb, var(--color-line) 90%, transparent);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--color-card) 74%, transparent);
+  padding: 1rem;
+  box-shadow: 0 14px 30px color-mix(in srgb, var(--color-ink) 5%, transparent);
+}
+
+.principles span {
+  width: fit-content;
+  border-radius: 999px;
+  background: var(--theme-soft);
+  padding: 0.2rem 0.5rem;
+  color: var(--color-accent-ink);
+}
+
+.principles strong {
+  margin-top: auto;
+  font-size: 1.12rem;
+  font-weight: 760;
+}
+
+/* Printer cards — harder editorial edges and first-layer underline. */
+.rank-grid {
+  gap: 1.1rem;
+}
+
+.rank-card {
+  border-radius: 1.55rem;
+  border-color: color-mix(in srgb, var(--color-line) 88%, transparent);
+  background: color-mix(in srgb, var(--color-card) 95%, white);
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--color-ink) 7%, transparent);
+}
+
+.rank-card:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 52%, transparent) !important;
+  box-shadow: 0 25px 55px color-mix(in srgb, var(--color-ink) 12%, transparent);
+}
+
+.rank-photo {
+  background:
+    repeating-linear-gradient(0deg, transparent 0 10px, color-mix(in srgb, var(--color-accent) 9%, transparent) 10px 11px),
+    radial-gradient(circle at 70% 22%, var(--theme-glow), transparent 8rem),
+    linear-gradient(145deg, color-mix(in srgb, var(--color-card) 88%, var(--theme-soft)), var(--color-card));
+}
+
+.rank-photo::after {
+  right: 8%;
+  left: 8%;
+  height: 5px;
+  background:
+    repeating-linear-gradient(90deg, var(--color-accent) 0 18px, color-mix(in srgb, var(--color-accent) 42%, transparent) 18px 22px);
+}
+
+.badge-num {
+  background: var(--color-ink);
+}
+
+.badge-cat {
+  border: 1px solid color-mix(in srgb, var(--color-ink) 8%, transparent);
+  background: color-mix(in srgb, var(--color-card) 90%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.rank-name {
+  font-weight: 760;
+}
+
+.score-orb,
+.arrow-btn {
+  background: var(--color-ink);
+}
+
+.arrow-btn:hover {
+  background: var(--color-accent);
+}
+
+/* Dark material chapter — same structure, very different mood per preference. */
+.material-band {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 8%, color-mix(in srgb, var(--color-accent) 22%, transparent), transparent 22rem),
+    var(--color-night-2);
+}
+
+.material-band::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .18;
+  background:
+    repeating-linear-gradient(0deg, transparent 0 14px, var(--color-accent) 14px 15px);
+  mask-image: linear-gradient(90deg, transparent, #000 50%, transparent);
+}
+
+.material-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.material-table {
+  border-radius: 1.45rem;
+  background: rgba(255,255,255,.045);
+  backdrop-filter: blur(12px);
+}
+
+.material-caption,
+.material-price {
+  color: color-mix(in srgb, var(--color-accent) 72%, white);
+}
+
+.material-list a:hover strong {
+  color: color-mix(in srgb, var(--color-accent) 72%, white);
+}
+
+/* Guide + troubleshooting + tools — visual rhythm instead of repeated cards. */
+.guide-stack {
+  gap: 0.7rem;
+}
+
+.guide-stack a {
+  border-radius: 1.2rem;
+  border-color: color-mix(in srgb, var(--color-line) 80%, transparent);
+  background: color-mix(in srgb, var(--color-card) 93%, white);
+}
+
+.guide-stack li:nth-child(1) a {
+  background: var(--color-accent);
+  color: var(--color-night);
+}
+
+.guide-stack li:nth-child(2) a {
+  background: var(--color-ink);
+}
+
+.atlas-grid {
+  gap: 0.9rem;
+}
+
+.atlas-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 12.5rem;
+  border-radius: 1.45rem;
+  background: color-mix(in srgb, var(--color-card) 94%, white);
+  box-shadow: 0 14px 28px color-mix(in srgb, var(--color-ink) 6%, transparent);
+}
+
+.atlas-card::after {
+  content: '';
+  position: absolute;
+  right: -2.8rem;
+  bottom: -3.3rem;
+  width: 9rem;
+  height: 6rem;
+  border: 1px solid var(--theme-line);
+  border-radius: 50%;
+  box-shadow:
+    0 -8px 0 -7px var(--theme-line),
+    0 -16px 0 -15px var(--theme-line);
+  transform: rotate(-14deg);
+}
+
+.atlas-mark {
+  width: 2.4rem;
+  height: 0.38rem;
+  background: repeating-linear-gradient(90deg, var(--color-accent) 0 8px, transparent 8px 11px);
+}
+
+.calc,
+.tool-card {
+  border-radius: 1.45rem;
+  background: color-mix(in srgb, var(--color-card) 94%, white);
+  box-shadow: 0 14px 32px color-mix(in srgb, var(--color-ink) 6%, transparent);
+}
+
+.tool-chip {
+  background: var(--color-ink);
+}
+
+.mail-band {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,.24), transparent 18rem),
+    var(--color-accent);
+}
+
+.site-footer {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-night);
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  right: -8rem;
+  bottom: -6rem;
+  width: 32rem;
+  height: 18rem;
+  border: 1px solid color-mix(in srgb, var(--color-accent) 42%, transparent);
+  border-radius: 50%;
+  box-shadow:
+    0 -12px 0 -11px color-mix(in srgb, var(--color-accent) 34%, transparent),
+    0 -24px 0 -23px color-mix(in srgb, var(--color-accent) 26%, transparent),
+    0 -36px 0 -35px color-mix(in srgb, var(--color-accent) 18%, transparent);
+  transform: rotate(-8deg);
+}
+
+.footer-grid,
+.footer-bar {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-name {
+  font-weight: 790;
+}
+
+/* Mobile: make the cover feel intentional, not a collapsed desktop. */
+@media (max-width: 1239px) {
+  .nav-mobile-toggle {
+    border-color: color-mix(in srgb, var(--color-ink) 14%, transparent);
+    background: color-mix(in srgb, var(--color-card) 72%, transparent);
+    color: var(--color-ink);
+    backdrop-filter: blur(14px);
+  }
+
+  .site-header.is-light .nav-mobile-panel {
+    background:
+      radial-gradient(circle at 90% 0%, var(--theme-glow), transparent 16rem),
+      color-mix(in srgb, var(--color-paper) 98%, white);
+  }
+
+  .nav-mobile-panel .theme-switch {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .nav-mobile-panel .theme-choice {
+    flex: 1;
+    justify-content: center;
+    min-height: 2.7rem;
+  }
+}
+
+@media (min-width: 980px) {
+  .hero-top {
+    grid-template-columns: minmax(0, 1.12fr) minmax(25rem, .88fr);
+  }
+
+  .principles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    background-size: auto, 46px 46px, 46px 46px;
+  }
+
+  .hero {
+    min-height: 0;
+    padding-top: 2.6rem;
+    padding-bottom: 3.5rem;
+  }
+
+  .hero-copy::before {
+    display: none;
+  }
+
+  .hero-title {
+    max-width: 9.6em;
+    font-size: clamp(3.1rem, 14vw, 4.25rem);
+    line-height: 0.86;
+  }
+
+  .hero-feature-photo.hero-feature-illustration {
+    min-height: 0;
+    aspect-ratio: 4 / 3.35;
+    border-radius: 1.4rem;
+  }
+
+  .hero-feature-title {
+    font-size: 1.45rem;
+  }
+
+  .hero .extrusion-trace {
+    width: 38rem;
+    right: -21rem;
+    opacity: .07 !important;
+  }
+
+  .finder {
+    border-radius: 1.4rem;
+    padding: 1.15rem;
+  }
+
+  .finder-line {
+    font-size: 1.12rem;
+  }
+
+  .principles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .65rem;
+  }
+
+  .principles li {
+    min-height: 8rem;
+    padding: .85rem;
+  }
+
+  .principles p {
+    font-size: .82rem;
+  }
+
+  .display {
+    font-size: clamp(2.1rem, 10vw, 3rem);
+    letter-spacing: -0.06em;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  .site-header,
+  .hero,
+  .hero-feature-photo,
+  .finder,
+  .rank-card,
+  .material-band,
+  .site-footer {
+    transition:
+      background-color 220ms ease,
+      border-color 220ms ease,
+      color 220ms ease,
+      box-shadow 220ms ease;
+  }
+}
