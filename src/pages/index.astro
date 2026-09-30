@@ -1,99 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import ArticleCard from '../components/ArticleCard.astro';
 import ExtrusionTrace from '../components/ExtrusionTrace.astro';
-import PrintCost from '../components/PrintCost.astro';
-import RankBoard from '../components/RankBoard.astro';
-import { getArticles } from '../lib/articles';
-import { buildRankCards } from '../lib/rankings';
 import { site } from '../lib/site';
 import { machineVisuals, materialVisuals, problemVisuals } from '../lib/visuals';
 
-const articles = await getArticles();
-const cards = buildRankCards(articles.filter((article) => article.category === 'stroje'));
-const lead = articles.find((article) => article.hero) ?? articles.find((article) => article.featured) ?? articles[0];
-const reading = articles.filter((article) => article.href !== lead?.href).slice(0, 3);
-const newsletterHref = `mailto:${site.email}?subject=${encodeURIComponent('Chci být u startu newsletteru První Vrstvy')}`;
-
-const valuePoints = [
-  { icon: '◎', title: 'Testy tiskáren', text: 'V dílně, s měřením a fotkami', href: '/recenze/' },
-  { icon: '◒', title: 'Materiály', text: 'PLA, PETG, ASA, TPU bez magie', href: '/materialy/' },
-  { icon: '≋', title: 'Kalibrace', text: 'První vrstva krok za krokem', href: '/rady-a-tipy/z-offset/' },
-  { icon: '⇆', title: 'Srovnání', text: 'Co koupit a proč', href: '/clanky/prusa-vs-bambu-lab-srovnani/' },
-  { icon: '⌁', title: 'Poradna', text: 'Vada → příčina → řešení', href: '#poradna' },
-];
-
-const principles = [
-  { n: '01', title: 'Z dílny, ne z katalogu', text: 'Vlastní zkušenost, servisní případy a měření mají přednost před marketingem.' },
-  { n: '02', title: 'Verdikt do 10 sekund', text: 'Kdo chce jen odpověď, dostane ji hned. Důkazy a kontext jsou pod ní.' },
-  { n: '03', title: 'Známku nejde koupit', text: 'Zapůjčení, affiliate ani partnerství nesmí měnit skóre nebo pořadí.' },
-  { n: '04', title: 'Původ dat ukazujeme', text: 'Vlastní měření, údaj výrobce, odhad a demo nejsou totéž — a web to přizná.' },
-];
-
-const topics = [
-  {
-    title: 'Testy tiskáren',
-    text: 'Reálné zkušenosti, servisní pohled a pro koho stroj dává smysl.',
-    href: '/recenze/',
-    image: machineVisuals['prusa-mk4s']?.src,
-    alt: machineVisuals['prusa-mk4s']?.alt ?? '3D tiskárna',
-  },
-  {
-    title: 'Materiály',
-    text: 'Vlastnosti, sušení, nastavení a později i české ceny.',
-    href: '/materialy/',
-    image: materialVisuals.prusament.src,
-    alt: materialVisuals.prusament.alt,
-  },
-  {
-    title: 'Kalibrace',
-    text: 'Z-offset, flow, první vrstva a postupy s viditelným výsledkem.',
-    href: '/rady-a-tipy/z-offset/',
-    image: 'https://help.prusa3d.com/wp-content/uploads/First-Layer-Calibration-05-800x318.jpg',
-    alt: 'Detail první vrstvy a vzdálenosti trysky od podložky',
-  },
-  {
-    title: 'Srovnání',
-    text: 'Prusa, Bambu a další stroje vedle sebe bez fanouškovských válek.',
-    href: '/clanky/prusa-vs-bambu-lab-srovnani/',
-    image: machineVisuals['bambu-p1s-x1c']?.src,
-    alt: machineVisuals['bambu-p1s-x1c']?.alt ?? 'Bambu Lab tiskárna',
-  },
-  {
-    title: 'Tipy a návody',
-    text: 'Praktické opravy nejčastějších problémů včetně fotek vad.',
-    href: '/rady-a-tipy/',
-    image: problemVisuals.stringing.src,
-    alt: problemVisuals.stringing.alt,
-  },
-];
-
-const guide = [
-  { n: '01', title: 'Co je 3D tisk a jakou technologií začít', href: '/technologie/fdm/', note: 'základy' },
-  { n: '02', title: 'První vrstva a Z-offset bez tápání', href: '/rady-a-tipy/z-offset/', note: 'kalibrace' },
-  { n: '03', title: 'Slicer, flow a tloušťka stěny', href: '/rady-a-tipy/kalibrace-flow/', note: 'nastavení' },
-  { n: '04', title: 'PLA, PETG, ASA a TPU v praxi', href: '/clanky/suseni-filamentu-kdy-jak-cim/', note: 'materiály' },
-  { n: '05', title: 'Jak vybrat tiskárnu: Prusa vs. Bambu', href: '/clanky/prusa-vs-bambu-lab-srovnani/', note: 'výběr' },
-  { n: '06', title: 'Když se tisk pokazí', href: '#poradna', note: 'diagnostika' },
-];
-
-const atlas = [
-  { title: 'Warping', href: '/clanky/warping-u-abs-priciny-a-checklist/', text: 'Rohy se zvedají a odlepují od podložky.', tags: 'ABS · komora' },
-  { title: 'Stringing', href: '/rady-a-tipy/stringing-retrakce/', text: 'Vlasy a pavučinky mezi díly výtisku.', tags: 'retrakce · teplota' },
-  { title: 'První vrstva nedrží', href: '/rady-a-tipy/prvni-vrstva-nedrzi/', text: 'Filament se nelepí nebo se první čára trhá.', tags: 'Z-offset · deska' },
-  { title: 'Sloní noha', href: '/rady-a-tipy/elephant-foot/', text: 'Spodní vrstvy jsou rozpláclé do stran.', tags: 'teplota podložky' },
-  { title: 'Vlhký filament', href: '/rady-a-tipy/vlhky-filament/', text: 'Praskání, bubliny a nepravidelný povrch.', tags: 'sušení · skladování' },
-  { title: 'PETG se táhne', href: '/rady-a-tipy/petg-a-struny/', text: 'Struny mezi díly a špinavý povrch.', tags: 'vlhkost · teplota' },
-  { title: 'Z-offset', href: '/rady-a-tipy/z-offset/', text: 'První čára je ve vzduchu nebo příliš rozmáčknutá.', tags: 'výška trysky' },
-  { title: 'Špatné flow', href: '/rady-a-tipy/kalibrace-flow/', text: 'Stěny nemají tloušťku, kterou jste navrhli.', tags: 'extruze · měření' },
-];
-
-const filamentSamples = [
-  { href: '/clanky/suseni-filamentu-kdy-jak-cim/', title: 'PLA · sušení', meta: 'kdy a čím', swatch: '#ff6b35' },
-  { href: '/rady-a-tipy/vlhky-filament/', title: 'PETG · vlhkost', meta: 'jak ji poznat', swatch: '#d9912a' },
-  { href: '/rady-a-tipy/petg-prvni-vrstva/', title: 'PETG · první vrstva', meta: 'PEI bez poškození', swatch: '#2e7fb8' },
-  { href: '/rady-a-tipy/petg-a-struny/', title: 'PETG · stringing', meta: 'diagnostika', swatch: '#23916b' },
-];
+const heroPrusa = 'https://images.unsplash.com/photo-1742971500442-8fb8610dfbf5?auto=format&fit=crop&fm=jpg&q=84&w=2400';
+const heroBambu = 'https://images.unsplash.com/photo-1762579318096-8e9bc45b8feb?auto=format&fit=crop&fm=jpg&q=84&w=2400';
+const workshop = 'https://images.unsplash.com/photo-1758435170505-e9b2772348c1?auto=format&fit=crop&fm=jpg&q=82&w=2200';
+const handPrint = 'https://images.unsplash.com/photo-1741764595674-3511fd1e2613?auto=format&fit=crop&fm=jpg&q=82&w=1800';
+const workshopSpools = 'https://images.unsplash.com/photo-1760446410955-86c0446b9be2?auto=format&fit=crop&fm=jpg&q=82&w=1800';
+const firstLayer = 'https://help.prusa3d.com/wp-content/uploads/First-Layer-Calibration-05-800x318.jpg';
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -106,156 +22,174 @@ const jsonLd = {
 ---
 
 <BaseLayout title={`${site.name} — ${site.tagline}`} description={site.description} jsonLd={jsonLd}>
-  <main id="obsah" class="home-v4">
-    <section class="cover" aria-labelledby="hero-title">
-      <div class="cover-photo" aria-hidden="true"></div>
-      <div class="cover-wash" aria-hidden="true"></div>
-      <div class="page cover-inner">
-        <div class="cover-copy">
-          <p class="cover-eyebrow">ZNALOSTI / TESTY / PRAXE / KOMUNITA</p>
-          <h1 id="hero-title"><span>První</span><span>Vrstva<span class="cover-dot">.</span></span></h1>
+  <main id="obsah" class="home-ref">
+    <section class="ref-hero" aria-labelledby="hero-title">
+      <div class="ref-hero-grid">
+        <div class="ref-hero-copy">
+          <p class="ref-eyebrow">ZNALOSTI / TESTY / PRAXE / KOMUNITA</p>
+          <h1 id="hero-title"><span>První</span><span>Vrstva<span class="ref-dot">.</span></span></h1>
           <h2>3D tisk bez chaosu.<br />Přehledně, lidsky, odborně.</h2>
-          <p>
-            Nezávislé testy, servisní zkušenosti, návody a praktické tipy pro každého, kdo chce z 3D tisku vytěžit maximum.
-          </p>
-          <div class="cover-actions">
-            <a class="btn btn-accent" href="#zebricek">Vybrat tiskárnu <span aria-hidden="true">→</span></a>
-            <a class="btn btn-line" href="#poradna">Vyřešit problém</a>
+          <p class="ref-hero-dek">Nezávislé testy, srozumitelné návody a praktické tipy pro každého, kdo chce z 3D tisku vytěžit maximum.</p>
+          <div class="ref-actions">
+            <a class="ref-btn ref-btn-accent" href="/clanky/">Prozkoumat články <span aria-hidden="true">→</span></a>
+            <a class="ref-btn ref-btn-ghost" href="/o-nas/">O nás</a>
           </div>
         </div>
-        <p class="cover-note">Všechno<br />začíná první<br />vrstvou.</p>
-        <p class="cover-micro">Malé detaily.<br /><strong>Velké možnosti.</strong></p>
-        <ExtrusionTrace className="cover-trace" />
+
+        <div class="ref-hero-media">
+          <img class="theme-shot prusa-shot" src={heroPrusa} alt="Makro detail trysky 3D tiskárny při tisku" fetchpriority="high" decoding="async" />
+          <img class="theme-shot bambu-shot" src={heroBambu} alt="Makro detail tiskové hlavy Bambu Lab při tisku" fetchpriority="high" decoding="async" />
+          <p class="ref-handnote">Všechno<br />začíná první<br />vrstvou.</p>
+          <p class="ref-smallnote">Malé detaily.<br /><strong>Velké možnosti.</strong></p>
+          <span class="ref-photo-credit">Foto: Unsplash</span>
+        </div>
       </div>
+      <ExtrusionTrace className="ref-hero-trace" />
     </section>
 
-    <nav class="value-rail" aria-label="Hlavní cesty webem">
-      <div class="page value-grid">
-        {valuePoints.map((item) => (
-          <a href={item.href} class="value-item">
-            <span class="value-icon" aria-hidden="true">{item.icon}</span>
-            <strong>{item.title}</strong>
-            <small>{item.text}</small>
-          </a>
-        ))}
+    <nav class="ref-value-rail" aria-label="Hlavní témata">
+      <ExtrusionTrace className="ref-rail-trace" />
+      <div class="page ref-value-grid">
+        <a href="/recenze/" class="ref-value">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="16"/><circle cx="24" cy="24" r="7"/><circle cx="24" cy="24" r="2"/></svg>
+          <strong>Přesnost</strong><small>Každý detail se počítá</small>
+        </a>
+        <a href="/nastroje/" class="ref-value">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M27 5 14 26h10l-3 17 14-23H25z"/></svg>
+          <strong>Rychlost</strong><small>Méně čekání, více tisku</small>
+        </a>
+        <a href="/materialy/" class="ref-value">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 8 15 8-15 8-15-8z"/><path d="m9 24 15 8 15-8"/><path d="m9 32 15 8 15-8"/></svg>
+          <strong>Materiály</strong><small>Od PLA po technické směsi</small>
+        </a>
+        <a href="/rady-a-tipy/z-offset/" class="ref-value">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 13h32M8 24h32M8 35h32"/><circle cx="17" cy="13" r="4"/><circle cx="31" cy="24" r="4"/><circle cx="21" cy="35" r="4"/></svg>
+          <strong>Kalibrace</strong><small>Lepší výsledky krok za krokem</small>
+        </a>
+        <a href="/rady-a-tipy/" class="ref-value">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M8 10c7-2 12 0 16 4v25c-4-4-9-6-16-4zM40 10c-7-2-12 0-16 4v25c4-4 9-6 16-4z"/></svg>
+          <strong>Návody</strong><small>Srozumitelně a prakticky</small>
+        </a>
       </div>
     </nav>
 
-    <section class="story-stage" aria-labelledby="stage-title">
-      <div class="page stage-grid">
-        <div class="stage-copy">
-          <p class="kicker">VÍC NEŽ JEN TISK</p>
-          <h2 id="stage-title">Skutečné projekty.<br />Skutečné zkušenosti.</h2>
-          <p>
-            FirstLayer nestaví na přeložených katalozích. Hodnota vzniká z dílny: servisní případy, vlastní měření a fotografie vad, které se opravdu staly.
-          </p>
-          <a class="btn btn-line" href="/o-nas/">Jak pracujeme <span aria-hidden="true">→</span></a>
+    <section class="ref-projects" aria-labelledby="projects-title">
+      <div class="page ref-project-grid">
+        <div class="ref-project-copy">
+          <p class="ref-eyebrow">VÍCE NEŽ JEN TISK</p>
+          <h2 id="projects-title">Skutečné projekty.<br />Skuteční lidé.</h2>
+          <p>Inspirace z dílny, testy v reálných podmínkách a zkušenosti, které vám ušetří čas i materiál.</p>
+          <a class="ref-btn ref-btn-ghost" href="/o-nas/">Nahlédnout do dílny <span aria-hidden="true">→</span></a>
         </div>
-        <div class="stage-photo stage-photo-main">
-          <img src={machineVisuals['prusa-mk4s'].src} alt={machineVisuals['prusa-mk4s'].alt} loading="lazy" decoding="async" />
-          <span>Foto výrobce · produktový kontext</span>
-        </div>
-        <div class="stage-photo stage-photo-part">
-          <img src={materialVisuals.prusament.src} alt={materialVisuals.prusament.alt} loading="lazy" decoding="async" />
-        </div>
-        <div class="stage-photo stage-photo-detail">
-          <img src="https://help.prusa3d.com/wp-content/uploads/First-Layer-Calibration-05-800x318.jpg" alt="Detail první vrstvy a trysky" loading="lazy" decoding="async" />
-        </div>
+
+        <figure class="ref-project-photo ref-project-workshop">
+          <img src={workshop} alt="Pracovní stůl s 3D tiskárnou a nářadím" loading="lazy" decoding="async" />
+          <figcaption>Reálná dílna · Unsplash</figcaption>
+        </figure>
+        <figure class="ref-project-photo ref-project-hand">
+          <img src={handPrint} alt="Ruka držící čerstvě vytištěný 3D díl" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="ref-project-photo ref-project-spools">
+          <img class="theme-shot prusa-shot" src={materialVisuals.prusament.src} alt={materialVisuals.prusament.alt} loading="lazy" decoding="async" />
+          <img class="theme-shot bambu-shot" src={materialVisuals.bambu.src} alt={materialVisuals.bambu.alt} loading="lazy" decoding="async" />
+        </figure>
+        <figure class="ref-project-photo ref-project-object">
+          <img src={workshopSpools} alt="3D tiskárna, filamenty a hotové výtisky na pracovním stole" loading="lazy" decoding="async" />
+        </figure>
       </div>
+      <ExtrusionTrace className="ref-project-trace" />
     </section>
 
-    <section class="numbers-stage" aria-labelledby="numbers-title">
-      <div class="page numbers-layout">
-        <div class="numbers-intro">
-          <p class="kicker">TECHNICKÉ ZÁKLADY</p>
+    <section class="ref-numbers" aria-labelledby="numbers-title">
+      <div class="page ref-number-grid">
+        <div class="ref-number-intro">
+          <p class="ref-eyebrow">TECHNICKÉ ZÁKLADY</p>
           <h2 id="numbers-title">Důležitá čísla,<br />která dělají rozdíl.</h2>
-          <p>Začátečník nepotřebuje encyklopedii. Potřebuje vědět, která čísla mění výsledek a proč.</p>
+          <p>Přehled klíčových parametrů 3D tisku, které by měl znát každý. Srozumitelně, s příklady a v praxi.</p>
         </div>
-        <div class="numbers-card"><span class="number-glyph">⌄</span><small>Průměr trysky</small><strong>0,4 mm</strong><p>Univerzální volba pro většinu tisků.</p></div>
-        <div class="numbers-card"><span class="number-glyph">≋</span><small>Výška vrstvy</small><strong>0,20 mm</strong><p>Výchozí kompromis rychlosti a detailu.</p></div>
-        <div class="numbers-card"><span class="number-glyph">□</span><small>Tiskový objem</small><strong>250 × 250</strong><p>Typický domácí rozsah, ne pravidlo.</p></div>
-        <div class="numbers-card numbers-temp"><small>Teploty materiálů</small><p><b>PLA</b><span>190–220 °C</span></p><p><b>PETG</b><span>220–250 °C</span></p><p><b>ASA</b><span>240–260 °C</span></p><p><b>TPU</b><span>210–240 °C</span></p></div>
+
+        <article class="ref-number-card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M18 5h12v10l-4 8v9h-4v-9l-4-8z"/><path d="M12 37h24M16 42h16"/></svg>
+          <small>Průměr trysky</small><strong>0,4 mm</strong><p>0,2 / 0,4 / 0,6 / 0,8</p><em>Univerzální volba pro většinu tisků</em>
+        </article>
+        <article class="ref-number-card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M10 12h28M13 18h25M10 24h28M13 30h25M10 36h28"/></svg>
+          <small>Výška vrstvy</small><strong>0,20 mm</strong><p>0,08–0,32 mm</p><em>Nižší vrstva = více detailů</em>
+        </article>
+        <article class="ref-number-card">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="m24 6 15 8v20l-15 8-15-8V14z"/><path d="m9 14 15 8 15-8M24 22v20"/></svg>
+          <small>Tiskový objem</small><strong>250 × 250</strong><p>× 250 mm</p><em>Běžná velikost domácí tiskárny</em>
+        </article>
+        <article class="ref-number-card ref-temp-card">
+          <small>Teploty materiálů</small>
+          <p><b><i class="dot pla"></i>PLA</b><span>190–220 °C</span></p>
+          <p><b><i class="dot petg"></i>PETG</b><span>220–250 °C</span></p>
+          <p><b><i class="dot abs"></i>ABS</b><span>230–260 °C</span></p>
+          <p><b><i class="dot asa"></i>ASA</b><span>240–260 °C</span></p>
+          <p><b><i class="dot tpu"></i>TPU</b><span>210–240 °C</span></p>
+        </article>
+        <article class="ref-number-card ref-quality-card">
+          <small>Kvalita tisku</small>
+          <div class="quality-pair">
+            <div><img src={firstLayer} alt="Hrubší vrstvy 3D tisku" loading="lazy" decoding="async" /><b>0,32 mm</b><span>Rychlejší tisk</span></div>
+            <div><img src={firstLayer} alt="Jemnější vrstvy 3D tisku" loading="lazy" decoding="async" /><b>0,08 mm</b><span>Více detailů</span></div>
+          </div>
+        </article>
       </div>
+      <ExtrusionTrace className="ref-number-trace" />
     </section>
 
-    <section class="topics-stage" aria-labelledby="topics-title">
+    <section class="ref-topics" id="temata" aria-labelledby="topics-title">
       <div class="page">
-        <div class="topics-head">
-          <div><p class="kicker">OBJEVTE HLAVNÍ TÉMATA</p><h2 id="topics-title">Vše pro lepší<br />3D tisk na jednom místě.</h2></div>
-          <p>Recenze, návody, srovnání a praktické tipy. Každý blok má vést k rozhodnutí nebo vyřešení konkrétního problému.</p>
+        <div class="ref-topic-head">
+          <div>
+            <p class="ref-eyebrow">OBJEVTE HLAVNÍ TÉMATA</p>
+            <h2 id="topics-title">Vše pro lepší<br />3D tisk na jednom místě.</h2>
+          </div>
+          <p>Recenze, návody, srovnání a praktické tipy. Vyberte si téma, které vás zajímá, a posuňte svůj 3D tisk na další úroveň.</p>
         </div>
-        <div class="topic-grid">
-          {topics.map((item) => (
-            <a class="topic-card" href={item.href}>
-              <div class="topic-photo"><img src={item.image} alt={item.alt} loading="lazy" decoding="async" /></div>
-              <div class="topic-body"><strong>{item.title}</strong><p>{item.text}</p><span aria-hidden="true">→</span></div>
-            </a>
-          ))}
+
+        <div class="ref-topic-grid">
+          <a class="ref-topic-card" href="/recenze/">
+            <div class="ref-topic-photo">
+              <img class="theme-shot prusa-shot contain" src={machineVisuals['prusa-mk4s'].src} alt={machineVisuals['prusa-mk4s'].alt} loading="lazy" decoding="async" />
+              <img class="theme-shot bambu-shot contain" src={machineVisuals['bambu-p1s-x1c'].src} alt={machineVisuals['bambu-p1s-x1c'].alt} loading="lazy" decoding="async" />
+            </div>
+            <div><strong>Testy tiskáren</strong><p>Nezávislé recenze, reálné zkušenosti, plusy a mínusy.</p><span>→</span></div>
+          </a>
+          <a class="ref-topic-card" href="/materialy/">
+            <div class="ref-topic-photo">
+              <img class="theme-shot prusa-shot" src={materialVisuals.prusament.src} alt={materialVisuals.prusament.alt} loading="lazy" decoding="async" />
+              <img class="theme-shot bambu-shot" src={materialVisuals.bambu.src} alt={materialVisuals.bambu.alt} loading="lazy" decoding="async" />
+            </div>
+            <div><strong>Materiály</strong><p>Vlastnosti, použití, nastavení a srovnání filamentů.</p><span>→</span></div>
+          </a>
+          <a class="ref-topic-card" href="/rady-a-tipy/z-offset/">
+            <div class="ref-topic-photo"><img src={firstLayer} alt="Kalibrace první vrstvy 3D tisku" loading="lazy" decoding="async" /></div>
+            <div><strong>Kalibrace</strong><p>Postupně, srozumitelně a s měřitelnými výsledky.</p><span>→</span></div>
+          </a>
+          <a class="ref-topic-card" href="/clanky/prusa-vs-bambu-lab-srovnani/">
+            <div class="ref-topic-photo ref-compare-photo">
+              <img src={machineVisuals['prusa-mk4s'].src} alt="Prusa MK4S" loading="lazy" decoding="async" />
+              <img src={machineVisuals['bambu-p1s-x1c'].src} alt="Bambu Lab P1S" loading="lazy" decoding="async" />
+            </div>
+            <div><strong>Srovnání</strong><p>Porovnání tiskáren, materiálů a nastavení v praxi.</p><span>→</span></div>
+          </a>
+          <a class="ref-topic-card" href="/rady-a-tipy/">
+            <div class="ref-topic-photo"><img src={problemVisuals.stringing.src} alt={problemVisuals.stringing.alt} loading="lazy" decoding="async" /></div>
+            <div><strong>Tipy a návody</strong><p>Praktické rady, triky a řešení nejčastějších problémů.</p><span>→</span></div>
+          </a>
         </div>
       </div>
+      <ExtrusionTrace className="ref-topic-trace" />
     </section>
 
-    <section class="band rank-stage" id="zebricek" aria-labelledby="zebricek-title">
-      <div class="page" data-rank-root>
-        <form class="finder" action="#zebricek">
-          <p class="finder-line"><span>Hledám tiskárnu</span>
-            <select data-budget aria-label="Cenový strop"><option value="all">bez cenového stropu</option><option value="do-10000">do 10 000 Kč</option><option value="do-15000">do 15 000 Kč</option></select>
-            <span>pro</span>
-            <select data-who aria-label="Pro koho"><option value="all">kohokoli</option><option value="zacatecnik">začátečníka</option></select>
-            <span>a tisknu hlavně</span>
-            <select data-material aria-label="Materiál"><option value="all">cokoli</option><option value="pla">PLA a PETG</option><option value="uzavrene">technické materiály</option><option value="multimaterial">víc materiálů</option><option value="resin">resin</option></select>
-          </p>
-          <button class="btn btn-accent" type="button" data-finder-go>Ukázat doporučení</button>
-        </form>
-
-        <ol class="principles">{principles.map((item) => (<li><span>{item.n}</span><strong>{item.title}</strong><p>{item.text}</p></li>))}</ol>
-
-        <div class="section-head"><div><p class="kicker section-kicker-gap">NÁKUPNÍ RÁDCE</p><h2 id="zebricek-title" class="display">Tiskárny, které má smysl řešit.</h2></div><a class="section-link" href="/stroje/">Všechny stroje</a></div>
-        <p class="lede">Číselná známka se ukáže jen tam, kde za ní stojí publikovaný verdikt. Ceny jsou orientační, ne živý ceník.</p>
-        <RankBoard cards={cards} cardHeading="h3" />
+    <section class="ref-community" aria-labelledby="community-title">
+      <div class="page ref-community-grid">
+        <div><p class="ref-eyebrow">KOMUNITA / ZKUŠENOSTI / LEPŠÍ VÝSLEDKY</p><h2 id="community-title">Společně tvoříme lepší 3D tisk.</h2></div>
+        <p>Přidejte se k lidem, kteří sdílí zkušenosti, řeší problémy a posouvají 3D tisk dál.</p>
+        <a class="ref-btn ref-btn-accent" href="/o-nas/">Staňte se součástí <span aria-hidden="true">→</span></a>
       </div>
     </section>
-
-    <section class="material-band" aria-labelledby="material-title">
-      <div class="page material-grid">
-        <div><p class="kicker kicker-light">MATERIÁLY</p><h2 id="material-title" class="display display-light">Filament poznáte podle výtisku. Ne podle barvy cívky.</h2><p class="material-lead">Sušení, vlhkost, teploty a první vrstva. Později sem přijdou české ceny a dostupnost, ale dokud data nejsou živá, web je nebude předstírat.</p><a class="btn btn-accent" href="/materialy/">Materiály a návody</a></div>
-        <div class="material-table"><p class="material-caption">Praktické vstupy</p><ul class="material-list">{filamentSamples.map((item) => (<li><a href={item.href}><span class="swatch" style={`background:${item.swatch}`} aria-hidden="true" /><strong>{item.title}</strong><small>{item.meta}</small><em class="material-price">otevřít</em></a></li>))}</ul></div>
-      </div>
-    </section>
-
-    <section class="band guide-stage" id="pruvodce" aria-labelledby="pruvodce-title">
-      <div class="page guide-layout"><div class="guide-copy"><p class="kicker section-kicker-gap">PRŮVODCE</p><h2 id="pruvodce-title" class="display">Od první vrstvy k vlastnímu workflow.</h2><p class="lede">Obsah je řazený jako dílna: nejdřív základ, potom nastavení a nakonec rozhodování. Každá lekce má vést k dalšímu kroku.</p></div><ol class="guide-stack">{guide.map((step) => (<li><a href={step.href}><span>{step.n}</span><strong>{step.title}</strong><small>{step.note}</small></a></li>))}</ol></div>
-    </section>
-
-    <section class="band problem-stage" id="poradna" aria-labelledby="poradna-title">
-      <div class="page"><div class="section-head"><div><p class="kicker section-kicker-gap">TISKOVÁ PORADNA</p><h2 id="poradna-title" class="display">Vidíte vadu. My hledáme příčinu.</h2></div><a class="section-link" href="/rady-a-tipy/">Celý atlas</a></div><p class="lede">Fotka vady je rychlejší než odstavec. Tady mají být servisní případy, vlastní snímky a konkrétní kroky.</p>
-        <label class="atlas-search"><span class="sr-only">Hledat v poradně</span><input data-atlas-search type="search" placeholder='Popište problém: „rohy se odlepují“' /></label>
-        <p class="atlas-empty" data-atlas-empty hidden>Nic k tomu zatím nesedí. Zkuste kratší výraz, třeba PETG nebo vrstva.</p>
-        <div class="atlas-grid" data-atlas>{atlas.map((item) => (<a class="atlas-card" href={item.href} data-atlas-card><span class="atlas-mark" aria-hidden="true" /><strong>{item.title}</strong><p>{item.text}</p><small>{item.tags}</small></a>))}</div>
-      </div>
-    </section>
-
-    {lead && (<section class="band reading-stage" aria-labelledby="cteni-title"><div class="page"><p class="kicker section-kicker-gap">Z DÍLNY</p><h2 id="cteni-title" class="display">Čtení, které má něco změnit.</h2><div class="story-list"><ArticleCard article={lead} heading="h3" variant="lead" />{reading.map((article) => (<ArticleCard article={article} heading="h3" variant="row" />))}</div></div></section>)}
-
-    <section class="band tools-stage" id="naradi" aria-labelledby="naradi-title"><div class="page"><div class="section-head"><div><p class="kicker section-kicker-gap">NÁSTROJE</p><h2 id="naradi-title" class="display">Kalkulačky pro dílnu.</h2></div></div><div class="tool-grid"><PrintCost /><a class="tool-card" href="/rady-a-tipy/kalibrace-flow/"><strong>Kalibrace průtoku</strong><p>Z naměřené stěny dopočítáte flow.</p><span class="tool-chip">měření</span></a><a class="tool-card" href="/rady-a-tipy/z-offset/"><strong>Z-offset</strong><p>Správná výška trysky podle tvaru první čáry.</p><span class="tool-chip">první vrstva</span></a><a class="tool-card" href="/stroje/"><strong>Tiskárny vedle sebe</strong><p>Kinematika, komora, software a reálný kontext.</p><span class="tool-chip">srovnání</span></a></div></div></section>
-
-    <section class="community-band"><div class="page community-grid"><div><p class="kicker kicker-light">KOMUNITA / ZKUŠENOSTI / LEPŠÍ VÝSLEDKY</p><h2>Společně tvoříme lepší 3D tisk.</h2></div><p>Přidejte se k lidem, kteří sdílí zkušenosti, řeší problémy a posouvají 3D tisk dál.</p><a class="btn btn-accent" href={newsletterHref}>Být u startu <span aria-hidden="true">→</span></a></div></section>
   </main>
 </BaseLayout>
-
-<script>
-  const input = document.querySelector<HTMLInputElement>('[data-atlas-search]');
-  const problemCards = [...document.querySelectorAll<HTMLElement>('[data-atlas-card]')];
-  const empty = document.querySelector<HTMLElement>('[data-atlas-empty]');
-  const normalize = (value: string) => value.toLocaleLowerCase('cs').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-  input?.addEventListener('input', () => {
-    const query = normalize(input.value.trim());
-    let visible = 0;
-    for (const card of problemCards) {
-      const show = query.length === 0 || normalize(card.textContent ?? '').includes(query);
-      card.hidden = !show;
-      if (show) visible += 1;
-    }
-    if (empty) empty.hidden = visible !== 0;
-  });
-</script>
