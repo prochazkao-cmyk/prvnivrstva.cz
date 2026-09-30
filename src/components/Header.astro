@@ -40,6 +40,9 @@ function isCurrent(href: string): boolean {
     </nav>
 
     <div class="header-actions">
+      <a class="header-search" href="/problemy/" aria-label="Hledat řešení a problémy">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+      </a>
       <div class="theme-switch theme-switch-persistent" role="group" aria-label="Vizuální preference Prusa nebo Bambu">
         <button class="theme-choice" type="button" data-theme-choice="bambu" aria-pressed="false">
           <span class="theme-dot theme-dot-bambu" aria-hidden="true"></span>
@@ -50,7 +53,7 @@ function isCurrent(href: string): boolean {
           Průša
         </button>
       </div>
-      <a class="nav-cta nav-cta-desktop" href="/#zebricek">Pro lepší 3D tisk <span aria-hidden="true">→</span></a>
+      <a class="nav-cta nav-cta-desktop" href="/#temata">Pro lepší 3D tisk <span aria-hidden="true">→</span></a>
 
       <div class="nav-mobile">
         <button class="nav-mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-menu-toggle>
@@ -66,7 +69,7 @@ function isCurrent(href: string): boolean {
           <a class="nav-link" href="/nastroje/">Nástroje</a>
           <a class="nav-link" href="/clanky/">Články</a>
           <a class="nav-link" href="/o-nas/">O nás</a>
-          <a class="nav-cta" href="/#zebricek">Vybrat tiskárnu</a>
+          <a class="nav-cta" href="/#temata">Pro lepší 3D tisk</a>
         </nav>
       </div>
     </div>
@@ -75,7 +78,7 @@ function isCurrent(href: string): boolean {
 
 <script>
   const headers = document.querySelectorAll<HTMLElement>('[data-header]');
-  const hero = document.querySelector('.hero, .cover');
+  const hero = document.querySelector('.hero, .cover, .ref-hero');
   const themeButtons = document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]');
   const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-menu-toggle]');
   const mobileMenu = document.querySelector<HTMLElement>('[data-mobile-menu]');

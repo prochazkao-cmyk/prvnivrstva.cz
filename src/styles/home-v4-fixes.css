@@ -1,4 +1,4 @@
-/* Small integration fixes for homepage v4. */
+/* Integration fixes for the reference-matched homepage/header. */
 .header-bar {
   gap: .8rem;
 }
@@ -6,35 +6,94 @@
 .header-actions {
   display: flex;
   align-items: center;
-  gap: .55rem;
+  gap: .5rem;
   margin-left: auto;
+}
+
+.site-header.is-light {
+  background: color-mix(in srgb, var(--color-card) 96%, transparent);
+}
+
+.site-header.is-light.is-scrolled {
+  background: color-mix(in srgb, var(--color-card) 97%, transparent);
+}
+
+.header-search {
+  display: grid;
+  width: 2.15rem;
+  height: 2.15rem;
+  flex: none;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 13%, transparent);
+  border-radius: 50%;
+  color: var(--color-ink);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--color-card) 88%, transparent);
+}
+
+.header-search svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.header-search:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 55%, transparent);
+  color: var(--color-accent-ink);
 }
 
 .theme-switch-persistent {
   display: inline-flex;
   flex: none;
   margin: 0;
+  border: 1px solid color-mix(in srgb, var(--color-ink) 13%, transparent);
   border-radius: 999px;
-  padding: .16rem;
-  background: color-mix(in srgb, var(--color-card) 92%, transparent);
+  padding: .13rem;
+  background: color-mix(in srgb, var(--color-card) 90%, transparent);
 }
 
 .theme-switch-persistent .theme-choice {
   min-height: 2rem;
   border-radius: 999px;
-  padding: .34rem .62rem;
+  padding: .34rem .64rem;
   text-transform: none;
-  font-size: .72rem;
+  font-size: .71rem;
   letter-spacing: -.01em;
 }
 
+.theme-switch-persistent .theme-choice[aria-pressed='true'] {
+  box-shadow: 0 2px 10px rgba(17,17,16,.08);
+}
+
 .nav-cta-desktop {
+  min-height: 2.25rem;
   flex: none;
+  align-items: center;
   white-space: nowrap;
+  padding-inline: 1rem;
+  color: #fff;
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--color-accent) 22%, transparent);
+}
+
+.site-header .brand-mark {
+  color: var(--color-accent);
+}
+
+@media (min-width: 1240px) {
+  :root { --header-h: 3.8rem; }
+  .header-bar { max-width: 1180px; }
+  .brand-mark { width: 2rem; height: 2rem; }
+  .brand-name { font-size: 1.12rem; font-weight: 720; }
+  .nav-desktop { gap: .05rem; }
+  .nav-link { font-size: .73rem; padding-inline: .48rem; }
 }
 
 @media (max-width: 1239px) {
-  .nav-cta-desktop {
+  .nav-cta-desktop,
+  .header-search {
     display: none;
   }
 
@@ -44,41 +103,15 @@
 }
 
 @media (max-width: 580px) {
-  .brand-name {
-    display: none;
-  }
-
-  .header-actions {
-    gap: .3rem;
-  }
-
-  .theme-switch-persistent {
-    gap: 0;
-  }
-
+  .brand-name { display: none; }
+  .header-actions { gap: .3rem; }
+  .theme-switch-persistent { gap: 0; }
   .theme-switch-persistent .theme-choice {
     min-height: 1.95rem;
     padding: .3rem .43rem;
     font-size: .66rem;
   }
-
-  .theme-switch-persistent .theme-dot {
-    width: .42rem;
-    height: .42rem;
-  }
-
-  .nav-mobile-toggle {
-    padding-inline: .5rem;
-  }
-
-  .nav-mobile-toggle [data-menu-label] {
-    display: none;
-  }
-}
-
-/* The 1100px cover override in home-v4.css intentionally only needs a smaller left edge. */
-@media (max-width: 1100px) and (min-width: 821px) {
-  .cover-photo {
-    left: 28%;
-  }
+  .theme-switch-persistent .theme-dot { width: .42rem; height: .42rem; }
+  .nav-mobile-toggle { padding-inline: .5rem; }
+  .nav-mobile-toggle [data-menu-label] { display: none; }
 }
