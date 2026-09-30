@@ -1,0 +1,26 @@
+.theme-switch-label {
+  margin-inline: .38rem .08rem;
+  color: var(--color-muted);
+  font-size: .58rem;
+  font-weight: 780;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.theme-switch-mobile .theme-switch-label {
+  margin-left: .55rem;
+}
+
+@media (max-width: 1360px) {
+  .nav-desktop .theme-switch-label {
+    display: none;
+  }
+}
+
+@media (max-width: 1239px) {
+  .theme-switch-mobile .theme-switch-label {
+    flex: 0 0 100%;
+    margin: .35rem .35rem .1rem;
+  }
+}
