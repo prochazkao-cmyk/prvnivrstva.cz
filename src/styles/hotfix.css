@@ -1,0 +1,134 @@
+/* Immediate UX hotfix: reliable mobile navigation and a static editorial hero image. */
+
+html.mobile-menu-open,
+html.mobile-menu-open body {
+  overflow: hidden;
+}
+
+.nav-mobile-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.42rem 0.75rem 0.42rem 0.58rem;
+  color: inherit;
+  font-size: 0.86rem;
+  font-weight: 680;
+  line-height: 1;
+}
+
+.site-header.is-light .nav-mobile-toggle {
+  border-color: rgba(17, 17, 16, 0.12);
+  background: rgba(17, 17, 16, 0.04);
+}
+
+.nav-mobile-toggle[aria-expanded='true'] .menu-icon {
+  background:
+    linear-gradient(currentColor, currentColor) 50% 50% / 100% 1.5px no-repeat,
+    linear-gradient(currentColor, currentColor) 50% 50% / 100% 1.5px no-repeat;
+  transform: rotate(45deg);
+}
+
+.nav-mobile-toggle[aria-expanded='true'] .menu-icon::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: currentColor;
+  transform: rotate(90deg);
+}
+
+.nav-mobile-panel {
+  position: fixed;
+  inset: var(--header-h) 0 0 0;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.7rem 1.35rem 2.2rem;
+  background: rgba(5, 5, 6, 0.96);
+  color: #f5f5f7;
+  backdrop-filter: blur(30px) saturate(160%);
+  -webkit-backdrop-filter: blur(30px) saturate(160%);
+}
+
+.nav-mobile-panel[hidden] {
+  display: none !important;
+}
+
+.site-header.is-light .nav-mobile-panel {
+  background: rgba(243, 239, 230, 0.99);
+  color: var(--color-ink);
+}
+
+.nav-mobile-panel .nav-link {
+  display: block;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  padding: 0.88rem 0;
+  font-size: clamp(1.65rem, 7vw, 2.4rem);
+  font-weight: 630;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+  opacity: 1;
+}
+
+.site-header.is-light .nav-mobile-panel .nav-link {
+  border-bottom-color: rgba(17, 17, 16, 0.09);
+}
+
+.nav-mobile-panel .nav-cta {
+  align-self: flex-start;
+  margin: 0.85rem 0 0;
+  padding: 0.75rem 1.05rem;
+}
+
+/* The animated nozzle/first-layer scene is intentionally hidden.
+   The first-layer trace remains only as quiet brand DNA, without movement. */
+.hero-feature-photo.hero-feature-illustration {
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #17150f;
+  background-image:
+    linear-gradient(180deg, rgba(10, 9, 7, 0.04), rgba(10, 9, 7, 0.22)),
+    url('https://backend.prusa3d.com/cdn-cgi/image/format%3Dauto%2Cquality%3D85/wp-content/uploads/2024/11/core-one-1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-feature-illustration .hero-scene {
+  display: none !important;
+}
+
+.hero-feature-illustration::after {
+  content: 'FOTO VÝROBCE · PRUSA RESEARCH';
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.55rem;
+  border-radius: 999px;
+  background: rgba(10, 9, 7, 0.7);
+  padding: 0.25rem 0.48rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.hero .extrusion-trace {
+  opacity: 0.12 !important;
+}
+
+.hero .extrusion-trace .trace-route {
+  animation: none !important;
+}
+
+@media (min-width: 1240px) {
+  .nav-mobile {
+    display: none !important;
+  }
+}
