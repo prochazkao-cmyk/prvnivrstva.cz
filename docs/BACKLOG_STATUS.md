@@ -4,8 +4,8 @@ Legenda: **live** = veřejný obsah má použitelný základ; **partial** = čá
 
 | # | Téma | Stav | Poznámka |
 |---:|---|---|---|
-| 1 | Nejlepší 3D tiskárny 2026 | draft | lze rozpracovat z veřejných zdrojů; finální pořadí potřebuje CZ/SK ceny a jasné limity u netestovaných strojů |
-| 2 | Nejlepší tiskárna pro začátečníky | draft | rozhodovací průvodce je live; rádce lze stavět z parametrů, servisu a lokální ceny |
+| 1 | Nejlepší 3D tiskárny 2026 | partial | zdrojovaný scénářový rádce je veřejný; chybí živé CZ/SK ceny a postupné vlastní důkazy |
+| 2 | Nejlepší tiskárna pro začátečníky | live | zdrojovaný rádce publikován, bez falešného skóre; ceny doplní datová vrstva |
 | 3 | Nejlepší tiskárna do 10 000 Kč | draft | vyžaduje živé ceny včetně dopravy |
 | 4 | Nejlepší uzavřená tiskárna pro ASA/ABS | draft | lze připravit zdrojovanou analýzu konstrukcí; tvrzení o reálném výkonu čekají na testy |
 | 5 | Bambu Lab, nebo Prusa? | live | existující srovnání; dál doplňovat vlastní servisní data |
@@ -14,8 +14,8 @@ Legenda: **live** = veřejný obsah má použitelný základ; **partial** = čá
 | 8 | Nejlevnější filament v ČR | blocked-data | datový kontrakt hotový, čeká na 3+ feedy |
 | 9 | Bambu Lab A1 | blocked-test | publikovat zdrojovaný profil; plná recenze až po testovacím protokolu |
 | 10 | Prusa CORE One | blocked-test | publikovat zdrojovaný profil; plná recenze až po testovacím protokolu |
-| 11 | Bambu Lab P2S | blocked-test | nejdřív ověřit aktuální model/názvosloví; profil může vzniknout ze zdrojů |
-| 12 | Elegoo Centauri Carbon | blocked-test | publikovat zdrojovaný profil; plná recenze až po testovacím protokolu |
+| 11 | Bambu Lab P2S | blocked-test | model ověřen v aktuálních zdrojích; zdrojovaný profil může vzniknout hned |
+| 12 | Elegoo Centauri Carbon | blocked-test | aktuální větev ověřit jako Centauri Carbon 2; plná recenze až po testovacím protokolu |
 | 13 | Prusa MK4S | partial | redakční profil live, skóre odstraněno do testovacího protokolu |
 | 14 | Bambu Lab A1 mini | blocked-test | publikovat zdrojovaný profil; plná recenze až po testovacím protokolu |
 | 15 | Co je 3D tisk (FDM/resin/SLS) | live | společný vstup + odkazy na detailní technologické primery |
@@ -59,8 +59,8 @@ Ondřej není bottleneck výroby obsahu. Jeho vstup se používá tam, kde má n
 
 ## Nejbližší pracovní fronta
 
-1. Připravit zdrojované profily A1, CORE One, Centauri Carbon a A1 mini bez falešného testování.
-2. Rozpracovat money pages 1–4 z parametrů, servisu a dostupných CZ/SK cen; jasně značit, co je test a co analýza.
+1. Připravit zdrojované profily A1, CORE One+, P2S, Centauri Carbon 2 a A1 mini bez falešného testování.
+2. Rozpracovat money pages 3–4 a 6–7 z parametrů, servisu a dostupných CZ/SK podkladů; jasně značit, co je test a co analýza.
 3. Doplnit generativní diagnostické vizualizace do Z-offset / warping / stringing / první vrstva.
 4. Napojit první schválené CZ/SK cenové feedy.
 5. Reálné testy, fotografie a měření přidávat oportunisticky jako důkazní vrstvu, ne jako podmínku publikace.
