@@ -19,6 +19,7 @@ export interface Article {
   verdict?: string;
   score?: number;
   note?: string;
+  contentMode: 'redakcni' | 'zdrojovany-profil' | 'plny-test';
   evidence: 'redakce' | 'vyrobce' | 'vlastni-mereni' | 'kombinace' | 'demo';
   sourceNote?: string;
   disclosure?: string;
@@ -70,6 +71,7 @@ export function toArticle(category: CategoryId, entry: AnyEntry): Article {
     verdict: entry.data.verdict,
     score: entry.data.score,
     note: entry.data.note,
+    contentMode: entry.data.contentMode,
     evidence: entry.data.evidence,
     sourceNote: entry.data.sourceNote,
     disclosure: entry.data.disclosure,
