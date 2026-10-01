@@ -123,6 +123,6 @@ Nezveřejňujeme číselné skóre bez testovacího protokolu. Jakmile některý
 ## Co udělat teď
 
 1. Pokud kupujete **první tiskárnu**, pokračujte na [Jak vybrat první 3D tiskárnu: 7 otázek](/clanky/jak-vybrat-prvni-3d-tiskarnu-7-otazek/).
-2. Pokud chcete tisknout **ASA/ABS**, začněte u uzavřené konstrukce a přečtěte si [Warping: proč se rohy zvedají](/rady-a-tipy/warping/).
+2. Pokud chcete tisknout **ASA/ABS**, začněte u uzavřené konstrukce a přečtěte si [Warping: proč se rohy zvedají](/clanky/warping-u-abs-priciny-a-checklist/).
 3. Pokud rozhoduje **servis a ekosystém**, podívejte se na [Bambu Lab, nebo Prusa?](/clanky/prusa-vs-bambu-lab-srovnani/).
 4. Pokud rozhoduje rozpočet, použijte [kalkulačku ceny výtisku](/nastroje/) a později náš CZ/SK srovnávač cen.
