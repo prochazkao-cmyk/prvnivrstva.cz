@@ -55,16 +55,33 @@ for (const dir of articleDirs) {
 
     if (fm.draft === true) continue;
 
-    if (!fm.reviewedAt) warnings.push(`${id}: chybí reviewedAt`);
-    if (!fm.sourceNote && fm.evidence !== 'redakce') warnings.push(`${id}: evidence=${fm.evidence ?? 'redakce'}, ale chybí sourceNote`);
+    const evidence = fm.evidence ?? 'redakce';
+    const contentMode = fm.contentMode ?? (dir === 'recenze' ? 'zdrojovany-profil' : 'redakcni');
 
-    if (dir === 'recenze') {
-      if (!fm.disclosure) errors.push(`${id}: recenze musí mít disclosure (koupeno/zapůjčeno/affiliate vztah)`);
-      if (typeof fm.score === 'number') {
-        if (!fm.testDuration) errors.push(`${id}: číselné score vyžaduje testDuration`);
-        if (typeof fm.printHours !== 'number') errors.push(`${id}: číselné score vyžaduje printHours`);
-        if (!Array.isArray(fm.failures)) errors.push(`${id}: číselné score vyžaduje failures (klidně prázdné pole)`);
-        if (!['vlastni-mereni', 'kombinace'].includes(fm.evidence)) errors.push(`${id}: číselné score vyžaduje evidence=vlastni-mereni nebo kombinace`);
+    if (!fm.reviewedAt) warnings.push(`${id}: chybí reviewedAt`);
+    if (!fm.sourceNote && evidence !== 'redakce') warnings.push(`${id}: evidence=${evidence}, ale chybí sourceNote`);
+
+    if (contentMode === 'plny-test') {
+      if (!fm.testDuration) errors.push(`${id}: contentMode=plny-test vyžaduje testDuration`);
+      if (typeof fm.printHours !== 'number') errors.push(`${id}: contentMode=plny-test vyžaduje printHours`);
+      if (!Array.isArray(fm.failures)) errors.push(`${id}: contentMode=plny-test vyžaduje failures (klidně prázdné pole)`);
+      if (!['vlastni-mereni', 'kombinace'].includes(evidence)) {
+        errors.push(`${id}: contentMode=plny-test vyžaduje evidence=vlastni-mereni nebo kombinace`);
+      }
+      if (dir === 'recenze' && !fm.disclosure) {
+        errors.push(`${id}: plná recenze musí mít disclosure (koupeno/zapůjčeno/affiliate vztah)`);
+      }
+    }
+
+    if (typeof fm.score === 'number') {
+      if (contentMode !== 'plny-test') {
+        errors.push(`${id}: číselné score je povoleno pouze s contentMode=plny-test`);
+      }
+      if (!fm.testDuration) errors.push(`${id}: číselné score vyžaduje testDuration`);
+      if (typeof fm.printHours !== 'number') errors.push(`${id}: číselné score vyžaduje printHours`);
+      if (!Array.isArray(fm.failures)) errors.push(`${id}: číselné score vyžaduje failures (klidně prázdné pole)`);
+      if (!['vlastni-mereni', 'kombinace'].includes(evidence)) {
+        errors.push(`${id}: číselné score vyžaduje evidence=vlastni-mereni nebo kombinace`);
       }
     }
   }
