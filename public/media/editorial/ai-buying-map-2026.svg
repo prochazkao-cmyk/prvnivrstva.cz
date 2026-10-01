@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Jak vybrat 3D tiskárnu v roce 2026</title>
+  <desc id="desc">Ilustrační redakční mapa čtyř typických scénářů: první tiskárna, uzavřená dílna, větší projekty a servisovatelný ekosystém.</desc>
+  <rect width="1200" height="675" rx="36" fill="#f4eee4"/>
+  <path d="M74 104H1126" stroke="#181614" stroke-width="2" opacity=".16"/>
+  <text x="74" y="70" font-family="Arial,Helvetica,sans-serif" font-size="22" font-weight="700" fill="#181614">PRVNÍ VRSTVA · NÁKUPNÍ MAPA 2026</text>
+  <text x="74" y="142" font-family="Georgia,serif" font-size="52" font-weight="700" fill="#181614">Nejdřív scénář. Až potom model.</text>
+  <text x="74" y="184" font-family="Arial,Helvetica,sans-serif" font-size="21" fill="#5d5751">Žádný univerzální vítěz. Každá konstrukce řeší jiný typ práce.</text>
+
+  <g transform="translate(74 236)">
+    <rect width="248" height="310" rx="24" fill="#fffaf3" stroke="#181614" stroke-opacity=".12"/>
+    <circle cx="52" cy="52" r="24" fill="#0aa889"/>
+    <path d="M35 62h34V42H42v13h20" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="28" y="112" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#0a7c68">PRVNÍ TISKÁRNA</text>
+    <text x="28" y="148" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#181614">Co nejméně tření</text>
+    <text x="28" y="184" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">PLA / PETG</text>
+    <text x="28" y="212" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">automatická kalibrace</text>
+    <text x="28" y="240" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">rychlý první výtisk</text>
+    <path d="M28 274H188" stroke="#0aa889" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(342 236)">
+    <rect width="248" height="310" rx="24" fill="#fffaf3" stroke="#181614" stroke-opacity=".12"/>
+    <circle cx="52" cy="52" r="24" fill="#ff6b35"/>
+    <rect x="35" y="36" width="34" height="32" rx="4" fill="none" stroke="#fff" stroke-width="5"/>
+    <path d="M40 58h24M52 41v17" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <text x="28" y="112" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#c24d21">UZAVŘENÁ DÍLNA</text>
+    <text x="28" y="148" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#181614">Technické materiály</text>
+    <text x="28" y="184" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">ASA / ABS / PA</text>
+    <text x="28" y="212" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">komora a filtrace</text>
+    <text x="28" y="240" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">servisní přístup</text>
+    <path d="M28 274H188" stroke="#ff6b35" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(610 236)">
+    <rect width="248" height="310" rx="24" fill="#fffaf3" stroke="#181614" stroke-opacity=".12"/>
+    <circle cx="52" cy="52" r="24" fill="#181614"/>
+    <path d="M35 64h34V40H35zM52 40v24" fill="none" stroke="#fff" stroke-width="4"/>
+    <text x="28" y="112" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#181614">VĚTŠÍ PROJEKTY</text>
+    <text x="28" y="148" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#181614">Objem a produktivita</text>
+    <text x="28" y="184" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">větší pracovní prostor</text>
+    <text x="28" y="212" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">rychlý CoreXY</text>
+    <text x="28" y="240" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">produkční workflow</text>
+    <path d="M28 274H188" stroke="#181614" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(878 236)">
+    <rect width="248" height="310" rx="24" fill="#fffaf3" stroke="#181614" stroke-opacity=".12"/>
+    <circle cx="52" cy="52" r="24" fill="#ff6b35"/>
+    <path d="M40 45h24M40 55h24M40 65h16" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    <text x="28" y="112" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" fill="#c24d21">SERVIS &amp; EKOSYSTÉM</text>
+    <text x="28" y="148" font-family="Georgia,serif" font-size="30" font-weight="700" fill="#181614">Co půjde řešit za rok</text>
+    <text x="28" y="184" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">dokumentace</text>
+    <text x="28" y="212" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">náhradní díly</text>
+    <text x="28" y="240" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#5d5751">lokální servis</text>
+    <path d="M28 274H188" stroke="#ff6b35" stroke-width="6" stroke-linecap="round"/>
+  </g>
+
+  <text x="74" y="625" font-family="Arial,Helvetica,sans-serif" font-size="15" fill="#766f68">Ilustrační redakční grafika · není fotografií produktu ani důkazem testu</text>
+</svg>
