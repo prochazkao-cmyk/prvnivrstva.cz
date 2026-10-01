@@ -19,6 +19,7 @@ const articleSchema = z.object({
   verdict: z.string().optional(),
   score: z.number().min(1).max(10).optional(),
   note: z.string().optional(),
+  contentMode: z.enum(['redakcni', 'zdrojovany-profil', 'plny-test']).default('redakcni'),
   evidence: z.enum(['redakce', 'vyrobce', 'vlastni-mereni', 'kombinace', 'demo']).default('redakce'),
   sourceNote: z.string().optional(),
   disclosure: z.string().optional(),
