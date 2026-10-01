@@ -13,7 +13,7 @@ tags:
 level: "pokročilý"
 technologies:
   - "FDM"
-evidence: "zdroje-vyrobce"
+evidence: "vyrobce"
 contentMode: "zdrojovany-profil"
 sourceNote: "Profil vychází z aktuálních technických údajů a produktových podkladů Prusa Research. Redakce tento kus pro tento článek neměřila ani nehodnotila bodovým skóre."
 ---
