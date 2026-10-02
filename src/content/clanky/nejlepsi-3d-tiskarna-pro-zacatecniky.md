@@ -2,7 +2,7 @@
 title: "Nejlepší 3D tiskárna pro začátečníky"
 description: "Jak vybrat první 3D tiskárnu bez marketingových žebříčků: podle materiálů, prostoru, automatizace, servisu a toho, kolik chcete řešit."
 publishedAt: 2026-09-30
-updatedAt: 2026-10-01
+updatedAt: 2026-10-02
 author: "Redakce První vrstvy"
 draft: false
 featured: true
@@ -13,7 +13,7 @@ tags:
 level: "začátečník"
 contentMode: "zdrojovany-profil"
 evidence: "vyrobce"
-sourceNote: "Výběr vychází z aktuálních oficiálních parametrů a dokumentace výrobců ověřených 1. 10. 2026. Nejde o plný společný test všech uvedených modelů."
+sourceNote: "Výběr vychází z aktuálních oficiálních parametrů a dokumentace výrobců ověřených 1.–2. 10. 2026. Nejde o plný společný test všech uvedených modelů."
 note: "AI-first redakční analýza se zdrojovou kontrolou: nevydáváme specifikace výrobce za vlastní měření a bez testovacího protokolu nepřidáváme číselné skóre."
 affiliate: false
 ---
@@ -72,6 +72,8 @@ Dává smysl, když:
 
 Nedává smysl, když už teď víte, že budete často dělit větší modely.
 
+Podrobnosti o limitech otevřené konstrukce, doporučených materiálech a výbavě najdete ve [zdrojovaném profilu Bambu Lab A1 mini](/stroje/bambu-a1-mini/). Profil vychází z dokumentace výrobce a nepředstírá vlastní test.
+
 ### A1
 
 Dává smysl, když:
@@ -81,6 +83,8 @@ Dává smysl, když:
 - chcete více prostoru bez skoku do dražší uzavřené třídy.
 
 Nedává smysl, pokud je vaším hlavním cílem technický materiál, který chce stabilní teplé okolí.
+
+Pro větší variantu pokračujte na [zdrojovaný profil Bambu Lab A1](/stroje/bambu-a1/), kde jsou parametry výrobce oddělené od věcí, které by musel potvrdit vlastní test.
 
 ## 5. Kdy přeskočit rovnou na P2S nebo CORE One+
 
