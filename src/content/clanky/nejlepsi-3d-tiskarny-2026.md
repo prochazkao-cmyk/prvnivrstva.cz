@@ -52,13 +52,13 @@ A1 má tiskový objem **256 × 256 × 256 mm**, hotend do **300 °C** a podložk
 
 To je důležitější než papírová maximální teplota trysky. **Schopnost nahřát trysku neznamená, že je celá tiskárna ideální pro každý materiál.**
 
-A1 proto vidíme hlavně jako stroj pro člověka, který chce rychle tisknout běžné materiály a ocení větší pracovní prostor než u A1 mini.
+A1 proto vidíme hlavně jako stroj pro člověka, který chce rychle tisknout běžné materiály a ocení větší pracovní prostor než u A1 mini. [Podrobnější zdrojovaný profil Bambu Lab A1](/stroje/bambu-a1/) odděluje parametry výrobce od věcí, které by musel potvrdit vlastní test.
 
 Zdroj: [Bambu Lab A1 — oficiální Quick Start Guide](https://cdn1.bambulab.com/documentation/quick-start-a75adcb1d5d5e/Quick%20Start%20Guide%20for%20A1.pdf)
 
 ## 3. Bambu Lab P2S — když už chcete uzavřenější produkční třídu
 
-P2S je novější pokračování P1 řady. Bambu při uvedení popsalo například **DynaSense extruder**, **Active Airflow**, druhou generaci UI na **5" dotykovém displeji**, 1080p kameru a rychlovýměnný systém trysky. Oficiálně uvádí tiskový objem **256 × 256 × 256 mm**, hotend do **300 °C** a podložku do **110 °C**.
+P2S je novější pokračování P1 řady. Bambu při uvedení popsalo například **DynaSense extruder**, **Active Airflow**, druhou generaci UI na **5\" dotykovém displeji**, 1080p kameru a rychlovýměnný systém trysky. Oficiálně uvádí tiskový objem **256 × 256 × 256 mm**, hotend do **300 °C** a podložku do **110 °C**.
 
 Pro kupujícího je podstatné, že P2S míří jinam než A1: nejde jen o „rychlejší první tiskárnu“, ale o kompaktní stroj s vyšší mírou integrace a produkčním zaměřením.
 
@@ -90,7 +90,7 @@ Aktuální Centauri Carbon 2 je uzavřený CoreXY s objemem **256 × 256 × 256 
 
 Na papíře je to velmi zajímavá kombinace pro technické materiály. Právě tady ale nechceme sklouznout k typickému „spec-sheet review“: vysoká teplota trysky, rychlost nebo automatická kalibrace samy o sobě neříkají nic o dlouhodobé spolehlivosti, kvalitě profilů, dostupnosti dílů nebo servisu v CZ/SK.
 
-Proto je Centauri Carbon 2 v shortlistu, ale plný verdikt musí počkat na skutečný test nebo alespoň dlouhodobější servisní data.
+Proto je Centauri Carbon 2 v shortlistu, ale plný verdikt musí počkat na skutečný test nebo alespoň dlouhodobější servisní data. Pro metodiku a ověřené parametry předchozího modelu je k dispozici [zdrojovaný profil Elegoo Centauri Carbon](/stroje/elegoo-centauri-carbon/); nepřenášíme z něj automaticky závěry na generaci Carbon 2.
 
 Zdroj: [Elegoo Centauri Carbon 2 — oficiální produktová stránka](https://global.elegoo.com/products/centauri-carbon-2)
 
