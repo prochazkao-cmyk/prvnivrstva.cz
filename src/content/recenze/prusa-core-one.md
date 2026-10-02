@@ -54,6 +54,8 @@ Bez vlastního testu zde neuvádíme hlučnost, reálnou spotřebu, rychlost kon
 
 CORE One+ je podle specifikací logický kandidát pro uživatele, který chce uzavřený stroj v ekosystému Prusa a potřebuje větší materiálový rozsah než u typické otevřené tiskárny. Při rozhodování ale dává smysl porovnat nejen konstrukci, ale také požadovaný objem, materiály, servisní preference a celkové náklady.
 
+Pro širší kontext lze porovnat [zdrojovaný profil Bambu Lab A1](/stroje/bambu-a1/) jako otevřenou alternativu pro běžné materiály a [zdrojovaný profil Elegoo Centauri Carbon](/stroje/elegoo-centauri-carbon/) jako jiný uzavřený CoreXY. Odkazy slouží k porovnání ověřitelných parametrů a konstrukčních rozdílů, ne jako náhrada společného testu.
+
 ## Zdroje
 
 - Prusa Research — produktová stránka CORE One+ (Gen 2), technické parametry a podporované funkce: https://www.prusa3d.com/product/prusa-core-one/
