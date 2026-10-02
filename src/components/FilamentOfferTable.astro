@@ -1,0 +1,257 @@
+---
+import {
+  compareByPricePerKg,
+  hasKnownShipping,
+  isStale,
+  pricePerKg,
+  totalPrice,
+  type OfferGroup,
+  type ShopOffer,
+} from '../data/offers';
+
+interface Props {
+  groups: OfferGroup[];
+}
+
+const { groups } = Astro.props;
+
+const money = new Intl.NumberFormat('cs-CZ', {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 2,
+});
+const fetchedFormat = new Intl.DateTimeFormat('cs-CZ', {
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  timeZone: 'Europe/Prague',
+});
+
+function formatAmount(amount: number, currency: ShopOffer['currency']): string {
+  const suffix = currency === 'EUR' ? 'EUR' : 'Kč';
+  return `${money.format(amount)}\u00a0${suffix}`;
+}
+
+function formatPerKg(amount: number, currency: ShopOffer['currency']): string {
+  const unit = currency === 'EUR' ? 'EUR/kg' : 'Kč/kg';
+  return `${money.format(amount)}\u00a0${unit}`;
+}
+
+function formatWeight(grams: number): string {
+  if (grams >= 1000 && grams % 50 === 0) return `${money.format(grams / 1000)}\u00a0kg`;
+  return `${money.format(grams)}\u00a0g`;
+}
+
+function formatDiameter(mm: number): string {
+  return `${money.format(mm)}\u00a0mm`;
+}
+
+function filamentTags(offer: ShopOffer): string[] {
+  if (offer.category !== 'filament') return [];
+  const tags = [offer.material, offer.brand, offer.color];
+  if (offer.diameterMm != null) tags.push(formatDiameter(offer.diameterMm));
+  if (offer.packaging === 'spool') tags.push('cívka');
+  if (offer.packaging === 'refill') tags.push('refill');
+  return tags.filter((tag): tag is string => Boolean(tag));
+}
+
+function sourceLabel(offer: ShopOffer): string {
+  if (offer.example) return 'ukázka, ne živá cena';
+  switch (offer.source) {
+    case 'xml':
+      return 'XML feed';
+    case 'api':
+      return 'API';
+    case 'affiliate-feed':
+      return 'affiliate feed';
+    case 'manual-approved':
+      return 'ručně schváleno';
+    default:
+      return offer.source;
+  }
+}
+---
+
+<div class="offer-board" data-offer-root>
+  <div class="sort-bar" data-sort-bar>
+    <span>Řazení</span>
+    <div role="group" aria-label="Řazení nabídek">
+      <button type="button" data-sort="per-kg" aria-pressed="true">Kč/kg</button>
+      <button type="button" data-sort="total" aria-pressed="false">Celkem s dopravou</button>
+    </div>
+  </div>
+  <p class="sort-note">
+    Výchozí pořadí je cena za kilogram materiálu, bez dopravy. „Celkem s dopravou“ řadí jen nabídky, kde feed dopravu uvedl. Chybějící doprava není nula.
+  </p>
+  {groups.map((group) => (
+    <article class="offer-group" data-offer-group>
+      <h2>{group.productName}</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Obchod</th>
+            <th class="tags">Varianta</th>
+            <th class="num">Hmotnost</th>
+            <th class="num">Kč/kg</th>
+            <th class="num">Cena</th>
+            <th class="num">Doprava</th>
+            <th class="num">Celkem</th>
+            <th>Stav</th>
+            <th>Aktualizace</th>
+          </tr>
+        </thead>
+        <tbody>
+          {group.offers.sort(compareByPricePerKg).map((offer) => {
+            const perKg = pricePerKg(offer);
+            const total = hasKnownShipping(offer) ? totalPrice(offer) : null;
+            const tags = filamentTags(offer);
+            const stale = isStale(offer);
+            return (
+              <tr
+                data-offer
+                data-shop={offer.shopName}
+                data-per-kg={perKg ?? ''}
+                data-total={total ?? ''}
+              >
+                <td>
+                  <a
+                    href={offer.affiliateUrl ?? offer.url}
+                    rel={offer.affiliateUrl ? 'sponsored nofollow noopener' : 'nofollow noopener'}
+                  >
+                    {offer.shopName}
+                  </a>
+                  {offer.affiliateUrl && <small class="aff">affiliate</small>}
+                  <small class="source">{sourceLabel(offer)}</small>
+                </td>
+                <td class="tags">
+                  {tags.length > 0 ? (
+                    <span class="offer-tags">
+                      {tags.map((tag) => <span>{tag}</span>)}
+                    </span>
+                  ) : (
+                    '—'
+                  )}
+                </td>
+                <td class="num">
+                  {offer.category === 'filament' ? formatWeight(offer.weightGrams) : '—'}
+                  {offer.category === 'filament' && offer.weightConfidence === 'unspecified' && (
+                    <small class="weight-flag">ověřit návin</small>
+                  )}
+                </td>
+                <td class="num">{perKg == null ? '—' : <strong>{formatPerKg(perKg, offer.currency)}</strong>}</td>
+                <td class="num">{formatAmount(offer.price, offer.currency)}</td>
+                <td class="num">
+                  {offer.shippingPrice === undefined ? 'neznámá' : formatAmount(offer.shippingPrice, offer.currency)}
+                </td>
+                <td class="num">{total == null ? '—' : formatAmount(total, offer.currency)}</td>
+                <td>{offer.inStock ? (offer.stockLabel ?? 'Skladem') : (offer.stockLabel ?? 'Není skladem')}</td>
+                <td>
+                  <time datetime={offer.fetchedAt}>{fetchedFormat.format(new Date(offer.fetchedAt))}</time>
+                  {stale && <small class="stale">starší 36 h</small>}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </article>
+  ))}
+</div>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-offer-root]')) {
+    if (root.dataset.sortBound === '1') continue;
+    root.dataset.sortBound = '1';
+    const bar = root.querySelector<HTMLElement>('[data-sort-bar]');
+    if (!bar) continue;
+    const buttons = [...bar.querySelectorAll<HTMLButtonElement>('button[data-sort]')];
+
+    const numberOrLast = (value: string | undefined) => {
+      if (!value) return Number.POSITIVE_INFINITY;
+      const parsed = Number(value);
+      return Number.isFinite(parsed) ? parsed : Number.POSITIVE_INFINITY;
+    };
+
+    const sortGroups = (mode: 'per-kg' | 'total') => {
+      const key = mode === 'total' ? 'total' : 'perKg';
+      const articles = [...root.querySelectorAll<HTMLElement>('[data-offer-group]')];
+      for (const article of articles) {
+        const body = article.querySelector('tbody');
+        if (!body) continue;
+        const rows = [...body.querySelectorAll<HTMLTableRowElement>('[data-offer]')];
+        rows.sort((a, b) => {
+          const diff = numberOrLast(a.dataset[key]) - numberOrLast(b.dataset[key]);
+          if (diff !== 0) return diff;
+          return (a.dataset.shop ?? '').localeCompare(b.dataset.shop ?? '', 'cs');
+        });
+        for (const row of rows) body.append(row);
+        const best = rows.reduce((min, row) => Math.min(min, numberOrLast(row.dataset[key])), Number.POSITIVE_INFINITY);
+        article.dataset.best = String(best);
+      }
+      articles.sort((a, b) => Number(a.dataset.best) - Number(b.dataset.best));
+      for (const article of articles) root.append(article);
+    };
+
+    for (const button of buttons) {
+      button.addEventListener('click', () => {
+        const mode = button.dataset.sort === 'total' ? 'total' : 'per-kg';
+        sortGroups(mode);
+        for (const other of buttons) other.setAttribute('aria-pressed', other === button ? 'true' : 'false');
+      });
+    }
+  }
+</script>
+
+<style>
+  .sort-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem 1rem;
+    align-items: center;
+    margin-top: .5rem;
+  }
+  .sort-bar > span {
+    color: var(--color-muted);
+    font-size: .72rem;
+    font-weight: 760;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .sort-bar div { display: flex; gap: .4rem; }
+  .sort-bar button {
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+    padding: .45rem .8rem;
+    color: var(--color-ink);
+    font: inherit;
+    font-size: .85rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .sort-bar button[aria-pressed='true'] {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: #1a0d08;
+  }
+  .sort-note { max-width: 55rem; margin: .8rem 0 0; color: var(--color-muted); font-size: .92rem; }
+  .offer-group { margin-top: 2rem; overflow-x: auto; }
+  .offer-group h2 { font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: 2rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  th, td { border-bottom: 1px solid var(--color-line); padding: .75rem .55rem; text-align: left; vertical-align: top; }
+  th { color: var(--color-muted); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  td:not(.tags) { white-space: nowrap; }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td a { color: var(--color-ink); font-weight: 700; }
+  td small { display: block; margin-top: .2rem; color: var(--color-muted); font-size: .72rem; font-weight: 650; white-space: normal; }
+  .aff, .stale, .weight-flag { color: var(--color-accent-ink); }
+  .offer-tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .offer-tags span {
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    padding: .12rem .45rem;
+    font-size: .72rem;
+    font-weight: 700;
+  }
+</style>

@@ -11,6 +11,7 @@
     "check": "astro check",
     "check:links": "node scripts/check-links.mjs",
     "check:editorial": "node scripts/check-editorial.mjs",
+    "import:filament": "node scripts/import-filament-feed.mjs",
     "astro": "astro"
   },
   "engines": {

@@ -17,9 +17,10 @@ evidence: "redakce"
 ## Datová pravidla
 
 - preferovat XML/API/affiliate feed se souhlasem obchodu, ne agresivní scraping,
-- ukládat cenu produktu, hmotnost balení, cenu za kg, dopravu a skladovou dostupnost,
+- ukládat cenu produktu, hmotnost návinu v gramech, cenu za kg, dopravu a skladovou dostupnost,
+- hmotnost brát jen z feedu; když nejde přečíst, nabídku zahodit a kilogram nevymýšlet,
 - zobrazovat čas poslední aktualizace,
-- výchozí řazení podle celkové ceny nebo ceny za kg musí být transparentní,
+- výchozí řazení je Kč/kg produktu; celkem včetně dopravy je vedlejší klíč a jen tam, kde je doprava známá,
 - provize nesmí měnit pořadí výsledků,
 - affiliate odkazy jasně označit.
 

@@ -1,5 +1,6 @@
 # build
 dist/
+src/data/offers.generated.ts
 .astro/
 
 # dependencies

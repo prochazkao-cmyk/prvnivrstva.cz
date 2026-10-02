@@ -11,7 +11,7 @@ Legenda: **live** = veřejný obsah má použitelný základ; **partial** = čá
 | 5 | Bambu Lab, nebo Prusa? | live | existující srovnání; dál doplňovat vlastní servisní data |
 | 6 | Nejlepší sušičky filamentu | draft | zdrojované profily lze připravit; plný test čeká na jednotný měřicí protokol |
 | 7 | Nejlepší PLA od českých výrobců | draft | profily značek lze připravit; pořadí kvality čeká na vzorky a stejné testovací modely |
-| 8 | Nejlevnější filament v ČR | blocked-data | datový kontrakt hotový, čeká na 3+ feedy |
+| 8 | Nejlevnější filament v ČR | blocked-data | filament-first Kč/kg je ve srovnávači, veřejně noindex, čeká na 3+ feedy |
 | 9 | Bambu Lab A1 | blocked-test | publikovat zdrojovaný profil; plná recenze až po testovacím protokolu |
 | 10 | Prusa CORE One | blocked-test | publikovat zdrojovaný profil; plná recenze až po testovacím protokolu |
 | 11 | Bambu Lab P2S | blocked-test | model ověřen v aktuálních zdrojích; zdrojovaný profil může vzniknout hned |

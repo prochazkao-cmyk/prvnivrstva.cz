@@ -21,6 +21,24 @@ Typy:
 npm run check
 ```
 
+## Srovnávač filamentu
+
+`/srovnavac/` je statická stránka. Produkční `offers` je prázdné, brána je 0/3 obchodů a stránka má `noindex`, dokud nejsou tři reálné feedy. Pravidla jsou v `docs/PRICE_FEED_CONTRACT.md`.
+
+Lokální náhled vymyšlených fixture cen (v buildu se neobjeví):
+
+```bash
+npm run dev
+```
+
+Otevřít [http://localhost:4321/srovnavac/?preview=1](http://localhost:4321/srovnavac/?preview=1).
+
+Kontrola importéru nad lokálními ukázkami, bez stahování obchodů:
+
+```bash
+npm run import:filament
+```
+
 ## Build
 
 ```bash
