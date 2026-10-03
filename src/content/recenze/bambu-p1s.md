@@ -15,7 +15,7 @@ tags:
 level: "začátečník"
 technologies:
   - "FDM"
-evidence: "zdroje"
+evidence: "vyrobce"
 sourceNote: "Technické specifikace a stav modelu ověřeny 3. 10. 2026 v aktuální oficiální dokumentaci a oznámeních Bambu Lab. Hodnotící kontext není vydáván za fyzický test."
 disclosure: "Redakční obsah bez placeného vlivu na závěr. Tento profil není označen jako plný redakční test."
 affiliate: false
