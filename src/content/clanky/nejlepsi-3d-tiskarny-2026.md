@@ -2,7 +2,7 @@
 title: "Nejlepší 3D tiskárny 2026: co koupit a co vynechat"
 description: "Výběr 3D tiskárny podle typu uživatele, materiálů, konstrukce, servisu a reálných kompromisů. Bez falešného univerzálního vítěze."
 publishedAt: 2026-09-30
-updatedAt: 2026-10-01
+updatedAt: 2026-10-03
 author: "Redakce První vrstvy"
 draft: false
 featured: true
@@ -60,7 +60,7 @@ Zdroj: [Bambu Lab A1 — oficiální Quick Start Guide](https://cdn1.bambulab.co
 
 P2S je novější pokračování P1 řady. Bambu při uvedení popsalo například **DynaSense extruder**, **Active Airflow**, druhou generaci UI na **5\" dotykovém displeji**, 1080p kameru a rychlovýměnný systém trysky. Oficiálně uvádí tiskový objem **256 × 256 × 256 mm**, hotend do **300 °C** a podložku do **110 °C**.
 
-Pro kupujícího je podstatné, že P2S míří jinam než A1: nejde jen o „rychlejší první tiskárnu“, ale o kompaktní stroj s vyšší mírou integrace a produkčním zaměřením.
+Pro kupujícího je podstatné, že P2S míří jinam než A1: nejde jen o „rychlejší první tiskárnu“, ale o kompaktní stroj s vyšší mírou integrace a produkčním zaměřením. [Zdrojovaný profil Bambu Lab P2S](/stroje/bambu-p2s/) shrnuje ověřitelné parametry a limity bez vydávání specifikací výrobce za vlastní test. Pokud vybíráte právě mezi otevřenou A1 a uzavřenou P2S, pokračujte na [Bambu Lab A1 vs P2S: kterou vybrat](/clanky/bambu-a1-vs-p2s/).
 
 Bez vlastního srovnávacího testu zatím nebudeme tvrdit, že tiskne kvalitněji nebo spolehlivěji než konkurence. To patří až do plné recenze.
 
