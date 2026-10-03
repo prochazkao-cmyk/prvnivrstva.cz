@@ -228,20 +228,34 @@ function sourceLabel(offer: ShopOffer): string {
       <button type="button" data-sort="per-kg" aria-pressed="true">Kč/kg</button>
       <button type="button" data-sort="total" aria-pressed="false">Celkem s dopravou</button>
     </div>
+    {catalog && (
+      <div class="view-toggle" role="group" aria-label="Zobrazení">
+        <span>Zobrazení</span>
+        <button type="button" data-layout="tiles" aria-pressed="true">Dlaždice</button>
+        <button type="button" data-layout="list" aria-pressed="false">Seznam</button>
+      </div>
+    )}
   </div>
   <p class="sort-note">
     Výchozí pořadí je cena za kilogram materiálu, bez dopravy. „Celkem s dopravou“ řadí jen nabídky, kde feed dopravu uvedl. Chybějící doprava není nula.
   </p>
   {catalog && (
     <div class="filter-panel" data-filters>
-      <div class="filter-head">
+      <div class="filter-bar">
         <p data-filter-count>Zobrazeno {catalogRows.length} z {catalogRows.length}</p>
+        <div class="filter-facets" role="group" aria-label="Filtry">
+          {filterFacets.map((facet) => (
+            <button type="button" data-facet-toggle={facet.name} aria-expanded="false" aria-controls={`facet-${facet.name}`}>
+              {facet.label}
+              <span data-facet-count hidden></span>
+            </button>
+          ))}
+        </div>
         <button type="button" data-filter-clear>Zrušit filtry</button>
       </div>
-      <div class="filter-board">
+      <div class="facet-menus">
         {filterFacets.map((facet) => (
-          <fieldset>
-            <legend>{facet.label}</legend>
+          <div class="facet-menu" id={`facet-${facet.name}`} data-facet-menu={facet.name} hidden>
             <div class="filter-options">
               {facet.options.map((option) => (
                 <button type="button" data-filter={facet.name} data-value={option.key} aria-pressed="false">
@@ -250,7 +264,7 @@ function sourceLabel(offer: ShopOffer): string {
                 </button>
               ))}
             </div>
-          </fieldset>
+          </div>
         ))}
       </div>
       <p class="filter-empty" data-filter-empty hidden>Žádná nabídka neprojde těmito filtry.</p>
@@ -258,7 +272,7 @@ function sourceLabel(offer: ShopOffer): string {
   )}
   {catalog ? (
     <div class="catalog-layout">
-      <div class="product-grid" data-product-grid>
+      <div class="product-grid" data-product-grid data-layout="tiles">
         {productCards.map((card) => (
           <article
             class="product-card"
@@ -517,6 +531,16 @@ function sourceLabel(offer: ShopOffer): string {
       }
       if (count) count.textContent = `Zobrazeno ${shown} z ${rows.length}`;
       if (empty) empty.hidden = shown !== 0;
+      for (const facet of facets) {
+        const chosen = selected.get(facet)?.size ?? 0;
+        const toggle = filterRoot.querySelector<HTMLButtonElement>(`[data-facet-toggle="${facet}"]`);
+        const badge = toggle?.querySelector<HTMLElement>('[data-facet-count]');
+        if (badge) {
+          badge.hidden = chosen === 0;
+          badge.textContent = String(chosen);
+        }
+        toggle?.classList.toggle('has-selection', chosen > 0);
+      }
       const amount = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 2 });
       for (const card of root.querySelectorAll<HTMLElement>('[data-product-card]')) {
         const visible = [...card.querySelectorAll<HTMLElement>('[data-offer]')].filter((row) => !row.hidden);
@@ -573,6 +597,45 @@ function sourceLabel(offer: ShopOffer): string {
       applyFilters();
     });
 
+    const facetMenus = new Map<string, HTMLElement>();
+    for (const menu of filterRoot.querySelectorAll<HTMLElement>('[data-facet-menu]')) {
+      facetMenus.set(menu.dataset.facetMenu ?? '', menu);
+    }
+    const facetToggles = [...filterRoot.querySelectorAll<HTMLButtonElement>('[data-facet-toggle]')];
+    const closeFacetMenus = () => {
+      for (const toggle of facetToggles) toggle.setAttribute('aria-expanded', 'false');
+      for (const menu of facetMenus.values()) menu.hidden = true;
+    };
+    for (const toggle of facetToggles) {
+      toggle.addEventListener('click', () => {
+        const name = toggle.dataset.facetToggle ?? '';
+        const menu = facetMenus.get(name);
+        const willOpen = toggle.getAttribute('aria-expanded') !== 'true';
+        closeFacetMenus();
+        if (willOpen && menu) {
+          toggle.setAttribute('aria-expanded', 'true');
+          menu.hidden = false;
+        }
+      });
+    }
+    filterRoot.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeFacetMenus();
+    });
+    document.addEventListener('click', (event) => {
+      if (!filterRoot.contains(event.target as Node)) closeFacetMenus();
+    });
+
+    const grid = root.querySelector<HTMLElement>('[data-product-grid]');
+    const layoutButtons = [...root.querySelectorAll<HTMLButtonElement>('button[data-layout]')];
+    for (const button of layoutButtons) {
+      button.addEventListener('click', () => {
+        const layout = button.dataset.layout === 'list' ? 'list' : 'tiles';
+        if (grid) grid.dataset.layout = layout;
+        for (const other of layoutButtons) other.setAttribute('aria-pressed', other === button ? 'true' : 'false');
+        closeFacetMenus();
+      });
+    }
+
     root.addEventListener(
       'error',
       (event) => {
@@ -612,14 +675,16 @@ function sourceLabel(offer: ShopOffer): string {
     align-items: center;
     margin-top: .5rem;
   }
-  .sort-bar > span {
+  .sort-bar > span,
+  .view-toggle > span {
     color: var(--color-muted);
     font-size: .72rem;
     font-weight: 760;
     letter-spacing: .08em;
     text-transform: uppercase;
   }
-  .sort-bar div { display: flex; gap: .4rem; }
+  .sort-bar div { display: flex; gap: .4rem; align-items: center; }
+  .view-toggle { margin-left: auto; }
   .sort-bar button {
     border: 1px solid var(--color-line);
     border-radius: 999px;
@@ -637,16 +702,17 @@ function sourceLabel(offer: ShopOffer): string {
     color: #1a0d08;
   }
   .sort-note { max-width: 55rem; margin: .8rem 0 0; color: var(--color-muted); font-size: .92rem; }
-  .filter-panel { margin-top: 1.25rem; }
-  .filter-head {
+  .filter-panel { position: relative; margin-top: .9rem; }
+  .filter-bar {
     display: flex;
     flex-wrap: wrap;
-    gap: .7rem 1rem;
+    gap: .45rem .55rem;
     align-items: center;
-    justify-content: space-between;
   }
-  .filter-head p { margin: 0; font-weight: 700; }
-  .filter-head button,
+  .filter-bar p { margin: 0; font-size: .92rem; font-weight: 700; }
+  .filter-facets { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .filter-facets button,
+  .filter-bar [data-filter-clear],
   .filter-options button {
     border: 1px solid var(--color-line);
     border-radius: 999px;
@@ -655,28 +721,39 @@ function sourceLabel(offer: ShopOffer): string {
     font: inherit;
     cursor: pointer;
   }
-  .filter-head button { padding: .4rem .8rem; font-size: .85rem; font-weight: 700; }
-  .filter-board {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem 1.5rem;
-    margin-top: 1rem;
+  .filter-facets button,
+  .filter-bar [data-filter-clear] {
+    display: inline-flex;
+    gap: .4rem;
+    align-items: center;
+    padding: .38rem .72rem;
+    font-size: .82rem;
+    font-weight: 700;
   }
-  .filter-board fieldset {
-    margin: 0;
+  .filter-facets button[aria-expanded='true'],
+  .filter-facets button.has-selection {
+    border-color: var(--color-accent);
+  }
+  .filter-facets [data-facet-count] {
+    min-width: 1.1rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: #1a0d08;
+    padding: 0 .35rem;
+    font-size: .72rem;
+    line-height: 1.35rem;
+    text-align: center;
+  }
+  .facet-menus { position: absolute; z-index: 4; left: 0; right: 0; }
+  .facet-menu {
+    max-height: min(15rem, 46vh);
+    overflow: auto;
+    margin-top: .4rem;
     border: 1px solid var(--color-line);
     border-radius: var(--radius-card);
     background: var(--color-card);
-    padding: .8rem .9rem 1rem;
-    min-width: 0;
-  }
-  .filter-board legend {
-    padding: 0 .35rem;
-    color: var(--color-muted);
-    font-size: .72rem;
-    font-weight: 760;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+    padding: .7rem .75rem;
+    box-shadow: 0 .55rem 1.4rem rgba(23, 21, 15, .08);
   }
   .filter-options { display: flex; flex-wrap: wrap; gap: .4rem; }
   .filter-options button {
@@ -695,15 +772,24 @@ function sourceLabel(offer: ShopOffer): string {
   }
   .filter-options button[aria-pressed='true'] span { color: #1a0d08; }
   .filter-empty { margin: .8rem 0 0; font-weight: 700; }
-  @media (max-width: 800px) {
-    .filter-board { grid-template-columns: 1fr; }
-  }
   .catalog-layout { margin-top: 1.5rem; }
   .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
     gap: 1rem;
   }
+  .product-grid[data-layout='list'] { grid-template-columns: 1fr; }
+  .product-grid[data-layout='list'] .product-open {
+    grid-template-columns: 6.75rem minmax(0, 1fr);
+    align-items: stretch;
+  }
+  .product-grid[data-layout='list'] .photo {
+    height: auto;
+    min-height: 6.75rem;
+    border-bottom: 0;
+    border-right: 1px solid var(--color-line);
+  }
+  .product-grid[data-layout='list'] .product-copy { align-content: center; }
   .product-open {
     display: grid;
     width: 100%;
@@ -749,6 +835,13 @@ function sourceLabel(offer: ShopOffer): string {
   }
   .product-copy strong { font-size: 1.05rem; }
   .product-copy [data-card-count] { color: var(--color-muted); font-size: .82rem; font-weight: 650; }
+  @media (max-width: 640px) {
+    .view-toggle { margin-left: 0; }
+    .product-grid[data-layout='list'] .product-open { grid-template-columns: 5.25rem minmax(0, 1fr); }
+    .product-grid[data-layout='list'] .photo { min-height: 5.25rem; }
+    .product-grid[data-layout='list'] .product-copy { padding: .7rem .8rem; }
+    .product-grid[data-layout='list'] .product-copy h3 { font-size: 1.15rem; }
+  }
   .offer-dialog {
     width: min(28rem, calc(100vw - 1.5rem));
     max-height: calc(100vh - 2rem);
