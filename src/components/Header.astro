@@ -54,7 +54,7 @@ function isCurrent(href: string): boolean {
       <a class="nav-cta nav-cta-desktop" href="/#temata">Pro lepší 3D tisk <span aria-hidden="true">→</span></a>
 
       <details class="nav-mobile" data-mobile-menu>
-        <summary>
+        <summary aria-label="Otevřít hlavní menu">
           <span class="menu-icon" aria-hidden="true"></span>
           <span class="label-closed">Menu</span>
           <span class="label-open">Zavřít</span>
@@ -79,7 +79,6 @@ function isCurrent(href: string): boolean {
   const headers = document.querySelectorAll<HTMLElement>('[data-header]');
   const hero = document.querySelector('.hero, .cover, .ref-hero');
   const themeButtons = document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]');
-  const mobileMenu = document.querySelector<HTMLDetailsElement>('[data-mobile-menu]');
 
   const updateHeader = () => {
     const scrolled = window.scrollY > 8;
@@ -96,24 +95,42 @@ function isCurrent(href: string): boolean {
     }
   };
 
-  const closeMobileMenu = () => {
-    if (!mobileMenu) return;
-    mobileMenu.open = false;
-    document.documentElement.classList.remove('mobile-menu-open');
+  const initMobileMenus = () => {
+    const mobileMenus = document.querySelectorAll<HTMLDetailsElement>('[data-mobile-menu]');
+
+    const closeAllMobileMenus = () => {
+      for (const menu of mobileMenus) menu.open = false;
+      document.documentElement.classList.remove('mobile-menu-open');
+    };
+
+    for (const menu of mobileMenus) {
+      const summary = menu.querySelector<HTMLElement>('summary');
+      if (!summary || summary.dataset.menuReady === 'true') continue;
+      summary.dataset.menuReady = 'true';
+
+      summary.addEventListener('click', (event) => {
+        event.preventDefault();
+        const nextOpen = !menu.open;
+        closeAllMobileMenus();
+        menu.open = nextOpen;
+        document.documentElement.classList.toggle('mobile-menu-open', nextOpen);
+        summary.setAttribute('aria-label', nextOpen ? 'Zavřít hlavní menu' : 'Otevřít hlavní menu');
+      });
+
+      menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeAllMobileMenus));
+    }
+
+    window.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeAllMobileMenus();
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1240) closeAllMobileMenus();
+      updateHeader();
+    });
   };
 
-  mobileMenu?.addEventListener('toggle', () => {
-    document.documentElement.classList.toggle('mobile-menu-open', mobileMenu.open);
-  });
-
-  mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMobileMenu));
-  window.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') closeMobileMenu();
-  });
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1240) closeMobileMenu();
-    updateHeader();
-  });
+  initMobileMenus();
+  document.addEventListener('astro:page-load', initMobileMenus);
 
   const applyTheme = (theme: 'prusa' | 'bambu', persist = true) => {
     document.documentElement.dataset.brandTheme = theme;
