@@ -529,7 +529,36 @@ async function selfTest() {
   assert(snapshotOffers.every((offer) => offer.example !== true), 'snapshot rows are not example fixtures');
   assert(snapshotOffers.every((offer) => offer.weightGrams > 0 && pricePerKg(offer) > 0), 'every snapshot offer needs weight and Kč/kg');
 
+  await provePreviewCatalog();
+
   console.log('Filament feed importer self-test OK.');
+}
+
+/** The committed local-preview catalog is generated, real, and not production. */
+async function provePreviewCatalog() {
+  const previewPath = path.join(ROOT, 'src/data/filament-preview.generated.json');
+  const preview = JSON.parse(await readFile(previewPath, 'utf8'));
+  assert(preview._generated === true, 'preview catalog must be marked generated');
+  assert(Array.isArray(preview.offers) && preview.offers.length > 100, 'preview catalog should hold the accepted public rows');
+  const shops = new Set(preview.offers.map((offer) => offer.shopId));
+  assert(
+    [...shops].sort().join() === '3dfil,filamenty-brno,materialpro3d',
+    'preview catalog must be exactly the three public shops',
+  );
+  for (const offer of preview.offers) {
+    assert(offer.example !== true, 'preview rows must not be example fixtures');
+    assert(offer.category === 'filament', 'preview rows must be filament');
+    assert(offer.weightGrams > 0 && pricePerKg(offer) > 0, 'preview rows need weightGrams and pricePerKg');
+    assert(typeof offer.fetchedAt === 'string' && offer.fetchedAt.length > 0, 'preview rows need fetchedAt');
+    assert(typeof offer.shopName === 'string' && offer.shopName.length > 0, 'preview rows need a shop name');
+    assert(offer.affiliateUrl === undefined, 'preview rows must not invent an affiliate URL');
+  }
+  const counts = Object.fromEntries(preview.shops.map((shop) => [shop.shopId, shop.accepted]));
+  for (const shopId of shops) {
+    const actual = preview.offers.filter((offer) => offer.shopId === shopId).length;
+    assert(counts[shopId] === actual, `${shopId} preview count drifted`);
+  }
+  console.log(`Preview catalog: ${preview.offers.length} rows, shops ${[...shops].join(', ')}.`);
 }
 
 function almost(actual, expected, message) {

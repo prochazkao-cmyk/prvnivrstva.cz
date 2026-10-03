@@ -132,17 +132,23 @@ Postup, až bude skutečný feed:
 5. Zkontrolované řádky zapsat do `offers` v `src/data/offers.ts`. U živých řádků nenastavovat `example: true`.
 6. `noindex` na `/srovnavac/` spadne až když `isComparerIndexable()` uvidí aspoň 3 obchody, normalizaci, stale kontrolu, označené affiliate odkazy a tuto metodiku.
 
-## Lokální náhled (bez živých cen)
+## Lokální náhled
 
-Produkční pole `offers` zůstává prázdné, brána 0/3, `noindex`.
+Produkční pole `offers` zůstává prázdné, brána 0/3, `noindex`. Tři veřejné feedy samy bránu neotevřou: `productId` je pořád `shopId:ITEM_ID` a normalizace mezi obchody není hotová. `isComparerIndexable()` by po zápisu do `offers` pustilo indexaci jen podle počtu obchodů, což tenhle seznam nestačí. Dokud neplatí celá brána níže, řádky do `offers` nepatří.
 
-Náhled tabulky jen ve vývojovém serveru:
+Náhled přijatých řádků jen ve vývojovém serveru:
 
 ```bash
 npm run dev
 ```
 
-Pak otevřít `/srovnavac/?preview=1`. Stránka je statická, takže query čte prohlížeč a jen odkryje blok, který `astro dev` vykreslil. Ceny jsou vymyšlené fixture z `scripts/fixtures/filament-offers.example.json` (tři obchody, PLA 1 kg a PETG 750 g, aby bylo vidět Kč/kg proti ceně na štítku). `astro build` má `import.meta.env.DEV === false`, takže ten blok v nasazeném HTML není a query na produkci nic nepřidá.
+Pak otevřít `/srovnavac/?preview=1`. Stránka je statická, takže query čte prohlížeč a jen odkryje blok, který `astro dev` vykreslil. Tabulka bere vygenerovaný soubor `src/data/filament-preview.generated.json`: přijaté nabídky ze tří Heureka XML, seřazené podle Kč/kg, s obchodem, hmotností a časem stažení. Obnova:
+
+```bash
+npm run fetch:filament -- --write-preview src/data/filament-preview.generated.json
+```
+
+`astro build` má `import.meta.env.DEV === false`, takže se katalog do HTML pro Pages nezapíše. Vymyšlené fixture v `scripts/fixtures/filament-offers.example.json` zůstávají jen pro test importéru.
 
 ## Brána pro veřejné spuštění
 

@@ -11,9 +11,14 @@ import {
 
 interface Props {
   groups: OfferGroup[];
+  /** One table sorted by Kč/kg. Used for the local public-feed preview. */
+  catalog?: boolean;
 }
 
-const { groups } = Astro.props;
+const { groups, catalog = false } = Astro.props;
+const catalogRows = catalog
+  ? groups.flatMap((group) => group.offers).sort(compareByPricePerKg)
+  : [];
 
 const money = new Intl.NumberFormat('cs-CZ', {
   minimumFractionDigits: 0,
@@ -84,7 +89,75 @@ function sourceLabel(offer: ShopOffer): string {
   <p class="sort-note">
     Výchozí pořadí je cena za kilogram materiálu, bez dopravy. „Celkem s dopravou“ řadí jen nabídky, kde feed dopravu uvedl. Chybějící doprava není nula.
   </p>
-  {groups.map((group) => (
+  {catalog ? (
+    <article class="offer-group" data-offer-group>
+      <table>
+        <thead>
+          <tr>
+            <th>Produkt</th>
+            <th>Obchod</th>
+            <th class="tags">Varianta</th>
+            <th class="num">Hmotnost</th>
+            <th class="num">Kč/kg</th>
+            <th class="num">Cena</th>
+            <th class="num">Doprava</th>
+            <th class="num">Celkem</th>
+            <th>Stav</th>
+            <th>Aktualizace</th>
+          </tr>
+        </thead>
+        <tbody>
+          {catalogRows.map((offer) => {
+            const perKg = pricePerKg(offer);
+            const total = hasKnownShipping(offer) ? totalPrice(offer) : null;
+            const tags = filamentTags(offer);
+            const stale = isStale(offer);
+            return (
+              <tr data-offer data-shop={offer.shopName} data-per-kg={perKg ?? ''} data-total={total ?? ''}>
+                <td class="product">{offer.productName}</td>
+                <td>
+                  <a
+                    href={offer.affiliateUrl ?? offer.url}
+                    rel={offer.affiliateUrl ? 'sponsored nofollow noopener' : 'nofollow noopener'}
+                  >
+                    {offer.shopName}
+                  </a>
+                  {offer.affiliateUrl && <small class="aff">affiliate</small>}
+                  <small class="source">{sourceLabel(offer)}</small>
+                </td>
+                <td class="tags">
+                  {tags.length > 0 ? (
+                    <span class="offer-tags">
+                      {tags.map((tag) => <span>{tag}</span>)}
+                    </span>
+                  ) : (
+                    '—'
+                  )}
+                </td>
+                <td class="num">
+                  {offer.category === 'filament' ? formatWeight(offer.weightGrams) : '—'}
+                  {offer.category === 'filament' && offer.weightConfidence === 'unspecified' && (
+                    <small class="weight-flag">ověřit návin</small>
+                  )}
+                </td>
+                <td class="num">{perKg == null ? '—' : <strong>{formatPerKg(perKg, offer.currency)}</strong>}</td>
+                <td class="num">{formatAmount(offer.price, offer.currency)}</td>
+                <td class="num">
+                  {offer.shippingPrice === undefined ? 'neznámá' : formatAmount(offer.shippingPrice, offer.currency)}
+                </td>
+                <td class="num">{total == null ? '—' : formatAmount(total, offer.currency)}</td>
+                <td>{offer.inStock ? (offer.stockLabel ?? 'Skladem') : (offer.stockLabel ?? 'Není skladem')}</td>
+                <td>
+                  <time datetime={offer.fetchedAt}>{fetchedFormat.format(new Date(offer.fetchedAt))}</time>
+                  {stale && <small class="stale">starší 36 h</small>}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </article>
+  ) : groups.map((group) => (
     <article class="offer-group" data-offer-group>
       <h2>{group.productName}</h2>
       <table>
@@ -241,7 +314,8 @@ function sourceLabel(offer: ShopOffer): string {
   table { width: 100%; border-collapse: collapse; font-size: .88rem; }
   th, td { border-bottom: 1px solid var(--color-line); padding: .75rem .55rem; text-align: left; vertical-align: top; }
   th { color: var(--color-muted); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
-  td:not(.tags) { white-space: nowrap; }
+  td:not(.tags, .product) { white-space: nowrap; }
+  td.product { min-width: 16rem; white-space: normal; }
   th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
   td a { color: var(--color-ink); font-weight: 700; }
   td small { display: block; margin-top: .2rem; color: var(--color-muted); font-size: .72rem; font-weight: 650; white-space: normal; }

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FilamentOfferTable from '../components/FilamentOfferTable.astro';
-import { filamentExampleOffers } from '../data/filament-fixtures';
+import { loadFilamentPreviewOffers } from '../data/filament-preview';
 import {
   groupOffers,
   isComparerIndexable,
@@ -15,12 +15,14 @@ const shopCount = uniqueShopCount(productionOffers);
 const indexable = isComparerIndexable(productionOffers);
 const liveGroups = indexable ? groupOffers(productionOffers) : [];
 /**
- * Fixture markup is compiled only for `astro dev`.
- * The static build inlines `import.meta.env.DEV` as false, so example prices
- * are not rendered into the Cloudflare Pages HTML.
+ * The public-feed catalog is rendered only for `astro dev`.
+ * `astro build` inlines `import.meta.env.DEV` as false, so those prices
+ * are not written into the Cloudflare Pages HTML.
  * `?preview=1` is read in the browser and only reveals that dev-only block.
+ * Three shops do not open the public gate: product ids are still per shop.
  */
-const previewGroups = import.meta.env.DEV ? groupOffers(filamentExampleOffers) : [];
+const previewOffers = import.meta.env.DEV ? loadFilamentPreviewOffers() : [];
+const previewGroups = groupOffers(previewOffers);
 ---
 
 <BaseLayout
@@ -45,14 +47,15 @@ const previewGroups = import.meta.env.DEV ? groupOffers(filamentExampleOffers) :
         <section class="compare-preview" aria-labelledby="preview-title">
           <span>Náhled</span>
           <div>
-            <h2 id="preview-title">Tahle čísla nejsou z obchodu.</h2>
+            <h2 id="preview-title">{previewOffers.length} přijatých nabídek ze tří veřejných feedů.</h2>
             <p>
-              Jsou to vymyšlené fixture nabídky (<code>manual-approved</code>, <code>example</code>). Slouží jen k prohlédnutí tabulky v <code>npm run dev</code> na adrese <code>/srovnavac/?preview=1</code>.
-              Produkční brána je pořád {shopCount}/{MIN_PUBLIC_SHOPS} a stránka zůstává <code>noindex</code>. V buildu pro Cloudflare Pages se náhled nevykreslí.
+              Materialpro3D, Filamenty Brno a 3Dfil, jejich veřejné Heureka XML. Řádky jsou seřazené podle Kč/kg. U každého je obchod, hmotnost a čas stažení. Po 36 hodinách se označí „starší 36 h“.
+              Tohle není veřejný ceník: <code>offers</code> je prázdné, brána je {shopCount}/{MIN_PUBLIC_SHOPS} a stránka zůstává <code>noindex</code>. Stejná cívka se mezi obchody nesloučí, dokud není normalizační mapa.
+              Jen <code>npm run dev</code> a <code>/srovnavac/?preview=1</code>. V buildu pro Cloudflare Pages se tabulka nevykreslí.
             </p>
           </div>
         </section>
-        <FilamentOfferTable groups={previewGroups} />
+        <FilamentOfferTable groups={previewGroups} catalog />
       </div>
     )}
 

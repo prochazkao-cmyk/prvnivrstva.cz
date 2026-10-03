@@ -23,15 +23,15 @@ npm run check
 
 ## Srovnávač filamentu
 
-`/srovnavac/` je statická stránka. Produkční `offers` je prázdné, brána je 0/3 obchodů a stránka má `noindex`, dokud nejsou tři reálné feedy. Pravidla jsou v `docs/PRICE_FEED_CONTRACT.md`.
+`/srovnavac/` je statická stránka. Produkční `offers` je prázdné, brána je 0/3 obchodů a stránka má `noindex`. Tři veřejné feedy bránu samy neotevřou — chybí normalizace mezi obchody. Pravidla jsou v `docs/PRICE_FEED_CONTRACT.md`.
 
-Lokální náhled vymyšlených fixture cen (v buildu se neobjeví):
+Lokální náhled přijatých řádků ze tří Heureka XML (v buildu se neobjeví):
 
 ```bash
 npm run dev
 ```
 
-Otevřít [http://localhost:4321/srovnavac/?preview=1](http://localhost:4321/srovnavac/?preview=1).
+Otevřít [http://localhost:4321/srovnavac/?preview=1](http://localhost:4321/srovnavac/?preview=1). Katalog je `src/data/filament-preview.generated.json`. Obnova: `npm run fetch:filament -- --write-preview src/data/filament-preview.generated.json`.
 
 Kontrola importéru nad lokálními ukázkami a nad ořezanými výřezy tří veřejných Heureka XML (bez sítě):
 
