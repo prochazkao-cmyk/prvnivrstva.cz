@@ -27,7 +27,7 @@ Tento průvodce není fyzický test ani žebříček. Vychází z aktuálních s
 
 ABS a ASA jsou citlivější na teplotní rozdíly než běžné PLA. Uzavřený prostor kolem výtisku omezuje průvan a rychlé změny okolní teploty. To neznamená, že každá uzavřená tiskárna má aktivně vyhřívanou komoru: **enclosure** a **aktivně řízená teplota komory** jsou dvě různé vlastnosti.
 
-Příkladem druhého přístupu je [Prusa CORE One+](/recenze/prusa-core-one/), u které Prusa uvádí maximální teplotu komory 55 °C. Naproti tomu [Creality K1C](/stroje/creality-k1c/) používá uzavřenou konstrukci a výrobce mezi podporovanými filamenty uvádí ABS i ASA.
+Příkladem druhého přístupu je [Prusa CORE One+](/recenze/prusa-core-one/), u které Prusa uvádí maximální teplotu komory 55 °C. Naproti tomu [Creality K1C](/stroje/creality-k1-k1c/) používá uzavřenou konstrukci a výrobce mezi podporovanými filamenty uvádí ABS i ASA.
 
 Pokud už řešíte deformace výtisků, pokračujte také na náš [checklist warpingu u ABS a ASA](/clanky/warping-u-abs-priciny-a-checklist/).
 
@@ -58,11 +58,11 @@ U tiskárny, která má standardně mosaznou trysku, nelze automaticky předpokl
 
 ### Bambu Lab P1S
 
-[P1S](/stroje/bambu-lab-p1s/) je uzavřená CoreXY tiskárna. Bambu Lab mezi ideálními materiály uvádí mimo jiné ABS a ASA. Pro kupujícího je důležité rozlišovat základní materiály od abrazivních CF variant a ověřit konfiguraci hotendu/trysky pro konkrétní filament.
+[P1S](/stroje/bambu-p1s-x1c/) je uzavřená CoreXY tiskárna. Bambu Lab mezi ideálními materiály uvádí mimo jiné ABS a ASA. Pro kupujícího je důležité rozlišovat základní materiály od abrazivních CF variant a ověřit konfiguraci hotendu/trysky pro konkrétní filament.
 
 ### Creality K1C
 
-[K1C](/stroje/creality-k1c/) má uzavřenou CoreXY konstrukci, hotend do 300 °C a podložku do 100 °C. Creality výslovně uvádí ABS, ASA, PA, PC a také PLA-CF, PA-CF a PET-CF. Pro CF je relevantní ocelová špička trysky.
+[K1C](/stroje/creality-k1-k1c/) má uzavřenou CoreXY konstrukci, hotend do 300 °C a podložku do 100 °C. Creality výslovně uvádí ABS, ASA, PA, PC a také PLA-CF, PA-CF a PET-CF. Pro CF je relevantní ocelová špička trysky.
 
 ### Prusa CORE One+
 
