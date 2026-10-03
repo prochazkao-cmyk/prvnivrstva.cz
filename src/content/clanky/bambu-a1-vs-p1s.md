@@ -2,6 +2,7 @@
 title: "Bambu Lab A1 vs. P1S: kterou vybrat podle materiálu a použití"
 description: "Zdrojované srovnání Bambu Lab A1 a P1S bez univerzálního vítěze. Rozhoduje otevřená vs. uzavřená konstrukce, materiály a způsob používání."
 publishedAt: 2026-10-03
+reviewedAt: 2026-10-03
 level: "začátečník"
 technologies:
   - "FDM"
@@ -49,7 +50,7 @@ U A1 výrobce řadí ABS, ASA, PC, PA, PET a vláknem plněné polymery mezi **n
 
 Důvod není jen maximální teplota trysky. U materiálů náchylných k deformaci během chladnutí pomáhá omezení průvanu a stabilnější prostředí kolem výtisku. Proto není správné porovnávat A1 a P1S jen podle toho, že obě zvládnou 300 °C na hotendu.
 
-Pokud se vám díly zvedají z podložky, podívejte se také na průvodce [warpingem a odlepováním rohů](/problemy/warping/).
+Pokud se vám díly zvedají z podložky, podívejte se také na průvodce [warpingem u ABS: příčiny a checklist](/clanky/warping-u-abs-priciny-a-checklist/).
 
 ## 3. Kompozity: enclosure není totéž co připravenost na abrazivní filament
 
