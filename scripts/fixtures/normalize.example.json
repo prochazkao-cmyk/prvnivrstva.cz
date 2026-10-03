@@ -1,0 +1,4 @@
+{
+  "_comment": "Explicit cross-shop ids only. Keys are shopId:ITEM_ID. The importer never fuzzy-matches titles.",
+  "example-xml-shop:fixture-pla-1kg": "example-pla-black-1kg"
+}

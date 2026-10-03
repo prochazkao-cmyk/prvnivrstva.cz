@@ -21,6 +21,29 @@ Typy:
 npm run check
 ```
 
+## Srovnávač filamentu
+
+`/srovnavac/` je statická stránka a má `noindex`. Build vykreslí katalog `src/data/filament-preview.generated.json` (tři veřejná Heureka XML). Produkční `offers` zůstává prázdné: chybí normalizace mezi obchody, takže se indexace nezapíná. Pravidla jsou v `docs/PRICE_FEED_CONTRACT.md`.
+
+Obnova katalogu:
+
+```bash
+npm run fetch:filament -- --write-preview src/data/filament-preview.generated.json
+```
+
+Kontrola importéru nad lokálními ukázkami a nad ořezanými výřezy tří veřejných Heureka XML (bez sítě):
+
+```bash
+npm run import:filament
+npm run fetch:filament -- --offline
+```
+
+Stažení právě tří veřejných feedů (Materialpro3D, Filamenty Brno, 3Dfil). Aurapol a Filament PM se přeskakují — důvod je v `docs/PRICE_FEED_CONTRACT.md`. Příkaz nezapíše `src/data/offers.ts`.
+
+```bash
+npm run fetch:filament
+```
+
 ## Build
 
 ```bash

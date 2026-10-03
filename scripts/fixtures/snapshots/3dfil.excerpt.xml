@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Trimmed excerpt of a public Heureka XML feed, captured 2026-10-03.
+  Descriptions, images, and GPSR contact lines are removed.
+  Extra carriers are omitted; at least two different DELIVERY_PRICE values are kept when the feed had them.
+  Offline proof only. Not a live catalog and not imported into src/data/offers.ts.
+-->
+<SHOP>
+  <SHOPITEM>
+    <ITEM_ID>148</ITEM_ID>
+    <PRODUCTNAME>KEXCELLED | PLA | Bílá | 1.75mm | 1kg</PRODUCTNAME>
+    <PRODUCT>KEXCELLED | PLA | Bílá | 1.75mm | 1kg</PRODUCT>
+    <MANUFACTURER>Kexcelled</MANUFACTURER>
+    <URL>https://www.3dfil.cz/kexcelled-pla-1-75-1kg/</URL>
+    <PRICE_VAT>399,00</PRICE_VAT>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_PRICE>59,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>69,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>109,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Výrobce</PARAM_NAME>
+      <VAL>KEXCELLED</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>Bílá</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Recyklace</PARAM_NAME>
+      <VAL>♻ 7 - Směsný odpad</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>EAN</PARAM_NAME>
+      <VAL>8719689597313</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Váha</PARAM_NAME>
+      <VAL>1kg</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>AMS kompatibilní</PARAM_NAME>
+      <VAL>Ano</VAL>
+    </PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>1852</ITEM_ID>
+    <PRODUCTNAME>BAMBU LAB | Pla support | PLA-PETG | 1.75mm | 0,5kg | Refill</PRODUCTNAME>
+    <PRODUCT>BAMBU LAB | Pla support | PLA-PETG | 1.75mm | 0,5kg | Refill</PRODUCT>
+    <MANUFACTURER>Bambu Lab</MANUFACTURER>
+    <URL>https://www.3dfil.cz/bambu-lab-pla-support-pla-petg-1-75mm-0-5kg-refill---filament-pro-3d-tisk/</URL>
+    <PRICE_VAT>999,00</PRICE_VAT>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_PRICE>59,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>69,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>109,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Výrobce</PARAM_NAME>
+      <VAL>Bambu Lab</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>Support</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>Černá</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Recyklace</PARAM_NAME>
+      <VAL>♻ 7 - Směsný odpad</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Váha</PARAM_NAME>
+      <VAL>0,5kg</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Refill</PARAM_NAME>
+      <VAL>Ano</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>AMS kompatibilní</PARAM_NAME>
+      <VAL>Ne</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>RFID</PARAM_NAME>
+      <VAL>Ano</VAL>
+    </PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>1670</ITEM_ID>
+    <PRODUCTNAME>Anycubic Water-Wash Resin+ / BÍLÝ</PRODUCTNAME>
+    <PRODUCT>Anycubic Water-Wash Resin+ / BÍLÝ</PRODUCT>
+    <MANUFACTURER>Anycubic</MANUFACTURER>
+    <URL>https://www.3dfil.cz/anycubic-water-wash-resin--bily/</URL>
+    <PRICE_VAT>599,00</PRICE_VAT>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_PRICE>59,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>69,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>109,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Výrobce</PARAM_NAME>
+      <VAL>Anycubic</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>Bílá</VAL>
+    </PARAM>
+  </SHOPITEM>
+</SHOP>

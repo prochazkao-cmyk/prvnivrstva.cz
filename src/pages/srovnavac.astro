@@ -1,69 +1,69 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { offers, totalPrice, uniqueShopCount } from '../data/offers';
+import FilamentOfferTable from '../components/FilamentOfferTable.astro';
+import { loadFilamentPreviewOffers } from '../data/filament-preview';
+import {
+  groupOffers,
+  MIN_PUBLIC_SHOPS,
+  offers,
+  uniqueShopCount,
+} from '../data/offers';
 
-const shopCount = uniqueShopCount();
-const isLive = shopCount >= 3 && offers.length > 0;
-const grouped = new Map<string, typeof offers>();
-for (const offer of offers) {
-  const group = grouped.get(offer.productId) ?? [];
-  group.push(offer);
-  grouped.set(offer.productId, group);
-}
+const productionOffers = offers.filter((offer) => offer.example !== true);
+const shopCount = uniqueShopCount(productionOffers);
+/**
+ * The generated three-shop catalog is what /srovnavac/ renders, including
+ * `astro build`. `offers` stays empty. noindex stays on: product ids are
+ * still per shop, so this is not the normalized public index.
+ */
+const catalogOffers = loadFilamentPreviewOffers();
+const catalogGroups = groupOffers(catalogOffers);
 ---
 
 <BaseLayout
-  title="Srovnávač cen 3D tisku"
-  description="Lokální ceny 3D tiskáren a filamentů včetně dopravy, dostupnosti a času poslední aktualizace."
-  noindex={!isLive}
+  title="Srovnávač filamentu"
+  description="Cena filamentu za kilogram ze tří veřejných Heureka feedů. Doprava a sklad vedle Kč/kg. Stránka není ve vyhledávání."
+  noindex={true}
 >
   <main id="obsah" class="page section-page compare-page">
-    <p class="kicker">CENY V ČR A SR</p>
-    <h1 class="page-title">Srovnávač bez falešných „aktuálních cen“.</h1>
-    <p class="lede">Cena má smysl jen s obchodem, dopravou, dostupností a časem aktualizace. Dokud nemáme stabilní feed alespoň ze tří obchodů, stránku nepouštíme do vyhledávání a nevyplňujeme ji odhady.</p>
+    <p class="kicker">FILAMENT · KČ/KG</p>
+    <h1 class="page-title">Filament podle Kč/kg, ne podle provize.</h1>
+    <p class="lede">
+      Nejdřív cena materiálu za kilogram. Hmotnost musí přijít z feedu — když ji nejde přečíst, nabídku neukážeme a kilogram z názvu nevymyslíme. Doprava je v tabulce zvlášť a do výchozího pořadí nevstupuje. Tiskárny přijdou až po filamentech.
+      {catalogOffers.length > 0 && (
+        <>
+          {' '}
+          Tady je {catalogOffers.length} přijatých nabídek z veřejných Heureka XML obchodů Materialpro3D, Filamenty Brno a 3Dfil. Mřížka sdružuje stejný materiál, barvu a hmotnost. Fotka je IMGURL nejlevnější nabídky ve skupině. Kliknutí otevře nabídky a Koupit vede do e-shopu. Stejná cívka se mezi obchody nesloučí, dokud není normalizační mapa. Stránka není ve vyhledávání.
+        </>
+      )}
+    </p>
 
-    {!isLive ? (
-      <section class="compare-gate" aria-labelledby="gate-title">
-        <span>{shopCount}/3</span>
-        <div>
-          <h2 id="gate-title">Datová brána ještě není splněná.</h2>
-          <p>Napojíme pouze XML, API nebo affiliate feedy, které obchod poskytne nebo jejich použití povolí. Pořadí nabídek bude určovat zvolený cenový klíč, ne výše provize.</p>
-        </div>
-      </section>
+    {catalogGroups.length > 0 ? (
+      <FilamentOfferTable groups={catalogGroups} catalog />
     ) : (
-      <section aria-label="Aktuální nabídky">
-        {[...grouped.entries()].map(([productId, productOffers]) => (
-          <article class="offer-group">
-            <h2>{productOffers[0]?.productName ?? productId}</h2>
-            <table>
-              <thead><tr><th>Obchod</th><th>Cena</th><th>Doprava</th><th>Celkem</th><th>Stav</th><th>Aktualizace</th></tr></thead>
-              <tbody>
-                {productOffers.sort((a, b) => totalPrice(a) - totalPrice(b)).map((offer) => (
-                  <tr>
-                    <td><a href={offer.affiliateUrl ?? offer.url} rel="sponsored nofollow">{offer.shopName}</a></td>
-                    <td>{offer.price.toLocaleString('cs-CZ')} {offer.currency}</td>
-                    <td>{offer.shippingPrice === undefined ? '—' : `${offer.shippingPrice.toLocaleString('cs-CZ')} ${offer.currency}`}</td>
-                    <td><strong>{totalPrice(offer).toLocaleString('cs-CZ')} {offer.currency}</strong></td>
-                    <td>{offer.inStock ? (offer.stockLabel ?? 'Skladem') : (offer.stockLabel ?? 'Není skladem')}</td>
-                    <td><time datetime={offer.fetchedAt}>{new Date(offer.fetchedAt).toLocaleString('cs-CZ')}</time></td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </article>
-        ))}
+      <section class="compare-gate" aria-labelledby="gate-title">
+        <span>{shopCount}/{MIN_PUBLIC_SHOPS}</span>
+        <div>
+          <h2 id="gate-title">Živé ceny filamentu ještě nemáme.</h2>
+          <p>
+            Veřejně stránku pustíme až po třech stabilních obchodech. Do té doby tu není ceník a ve vyhledávání ji neukazujeme.
+            Napojení je jen XML, API nebo affiliate feed, který obchod poskytne nebo povolí. Výchozí pořadí bude Kč/kg produktu, ne výše provize a ne doprava.
+          </p>
+        </div>
       </section>
     )}
 
     <section class="method" aria-labelledby="method-title">
       <p class="kicker">PRAVIDLA</p>
-      <h2 id="method-title">Co srovnávač nikdy nesmí dělat.</h2>
+      <h2 id="method-title">Co srovnávač filamentu nesmí dělat.</h2>
       <ul>
-        <li>Provize nesmí měnit pořadí.</li>
-        <li>Starou cenu nesmíme vydávat za živou.</li>
-        <li>Dopravu nesmíme schovat, pokud rozhoduje o nejlevnější nabídce.</li>
-        <li>Produkty různých variant nesmíme sloučit jen proto, že mají podobný název.</li>
-        <li>Affiliate odkaz musí být označený.</li>
+        <li>Provize nesmí měnit pořadí ani filtr. Affiliate odkaz se jen označí.</li>
+        <li>Kilogram bereme jen z pole hmotnosti ve feedu. Nápis „1 kg“ v názvu nestačí.</li>
+        <li>Když hmotnost nejde přečíst, nabídku zahodíme. Nevymýšlíme ji a nedoplňujeme materiál na PLA.</li>
+        <li>Stretch fólie a jiné ne-filamenty neprojdou, ani když je feed označí jako PLA.</li>
+        <li>Neznámou dopravu nesčítáme jako nulu a neschováváme ji.</li>
+        <li>Starou cenu neukážeme bez označení. Po 36 hodinách od stažení je řádek „starší 36 h“.</li>
+        <li>Stejný název sám o sobě nabídky nesloučí. Společné productId vznikne jen z explicitní mapy.</li>
       </ul>
     </section>
   </main>
@@ -71,19 +71,41 @@ for (const offer of offers) {
 
 <style>
   .compare-page { padding-bottom: clamp(3rem, 7vw, 6rem); }
-  .compare-gate { display: grid; grid-template-columns: auto 1fr; gap: 1.25rem; align-items: center; margin: 2rem 0 4rem; border: 1px solid var(--color-line); border-radius: var(--radius-card); background: var(--color-card); padding: clamp(1rem, 3vw, 1.5rem); }
-  .compare-gate > span { display: grid; place-items: center; width: 5rem; aspect-ratio: 1; border-radius: 50%; background: var(--color-accent); color: #1a0d08; font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: 1.7rem; font-weight: 700; }
-  .compare-gate h2 { margin: 0; font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: clamp(1.5rem, 3vw, 2.3rem); letter-spacing: -.035em; }
+  .compare-gate {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: center;
+    margin: 2rem 0 2.5rem;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-card);
+    padding: clamp(1rem, 3vw, 1.5rem);
+  }
+  .compare-gate > span {
+    display: grid;
+    place-items: center;
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: var(--color-accent);
+    color: #1a0d08;
+    font-family: 'Iowan Old Style', 'Baskerville', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+  }
+  .compare-gate h2 {
+    margin: 0;
+    font-family: 'Iowan Old Style', 'Baskerville', serif;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    letter-spacing: -.035em;
+  }
   .compare-gate p { max-width: 55rem; margin: .35rem 0 0; color: var(--color-muted); }
-  .offer-group { margin-top: 2rem; overflow-x: auto; }
-  .offer-group h2 { font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: 2rem; }
-  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
-  th, td { border-bottom: 1px solid var(--color-line); padding: .75rem .55rem; text-align: left; white-space: nowrap; }
-  th { color: var(--color-muted); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
-  td a { color: var(--color-ink); font-weight: 700; }
   .method { margin-top: 4rem; }
   .method h2 { margin: .45rem 0 1rem; font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.04em; }
   .method ul { max-width: 55rem; padding-left: 1.2rem; }
   .method li { margin: .45rem 0; }
-  @media (max-width: 620px) { .compare-gate { grid-template-columns: 1fr; } }
+  @media (max-width: 620px) {
+    .compare-gate { grid-template-columns: 1fr; }
+  }
 </style>

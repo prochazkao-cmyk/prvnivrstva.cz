@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Trimmed excerpt of a public Heureka XML feed, captured 2026-10-03.
+  Descriptions, images, and GPSR contact lines are removed.
+  Extra carriers are omitted; at least two different DELIVERY_PRICE values are kept when the feed had them.
+  Offline proof only. Not a live catalog and not imported into src/data/offers.ts.
+-->
+<SHOP>
+  <SHOPITEM>
+    <ITEM_ID>CR-PLA-WHITE</ITEM_ID>
+    <PRODUCTNAME>Filament Creality Ender PLA 1,75 mm 1 kg, Bílá</PRODUCTNAME>
+    <PRODUCT>Filament Creality Ender PLA 1,75 mm 1 kg, Bílá</PRODUCT>
+    <MANUFACTURER>Creality</MANUFACTURER>
+    <URL>https://www.filamentybrno.cz/pla-standardni/filament-creality-ender-pla-1-75mm-1kg-bila/</URL>
+    <PRICE_VAT>399,00</PRICE_VAT>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_PRICE>109,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>99,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>129,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>Bílá</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Průměr struny</PARAM_NAME>
+      <VAL>1,75 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Hmotnost bez obalu</PARAM_NAME>
+      <VAL>1 kg</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Pracovní teplota</PARAM_NAME>
+      <VAL>220 ±20 °C</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Tolerance</PARAM_NAME>
+      <VAL>±0,03 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Typ povrchu</PARAM_NAME>
+      <VAL>Lesklý</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Značka</PARAM_NAME>
+      <VAL>Creality</VAL>
+    </PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>67826</ITEM_ID>
+    <PRODUCTNAME>Filament STRAPIDO PLA 1,75 mm 5 kg, Černá</PRODUCTNAME>
+    <PRODUCT>Filament STRAPIDO PLA 1,75 mm 5 kg, Černá</PRODUCT>
+    <MANUFACTURER>Strapido</MANUFACTURER>
+    <URL>https://www.filamentybrno.cz/pla-standardni/filament-strapido-pla-1-75mm-5kg-cerna/</URL>
+    <PRICE_VAT>2159,00</PRICE_VAT>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_PRICE>0</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>Černá</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Značka</PARAM_NAME>
+      <VAL>Strapido</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Průměr struny</PARAM_NAME>
+      <VAL>1,75 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Pracovní teplota</PARAM_NAME>
+      <VAL>220 ±20 °C</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Hmotnost bez obalu</PARAM_NAME>
+      <VAL>5 kg</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Tolerance</PARAM_NAME>
+      <VAL>±0,03 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Typ povrchu</PARAM_NAME>
+      <VAL>Lesklý</VAL>
+    </PARAM>
+  </SHOPITEM>
+</SHOP>

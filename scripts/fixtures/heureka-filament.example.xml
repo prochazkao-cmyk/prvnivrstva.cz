@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  EXAMPLE Heureka-like feed. Not downloaded from any shop.
+  Prices are invented. The importer must not fetch remote URLs.
+  Item fixture-pla-natural has "1 kg" in the title and no weight field: reject it.
+  Item fixture-stretch-film is labeled PLA and has a weight: reject it as not filament.
+  Item fixture-pla-net has both parcel weight and návin: keep the návin only.
+-->
+<SHOP>
+  <SHOPITEM>
+    <ITEM_ID>fixture-pla-1kg</ITEM_ID>
+    <PRODUCTNAME>Ukázkový PLA černý 1 kg (fixture)</PRODUCTNAME>
+    <URL>https://example.invalid/fixture/xml/pla</URL>
+    <IMGURL>https://example.invalid/fixture/pla.jpg</IMGURL>
+    <IMGURL_ALTERNATIVE>https://example.invalid/fixture/pla-2.jpg</IMGURL_ALTERNATIVE>
+    <PRICE_VAT>499</PRICE_VAT>
+    <MANUFACTURER>Ukázková značka</MANUFACTURER>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_ID>EXAMPLE</DELIVERY_ID>
+      <DELIVERY_PRICE>89</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Hmotnost</PARAM_NAME>
+      <VAL>1000 g</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>černá</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Průměr</PARAM_NAME>
+      <VAL>1,75 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Balení</PARAM_NAME>
+      <VAL>cívka</VAL>
+    </PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>fixture-pla-natural</ITEM_ID>
+    <PRODUCTNAME>Ukázkový PLA natural 1 kg (fixture)</PRODUCTNAME>
+    <URL>https://example.invalid/fixture/xml/pla-natural</URL>
+    <PRICE_VAT>529</PRICE_VAT>
+    <MANUFACTURER>Ukázková značka</MANUFACTURER>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>fixture-stretch-film</ITEM_ID>
+    <PRODUCTNAME>Stretch fólie průhledná</PRODUCTNAME>
+    <URL>https://example.invalid/fixture/xml/stretch</URL>
+    <PRICE_VAT>189</PRICE_VAT>
+    <MANUFACTURER>Obal</MANUFACTURER>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <PARAM>
+      <PARAM_NAME>Hmotnost</PARAM_NAME>
+      <VAL>2000 g</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>fixture-pla-net</ITEM_ID>
+    <PRODUCTNAME>Ukázkový PLA bílý (fixture)</PRODUCTNAME>
+    <URL>https://example.invalid/fixture/xml/pla-net</URL>
+    <IMGURL>javascript:alert(1)</IMGURL>
+    <PRICE_VAT>610</PRICE_VAT>
+    <MANUFACTURER>Ukázková značka</MANUFACTURER>
+    <DELIVERY_DATE>2</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_ID>EXAMPLE_A</DELIVERY_ID>
+      <DELIVERY_PRICE>0</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_ID>EXAMPLE_B</DELIVERY_ID>
+      <DELIVERY_PRICE>79</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Hmotnost</PARAM_NAME>
+      <VAL>1,2 kg</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Hmotnost návinu</PARAM_NAME>
+      <VAL>1000 g</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Balení</PARAM_NAME>
+      <VAL>refill</VAL>
+    </PARAM>
+  </SHOPITEM>
+</SHOP>

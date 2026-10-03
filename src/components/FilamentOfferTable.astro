@@ -1,0 +1,821 @@
+---
+import {
+  compareByPricePerKg,
+  hasKnownShipping,
+  isStale,
+  pricePerKg,
+  totalPrice,
+  type OfferGroup,
+  type ShopOffer,
+} from '../data/offers';
+
+interface Props {
+  groups: OfferGroup[];
+  /** One table sorted by Kč/kg. Used for the local public-feed preview. */
+  catalog?: boolean;
+}
+
+const { groups, catalog = false } = Astro.props;
+const catalogRows = catalog
+  ? groups.flatMap((group) => group.offers).sort(compareByPricePerKg)
+  : [];
+
+interface FilterOption {
+  key: string;
+  label: string;
+  count: number;
+}
+
+function facetKey(value: string | undefined): string {
+  const text = value?.trim();
+  if (!text) return '';
+  return text.normalize('NFC').toLocaleLowerCase('cs-CZ');
+}
+
+function textOptions(read: (offer: ShopOffer) => string | undefined): FilterOption[] {
+  const buckets = new Map<string, Map<string, number>>();
+  for (const offer of catalogRows) {
+    const raw = read(offer)?.trim() ?? '';
+    const key = facetKey(raw);
+    const labels = buckets.get(key) ?? new Map<string, number>();
+    labels.set(raw, (labels.get(raw) ?? 0) + 1);
+    buckets.set(key, labels);
+  }
+  return [...buckets.entries()]
+    .map(([key, labels]) => {
+      const count = [...labels.values()].reduce((sum, value) => sum + value, 0);
+      const label = key
+        ? [...labels.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'cs'))[0][0]
+        : 'neuvedeno';
+      return { key, label, count };
+    })
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'cs'));
+}
+
+function numberOptions(read: (offer: ShopOffer) => number | undefined, labelFor: (value: number) => string): FilterOption[] {
+  const counts = new Map<string, number>();
+  let missing = 0;
+  for (const offer of catalogRows) {
+    const value = read(offer);
+    if (value == null || !Number.isFinite(value)) {
+      missing += 1;
+      continue;
+    }
+    const key = String(value);
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  const options = [...counts.entries()]
+    .map(([key, count]) => ({ key, label: labelFor(Number(key)), count }))
+    .sort((a, b) => Number(a.key) - Number(b.key));
+  if (missing > 0) options.push({ key: '', label: 'neuvedeno', count: missing });
+  return options;
+}
+
+const money = new Intl.NumberFormat('cs-CZ', {
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 2,
+});
+const fetchedFormat = new Intl.DateTimeFormat('cs-CZ', {
+  day: 'numeric',
+  month: 'numeric',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+  timeZone: 'Europe/Prague',
+});
+
+function formatAmount(amount: number, currency: ShopOffer['currency']): string {
+  const suffix = currency === 'EUR' ? 'EUR' : 'Kč';
+  return `${money.format(amount)}\u00a0${suffix}`;
+}
+
+function formatPerKg(amount: number, currency: ShopOffer['currency']): string {
+  const unit = currency === 'EUR' ? 'EUR/kg' : 'Kč/kg';
+  return `${money.format(amount)}\u00a0${unit}`;
+}
+
+function formatWeight(grams: number): string {
+  if (grams >= 1000 && grams % 50 === 0) return `${money.format(grams / 1000)}\u00a0kg`;
+  return `${money.format(grams)}\u00a0g`;
+}
+
+function formatDiameter(mm: number): string {
+  return `${money.format(mm)}\u00a0mm`;
+}
+
+function rowFacet(value: string | undefined): string {
+  return facetKey(value);
+}
+
+function shopWord(count: number): string {
+  if (count === 1) return 'obchod';
+  if (count >= 2 && count <= 4) return 'obchody';
+  return 'obchodů';
+}
+
+const materialOptions = textOptions((offer) => (offer.category === 'filament' ? offer.material : undefined));
+const brandOptions = textOptions((offer) => (offer.category === 'filament' ? offer.brand : undefined));
+const colorOptions = textOptions((offer) => (offer.category === 'filament' ? offer.color : undefined));
+const diameterOptions = numberOptions(
+  (offer) => (offer.category === 'filament' ? offer.diameterMm : undefined),
+  (value) => formatDiameter(value),
+);
+const weightOptions = numberOptions(
+  (offer) => (offer.category === 'filament' ? offer.weightGrams : undefined),
+  (value) => formatWeight(value),
+);
+const shopOptions = textOptions((offer) => offer.shopName).map((option) => ({
+  ...option,
+  key: option.label === 'neuvedeno' ? '' : option.label,
+}));
+
+const filterFacets = [
+  { name: 'material', label: 'Materiál', options: materialOptions },
+  { name: 'brand', label: 'Značka', options: brandOptions },
+  { name: 'color', label: 'Barva', options: colorOptions },
+  { name: 'diameter', label: 'Průměr', options: diameterOptions },
+  { name: 'weight', label: 'Hmotnost', options: weightOptions },
+  { name: 'shop', label: 'Obchod', options: shopOptions },
+];
+
+function preferredLabel(source: ShopOffer[], read: (offer: ShopOffer) => string | undefined, fallback: string): string {
+  const counts = new Map<string, number>();
+  for (const offer of source) {
+    const raw = read(offer)?.trim();
+    if (!raw) continue;
+    counts.set(raw, (counts.get(raw) ?? 0) + 1);
+  }
+  const best = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'cs'))[0];
+  return best?.[0] ?? fallback;
+}
+
+function offerImage(offer: ShopOffer): string | undefined {
+  return offer.category === 'filament' ? offer.imageUrl : undefined;
+}
+
+interface CatalogCard {
+  key: string;
+  title: string;
+  imageUrl?: string;
+  offers: ShopOffer[];
+  bestPerKg: number;
+  bestTotal: number | null;
+  shopCount: number;
+}
+
+const productCards: CatalogCard[] = (() => {
+  const buckets = new Map<string, ShopOffer[]>();
+  for (const offer of catalogRows) {
+    if (offer.category !== 'filament') continue;
+    const key = [rowFacet(offer.material), rowFacet(offer.color), String(offer.weightGrams)].join('|');
+    const list = buckets.get(key) ?? [];
+    list.push(offer);
+    buckets.set(key, list);
+  }
+  const cards: CatalogCard[] = [];
+  for (const [key, list] of buckets) {
+    const offers = [...list].sort(compareByPricePerKg);
+    const best = pricePerKg(offers[0]);
+    if (best == null) continue;
+    const material = preferredLabel(offers, (offer) => (offer.category === 'filament' ? offer.material : undefined), 'Materiál neuveden');
+    const color = preferredLabel(offers, (offer) => (offer.category === 'filament' ? offer.color : undefined), 'barva neuvedena');
+    const weight = formatWeight(offers[0].category === 'filament' ? offers[0].weightGrams : 0);
+    const knownTotals = offers.filter(hasKnownShipping).map(totalPrice);
+    cards.push({
+      key,
+      title: `${material} · ${color} · ${weight}`,
+      imageUrl: offerImage(offers[0]),
+      offers,
+      bestPerKg: best,
+      bestTotal: knownTotals.length > 0 ? Math.min(...knownTotals) : null,
+      shopCount: new Set(offers.map((offer) => offer.shopId)).size,
+    });
+  }
+  cards.sort((a, b) => a.bestPerKg - b.bestPerKg || a.title.localeCompare(b.title, 'cs'));
+  return cards;
+})();
+
+function filamentTags(offer: ShopOffer): string[] {
+  if (offer.category !== 'filament') return [];
+  const tags = [offer.material, offer.brand, offer.color];
+  if (offer.diameterMm != null) tags.push(formatDiameter(offer.diameterMm));
+  if (offer.packaging === 'spool') tags.push('cívka');
+  if (offer.packaging === 'refill') tags.push('refill');
+  return tags.filter((tag): tag is string => Boolean(tag));
+}
+
+function sourceLabel(offer: ShopOffer): string {
+  if (offer.example) return 'ukázka, ne živá cena';
+  switch (offer.source) {
+    case 'xml':
+      return 'XML feed';
+    case 'api':
+      return 'API';
+    case 'affiliate-feed':
+      return 'affiliate feed';
+    case 'manual-approved':
+      return 'ručně schváleno';
+    default:
+      return offer.source;
+  }
+}
+---
+
+<div class="offer-board" data-offer-root>
+  <div class="sort-bar" data-sort-bar>
+    <span>Řazení</span>
+    <div role="group" aria-label="Řazení nabídek">
+      <button type="button" data-sort="per-kg" aria-pressed="true">Kč/kg</button>
+      <button type="button" data-sort="total" aria-pressed="false">Celkem s dopravou</button>
+    </div>
+  </div>
+  <p class="sort-note">
+    Výchozí pořadí je cena za kilogram materiálu, bez dopravy. „Celkem s dopravou“ řadí jen nabídky, kde feed dopravu uvedl. Chybějící doprava není nula.
+  </p>
+  {catalog && (
+    <div class="filter-panel" data-filters>
+      <div class="filter-head">
+        <p data-filter-count>Zobrazeno {catalogRows.length} z {catalogRows.length}</p>
+        <button type="button" data-filter-clear>Zrušit filtry</button>
+      </div>
+      <div class="filter-board">
+        {filterFacets.map((facet) => (
+          <fieldset>
+            <legend>{facet.label}</legend>
+            <div class="filter-options">
+              {facet.options.map((option) => (
+                <button type="button" data-filter={facet.name} data-value={option.key} aria-pressed="false">
+                  {option.label}
+                  <span>{option.count}</span>
+                </button>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+      </div>
+      <p class="filter-empty" data-filter-empty hidden>Žádná nabídka neprojde těmito filtry.</p>
+    </div>
+  )}
+  {catalog ? (
+    <div class="catalog-layout">
+      <div class="product-grid" data-product-grid>
+        {productCards.map((card) => (
+          <article
+            class="product-card"
+            data-product-card
+            data-title={card.title}
+            data-best-per-kg={card.bestPerKg}
+            data-best-total={card.bestTotal ?? ''}
+          >
+            <button type="button" class="product-open" data-open-product>
+              <span class="photo" data-card-photo aria-hidden="true">
+                {card.imageUrl && <img src={card.imageUrl} alt="" referrerpolicy="no-referrer" />}
+              </span>
+              <span class="product-copy">
+                <h3>{card.title}</h3>
+                <strong data-card-price>od {formatPerKg(card.bestPerKg, 'CZK')}</strong>
+                <span data-card-count>{card.offers.length} nabídek · {card.shopCount} {shopWord(card.shopCount)}</span>
+              </span>
+            </button>
+            <ul data-product-offers hidden>
+              {card.offers.map((offer) => {
+                const perKg = pricePerKg(offer);
+                const total = hasKnownShipping(offer) ? totalPrice(offer) : null;
+                const buyUrl = offer.affiliateUrl ?? offer.url;
+                const stale = isStale(offer);
+                return (
+                  <li
+                    data-offer
+                    data-shop={offer.shopName}
+                    data-material={offer.category === 'filament' ? rowFacet(offer.material) : ''}
+                    data-brand={offer.category === 'filament' ? rowFacet(offer.brand) : ''}
+                    data-color={offer.category === 'filament' ? rowFacet(offer.color) : ''}
+                    data-diameter={offer.category === 'filament' && offer.diameterMm != null ? String(offer.diameterMm) : ''}
+                    data-weight={offer.category === 'filament' ? String(offer.weightGrams) : ''}
+                    data-per-kg={perKg ?? ''}
+                    data-total={total ?? ''}
+                    data-image={offerImage(offer) ?? ''}
+                  >
+                    <span class="thumb" aria-hidden="true">
+                      {offerImage(offer) && <img src={offerImage(offer)} alt="" referrerpolicy="no-referrer" />}
+                    </span>
+                    <div>
+                      <p class="offer-shop">{offer.shopName}</p>
+                      <p class="offer-name">{offer.productName}</p>
+                      <p class="offer-meta">
+                        {offer.category === 'filament' && offer.brand ? <span>{offer.brand}</span> : null}
+                        {offer.category === 'filament' ? <span>{formatWeight(offer.weightGrams)}</span> : null}
+                        {offer.category === 'filament' && offer.diameterMm != null ? <span>{formatDiameter(offer.diameterMm)}</span> : null}
+                        {offer.category === 'filament' && offer.weightConfidence === 'unspecified' ? <span>ověřit návin</span> : null}
+                        <span>{offer.shippingPrice === undefined ? 'doprava neznámá' : `doprava ${formatAmount(offer.shippingPrice, offer.currency)}`}</span>
+                        <span>{offer.inStock ? (offer.stockLabel ?? 'Skladem') : (offer.stockLabel ?? 'Není skladem')}</span>
+                      </p>
+                      <p class="offer-fresh">
+                        <time datetime={offer.fetchedAt}>{fetchedFormat.format(new Date(offer.fetchedAt))}</time>
+                        {stale && <span class="stale">starší 36 h</span>}
+                      </p>
+                      {offer.affiliateUrl && <p class="aff">Odkaz může být affiliate.</p>}
+                    </div>
+                    <div class="offer-buy">
+                      <strong>{perKg == null ? '—' : formatPerKg(perKg, offer.currency)}</strong>
+                      <span>{formatAmount(offer.price, offer.currency)}</span>
+                      <span>{total == null ? 'celkem —' : `celkem ${formatAmount(total, offer.currency)}`}</span>
+                      <a class="buy" href={buyUrl} rel={offer.affiliateUrl ? 'sponsored nofollow noopener' : 'nofollow noopener'}>Koupit</a>
+                    </div>
+                  </li>
+                );
+              })}
+            </ul>
+          </article>
+        ))}
+      </div>
+      <dialog class="offer-dialog" data-offer-dialog aria-labelledby="offer-dialog-title">
+        <div class="dialog-head">
+          <h2 id="offer-dialog-title" data-dialog-title>Nabídky</h2>
+          <form method="dialog">
+            <button type="submit" class="dialog-close">Zavřít</button>
+          </form>
+        </div>
+        <p class="dialog-note">
+          Koupit otevře obchod. Košík ani platba tu nejsou. Když má nabídka partnerský odkaz, tlačítko jde přes něj a u řádku je napsáno, že odkaz může být affiliate. Na pořadí Kč/kg to nemá vliv. Neznámá doprava není nula.
+        </p>
+        <div data-dialog-slot></div>
+      </dialog>
+    </div>
+  ) : groups.map((group) => (
+    <article class="offer-group" data-offer-group>
+      <h2>{group.productName}</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Obchod</th>
+            <th class="tags">Varianta</th>
+            <th class="num">Hmotnost</th>
+            <th class="num">Kč/kg</th>
+            <th class="num">Cena</th>
+            <th class="num">Doprava</th>
+            <th class="num">Celkem</th>
+            <th>Stav</th>
+            <th>Aktualizace</th>
+          </tr>
+        </thead>
+        <tbody>
+          {group.offers.sort(compareByPricePerKg).map((offer) => {
+            const perKg = pricePerKg(offer);
+            const total = hasKnownShipping(offer) ? totalPrice(offer) : null;
+            const tags = filamentTags(offer);
+            const stale = isStale(offer);
+            return (
+              <tr
+                data-offer
+                data-shop={offer.shopName}
+                data-per-kg={perKg ?? ''}
+                data-total={total ?? ''}
+              >
+                <td>
+                  <a
+                    href={offer.affiliateUrl ?? offer.url}
+                    rel={offer.affiliateUrl ? 'sponsored nofollow noopener' : 'nofollow noopener'}
+                  >
+                    {offer.shopName}
+                  </a>
+                  {offer.affiliateUrl && <small class="aff">affiliate</small>}
+                  <small class="source">{sourceLabel(offer)}</small>
+                </td>
+                <td class="tags">
+                  {tags.length > 0 ? (
+                    <span class="offer-tags">
+                      {tags.map((tag) => <span>{tag}</span>)}
+                    </span>
+                  ) : (
+                    '—'
+                  )}
+                </td>
+                <td class="num">
+                  {offer.category === 'filament' ? formatWeight(offer.weightGrams) : '—'}
+                  {offer.category === 'filament' && offer.weightConfidence === 'unspecified' && (
+                    <small class="weight-flag">ověřit návin</small>
+                  )}
+                </td>
+                <td class="num">{perKg == null ? '—' : <strong>{formatPerKg(perKg, offer.currency)}</strong>}</td>
+                <td class="num">{formatAmount(offer.price, offer.currency)}</td>
+                <td class="num">
+                  {offer.shippingPrice === undefined ? 'neznámá' : formatAmount(offer.shippingPrice, offer.currency)}
+                </td>
+                <td class="num">{total == null ? '—' : formatAmount(total, offer.currency)}</td>
+                <td>{offer.inStock ? (offer.stockLabel ?? 'Skladem') : (offer.stockLabel ?? 'Není skladem')}</td>
+                <td>
+                  <time datetime={offer.fetchedAt}>{fetchedFormat.format(new Date(offer.fetchedAt))}</time>
+                  {stale && <small class="stale">starší 36 h</small>}
+                </td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    </article>
+  ))}
+</div>
+
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('[data-offer-root]')) {
+    if (root.dataset.sortBound === '1') continue;
+    root.dataset.sortBound = '1';
+    const bar = root.querySelector<HTMLElement>('[data-sort-bar]');
+    if (!bar) continue;
+    const buttons = [...bar.querySelectorAll<HTMLButtonElement>('button[data-sort]')];
+
+    const numberOrLast = (value: string | undefined) => {
+      if (!value) return Number.POSITIVE_INFINITY;
+      const parsed = Number(value);
+      return Number.isFinite(parsed) ? parsed : Number.POSITIVE_INFINITY;
+    };
+
+    const sortGroups = (mode: 'per-kg' | 'total') => {
+      const grid = root.querySelector<HTMLElement>('[data-product-grid]');
+      if (grid) {
+        const cardKey = mode === 'total' ? 'bestTotal' : 'bestPerKg';
+        const rowKey = mode === 'total' ? 'total' : 'perKg';
+        const cards = [...grid.querySelectorAll<HTMLElement>('[data-product-card]')];
+        for (const card of cards) {
+          const list = card.querySelector<HTMLElement>('[data-product-offers]');
+          if (!list) continue;
+          const rows = [...list.querySelectorAll<HTMLElement>('[data-offer]')];
+          rows.sort((a, b) => {
+            const diff = numberOrLast(a.dataset[rowKey]) - numberOrLast(b.dataset[rowKey]);
+            if (diff !== 0) return diff;
+            return (a.dataset.shop ?? '').localeCompare(b.dataset.shop ?? '', 'cs');
+          });
+          for (const row of rows) list.append(row);
+        }
+        cards.sort((a, b) => {
+          const diff = numberOrLast(a.dataset[cardKey]) - numberOrLast(b.dataset[cardKey]);
+          if (diff !== 0) return diff;
+          return (a.dataset.title ?? '').localeCompare(b.dataset.title ?? '', 'cs');
+        });
+        for (const card of cards) grid.append(card);
+        return;
+      }
+      const key = mode === 'total' ? 'total' : 'perKg';
+      const articles = [...root.querySelectorAll<HTMLElement>('[data-offer-group]')];
+      for (const article of articles) {
+        const body = article.querySelector('tbody');
+        if (!body) continue;
+        const rows = [...body.querySelectorAll<HTMLTableRowElement>('[data-offer]')];
+        rows.sort((a, b) => {
+          const diff = numberOrLast(a.dataset[key]) - numberOrLast(b.dataset[key]);
+          if (diff !== 0) return diff;
+          return (a.dataset.shop ?? '').localeCompare(b.dataset.shop ?? '', 'cs');
+        });
+        for (const row of rows) body.append(row);
+        const best = rows.reduce((min, row) => Math.min(min, numberOrLast(row.dataset[key])), Number.POSITIVE_INFINITY);
+        article.dataset.best = String(best);
+      }
+      articles.sort((a, b) => Number(a.dataset.best) - Number(b.dataset.best));
+      for (const article of articles) root.append(article);
+    };
+
+    for (const button of buttons) {
+      button.addEventListener('click', () => {
+        const mode = button.dataset.sort === 'total' ? 'total' : 'per-kg';
+        sortGroups(mode);
+        for (const other of buttons) other.setAttribute('aria-pressed', other === button ? 'true' : 'false');
+      });
+    }
+
+    const filterRoot = root.querySelector<HTMLElement>('[data-filters]');
+    if (!filterRoot) continue;
+    const facets = ['material', 'brand', 'color', 'diameter', 'weight', 'shop'] as const;
+    const count = filterRoot.querySelector<HTMLElement>('[data-filter-count]');
+    const empty = filterRoot.querySelector<HTMLElement>('[data-filter-empty]');
+    const filterButtons = [...filterRoot.querySelectorAll<HTMLButtonElement>('button[data-filter]')];
+
+    const applyFilters = () => {
+      const selected = new Map<string, Set<string>>();
+      for (const facet of facets) selected.set(facet, new Set());
+      for (const button of filterButtons) {
+        if (button.getAttribute('aria-pressed') !== 'true') continue;
+        const facet = button.dataset.filter;
+        if (!facet || !selected.has(facet)) continue;
+        selected.get(facet)?.add(button.dataset.value ?? '');
+      }
+      const rows = [...root.querySelectorAll<HTMLTableRowElement>('[data-offer]')];
+      let shown = 0;
+      for (const row of rows) {
+        let visible = true;
+        for (const facet of facets) {
+          const chosen = selected.get(facet);
+          if (!chosen || chosen.size === 0) continue;
+          const value = row.dataset[facet] ?? '';
+          if (!chosen.has(value)) {
+            visible = false;
+            break;
+          }
+        }
+        row.hidden = !visible;
+        if (visible) shown += 1;
+      }
+      if (count) count.textContent = `Zobrazeno ${shown} z ${rows.length}`;
+      if (empty) empty.hidden = shown !== 0;
+      const amount = new Intl.NumberFormat('cs-CZ', { maximumFractionDigits: 2 });
+      for (const card of root.querySelectorAll<HTMLElement>('[data-product-card]')) {
+        const visible = [...card.querySelectorAll<HTMLElement>('[data-offer]')].filter((row) => !row.hidden);
+        card.hidden = visible.length === 0;
+        if (visible.length === 0) continue;
+        const perKgValues = visible.map((row) => Number(row.dataset.perKg)).filter((value) => Number.isFinite(value));
+        const best = Math.min(...perKgValues);
+        card.dataset.bestPerKg = String(best);
+        const price = card.querySelector<HTMLElement>('[data-card-price]');
+        if (price) price.textContent = `od ${amount.format(best)}\u00a0Kč/kg`;
+        const totals = visible.map((row) => row.dataset.total).filter((value): value is string => Boolean(value)).map(Number);
+        card.dataset.bestTotal = totals.length > 0 ? String(Math.min(...totals)) : '';
+        const shops = new Set(visible.map((row) => row.dataset.shop).filter(Boolean));
+        const cheapest = [...visible].sort((a, b) => {
+          const diff = numberOrLast(a.dataset.perKg) - numberOrLast(b.dataset.perKg);
+          if (diff !== 0) return diff;
+          return (a.dataset.shop ?? '').localeCompare(b.dataset.shop ?? '', 'cs');
+        })[0];
+        const slot = card.querySelector<HTMLElement>('[data-card-photo]');
+        const nextImage = cheapest?.dataset.image ?? '';
+        if (slot) {
+          let photo = slot.querySelector('img');
+          if (!nextImage) {
+            photo?.remove();
+          } else {
+            if (!photo) {
+              photo = document.createElement('img');
+              photo.alt = '';
+              photo.referrerPolicy = 'no-referrer';
+              slot.append(photo);
+            }
+            if (photo.getAttribute('src') !== nextImage) photo.src = nextImage;
+          }
+        }
+        const label = card.querySelector<HTMLElement>('[data-card-count]');
+        const shopCount = shops.size;
+        const shopLabel = shopCount === 1 ? 'obchod' : shopCount >= 2 && shopCount <= 4 ? 'obchody' : 'obchodů';
+        if (label) label.textContent = `${visible.length} nabídek · ${shopCount} ${shopLabel}`;
+      }
+      const totalSort = root.querySelector<HTMLButtonElement>('button[data-sort="total"]');
+      sortGroups(totalSort?.getAttribute('aria-pressed') === 'true' ? 'total' : 'per-kg');
+      const dialog = root.querySelector<HTMLDialogElement>('[data-offer-dialog]');
+      if (dialog?.open) dialog.close();
+    };
+
+    for (const button of filterButtons) {
+      button.addEventListener('click', () => {
+        button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+        applyFilters();
+      });
+    }
+    filterRoot.querySelector<HTMLButtonElement>('[data-filter-clear]')?.addEventListener('click', () => {
+      for (const button of filterButtons) button.setAttribute('aria-pressed', 'false');
+      applyFilters();
+    });
+
+    root.addEventListener(
+      'error',
+      (event) => {
+        const image = event.target;
+        if (image instanceof HTMLImageElement) image.remove();
+      },
+      true,
+    );
+
+    const dialog = root.querySelector<HTMLDialogElement>('[data-offer-dialog]');
+    const slot = dialog?.querySelector<HTMLElement>('[data-dialog-slot]');
+    const dialogTitle = dialog?.querySelector<HTMLElement>('[data-dialog-title]');
+    root.addEventListener('click', (event) => {
+      const opener = (event.target as HTMLElement | null)?.closest<HTMLElement>('[data-open-product]');
+      if (!opener || !dialog || !slot || !dialogTitle) return;
+      const card = opener.closest<HTMLElement>('[data-product-card]');
+      const source = card?.querySelector<HTMLElement>('[data-product-offers]');
+      if (!card || !source) return;
+      const copy = source.cloneNode(true) as HTMLElement;
+      for (const row of [...copy.querySelectorAll<HTMLElement>('[data-offer]')]) {
+        if (row.hidden) row.remove();
+        else row.removeAttribute('data-offer');
+      }
+      copy.hidden = false;
+      slot.replaceChildren(copy);
+      dialogTitle.textContent = card.dataset.title ?? 'Nabídky';
+      dialog.showModal();
+    });
+  }
+</script>
+
+<style>
+  .sort-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem 1rem;
+    align-items: center;
+    margin-top: .5rem;
+  }
+  .sort-bar > span {
+    color: var(--color-muted);
+    font-size: .72rem;
+    font-weight: 760;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .sort-bar div { display: flex; gap: .4rem; }
+  .sort-bar button {
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+    padding: .45rem .8rem;
+    color: var(--color-ink);
+    font: inherit;
+    font-size: .85rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .sort-bar button[aria-pressed='true'] {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: #1a0d08;
+  }
+  .sort-note { max-width: 55rem; margin: .8rem 0 0; color: var(--color-muted); font-size: .92rem; }
+  .filter-panel { margin-top: 1.25rem; }
+  .filter-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .filter-head p { margin: 0; font-weight: 700; }
+  .filter-head button,
+  .filter-options button {
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+    color: var(--color-ink);
+    font: inherit;
+    cursor: pointer;
+  }
+  .filter-head button { padding: .4rem .8rem; font-size: .85rem; font-weight: 700; }
+  .filter-board {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.5rem;
+    margin-top: 1rem;
+  }
+  .filter-board fieldset {
+    margin: 0;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-card);
+    padding: .8rem .9rem 1rem;
+    min-width: 0;
+  }
+  .filter-board legend {
+    padding: 0 .35rem;
+    color: var(--color-muted);
+    font-size: .72rem;
+    font-weight: 760;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .filter-options { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .filter-options button {
+    display: inline-flex;
+    gap: .4rem;
+    align-items: baseline;
+    padding: .38rem .7rem;
+    font-size: .82rem;
+    font-weight: 700;
+  }
+  .filter-options button span { color: var(--color-muted); font-size: .72rem; font-weight: 650; }
+  .filter-options button[aria-pressed='true'] {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: #1a0d08;
+  }
+  .filter-options button[aria-pressed='true'] span { color: #1a0d08; }
+  .filter-empty { margin: .8rem 0 0; font-weight: 700; }
+  @media (max-width: 800px) {
+    .filter-board { grid-template-columns: 1fr; }
+  }
+  .catalog-layout { margin-top: 1.5rem; }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(14.5rem, 1fr));
+    gap: 1rem;
+  }
+  .product-open {
+    display: grid;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-card);
+    padding: 0;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .product-open:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+  .photo, .thumb {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #e7e1d6;
+  }
+  .photo {
+    height: 7.25rem;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .thumb {
+    width: 3.25rem;
+    height: 3.25rem;
+    align-self: start;
+    border-radius: .45rem;
+  }
+  .photo img, .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .product-copy { display: grid; gap: .35rem; padding: .9rem 1rem 1.05rem; }
+  .product-copy h3 {
+    margin: 0;
+    font-family: 'Iowan Old Style', 'Baskerville', serif;
+    font-size: 1.35rem;
+    letter-spacing: -.03em;
+    line-height: 1.15;
+  }
+  .product-copy strong { font-size: 1.05rem; }
+  .product-copy [data-card-count] { color: var(--color-muted); font-size: .82rem; font-weight: 650; }
+  .offer-dialog {
+    width: min(28rem, calc(100vw - 1.5rem));
+    max-height: calc(100vh - 2rem);
+    overflow: auto;
+    margin-right: .75rem;
+    margin-left: auto;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-card);
+    color: var(--color-ink);
+    padding: 1.1rem 1.2rem 1.4rem;
+  }
+  .offer-dialog::backdrop { background: rgba(23, 21, 15, .28); }
+  .dialog-head { display: flex; gap: 1rem; align-items: flex-start; justify-content: space-between; }
+  .dialog-head h2 {
+    margin: 0;
+    font-family: 'Iowan Old Style', 'Baskerville', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    letter-spacing: -.03em;
+  }
+  .dialog-close, .buy {
+    border: 0;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .dialog-close { background: transparent; color: var(--color-ink); padding: .35rem .2rem; }
+  .dialog-note { margin: .8rem 0 0; color: var(--color-muted); font-size: .92rem; }
+  [data-product-offers] { list-style: none; margin: .4rem 0 0; padding: 0; }
+  [data-product-offers] li {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: .8rem 1rem;
+    padding: .95rem 0;
+    border-top: 1px solid var(--color-line);
+  }
+  .offer-shop { margin: 0; font-weight: 800; }
+  .offer-name { margin: .2rem 0 0; }
+  .offer-meta, .offer-fresh { display: flex; flex-wrap: wrap; gap: .35rem .7rem; margin: .35rem 0 0; color: var(--color-muted); font-size: .78rem; }
+  .offer-buy { display: grid; justify-items: end; align-content: start; gap: .2rem; text-align: right; }
+  .offer-buy strong { font-size: 1.05rem; }
+  .offer-buy span { color: var(--color-muted); font-size: .78rem; }
+  .buy {
+    margin-top: .45rem;
+    background: var(--color-accent);
+    color: #1a0d08;
+    padding: .55rem .95rem;
+    text-decoration: none;
+  }
+  .offer-group { margin-top: 2rem; overflow-x: auto; }
+  .offer-group h2 { font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: 2rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+  th, td { border-bottom: 1px solid var(--color-line); padding: .75rem .55rem; text-align: left; vertical-align: top; }
+  th { color: var(--color-muted); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; white-space: nowrap; }
+  td:not(.tags, .product) { white-space: nowrap; }
+  td.product { min-width: 16rem; white-space: normal; }
+  th.num, td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  td a { color: var(--color-ink); font-weight: 700; }
+  td small { display: block; margin-top: .2rem; color: var(--color-muted); font-size: .72rem; font-weight: 650; white-space: normal; }
+  .aff, .stale, .weight-flag { color: var(--color-accent-ink); }
+  .offer-tags { display: flex; flex-wrap: wrap; gap: .3rem; }
+  .offer-tags span {
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    padding: .12rem .45rem;
+    font-size: .72rem;
+    font-weight: 700;
+  }
+</style>

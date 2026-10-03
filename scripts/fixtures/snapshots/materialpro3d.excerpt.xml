@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Trimmed excerpt of a public Heureka XML feed, captured 2026-10-03.
+  Descriptions, images, and GPSR contact lines are removed.
+  Extra carriers are omitted; at least two different DELIVERY_PRICE values are kept when the feed had them.
+  Offline proof only. Not a live catalog and not imported into src/data/offers.ts.
+-->
+<SHOP>
+  <SHOPITEM>
+    <ITEM_ID>ASA175FM75TYW</ITEM_ID>
+    <PRODUCTNAME>ASA Extrafill &quot;Traffic Yellow&quot; 1,75 mm 3D filament 750 g Fillamentum</PRODUCTNAME>
+    <PRODUCT>ASA Extrafill &quot;Traffic Yellow&quot; 1,75 mm 3D filament 750 g Fillamentum</PRODUCT>
+    <MANUFACTURER>Fillamentum</MANUFACTURER>
+    <URL>https://www.materialpro3d.cz/asa-1-75/asa-extrafill--traffic-yellow--1-75-mm-3d-filament/</URL>
+    <PRICE_VAT>645,00</PRICE_VAT>
+    <DELIVERY_DATE>0</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_PRICE>99,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>89,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>139,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Tolerance/průměr</PARAM_NAME>
+      <VAL>+/- 0,05 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Podložka</PARAM_NAME>
+      <VAL>60 - 100°C</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Pracovní teplota</PARAM_NAME>
+      <VAL>250 - 255°C</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>žlutá</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Průměr struny</PARAM_NAME>
+      <VAL>1,75 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Hmotnost bez obalu</PARAM_NAME>
+      <VAL>0,75 kg</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Vlastnost filamentu</PARAM_NAME>
+      <VAL>UV rezistentní</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>ASA</VAL>
+    </PARAM>
+  </SHOPITEM>
+  <SHOPITEM>
+    <ITEM_ID>PLA175PM1BEG</ITEM_ID>
+    <PRODUCTNAME>Filament-PM PLA tisková struna béžová 1,75 mm 1 kg Filament PM</PRODUCTNAME>
+    <PRODUCT>Filament-PM PLA tisková struna béžová 1,75 mm 1 kg Filament PM</PRODUCT>
+    <MANUFACTURER>Filament-PM</MANUFACTURER>
+    <URL>https://www.materialpro3d.cz/pla-1-75/pla-filament-bezovy-1-75-mm-2/</URL>
+    <PRICE_VAT>399,00</PRICE_VAT>
+    <DELIVERY_DATE>4</DELIVERY_DATE>
+    <DELIVERY>
+      <DELIVERY_PRICE>99,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>89,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <DELIVERY>
+      <DELIVERY_PRICE>139,00</DELIVERY_PRICE>
+    </DELIVERY>
+    <PARAM>
+      <PARAM_NAME>Tolerance/průměr</PARAM_NAME>
+      <VAL>+/- 0,05 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Podložka</PARAM_NAME>
+      <VAL>0 - 60°C</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Pracovní teplota</PARAM_NAME>
+      <VAL>195 - 210°C</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Průměr struny</PARAM_NAME>
+      <VAL>1,75 mm</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Hmotnost bez obalu</PARAM_NAME>
+      <VAL>1 kg</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Barva</PARAM_NAME>
+      <VAL>béžová</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>RAL</PARAM_NAME>
+      <VAL>1015</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Pantone</PARAM_NAME>
+      <VAL>726</VAL>
+    </PARAM>
+    <PARAM>
+      <PARAM_NAME>Materiál</PARAM_NAME>
+      <VAL>PLA</VAL>
+    </PARAM>
+  </SHOPITEM>
+</SHOP>
