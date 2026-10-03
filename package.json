@@ -12,6 +12,7 @@
     "check:links": "node scripts/check-links.mjs",
     "check:editorial": "node scripts/check-editorial.mjs",
     "import:filament": "node scripts/import-filament-feed.mjs",
+    "fetch:filament": "node scripts/fetch-filament-feeds.mjs",
     "astro": "astro"
   },
   "engines": {

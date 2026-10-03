@@ -11,6 +11,20 @@ Cíl: lokální CZ/SK ceny, které lze auditovat. Žádné ručně udržované �
 
 Agresivní scraping není výchozí řešení.
 
+## Výjimka provozovatele: tři veřejné feedy
+
+Provozovatel 3. 10. 2026 zrušil pravidlo „nejdřív souhlas, potom jakýkoli fetch“ jen pro tři veřejné Heureka XML. Jiné obchody, HTML kategorií a hádání tajných URL to nepokrývá.
+
+- Materialpro3D — `https://www.materialpro3d.cz/heureka/export/products.xml`
+- Filamenty Brno — `https://www.filamentybrno.cz/heureka/export/products.xml`
+- 3Dfil — `https://www.3dfil.cz/heureka/export/products.xml`
+
+`npm run fetch:filament` bere jen tento seznam, představí se jako `PrvniVrstvaFilamentBot`, mezi obchody dvě vteřiny čeká, odpověď cachuje do `.cache/filament-feeds/` a při HTTP chybě, cizím přesměrování nebo ne-XML odpovědi skončí. Nejde do košíku, na přihlášení, na stránky produktů ani na další e-shopy. `Content-Signal: ai-train=no` se neobchází: XML se mapuje na řádky nabídek, neukládá se jako trénovací korpus.
+
+Aurapol a Filament PM veřejný feed bez tajného tokenu nemají (u Filament PM obvyklé cesty vrací 404, u Aurapol je feed až za tokenem v administraci Upgates a token se nehádá). Jedna kategorie HTML u každého — Aurapol `/cz/pla`, Filament PM `/pla` — hmotnost návinu neobsahuje, jen filtr a „1 kg“ v názvu, takže se z HTML nic neimportuje. Místo nich je třetí zdroj veřejné XML 3Dfilu. Příkaz nezapisuje do `src/data/offers.ts`. `/srovnavac/` zůstává `noindex`, dokud zkontrolované řádky z aspoň tří obchodů nejsou ručně v `offers`.
+
+Bez sítě: `npm run fetch:filament -- --offline` a stejná kontrola uvnitř `npm run import:filament` mapují ořezané výřezy v `scripts/fixtures/snapshots/` (popisy, obrázky a GPSR kontakty jsou pryč). Výřezy nejsou ukázkové fixture a do produkce se neimportují.
+
 ## Povinná pole nabídky
 
 - stabilní `productId`,
@@ -68,7 +82,7 @@ Každá nabídka musí mít `fetchedAt`. Výchozí okno je 36 hodin (`STALE_AFTE
 
 ## Validace filamentového importu
 
-Importér je `scripts/import-filament-feed.mjs`. Čte jen lokální soubor. Argument ve tvaru `https://…` odmítne — feed se stáhne ručně, skript obchody neprohlíží.
+Importér je `scripts/import-filament-feed.mjs`. Čte jen lokální soubor. Argument ve tvaru `https://…` odmítne. Veřejné XML z výjimky výše stahuje jen `scripts/fetch-filament-feeds.mjs` a výsledek předá stejnému mapování.
 
 Řádek se zahodí, když:
 
@@ -78,13 +92,16 @@ Importér je `scripts/import-filament-feed.mjs`. Čte jen lokální soubor. Argu
 - cena produktu chybí nebo není kladná,
 - nejde určit sklad (u Heureka-like XML je `DELIVERY_DATE` &lt; 0 nebo prázdné neznámý stav, ne „skladem“),
 - název sedí na ne-filament (startovní seznam: stretch, fólie, resin, pryskyřice, isopropyl, sušička). Špatně vyplněný materiál PLA takovou položku nezachrání,
-- průměr nebo balení ve feedu jsou, ale nejdou převést na `diameterMm` / `spool|refill`.
+- průměr nebo balení ve feedu jsou, ale nejdou převést na `diameterMm` / `spool|refill`. Tolerance (`+/- 0,05 mm`) se přeskočí, když je vedle ní parseovatelný `Průměr struny` v rozsahu 1–4 mm. Dva různé parseovatelné průměry se neuhádnou. Když žádný průměr parseovat nejde, řádek se zahodí. Průměr z názvu se nebere.
 
 Hmotnost:
 
-- pole typu „hmotnost návinu“, „filament“, „netto“ má přednost a dostane `weightConfidence: net`,
-- jediné obecné pole „Hmotnost“ / „Weight“ se přijme jako `unspecified` a v UI se označí „ověřit návin“ (může jít o hmotnost balíku),
+- parametrem hmotnosti je jen pole, jehož název je hmotnost (`Hmotnost`, `Váha`, `Weight`, návin, netto). `Vlastnost filamentu` hmotnost není,
+- pole typu „hmotnost návinu“, „hmotnost filamentu“, „netto“, „hmotnost bez obalu“ má přednost a dostane `weightConfidence: net`,
+- jediné obecné pole „Hmotnost“ / „Váha“ / „Weight“ se přijme jako `unspecified` a v UI se označí „ověřit návin“ (může jít o hmotnost balíku),
 - když jsou obě, vyhraje návin; balíková hmotnost se do Kč/kg nepoužije.
+
+Balení: `Balení` / `Packaging` se převádí na `spool` nebo `refill`. Parametr `Refill: Ano` je refill. Z názvu produktu se refill ani cívka nedočtou.
 
 Doprava:
 
@@ -108,7 +125,7 @@ node scripts/import-filament-feed.mjs --xml ./merchant-feed.xml \
 
 Postup, až bude skutečný feed:
 
-1. Uložit XML nebo JSON od obchodu na disk. Nescrapovat e-shop.
+1. U tří veřejných feedů z výjimky výše stačí `npm run fetch:filament`. Jinak uložit XML nebo JSON od obchodu na disk a e-shop nescrapovat.
 2. Spustit importér a projít přijaté řádky i každý reject.
 3. Zkontrolovat `weightConfidence` a varování k dopravě.
 4. Doplnit normalizační mapu tam, kde jde prokazatelně o stejnou variantu (stejný návin, barva, průměr, cívka vs. refill).
