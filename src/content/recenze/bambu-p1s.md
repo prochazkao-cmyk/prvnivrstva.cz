@@ -81,7 +81,7 @@ Výrobce zároveň nabízí **LAN Only Mode** a lokální workflow. Proto není 
 
 ## P1S vs. A1: první rozcestník
 
-[A1](/recenze/bambu-lab-a1/) a P1S mají shodný nominální tiskový objem 256 × 256 × 256 mm, ale konstrukčně míří jinam. A1 je otevřený bedslinger, zatímco P1S je uzavřený CoreXY. Pokud tisknete hlavně PLA/PETG a chcete jednoduchý otevřený stroj, dává smysl začít u A1. Pokud je pro vaše použití důležitý uzavřený prostor kolem dílu, P1S je relevantnější větev katalogu.
+[A1](/stroje/bambu-a1/) a P1S mají shodný nominální tiskový objem 256 × 256 × 256 mm, ale konstrukčně míří jinam. A1 je otevřený bedslinger, zatímco P1S je uzavřený CoreXY. Pokud tisknete hlavně PLA/PETG a chcete jednoduchý otevřený stroj, dává smysl začít u A1. Pokud je pro vaše použití důležitý uzavřený prostor kolem dílu, P1S je relevantnější větev katalogu.
 
 Nejde o náhradu skutečného srovnávacího testu; je to konstrukční rozcestník podle doložitelných vlastností obou strojů.
 
