@@ -119,7 +119,7 @@ Slicer není místo, kde se má „něco poladit pro jistotu“. Je to místo, k
 - **Máte více strojů nebo chcete hlubší kalibrace:** vyzkoušejte OrcaSlicer.
 - **Všechno tiskne dobře:** není povinnost slicer měnit.
 
-Další krok je [kalibrace průtoku](/rady-a-tipy/kalibrace-flow/) až ve chvíli, kdy pro ni máte důvod. Pokud se problém projevuje na výtisku, začněte raději v [tiskové poradně](/problemy/) podle symptomu.
+Širší mapa programů, včetně toho, na čem Bambu Studio stojí, je v [průvodci FDM slicery](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/). Další krok je [kalibrace průtoku](/rady-a-tipy/kalibrace-flow/) až ve chvíli, kdy pro ni máte důvod. Pokud se problém projevuje na výtisku, začněte raději v [tiskové poradně](/problemy/) podle symptomu.
 
 ## Zdroje
 
