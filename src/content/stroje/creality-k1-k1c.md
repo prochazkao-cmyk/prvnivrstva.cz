@@ -74,7 +74,7 @@ Pro Bambu máme samostatný [zdrojovaný profil P1S](/recenze/bambu-p1s/).
 
 CORE One+ je také uzavřená CoreXY tiskárna, ale jde o jiný ekosystém a jiný přístup k dokumentaci, servisu a rozšiřování. K1C proto není vhodné zjednodušovat na „levnější CORE One+“ ani opačně. Smysluplnější je porovnat požadované materiály, pracovní prostor, lokální/cloud workflow a servisní očekávání.
 
-Podrobnosti jsou v [profilu Prusa CORE One+](/stroje/prusa-core-one-plus/).
+Podrobnosti jsou v [profilu Prusa CORE One+](/recenze/prusa-core-one/).
 
 ## Co před nákupem ověřit
 
