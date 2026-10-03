@@ -53,13 +53,14 @@ function isCurrent(href: string): boolean {
       </div>
       <a class="nav-cta nav-cta-desktop" href="/#temata">Pro lepší 3D tisk <span aria-hidden="true">→</span></a>
 
-      <div class="nav-mobile">
-        <button class="nav-mobile-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-mobile-menu-toggle>
+      <details class="nav-mobile" data-mobile-menu>
+        <summary>
           <span class="menu-icon" aria-hidden="true"></span>
-          <span data-menu-label>Menu</span>
-        </button>
+          <span class="label-closed">Menu</span>
+          <span class="label-open">Zavřít</span>
+        </summary>
 
-        <nav id="mobile-menu" class="nav-mobile-panel" aria-label="Hlavní, mobilní" data-mobile-menu hidden>
+        <nav aria-label="Hlavní, mobilní">
           {links.map((link) => (
             <a class="nav-link" href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>{link.label}</a>
           ))}
@@ -69,7 +70,7 @@ function isCurrent(href: string): boolean {
           <a class="nav-link" href="/o-nas/">O nás</a>
           <a class="nav-cta" href="/#temata">Pro lepší 3D tisk</a>
         </nav>
-      </div>
+      </details>
     </div>
   </div>
 </header>
@@ -78,9 +79,7 @@ function isCurrent(href: string): boolean {
   const headers = document.querySelectorAll<HTMLElement>('[data-header]');
   const hero = document.querySelector('.hero, .cover, .ref-hero');
   const themeButtons = document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]');
-  const mobileToggle = document.querySelector<HTMLButtonElement>('[data-mobile-menu-toggle]');
-  const mobileMenu = document.querySelector<HTMLElement>('[data-mobile-menu]');
-  const mobileLabel = document.querySelector<HTMLElement>('[data-menu-label]');
+  const mobileMenu = document.querySelector<HTMLDetailsElement>('[data-mobile-menu]');
 
   const updateHeader = () => {
     const scrolled = window.scrollY > 8;
@@ -98,24 +97,13 @@ function isCurrent(href: string): boolean {
   };
 
   const closeMobileMenu = () => {
-    if (!mobileToggle || !mobileMenu) return;
-    mobileToggle.setAttribute('aria-expanded', 'false');
-    mobileMenu.hidden = true;
-    mobileLabel && (mobileLabel.textContent = 'Menu');
+    if (!mobileMenu) return;
+    mobileMenu.open = false;
     document.documentElement.classList.remove('mobile-menu-open');
   };
 
-  const openMobileMenu = () => {
-    if (!mobileToggle || !mobileMenu) return;
-    mobileToggle.setAttribute('aria-expanded', 'true');
-    mobileMenu.hidden = false;
-    mobileLabel && (mobileLabel.textContent = 'Zavřít');
-    document.documentElement.classList.add('mobile-menu-open');
-  };
-
-  mobileToggle?.addEventListener('click', () => {
-    const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
-    expanded ? closeMobileMenu() : openMobileMenu();
+  mobileMenu?.addEventListener('toggle', () => {
+    document.documentElement.classList.toggle('mobile-menu-open', mobileMenu.open);
   });
 
   mobileMenu?.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMobileMenu));
