@@ -49,7 +49,7 @@ const previewGroups = groupOffers(previewOffers);
           <div>
             <h2 id="preview-title">{previewOffers.length} přijatých nabídek ze tří veřejných feedů.</h2>
             <p>
-              Materialpro3D, Filamenty Brno a 3Dfil, jejich veřejné Heureka XML. Řádky jsou seřazené podle Kč/kg. U každého je obchod, hmotnost a čas stažení. Po 36 hodinách se označí „starší 36 h“.
+              Materialpro3D, Filamenty Brno a 3Dfil, jejich veřejné Heureka XML. Filtry zužují materiál, značku, barvu, průměr, hmotnost cívky a obchod. Výchozí pořadí zůstává Kč/kg. U každého řádku je obchod, hmotnost a čas stažení. Po 36 hodinách se označí „starší 36 h“.
               Tohle není veřejný ceník: <code>offers</code> je prázdné, brána je {shopCount}/{MIN_PUBLIC_SHOPS} a stránka zůstává <code>noindex</code>. Stejná cívka se mezi obchody nesloučí, dokud není normalizační mapa.
               Jen <code>npm run dev</code> a <code>/srovnavac/?preview=1</code>. V buildu pro Cloudflare Pages se tabulka nevykreslí.
             </p>
@@ -78,7 +78,7 @@ const previewGroups = groupOffers(previewOffers);
       <p class="kicker">PRAVIDLA</p>
       <h2 id="method-title">Co srovnávač filamentu nesmí dělat.</h2>
       <ul>
-        <li>Provize nesmí měnit pořadí. Affiliate odkaz se jen označí.</li>
+        <li>Provize nesmí měnit pořadí ani filtr. Affiliate odkaz se jen označí.</li>
         <li>Kilogram bereme jen z pole hmotnosti ve feedu. Nápis „1 kg“ v názvu nestačí.</li>
         <li>Když hmotnost nejde přečíst, nabídku zahodíme. Nevymýšlíme ji a nedoplňujeme materiál na PLA.</li>
         <li>Stretch fólie a jiné ne-filamenty neprojdou, ani když je feed označí jako PLA.</li>

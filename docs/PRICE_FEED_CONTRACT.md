@@ -142,7 +142,7 @@ Náhled přijatých řádků jen ve vývojovém serveru:
 npm run dev
 ```
 
-Pak otevřít `/srovnavac/?preview=1`. Stránka je statická, takže query čte prohlížeč a jen odkryje blok, který `astro dev` vykreslil. Tabulka bere vygenerovaný soubor `src/data/filament-preview.generated.json`: přijaté nabídky ze tří Heureka XML, seřazené podle Kč/kg, s obchodem, hmotností a časem stažení. Obnova:
+Pak otevřít `/srovnavac/?preview=1`. Stránka je statická, takže query čte prohlížeč a jen odkryje blok, který `astro dev` vykreslil. Tabulka bere vygenerovaný soubor `src/data/filament-preview.generated.json`: přijaté nabídky ze tří Heureka XML, seřazené podle Kč/kg, s obchodem, hmotností a časem stažení. Filtr materiálu, značky, barvy, průměru, hmotnosti a obchodu jen skrývá řádky. Nečte `affiliateUrl` a neznámou dopravu nenechává jako nulu. Obnova:
 
 ```bash
 npm run fetch:filament -- --write-preview src/data/filament-preview.generated.json

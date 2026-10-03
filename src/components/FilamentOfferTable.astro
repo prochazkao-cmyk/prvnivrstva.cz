@@ -20,6 +20,57 @@ const catalogRows = catalog
   ? groups.flatMap((group) => group.offers).sort(compareByPricePerKg)
   : [];
 
+interface FilterOption {
+  key: string;
+  label: string;
+  count: number;
+}
+
+function facetKey(value: string | undefined): string {
+  const text = value?.trim();
+  if (!text) return '';
+  return text.normalize('NFC').toLocaleLowerCase('cs-CZ');
+}
+
+function textOptions(read: (offer: ShopOffer) => string | undefined): FilterOption[] {
+  const buckets = new Map<string, Map<string, number>>();
+  for (const offer of catalogRows) {
+    const raw = read(offer)?.trim() ?? '';
+    const key = facetKey(raw);
+    const labels = buckets.get(key) ?? new Map<string, number>();
+    labels.set(raw, (labels.get(raw) ?? 0) + 1);
+    buckets.set(key, labels);
+  }
+  return [...buckets.entries()]
+    .map(([key, labels]) => {
+      const count = [...labels.values()].reduce((sum, value) => sum + value, 0);
+      const label = key
+        ? [...labels.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'cs'))[0][0]
+        : 'neuvedeno';
+      return { key, label, count };
+    })
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label, 'cs'));
+}
+
+function numberOptions(read: (offer: ShopOffer) => number | undefined, labelFor: (value: number) => string): FilterOption[] {
+  const counts = new Map<string, number>();
+  let missing = 0;
+  for (const offer of catalogRows) {
+    const value = read(offer);
+    if (value == null || !Number.isFinite(value)) {
+      missing += 1;
+      continue;
+    }
+    const key = String(value);
+    counts.set(key, (counts.get(key) ?? 0) + 1);
+  }
+  const options = [...counts.entries()]
+    .map(([key, count]) => ({ key, label: labelFor(Number(key)), count }))
+    .sort((a, b) => Number(a.key) - Number(b.key));
+  if (missing > 0) options.push({ key: '', label: 'neuvedeno', count: missing });
+  return options;
+}
+
 const money = new Intl.NumberFormat('cs-CZ', {
   minimumFractionDigits: 0,
   maximumFractionDigits: 2,
@@ -51,6 +102,35 @@ function formatWeight(grams: number): string {
 function formatDiameter(mm: number): string {
   return `${money.format(mm)}\u00a0mm`;
 }
+
+function rowFacet(value: string | undefined): string {
+  return facetKey(value);
+}
+
+const materialOptions = textOptions((offer) => (offer.category === 'filament' ? offer.material : undefined));
+const brandOptions = textOptions((offer) => (offer.category === 'filament' ? offer.brand : undefined));
+const colorOptions = textOptions((offer) => (offer.category === 'filament' ? offer.color : undefined));
+const diameterOptions = numberOptions(
+  (offer) => (offer.category === 'filament' ? offer.diameterMm : undefined),
+  (value) => formatDiameter(value),
+);
+const weightOptions = numberOptions(
+  (offer) => (offer.category === 'filament' ? offer.weightGrams : undefined),
+  (value) => formatWeight(value),
+);
+const shopOptions = textOptions((offer) => offer.shopName).map((option) => ({
+  ...option,
+  key: option.label === 'neuvedeno' ? '' : option.label,
+}));
+
+const filterFacets = [
+  { name: 'material', label: 'Materiál', options: materialOptions },
+  { name: 'brand', label: 'Značka', options: brandOptions },
+  { name: 'color', label: 'Barva', options: colorOptions },
+  { name: 'diameter', label: 'Průměr', options: diameterOptions },
+  { name: 'weight', label: 'Hmotnost', options: weightOptions },
+  { name: 'shop', label: 'Obchod', options: shopOptions },
+];
 
 function filamentTags(offer: ShopOffer): string[] {
   if (offer.category !== 'filament') return [];
@@ -89,6 +169,30 @@ function sourceLabel(offer: ShopOffer): string {
   <p class="sort-note">
     Výchozí pořadí je cena za kilogram materiálu, bez dopravy. „Celkem s dopravou“ řadí jen nabídky, kde feed dopravu uvedl. Chybějící doprava není nula.
   </p>
+  {catalog && (
+    <div class="filter-panel" data-filters>
+      <div class="filter-head">
+        <p data-filter-count>Zobrazeno {catalogRows.length} z {catalogRows.length}</p>
+        <button type="button" data-filter-clear>Zrušit filtry</button>
+      </div>
+      <div class="filter-board">
+        {filterFacets.map((facet) => (
+          <fieldset>
+            <legend>{facet.label}</legend>
+            <div class="filter-options">
+              {facet.options.map((option) => (
+                <button type="button" data-filter={facet.name} data-value={option.key} aria-pressed="false">
+                  {option.label}
+                  <span>{option.count}</span>
+                </button>
+              ))}
+            </div>
+          </fieldset>
+        ))}
+      </div>
+      <p class="filter-empty" data-filter-empty hidden>Žádná nabídka neprojde těmito filtry.</p>
+    </div>
+  )}
   {catalog ? (
     <article class="offer-group" data-offer-group>
       <table>
@@ -113,7 +217,17 @@ function sourceLabel(offer: ShopOffer): string {
             const tags = filamentTags(offer);
             const stale = isStale(offer);
             return (
-              <tr data-offer data-shop={offer.shopName} data-per-kg={perKg ?? ''} data-total={total ?? ''}>
+              <tr
+                data-offer
+                data-shop={offer.shopName}
+                data-material={offer.category === 'filament' ? rowFacet(offer.material) : ''}
+                data-brand={offer.category === 'filament' ? rowFacet(offer.brand) : ''}
+                data-color={offer.category === 'filament' ? rowFacet(offer.color) : ''}
+                data-diameter={offer.category === 'filament' && offer.diameterMm != null ? String(offer.diameterMm) : ''}
+                data-weight={offer.category === 'filament' ? String(offer.weightGrams) : ''}
+                data-per-kg={perKg ?? ''}
+                data-total={total ?? ''}
+              >
                 <td class="product">{offer.productName}</td>
                 <td>
                   <a
@@ -273,6 +387,53 @@ function sourceLabel(offer: ShopOffer): string {
         for (const other of buttons) other.setAttribute('aria-pressed', other === button ? 'true' : 'false');
       });
     }
+
+    const filterRoot = root.querySelector<HTMLElement>('[data-filters]');
+    if (!filterRoot) continue;
+    const facets = ['material', 'brand', 'color', 'diameter', 'weight', 'shop'] as const;
+    const count = filterRoot.querySelector<HTMLElement>('[data-filter-count]');
+    const empty = filterRoot.querySelector<HTMLElement>('[data-filter-empty]');
+    const filterButtons = [...filterRoot.querySelectorAll<HTMLButtonElement>('button[data-filter]')];
+
+    const applyFilters = () => {
+      const selected = new Map<string, Set<string>>();
+      for (const facet of facets) selected.set(facet, new Set());
+      for (const button of filterButtons) {
+        if (button.getAttribute('aria-pressed') !== 'true') continue;
+        const facet = button.dataset.filter;
+        if (!facet || !selected.has(facet)) continue;
+        selected.get(facet)?.add(button.dataset.value ?? '');
+      }
+      const rows = [...root.querySelectorAll<HTMLTableRowElement>('[data-offer]')];
+      let shown = 0;
+      for (const row of rows) {
+        let visible = true;
+        for (const facet of facets) {
+          const chosen = selected.get(facet);
+          if (!chosen || chosen.size === 0) continue;
+          const value = row.dataset[facet] ?? '';
+          if (!chosen.has(value)) {
+            visible = false;
+            break;
+          }
+        }
+        row.hidden = !visible;
+        if (visible) shown += 1;
+      }
+      if (count) count.textContent = `Zobrazeno ${shown} z ${rows.length}`;
+      if (empty) empty.hidden = shown !== 0;
+    };
+
+    for (const button of filterButtons) {
+      button.addEventListener('click', () => {
+        button.setAttribute('aria-pressed', button.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+        applyFilters();
+      });
+    }
+    filterRoot.querySelector<HTMLButtonElement>('[data-filter-clear]')?.addEventListener('click', () => {
+      for (const button of filterButtons) button.setAttribute('aria-pressed', 'false');
+      applyFilters();
+    });
   }
 </script>
 
@@ -309,6 +470,67 @@ function sourceLabel(offer: ShopOffer): string {
     color: #1a0d08;
   }
   .sort-note { max-width: 55rem; margin: .8rem 0 0; color: var(--color-muted); font-size: .92rem; }
+  .filter-panel { margin-top: 1.25rem; }
+  .filter-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .7rem 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .filter-head p { margin: 0; font-weight: 700; }
+  .filter-head button,
+  .filter-options button {
+    border: 1px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+    color: var(--color-ink);
+    font: inherit;
+    cursor: pointer;
+  }
+  .filter-head button { padding: .4rem .8rem; font-size: .85rem; font-weight: 700; }
+  .filter-board {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem 1.5rem;
+    margin-top: 1rem;
+  }
+  .filter-board fieldset {
+    margin: 0;
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    background: var(--color-card);
+    padding: .8rem .9rem 1rem;
+    min-width: 0;
+  }
+  .filter-board legend {
+    padding: 0 .35rem;
+    color: var(--color-muted);
+    font-size: .72rem;
+    font-weight: 760;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+  }
+  .filter-options { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .filter-options button {
+    display: inline-flex;
+    gap: .4rem;
+    align-items: baseline;
+    padding: .38rem .7rem;
+    font-size: .82rem;
+    font-weight: 700;
+  }
+  .filter-options button span { color: var(--color-muted); font-size: .72rem; font-weight: 650; }
+  .filter-options button[aria-pressed='true'] {
+    border-color: var(--color-accent);
+    background: var(--color-accent);
+    color: #1a0d08;
+  }
+  .filter-options button[aria-pressed='true'] span { color: #1a0d08; }
+  .filter-empty { margin: .8rem 0 0; font-weight: 700; }
+  @media (max-width: 800px) {
+    .filter-board { grid-template-columns: 1fr; }
+  }
   .offer-group { margin-top: 2rem; overflow-x: auto; }
   .offer-group h2 { font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: 2rem; }
   table { width: 100%; border-collapse: collapse; font-size: .88rem; }
