@@ -531,7 +531,7 @@ async function selfTest() {
 
   assert(
     /export const offers: ShopOffer\[\] = \[\];/.test(offersSource),
-    'production offers must stay empty so /srovnavac/ remains gated',
+    'production offers must stay empty so /srovnavac/ stays noindex',
   );
   const perKgSort = offersSource.slice(
     offersSource.indexOf('export function compareByPricePerKg'),

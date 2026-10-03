@@ -132,23 +132,17 @@ Postup, až bude skutečný feed:
 5. Zkontrolované řádky zapsat do `offers` v `src/data/offers.ts`. U živých řádků nenastavovat `example: true`.
 6. `noindex` na `/srovnavac/` spadne až když `isComparerIndexable()` uvidí aspoň 3 obchody, normalizaci, stale kontrolu, označené affiliate odkazy a tuto metodiku.
 
-## Lokální náhled
+## Katalog na /srovnavac/
 
-Produkční pole `offers` zůstává prázdné, brána 0/3, `noindex`. Tři veřejné feedy samy bránu neotevřou: `productId` je pořád `shopId:ITEM_ID` a normalizace mezi obchody není hotová. `isComparerIndexable()` by po zápisu do `offers` pustilo indexaci jen podle počtu obchodů, což tenhle seznam nestačí. Dokud neplatí celá brána níže, řádky do `offers` nepatří.
+Produkční pole `offers` zůstává prázdné a stránka má `noindex`. Tři veřejné feedy samy bránu neotevřou: `productId` je pořád `shopId:ITEM_ID` a normalizace mezi obchody není hotová. `isComparerIndexable()` by po zápisu do `offers` pustilo indexaci jen podle počtu obchodů, což tenhle seznam nestačí. Dokud neplatí celá brána níže, řádky do `offers` nepatří.
 
-Náhled přijatých řádků jen ve vývojovém serveru:
-
-```bash
-npm run dev
-```
-
-Pak otevřít `/srovnavac/?preview=1`. Stránka je statická, takže query čte prohlížeč a jen odkryje blok, který `astro dev` vykreslil. Tabulka bere vygenerovaný soubor `src/data/filament-preview.generated.json`: přijaté nabídky ze tří Heureka XML, seřazené podle Kč/kg, s obchodem, hmotností a časem stažení. Filtr materiálu, značky, barvy, průměru, hmotnosti a obchodu jen skrývá řádky. Mřížka sdruží nabídky se stejným materiálem, barvou a hmotností. Fotka karty je `IMGURL` nejlevnější nabídky ve skupině; řádek v panelu má svůj `IMGURL`. Chybějící nebo nenačtený obrázek je prázdná plocha, ne rozbitá ikona. Jiné `IMGURL_ALTERNATIVE` a HTML obchodu se neberou. Koupit vede na URL obchodu, nebo na `affiliateUrl`, když ji řádek má. Partnerský odkaz se u řádku označí a do řazení nevstupuje. Neznámá doprava není nula. Obnova:
+`astro build` i `astro dev` vykreslí `/srovnavac/` z `src/data/filament-preview.generated.json`: přijaté nabídky ze tří Heureka XML, seřazené podle Kč/kg, s obchodem, hmotností a časem stažení. Filtr materiálu, značky, barvy, průměru, hmotnosti a obchodu jen skrývá řádky. Mřížka sdruží nabídky se stejným materiálem, barvou a hmotností. Fotka karty je `IMGURL` nejlevnější nabídky ve skupině; řádek v panelu má svůj `IMGURL`. Chybějící nebo nenačtený obrázek je prázdná plocha, ne rozbitá ikona. Jiné `IMGURL_ALTERNATIVE` a HTML obchodu se neberou. Koupit vede na URL obchodu, nebo na `affiliateUrl`, když ji řádek má. Partnerský odkaz se u řádku označí a do řazení nevstupuje. Neznámá doprava není nula. Obnova:
 
 ```bash
 npm run fetch:filament -- --write-preview src/data/filament-preview.generated.json
 ```
 
-`astro build` má `import.meta.env.DEV === false`, takže se katalog do HTML pro Pages nezapíše. Vymyšlené fixture v `scripts/fixtures/filament-offers.example.json` zůstávají jen pro test importéru.
+Vymyšlené fixture v `scripts/fixtures/filament-offers.example.json` zůstávají jen pro test importéru.
 
 ## Brána pro veřejné spuštění
 

@@ -4,7 +4,6 @@ import FilamentOfferTable from '../components/FilamentOfferTable.astro';
 import { loadFilamentPreviewOffers } from '../data/filament-preview';
 import {
   groupOffers,
-  isComparerIndexable,
   MIN_PUBLIC_SHOPS,
   offers,
   uniqueShopCount,
@@ -12,55 +11,35 @@ import {
 
 const productionOffers = offers.filter((offer) => offer.example !== true);
 const shopCount = uniqueShopCount(productionOffers);
-const indexable = isComparerIndexable(productionOffers);
-const liveGroups = indexable ? groupOffers(productionOffers) : [];
 /**
- * The public-feed catalog is rendered only for `astro dev`.
- * `astro build` inlines `import.meta.env.DEV` as false, so those prices
- * are not written into the Cloudflare Pages HTML.
- * `?preview=1` is read in the browser and only reveals that dev-only block.
- * Three shops do not open the public gate: product ids are still per shop.
+ * The generated three-shop catalog is what /srovnavac/ renders, including
+ * `astro build`. `offers` stays empty. noindex stays on: product ids are
+ * still per shop, so this is not the normalized public index.
  */
-const previewOffers = import.meta.env.DEV ? loadFilamentPreviewOffers() : [];
-const previewGroups = groupOffers(previewOffers);
+const catalogOffers = loadFilamentPreviewOffers();
+const catalogGroups = groupOffers(catalogOffers);
 ---
 
 <BaseLayout
   title="Srovnávač filamentu"
-  description="Cena filamentu za kilogram z feedů obchodů. Doprava a sklad vedle Kč/kg. Dokud nejsou tři obchody, stránka není ve vyhledávání."
-  noindex={!indexable}
+  description="Cena filamentu za kilogram ze tří veřejných Heureka feedů. Doprava a sklad vedle Kč/kg. Stránka není ve vyhledávání."
+  noindex={true}
 >
   <main id="obsah" class="page section-page compare-page">
     <p class="kicker">FILAMENT · KČ/KG</p>
     <h1 class="page-title">Filament podle Kč/kg, ne podle provize.</h1>
     <p class="lede">
       Nejdřív cena materiálu za kilogram. Hmotnost musí přijít z feedu — když ji nejde přečíst, nabídku neukážeme a kilogram z názvu nevymyslíme. Doprava je v tabulce zvlášť a do výchozího pořadí nevstupuje. Tiskárny přijdou až po filamentech.
+      {catalogOffers.length > 0 && (
+        <>
+          {' '}
+          Tady je {catalogOffers.length} přijatých nabídek z veřejných Heureka XML obchodů Materialpro3D, Filamenty Brno a 3Dfil. Mřížka sdružuje stejný materiál, barvu a hmotnost. Fotka je IMGURL nejlevnější nabídky ve skupině. Kliknutí otevře nabídky a Koupit vede do e-shopu. Stejná cívka se mezi obchody nesloučí, dokud není normalizační mapa. Stránka není ve vyhledávání.
+        </>
+      )}
     </p>
 
-    {previewGroups.length > 0 && (
-      <div id="filament-preview" class="compare-preview-root">
-        <script is:inline>
-          if (new URLSearchParams(location.search).get('preview') === '1') {
-            document.documentElement.classList.add('filament-preview');
-          }
-        </script>
-        <section class="compare-preview" aria-labelledby="preview-title">
-          <span>Náhled</span>
-          <div>
-            <h2 id="preview-title">{previewOffers.length} přijatých nabídek ze tří veřejných feedů.</h2>
-            <p>
-              Materialpro3D, Filamenty Brno a 3Dfil, jejich veřejné Heureka XML. Mřížka sdružuje stejný materiál, barvu a hmotnost. Fotka je IMGURL nejlevnější nabídky ve skupině. Kliknutí otevře nabídky obchodů a tlačítko Koupit vede do e-shopu. Filtry zužují výběr. Výchozí pořadí zůstává Kč/kg. Po 36 hodinách se nabídka označí „starší 36 h“.
-              Tohle není veřejný ceník: <code>offers</code> je prázdné, brána je {shopCount}/{MIN_PUBLIC_SHOPS} a stránka zůstává <code>noindex</code>. Stejná cívka se mezi obchody nesloučí, dokud není normalizační mapa.
-              Jen <code>npm run dev</code> a <code>/srovnavac/?preview=1</code>. V buildu pro Cloudflare Pages se tabulka nevykreslí.
-            </p>
-          </div>
-        </section>
-        <FilamentOfferTable groups={previewGroups} catalog />
-      </div>
-    )}
-
-    {liveGroups.length > 0 ? (
-      <FilamentOfferTable groups={liveGroups} />
+    {catalogGroups.length > 0 ? (
+      <FilamentOfferTable groups={catalogGroups} catalog />
     ) : (
       <section class="compare-gate" aria-labelledby="gate-title">
         <span>{shopCount}/{MIN_PUBLIC_SHOPS}</span>
@@ -92,11 +71,7 @@ const previewGroups = groupOffers(previewOffers);
 
 <style>
   .compare-page { padding-bottom: clamp(3rem, 7vw, 6rem); }
-  .compare-preview-root { display: none; }
-  :global(html.filament-preview) .compare-preview-root { display: block; }
-  :global(html.filament-preview) .compare-gate { display: none; }
-  .compare-gate,
-  .compare-preview {
+  .compare-gate {
     display: grid;
     grid-template-columns: auto 1fr;
     gap: 1.25rem;
@@ -107,9 +82,7 @@ const previewGroups = groupOffers(previewOffers);
     background: var(--color-card);
     padding: clamp(1rem, 3vw, 1.5rem);
   }
-  .compare-preview { align-items: start; border-style: dashed; }
-  .compare-gate > span,
-  .compare-preview > span {
+  .compare-gate > span {
     display: grid;
     place-items: center;
     width: 5rem;
@@ -121,22 +94,18 @@ const previewGroups = groupOffers(previewOffers);
     font-size: 1.35rem;
     font-weight: 700;
   }
-  .compare-gate h2,
-  .compare-preview h2 {
+  .compare-gate h2 {
     margin: 0;
     font-family: 'Iowan Old Style', 'Baskerville', serif;
     font-size: clamp(1.5rem, 3vw, 2.3rem);
     letter-spacing: -.035em;
   }
-  .compare-gate p,
-  .compare-preview p { max-width: 55rem; margin: .35rem 0 0; color: var(--color-muted); }
-  .compare-preview code { font-size: .84em; }
+  .compare-gate p { max-width: 55rem; margin: .35rem 0 0; color: var(--color-muted); }
   .method { margin-top: 4rem; }
   .method h2 { margin: .45rem 0 1rem; font-family: 'Iowan Old Style', 'Baskerville', serif; font-size: clamp(2rem, 4vw, 3.2rem); letter-spacing: -.04em; }
   .method ul { max-width: 55rem; padding-left: 1.2rem; }
   .method li { margin: .45rem 0; }
   @media (max-width: 620px) {
-    .compare-gate,
-    .compare-preview { grid-template-columns: 1fr; }
+    .compare-gate { grid-template-columns: 1fr; }
   }
 </style>

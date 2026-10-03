@@ -1,16 +1,20 @@
-import { readFileSync } from 'node:fs';
-import { dirname, join } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import { pricePerKg, type FilamentOffer, type WeightConfidence } from './offers';
 
-const PREVIEW_FILE = join(dirname(fileURLToPath(import.meta.url)), 'filament-preview.generated.json');
+/** Project-root path. import.meta.url points at the prerender chunk after `astro build`. */
+const PREVIEW_FILE = join(process.cwd(), 'src/data/filament-preview.generated.json');
 const SHOP_IDS = new Set(['materialpro3d', 'filamenty-brno', '3dfil']);
 
 /**
- * Local preview of accepted public-feed rows.
- * Call only from `astro dev`. Do not copy the result into `offers`.
+ * Accepted rows from the three public Heureka feeds.
+ * Rendered on /srovnavac/, including the production build.
+ * Do not copy the result into `offers`. The page stays noindex.
  */
 export function loadFilamentPreviewOffers(): FilamentOffer[] {
+  if (!existsSync(PREVIEW_FILE)) {
+    throw new Error(`filament preview catalog missing at ${PREVIEW_FILE}`);
+  }
   const raw = JSON.parse(readFileSync(PREVIEW_FILE, 'utf8')) as { _generated?: unknown; offers?: unknown };
   if (raw._generated !== true || !Array.isArray(raw.offers)) {
     throw new Error('filament preview catalog must be the generated file with an offers array');
