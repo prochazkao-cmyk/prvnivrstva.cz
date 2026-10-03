@@ -40,6 +40,11 @@ export interface FilamentOffer extends ShopOfferBase {
   material?: string;
   brand?: string;
   color?: string;
+  /**
+   * Primary IMGURL from the merchant feed. Omit when the feed has none.
+   * Never a scraped shop page or a third-party comparer asset.
+   */
+  imageUrl?: string;
   diameterMm?: number;
   packaging?: FilamentPackaging;
   /**

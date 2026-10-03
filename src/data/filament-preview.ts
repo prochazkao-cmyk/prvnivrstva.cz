@@ -56,6 +56,19 @@ function parsePreviewOffer(value: unknown, index: number): FilamentOffer {
   if (typeof row.material === 'string') offer.material = row.material;
   if (typeof row.brand === 'string') offer.brand = row.brand;
   if (typeof row.color === 'string') offer.color = row.color;
+  if (row.imageUrl !== undefined) {
+    if (typeof row.imageUrl !== 'string') throw new Error(`${label}: imageUrl must be a string`);
+    let image: URL;
+    try {
+      image = new URL(row.imageUrl);
+    } catch {
+      throw new Error(`${label}: imageUrl must be an absolute URL`);
+    }
+    if (image.protocol !== 'http:' && image.protocol !== 'https:') {
+      throw new Error(`${label}: imageUrl must be http(s)`);
+    }
+    offer.imageUrl = image.href;
+  }
   if (typeof row.diameterMm === 'number') offer.diameterMm = row.diameterMm;
   if (row.packaging === 'spool' || row.packaging === 'refill') offer.packaging = row.packaging;
   if (row.weightConfidence === 'net' || row.weightConfidence === 'unspecified') {

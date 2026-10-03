@@ -11,6 +11,8 @@
     <ITEM_ID>fixture-pla-1kg</ITEM_ID>
     <PRODUCTNAME>Ukázkový PLA černý 1 kg (fixture)</PRODUCTNAME>
     <URL>https://example.invalid/fixture/xml/pla</URL>
+    <IMGURL>https://example.invalid/fixture/pla.jpg</IMGURL>
+    <IMGURL_ALTERNATIVE>https://example.invalid/fixture/pla-2.jpg</IMGURL_ALTERNATIVE>
     <PRICE_VAT>499</PRICE_VAT>
     <MANUFACTURER>Ukázková značka</MANUFACTURER>
     <DELIVERY_DATE>0</DELIVERY_DATE>
@@ -71,6 +73,7 @@
     <ITEM_ID>fixture-pla-net</ITEM_ID>
     <PRODUCTNAME>Ukázkový PLA bílý (fixture)</PRODUCTNAME>
     <URL>https://example.invalid/fixture/xml/pla-net</URL>
+    <IMGURL>javascript:alert(1)</IMGURL>
     <PRICE_VAT>610</PRICE_VAT>
     <MANUFACTURER>Ukázková značka</MANUFACTURER>
     <DELIVERY_DATE>2</DELIVERY_DATE>

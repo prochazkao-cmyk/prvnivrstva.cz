@@ -138,29 +138,6 @@ const filterFacets = [
   { name: 'shop', label: 'Obchod', options: shopOptions },
 ];
 
-const SWATCHES: [string, string][] = [
-  ['černá', '#1d1a17'],
-  ['bílá', '#f7f4ee'],
-  ['modrá', '#2c6bed'],
-  ['zelená', '#2f8f4e'],
-  ['šedá', '#8d8880'],
-  ['červená', '#d23b2f'],
-  ['žlutá', '#f0c84a'],
-  ['oranžová', '#ff6b35'],
-  ['hnědá', '#7a4b2a'],
-  ['růžová', '#e58ab0'],
-  ['fialová', '#7a4ea3'],
-  ['stříbrná', '#c5c8ce'],
-  ['zlatá', '#d4b15a'],
-  ['béžová', '#e6d3b1'],
-  ['tyrkysová', '#2aabb8'],
-  ['měděná', '#b87333'],
-  ['tělová', '#e6c2a6'],
-  ['metalická', '#b9b3a7'],
-  ['dřevo', '#8a5a32'],
-  ['natural', '#e4d2b0'],
-];
-
 function preferredLabel(source: ShopOffer[], read: (offer: ShopOffer) => string | undefined, fallback: string): string {
   const counts = new Map<string, number>();
   for (const offer of source) {
@@ -172,21 +149,14 @@ function preferredLabel(source: ShopOffer[], read: (offer: ShopOffer) => string 
   return best?.[0] ?? fallback;
 }
 
-function swatchStyle(colorKey: string): string {
-  if (colorKey.includes('multicolor') || colorKey.includes('vícebarev')) {
-    return 'background: linear-gradient(135deg, #d23b2f, #f0c84a 40%, #2c6bed 70%, #2f8f4e)';
-  }
-  if (colorKey.includes('transparent') || colorKey.includes('průhled')) {
-    return 'background: repeating-linear-gradient(135deg, #f7f4ee, #f7f4ee 7px, #e4ddd2 7px, #e4ddd2 14px)';
-  }
-  const match = SWATCHES.find(([name]) => colorKey.includes(name));
-  return `background: ${match?.[1] ?? '#d9d3c7'}`;
+function offerImage(offer: ShopOffer): string | undefined {
+  return offer.category === 'filament' ? offer.imageUrl : undefined;
 }
 
 interface CatalogCard {
   key: string;
   title: string;
-  swatch: string;
+  imageUrl?: string;
   offers: ShopOffer[];
   bestPerKg: number;
   bestTotal: number | null;
@@ -214,7 +184,7 @@ const productCards: CatalogCard[] = (() => {
     cards.push({
       key,
       title: `${material} · ${color} · ${weight}`,
-      swatch: swatchStyle(key.split('|')[1] ?? ''),
+      imageUrl: offerImage(offers[0]),
       offers,
       bestPerKg: best,
       bestTotal: knownTotals.length > 0 ? Math.min(...knownTotals) : null,
@@ -298,7 +268,9 @@ function sourceLabel(offer: ShopOffer): string {
             data-best-total={card.bestTotal ?? ''}
           >
             <button type="button" class="product-open" data-open-product>
-              <span class="swatch" style={card.swatch} aria-hidden="true"></span>
+              <span class="photo" data-card-photo aria-hidden="true">
+                {card.imageUrl && <img src={card.imageUrl} alt="" referrerpolicy="no-referrer" />}
+              </span>
               <span class="product-copy">
                 <h3>{card.title}</h3>
                 <strong data-card-price>od {formatPerKg(card.bestPerKg, 'CZK')}</strong>
@@ -322,7 +294,11 @@ function sourceLabel(offer: ShopOffer): string {
                     data-weight={offer.category === 'filament' ? String(offer.weightGrams) : ''}
                     data-per-kg={perKg ?? ''}
                     data-total={total ?? ''}
+                    data-image={offerImage(offer) ?? ''}
                   >
+                    <span class="thumb" aria-hidden="true">
+                      {offerImage(offer) && <img src={offerImage(offer)} alt="" referrerpolicy="no-referrer" />}
+                    </span>
                     <div>
                       <p class="offer-shop">{offer.shopName}</p>
                       <p class="offer-name">{offer.productName}</p>
@@ -554,6 +530,27 @@ function sourceLabel(offer: ShopOffer): string {
         const totals = visible.map((row) => row.dataset.total).filter((value): value is string => Boolean(value)).map(Number);
         card.dataset.bestTotal = totals.length > 0 ? String(Math.min(...totals)) : '';
         const shops = new Set(visible.map((row) => row.dataset.shop).filter(Boolean));
+        const cheapest = [...visible].sort((a, b) => {
+          const diff = numberOrLast(a.dataset.perKg) - numberOrLast(b.dataset.perKg);
+          if (diff !== 0) return diff;
+          return (a.dataset.shop ?? '').localeCompare(b.dataset.shop ?? '', 'cs');
+        })[0];
+        const slot = card.querySelector<HTMLElement>('[data-card-photo]');
+        const nextImage = cheapest?.dataset.image ?? '';
+        if (slot) {
+          let photo = slot.querySelector('img');
+          if (!nextImage) {
+            photo?.remove();
+          } else {
+            if (!photo) {
+              photo = document.createElement('img');
+              photo.alt = '';
+              photo.referrerPolicy = 'no-referrer';
+              slot.append(photo);
+            }
+            if (photo.getAttribute('src') !== nextImage) photo.src = nextImage;
+          }
+        }
         const label = card.querySelector<HTMLElement>('[data-card-count]');
         const shopCount = shops.size;
         const shopLabel = shopCount === 1 ? 'obchod' : shopCount >= 2 && shopCount <= 4 ? 'obchody' : 'obchodů';
@@ -575,6 +572,15 @@ function sourceLabel(offer: ShopOffer): string {
       for (const button of filterButtons) button.setAttribute('aria-pressed', 'false');
       applyFilters();
     });
+
+    root.addEventListener(
+      'error',
+      (event) => {
+        const image = event.target;
+        if (image instanceof HTMLImageElement) image.remove();
+      },
+      true,
+    );
 
     const dialog = root.querySelector<HTMLDialogElement>('[data-offer-dialog]');
     const slot = dialog?.querySelector<HTMLElement>('[data-dialog-slot]');
@@ -712,10 +718,26 @@ function sourceLabel(offer: ShopOffer): string {
     cursor: pointer;
   }
   .product-open:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
-  .swatch {
-    display: block;
+  .photo, .thumb {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background: #e7e1d6;
+  }
+  .photo {
     height: 7.25rem;
     border-bottom: 1px solid var(--color-line);
+  }
+  .thumb {
+    width: 3.25rem;
+    height: 3.25rem;
+    align-self: start;
+    border-radius: .45rem;
+  }
+  .photo img, .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .product-copy { display: grid; gap: .35rem; padding: .9rem 1rem 1.05rem; }
   .product-copy h3 {
@@ -759,7 +781,7 @@ function sourceLabel(offer: ShopOffer): string {
   [data-product-offers] { list-style: none; margin: .4rem 0 0; padding: 0; }
   [data-product-offers] li {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr auto;
     gap: .8rem 1rem;
     padding: .95rem 0;
     border-top: 1px solid var(--color-line);

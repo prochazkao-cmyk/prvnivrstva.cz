@@ -75,6 +75,19 @@ function readTag(block, tag) {
   return match ? decodeXml(match[1]) : undefined;
 }
 
+/** First IMGURL only. IMGURL_ALTERNATIVE does not match this tag. Non-http(s) values are dropped. */
+function feedImageUrl(raw) {
+  if (!raw) return undefined;
+  let parsed;
+  try {
+    parsed = new URL(raw);
+  } catch {
+    return undefined;
+  }
+  if (parsed.protocol !== 'http:' && parsed.protocol !== 'https:') return undefined;
+  return parsed.href;
+}
+
 function parseMoney(raw) {
   if (typeof raw === 'number') return Number.isFinite(raw) ? raw : null;
   if (raw === undefined || raw === null) return null;
@@ -291,6 +304,7 @@ export function mapXmlFeed(xml, options) {
       rejected.push({ itemId, reason: 'missing-url' });
       continue;
     }
+    const imageUrl = feedImageUrl(readTag(block, 'IMGURL'));
 
     const diameter = readDiameter(params);
     if (diameter.error) {
@@ -329,6 +343,7 @@ export function mapXmlFeed(xml, options) {
     const material = paramValue(params, /^material$/);
     const brand = readTag(block, 'MANUFACTURER');
     const color = paramValue(params, /^barva$|^color$/);
+    if (imageUrl) offer.imageUrl = imageUrl;
     if (material) offer.material = material;
     if (brand) offer.brand = brand;
     if (color) offer.color = color;
@@ -485,7 +500,12 @@ async function selfTest() {
   assert(generic?.weightGrams === 1000 && generic.weightConfidence === 'unspecified', 'generic Hmotnost stays flagged');
   assert(generic?.shippingPrice === 89, 'single delivery price is kept');
   assert(generic?.diameterMm === 1.75 && generic?.packaging === 'spool', 'diameter and spool should parse');
+  assert(
+    generic?.imageUrl === 'https://example.invalid/fixture/pla.jpg',
+    'primary IMGURL is the product photo',
+  );
   assert(net?.weightGrams === 1000 && net.weightConfidence === 'net', 'návin wins over parcel weight');
+  assert(net?.imageUrl === undefined, 'javascript IMGURL must be dropped');
   assert(net?.shippingPrice === undefined, 'conflicting delivery prices must not become 0');
   assert(net?.importWarnings?.includes('ambiguous-shipping'), 'conflicting delivery prices are warned');
   assert(pricePerKg(net) === 610, 'net 1000 g keeps sticker price as Kč/kg');
@@ -552,7 +572,14 @@ async function provePreviewCatalog() {
     assert(typeof offer.fetchedAt === 'string' && offer.fetchedAt.length > 0, 'preview rows need fetchedAt');
     assert(typeof offer.shopName === 'string' && offer.shopName.length > 0, 'preview rows need a shop name');
     assert(offer.affiliateUrl === undefined, 'preview rows must not invent an affiliate URL');
+    if (offer.imageUrl !== undefined) {
+      assert(/^https?:\/\//i.test(offer.imageUrl), 'preview imageUrl must be an http(s) feed IMGURL');
+      assert(!/filamentprice\.cz/i.test(offer.imageUrl), 'preview images must not come from filamentprice.cz');
+    }
   }
+  const withImage = preview.offers.filter((offer) => typeof offer.imageUrl === 'string').length;
+  assert(withImage > 1000, 'preview catalog should keep IMGURL from the public feeds');
+  console.log(`Preview images: ${withImage} of ${preview.offers.length} rows.`);
   const counts = Object.fromEntries(preview.shops.map((shop) => [shop.shopId, shop.accepted]));
   for (const shopId of shops) {
     const actual = preview.offers.filter((offer) => offer.shopId === shopId).length;

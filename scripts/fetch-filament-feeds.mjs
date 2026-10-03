@@ -35,6 +35,7 @@ const PREVIEW_FIELDS = [
   'inStock',
   'stockLabel',
   'url',
+  'imageUrl',
   'fetchedAt',
   'source',
   'category',
