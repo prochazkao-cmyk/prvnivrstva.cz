@@ -8,7 +8,9 @@ tags:
   - vlhkost
   - filament
 level: "začátečník"
-evidence: "zdroje"
+contentMode: "zdrojovany-profil"
+evidence: "vyrobce"
+sourceNote: "Technické údaje jsou převzaté z primárních zdrojů výrobců Polymaker, SUNLU a Creality a byly ověřeny 4. 10. 2026. Nejde o vlastní měření První vrstvy."
 ---
 
 Sušičku filamentu nemá smysl vybírat podle nejvyššího čísla na displeji. Důležitější je, **co tisknete, kolik cívek potřebujete sušit současně a zda chcete ze sušičky rovnou tisknout**. Jinou potřebu má uživatel s jednou cívkou PETG, jinou majitel více tiskáren a jinou ten, kdo pravidelně používá PA nebo PC.
