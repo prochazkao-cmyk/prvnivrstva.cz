@@ -17,6 +17,10 @@ PLA a PETG zvládne široké spektrum dnešních FDM tiskáren. U **ABS, ASA a f
 
 Tento průvodce není fyzický test ani žebříček. Vychází z aktuálních specifikací výrobců a z produktových profilů První Vrstvy. Konkrétní doporučené teploty vždy ověřte také na technickém listu použitého filamentu.
 
+![Redakční AI infografika: PLA/PETG, ABS/ASA a CF kompozity a hlavní požadavky na 3D tiskárnu](/images/clanky/materialy-pla-petg-abs-asa-cf.svg)
+
+*Redakční AI ilustrace shrnující rozhodovací logiku článku; nejde o výsledek fyzického testu.*
+
 ## Nejkratší odpověď
 
 - Pro **pravidelný ABS/ASA tisk** dává smysl začít u uzavřené tiskárny. Stabilnější tepelné prostředí pomáhá omezovat rychlé ochlazování výtisku, které souvisí s deformacemi a odlepováním rohů.
