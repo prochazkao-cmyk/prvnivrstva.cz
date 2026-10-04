@@ -55,7 +55,7 @@ Tryska může zachytit o zvednutý roh, zkroucený support nebo nahromaděný ma
 
 Prohlédněte model a okolí trysky. Hledejte zejména:
 
-- zvednuté rohy a [warping](/rady-a-tipy/warping/),
+- zvednuté rohy a [warping](/clanky/warping-u-abs-priciny-a-checklist/),
 - support, který se odlomil nebo naklonil,
 - větší nános materiálu na trysce,
 - část výtisku, o kterou tryska při travelu opakovaně drhla,
