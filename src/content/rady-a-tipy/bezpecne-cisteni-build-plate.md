@@ -16,6 +16,8 @@ evidence: "vyrobce"
 
 Mastnota z prstů patří mezi nejjednodušší příčiny špatné adheze první vrstvy — a zároveň mezi ty, které se dají odstranit bez ladění sliceru. Neexistuje ale jeden čistič vhodný pro všechny povrchy. **Hladký PEI, saténový a texturovaný práškový plát mají odlišná pravidla**, zejména pokud jde o aceton.
 
+![Ilustrace rozdílu mezi mastným a čistým tiskovým plátem](/images/guides/build-plate/01-mastny-vs-cisty.svg)
+
 > Tento postup vychází z aktuální dokumentace Prusa Research pro PEI tiskové pláty. U plátů jiných výrobců vždy zkontrolujte jejich vlastní pokyny; speciální povrchy mohou mít jiné požadavky.
 
 ## Rychlá volba: co použít
@@ -27,6 +29,8 @@ Mastnota z prstů patří mezi nejjednodušší příčiny špatné adheze prvn�
 | zbytky PVA lepidla | voda + prostředek na nádobí | PVA je vodou omyvatelné |
 | hladký PEI se po dlouhém používání hůře chytá | nejdřív IPA / voda; aceton pouze podle pokynů výrobce | Prusa jej u hladkého PEI připouští jen občas |
 | texturovaný nebo saténový Prusa plát | IPA | **aceton nepoužívat** |
+
+![Rozhodovací přehled IPA, vody se saponátem a acetonu](/images/guides/build-plate/02-volba-cisteni.svg)
 
 ## 1. Nejdřív nechte podložku vychladnout
 
@@ -52,11 +56,15 @@ Postup:
 4. důkladně opláchněte,
 5. plát kompletně vysušte před návratem na tiskárnu.
 
+![Čtyři kroky bezpečného čištění tiskového plátu](/images/guides/build-plate/04-postup-cisteni.svg)
+
 U práškově lakovaných plátů není důvod dělat mokré mytí rutinně. Výrobce upozorňuje, že plát nemá zůstávat mokrý.
 
 ## 4. Aceton: hladký PEI není totéž co textured nebo satin
 
 Tady původní univerzální rada „aceton na PEI ne“ nebyla dost přesná.
+
+![Srovnání pravidel pro hladký, texturovaný a saténový plát](/images/guides/build-plate/03-typy-platu.svg)
 
 ### Hladký Prusa PEI
 
@@ -85,6 +93,8 @@ Silně přilnutý výtisk nemusí znamenat „skvěle nastavenou adhezi“. Něk
 ## Když čistý plát stále nedrží
 
 Čištění je pouze jedna větev diagnostiky. Pokud je povrch odmaštěný a model se stále odlepuje, pokračujte článkem [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/). Pro širší souvislosti kolem lepidla, PEI a brimu navazuje také [adheze k podložce](/rady-a-tipy/bed-adheze-glue-stick-pei-brim/).
+
+![Diagnostický strom pro čistý plát, na kterém první vrstva stále nedrží](/images/guides/build-plate/05-kdyz-stale-nedrzi.svg)
 
 U PETG má smysl zkontrolovat i [první vrstvu PETG](/rady-a-tipy/petg-prvni-vrstva/), protože příliš silná adheze může být stejně problematická jako příliš slabá.
 
