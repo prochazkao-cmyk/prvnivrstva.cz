@@ -1,8 +1,8 @@
 ---
-title: "Layer shift — když se celý tisk v půlce posune do strany"
-description: "Posunuté vrstvy nejsou problém flow. Hledejte ztrátu kroku, kolizi, řemen, kladku nebo příliš agresivní pohyb v konkrétní ose."
+title: "Layer shift: proč se tisk posune do strany a jak najít příčinu"
+description: "Diagnostika posunutých vrstev krok za krokem: osa X/Y, kolize, volný pohyb, řemen, řemenice a profil. Bez univerzálních hodnot napnutí."
 publishedAt: 2026-09-29
-reviewedAt: 2026-09-29
+reviewedAt: 2026-10-04
 level: "pokročilý"
 technologies:
   - "FDM"
@@ -12,68 +12,131 @@ tags:
   - "remen"
   - "kolize"
   - "troubleshooting"
-evidence: "redakce"
-sourceNote: "Obecný diagnostický postup pro FDM. Napnutí řemenů, proud motorů a mechanické zásahy mají modelově specifické limity — řiďte se dokumentací výrobce."
+evidence: "vyrobce"
+sourceNote: "Diagnostický postup je ověřen proti aktuální dokumentaci Prusa Research k layer shiftingu, crash recovery a napnutí řemenů. Konkrétní napnutí, poloha řemenic a servisní postup se liší podle modelu tiskárny — vždy použijte dokumentaci výrobce svého stroje."
 ---
 
 ## Rychlá odpověď
 
-Když se model od určité vrstvy **celý posune v X nebo Y**, tiskárna někde ztratila informaci o skutečné poloze. Neřešte flow ani Z-offset. Hledejte mechaniku a pohyb v ose, ve které se posun objevil.
+Když se od určité výšky **celý zbytek modelu posune v X nebo Y**, tiskárna při pohybu ztratila správnou polohu. Není to typický problém flow ani Z-offsetu. Prusa Research mezi časté příčiny layer shiftu řadí nesprávné napnutí řemenu, povolenou řemenici, překážku v pohybu nebo jiný problém mechaniky os X/Y.
 
-Začněte tímto pořadím:
+Nejrychlejší diagnostika:
 
-1. zjistěte, jestli se posun opakuje ve stejné ose,
-2. hledejte kolizi trysky s výtiskem,
-3. zkontrolujte volný pohyb osy bez zadrhávání,
-4. ověřte řemen, kladku a upevnění pohonu,
-5. až potom řešte rychlosti, akcelerace nebo elektroniku.
+1. určete, **která osa se posunula**,
+2. prohlédněte místo těsně před shiftem a hledejte **kolizi trysky s výtiskem**,
+3. ověřte, že se příslušná osa pohybuje **volně v celém rozsahu**,
+4. podle dokumentace svého modelu zkontrolujte **řemen a řemenici motoru**,
+5. pokud mechanika vypadá správně, vraťte se k ověřenému profilu a teprve potom řešte agresivní pohybová nastavení nebo elektroniku.
 
-## 1. Která osa utekla
+> **Důležité:** napnutí řemenu není univerzální číslo ani „pocit v prstu“. CoreXY, bedslinger i různé generace stejné značky mohou mít jiný servisní postup.
 
-Podívejte se na model shora a určete směr posunu. Pokud se celý zbytek tisku posunul doleva/doprava, řešte osu X; dopředu/dozadu osu Y — podle konstrukce konkrétní tiskárny.
+## Jak poznat skutečný layer shift
 
-To zkrátí diagnostiku na polovinu. Není důvod rozebírat oba řemeny, když symptom jasně ukazuje jednu osu.
+Typický layer shift má ostrou hranici: spodní část modelu je na jednom místě a od určité vrstvy pokračuje geometrie posunutá do strany. Někdy se posun opakuje vícekrát.
 
-## 2. Kolize s výtiskem
+To je jiný symptom než:
 
-Tryska může zachytit o zvednutý roh, zkroucený support nebo přebytečný materiál. Motor se pokusí pokračovat, ale mechanika se fyzicky neposune o očekávanou vzdálenost.
+- **ghosting/ringing**, kde jsou kolem hran jen dozvuky,
+- **under-extrusion**, kde chybí materiál, ale souřadnice modelu neutíkají,
+- **elephant foot**, který mění hlavně rozměr spodních vrstev,
+- špatná první vrstva, která začíná už na podložce.
 
-Hledejte:
+Pokud je problém pouze ve spodní části modelu, začněte raději článkem [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/) nebo [Elephant foot](/rady-a-tipy/elephant-foot/).
 
-- zvednuté rohy a warping,
+## 1. Určete osu posunu
+
+Podívejte se na model shora a určete směr, ve kterém se horní část vůči spodní posunula. U klasické kartézské konstrukce tím často rychle zúžíte hledání na X nebo Y. U CoreXY jsou pohyby os výsledkem spolupráce obou řemenů a motorů, takže servisní diagnostika může být odlišná.
+
+Prusa ve své dokumentaci doporučuje nejprve rozpoznat osu, ve které k posunu došlo. Smyslem není hned rozebrat celou tiskárnu, ale spojit symptom s konkrétní pohybovou soustavou.
+
+## 2. Hledejte kolizi těsně před shiftem
+
+Tryska může zachytit o zvednutý roh, zkroucený support nebo nahromaděný materiál. Motor se pokusí pokračovat, ale mechanika se fyzicky neposune tak, jak firmware očekává.
+
+Prohlédněte model a okolí trysky. Hledejte zejména:
+
+- zvednuté rohy a [warping](/rady-a-tipy/warping/),
 - support, který se odlomil nebo naklonil,
-- velkou kapku materiálu na trysce,
-- příliš hrubý povrch, o který tryska při travelu drhne.
+- větší nános materiálu na trysce,
+- část výtisku, o kterou tryska při travelu opakovaně drhla,
+- zbytky filamentu nebo jinou překážku v dráze osy.
 
-Pokud se díl nejdřív zkroutil a až potom přišel shift, opravujte příčinu kolize, ne řemen naslepo.
+Pokud se díl nejprve zkroutil a až potom přišel shift, opravujte nejdřív příčinu kolize. Samotné dotažení řemenu zkroucený model nevyřeší.
 
-## 3. Volný pohyb
+## 3. Ověřte volný pohyb osy
 
-Po vypnutí a bezpečném vychladnutí stroje zkontrolujte pohyb způsobem, který dovoluje výrobce. Osa by neměla mít náhlá místa s výrazně vyšším odporem.
+Prusa u problémů s posunem i opakovanou detekcí kolize doporučuje zkontrolovat, zda v dráze X/Y není překážka a zda vedení nemá místa s neobvykle vysokým odporem.
 
-Příčinou může být nečistota, poškozené ložisko/vedení, kabel, který se zachytává, nebo špatně sestavená mechanika.
+Po bezpečném ukončení tisku a podle postupu výrobce zkontrolujte:
 
-## 4. Řemen a kladka
+- zda v řemenu nebo kolem řemenice není kus filamentu,
+- zda kabelový svazek nenaráží do rámu,
+- zda vedení nebo lineární kolejnice nemají poškození či hrubé místo,
+- zda se nic mechanicky nezachytává jen v určité části dráhy.
 
-Příliš volný řemen může přeskočit; příliš napnutý zbytečně zatěžuje ložiska a motor. Správné napnutí není univerzální pocit v prstu — použijte postup nebo nástroj výrobce konkrétní tiskárny.
+Mazání nedělejte univerzálním prostředkem naslepo. Typ maziva i to, které části se mají mazat, závisí na konstrukci tiskárny.
 
-Zkontrolujte také, že kladka na hřídeli motoru nebo jiné upevnění pohonu není uvolněné. U některých konstrukcí stačí malá vůle a problém se objeví až při prudší změně směru.
+## 4. Řemen: volný není jediný problém
 
-## 5. Rychlost, akcelerace a profil
+Příliš volný řemen může přispět ke ztrátě polohy. **Příliš napnutý řemen ale také není správně.** Prusa například u Original Prusa XL výslovně uvádí, že nadměrné napnutí může vést k nepravidelnému pohybu a layer shiftu.
 
-Pokud mechanika chodí lehce a shift se objevil po použití agresivnějšího profilu, vraťte se k ověřenému nastavení. Vyšší rychlost sama o sobě není jediný parametr — důležitá je akcelerace, hmotnost pohyblivé části a konkrétní firmware.
+Proto:
 
-Neměňte proud motoru nebo firmware jen proto, že jste viděli jeden layer shift. To je pozdní diagnostický krok, ne první.
+1. najděte servisní návod přesně pro svůj model,
+2. použijte výrobcem doporučený způsob kontroly nebo belt tuner, pokud jej daný model podporuje,
+3. neaplikujte hodnotu nebo postup z jiné konstrukce jen proto, že také používá GT2 řemen.
 
-## Udělej teď
+U CoreXY navíc může špatný zásah změnit geometrii gantry. Prusa u CORE One a XL výslovně upozorňuje, aby při nastavování napnutí nedošlo ke ztrátě zarovnání.
 
-1. Urči osu posunu.
-2. Prohlédni model pod místem shiftu: není tam warping nebo kolize?
-3. Zkontroluj volný pohyb dané osy.
-4. Podle dokumentace ověř řemen a upevnění pohonu.
-5. Vrať profil na známé bezpečné nastavení a vytiskni menší test.
+## 5. Zkontrolujte řemenici na motoru
+
+Povolená motorová řemenice je zrádná: při pomalém pohybu může vše působit normálně, ale při prudší změně směru se hřídel a řemenice vůči sobě pohnou.
+
+U konstrukcí s červíky na řemenici výrobci často vyžadují konkrétní orientaci vůči ploché části hřídele motoru. Neutahujte ji proto podle obecného obrázku z internetu — ověřte polohu pro svůj model.
+
+Prusa u aktuálních strojů v diagnostice opakovaných kolizí výslovně uvádí kontrolu X/Y motorů a řemenic a upozorňuje, že jejich poloha se mezi modely liší.
+
+## 6. Kdy řešit profil, rychlost a akceleraci
+
+Jestliže se tiskárna mechanicky pohybuje volně, řemen i řemenice odpovídají servisnímu návodu a problém se objevil až po změně profilu, vraťte se k poslednímu známému funkčnímu profilu.
+
+Vyšší rychlost není jediný parametr. Zátěž pohonu ovlivňuje také akcelerace, hmotnost pohyblivé části, geometrie stroje a firmware. Proto je lepší porovnat problematický tisk se standardním profilem výrobce než náhodně měnit několik limitů současně.
+
+**Proud motoru nebo firmware neměňte jako první pokus.** Pokud standardní profil a mechanická kontrola problém nevyřeší, je na místě modelově specifická servisní diagnostika.
+
+## Rozhodovací strom
+
+| Co vidíte | První kontrola | Co následuje |
+|---|---|---|
+| Jednorázový ostrý posun po zvednutí rohu | kolize trysky | řešit warping / stabilitu modelu |
+| Shift vždy v jedné ose | pohyb dané osy | řemen, řemenice, překážka |
+| Osa má v části dráhy větší odpor | vedení a kabeláž | odstranit překážku / servis dle výrobce |
+| Shift po změně rychlého profilu | návrat ke standardnímu profilu | až potom ladit pohybové limity |
+| Opakované crash hlášky i bez viditelné kolize | dráha X/Y a pohon | modelově specifická diagnostika výrobce |
+
+## Co nedělat
+
+- Nenapínejte řemen „co nejvíc“.
+- Nekopírujte číslo napnutí z jiné tiskárny.
+- Neměňte současně řemen, akceleraci, proud motoru a firmware — ztratíte informaci, co problém skutečně způsobilo.
+- Neřešte layer shift kalibrací flow, pokud je celý zbytek geometrie fyzicky posunutý.
+- Nepokračujte v tisku, pokud osa drhne nebo je viditelně poškozené vedení.
+
+## Udělejte teď
+
+1. Vyfoťte model zepředu a shora a určete směr posunu.
+2. Prohlédněte několik vrstev pod místem shiftu: není tam warping, support nebo stopa po nárazu trysky?
+3. Bezpečně zkontrolujte celý rozsah pohybu problematické osy.
+4. Otevřete servisní dokumentaci přesně pro svůj model a ověřte řemen i motorovou řemenici.
+5. Pokud mechanika projde kontrolou, zopakujte menší tisk na standardním profilu výrobce.
+
+## Zdroje výrobce
+
+- Prusa Research Knowledge Base — **Layer shifting**: diagnostika osy, volného pohybu, řemenů a řemenic.
+- Prusa Research Knowledge Base — **Crash recovery / repeated crash**: překážky v X/Y, vedení, napnutí řemenů a motorové řemenice.
+- Prusa Research Knowledge Base — **Adjusting belt tension (XL)**: modelově specifické napnutí a upozornění na důsledky příliš volného i příliš napnutého řemenu.
 
 <aside class="takeaway">
   <p class="takeaway-label">Praktický závěr</p>
-  <p>Layer shift je hlavně informace o poloze a mechanice. Nejrychlejší cesta je určit osu, vyloučit kolizi a až potom kontrolovat pohon. Flow, teplota filamentu a Z-offset samotný posunutou geometrii neopraví.</p>
+  <p>Layer shift berte jako problém polohy. Nejprve určete osu a vylučte kolizi, potom volný pohyb, řemen a řemenici. Hodnoty napnutí ani servisní zásahy nepřenášejte mezi různými modely tiskáren.</p>
 </aside>
