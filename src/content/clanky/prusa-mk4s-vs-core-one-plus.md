@@ -66,7 +66,7 @@ MK4S stojí za užší výběr, pokud:
 - nepotřebujete integrovanou uzavřenou komoru,
 - chcete zůstat v ekosystému Nextruderu, Load Cell a PrusaSliceru.
 
-Přečtěte si také samostatný [profil Original Prusa MK4S](/tiskarny/original-prusa-mk4s/).
+Přečtěte si také samostatný [profil Original Prusa MK4S](/tiskarny/prusa-mk4s/).
 
 ## 5. Kdy bych do užšího výběru dal CORE One+
 
