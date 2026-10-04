@@ -34,6 +34,8 @@ Nejrychlejší diagnostika:
 
 Typický layer shift má ostrou hranici: spodní část modelu je na jednom místě a od určité vrstvy pokračuje geometrie posunutá do strany. Někdy se posun opakuje vícekrát.
 
+![Ilustrační schéma skutečného layer shiftu: horní vrstvy jsou od ostré hranice posunuté do strany.](/images/guides/layer-shift-01-symptom.svg)
+
 To je jiný symptom než:
 
 - **ghosting/ringing**, kde jsou kolem hran jen dozvuky,
@@ -53,6 +55,8 @@ Prusa ve své dokumentaci doporučuje nejprve rozpoznat osu, ve které k posunu 
 
 Tryska může zachytit o zvednutý roh, zkroucený support nebo nahromaděný materiál. Motor se pokusí pokračovat, ale mechanika se fyzicky neposune tak, jak firmware očekává.
 
+![Ilustrační schéma kolize trysky se zvednutým rohem výtisku.](/images/guides/layer-shift-02-collision.svg)
+
 Prohlédněte model a okolí trysky. Hledejte zejména:
 
 - zvednuté rohy a [warping](/clanky/warping-u-abs-priciny-a-checklist/),
@@ -67,6 +71,8 @@ Pokud se díl nejprve zkroutil a až potom přišel shift, opravujte nejdřív p
 
 Prusa u problémů s posunem i opakovanou detekcí kolize doporučuje zkontrolovat, zda v dráze X/Y není překážka a zda vedení nemá místa s neobvykle vysokým odporem.
 
+![Schéma kontroly celého rozsahu pohybu osy a hledání místa se zvýšeným odporem.](/images/guides/layer-shift-03-axis-check.svg)
+
 Po bezpečném ukončení tisku a podle postupu výrobce zkontrolujte:
 
 - zda v řemenu nebo kolem řemenice není kus filamentu,
@@ -79,6 +85,8 @@ Mazání nedělejte univerzálním prostředkem naslepo. Typ maziva i to, které
 ## 4. Řemen: volný není jediný problém
 
 Příliš volný řemen může přispět ke ztrátě polohy. **Příliš napnutý řemen ale také není správně.** Prusa například u Original Prusa XL výslovně uvádí, že nadměrné napnutí může vést k nepravidelnému pohybu a layer shiftu.
+
+![Ilustrační schéma řemenu a řemenice s upozorněním na modelově specifické napnutí.](/images/guides/layer-shift-04-belt-pulley.svg)
 
 Proto:
 
@@ -105,6 +113,8 @@ Vyšší rychlost není jediný parametr. Zátěž pohonu ovlivňuje také akcel
 **Proud motoru nebo firmware neměňte jako první pokus.** Pokud standardní profil a mechanická kontrola problém nevyřeší, je na místě modelově specifická servisní diagnostika.
 
 ## Rozhodovací strom
+
+![Rozhodovací strom diagnostiky layer shiftu: kolize, volný pohyb, řemen, řemenice a standardní profil.](/images/guides/layer-shift-05-decision-tree.svg)
 
 | Co vidíte | První kontrola | Co následuje |
 |---|---|---|
