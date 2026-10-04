@@ -78,7 +78,7 @@ Pro uživatele, který střídá jemné detaily a rychlejší tisk větších fu
 | Airflow | adaptivní | konvenční chlazení P1S |
 | Hotend | quick-swap sestava | starší konstrukce P1S |
 
-P1S tím automaticky nepřestává dávat smysl. Bambu Lab při uvedení P2S výslovně uvedl, že P1S zůstává v nabídce a podporovaný. Výběr proto není „nový model vždy vítězí“, ale otázka toho, zda využijete komfortnější ovládání, kameru, novou extruzi a automatizaci.
+P1S tím automaticky nepřestává dávat smysl. Bambu Lab při uvedení P2S výslovně uvedl, že P1S zůstává v nabídce a podporovaný. Výběr proto není „nový model vždy vítězí“, ale otázka toho, zda využijete komfortnější ovládání, kameru, novou extruzi a automatizaci. Pro opačný pohled a kompletní specifikaci starší generace pokračujte na [samostatný profil Bambu Lab P1S](/tiskarny/bambu-lab-p1s/).
 
 ## P2S a AMS 2 Pro
 
