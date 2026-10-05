@@ -15,6 +15,8 @@ tags:
 
 Prusa CORE One+ (Gen 2) je uzavřená CoreXY FDM tiskárna s aktivně řízenou komorou. V katalogu První Vrstvy ji zařazujeme jako zdrojovaný produktový profil: níže uvedené parametry vycházejí z aktuálních materiálů Prusa Research, nikoli z našeho fyzického testu.
 
+> **Rozhodujete se mezi CORE One+ a otevřenou MK4S?** Pokračujte na [Prusa MK4S vs. CORE One+: kterou zvolit podle materiálů a konstrukce](/clanky/prusa-mk4s-vs-core-one-plus/).
+
 ## Nejdůležitější parametry
 
 | Parametr | Prusa CORE One+ (Gen 2) |
@@ -42,6 +44,8 @@ Zdroj parametrů: oficiální produktová stránka Prusa CORE One+ (Gen 2), kont
 ## Proč je důležitá aktivně řízená komora
 
 Výrobce uvádí maximální teplotu komory 55 °C. To CORE One+ odlišuje od tiskáren, které mají pouze pasivní enclosure. Vyšší a stabilnější teplota okolí výtisku je relevantní zejména pro materiály náchylné k deformaci. Není ale správné z této jediné hodnoty odvozovat, že každý technický materiál bude bezproblémový — vždy záleží i na konkrétním filamentu, geometrii dílu, profilu a přípravě tiskového povrchu.
+
+Právě komora je jeden z hlavních rozhodovacích rozdílů proti MK4S; praktický kontext shrnuje [srovnání MK4S vs. CORE One+](/clanky/prusa-mk4s-vs-core-one-plus/).
 
 ## Nextruder a první vrstva
 
@@ -81,7 +85,8 @@ To je důležité při porovnávání katalogových položek: přítomnost uzav�
 - zda konkrétní balení obsahuje požadovaný tiskový plát a příslušenství,
 - zda potřebujete volitelnou kameru nebo HEPA filtr,
 - kompatibilitu konkrétního technického filamentu s tryskou a profilem,
-- zda je pro vaše modely dostatečný tiskový objem 250 × 220 × 270 mm.
+- zda je pro vaše modely dostatečný tiskový objem 250 × 220 × 270 mm,
+- zda proti otevřené [MK4S](/tiskarny/prusa-mk4s/) skutečně využijete enclosure a CoreXY konstrukci.
 
 ## CORE One+ není totéž co vlastní redakční test
 
