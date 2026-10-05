@@ -47,7 +47,7 @@ Výrobce uvádí maximální teplotu komory 55 °C. To CORE One+ odlišuje od ti
 
 CORE One+ používá přímý Nextruder s planetovou převodovkou 10:1. Prusa uvádí celokovový hotend, vysokoprůtokovou 0,4mm CHT trysku a systém rychlé výměny trysky.
 
-Pro první vrstvu je podstatný Load Cell senzor. Výrobce uvádí plně automatickou kalibraci první vrstvy, takže uživatel nemá ručně nastavovat jednu univerzální hodnotu Z-offsetu jako u starších konstrukcí. Ani automatika ale neřeší mastný nebo nevhodně připravený plát — při problémech proto dává smysl projít náš [návod na čištění tiskové podložky](/clanky/cisteni-tiskove-podlozky-pei/) a diagnostiku [První vrstva nedrží](/clanky/prvni-vrstva-nedrzi/).
+Pro první vrstvu je podstatný Load Cell senzor. Výrobce uvádí plně automatickou kalibraci první vrstvy, takže uživatel nemá ručně nastavovat jednu univerzální hodnotu Z-offsetu jako u starších konstrukcí. Ani automatika ale neřeší mastný nebo nevhodně připravený plát — při problémech proto dává smysl projít náš [návod na bezpečné čištění tiskové podložky](/rady-a-tipy/bezpecne-cisteni-build-plate/) a diagnostiku [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/).
 
 ## Materiály
 
@@ -87,7 +87,7 @@ To je důležité při porovnávání katalogových položek: přítomnost uzav�
 
 Tento profil slouží jako katalogový a rozhodovací podklad. Dokud První Vrstva neprovede a nezdokumentuje skutečný fyzický test, nebudeme doplňovat vlastní skóre, tvrzení o hlučnosti, spolehlivosti, kvalitě povrchu ani rychlosti reálných modelů.
 
-Pokud už CORE One+ používáte a řešíte mechanický posun vrstev, pokračujte do diagnostiky [Layer shift: proč se vrstvy posunou a jak najít příčinu](/clanky/layer-shift-posun-vrstev/).
+Pokud už CORE One+ používáte a řešíte mechanický posun vrstev, pokračujte do diagnostiky [Layer shift: proč se vrstvy posunou a jak najít příčinu](/rady-a-tipy/layer-shift/).
 
 ## Zdroje
 
