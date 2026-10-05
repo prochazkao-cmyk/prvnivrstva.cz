@@ -14,6 +14,8 @@ tags:
 
 Original Prusa MK4S je otevřená kartézská FDM tiskárna postavená kolem Nextruderu a automatické kalibrace první vrstvy přes Load Cell. Tento profil je katalogový a zdrojovaný: parametry níže vycházejí z aktuálních materiálů Prusa Research, nikoli z fyzického testu První Vrstvy.
 
+> **Rozhodujete se mezi otevřenou MK4S a uzavřenou CoreXY?** Pokračujte na [Prusa MK4S vs. CORE One+: kterou zvolit podle materiálů a konstrukce](/clanky/prusa-mk4s-vs-core-one-plus/).
+
 ## Nejdůležitější parametry
 
 | Parametr | Original Prusa MK4S |
@@ -53,7 +55,7 @@ Automatika ale nenahrazuje čistý a vhodně zvolený tiskový povrch. Pokud prv
 
 MK4S je otevřená tiskárna, zatímco [Prusa CORE One+](/tiskarny/prusa-core-one-plus/) používá uzavřenou CoreXY konstrukci s aktivně řízenou komorou. To je důležitější rozdíl než samotný seznam podporovaných filamentů.
 
-Pro PLA, PETG a řadu běžných materiálů může být otevřená konstrukce praktická a snadno přístupná. U materiálů citlivých na průvan a teplotní gradienty je naopak relevantní enclosure. Prusa uvádí ABS, ASA, HIPS a PA pro MK4S při použití Original Prusa Enclosure s filtračním doplňkem.
+Pro PLA, PETG a řadu běžných materiálů může být otevřená konstrukce praktická a snadno přístupná. U materiálů citlivých na průvan a teplotní gradienty je naopak relevantní enclosure. Prusa uvádí ABS, ASA, HIPS a PA pro MK4S při použití Original Prusa Enclosure s filtračním doplňkem. Podrobné rozhodnutí podle materiálů a konstrukce rozebíráme v [rádci MK4S vs. CORE One+](/clanky/prusa-mk4s-vs-core-one-plus/).
 
 ## MMU3 a high-flow tryska
 
