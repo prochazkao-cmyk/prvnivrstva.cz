@@ -17,118 +17,77 @@ Debata Prusa vs Bambu Lab je v komunitě skoro jako volba fotbalového klubu. Je
 
 Tenhle text není „koupit X“. Je to srovnání ekosystémů tak, jak je potkáte v dílně v roce 2026: hardware, software, materiály, údržba, lock-in a pro koho co sedí.
 
+![Redakční ilustrace mapující rozdíl mezi ekosystémy Prusa a Bambu Lab](/media/editorial/prusa-bambu-ecosystem-map.svg)
+*Redakční ilustrace — nejde o fotografii testu ani naměřený benchmark.*
+
 ## Problém: špatná otázka „která je lepší“
 
-Lepší *na co*?  
+Lepší *na co*?
 
-- Hobby tisk PLA figurek o víkendu?  
-- Dílna, kde potřebujete náhradní díly do týdne a stroj nesmí stát?  
-- Škola / makerspace s deseti uživateli?  
-- Vývoj produktů, kde chcete ladit Klipper a vlastní mody?
+- Hobby tisk PLA figurek o víkendu?
+- Dílna, kde potřebujete náhradní díly do týdne a stroj nesmí stát?
+- Škola / makerspace s deseti uživateli?
+- Vývoj produktů, kde chcete ladit vlastní mody?
 
 Bez use-case je srovnání marketingové cvičení. Níže proto srovnáváme **osa po ose**, ne skóre z unboxingu.
 
-Typické zástupce (stav k 2026 — ověřte aktuální generace):
-
-| Tábor | Typické stroje | Pozice |
-|-------|----------------|--------|
-| **Prusa** | MK4S, Core One, XL (toolchanger) | Otevřenější DIY/prosumer, silný evropský servis a komunita |
-| **Bambu Lab** | A1/A1 mini, P1S, X1C, H2 řady | Rychlý uzavřenější ekosystém, AMS, „out of box“ zážitek |
+![Rozhodovací strom Prusa versus Bambu Lab podle požadavku na pohodlí a servisovatelnost](/media/editorial/prusa-bambu-decision.svg)
+*Redakční rozhodovací ilustrace, nikoli univerzální verdikt.*
 
 ## Řešení: osa po ose
 
-### 1) Rychlost a „time to first good print“
+### 1) Start a workflow
 
-**Bambu** obvykle vyhraje první dojem. Tovární kalibrace, aktivní kompenzace vibrací, vysoké rychlosti u CoreXY modelů (P1/X1), enclosure z výroby u vyšších modelů. Nováček často má použitelný výtisk tentýž den.
-
-**Prusa** historicky sázela spíš na spolehlivost a předvídatelnost než na závodní mm/s. Novější generace (MK4S, Core One) výrazně zrychlily a Input Shaper / Pressure Advance (nebo ekvivalenty v jejich stacku) už nejsou „jen u Klipper lidí“. Pořád ale platí: Bambu marketingově i prakticky tlačí *rychlost jako default*.
-
-**Verdikt osy:** potřebujete rychle a bez ladění → Bambu má náskok. Chcete rozumět stroji a ladit → Prusa (nebo Voron/DIY) dává víc prostoru.
+Bambu staví na silně integrovaném workflow a automatizaci. Prusa dlouhodobě zdůrazňuje servisovatelnost, dokumentaci a možnost uživatele do stroje zasahovat. Konkrétní schopnosti se ale liší model od modelu, proto je fér porovnávat vždy aktuální dvojici strojů, ne jen loga na čele.
 
 ### 2) Kvalita výtisku a konzistence
 
-Obě značky umí výborný FDM. Rozdíly jsou spíš v:
+Obě značky umí kvalitní FDM. Výsledek výrazně ovlivní profil, materiál, jeho stav, konstrukce dílu a zvolená tiskárna. Bez stejného testovacího protokolu proto nedáváme jedné značce obecné skóre kvality.
 
-- **default profilech** (Bambu Studio je agresivnější na rychlost; PrusaSlicer konzervativnější a velmi čitelný),
-- **enclosure** (P1S/X1 vs open MK4S — u ABS/ASA to není detail),
-- **multi-material** (AMS vs MMU — různé trade-offy spolehlivosti a waste).
+### 3) Otevřenost, opravitelnost a náhradní díly
 
-Kvalita „špičky“ je u obou vysoká. Horší výtisky u obou bývají z **špatného filamentu, vlhkosti, nebo uživatelského zásahu do profilu**, ne z magie loga.
+U Prusy je důležitou součástí produktu dokumentace a uživatelský servis. Bambu Lab sází více na integrovaný systém zařízení, sliceru a příslušenství. Pro dílnu je proto dobré před nákupem ověřit dostupnost konkrétních náhradních dílů a servisní postup pro vybraný model.
 
-### 3) Otevřenost, opravitelnost, náhradní díly
+### 4) Software a multi-material
 
-Tady je Prusa silná:
-
-- detailní dokumentace, náhradní díly, self-repair kultura,
-- otevřenější přístup k úpravám a komunitním modům,
-- PrusaSlicer jako reference pro spoustu forků.
-
-Bambu je **více uzavřený ekosystém**: skvěle integrovaný, ale s omezeními kolem třetích filamentů (záleží na modelu a politice AMS/RFID), firmwaru a některých servisních cest. Komunita obchody zná — oficiální cesta je ale „zůstaň v zahradě“.
-
-**Pro dílnu:** pokud chcete stroj rozšroubovat, vyměnit hotend za aftermarket a neřešit, jestli update něco zamkne, Prusa (nebo otevřený DIY) je klidnější volba. Pokud chcete minimum kutilství, Bambu tohle riziko schválně bere na sebe.
-
-### 4) Software a workflow
-
-| | Prusa | Bambu |
-|---|-------|-------|
-| Slicer | PrusaSlicer (výborný, transparentní) | Bambu Studio (fork PS, silně integrovaný) |
-| Tisková fronta / app | Prusa Connect / Link | Bambu cloud / app — pohodlné, ale cloud dependence je téma |
-| Multi-color | MMU (učení křivka, waste) | AMS (pohodlnější UX, také waste) |
-
-Cloud a telemetrie: u Bambu je to častější téma diskusí (účet, server, offline režimy). U Prusa Connect můžete jet lokálněji. Pokud máte paranoidní IT politiku v firmě, ověřte offline možnosti *před* nákupem, ne po něm.
+PrusaSlicer, Prusa Connect/Link a MMU tvoří jeden směr workflow; Bambu Studio, aplikace a AMS druhý. Nehodnotíme je jedním číslem: uživatel, který vyžaduje lokální provoz, řeší jiné priority než člověk, který chce pohodlné vzdálené ovládání a multi-color.
 
 ### 5) Materiály: PLA až inženýrské
 
-- **PLA/PETG:** oba tábory v pohodě.  
-- **ABS/ASA:** enclosure pomáhá — Bambu P1S/X1 má výhodu „z krabice“; MK4S chce box.  
-- **Kompozity / abrazivní:** hardened nozzle nutnost u obou; X1C cílí na tohle silněji z výroby.  
-- **Resin/SLA:** ani jedna značka tohle nevyřeší — to je jiná kapitola (Formlabs, Elegoo…).
+![Redakční mapa materiálů a požadavků na tiskárnu](/media/editorial/prusa-bambu-materials.svg)
+*Redakční ilustrace — konkrétní kompatibilitu materiálu vždy ověřte u konkrétní tiskárny a výrobce filamentu.*
 
-### 6) Cena, TCO, servis v EU
+PLA a PETG zvládá široké spektrum strojů. U ASA/ABS začíná hrát větší roli enclosure a řízení teplotního prostředí. U abrazivních kompozitů je potřeba hlídat materiál trysky a další části filamentové cesty. Proto je lepší začít požadovaným dílem a materiálem a až potom vybírat značku.
 
-Pořizovací cena Bambu často vypadá agresivněji za rychlost a box. TCO ale počítejte:
+### 6) Cena, TCO a servis
 
-- náhradní díly a dostupnost,
-- spotřeba (rychlý tisk ≠ vždy levnější job),
-- čas downtimu,
-- multi-material waste (AMS i MMU umí „žrát“ filament při výměnách).
+Pořizovací cena sama o sobě neříká, kolik vás stroj bude stát v provozu.
 
-Prusa má výhodu evropského zázemí, dokumentace v rozumné kvalitě a predikovatelného servisu. Bambu má širokou distribuční síť a rychlý vývoj produktů — dlouhodobá podpora konkrétního modelu je otázka, kterou si ověřte podle generace.
+![Schéma celkových nákladů vlastnictví 3D tiskárny](/media/editorial/prusa-bambu-tco.svg)
+*Redakční ilustrace TCO. Neobsahuje vlastní měření ani modelované ceny.*
+
+Do rozhodnutí patří náhradní díly, čas odstávky, odpad při vícebarevném tisku, čas obsluhy a servis. Aktuální cenu proto vždy ověřujte v době nákupu; do tohoto evergreen srovnání nevkládáme pevnou částku, která rychle zastará.
 
 ### 7) Komunita a učení
 
-Prusa komunita je „opravářská“ a tutoriálová. Bambu komunita je „výsledková“ a rychlá na share profilů. Obě jsou užitečné; liší se styl. Pokud se chcete naučit *proč* vrstva drží, Prusa/DIY diskurz je bohatší. Pokud chcete *aby* vrstva držela večer, Bambu defaulty vás dovezou dřív.
+Oba ekosystémy mají rozsáhlé uživatelské komunity. Styl podpory se liší, ale není poctivé z toho bez měřitelného vzorku dělat univerzální pořadí. Pro konkrétní nákup sledujte kvalitu dokumentace, dostupnost dílů a zkušenosti s přesným modelem, který zvažujete.
 
-## Srovnávací tabulka (zjednodušeně)
+## Praktický závěr
 
-| Kritérium | Spíš Prusa | Spíš Bambu Lab |
-|-----------|------------|----------------|
-| Rychlý start bez ladění | | ● |
-| Opravovatelnost / open DIY | ● | |
-| Enclosure z výroby (střední třída) | | ● (P1S/X1) |
-| Transparentní slicer workflow | ● | ○ (Studio je schopné, ale „zahrada“) |
-| Multi-color pohodlí | ○ MMU | ● AMS |
-| Firemní offline / kontrola dat | ● | ověřit |
-| Absolutní „nejlepší výtisk“ | remíza (závisí na setupu) | remíza |
+![Pět otázek, které si položit před volbou mezi Prusa a Bambu Lab](/media/editorial/prusa-bambu-checklist.svg)
+*Redakční checklist pro rozhodování.*
 
-## Praktický závěr — komu co
+**Prusa dává větší smysl k prozkoumání, pokud** je pro vás zásadní servisovatelnost, dokumentace, lokálnější kontrola workflow a možnost do stroje zasahovat.
 
-**Kupte (nebo zůstaňte u) Prusa, pokud:**
+**Bambu Lab dává větší smysl k prozkoumání, pokud** chcete silně integrované workflow, automatizaci a pohodlný multi-material systém a akceptujete těsněji propojený ekosystém.
 
-- chcete stroj, kterému rozumíte a který opravíte,
-- učíte, vedete makerspace, nebo stavíte proces kolem dokumentace,
-- preferujete otevřenější software a méně cloud lock-inu,
-- jste OK doplnit enclosure na engineering filamenty.
+**Nekupujte podle fanklubu.** Napište si tři typické díly: materiál, rozměr a požadovaný způsob práce. Potom porovnejte konkrétní modely podle aktuálních specifikací výrobců.
 
-**Kupte Bambu, pokud:**
+## Kam dál
 
-- chcete maximum výsledku za minimum ladění,
-- potřebujete rychlost a (u P1S/X1) box hned,
-- multi-color/AMS je součást workflow,
-- berete uzavřenější ekosystém jako daň za pohodlí.
+- [Bambu Lab A1 vs P1S](/clanky/bambu-a1-vs-p1s/)
+- [Bambu Lab P1S vs P2S](/clanky/bambu-p1s-vs-p2s/)
+- [Prusa MK4S vs CORE One+](/clanky/prusa-mk4s-vs-core-one-plus/)
+- [Jak vybrat první 3D tiskárnu: 7 otázek](/clanky/jak-vybrat-prvni-3d-tiskarnu-7-otazek/)
 
-**Nekupujte podle fanklubu.** Kupte podle: materiálů, které tisknete, jestli potřebujete box, jestli budete stroj servisovat sami, a jestli vám vadí cloud.
-
-**Zítra v dílně:** napište si tři typické díly (materiál, rozměr, tolerance). Spusťte je mentálně oběma ekosystémy. Kde je víc tření (enclosure, tryska, AMS waste, oprava), tam je vaše odpověď — ne v banneru výrobce.
-
-*Poznámka: řady se rychle mění. Před nákupem ověřte aktuální model (MK4S vs Core One, P1S vs novější generace) a firmware politiku.*
+*Poznámka: produktové řady a firmware se mění. Aktuální technické parametry vždy ověřte na stránkách výrobce konkrétního modelu.*
