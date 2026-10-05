@@ -13,6 +13,8 @@ tags:
 
 Bambu Lab A1 je otevřená FDM tiskárna s pohyblivou podložkou, která míří hlavně na uživatele hledající pohodlný vstup do 3D tisku, větší tiskový prostor než nabízí A1 mini a možnost vícebarevného tisku přes AMS lite. Tento profil není vlastní fyzický test První Vrstvy; technické údaje níže vycházejí z aktuální dokumentace výrobce.
 
+> **Rozhodujete se mezi dvěma velikostmi?** Přečtěte si také náš [podrobný nákupní rádce Bambu Lab A1 vs. A1 mini](/clanky/bambu-lab-a1-vs-a1-mini/), kde rozdíly převádíme do konkrétních scénářů podle prostoru a materiálů.
+
 ## Nejdůležitější parametry
 
 | Parametr | Bambu Lab A1 |
@@ -64,7 +66,7 @@ Proto zde z deklarovaného maxima nevytváříme vlastní časové benchmarky an
 
 A1 mini má podle dokumentace výrobce tiskový objem 180 × 180 × 180 mm a maximální teplotu podložky 80 °C. A1 nabízí 256 × 256 × 256 mm a podložku do 100 °C. Obě používají podobnou koncepci otevřené tiskárny a výrobce u obou jako ideální uvádí PLA, PETG, TPU a PVA.
 
-Pokud tisknete hlavně malé modely, může být A1 mini prostorově úspornější. A1 dává větší smysl tam, kde se 180mm rozměr mini verze stává pravidelným omezením.
+Pokud tisknete hlavně malé modely, může být A1 mini prostorově úspornější. A1 dává větší smysl tam, kde se 180mm rozměr mini verze stává pravidelným omezením. Pro rozhodnutí krok za krokem pokračujte na [A1 vs. A1 mini: kterou vybrat](/clanky/bambu-lab-a1-vs-a1-mini/).
 
 ## Pro koho A1 dává smysl
 
