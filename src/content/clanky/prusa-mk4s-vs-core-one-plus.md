@@ -66,7 +66,7 @@ MK4S stojí za užší výběr, pokud:
 - nepotřebujete integrovanou uzavřenou komoru,
 - chcete zůstat v ekosystému Nextruderu, Load Cell a PrusaSliceru.
 
-Přečtěte si také samostatný [profil Original Prusa MK4S](/tiskarny/prusa-mk4s/).
+Navazující veřejný profil najdete na stránce [Prusa MK4S](/stroje/prusa-mk4s/).
 
 ## 5. Kdy bych do užšího výběru dal CORE One+
 
@@ -77,7 +77,7 @@ CORE One+ stojí za užší výběr, pokud:
 - využijete aktivně řízenou komoru až do 55 °C,
 - využijete vyšší pracovní prostor 270 mm v ose Z.
 
-Podrobnosti jsou v [profilu Prusa CORE One+](/tiskarny/prusa-core-one-plus/).
+Pro další kontext pokračujte na veřejný profil [Prusa CORE One](/recenze/prusa-core-one/); technické údaje CORE One+ v tomto srovnání vycházejí z aktuálních specifikací výrobce.
 
 ## 6. Co z tabulky nezjistíte
 
