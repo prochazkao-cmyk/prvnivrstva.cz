@@ -2,6 +2,7 @@ export const categoryOrder = [
   'clanky',
   'rady-a-tipy',
   'stroje',
+  'tiskarny',
   'recenze',
   'novinky',
   'technologie',
@@ -41,6 +42,14 @@ export const categories: Record<CategoryId, Category> = {
     description: 'Profily tiskáren. Komu sedí a kde je kompromis.',
     intro:
       'Přehledy strojů, ne unboxing. Silné stránky, slabiny a komu dává smysl — bez laboratorního protokolu. Hlubší verdikt, když ho máme, zůstává v recenzích.',
+  },
+  tiskarny: {
+    id: 'tiskarny',
+    label: 'Katalog tiskáren',
+    href: '/tiskarny/',
+    description: 'Zdrojované produktové profily tiskáren s jasně oddělenými fakty výrobce a redakčním kontextem.',
+    intro:
+      'Katalog stavíme z ověřitelných specifikací výrobců. Profil není automaticky recenze ani vlastní test: tam, kde nemáme fyzické měření, to za něj nevydáváme.',
   },
   recenze: {
     id: 'recenze',
