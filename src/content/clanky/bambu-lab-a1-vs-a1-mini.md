@@ -101,7 +101,7 @@ Nejdřív si projděte deset modelů, které chcete tisknout během prvních mě
 
 Pak teprve řešte AMS lite a další příslušenství. Pokud je vaším cílem ABS, ASA, PC nebo PA, nepomůže rozhodovat jen mezi A1 a A1 mini: výrobce tyto materiály u obou v aktuální specifikaci nedoporučuje.
 
-Pro další orientaci navazuje průvodce [Jak vybrat první 3D tiskárnu: 7 otázek](/clanky/jak-vybrat-prvni-3d-tiskarnu/) a při prvních výtiscích [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/).
+Pro další orientaci navazuje průvodce [Jak vybrat první 3D tiskárnu: 7 otázek](/clanky/jak-vybrat-prvni-3d-tiskarnu-7-otazek/) a při prvních výtiscích [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/).
 
 ## Zdroje a metodika
 
