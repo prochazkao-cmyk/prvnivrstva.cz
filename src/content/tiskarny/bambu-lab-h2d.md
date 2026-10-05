@@ -14,6 +14,8 @@ tags:
 
 Bambu Lab H2D je uzavřená FDM tiskárna se dvěma tryskami, aktivně vyhřívanou komorou a výrazně větším pracovním prostorem než 256mm třída. Tento profil není vlastní fyzický test První Vrstvy; technické údaje níže vycházejí z aktuální dokumentace výrobce.
 
+> **Potřebujete firemní síť a technické materiály?** Vedle standardní H2D existuje také [Bambu Lab H2D Pro](/tiskarny/bambu-lab-h2d-pro/) s enterprise konektivitou a profesionálně zaměřenou konfigurací.
+
 ## Nejdůležitější parametry
 
 | Parametr | Bambu Lab H2D |
@@ -86,6 +88,7 @@ Naopak pro větší funkční díly, kombinaci hlavního a podpůrného materiá
 - Změřte pracovní místo; samotná tiskárna má podle výrobce 492 × 514 × 626 mm a 31 kg.
 - Rozhodujte podle reálně používaných filamentů, ne pouze podle maxima 350 °C na hotendu.
 - Pokud vás zajímá laser, zkontrolujte přesnou konfiguraci a příslušenství; základní 3D tisková funkce a laserový balíček nejsou totéž.
+- Pokud tiskárna míří do spravované firemní sítě, porovnejte také [H2D Pro](/tiskarny/bambu-lab-h2d-pro/).
 - Deklarované maximum 1000 mm/s neberte jako univerzální časový benchmark.
 
 ## Zdroje
