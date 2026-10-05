@@ -49,9 +49,13 @@ articles.sort((a, b) => (b.publishedAt?.getTime() || 0) - (a.publishedAt?.getTim
             {articles.map((art) => (
               <tr>
                 <td>
-                  <a href={`/${art.collection}/${art.slug}/`} target="_blank" class="art-link">
-                    {art.title}
-                  </a>
+                  {art.draft ? (
+                    <span class="art-link draft-title">{art.title}</span>
+                  ) : (
+                    <a href={`/${art.collection}/${art.slug}/`} target="_blank" class="art-link">
+                      {art.title}
+                    </a>
+                  )}
                   <div class="art-meta">{art.collection}</div>
                 </td>
                 <td>
