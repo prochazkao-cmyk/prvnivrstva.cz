@@ -1,0 +1,49 @@
+---
+interface Props {
+  category: string;
+  tags?: string[];
+}
+const { category, tags = [] } = Astro.props;
+const haystack = tags.join(' ').toLocaleLowerCase('cs');
+const material = /(pla|petg|asa|abs|tpu|filament|materi)/.test(haystack);
+const troubleshooting = category === 'rady-a-tipy' || /(vada|warping|stringing|tryska|vrstva|flow|offset)/.test(haystack);
+const buying = /(výběr|vyber|srovn|tiskárn|bambu|prusa|creality|elegoo)/.test(haystack) || ['recenze','stroje','tiskarny'].includes(category);
+const visuals = material
+  ? [
+      ['/media/editorial/article-material-map.svg','Mapa materiálů PLA, PETG, ASA a TPU'],
+      ['/media/editorial/article-workflow.svg','Proces od modelu přes slicer k hotovému výtisku'],
+      ['/media/editorial/article-diagnosis-flow.svg','Postup diagnostiky problému při 3D tisku'],
+    ]
+  : troubleshooting
+    ? [
+        ['/media/editorial/article-diagnosis-flow.svg','Postup diagnostiky problému při 3D tisku'],
+        ['/media/editorial/article-printer-anatomy.svg','Hlavní části FDM 3D tiskárny'],
+        ['/media/editorial/article-workflow.svg','Proces od modelu přes slicer k hotovému výtisku'],
+      ]
+    : buying
+      ? [
+          ['/media/editorial/article-buying-path.svg','Rozhodovací cesta při výběru 3D tiskárny'],
+          ['/media/editorial/article-printer-anatomy.svg','Hlavní části FDM 3D tiskárny'],
+          ['/media/editorial/article-material-map.svg','Mapa materiálů PLA, PETG, ASA a TPU'],
+        ]
+      : [
+          ['/media/editorial/article-workflow.svg','Proces od modelu přes slicer k hotovému výtisku'],
+          ['/media/editorial/article-printer-anatomy.svg','Hlavní části FDM 3D tiskárny'],
+          ['/media/editorial/article-buying-path.svg','Rozhodovací cesta při výběru 3D tiskárny'],
+        ];
+---
+<section class="article-illustrations" aria-label="Ilustrace k tématu">
+  <p class="article-illustrations__label">Vizuálně k tématu</p>
+  <div class="article-illustrations__grid">
+    {visuals.map(([src, alt]) => (
+      <figure>
+        <img src={src} alt={alt} loading="lazy" width="1200" height="675" />
+        <figcaption>{alt} · redakční ilustrace, nikoli fotografie testu</figcaption>
+      </figure>
+    ))}
+  </div>
+</section>
+
+<style>
+.article-illustrations{margin:2rem 0 2.5rem}.article-illustrations__label{margin:0 0:.65rem;color:var(--color-muted);font-size:.72rem;font-weight:760;letter-spacing:.08em;text-transform:uppercase}.article-illustrations__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}.article-illustrations figure{margin:0}.article-illustrations img{display:block;width:100%;height:auto;border:1px solid var(--color-line);border-radius:var(--radius-card);background:var(--color-card)}.article-illustrations figcaption{margin-top:.4rem;color:var(--color-muted);font-size:.72rem;line-height:1.35}@media(max-width:760px){.article-illustrations__grid{grid-template-columns:1fr}.article-illustrations figcaption{font-size:.76rem}}
+</style>
