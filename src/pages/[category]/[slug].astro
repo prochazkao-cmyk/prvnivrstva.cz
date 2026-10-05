@@ -9,6 +9,7 @@ type Entry =
   | CollectionEntry<'clanky'>
   | CollectionEntry<'rady-a-tipy'>
   | CollectionEntry<'stroje'>
+  | CollectionEntry<'tiskarny'>
   | CollectionEntry<'recenze'>
   | CollectionEntry<'novinky'>
   | CollectionEntry<'technologie'>;
@@ -23,11 +24,13 @@ export async function getStaticPaths() {
             ? await getCollection('rady-a-tipy')
             : category === 'stroje'
               ? await getCollection('stroje')
-              : category === 'recenze'
-                ? await getCollection('recenze')
-                : category === 'novinky'
-                  ? await getCollection('novinky')
-                  : await getCollection('technologie');
+              : category === 'tiskarny'
+                ? await getCollection('tiskarny')
+                : category === 'recenze'
+                  ? await getCollection('recenze')
+                  : category === 'novinky'
+                    ? await getCollection('novinky')
+                    : await getCollection('technologie');
       return entries
         .filter((entry) => !entry.data.draft)
         .map((entry) => ({

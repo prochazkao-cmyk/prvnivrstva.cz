@@ -43,6 +43,7 @@ export const collections = {
   clanky: articles('clanky'),
   'rady-a-tipy': articles('rady-a-tipy'),
   stroje: articles('stroje'),
+  tiskarny: articles('tiskarny'),
   recenze: articles('recenze'),
   novinky: articles('novinky'),
   technologie: articles('technologie'),
