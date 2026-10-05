@@ -47,7 +47,7 @@ To ale není totéž jako tvrdit konkrétní časovou úsporu u libovolného mod
 
 MK4S používá Direct Drive Nextruder s planetovou převodovkou 10:1 a celokovovou cestou filamentu. Load Cell v Nextruderu slouží k přesnému kontaktu s podložkou a automatizuje kalibraci první vrstvy.
 
-Automatika ale nenahrazuje čistý a vhodně zvolený tiskový povrch. Pokud první vrstva nedrží, pokračujte na [návod k čištění PEI podložky](/clanky/cisteni-tiskove-podlozky-pei/) a diagnostiku [První vrstva nedrží](/clanky/prvni-vrstva-nedrzi/).
+Automatika ale nenahrazuje čistý a vhodně zvolený tiskový povrch. Pokud první vrstva nedrží, pokračujte na [návod k bezpečnému čištění tiskové podložky](/rady-a-tipy/bezpecne-cisteni-build-plate/) a diagnostiku [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/).
 
 ## Otevřená konstrukce versus CORE One+
 
@@ -89,7 +89,7 @@ Oficiální specifikace uvádí Ethernet, Wi‑Fi modul dodávaný s tiskárnou,
 
 Dokud První Vrstva neprovede a nezdokumentuje skutečný fyzický test, nebudeme tomuto modelu přidělovat vlastní skóre ani tvrdit vlastní naměřenou hlučnost, rychlost, spotřebu nebo kvalitu povrchu.
 
-Při mechanickém posunu vrstev pokračujte do průvodce [Layer shift: proč se vrstvy posunou a jak najít příčinu](/clanky/layer-shift-posun-vrstev/).
+Při mechanickém posunu vrstev pokračujte do průvodce [Layer shift: proč se vrstvy posunou a jak najít příčinu](/rady-a-tipy/layer-shift/).
 
 ## Zdroje
 
