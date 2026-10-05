@@ -16,6 +16,8 @@ Bambu Lab P2S je uzavřená CoreXY FDM tiskárna, kterou výrobce uvedl jako mod
 
 Tento profil není vlastní fyzický test První Vrstvy. Parametry a popis funkcí níže jsou redakční syntézou aktuálních materiálů výrobce; nevytváříme z nich vlastní benchmarky, měření hlučnosti ani skóre.
 
+> **P1S, nebo P2S?** Pokud nepotřebujete jen parametry jedné tiskárny, otevřete [zdrojované srovnání Bambu Lab P1S vs. P2S](/clanky/bambu-p1s-vs-p2s/). Zaměřuje se na rozdíly, které se mezi generacemi skutečně změnily, bez vlastních smyšlených měření a skóre.
+
 ## Nejdůležitější parametry
 
 | Parametr | Bambu Lab P2S |
@@ -78,7 +80,7 @@ Pro uživatele, který střídá jemné detaily a rychlejší tisk větších fu
 | Airflow | adaptivní | konvenční chlazení P1S |
 | Hotend | quick-swap sestava | starší konstrukce P1S |
 
-P1S tím automaticky nepřestává dávat smysl. Bambu Lab při uvedení P2S výslovně uvedl, že P1S zůstává v nabídce a podporovaný. Výběr proto není „nový model vždy vítězí“, ale otázka toho, zda využijete komfortnější ovládání, kameru, novou extruzi a automatizaci. Pro opačný pohled a kompletní specifikaci starší generace pokračujte na [samostatný profil Bambu Lab P1S](/tiskarny/bambu-lab-p1s/).
+P1S tím automaticky nepřestává dávat smysl. Bambu Lab při uvedení P2S výslovně uvedl, že P1S zůstává v nabídce a podporovaný. Výběr proto není „nový model vždy vítězí“, ale otázka toho, zda využijete komfortnější ovládání, kameru, novou extruzi a automatizaci. Pro opačný pohled a kompletní specifikaci starší generace pokračujte na [samostatný profil Bambu Lab P1S](/tiskarny/bambu-lab-p1s/); pro přímé rozhodnutí použijte [srovnání P1S vs. P2S](/clanky/bambu-p1s-vs-p2s/).
 
 ## P2S a AMS 2 Pro
 
@@ -105,7 +107,7 @@ Pokud tisknete převážně jednobarevné funkční díly, není AMS podmínkou 
 
 ## Co ověřit před nákupem
 
-Nejdřív si určete materiály a velikost modelů. Potom rozhodujte, zda využijete AMS a zda pro vás mají cenu nové automatické funkce P2S. Pokud vybíráte mezi P1S a P2S, nesrovnávejte jen maximální teplotu hotendu: tiskový objem i 300 °C maximum jsou podobné, generační posun je hlavně v extruzi, senzorech, airflow, kameře, displeji a servisovatelnosti hotendu.
+Nejdřív si určete materiály a velikost modelů. Potom rozhodujte, zda využijete AMS a zda pro vás mají cenu nové automatické funkce P2S. Pokud vybíráte mezi P1S a P2S, nesrovnávejte jen maximální teplotu hotendu: tiskový objem i 300 °C maximum jsou podobné, generační posun je hlavně v extruzi, senzorech, airflow, kameře, displeji a servisovatelnosti hotendu. Pro krok za krokem rozhodnutí pokračujte na [P1S vs. P2S: kdy dává smysl novější generace](/clanky/bambu-p1s-vs-p2s/).
 
 Po koupi doporučujeme navázat průvodci [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/), [Bezpečné čištění tiskové podložky](/rady-a-tipy/bezpecne-cisteni-build-plate/) a [Layer shift](/rady-a-tipy/layer-shift/).
 
