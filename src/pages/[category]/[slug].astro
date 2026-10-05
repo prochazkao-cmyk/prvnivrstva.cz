@@ -1,6 +1,7 @@
 ---
 import { getCollection, render, type CollectionEntry } from 'astro:content';
 import ArticleLayout from '../../layouts/ArticleLayout.astro';
+import ArticleIllustrations from '../../components/ArticleIllustrations.astro';
 import { getArticles, toArticle } from '../../lib/articles';
 import { categoryOrder, isCategory, type CategoryId } from '../../lib/categories';
 import { pickRelated } from '../../lib/related';
@@ -58,5 +59,6 @@ const related = pickRelated(article, await getArticles(), 4);
 ---
 
 <ArticleLayout article={article} related={related}>
+  <ArticleIllustrations category={category} tags={article.tags} />
   <Content />
 </ArticleLayout>
