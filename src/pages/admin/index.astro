@@ -1,67 +1,103 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
 
-const pipeline = [
-  { state: 'DISCOVERY', title: 'Import kandidátů', detail: '3DJake a další katalogy slouží k objevení aktuálních modelů. Data nejsou automaticky považována za ověřené specifikace.' },
-  { state: 'AI DRAFT', title: 'AI research + draft', detail: 'AI připraví vlastní strukturu profilu nebo článku. Redakční texty třetích stran se nekopírují ani nepřepisují odstavec po odstavci.' },
-  { state: 'VERIFY', title: 'Ověření primárních zdrojů', detail: 'Klíčové parametry se kontrolují proti výrobci, manuálu nebo oficiální dokumentaci.' },
-  { state: 'HUMAN REVIEW', title: 'Lidská kontrola', detail: 'Člověk kontroluje zdroje, formulace, užitečnost, duplicity a tvrzení, která by mohla působit jako vlastní test.' },
-  { state: 'READY', title: 'Připraveno k publikaci', detail: 'Až po kontrole může obsah do veřejné části a do interního prolinkování.' },
-];
+const allCollections = await Promise.all([
+  getCollection('clanky'),
+  getCollection('rady-a-tipy'),
+  getCollection('stroje'),
+  getCollection('tiskarny'),
+  getCollection('recenze'),
+  getCollection('novinky'),
+  getCollection('technologie'),
+]);
 
-const starterQueue = [
-  ['Bambu Lab A1 Combo', 'produktový profil', '3DJake → Bambu Lab'],
-  ['Bambu Lab P1S Combo', 'produktový profil / aktualizace', '3DJake → Bambu Lab'],
-  ['Bambu Lab A1 mini', 'kontrola existujícího profilu', '3DJake → Bambu Lab'],
-  ['Výběr první 3D tiskárny', 'nákupní rádce', 'vlastní syntéza z primárních zdrojů'],
-];
+const articles = allCollections.flat().map(art => {
+  const visualCount = (art.body?.match(/!\[.*?\]\(.*?\)/g) || []).length;
+  return {
+    ...art.data,
+    slug: art.id,
+    collection: art.collection,
+    visualCount,
+  };
+});
+
+// Sort by publishedAt desc
+articles.sort((a, b) => (b.publishedAt?.getTime() || 0) - (a.publishedAt?.getTime() || 0));
 ---
-<BaseLayout title="AI redakce | První Vrstva" description="Interní AI-first / human-verified redakční workflow.">
+<BaseLayout title="Redakční Dashboard | První Vrstva" description="Interní přehled obsahu a stavu ověření.">
   <main class="container admin-shell">
     <header class="admin-head">
       <p class="eyebrow">INTERNÍ REDAKCE</p>
-      <h1>AI-first / human-verified</h1>
-      <p>Tato stránka je pracovní rozcestník. Obsah v pipeline není automaticky publikovaný ani označený jako lidsky testovaný.</p>
+      <h1>Obsahový Dashboard</h1>
+      <p>Přehled všech článků, jejich stavu a completeness vizuálů.</p>
     </header>
 
     <section class="admin-card">
-      <h2>Workflow</h2>
-      <div class="pipeline">
-        {pipeline.map((item) => (
-          <article>
-            <span class="badge">{item.state}</span>
-            <h3>{item.title}</h3>
-            <p>{item.detail}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-
-    <section class="admin-card">
-      <h2>Startovací fronta</h2>
       <div class="table-wrap">
         <table>
-          <thead><tr><th>Téma</th><th>Výstup</th><th>Ověření</th><th>Stav</th></tr></thead>
+          <thead>
+            <tr>
+              <th>Článek</th>
+              <th>Status</th>
+              <th>Vizuály</th>
+              <th>Evidence / Stav</th>
+              <th>Zdroje</th>
+            </tr>
+          </thead>
           <tbody>
-            {starterQueue.map((row) => <tr><td>{row[0]}</td><td>{row[1]}</td><td>{row[2]}</td><td><span class="badge muted">DISCOVERY</span></td></tr>)}
+            {articles.map((art) => (
+              <tr>
+                <td>
+                  <a href={`/${art.collection}/${art.slug}/`} target="_blank" class="art-link">
+                    {art.title}
+                  </a>
+                  <div class="art-meta">{art.collection}</div>
+                </td>
+                <td>
+                  <span class={`badge ${art.draft ? 'muted' : ''}`}>
+                    {art.draft ? 'Draft' : 'Published'}
+                  </span>
+                </td>
+                <td>
+                  <span class={`visual-count ${art.visualCount < 5 ? 'incomplete' : 'complete'}`}>
+                    {art.visualCount} / 5
+                  </span>
+                </td>
+                <td>
+                  <span class="badge-state">{art.evidence || 'redakce'}</span>
+                </td>
+                <td class="source-cell" title={art.sourceNote}>
+                  {art.sourceNote ? 'Ano' : 'Ne'}
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
-    </section>
-
-    <section class="admin-card rules">
-      <h2>Publikační pravidla</h2>
-      <ul>
-        <li>3DJake používáme hlavně pro discovery katalogu, dostupnost a případně časově označenou cenu.</li>
-        <li>Specifikace ověřujeme primárně u výrobce.</li>
-        <li>All3DP a další média mohou inspirovat témata, ne sloužit jako text k přepsání.</li>
-        <li>Bez vlastního testu nepíšeme vlastní měření, skóre, hlučnost, spotřebu ani tvrzení o dlouhodobé spolehlivosti.</li>
-        <li>AI ilustrace označujeme jako ilustrace; skutečný test označujeme jako test jen tehdy, když skutečně proběhl.</li>
-      </ul>
     </section>
   </main>
 </BaseLayout>
 
 <style>
-  .admin-shell{padding-top:3rem;padding-bottom:5rem;max-width:1100px}.admin-head{max-width:780px;margin-bottom:2rem}.eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--accent,#f97316)}h1{font-size:clamp(2rem,6vw,4rem);margin:.2rem 0 .75rem}.admin-card{background:var(--surface,#fff);border:1px solid var(--border,#e5e7eb);border-radius:18px;padding:1.25rem;margin:1rem 0}.pipeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:.8rem}.pipeline article{border:1px solid var(--border,#e5e7eb);border-radius:14px;padding:1rem}.pipeline h3{margin:.65rem 0 .35rem;font-size:1rem}.pipeline p,.admin-head p,.rules li{color:var(--muted,#5f6368);line-height:1.55}.badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;padding:.3rem .5rem;border-radius:999px;background:#fff3e8;color:#b45309}.badge.muted{background:#f3f4f6;color:#4b5563}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:650px}th,td{text-align:left;padding:.8rem;border-bottom:1px solid var(--border,#e5e7eb);font-size:.9rem}th{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}.rules ul{padding-left:1.2rem}.rules li{margin:.55rem 0}@media(max-width:700px){.admin-shell{padding-top:1.5rem}.admin-card{padding:1rem}.pipeline{grid-template-columns:1fr}}
+  .admin-shell{padding-top:3rem;padding-bottom:5rem;max-width:1200px}
+  .admin-head{max-width:780px;margin-bottom:2rem}
+  .eyebrow{font-size:.78rem;font-weight:800;letter-spacing:.12em;color:var(--accent,#f97316)}
+  h1{font-size:clamp(2rem,6vw,4rem);margin:.2rem 0 .75rem}
+  .admin-card{background:var(--surface,#fff);border:1px solid var(--border,#e5e7eb);border-radius:18px;padding:1.25rem;margin:1rem 0}
+  .table-wrap{overflow:auto}
+  table{width:100%;border-collapse:collapse;min-width:800px}
+  th,td{text-align:left;padding:.8rem;border-bottom:1px solid var(--border,#e5e7eb);font-size:.9rem}
+  th{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted,#5f6368)}
+  .art-link{font-weight:600;text-decoration:none;color:var(--text, #111);display:block}
+  .art-link:hover{text-decoration:underline}
+  .art-meta{font-size:.7rem;color:var(--muted,#5f6368)}
+  .badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;padding:.3rem .5rem;border-radius:999px;background:#fff3e8;color:#b45309}
+  .badge.muted{background:#f3f4f6;color:#4b5563}
+  .visual-count{font-weight:700;font-size:.85rem}
+  .visual-count.incomplete{color:#b45309}
+  .visual-count.complete{color:#059669}
+  .badge-state{font-size:.75rem;padding:.2rem .4rem;border-radius:4px;background:#f3f4f6;border:1px solid #e5e7eb}
+  .source-cell{font-size:.85rem}
+  @media(max-width:700px){.admin-shell{padding-top:1.5rem}.admin-card{padding:1rem}}
 </style>
