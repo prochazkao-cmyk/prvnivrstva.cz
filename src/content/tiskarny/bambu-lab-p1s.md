@@ -16,6 +16,8 @@ Bambu Lab P1S je uzavřená CoreXY FDM tiskárna s tiskovým objemem 256 × 256 
 
 Tento profil není vlastní fyzický test První Vrstvy. Parametry níže vycházejí z aktuální dokumentace výrobce; nevytváříme z nich vlastní benchmarky, měření hlučnosti, spolehlivosti ani redakční skóre.
 
+> **Rozhodujete se mezi P1S a novější P2S?** Přejděte na [zdrojované srovnání Bambu Lab P1S vs. P2S](/clanky/bambu-p1s-vs-p2s/), které rozebírá rozdíly v extruderu, kalibraci průtoku, airflow, kameře, displeji a hotendu bez vymyšlených benchmarků.
+
 > **Rozhodujete se mezi otevřenou A1 a uzavřenou P1S?** Pokračujte na [Bambu Lab A1 vs. P1S: co je důležitější než papírová rychlost](/clanky/bambu-a1-vs-p1s/).
 
 ## Nejdůležitější parametry
@@ -73,7 +75,7 @@ Filtr ale není důvod tvrdit, že tisk všech materiálů je bez emisí nebo ž
 | Airflow | konvenční systém P1S | Adaptive Airflow |
 | Hotend | starší servisní konstrukce | quick-swap sestava |
 
-Podrobný profil novějšího modelu najdete na stránce [Bambu Lab P2S](/tiskarny/bambu-lab-p2s/).
+Podrobný profil novějšího modelu najdete na stránce [Bambu Lab P2S](/tiskarny/bambu-lab-p2s/). Pokud chcete místo katalogových parametrů rovnou rozhodnout mezi generacemi, pokračujte na [P1S vs. P2S: kdy dává smysl novější generace](/clanky/bambu-p1s-vs-p2s/).
 
 P2S tedy nepřidává větší tiskový prostor ani vyšší maximální teplotu hotendu. Generační rozdíl je především v extruderu, automatizaci flow, airflow, kameře, displeji a konstrukci výměny hotendu. To je užitečnější vodítko než jednoduché tvrzení, že novější model musí být automaticky lepší pro každého.
 
@@ -103,7 +105,7 @@ Pro převážně jednobarevné funkční díly může P1S fungovat i bez AMS. Po
 
 ## Co ověřit před nákupem
 
-Nejdřív si sepište materiály, největší rozměr běžných modelů a potřebu AMS. Potom porovnejte P1S s [P2S](/tiskarny/bambu-lab-p2s/) podle funkcí, které opravdu využijete. Pokud současně zvažujete levnější otevřenou variantu, použijte také [rozhodovacího rádce A1 vs. P1S](/clanky/bambu-a1-vs-p1s/). Aktuální cenu zde záměrně nefixujeme, protože se mění podle trhu, akcí a varianty.
+Nejdřív si sepište materiály, největší rozměr běžných modelů a potřebu AMS. Potom porovnejte P1S s [P2S](/tiskarny/bambu-lab-p2s/) podle funkcí, které opravdu využijete. Pro podrobné rozhodnutí mezi oběma generacemi použijte [zdrojovaného rádce P1S vs. P2S](/clanky/bambu-p1s-vs-p2s/). Pokud současně zvažujete levnější otevřenou variantu, použijte také [rozhodovacího rádce A1 vs. P1S](/clanky/bambu-a1-vs-p1s/). Aktuální cenu zde záměrně nefixujeme, protože se mění podle trhu, akcí a varianty.
 
 Po zprovoznění tiskárny navazují naše průvodce [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/), [Bezpečné čištění tiskové podložky](/rady-a-tipy/bezpecne-cisteni-build-plate/) a [Layer shift](/rady-a-tipy/layer-shift/).
 
