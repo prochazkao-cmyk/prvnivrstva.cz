@@ -16,6 +16,8 @@ Bambu Lab P1S je uzavřená CoreXY FDM tiskárna s tiskovým objemem 256 × 256 
 
 Tento profil není vlastní fyzický test První Vrstvy. Parametry níže vycházejí z aktuální dokumentace výrobce; nevytváříme z nich vlastní benchmarky, měření hlučnosti, spolehlivosti ani redakční skóre.
 
+> **Rozhodujete se mezi otevřenou A1 a uzavřenou P1S?** Pokračujte na [Bambu Lab A1 vs. P1S: co je důležitější než papírová rychlost](/clanky/bambu-a1-vs-p1s/).
+
 ## Nejdůležitější parametry
 
 | Parametr | Bambu Lab P1S |
@@ -42,6 +44,8 @@ Rychlost a akcelerace v tabulce jsou maximální specifikace výrobce, nikoli p�
 P1S má uzavřenou skříň z plastu a skla na ocelovém šasi. Uzavření je prakticky relevantní zejména tehdy, když chcete omezit průvan a teplotní změny kolem výtisku. Samotná uzavřená skříň ale není totéž jako aktivně vyhřívaná komora.
 
 Výrobce uvádí jako ideální materiály PLA, PETG, TPU, ABS, ASA, PVA a PET. PA a PC označuje jako použitelné. U polymerů vyztužených uhlíkovými nebo skelnými vlákny dokumentace P1S uvádí „Not Recommended“ v základní konfiguraci. Proto je lepší před nákupem pro technické kompozity ověřit aktuální doporučení výrobce, vhodnou trysku a extruderové díly, než vyvozovat kompatibilitu jen z maximální teploty hotendu.
+
+Právě uzavřená konstrukce je jeden z hlavních rozhodovacích rozdílů proti [Bambu Lab A1](/tiskarny/bambu-lab-a1/). Pokud vybíráte mezi těmito dvěma kategoriemi, podrobněji je rozebírá [srovnání A1 vs. P1S](/clanky/bambu-a1-vs-p1s/).
 
 ## Kamera: užitečný dohled, ale starší generace
 
@@ -99,7 +103,7 @@ Pro převážně jednobarevné funkční díly může P1S fungovat i bez AMS. Po
 
 ## Co ověřit před nákupem
 
-Nejdřív si sepište materiály, největší rozměr běžných modelů a potřebu AMS. Potom porovnejte P1S s [P2S](/tiskarny/bambu-lab-p2s/) podle funkcí, které opravdu využijete. Aktuální cenu zde záměrně nefixujeme, protože se mění podle trhu, akcí a varianty.
+Nejdřív si sepište materiály, největší rozměr běžných modelů a potřebu AMS. Potom porovnejte P1S s [P2S](/tiskarny/bambu-lab-p2s/) podle funkcí, které opravdu využijete. Pokud současně zvažujete levnější otevřenou variantu, použijte také [rozhodovacího rádce A1 vs. P1S](/clanky/bambu-a1-vs-p1s/). Aktuální cenu zde záměrně nefixujeme, protože se mění podle trhu, akcí a varianty.
 
 Po zprovoznění tiskárny navazují naše průvodce [První vrstva nedrží](/rady-a-tipy/prvni-vrstva-nedrzi/), [Bezpečné čištění tiskové podložky](/rady-a-tipy/bezpecne-cisteni-build-plate/) a [Layer shift](/rady-a-tipy/layer-shift/).
 
