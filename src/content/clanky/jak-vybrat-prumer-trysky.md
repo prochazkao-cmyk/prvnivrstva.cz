@@ -15,6 +15,10 @@ tags:
 
 Průměr trysky není univerzální známka kvality. Menší otvor pomáhá tam, kde potřebujete jemnější geometrii; větší tryska se hodí pro vyšší vrstvy, širší extruzi a robustnější díly. Volbu je proto lepší odvodit od modelu a materiálu než od představy, že jedna velikost je vždy „nejlepší“.
 
+![Redakční rozhodovací schéma pro volbu trysky 0,25, 0,4, 0,6 a 0,8 mm.](/images/clanky/jak-vybrat-prumer-trysky.svg)
+
+*Redakční schéma podle doporučení a podporovaných průměrů v dokumentaci Prusa Research; nejde o vlastní fyzický test.*
+
 ## Rychlá orientace
 
 | Průměr | Kdy ho dát do užšího výběru |
