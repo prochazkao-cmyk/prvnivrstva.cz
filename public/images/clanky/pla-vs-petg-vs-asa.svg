@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">PLA, PETG nebo ASA: rychlý výběr filamentu</title>
+<desc id="desc">Redakční schéma doporučených použití podle materiálového průvodce Prusa Research. PLA pro modely a prototypy, PETG pro běžné funkční díly, ASA pro venkovní použití a UV odolnost.</desc>
+<rect width="1200" height="675" fill="#111827"/>
+<text x="64" y="82" fill="#ffffff" font-family="system-ui,sans-serif" font-size="42" font-weight="700">PLA, PETG nebo ASA?</text>
+<text x="64" y="125" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="23">Rozhoduje použití dílu, ne univerzální vítěz</text>
+<g font-family="system-ui,sans-serif">
+<rect x="64" y="180" width="340" height="340" rx="20" fill="#1f2937" stroke="#38bdf8" stroke-width="3"/>
+<rect x="430" y="180" width="340" height="340" rx="20" fill="#1f2937" stroke="#34d399" stroke-width="3"/>
+<rect x="796" y="180" width="340" height="340" rx="20" fill="#1f2937" stroke="#fb923c" stroke-width="3"/>
+<text x="94" y="247" fill="#7dd3fc" font-size="44" font-weight="700">PLA</text>
+<text x="460" y="247" fill="#6ee7b7" font-size="44" font-weight="700">PETG</text>
+<text x="826" y="247" fill="#fdba74" font-size="44" font-weight="700">ASA</text>
+<g fill="#ffffff" font-size="25"><text x="94" y="306">Modely a figurky</text><text x="94" y="347">Rychlé prototypy</text><text x="94" y="388">Jemné detaily</text><text x="460" y="306">Praktické díly</text><text x="460" y="347">Běžné držáky</text><text x="460" y="388">Univerzální použití</text><text x="826" y="306">Venkovní díly</text><text x="826" y="347">UV a počasí</text><text x="826" y="388">Technické použití</text></g>
+<g fill="#cbd5e1" font-size="19"><text x="94" y="472">Pozor na vyšší teploty</text><text x="460" y="472">Zvolte vhodný tiskový plát</text><text x="826" y="472">Stabilní teplo a větrání</text></g>
+<text x="64" y="580" fill="#94a3b8" font-size="21">Redakční schéma podle dokumentace Prusa Research</text>
+<text x="64" y="616" fill="#94a3b8" font-size="20">Nejde o vlastní fyzický test, měření ani žebříček.</text>
+</g></svg>
