@@ -1,9 +1,20 @@
 ---
 title: "PLA vs. PETG vs. ASA: který filament vybrat?"
 description: "Praktický průvodce výběrem mezi PLA, PETG a ASA podle použití dílu, prostředí a nároků na tisk."
+publishedAt: 2026-10-07
+reviewedAt: 2026-10-07
+level: "začátečník"
+technologies:
+  - "FDM"
+tags:
+  - "filament"
+  - "PLA"
+  - "PETG"
+  - "ASA"
+contentMode: "redakcni"
+evidence: "vyrobce"
+sourceNote: "Redakční srovnání vychází z dokumentace Prusa Research, bez vlastních laboratorních testů."
 ---
-
-# PLA vs. PETG vs. ASA: který filament vybrat?
 
 PLA, PETG a ASA patří mezi nejčastější materiály pro FDM tisk, ale každý míří na trochu jiné použití. Neexistuje jeden „nejlepší“ filament: správná volba závisí hlavně na tom, kde bude díl fungovat a čemu bude vystaven.
 
@@ -35,10 +46,8 @@ Při tisku ASA počítejte také s požadavky na větrání pracoviště a řiď
 
 ## Zdroje
 
-- Prusa Research Knowledge Base — PLA
-- Prusa Research Knowledge Base — PETG
-- Prusa Research Knowledge Base — ASA
-- Prusa Research — Material guide
-- Prusa Research Knowledge Base — Original Prusa Enclosure
+- Prusa Research Knowledge Base — PLA: https://help.prusa3d.com/cs/article/pla_2062
+- Prusa Research Knowledge Base — ASA: https://help.prusa3d.com/cs/article/asa_1809
+- Prusa Research — Průvodce filamenty (včetně PETG): https://help.prusa3d.com/cs/filament-material-guide
 
 *Článek je redakční průvodce založený na uvedené dokumentaci výrobců; nejde o vlastní laboratorní test ani měření.*
