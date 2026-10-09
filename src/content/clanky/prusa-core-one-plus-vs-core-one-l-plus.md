@@ -20,6 +20,10 @@ Prusa CORE One+ a CORE One L+ patří do stejné rodiny uzavřených CoreXY tisk
 
 Pokud se vaše díly pohodlně vejdou do **250 × 220 × 270 mm**, samotná existence větší L+ není důvodem k upgradu. CORE One L+ začíná dávat praktický smysl tam, kde skutečně využijete **300 × 300 × 330 mm**, aktivní komoru do **60 °C** nebo volitelnou HighTemp konfiguraci hotendu.
 
+![Redakční schéma pracovního prostoru Prusa CORE One+ 250 × 220 × 270 mm a CORE One L+ 300 × 300 × 330 mm; ilustrace není v měřítku.](/images/clanky/core-one-plus-vs-l-plus-size.svg)
+
+*Redakční ilustrace podle rozměrů deklarovaných výrobcem; nejde o měření ani o obrázek v měřítku.*
+
 ## Parametry vedle sebe
 
 | Vlastnost | CORE One+ (Gen 2) | CORE One L+ |
