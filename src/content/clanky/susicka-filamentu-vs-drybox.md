@@ -46,11 +46,11 @@ Následující hodnoty jsou **doporučení Prusa Research pro vybrané Prusament
 | PETG | 55 °C | 6 h |
 | ASA | 80 °C | 4 h |
 | PC | 85 °C | 5 h |
-| PCCF | 95 °C | 4 h |
+
 | PA11CF | 90 °C | 6 h |
 | TPU | 60 °C | 4 h |
 
-Prusa upozorňuje, že překročení doporučené teploty může materiál změkčit a slepit. Před zahřátím proto ověřte také teplotní odolnost cívky.
+U PCCF / PC Blend Carbon Fiber se jazykové verze dokumentace liší v doporučené teplotě. Dokud nebude rozdíl ověřen pro konkrétní produkt a cívku, tabulka jednotnou hodnotu neuvádí.\n\nPrusa upozorňuje, že překročení doporučené teploty může materiál změkčit a slepit. Před zahřátím proto ověřte také teplotní odolnost cívky.
 
 ## Praktický workflow
 
