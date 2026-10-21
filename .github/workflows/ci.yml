@@ -32,6 +32,9 @@ jobs:
       - name: Astro check
         run: npm run check
 
+      - name: Filament card identity
+        run: npm run normalize:filament -- --check
+
       - name: Production build
         run: npm run build
 

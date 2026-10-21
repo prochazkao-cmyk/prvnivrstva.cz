@@ -138,15 +138,27 @@ const filterFacets = [
   { name: 'shop', label: 'Obchod', options: shopOptions },
 ];
 
-function preferredLabel(source: ShopOffer[], read: (offer: ShopOffer) => string | undefined, fallback: string): string {
-  const counts = new Map<string, number>();
-  for (const offer of source) {
-    const raw = read(offer)?.trim();
-    if (!raw) continue;
-    counts.set(raw, (counts.get(raw) ?? 0) + 1);
-  }
-  const best = [...counts.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0], 'cs'))[0];
-  return best?.[0] ?? fallback;
+function offerWord(count: number): string {
+  if (count === 1) return 'nabídka';
+  if (count >= 2 && count <= 4) return 'nabídky';
+  return 'nabídek';
+}
+
+function cardCountLabel(offerCount: number, shopCount: number, shopName: string): string {
+  const offersLabel = `${offerCount} ${offerWord(offerCount)}`;
+  if (shopCount === 1) return `${offersLabel} · ${shopName}`;
+  return `${offersLabel} · ${shopCount} ${shopWord(shopCount)}`;
+}
+
+function catalogTitle(offer: ShopOffer): string {
+  if (offer.category === 'filament' && offer.cardTitle) return offer.cardTitle;
+  if (offer.category !== 'filament') return offer.productName;
+  const parts = [offer.brand, offer.productLine, offer.material, offer.color].filter((part): part is string => Boolean(part));
+  if (offer.weightGrams > 0) parts.push(formatWeight(offer.weightGrams));
+  if (offer.diameterMm != null) parts.push(formatDiameter(offer.diameterMm));
+  if (offer.packaging === 'spool') parts.push('cívka');
+  if (offer.packaging === 'refill') parts.push('refill');
+  return parts.join(' · ');
 }
 
 function offerImage(offer: ShopOffer): string | undefined {
@@ -167,7 +179,8 @@ const productCards: CatalogCard[] = (() => {
   const buckets = new Map<string, ShopOffer[]>();
   for (const offer of catalogRows) {
     if (offer.category !== 'filament') continue;
-    const key = [rowFacet(offer.material), rowFacet(offer.color), String(offer.weightGrams)].join('|');
+    const key = offer.cardId;
+    if (!key) throw new Error(`catalog offer ${offer.productId} has no cardId`);
     const list = buckets.get(key) ?? [];
     list.push(offer);
     buckets.set(key, list);
@@ -177,18 +190,16 @@ const productCards: CatalogCard[] = (() => {
     const offers = [...list].sort(compareByPricePerKg);
     const best = pricePerKg(offers[0]);
     if (best == null) continue;
-    const material = preferredLabel(offers, (offer) => (offer.category === 'filament' ? offer.material : undefined), 'Materiál neuveden');
-    const color = preferredLabel(offers, (offer) => (offer.category === 'filament' ? offer.color : undefined), 'barva neuvedena');
-    const weight = formatWeight(offers[0].category === 'filament' ? offers[0].weightGrams : 0);
     const knownTotals = offers.filter(hasKnownShipping).map(totalPrice);
+    const shops = new Set(offers.map((offer) => offer.shopId));
     cards.push({
       key,
-      title: `${material} · ${color} · ${weight}`,
+      title: catalogTitle(offers[0]),
       imageUrl: offerImage(offers[0]),
       offers,
       bestPerKg: best,
       bestTotal: knownTotals.length > 0 ? Math.min(...knownTotals) : null,
-      shopCount: new Set(offers.map((offer) => offer.shopId)).size,
+      shopCount: shops.size,
     });
   }
   cards.sort((a, b) => a.bestPerKg - b.bestPerKg || a.title.localeCompare(b.title, 'cs'));
@@ -197,7 +208,7 @@ const productCards: CatalogCard[] = (() => {
 
 function filamentTags(offer: ShopOffer): string[] {
   if (offer.category !== 'filament') return [];
-  const tags = [offer.material, offer.brand, offer.color];
+  const tags = [offer.material, offer.brand, offer.productLine, offer.color];
   if (offer.diameterMm != null) tags.push(formatDiameter(offer.diameterMm));
   if (offer.packaging === 'spool') tags.push('cívka');
   if (offer.packaging === 'refill') tags.push('refill');
@@ -288,7 +299,7 @@ function sourceLabel(offer: ShopOffer): string {
               <span class="product-copy">
                 <h3>{card.title}</h3>
                 <strong data-card-price>od {formatPerKg(card.bestPerKg, 'CZK')}</strong>
-                <span data-card-count>{card.offers.length} nabídek · {card.shopCount} {shopWord(card.shopCount)}</span>
+                <span data-card-count>{cardCountLabel(card.offers.length, card.shopCount, card.offers[0].shopName)}</span>
               </span>
             </button>
             <ul data-product-offers hidden>
@@ -577,8 +588,11 @@ function sourceLabel(offer: ShopOffer): string {
         }
         const label = card.querySelector<HTMLElement>('[data-card-count]');
         const shopCount = shops.size;
-        const shopLabel = shopCount === 1 ? 'obchod' : shopCount >= 2 && shopCount <= 4 ? 'obchody' : 'obchodů';
-        if (label) label.textContent = `${visible.length} nabídek · ${shopCount} ${shopLabel}`;
+        const offerLabel = visible.length === 1 ? 'nabídka' : visible.length >= 2 && visible.length <= 4 ? 'nabídky' : 'nabídek';
+        const shopLabel = shopCount === 1
+          ? [...shops][0] ?? 'obchod'
+          : `${shopCount} ${shopCount >= 2 && shopCount <= 4 ? 'obchody' : 'obchodů'}`;
+        if (label) label.textContent = `${visible.length} ${offerLabel} · ${shopLabel}`;
       }
       const totalSort = root.querySelector<HTMLButtonElement>('button[data-sort="total"]');
       sortGroups(totalSort?.getAttribute('aria-pressed') === 'true' ? 'total' : 'per-kg');

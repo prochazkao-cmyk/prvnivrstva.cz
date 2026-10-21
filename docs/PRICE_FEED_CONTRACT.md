@@ -128,18 +128,25 @@ Postup, až bude skutečný feed:
 1. U tří veřejných feedů z výjimky výše stačí `npm run fetch:filament`. Jinak uložit XML nebo JSON od obchodu na disk a e-shop nescrapovat.
 2. Spustit importér a projít přijaté řádky i každý reject.
 3. Zkontrolovat `weightConfidence` a varování k dopravě.
-4. Doplnit normalizační mapu tam, kde jde prokazatelně o stejnou variantu (stejný návin, barva, průměr, cívka vs. refill).
+4. Doplnit `src/data/filament-normalization/` tam, kde je stejná varianta prokazatelná (EAN, nebo ruční skupina se značkou, řadou, barvou, návinem, průměrem a balením). Podobnost názvů nestačí.
 5. Zkontrolované řádky zapsat do `offers` v `src/data/offers.ts`. U živých řádků nenastavovat `example: true`.
 6. `noindex` na `/srovnavac/` spadne až když `isComparerIndexable()` uvidí aspoň 3 obchody, normalizaci, stale kontrolu, označené affiliate odkazy a tuto metodiku.
 
 ## Katalog na /srovnavac/
 
-Produkční pole `offers` zůstává prázdné a stránka má `noindex`. Tři veřejné feedy samy bránu neotevřou: `productId` je pořád `shopId:ITEM_ID` a normalizace mezi obchody není hotová. `isComparerIndexable()` by po zápisu do `offers` pustilo indexaci jen podle počtu obchodů, což tenhle seznam nestačí. Dokud neplatí celá brána níže, řádky do `offers` nepatří.
+Produkční pole `offers` zůstává prázdné a stránka má `noindex`. Tři veřejné feedy samy bránu neotevřou: `productId` je pořád `shopId:ITEM_ID` a bez úplného klíče se dlaždice mezi obchody nespojí. `isComparerIndexable()` by po zápisu do `offers` pustilo indexaci jen podle počtu obchodů, což tenhle seznam nestačí. Dokud neplatí celá brána níže, řádky do `offers` nepatří.
 
-`astro build` i `astro dev` vykreslí `/srovnavac/` z `src/data/filament-preview.generated.json`: přijaté nabídky ze tří Heureka XML, seřazené podle Kč/kg, s obchodem, hmotností a časem stažení. Filtr materiálu, značky, barvy, průměru, hmotnosti a obchodu jen skrývá řádky. Mřížka sdruží nabídky se stejným materiálem, barvou a hmotností. Fotka karty je `IMGURL` nejlevnější nabídky ve skupině; řádek v panelu má svůj `IMGURL`. Chybějící nebo nenačtený obrázek je prázdná plocha, ne rozbitá ikona. Jiné `IMGURL_ALTERNATIVE` a HTML obchodu se neberou. Koupit vede na URL obchodu, nebo na `affiliateUrl`, když ji řádek má. Partnerský odkaz se u řádku označí a do řazení nevstupuje. Neznámá doprava není nula. Obnova:
+`astro build` i `astro dev` vykreslí `/srovnavac/` z `src/data/filament-preview.generated.json`: přijaté nabídky ze tří Heureka XML, seřazené podle Kč/kg, s obchodem, hmotností a časem stažení. Filtr materiálu, značky, barvy, průměru, hmotnosti a obchodu jen skrývá řádky. Dlaždice je `cardId` z `src/data/filament-cards.generated.json`. Klíč je značka, materiál, barva, hmotnost v gramech, průměr v milimetrech a balení (cívka nebo refill). Produktová řada se přidá jen z `product-lines.json` nebo `product-map.json`. Alias je přesná hodnota v `aliases.json`. Balení je cívka; refill je jen token `refill`, `náplň` nebo `bez cívky` v názvu nebo kategorii (`field-rules.json`). Průměr se z názvu nečte. Chybějící průměr je 1,75 mm jen u Filamenty Brno, protože feed z 2026-10-21 má u všech 591 uvedených průměrů 1,75. Materialpro3D prodává i 2,85 mm a 3Dfil průměr neuvádí, proto se tam nic nedoplňuje. Stejné EAN spojí obchody, když po aliasu sedí značka, materiál a hmotnost. Jiný konflikt EAN se nespojí. V jednom obchodě stejný klíč sdílí dlaždici. Chybějící značka, materiál, barva, hmotnost nebo neověřený průměr zůstane na vlastní dlaždici a jde do `review.json`, `review.csv` a `review.md`. Název produktu se na váhu ani barvu nečte. Fotka karty je `IMGURL` nejlevnější nabídky na dlaždici; řádek v panelu má svůj `IMGURL`. Chybějící nebo nenačtený obrázek je prázdná plocha, ne rozbitá ikona. Jiné `IMGURL_ALTERNATIVE` a HTML obchodu se neberou. Koupit vede na URL obchodu, nebo na `affiliateUrl`, když ji řádek má. Partnerský odkaz se u řádku označí a do řazení nevstupuje. Neznámá doprava není nula. Kč/kg je cena dělená kilogramy z `weightGrams`, bez dopravy.
+
+Denní vrstva cen je `src/data/filament-history.json`. Doplňuje ji `npm run history:filament`. Skript sám nic neplánuje a do `main` nezapisuje. Postup je v `src/data/filament-normalization/README.md`.
+
+Obnova:
 
 ```bash
 npm run fetch:filament -- --write-preview src/data/filament-preview.generated.json
+npm run facts:filament
+npm run normalize:filament
+npm run history:filament -- --date YYYY-MM-DD --preview src/data/filament-preview.generated.json --source "fetchedAt YYYY-MM-DD"
 ```
 
 Vymyšlené fixture v `scripts/fixtures/filament-offers.example.json` zůstávají jen pro test importéru.

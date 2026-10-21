@@ -23,7 +23,7 @@ npm run check
 
 ## Srovnávač filamentu
 
-`/srovnavac/` je statická stránka a má `noindex`. Build vykreslí katalog `src/data/filament-preview.generated.json` (tři veřejná Heureka XML). Produkční `offers` zůstává prázdné: chybí normalizace mezi obchody, takže se indexace nezapíná. Pravidla jsou v `docs/PRICE_FEED_CONTRACT.md`.
+`/srovnavac/` je statická stránka a má `noindex`. Build vykreslí katalog `src/data/filament-preview.generated.json` (tři veřejná Heureka XML) a dlaždice z `src/data/filament-cards.generated.json`. Produkční `offers` zůstává prázdné, indexace se nezapíná. Pravidla jsou v `docs/PRICE_FEED_CONTRACT.md`. Identita dlaždice, aliasy a revizní seznam jsou v `src/data/filament-normalization/README.md`.
 
 Obnova katalogu:
 
@@ -43,6 +43,16 @@ Stažení právě tří veřejných feedů (Materialpro3D, Filamenty Brno, 3Dfil
 ```bash
 npm run fetch:filament
 ```
+
+Po novém katalogu (XML cache ze stejného stažení musí sedět na `fetchedAt`):
+
+```bash
+npm run facts:filament
+npm run normalize:filament
+npm run history:filament -- --date YYYY-MM-DD --preview src/data/filament-preview.generated.json --source "fetchedAt YYYY-MM-DD"
+```
+
+`npm run normalize:filament -- --check` hlídá, že dlaždice, revize a historie sedí na katalog. Žádný cron do `main` nezapisuje.
 
 ## Build
 
