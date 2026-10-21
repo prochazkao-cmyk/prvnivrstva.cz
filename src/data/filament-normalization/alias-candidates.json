@@ -1,0 +1,33 @@
+{
+  "applied": false,
+  "note": "Návrhy k ručnímu schválení. Normalizátor je jako alias nepoužívá. Do aliases.json patří až po kontrole, že jde o stejnou hodnotu, ne o jinou variantu.",
+  "brand": [
+    {
+      "from": "Prof. Lab",
+      "to": "Professional Lab",
+      "why": "V MANUFACTURER je zkratka. Není ověřené, že jde o tutéž značku a ne o jinou řadu."
+    }
+  ],
+  "material": [
+    {
+      "from": "SILK",
+      "to": "PLA Silk",
+      "why": "Pole Materiál říká jen SILK. Polymer (PLA nebo jiný) z toho neplyne."
+    },
+    {
+      "from": "CF",
+      "to": "PETG-CF",
+      "why": "Samotné CF neříká základní polymer. PLA-CF, PETG-CF a ASA CF jsou ve feedu odděleně."
+    }
+  ],
+  "color": [
+    {
+      "values": ["Natur", "natural", "přírodní"],
+      "why": "U filamentu často znamená nebarvený materiál, ale v poli to jsou tři různá slova. Olivově zelená, světle hnědá ani svítící bílá se ke základní barvě nepřipojují."
+    },
+    {
+      "values": ["Vícebarevná", "multicolor"],
+      "why": "Překlad sedí, ale Vícebarevná může být kategorie a multicolor název barvy. Neslučovat bez kontroly konkrétních řádků."
+    }
+  ]
+}

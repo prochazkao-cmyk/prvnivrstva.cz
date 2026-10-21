@@ -13,6 +13,9 @@
     "check:editorial": "node scripts/check-editorial.mjs",
     "import:filament": "node scripts/import-filament-feed.mjs",
     "fetch:filament": "node scripts/fetch-filament-feeds.mjs",
+    "facts:filament": "node scripts/extract-filament-facts.mjs",
+    "normalize:filament": "node scripts/filament-normalize.mjs",
+    "history:filament": "node scripts/append-filament-history.mjs",
     "astro": "astro"
   },
   "engines": {

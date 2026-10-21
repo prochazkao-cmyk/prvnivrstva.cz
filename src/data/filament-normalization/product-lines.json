@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "note": "Produktová řada (třeba PLA Basic proti PLA Matte) ve třech Heureka feedech není samostatné pole. Dokud tu není ruční záznam, řada chybí a nabídka se nespojí. Klíč byOfferId je shopId:ITEM_ID. byEan je přesný řetězec číslic z tagu EAN.",
+  "byOfferId": {},
+  "byEan": {}
+}

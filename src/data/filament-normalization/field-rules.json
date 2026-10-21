@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "note": "Balení se bere jen z těchto přesných dvojic param/hodnota. Ostatní hodnoty parametru Cívka (AMS, hmotnost) balení nejsou a forma zůstane neznámá. Název produktu se nečte.",
+  "form": [
+    { "param": "Refill", "value": "Ano", "form": "refill" },
+    { "param": "Refill", "value": "NE", "form": "spool" },
+    { "param": "Cívka", "value": "refill - vlákno bez cívky", "form": "refill" },
+    { "param": "Balení", "value": "cívka", "form": "spool" },
+    { "param": "Balení", "value": "Cívka", "form": "spool" },
+    { "param": "Balení", "value": "refill", "form": "refill" },
+    { "param": "Balení", "value": "Refill", "form": "refill" },
+    { "param": "Packaging", "value": "spool", "form": "spool" },
+    { "param": "Packaging", "value": "refill", "form": "refill" }
+  ]
+}

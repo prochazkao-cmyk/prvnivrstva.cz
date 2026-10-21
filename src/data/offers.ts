@@ -5,7 +5,7 @@ export type FilamentPackaging = 'spool' | 'refill';
 export type WeightConfidence = 'net' | 'unspecified';
 
 interface ShopOfferBase {
-  /** Stable product key shared by shops. Assigned by an explicit map, never by fuzzy title match. */
+  /** Shop-scoped id (`shopId:ITEM_ID`) unless an approved import map says otherwise. */
   productId: string;
   productName: string;
   shopId: string;
@@ -40,6 +40,13 @@ export interface FilamentOffer extends ShopOfferBase {
   material?: string;
   brand?: string;
   color?: string;
+  /**
+   * Card from `filament-cards.generated.json`.
+   * Same card only when EAN or `product-map.json` joined the offers.
+   */
+  cardId?: string;
+  /** Product line from `product-lines.json` or `product-map.json`. Never parsed from the title. */
+  productLine?: string;
   /**
    * Primary IMGURL from the merchant feed. Omit when the feed has none.
    * Never a scraped shop page or a third-party comparer asset.

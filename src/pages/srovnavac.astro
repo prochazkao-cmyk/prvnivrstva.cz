@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FilamentOfferTable from '../components/FilamentOfferTable.astro';
+import { offersWithCards } from '../data/filament-cards';
 import { loadFilamentPreviewOffers } from '../data/filament-preview';
 import {
   groupOffers,
@@ -13,10 +14,11 @@ const productionOffers = offers.filter((offer) => offer.example !== true);
 const shopCount = uniqueShopCount(productionOffers);
 /**
  * The generated three-shop catalog is what /srovnavac/ renders, including
- * `astro build`. `offers` stays empty. noindex stays on: product ids are
- * still per shop, so this is not the normalized public index.
+ * `astro build`. `offers` stays empty. noindex stays on until the public
+ * gate in docs/PRICE_FEED_CONTRACT.md is actually met.
  */
-const catalogOffers = loadFilamentPreviewOffers();
+const catalogOffers = offersWithCards(loadFilamentPreviewOffers());
+const catalogCardCount = new Set(catalogOffers.map((offer) => offer.cardId)).size;
 const catalogGroups = groupOffers(catalogOffers);
 ---
 
@@ -33,7 +35,7 @@ const catalogGroups = groupOffers(catalogOffers);
       {catalogOffers.length > 0 && (
         <>
           {' '}
-          Tady je {catalogOffers.length} přijatých nabídek z veřejných Heureka XML obchodů Materialpro3D, Filamenty Brno a 3Dfil. Dlaždice i seznam sdružují stejný materiál, barvu a hmotnost. Fotka je IMGURL nejlevnější nabídky ve skupině. Kliknutí otevře nabídky a Koupit vede do e-shopu. Stejná cívka se mezi obchody nesloučí, dokud není normalizační mapa. Stránka není ve vyhledávání.
+          Tady je {catalogOffers.length} přijatých nabídek z veřejných Heureka XML obchodů Materialpro3D, Filamenty Brno a 3Dfil, na {catalogCardCount} dlaždicích. Dlaždice je jedna nabídka, dokud stejné EAN nebo řádek v mapě nespojí obchody. Spojení chce značku, produktovou řadu, materiál, barvu, hmotnost, průměr a balení z pole feedu nebo z tabulky v repozitáři. Chybějící řadu z názvu nedoplňujeme. Fotka je IMGURL nejlevnější nabídky na dlaždici. Kliknutí otevře nabídky a Koupit vede do e-shopu. Stránka není ve vyhledávání.
         </>
       )}
     </p>
@@ -63,7 +65,7 @@ const catalogGroups = groupOffers(catalogOffers);
         <li>Stretch fólie a jiné ne-filamenty neprojdou, ani když je feed označí jako PLA.</li>
         <li>Neznámou dopravu nesčítáme jako nulu a neschováváme ji.</li>
         <li>Starou cenu neukážeme bez označení. Po 36 hodinách od stažení je řádek „starší 36 h“.</li>
-        <li>Stejný název sám o sobě nabídky nesloučí. Společné productId vznikne jen z explicitní mapy.</li>
+        <li>Stejný název nabídky nesloučí. Společná dlaždice vznikne jen ze stejného EAN, nebo z řádku v product-map.json, a jen když značka, řada, materiál, barva, hmotnost, průměr a balení souhlasí.</li>
       </ul>
     </section>
   </main>
