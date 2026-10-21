@@ -2,10 +2,13 @@
 /**
  * Build explicit filament cards from the preview catalog.
  *
- * A card key is brand + product line + material + color + weight + diameter + form.
- * Those parts come from feed fields, aliases.json, product-lines.json, or product-map.json.
- * Offers join across shops only when they share an EAN, or a product-map group, and the
- * full key agrees. Anything incomplete stays on its own card and is listed for review.
+ * A card key is brand + material + color + weight + diameter + form.
+ * Product line is added only when product-lines.json or product-map.json has it.
+ * Refill comes from refill tokens on the product name or category. Otherwise the form is spool.
+ * A shop diameter default applies only when field-rules.json lists that shop.
+ * Offers join across shops when they share an EAN and brand, material, and weight agree,
+ * or when product-map.json says so. Inside one shop, the same full key shares a card.
+ * Missing brand, material, color, weight, or an unverified diameter stays on its own card.
  *
  *   node scripts/filament-normalize.mjs
  *   node scripts/filament-normalize.mjs --check
@@ -22,6 +25,12 @@ const ALIASES_PATH = path.join(ROOT, 'src/data/filament-normalization/aliases.js
 const CANDIDATES_PATH = path.join(ROOT, 'src/data/filament-normalization/alias-candidates.json');
 const MAP_PATH = path.join(ROOT, 'src/data/filament-normalization/product-map.json');
 const LINES_PATH = path.join(ROOT, 'src/data/filament-normalization/product-lines.json');
+const RULES_PATH = path.join(ROOT, 'src/data/filament-normalization/field-rules.json');
+
+export const FORM_TOKENS = {
+  wholeWords: ['refill', 'náplň'],
+  phrases: ['bez cívky'],
+};
 const CARDS_PATH = path.join(ROOT, 'src/data/filament-cards.generated.json');
 const REVIEW_JSON_PATH = path.join(ROOT, 'src/data/filament-normalization/review.json');
 const REVIEW_MD_PATH = path.join(ROOT, 'src/data/filament-normalization/review.md');
@@ -99,13 +108,44 @@ function tuple(identity) {
 function missingOf(identity) {
   const reasons = [];
   if (!identity.brand) reasons.push('missing-brand');
-  if (!identity.productLine) reasons.push('missing-product-line');
   if (!identity.material) reasons.push('missing-material');
   if (!identity.color) reasons.push('missing-color');
   if (!(identity.weightGrams > 0)) reasons.push('missing-weight');
   if (identity.diameterMm == null || !Number.isFinite(identity.diameterMm)) reasons.push('missing-diameter');
   if (identity.form !== 'spool' && identity.form !== 'refill') reasons.push('unknown-form');
   return reasons;
+}
+
+function escapeToken(value) {
+  return value.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+}
+
+export function textHasRefill(text, tokens = FORM_TOKENS) {
+  if (typeof text !== 'string' || text === '') return false;
+  const words = Array.isArray(tokens.wholeWords) ? tokens.wholeWords : [];
+  const phrases = Array.isArray(tokens.phrases) ? tokens.phrases : [];
+  for (const token of [...phrases, ...words]) {
+    if (typeof token !== 'string' || token.trim() === '') continue;
+    const pattern = new RegExp(`(?:^|[^\\p{L}\\p{N}])${escapeToken(token)}(?:$|[^\\p{L}\\p{N}])`, 'iu');
+    if (pattern.test(text)) return true;
+  }
+  return false;
+}
+
+function shopCardId(shopId, identity) {
+  const body = KEY_FIELDS.map((key) => encodeURIComponent(identity[key] == null ? '' : String(identity[key]))).join('*');
+  return `shop:${shopId}:${body}`;
+}
+
+function presentValues(members, read) {
+  const values = [];
+  for (const member of members) {
+    const value = read(member);
+    if (value == null || value === '') continue;
+    if (!values.some((item) => item === value)) values.push(value);
+  }
+  values.sort((a, b) => String(a).localeCompare(String(b), 'cs'));
+  return values;
 }
 
 function fold(value) {
@@ -130,7 +170,8 @@ export function cardTitle(identity) {
   if (identity.weightGrams > 0) parts.push(formatWeight(identity.weightGrams));
   if (identity.diameterMm != null) parts.push(formatDiameter(identity.diameterMm));
   if (identity.form === 'spool') parts.push('cívka');
-  if (identity.form === 'refill') parts.push('refill');
+  else if (identity.form === 'refill') parts.push('refill');
+  else if (typeof identity.form === 'string' && identity.form !== '') parts.push(identity.form);
   return parts.join(' · ');
 }
 
@@ -144,6 +185,8 @@ function countValues(offers, read) {
  */
 export function normalizeOffers(offers, tables) {
   const { aliases, productMap, productLines, factsById } = tables;
+  const formTokens = tables.formTokens ?? FORM_TOKENS;
+  const diameterDefaults = new Map((tables.diameterDefaults ?? []).map((row) => [row.shopId, row.diameterMm]));
   validateAliases(aliases);
   const offerIds = new Set(offers.map((offer) => offer.productId));
   assert(offerIds.size === offers.length, 'duplicate productId in preview');
@@ -155,10 +198,11 @@ export function normalizeOffers(offers, tables) {
     const group = groupByMember.get(offer.productId) ?? null;
     const extraReasons = [];
     if (fact.invalidEan) extraReasons.push('invalid-ean');
-    let form = fact.form ?? offer.packaging ?? null;
-    if (fact.formConflict) {
-      form = null;
-      extraReasons.push('form-conflict');
+    const tokenRefill = textHasRefill(offer.productName, formTokens) || textHasRefill(fact.categoryText, formTokens);
+    let form = tokenRefill ? 'refill' : 'spool';
+    let formSource = tokenRefill ? 'token' : 'default';
+    if ((fact.form === 'spool' || fact.form === 'refill') && fact.form !== form) {
+      extraReasons.push('form-param-disagrees');
     }
     let productLine = productLines.byOfferId[offer.productId] || (fact.ean ? productLines.byEan[fact.ean] : null) || null;
     if (group?.productLine) {
@@ -166,16 +210,21 @@ export function normalizeOffers(offers, tables) {
       else productLine = group.productLine;
     }
     if (group?.form) {
-      if (form && form !== group.form) extraReasons.push('map-form-conflict');
-      else if (!form) form = group.form;
+      if (formSource === 'token' && form !== group.form) extraReasons.push('map-form-conflict');
+      else {
+        form = group.form;
+        formSource = 'map';
+      }
     }
+    let diameterMm = typeof offer.diameterMm === 'number' && Number.isFinite(offer.diameterMm) ? offer.diameterMm : null;
+    if (diameterMm == null && diameterDefaults.has(offer.shopId)) diameterMm = diameterDefaults.get(offer.shopId);
     const identity = {
       brand: applyAlias(aliases.brand, offer.brand),
       productLine,
       material: applyAlias(aliases.material, offer.material),
       color: applyAlias(aliases.color, offer.color),
       weightGrams: offer.weightGrams,
-      diameterMm: offer.diameterMm ?? null,
+      diameterMm,
       form: form === 'spool' || form === 'refill' ? form : null,
     };
     return {
@@ -219,14 +268,13 @@ export function normalizeOffers(offers, tables) {
   const eanGroupReports = [];
   for (const [ean, members] of eanClusters) {
     if (members.length < 2) continue;
-    const tuples = new Set(members.map((row) => tuple(row.identity)));
     const shops = [...new Set(members.map((row) => row.offer.shopId))].sort();
-    const ready = members.every((row) => row.reasons.length === 0);
-    if (ready && tuples.size === 1) {
+    const ready = members.every((row) => row.identity.brand && row.identity.material && row.identity.weightGrams > 0);
+    const sameCore = new Set(members.map((row) => [row.identity.brand, row.identity.material, row.identity.weightGrams].join('\u001f'))).size === 1;
+    if (ready && sameCore) {
       for (const row of members) {
         row.cardId = `ean:${ean}`;
         row.match = 'ean';
-        row.reasons = row.reasons.filter((reason) => !reason.startsWith('missing-') && reason !== 'unknown-form');
       }
       eanGroupReports.push({
         ean,
@@ -236,19 +284,17 @@ export function normalizeOffers(offers, tables) {
         reasons: [],
       });
     } else {
-      const reasons = [...new Set(members.flatMap((row) => row.reasons))];
-      if (tuples.size > 1) reasons.push('ean-conflict');
-      reasons.push('ean-not-merged');
-      const uniqueReasons = [...new Set(reasons)].sort();
-      for (const row of members) {
-        row.reasons = [...new Set([...row.reasons, ...(tuples.size > 1 ? ['ean-conflict'] : []), 'ean-not-merged'])].sort();
-      }
+      const reasons = ['ean-conflict'];
+      if (new Set(members.map((row) => row.identity.brand ?? '')).size > 1) reasons.push('ean-brand-conflict');
+      if (new Set(members.map((row) => row.identity.material ?? '')).size > 1) reasons.push('ean-material-conflict');
+      if (new Set(members.map((row) => row.identity.weightGrams ?? '')).size > 1) reasons.push('ean-weight-conflict');
+      for (const row of members) row.reasons = [...new Set([...row.reasons, ...reasons])].sort();
       eanGroupReports.push({
         ean,
         status: 'blocked',
         shops,
         offerIds: members.map((row) => row.offer.productId).sort(),
-        reasons: uniqueReasons,
+        reasons: [...reasons].sort(),
         offers: members.map((row) => ({
           offerId: row.offer.productId,
           shopId: row.offer.shopId,
@@ -260,6 +306,22 @@ export function normalizeOffers(offers, tables) {
   }
   eanGroupReports.sort((a, b) => a.ean.localeCompare(b.ean));
 
+  const shopBuckets = new Map();
+  for (const row of rows) {
+    if (row.match !== 'single' || missingOf(row.identity).length > 0) continue;
+    const cardId = shopCardId(row.offer.shopId, row.identity);
+    const list = shopBuckets.get(cardId) ?? [];
+    list.push(row);
+    shopBuckets.set(cardId, list);
+  }
+  for (const [cardId, members] of shopBuckets) {
+    if (members.length < 2) continue;
+    for (const row of members) {
+      row.cardId = cardId;
+      row.match = 'shop';
+    }
+  }
+
   const cardBuckets = new Map();
   for (const row of rows) {
     const list = cardBuckets.get(row.cardId) ?? [];
@@ -268,21 +330,43 @@ export function normalizeOffers(offers, tables) {
   }
 
   const cards = [...cardBuckets.entries()].sort((a, b) => a[0].localeCompare(b[0])).map(([cardId, members]) => {
-    const identity = members[0].identity;
-    if (members.length > 1) {
+    const weights = new Set(members.map((row) => row.identity.weightGrams));
+    assert(weights.size === 1, `${cardId} mixed weights`);
+    if (members.length > 1 && members[0].match !== 'ean') {
       assert(new Set(members.map((row) => tuple(row.identity))).size === 1, `${cardId} merged unequal keys`);
     }
+    if (members[0].match === 'ean') {
+      assert(new Set(members.map((row) => row.identity.brand)).size === 1, `${cardId} mixed brands`);
+      assert(new Set(members.map((row) => row.identity.material)).size === 1, `${cardId} mixed materials`);
+    }
+    const lines = members.map((row) => row.identity.productLine);
+    const productLine = lines.every((line) => line && line === lines[0]) ? lines[0] : null;
+    const colors = presentValues(members, (row) => row.identity.color);
+    const diameters = presentValues(members, (row) => row.identity.diameterMm);
+    const forms = presentValues(members, (row) => row.identity.form);
+    const identity = {
+      brand: members[0].identity.brand,
+      productLine,
+      material: members[0].identity.material,
+      color: colors.length === 1 ? colors[0] : (colors.length > 1 ? colors.join(' / ') : null),
+      weightGrams: members[0].identity.weightGrams,
+      diameterMm: diameters.length === 1 ? diameters[0] : null,
+      form: forms.length === 1 ? forms[0] : null,
+    };
     return {
       cardId,
       match: members[0].match,
       ean: members[0].match === 'ean' ? members[0].fact.ean : null,
-      brand: identity.brand,
-      productLine: identity.productLine,
-      material: identity.material,
-      color: identity.color,
+      brand: members[0].identity.brand,
+      productLine,
+      material: members[0].identity.material,
+      color: colors.length === 1 ? colors[0] : null,
+      colorVariants: colors.length > 1 ? colors : undefined,
       weightGrams: identity.weightGrams,
       diameterMm: identity.diameterMm,
       form: identity.form,
+      shopIds: [...new Set(members.map((row) => row.offer.shopId))].sort(),
+      title: cardTitle(identity),
       offerIds: members.map((row) => row.offer.productId).sort(),
     };
   });
@@ -343,14 +427,42 @@ export function normalizeOffers(offers, tables) {
   }
 
   const matched = (match) => rows.filter((row) => row.match === match);
+  const crossShopEanCards = cards.filter((card) => card.match === 'ean' && card.shopIds.length > 1);
+  const crossShopExamples = [...crossShopEanCards]
+    .sort((a, b) => b.offerIds.length - a.offerIds.length || a.cardId.localeCompare(b.cardId))
+    .slice(0, 3)
+    .map((card) => ({
+      cardId: card.cardId,
+      title: card.title,
+      ean: card.ean,
+      shops: card.shopIds,
+      offers: card.offerIds.map((offerId) => {
+        const row = byId.get(offerId);
+        return { offerId, shopId: row.offer.shopId, productName: row.offer.productName };
+      }),
+    }));
+  const offerFields = Object.fromEntries(rows.map((row) => [row.offer.productId, {
+    brand: row.identity.brand,
+    productLine: row.identity.productLine,
+    material: row.identity.material,
+    color: row.identity.color,
+    diameterMm: row.identity.diameterMm,
+    form: row.identity.form,
+  }]).sort((a, b) => a[0].localeCompare(b[0])));
   const summary = {
     offers: offers.length,
     cardsBefore: oldBuckets.size,
     cardsAfter: cards.length,
     offersMatchedByEan: matched('ean').length,
+    offersMatchedAcrossShopsByEan: rows.filter((row) => row.match === 'ean' && crossShopEanCards.some((card) => card.cardId === row.cardId)).length,
     eanGroupsMerged: cards.filter((card) => card.match === 'ean').length,
+    eanGroupsCrossShop: eanGroupReports.filter((group) => group.shops.length > 1).length,
+    eanGroupsCrossShopMerged: eanGroupReports.filter((group) => group.status === 'merged' && group.shops.length > 1).length,
+    eanGroupsCrossShopBlocked: eanGroupReports.filter((group) => group.status === 'blocked' && group.shops.length > 1).length,
     eanGroupsBlocked: eanGroupReports.filter((group) => group.status === 'blocked').length,
     eanGroupsSeen: eanGroupReports.length,
+    offersSharingShopKey: matched('shop').length,
+    shopKeyCards: cards.filter((card) => card.match === 'shop').length,
     offersMatchedByMap: matched('map').length,
     mapGroupsMerged: cards.filter((card) => card.match === 'map').length,
     reviewOffers: reviewOffers.length,
@@ -367,11 +479,13 @@ export function normalizeOffers(offers, tables) {
     schemaVersion: 1,
     sourcePreview: 'src/data/filament-preview.generated.json',
     cards,
+    offerFields,
   };
   const reviewDoc = {
     schemaVersion: 1,
     summary,
     splitExamples,
+    crossShopExamples,
     eanGroups: eanGroupReports,
     offers: reviewOffers,
   };
@@ -385,7 +499,7 @@ export function normalizeOffers(offers, tables) {
 }
 
 function renderReview(review) {
-  const { summary, splitExamples, eanGroups } = review;
+  const { summary, splitExamples, crossShopExamples = [], eanGroups } = review;
   const reasonLines = Object.entries(summary.reasons)
     .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
     .map(([reason, count]) => `| ${reason} | ${count} |`);
@@ -398,6 +512,10 @@ function renderReview(review) {
       cards,
     ].join('\n');
   });
+  const crossBlocks = crossShopExamples.map((example) => {
+    const offers = example.offers.map((offer) => `- ${offer.shopId} \`${offer.offerId}\` — ${offer.productName}`).join('\n');
+    return [`\`${example.cardId}\` — ${example.title} (EAN ${example.ean})`, offers].join('\n');
+  });
   const blocked = eanGroups.filter((group) => group.status === 'blocked');
   const blockedLines = blocked.map((group) => {
     const names = (group.offers ?? []).map((offer) => `${offer.offerId} (${offer.productName})`).join('; ');
@@ -406,8 +524,8 @@ function renderReview(review) {
   return [
     '# Revize identity filamentu',
     '',
-    'Vygenerováno `scripts/filament-normalize.mjs`. Nabídka bez úplného klíče zůstává na vlastní dlaždici.',
-    'Klíč je značka, produktová řada, materiál, barva, hmotnost, průměr a balení. Spojení mezi obchody je jen stejné EAN nebo `product-map.json`.',
+    'Vygenerováno `scripts/filament-normalize.mjs`. Nabídka bez značky, materiálu, barvy, hmotnosti nebo ověřeného průměru zůstává na vlastní dlaždici.',
+    'Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová řada se přidá, jen když je v tabulce. Mezi obchody spojuje stejné EAN (značka, materiál a hmotnost po aliasu sedí) nebo `product-map.json`. V jednom obchodě stejný klíč sdílí dlaždici.',
     '',
     '## Souhrn',
     '',
@@ -417,8 +535,11 @@ function renderReview(review) {
     `| dlaždice dřív (materiál + barva + hmotnost) | ${summary.cardsBefore} |`,
     `| dlaždice teď | ${summary.cardsAfter} |`,
     `| nabídky spojené podle EAN | ${summary.offersMatchedByEan} |`,
+    `| z toho mezi obchody | ${summary.offersMatchedAcrossShopsByEan} |`,
+    `| skupiny EAN mezi obchody spojené / nespojené | ${summary.eanGroupsCrossShopMerged} / ${summary.eanGroupsCrossShopBlocked} |`,
     `| skupiny EAN spojené | ${summary.eanGroupsMerged} |`,
     `| skupiny EAN viděné a nespojené | ${summary.eanGroupsBlocked} |`,
+    `| nabídky na společné dlaždici v jednom obchodě | ${summary.offersSharingShopKey} |`,
     `| nabídky spojené podle mapy | ${summary.offersMatchedByMap} |`,
     `| skupiny mapy spojené | ${summary.mapGroupsMerged} |`,
     `| nabídky v revizi | ${summary.reviewOffers} |`,
@@ -431,6 +552,10 @@ function renderReview(review) {
     '| důvod | nabídek |',
     '| --- | ---: |',
     ...reasonLines,
+    '',
+    '## EAN přes víc obchodů',
+    '',
+    crossBlocks.join('\n\n') || 'Žádné.',
     '',
     '## Příklad rozdělené dlaždice',
     '',
@@ -554,7 +679,7 @@ function selfTest() {
   assert(conflict.reviewDoc.eanGroups[0].reasons.includes('ean-conflict'), 'conflict reason recorded');
   assert(conflict.cardsDoc.cards.every((card) => card.weightGrams === 1000 || card.weightGrams === 500), 'weight stays the field value');
 
-  const incomplete = normalizeOffers(
+  const lineOptional = normalizeOffers(
     [
       { ...base, productId: 'shop-a:2', shopId: 'shop-a', productName: 'PLA Black refill 1 kg' },
       { ...base, productId: 'shop-b:2', shopId: 'shop-b', productName: 'PLA Black spool 1 kg' },
@@ -569,8 +694,94 @@ function selfTest() {
       },
     },
   );
-  assert(incomplete.cardsDoc.cards.length === 2, 'missing line and form must not merge');
-  assert(incomplete.reviewDoc.summary.offersMatchedByEan === 0, 'incomplete EAN is not a match');
+  assert(lineOptional.cardsDoc.cards.length === 1, 'missing product line must not block an agreeing EAN');
+  assert(lineOptional.cardsDoc.cards[0].match === 'ean', 'agreeing EAN is one card');
+  assert(lineOptional.cardsDoc.cards[0].productLine == null, 'unknown line stays empty');
+  assert(lineOptional.cardsDoc.offerFields['shop-a:2'].form === 'refill', 'refill token marks refill');
+  assert(lineOptional.cardsDoc.offerFields['shop-b:2'].form === 'spool', 'no token stays spool');
+  assert(lineOptional.cardsDoc.offerFields['shop-a:2'].weightGrams === undefined, 'weight is not copied from the title');
+  assert(lineOptional.cardsDoc.cards[0].weightGrams === 1000, 'title kilograms are ignored');
+
+  const materialConflict = normalizeOffers(
+    [
+      { ...base, productId: 'shop-a:5', shopId: 'shop-a', productName: 'PETG-CF', material: 'PETG-CF' },
+      { ...base, productId: 'shop-b:5', shopId: 'shop-b', productName: 'PETG', material: 'PETG' },
+    ],
+    {
+      aliases,
+      productMap: { version: 1, groups: [] },
+      productLines: { version: 1, byOfferId: {}, byEan: {} },
+      factsById: {
+        'shop-a:5': { ean: '8590000000005' },
+        'shop-b:5': { ean: '8590000000005' },
+      },
+    },
+  );
+  assert(materialConflict.cardsDoc.cards.length === 2, 'different material must not share an EAN');
+  assert(materialConflict.reviewDoc.eanGroups[0].reasons.includes('ean-material-conflict'), 'material conflict is named');
+
+  const colorStillMerges = normalizeOffers(
+    [
+      { ...base, productId: 'shop-a:6', shopId: 'shop-a', productName: 'PLA', color: 'zelená' },
+      { ...base, productId: 'shop-b:6', shopId: 'shop-b', productName: 'PLA', color: 'Olivově zelená' },
+    ],
+    {
+      aliases,
+      productMap: { version: 1, groups: [] },
+      productLines: { version: 1, byOfferId: {}, byEan: {} },
+      factsById: {
+        'shop-a:6': { ean: '8590000000006' },
+        'shop-b:6': { ean: '8590000000006' },
+      },
+    },
+  );
+  assert(colorStillMerges.cardsDoc.cards.length === 1, 'color disagreement does not block an EAN');
+  assert(colorStillMerges.cardsDoc.cards[0].color == null, 'disagreeing colors are not collapsed');
+
+  const sameShop = normalizeOffers(
+    [
+      { ...base, productId: 'shop-a:7', shopId: 'shop-a', productName: 'PLA černá', price: 200 },
+      { ...base, productId: 'shop-a:8', shopId: 'shop-a', productName: 'PLA černá druhý řádek', price: 180 },
+    ],
+    { aliases, productMap: { version: 1, groups: [] }, productLines: { version: 1, byOfferId: {}, byEan: {} }, factsById: {} },
+  );
+  assert(sameShop.cardsDoc.cards.length === 1 && sameShop.cardsDoc.cards[0].match === 'shop', 'one shop shares a full key');
+
+  const crossKey = normalizeOffers(
+    [
+      { ...base, productId: 'shop-a:9', shopId: 'shop-a', productName: 'PLA černá' },
+      { ...base, productId: 'shop-b:9', shopId: 'shop-b', productName: 'PLA černá' },
+    ],
+    { aliases, productMap: { version: 1, groups: [] }, productLines: { version: 1, byOfferId: {}, byEan: {} }, factsById: {} },
+  );
+  assert(crossKey.cardsDoc.cards.length === 2, 'the same key in two shops stays split without an EAN');
+
+  assert(textHasRefill('Heureka Náplně a barvy do tiskáren') === false, 'Náplně is not the word náplň');
+  assert(textHasRefill('Spectrum ReFill PLA') === true, 'ReFill is a refill token');
+  assert(textHasRefill('vlákno bez cívky') === true, 'bez cívky is a refill phrase');
+
+  const diameterDefault = normalizeOffers(
+    [
+      { ...base, productId: 'brno:1', shopId: 'filamenty-brno', productName: 'PLA', diameterMm: undefined },
+      { ...base, productId: 'brno:2', shopId: 'filamenty-brno', productName: 'PLA', diameterMm: undefined },
+      { ...base, productId: 'fil:1', shopId: '3dfil', productName: 'PLA 1.75 mm', diameterMm: undefined },
+      { ...base, productId: 'fil:2', shopId: '3dfil', productName: 'PLA 1.75 mm jiný', diameterMm: undefined },
+    ],
+    {
+      aliases,
+      productMap: { version: 1, groups: [] },
+      productLines: { version: 1, byOfferId: {}, byEan: {} },
+      factsById: {},
+      diameterDefaults: [{ shopId: 'filamenty-brno', diameterMm: 1.75 }],
+    },
+  );
+  assert(diameterDefault.cardsDoc.offerFields['brno:1'].diameterMm === 1.75, 'verified shop default fills a missing diameter');
+  assert(diameterDefault.cardsDoc.cards.some((card) => card.match === 'shop' && card.offerIds.includes('brno:1')), 'defaulted diameters can share a shop card');
+  assert(diameterDefault.cardsDoc.offerFields['fil:1'].diameterMm == null, 'a shop without a verified default keeps an empty diameter');
+  assert(diameterDefault.cardsDoc.cards.filter((card) => card.offerIds.includes('fil:1') || card.offerIds.includes('fil:2')).length === 2, 'unverified diameters stay on separate cards');
+
+  const silk = applyAlias({ SILK: 'Silk', silk: 'Silk' }, 'SILK');
+  assert(silk === 'Silk', 'SILK casing does not become PLA Silk');
 
   const mapped = normalizeOffers(
     [
@@ -631,7 +842,13 @@ async function buildFromRepo() {
   const candidates = await readJson(CANDIDATES_PATH);
   const productMap = await readJson(MAP_PATH);
   const productLines = await readJson(LINES_PATH);
+  const rules = await readJson(RULES_PATH);
   assert(candidates.applied === false, 'alias-candidates.json is a review list, not an applied alias table');
+  assert(JSON.stringify(rules.refillTokens) === JSON.stringify(FORM_TOKENS), 'refill tokens drifted from field-rules.json');
+  assert(Array.isArray(rules.diameterDefaults), 'diameter defaults missing');
+  for (const row of rules.diameterDefaults) {
+    assert(row.diameterMm === 1.75 && row.rowsWithDiameter > 0 && row.distinctMm.length === 1 && row.distinctMm[0] === 1.75, `diameter default ${row.shopId} is not a verified 1.75`);
+  }
   assert(preview._generated === true && Array.isArray(preview.offers), 'preview catalog missing');
   assert(factsDoc.schemaVersion === 1 && factsDoc.offers, 'facts catalog missing');
   const previewIds = new Set(preview.offers.map((offer) => offer.productId));
@@ -642,6 +859,7 @@ async function buildFromRepo() {
     productMap,
     productLines,
     factsById: factsDoc.offers,
+    diameterDefaults: rules.diameterDefaults,
   });
 }
 

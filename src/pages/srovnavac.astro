@@ -35,7 +35,7 @@ const catalogGroups = groupOffers(catalogOffers);
       {catalogOffers.length > 0 && (
         <>
           {' '}
-          Tady je {catalogOffers.length} přijatých nabídek z veřejných Heureka XML obchodů Materialpro3D, Filamenty Brno a 3Dfil, na {catalogCardCount} dlaždicích. Dlaždice je jedna nabídka, dokud stejné EAN nebo řádek v mapě nespojí obchody. Spojení chce značku, produktovou řadu, materiál, barvu, hmotnost, průměr a balení z pole feedu nebo z tabulky v repozitáři. Chybějící řadu z názvu nedoplňujeme. Fotka je IMGURL nejlevnější nabídky na dlaždici. Kliknutí otevře nabídky a Koupit vede do e-shopu. Stránka není ve vyhledávání.
+          Tady je {catalogOffers.length} přijatých nabídek z veřejných Heureka XML obchodů Materialpro3D, Filamenty Brno a 3Dfil, na {catalogCardCount} dlaždicích. Dlaždice je značka, materiál, barva, hmotnost, průměr a balení. Produktová řada se přidá, jen když je v tabulce. Balení je cívka, refill jen podle tokenu v názvu nebo kategorii. Průměr se z názvu nečte; Filamenty Brno bez průměru mají 1,75 mm, protože všechny průměry v tom feedu jsou 1,75. Stejné EAN spojí obchody, když po aliasu sedí značka, materiál a hmotnost. Fotka je IMGURL nejlevnější nabídky na dlaždici. Kliknutí otevře nabídky a Koupit vede do e-shopu. Stránka není ve vyhledávání.
         </>
       )}
     </p>
@@ -65,7 +65,9 @@ const catalogGroups = groupOffers(catalogOffers);
         <li>Stretch fólie a jiné ne-filamenty neprojdou, ani když je feed označí jako PLA.</li>
         <li>Neznámou dopravu nesčítáme jako nulu a neschováváme ji.</li>
         <li>Starou cenu neukážeme bez označení. Po 36 hodinách od stažení je řádek „starší 36 h“.</li>
-        <li>Stejný název nabídky nesloučí. Společná dlaždice vznikne jen ze stejného EAN, nebo z řádku v product-map.json, a jen když značka, řada, materiál, barva, hmotnost, průměr a balení souhlasí.</li>
+        <li>Balení je cívka. Refill je jen celé slovo refill nebo náplň, nebo spojení „bez cívky“, v názvu nebo kategorii.</li>
+        <li>Průměr se z názvu nečte. Chybějící průměr doplníme na 1,75 mm jen u Filamenty Brno, kde jsou všechny uvedené průměry 1,75. U ostatních obchodů zůstane prázdný.</li>
+        <li>Stejné EAN spojí obchody, když po aliasu sedí značka, materiál a hmotnost. Jinak obchody spojí jen řádek v product-map.json. V jednom obchodě stejný klíč sdílí dlaždici.</li>
       </ul>
     </section>
   </main>

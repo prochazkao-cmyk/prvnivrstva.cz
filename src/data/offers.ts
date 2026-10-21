@@ -47,6 +47,8 @@ export interface FilamentOffer extends ShopOfferBase {
   cardId?: string;
   /** Product line from `product-lines.json` or `product-map.json`. Never parsed from the title. */
   productLine?: string;
+  /** Heading of the explicit card. Line, form, and a shop diameter default are already resolved. */
+  cardTitle?: string;
   /**
    * Primary IMGURL from the merchant feed. Omit when the feed has none.
    * Never a scraped shop page or a third-party comparer asset.

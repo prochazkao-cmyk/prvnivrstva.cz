@@ -61,23 +61,83 @@ function indexShop(xml) {
     if (items.has(itemId)) throw new Error(`duplicate ITEM_ID ${itemId}`);
     const price = parseMoney(readTag(block, 'PRICE_VAT') ?? readTag(block, 'PRICE'));
     const eanRaw = readTag(block, 'EAN');
-    items.set(itemId, { price, eanRaw, params: readParams(block) });
+    items.set(itemId, {
+      price,
+      eanRaw,
+      params: readParams(block),
+      categoryText: readTag(block, 'CATEGORYTEXT'),
+    });
   }
   return items;
 }
 
-function formFromRules(params, rules) {
-  const found = [];
-  for (const rule of rules) {
+function fold(value) {
+  return String(value).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+function parseDiameter(raw) {
+  const text = String(raw).trim().toLowerCase().replace(/\s+/g, '').replace(',', '.');
+  const match = text.match(/^(\d+(?:\.\d+)?)(mm)?$/);
+  if (!match) return null;
+  const value = Number(match[1]);
+  if (!Number.isFinite(value) || value < 1 || value > 4) return null;
+  return value;
+}
+
+function diameterEvidence(xml) {
+  const values = new Map();
+  let items = 0;
+  let range285 = 0;
+  for (const match of xml.matchAll(/<SHOPITEM>([\s\S]*?)<\/SHOPITEM>/gi)) {
+    items += 1;
+    const params = readParams(match[1]);
+    if (params.some(([name, value]) => /prumer|diameter/.test(fold(name)) && /2[,.]85/.test(value))) range285 += 1;
+    const parsed = [];
     for (const [name, value] of params) {
-      if (name === rule.param && value === rule.value) found.push(rule);
+      if (!/prumer|diameter/.test(fold(name))) continue;
+      const diameter = parseDiameter(value);
+      if (diameter != null) parsed.push(diameter);
+    }
+    const unique = [...new Set(parsed)];
+    if (unique.length === 1) values.set(unique[0], (values.get(unique[0]) ?? 0) + 1);
+  }
+  return { items, values, range285 };
+}
+
+function assertDiameterEvidence(shopId, xml, rules) {
+  const found = diameterEvidence(xml);
+  const allowed = (rules.diameterDefaults ?? []).find((row) => row.shopId === shopId);
+  const refused = (rules.diameterNoDefault ?? []).find((row) => row.shopId === shopId);
+  if (allowed) {
+    const distinct = [...found.values.keys()];
+    if (found.items !== allowed.feedItems) {
+      throw new Error(`${shopId} feed size ${found.items} != documented ${allowed.feedItems}`);
+    }
+    if (distinct.length !== 1 || distinct[0] !== allowed.diameterMm || found.values.get(allowed.diameterMm) !== allowed.rowsWithDiameter) {
+      throw new Error(`${shopId} diameters ${JSON.stringify(Object.fromEntries(found.values))} do not match the documented 1.75 default`);
     }
   }
-  const forms = [...new Set(found.map((rule) => rule.form))];
-  if (forms.length > 1) return { form: null, formRule: null, formConflict: true };
-  if (forms.length === 1) {
-    return { form: forms[0], formRule: `${found[0].param}=${found[0].value}`, formConflict: false };
+  if (refused) {
+    if (shopId === '3dfil' && (found.values.size !== 0 || found.items !== refused.feedItems)) {
+      throw new Error(`3dfil diameter evidence changed: ${found.values.size} values, ${found.items} items`);
+    }
+    if (shopId === 'materialpro3d' && found.range285 < 1) {
+      throw new Error('materialpro3d no longer has a 2.85 mm diameter range; the no-default rule needs a human check');
+    }
   }
+}
+
+/** Param observation only. The card form is decided later from refill tokens. */
+function observeParamForm(params) {
+  const found = [];
+  for (const [name, value] of params) {
+    if (name === 'Refill' && value === 'Ano') found.push('refill');
+    if (name === 'Refill' && value === 'NE') found.push('spool');
+    if (name === 'Cívka' && value === 'refill - vlákno bez cívky') found.push('refill');
+  }
+  const forms = [...new Set(found)];
+  if (forms.length > 1) return { form: null, formRule: null, formConflict: true };
+  if (forms.length === 1) return { form: forms[0], formRule: found[0] === 'refill' ? 'param-refill' : 'param-spool', formConflict: false };
   return { form: null, formRule: null, formConflict: false };
 }
 
@@ -91,10 +151,7 @@ function normalizeEan(raw) {
 async function main() {
   const preview = JSON.parse(await readFile(PREVIEW_PATH, 'utf8'));
   const rulesDoc = JSON.parse(await readFile(RULES_PATH, 'utf8'));
-  if (!Array.isArray(rulesDoc.form)) throw new Error('field-rules.form missing');
-  for (const rule of rulesDoc.form) {
-    if (rule.form !== 'spool' && rule.form !== 'refill') throw new Error(`bad form rule ${rule.param}`);
-  }
+  if (!rulesDoc.refillTokens?.wholeWords?.includes('refill')) throw new Error('field-rules refill tokens missing');
 
   const byShop = new Map();
   for (const offer of preview.offers) {
@@ -113,6 +170,7 @@ async function main() {
       throw new Error(`${shopId} cache fetchedAt ${meta.fetchedAt} != preview ${fetched[0]}`);
     }
     const xml = await readFile(path.join(CACHE_DIR, `${shopId}.xml`), 'utf8');
+    assertDiameterEvidence(shopId, xml, rulesDoc);
     indexes.set(shopId, indexShop(xml));
     shopMeta.push({ shopId, fetchedAt: meta.fetchedAt, xmlBytes: Buffer.byteLength(xml) });
   }
@@ -130,28 +188,15 @@ async function main() {
       }
       continue;
     }
-    const ruled = formFromRules(item.params, rulesDoc.form);
-    let form = ruled.form;
-    let formRule = ruled.formRule;
-    let formConflict = ruled.formConflict;
-    if (offer.packaging === 'spool' || offer.packaging === 'refill') {
-      if (form && form !== offer.packaging) formConflict = true;
-      if (!form && !formConflict) {
-        form = offer.packaging;
-        formRule = 'preview.packaging';
-      }
-    }
-    if (formConflict) {
-      form = null;
-      formRule = null;
-    }
+    const ruled = observeParamForm(item.params);
     const ean = normalizeEan(item.eanRaw);
     facts[offer.productId] = {
       ean: ean.ean,
       invalidEan: ean.invalidEan,
-      form,
-      formRule,
-      formConflict,
+      form: ruled.formConflict ? null : ruled.form,
+      formRule: ruled.formConflict ? null : ruled.formRule,
+      formConflict: ruled.formConflict,
+      categoryText: item.categoryText,
     };
   }
   if (priceMismatches > 0) {
@@ -161,7 +206,7 @@ async function main() {
   const ordered = Object.fromEntries(Object.entries(facts).sort((a, b) => a[0].localeCompare(b[0])));
   const document = {
     schemaVersion: 1,
-    note: 'EAN is the Heureka <EAN> tag. form is only field-rules.json or the preview packaging field already taken from Balení/Refill. Prices were checked against the preview and are not stored here.',
+    note: 'EAN is the Heureka <EAN> tag. form is only a param observation (Refill=Ano/NE or Cívka refill); the card decides spool/refill from field-rules refill tokens. categoryText is CATEGORYTEXT. Prices were checked against the preview and are not stored here.',
     shops: shopMeta.sort((a, b) => a.shopId.localeCompare(b.shopId)),
     offers: ordered,
   };

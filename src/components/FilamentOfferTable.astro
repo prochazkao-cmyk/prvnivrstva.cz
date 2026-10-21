@@ -151,6 +151,7 @@ function cardCountLabel(offerCount: number, shopCount: number, shopName: string)
 }
 
 function catalogTitle(offer: ShopOffer): string {
+  if (offer.category === 'filament' && offer.cardTitle) return offer.cardTitle;
   if (offer.category !== 'filament') return offer.productName;
   const parts = [offer.brand, offer.productLine, offer.material, offer.color].filter((part): part is string => Boolean(part));
   if (offer.weightGrams > 0) parts.push(formatWeight(offer.weightGrams));

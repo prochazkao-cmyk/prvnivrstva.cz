@@ -1,15 +1,34 @@
 {
-  "version": 1,
-  "note": "Balení se bere jen z těchto přesných dvojic param/hodnota. Ostatní hodnoty parametru Cívka (AMS, hmotnost) balení nejsou a forma zůstane neznámá. Název produktu se nečte.",
-  "form": [
-    { "param": "Refill", "value": "Ano", "form": "refill" },
-    { "param": "Refill", "value": "NE", "form": "spool" },
-    { "param": "Cívka", "value": "refill - vlákno bez cívky", "form": "refill" },
-    { "param": "Balení", "value": "cívka", "form": "spool" },
-    { "param": "Balení", "value": "Cívka", "form": "spool" },
-    { "param": "Balení", "value": "refill", "form": "refill" },
-    { "param": "Balení", "value": "Refill", "form": "refill" },
-    { "param": "Packaging", "value": "spool", "form": "spool" },
-    { "param": "Packaging", "value": "refill", "form": "refill" }
+  "version": 2,
+  "note": "Balení je cívka, pokud název nebo kategorie neobsahuje refill token. Hmotnost ani průměr se z názvu nečtou. Průměr 1,75 mm se doplní jen u obchodu, kde to tahle tabulka výslovně říká.",
+  "refillTokens": {
+    "wholeWords": ["refill", "náplň"],
+    "phrases": ["bez cívky"]
+  },
+  "refillNote": "Celé slovo, bez rozlišení velikosti písmen, v PRODUCTNAME nebo CATEGORYTEXT. „Náplně“ v cestě Heureky není „náplň“. PARAM Refill se jako zdroj nepoužívá: u části řádků 3Dfil je Refill=Ano a v názvu je přitom Spool. Když se parametr a token neshodnou, vyhraje token a řádek jde do revize jako form-param-disagrees.",
+  "diameterDefaults": [
+    {
+      "shopId": "filamenty-brno",
+      "diameterMm": 1.75,
+      "verifiedAt": "2026-10-21",
+      "rowsWithDiameter": 591,
+      "distinctMm": [1.75],
+      "feedItems": 758,
+      "evidence": "Cache Heureka XML z 2026-10-21. Parser je stejný jako readDiameter v scripts/import-filament-feed.mjs (parametr se po odstranění diakritiky jmenuje prumer nebo diameter, hodnota je jedno číslo 1–4 mm). 591 položek má takový průměr a všechny jsou 1,75. Jiná hodnota ve feedu není."
+    }
+  ],
+  "diameterNoDefault": [
+    {
+      "shopId": "3dfil",
+      "verifiedAt": "2026-10-21",
+      "rowsWithDiameter": 0,
+      "feedItems": 879,
+      "evidence": "V cache z 2026-10-21 nemá žádná položka parametr průměru. Že názvy obsahují 1.75 mm, se jako průměr nepoužije."
+    },
+    {
+      "shopId": "materialpro3d",
+      "verifiedAt": "2026-10-21",
+      "evidence": "Feed z 2026-10-21 prodává i filament 2,85 mm. Průměr struny je zapsaný jako rozsah „2,85 mm – 3 mm“ (PLA285DD1BK, PETG285DD1BK, PP285IF65IY, PP285IF65BK), takže parser číslo nevezme a řádek v náhledu není. Doplnit chybějícím nabídkám 1,75 mm by bylo špatně."
+    }
   ]
 }

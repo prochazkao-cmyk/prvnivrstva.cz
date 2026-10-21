@@ -2,10 +2,16 @@
   "version": 1,
   "note": "Přesná hodnota pole z feedu → kanonická hodnota. Žádné podobnostní párování, žádné čtení z názvu produktu. Cíl aliasu nesmí být zároveň klíčem (řetězení se odmítne).",
   "brand": {
-    "ELEGOO": "Elegoo"
+    "ELEGOO": "Elegoo",
+    "Prof. Lab": "Professional Lab",
+    "Prof.Lab": "Professional Lab"
   },
   "material": {
-    "PLA +": "PLA+"
+    "PLA +": "PLA+",
+    "SILK": "Silk",
+    "silk": "Silk",
+    "cf": "CF",
+    "Cf": "CF"
   },
   "color": {
     "Černá": "černá",
@@ -26,8 +32,12 @@
     "Bronzová": "bronzová",
     "Měděná": "měděná",
     "Dřevo": "dřevo",
-    "Multicolor": "multicolor",
+    "Multicolor": "vícebarevná",
+    "multicolor": "vícebarevná",
+    "Vícebarevná": "vícebarevná",
     "Tělová": "tělová",
-    "Transparent": "transparentní"
+    "Transparent": "transparentní",
+    "Natur": "přírodní",
+    "natural": "přírodní"
   }
 }

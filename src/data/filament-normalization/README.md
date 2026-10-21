@@ -1,27 +1,29 @@
 # Identita filamentu
 
-Dlaždice na `/srovnavac/` není materiál + barva + hmotnost. Klíč je:
+Dlaždice na `/srovnavac/` má klíč:
 
-značka + produktová řada + materiál + barva + hmotnost (g) + průměr (mm) + balení (`spool` nebo `refill`).
+značka + materiál + barva + hmotnost (g) + průměr (mm) + balení (`spool` / `refill`).
 
-Každá část musí přijít z pole feedu, nebo z tabulky v tomto adresáři. Název produktu se nečte. Podobnost řetězců nabídky nespojí.
+Produktová řada se přidá jen tehdy, když je v `product-lines.json` nebo v `product-map.json`. Chybějící řada dlaždici nerozbije. Ve feedech pole řady není.
 
-Spojení mezi obchody:
+## Spojení
 
-1. stejné EAN (tag `<EAN>`, 8–14 číslic), a celý klíč souhlasí, nebo
-2. skupina v `product-map.json`, a celý klíč souhlasí.
+- Stejné EAN (tag `<EAN>`, 8–14 číslic) spojí nabídky, když po aliasu sedí značka, materiál a hmotnost. Jiná značka, jiný materiál nebo jiná hmotnost pod stejným EAN se nespojí a jde do revize.
+- Skupina v `product-map.json` spojí nabídky bez společného EAN. Celý klíč musí sedět.
+- V jednom obchodě nabídky se stejným klíčem sdílejí dlaždici.
+- Stejný klíč ve dvou obchodech bez EAN nebo mapy zůstane na dvou dlaždicích.
 
-Jinak má nabídka vlastní `cardId` `offer:<shopId:ITEM_ID>` a řádek v revizi.
+Chybí-li značka, materiál, barva, hmotnost, nebo průměr, který tabulka nedovolí doplnit, nabídka zůstane sama a je v revizi.
 
 ## Tabulky
 
-- `aliases.json` — přesná hodnota pole → kanonická hodnota. Cíl nesmí být zároveň klíč (řetězení skript odmítne). Bez převodu velikosti písmen.
-- `alias-candidates.json` — návrhy. `applied` musí zůstat `false`. Normalizátor je neaplikuje.
-- `field-rules.json` — přesné dvojice parametr/hodnota pro balení. Ostatní hodnoty `Cívka` (AMS, hmotnost) balení nejsou.
-- `product-lines.json` — řada, kterou feed nemá. `byOfferId` je `shopId:ITEM_ID`. `byEan` je přesný řetězec číslic.
-- `product-map.json` — ruční spojení bez společného EAN. `productLine` a `form` sem patří jen jako zapsaná hodnota.
+- `aliases.json` — přesná hodnota pole → kanonická hodnota. Cíl nesmí být zároveň klíč. Bez převodu, který tabulka výslovně nemá. `SILK` je `Silk`, ne `PLA Silk`. `CF` není `PETG-CF`. `Prof. Lab` a `Prof.Lab` jsou `Professional Lab`.
+- `alias-candidates.json` — návrhy. `applied` musí zůstat `false`.
+- `field-rules.json` — tokeny pro refill (`refill`, `náplň`, `bez cívky`) a průměr 1,75 mm jen pro Filamenty Brno. 3Dfil a Materialpro3D default nemají: 3Dfil průměr neuvádí, Materialpro3D má ve feedu i 2,85 mm.
+- `product-lines.json` — ruční řada. `byOfferId` je `shopId:ITEM_ID`. `byEan` je přesný řetězec číslic.
+- `product-map.json` — ruční spojení bez společného EAN.
 
-`src/data/filament-feed-facts.generated.json` drží EAN a balení z XML, které vyrobilo aktuální náhled. Ceny tam nejsou. Extrakce skončí chybou, když `fetchedAt` nebo cena nesedí na náhled.
+Hmotnost se z názvu nečte. Průměr taky ne.
 
 ## Příkazy
 
@@ -32,12 +34,12 @@ npm run normalize:filament
 npm run history:filament -- --date YYYY-MM-DD --preview src/data/filament-preview.generated.json --source "fetchedAt YYYY-MM-DD"
 ```
 
-`facts:filament` čte `.cache/filament-feeds/` z téhož stažení. Bez té cache se fakta znovu nesestaví; v gitu je vygenerovaný soubor, takže `normalize:filament --check` cache nepotřebuje.
+`facts:filament` čte `.cache/filament-feeds/` z téhož stažení a odmítne zápis, když cena nebo důkaz o průměru nesedí. `normalize:filament -- --check` cache nepotřebuje.
 
-`history:filament` připíše jeden den do `src/data/filament-history.json` (nabídka i dlaždice: cena, Kč/kg, sklad, obchod, datum). Stejný den se nepřepíše. Jiný obsah stejného data je chyba. Skript nic neplánuje.
+`history:filament` připíše jeden den do `src/data/filament-history.json`. Stejný den se nepřepíše. Skript nic neplánuje.
 
-Snímek `2026-10-03` je z gitu `4caab44` a nemá EAN (`--no-facts`), takže dlaždice toho dne jsou po jedné nabídce. Po doplnění mapy nebo řad, které v tom starém souboru nejsou, ten den znovu nespouštějte: kontrola odkáže na neznámé `productId`.
+Snímek `2026-10-03` je z gitu `4caab44` a nemá EAN (`--no-facts`). Po doplnění mapy, která odkazuje na `productId` z toho souboru chybějící, ten den znovu nespouštějte.
 
 ## Revize
 
-`npm run normalize:filament` zapíše `review.md`, `review.json` a `review.csv`. Důvod znamená, že se nabídka nesmí automaticky sloučit. Nejčastěji chybí produktová řada (ve feedu není) nebo balení.
+`npm run normalize:filament` zapíše `review.md`, `review.json` a `review.csv`.
