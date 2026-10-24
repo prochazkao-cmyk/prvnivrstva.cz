@@ -52,7 +52,7 @@ npm run normalize:filament
 npm run history:filament -- --date YYYY-MM-DD --preview src/data/filament-preview.generated.json --source "fetchedAt YYYY-MM-DD"
 ```
 
-`npm run normalize:filament -- --check` hlídá, že dlaždice, revize a historie sedí na katalog. Žádný cron do `main` nezapisuje.
+`npm run normalize:filament -- --check` hlídá, že dlaždice, revize a nejnovější historie sedí na katalog. Noční ceny pouští `.github/workflows/filament-nightly.yml`: commit do `main`, ne pull request. Podrobnosti jsou v `docs/PRICE_FEED_CONTRACT.md`.
 
 ## Build
 

@@ -10,25 +10,25 @@
     {
       "shopId": "filamenty-brno",
       "diameterMm": 1.75,
-      "verifiedAt": "2026-10-21",
-      "rowsWithDiameter": 591,
+      "verifiedAt": "2026-10-24",
+      "rowsWithDiameter": 589,
       "distinctMm": [1.75],
-      "feedItems": 758,
-      "evidence": "Cache Heureka XML z 2026-10-21. Parser je stejný jako readDiameter v scripts/import-filament-feed.mjs (parametr se po odstranění diakritiky jmenuje prumer nebo diameter, hodnota je jedno číslo 1–4 mm). 591 položek má takový průměr a všechny jsou 1,75. Jiná hodnota ve feedu není."
+      "feedItems": 756,
+      "evidence": "Podmínka, ne zámek na počet řádků: každý parseovatelný průměr je 1,75 mm a aspoň jeden takový řádek ve feedu je. Parser je readDiameter (parametr se po odstranění diakritiky jmenuje prumer nebo diameter, hodnota je jedno číslo 1–4 mm). 2026-10-21: 591 z 758. 2026-10-24: 589 z 756, pořád jen 1,75. Noční job při jiné hodnotě ten feed nepublikuje a nechá předchozí katalog."
     }
   ],
   "diameterNoDefault": [
     {
       "shopId": "3dfil",
-      "verifiedAt": "2026-10-21",
+      "verifiedAt": "2026-10-24",
       "rowsWithDiameter": 0,
-      "feedItems": 879,
-      "evidence": "V cache z 2026-10-21 nemá žádná položka parametr průměru. Že názvy obsahují 1.75 mm, se jako průměr nepoužije."
+      "feedItems": 910,
+      "evidence": "Podmínka: žádný parametr průměru. 1.75 mm v názvu se nepoužije. 2026-10-21: 879 položek, 0 průměrů. 2026-10-24: 910 položek, pořád 0. Noční job při objevení průměru ten feed nepublikuje."
     },
     {
       "shopId": "materialpro3d",
-      "verifiedAt": "2026-10-21",
-      "evidence": "Feed z 2026-10-21 prodává i filament 2,85 mm. Průměr struny je zapsaný jako rozsah „2,85 mm – 3 mm“ (PLA285DD1BK, PETG285DD1BK, PP285IF65IY, PP285IF65BK), takže parser číslo nevezme a řádek v náhledu není. Doplnit chybějícím nabídkám 1,75 mm by bylo špatně."
+      "verifiedAt": "2026-10-24",
+      "evidence": "Feed prodává i filament 2,85 mm. Průměr struny je zapsaný jako rozsah „2,85 mm – 3 mm“ (kontrola 2026-10-21: PLA285DD1BK, PETG285DD1BK, PP285IF65IY, PP285IF65BK), takže parser číslo nevezme a řádek v náhledu není. Doplnit chybějícím nabídkám 1,75 mm by bylo špatně. Noční job, když rozsah 2,85 mm zmizí, ten feed nepublikuje."
     }
   ]
 }

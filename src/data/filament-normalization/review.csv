@@ -2,7 +2,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1000,3dfil,8594233084750,offer:3dfil:1000,missing-diameter,BAMBU LAB | PETG Translucent | Oranžová | 1.75mm | 1kg | Refill
 3dfil:1001,3dfil,8594233084767,offer:3dfil:1001,missing-diameter,BAMBU LAB | PETG Translucent | Purple | 1.75mm | 1kg | Refill
 3dfil:1002,3dfil,8594233084774,offer:3dfil:1002,missing-diameter,BAMBU LAB | PLA BASIC | Stříbrná | 1.75mm | 1kg | Refill
-3dfil:1003,3dfil,8594233084781,offer:3dfil:1003,missing-diameter,BAMBU LAB | PLA BASIC | Blue Grey | 1.75mm | 1kg | Refill
+3dfil:1003,3dfil,8594233084781,offer:3dfil:1003,missing-color|missing-diameter,BAMBU LAB | PLA BASIC | Blue Grey | 1.75mm | 1kg | Refill
 3dfil:1004,3dfil,8594233084798,offer:3dfil:1004,missing-diameter,BAMBU LAB | PETG Translucent | Brown | 1.75mm | 1kg | Refill
 3dfil:1007,3dfil,8594233084811,offer:3dfil:1007,missing-diameter,BAMBU LAB | PLA BASIC | Černá | 1.75mm | 1kg Refill
 3dfil:1008,3dfil,8594233084828,offer:3dfil:1008,missing-diameter,BAMBU LAB | PLA BASIC | Fialová Indigo | 1.75mm | 1kg | Refill
@@ -10,7 +10,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1010,3dfil,8594233084842,offer:3dfil:1010,missing-diameter,"BAMBU LAB | PLA BASIC | Žlutá ""slunečnice"" | 1.75mm | 1kg | Refill"
 3dfil:1011,3dfil,8594233084859,offer:3dfil:1011,missing-diameter,BAMBU LAB | PLA BASIC | Oranžová Dýně | 1.75mm | 1kg | Refill
 3dfil:1012,3dfil,8594233084866,offer:3dfil:1012,missing-diameter,"BAMBU LAB | PLA BASIC | Zelená ""jas"" | 1.75mm | 1kg | Refill"
-3dfil:1013,3dfil,8594233084873,offer:3dfil:1013,missing-diameter,BAMBU LAB | PLA BASIC | Tyrkysová | 1.75mm | 1kg | Refill
+3dfil:1013,3dfil,8594233084873,offer:3dfil:1013,missing-color|missing-diameter,BAMBU LAB | PLA BASIC | Tyrkysová | 1.75mm | 1kg | Refill
 3dfil:1014,3dfil,8594233084880,offer:3dfil:1014,missing-diameter,BAMBU LAB | PLA BASIC | Modrá Kobalt | 1.75mm | 1kg | Refill
 3dfil:1015,3dfil,8594233084897,offer:3dfil:1015,missing-diameter,"BAMBU LAB | PLA BASIC | Růžová ""hot"" | 1.75mm | 1kg | Refill"
 3dfil:1016,3dfil,8594233084903,offer:3dfil:1016,missing-diameter,"BAMBU LAB | PLA BASIC | Červená ""kaštan"" | 1.75mm | 1kg | Refill"
@@ -38,6 +38,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1192,3dfil,8594233085290,offer:3dfil:1192,missing-diameter,"BAMBU LAB | PLA Matte | Hnědá ""Dark"" | 1.75mm | 1kg | Refill"
 3dfil:1193,3dfil,8594233085306,offer:3dfil:1193,missing-diameter,BAMBU LAB | PLA Matte | Zelená tmavá | 1.75mm | 1kg | Refill
 3dfil:1194,3dfil,8594233085313,offer:3dfil:1194,missing-diameter,"BAMBU LAB | PLA Matte | Modrá ""Dark"" | 1.75mm | 1kg | Refill"
+3dfil:1195,3dfil,8594233085320,offer:3dfil:1195,missing-diameter,"BAMBU LAB | PLA Matte | Černá ""Charcoal"" | 1.75mm | 1kg | Refill"
 3dfil:1253,3dfil,8594233085337,offer:3dfil:1253,missing-diameter,BAMBU LAB | ABS | Černá | 1.75mm | 1kg | Refill
 3dfil:1254,3dfil,8594233085344,offer:3dfil:1254,missing-diameter,BAMBU LAB | ABS | Bílá | 1.75mm | 1kg | Refill
 3dfil:1255,3dfil,8594233085351,offer:3dfil:1255,missing-diameter,BAMBU LAB | ABS | Červená | 1.75mm | 1kg | Refill
@@ -99,8 +100,8 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1611,3dfil,8594233082930,offer:3dfil:1611,missing-diameter,ERYONE | Pla Silk Dual-color | Černá - Fialová | 1.75mm | 1kg
 3dfil:1612,3dfil,8594233082947,offer:3dfil:1612,missing-diameter,ERYONE | Pla Silk Dual-color | Černá - Tmavě zlatá | 1.75mm | 1kg
 3dfil:1614,3dfil,8594233082961,offer:3dfil:1614,missing-diameter,ERYONE | Pla Silk | Tmavě zlatá | 1.75mm | 1kg
-3dfil:1657,3dfil,8594233082992,offer:3dfil:1657,missing-diameter,ERYONE | Pla Wood | Light | 1.75mm | 1kg
-3dfil:1658,3dfil,8594233083005,offer:3dfil:1658,missing-diameter,ERYONE | Pla Wood | Deep | 1.75mm | 1kg
+3dfil:1657,3dfil,8594233082992,offer:3dfil:1657,missing-color|missing-diameter,ERYONE | Pla Wood | Light | 1.75mm | 1kg
+3dfil:1658,3dfil,8594233083005,offer:3dfil:1658,missing-color|missing-diameter,ERYONE | Pla Wood | Deep | 1.75mm | 1kg
 3dfil:1663,3dfil,8594233080073,offer:3dfil:1663,missing-diameter,ERYONE | TPU | Černá | 1.75mm | 0.5kg
 3dfil:1666,3dfil,8594233083036,offer:3dfil:1666,missing-diameter,ERYONE | Pla Silk Triple-color | Twisted Rainbow-Fire - Červená-Zlatá-Fialová | 1.75mm | 1kg
 3dfil:1667,3dfil,8594233083043,offer:3dfil:1667,missing-diameter,ERYONE | Pla Silk Triple-color | Twisted Rainbow-Shadow - Černá-Modrá-Fialová | 1.75mm | 1kg
@@ -123,7 +124,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1769,3dfil,8594233086525,offer:3dfil:1769,missing-diameter,GEEETECH | Pla Silk Dual-color | Modrá - Zelená | 1.75mm | 1kg
 3dfil:1770,3dfil,8594233083203,offer:3dfil:1770,missing-diameter,ERYONE | Pla Silk Dual-color HS | Modrá - Stříbrná | 1.75mm | 1kg
 3dfil:1777,3dfil,8594233083210,offer:3dfil:1777,missing-diameter,ERYONE | Pla Silk Macaron Rainbow | Forest | 1.75mm | 1kg
-3dfil:1792,3dfil,8720574347296,offer:3dfil:1792,missing-diameter,KEXCELLED | Pla Wood | Ivory | 1.75mm | 1kg
+3dfil:1792,3dfil,8720574347296,offer:3dfil:1792,missing-color|missing-diameter,KEXCELLED | Pla Wood | Ivory | 1.75mm | 1kg
 3dfil:1797,3dfil,8594233083258,offer:3dfil:1797,missing-diameter,ERYONE | Pla Silk Macaron Rainbow | Metal Silk | 1.75mm | 1kg
 3dfil:1804,3dfil,8594233080202,offer:3dfil:1804,missing-diameter,ERYONE | PETG CF | Černá | 1.75mm | 1kg
 3dfil:1805,3dfil,8594233083265,offer:3dfil:1805,missing-diameter,ERYONE | PETG CF | Vínová | 1.75mm | 1kg
@@ -132,25 +133,25 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1831,3dfil,8594233083289,offer:3dfil:1831,missing-diameter,"ERYONE | Pla Matte | Fialová ""lilac"" | 1.75mm | 1kg"
 3dfil:1834,3dfil,8594233086594,offer:3dfil:1834,missing-diameter,GEEETECH | Pla | Zelené jablko | 1.75mm | 1kg
 3dfil:1837,3dfil,8594233086600,offer:3dfil:1837,missing-diameter,GEEETECH | Pla | Hnědá | 1.75mm | 1kg
-3dfil:1838,3dfil,8594233086617,offer:3dfil:1838,missing-diameter,GEEETECH | Pla | Bílá | 1.75mm | 1kg
+3dfil:1838,3dfil,8594233086617,offer:3dfil:1838,missing-color|missing-diameter,GEEETECH | Pla | Bílá | 1.75mm | 1kg
 3dfil:1839,3dfil,8594233086624,offer:3dfil:1839,missing-diameter,GEEETECH | Pla | Water Blue | 1.75mm | 1kg
 3dfil:1852,3dfil,8594233085504,offer:3dfil:1852,missing-diameter,"BAMBU LAB | Pla support | PLA-PETG | 1.75mm | 0,5kg | Refill"
 3dfil:1871,3dfil,8594233083340,offer:3dfil:1871,missing-diameter,ERYONE | TPU | Šedá | 1.75mm | 0.5kg
 3dfil:1872,3dfil,8594233083357,offer:3dfil:1872,missing-diameter,ERYONE | TPU | Transparentní | 1.75mm | 0.5kg
 3dfil:1902,3dfil,8594233080264,ean:8594233080264,missing-diameter,ZIRO | Pla Silk | Passionate | 1.75mm | 1kg
 3dfil:1912,3dfil,8594233080271,offer:3dfil:1912,missing-diameter,ZIRO | PLA | Bílá | 1.75mm | 1kg
-3dfil:1914,3dfil,8594233080295,offer:3dfil:1914,missing-diameter,ZIRO | PLA | Azurová | 1.75mm | 1kg
+3dfil:1914,3dfil,8594233080295,offer:3dfil:1914,missing-color|missing-diameter,ZIRO | PLA | Azurová | 1.75mm | 1kg
 3dfil:1921,3dfil,8594233083388,offer:3dfil:1921,missing-diameter,ERYONE | Pla Silk | Tmavě zelená | 1.75mm | 1kg
 3dfil:1922,3dfil,8594233083395,offer:3dfil:1922,missing-diameter,ERYONE | Pla Silk | Bílá | 1.75mm | 1kg
 3dfil:1927,3dfil,8594233080080,offer:3dfil:1927,missing-diameter,ERYONE | TPU | Černá | 1.75mm | 1kg
 3dfil:1939,3dfil,8594233083470,offer:3dfil:1939,missing-diameter,ERYONE | Pla Matte | Dual Color - Žlutá-zelená (Shire) | 1.75mm | 1kg
 3dfil:1987,3dfil,8594233083562,offer:3dfil:1987,missing-diameter,ERYONE | Pla | Zelená | 1.75mm | 1kg
 3dfil:1990,3dfil,8594233080233,offer:3dfil:1990,missing-diameter,ERYONE | Pla Silk | Ultra Gold | 1.75mm | 1kg
-3dfil:2008,3dfil,8594233086679,offer:3dfil:2008,missing-diameter,GEEETECH | TPU | Transparentní oranžová | 1.75mm | 1kg
+3dfil:2008,3dfil,8594233086679,offer:3dfil:2008,missing-color|missing-diameter,GEEETECH | TPU | Transparentní oranžová | 1.75mm | 1kg
 3dfil:2012,3dfil,8594233086709,offer:3dfil:2012,missing-diameter,GEEETECH | Pla | Žlutá | 1.75mm | 1kg
 3dfil:2035,3dfil,8594233083609,offer:3dfil:2035,missing-diameter,ERYONE | Pla Silk | Dual-color | Zelená - červená | 1.75mm | 1kg
-3dfil:2047,3dfil,8594233087232,offer:3dfil:2047,missing-diameter,3DPOWER | Pla Wood | Natural | 1.75mm | 1kg
-3dfil:2048,3dfil,8594233087249,offer:3dfil:2048,missing-diameter,3DPOWER | PLA Wood | Dark | 1.75mm | 1kg
+3dfil:2047,3dfil,8594233087232,offer:3dfil:2047,missing-color|missing-diameter,3DPOWER | Pla Wood | Natural | 1.75mm | 1kg
+3dfil:2048,3dfil,8594233087249,offer:3dfil:2048,missing-color|missing-diameter,3DPOWER | PLA Wood | Dark | 1.75mm | 1kg
 3dfil:2056,3dfil,8594233083647,offer:3dfil:2056,missing-diameter,ERYONE | Pla Silk | Dual-color | Oranžová - modrá | 1.75mm | 1kg
 3dfil:2074,3dfil,8594233083708,offer:3dfil:2074,missing-diameter,ERYONE | Pla Silk | Dual-color | Fialová - zelená | 1.75mm | 1kg
 3dfil:2083,3dfil,8594233080097,offer:3dfil:2083,missing-diameter,ERYONE | ASA | Černá | 1.75mm | 1kg
@@ -158,7 +159,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2089,3dfil,8594233083753,offer:3dfil:2089,missing-diameter,ERYONE | Pla+ filament High Speed | Fialová | 1.75mm | 1kg
 3dfil:2099,3dfil,8594233080301,offer:3dfil:2099,missing-diameter,ZIRO | Pla Silk | Pastel Pearl | 1.75mm | 1kg
 3dfil:2101,3dfil,8594233080325,offer:3dfil:2101,missing-diameter,ZIRO | Pla Silk | Earth Tone | 1.75mm | 1kg
-3dfil:211_CER,3dfil,6973090163327,offer:3dfil:211_CER,ean-conflict|ean-material-conflict|missing-diameter,PHAETUS | ToughPETG-HF | zelená | 1.75mm | 1kg Barva: Černá
+3dfil:211_CER,3dfil,6973090163327,offer:3dfil:211_CER,ean-conflict|ean-material-conflict|missing-color|missing-diameter,PHAETUS | ToughPETG-HF | zelená | 1.75mm | 1kg Barva: Černá
 3dfil:2122,3dfil,8594233080370,offer:3dfil:2122,missing-diameter,ZIRO | Pla Matte | Tri Color - Neon | 1.75mm | 1kg
 3dfil:2123,3dfil,8594233080387,offer:3dfil:2123,missing-diameter,ZIRO | Pla Matte | Tri Color - Colorful Mist | 1.75mm | 1kg
 3dfil:2125,3dfil,8594233080400,offer:3dfil:2125,missing-diameter,ZIRO | Pla Matte | Tri Color - Frosted Berry | 1.75mm | 1kg
@@ -173,16 +174,16 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2165,3dfil,8594233080486,offer:3dfil:2165,missing-diameter,ZIRO | PLA Silk | Růžové zlato | 1.75mm | 1kg
 3dfil:2166,3dfil,8594233080493,offer:3dfil:2166,missing-diameter,ZIRO | Pla Silk | Zlatá | 1.75mm | 1kg
 3dfil:217,3dfil,8720574346695,offer:3dfil:217,missing-diameter,KEXCELLED | PETG | Červená | 1.75mm | 1kg
-3dfil:2174,3dfil,8594233080516,offer:3dfil:2174,missing-diameter,ZIRO | PLA | Fluo zelená transparent | 1.75mm | 1kg
+3dfil:2174,3dfil,8594233080516,offer:3dfil:2174,missing-color|missing-diameter,ZIRO | PLA | Fluo zelená transparent | 1.75mm | 1kg
 3dfil:2182,3dfil,8594233080530,offer:3dfil:2182,missing-diameter,ZIRO | Pla Matte | Tri Color - Volcano | 1.75mm | 1kg
 3dfil:2183,3dfil,8594233080547,offer:3dfil:2183,missing-diameter,"ZIRO | PLA | Modrá ""Sky"" | 1.75mm | 1kg"
 3dfil:2194,3dfil,8594233080554,offer:3dfil:2194,missing-diameter,ZIRO | PETG | Černá | 1.75mm | 1kg
 3dfil:2195,3dfil,8594233080561,offer:3dfil:2195,missing-diameter,ZIRO | PETG | Bílá | 1.75mm | 1kg
 3dfil:2197,3dfil,8594233080585,offer:3dfil:2197,missing-diameter,ZIRO | PETG | Červená | 1.75mm | 1kg
 3dfil:2198,3dfil,8594233081223,offer:3dfil:2198,missing-diameter,ELEGOO | Rapid PETG | Beige | 1.75mm | 1kg
-3dfil:2199,3dfil,8594233081230,offer:3dfil:2199,missing-diameter,ELEGOO | Rapid PETG | Brown | 1.75mm | 1kg
 3dfil:2200,3dfil,8594233081247,offer:3dfil:2200,missing-diameter,ELEGOO | Rapid PETG | Red | 1.75mm | 1kg
 3dfil:2204,3dfil,8594233081285,offer:3dfil:2204,missing-diameter,ELEGOO | Rapid PETG | Orange | 1.75mm | 1kg
+3dfil:2205,3dfil,8594233081292,offer:3dfil:2205,missing-diameter,ELEGOO | Rapid PETG | Yellow | 1.75mm | 1kg
 3dfil:2206,3dfil,8594233081308,offer:3dfil:2206,missing-diameter,ELEGOO | Rapid PETG | Green | 1.75mm | 1kg
 3dfil:2207,3dfil,8594233081315,offer:3dfil:2207,missing-diameter,ELEGOO | Rapid PETG | Blue | 1.75mm | 1kg
 3dfil:224,3dfil,8720574346633,offer:3dfil:224,missing-diameter,KEXCELLED | PETG | Bílá | 1.75mm | 1kg
@@ -199,9 +200,8 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2299,3dfil,8594233087263,offer:3dfil:2299,missing-diameter,"3DPOWER | PLA Dual Silk | Černá - Modrá | 1.75mm | 0,3kg"
 3dfil:2305,3dfil,8594233087287,offer:3dfil:2305,missing-diameter,"3DPOWER | Pla Dual Silk | Zlatá-černá | 1.75mm | 0,3kg"
 3dfil:2308,3dfil,8594233083845,offer:3dfil:2308,missing-diameter,ERYONE | ABS | Černá | 1.75mm | 1kg
-3dfil:2309,3dfil,8594233083852,offer:3dfil:2309,missing-diameter,ERYONE | ABS | Černá | 1.75mm | 1kg
+3dfil:2309,3dfil,8594233083852,offer:3dfil:2309,missing-color|missing-diameter,ERYONE | ABS | Černá | 1.75mm | 1kg
 3dfil:2311,3dfil,8594233083876,offer:3dfil:2311,missing-diameter,ERYONE | ABS | Modrá | 1.75mm | 1kg
-3dfil:2312,3dfil,8594233083883,offer:3dfil:2312,missing-diameter,ERYONE | ABS | Zelená | 1.75mm | 1kg
 3dfil:2313,3dfil,8594233080103,offer:3dfil:2313,missing-diameter,ERYONE | Asa | Černá | 1.75mm | 1kg
 3dfil:2327,3dfil,8594233080165,offer:3dfil:2327,missing-diameter,ERYONE | ABS-CF | Černá | 1.75mm | 1kg
 3dfil:2350,3dfil,8594233085597,offer:3dfil:2350,missing-diameter,BAMBU LAB | TPU 90A | Černá | 1.75mm | 1kg
@@ -216,15 +216,14 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2397,3dfil,8594233086204,offer:3dfil:2397,missing-diameter,PROF. LAB | Pla Dual Silk | Červená-modrá | 1.75mm | 1kg
 3dfil:2398,3dfil,8594233086211,offer:3dfil:2398,missing-diameter,PROF. LAB | Pla Dual Silk | Černá-modrá | 1.75mm | 1kg
 3dfil:2400,3dfil,8594233086235,offer:3dfil:2400,missing-diameter,PROF. LAB | Pla Dual Silk | Růžová-zlatá | 1.75mm | 1kg
-3dfil:2422,3dfil,8594233086822,offer:3dfil:2422,missing-diameter,GEEETECH | Pla Silk Dual-color | Zlatá - Červená | 1.75mm | 1kg
 3dfil:2425,3dfil,8594233086839,offer:3dfil:2425,missing-diameter,GEEETECH | PETG | Černá | 1.75mm | 1kg
-3dfil:2432,3dfil,8594233085634,offer:3dfil:2432,missing-diameter,BAMBU LAB | PLA Marble | Bílý mramor | 1.75mm | 1kg | Spool
+3dfil:2432,3dfil,8594233085634,offer:3dfil:2432,missing-color|missing-diameter,BAMBU LAB | PLA Marble | Bílý mramor | 1.75mm | 1kg | Spool
 3dfil:2437,3dfil,8594233085641,offer:3dfil:2437,missing-diameter,"BAMBU LAB | PETG CF | Šedá ""titan"" | 1.75mm | 1kg | Refill"
 3dfil:2443,3dfil,8594233087294,offer:3dfil:2443,missing-diameter,3DPOWER | Pla Dual Silk | Zelená-žlutá | 1.75mm | 1kg
 3dfil:245,3dfil,8720297800160,offer:3dfil:245,missing-diameter,KEXCELLED | PLA | Zlatá | 1.75mm | 1kg
 3dfil:2457,3dfil,8594233083913,offer:3dfil:2457,missing-diameter,ERYONE | TPU | High Speed | Bílá | 1.75mm | 1kg
 3dfil:2458,3dfil,8594233083920,offer:3dfil:2458,missing-diameter,ERYONE | TPU | High Speed | Šedá | 1.75mm | 1kg
-3dfil:2459,3dfil,8594233083937,offer:3dfil:2459,missing-diameter,ERYONE | TPU | High Speed | Transparentní | 1.75mm | 1kg
+3dfil:2459,3dfil,8594233083937,offer:3dfil:2459,missing-color|missing-diameter,ERYONE | TPU | High Speed | Transparentní | 1.75mm | 1kg
 3dfil:2486,3dfil,8594233083968,offer:3dfil:2486,missing-diameter,ERYONE | PLA Silk Dual-color | Modrá - černá | 1.75mm | 1kg
 3dfil:2523,3dfil,8594233086877,offer:3dfil:2523,missing-diameter,GEEETECH | Petg | Hnědá | 1.75mm | 1kg
 3dfil:2524,3dfil,8594233086884,offer:3dfil:2524,missing-diameter,GEEETECH | Petg | Žlutá | 1.75mm | 1kg
@@ -268,8 +267,8 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2777,3dfil,8594233081636,offer:3dfil:2777,missing-diameter,ELEGOO | PLA Silk | Red | 1.75mm | 1kg
 3dfil:2779,3dfil,8594233081643,offer:3dfil:2779,missing-diameter,ELEGOO | PLA Silk | Blue-magenta | 1.75mm | 1kg
 3dfil:2781,3dfil,8594233081667,offer:3dfil:2781,missing-diameter,ELEGOO | PLA Silk | Black-green | 1.75mm | 1kg
-3dfil:2830,3dfil,8594233081711,offer:3dfil:2830,missing-diameter,ELEGOO | Pla Wood | Oak Wood / Light Brown | 1.75mm | 1kg
-3dfil:2831,3dfil,8594233081728,offer:3dfil:2831,missing-diameter,ELEGOO | PLA Wood | Teak Wood / Medium Brown | 1.75mm | 1kg
+3dfil:2830,3dfil,8594233081711,offer:3dfil:2830,missing-color|missing-diameter,ELEGOO | Pla Wood | Oak Wood / Light Brown | 1.75mm | 1kg
+3dfil:2831,3dfil,8594233081728,offer:3dfil:2831,missing-color|missing-diameter,ELEGOO | PLA Wood | Teak Wood / Medium Brown | 1.75mm | 1kg
 3dfil:2832,3dfil,8594233081735,offer:3dfil:2832,missing-diameter,ELEGOO | TPU 95A | Transparent | 1.75mm | 1kg
 3dfil:2833,3dfil,8594233081742,offer:3dfil:2833,missing-diameter,ELEGOO | TPU 95A | Grey | 1.75mm | 1kg
 3dfil:2855,3dfil,8594233085719,offer:3dfil:2855,missing-diameter,"BAMBU LAB | PLA Matte | Šedá ""Nardo"" | 1.75mm | 1kg | Refill"
@@ -303,9 +302,9 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3046,3dfil,8594233084309,offer:3dfil:3046,missing-diameter,ERYONE | TPU | 85A | Černá | 1.75mm | 1kg
 3dfil:3066,3dfil,8594233080776,offer:3dfil:3066,missing-diameter,ZIRO | TPU | Flex Nightsky 95A | 1.75mm | 0.8kg
 3dfil:3069,3dfil,8594233085856,offer:3dfil:3069,missing-diameter,"BAMBU LAB | PLA Matte | Zelená ""jablko"" | 1.75mm | 1kg | Refill"
-3dfil:3070,3dfil,8594233081957,offer:3dfil:3070,missing-diameter,ELEGOO | PLA Wood | Rosewood | 1.75mm | 1kg
-3dfil:3071,3dfil,8594233081964,offer:3dfil:3071,missing-diameter,ELEGOO | PLA Wood | Tan Birch | 1.75mm | 1kg
-3dfil:3072,3dfil,8594233081971,offer:3dfil:3072,missing-diameter,ELEGOO | PLA Wood | Walnut Wood | 1.75mm | 1kg
+3dfil:3070,3dfil,8594233081957,offer:3dfil:3070,missing-color|missing-diameter,ELEGOO | PLA Wood | Rosewood | 1.75mm | 1kg
+3dfil:3071,3dfil,8594233081964,offer:3dfil:3071,missing-color|missing-diameter,ELEGOO | PLA Wood | Tan Birch | 1.75mm | 1kg
+3dfil:3072,3dfil,8594233081971,offer:3dfil:3072,missing-color|missing-diameter,ELEGOO | PLA Wood | Walnut Wood | 1.75mm | 1kg
 3dfil:3074,3dfil,8594233080813,offer:3dfil:3074,missing-diameter,ZIRO | Pla Matte | Gradient - Macaron | 1.75mm | 1kg
 3dfil:3075,3dfil,8594233080820,offer:3dfil:3075,missing-diameter,ZIRO | TPU | Black 95A | 1.75mm | 0.8kg
 3dfil:3077,3dfil,8594233080844,offer:3dfil:3077,missing-diameter,ZIRO | TPU | Yellow 95A | 1.75mm | 0.8kg
@@ -316,7 +315,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3117,3dfil,8594233081995,offer:3dfil:3117,missing-diameter,ELEGOO | TPU 95A | Green | 1.75mm | 1kg
 3dfil:3119,3dfil,8594233085887,offer:3dfil:3119,missing-diameter,BAMBU LAB | PLA BASIC | Černá | 1.75mm | 1kg | Spool
 3dfil:3137,3dfil,5906269965508,ean:5906269965508,missing-diameter,NEBULA | PETG | Arctic Silver | 1.75mm | 1kg
-3dfil:314,3dfil,8720574342987,offer:3dfil:314,missing-diameter,KEXCELLED | PLA Matte | Hořčicová zelená | 1.75mm | 1kg
 3dfil:3145,3dfil,8594233087355,offer:3dfil:3145,missing-diameter,Creality | PLA Glow | Hyper Luminuous Green | 1.75mm | 1kg
 3dfil:3146,3dfil,8594233087362,offer:3dfil:3146,missing-diameter,Creality | PLA Glow | Hyper Luminuous Blue | 1.75mm | 1kg
 3dfil:3147,3dfil,8594233087379,offer:3dfil:3147,missing-diameter,Creality | PLA Glow | Hyper Luminuous Yellow | 1.75mm | 1kg
@@ -325,36 +323,40 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3166,3dfil,8594233086327,offer:3dfil:3166,missing-diameter,PROF. LAB | PETG | Oranžová | 1.75mm | 1kg
 3dfil:3167,3dfil,8594233086334,offer:3dfil:3167,missing-diameter,PROF. LAB | PETG | Stříbrná | 1.75mm | 1kg
 3dfil:3168,3dfil,8594233086341,offer:3dfil:3168,missing-diameter,PROF. LAB | PETG | Šedá | 1.75mm | 1kg
+3dfil:3181,3dfil,8594233086358,offer:3dfil:3181,missing-color|missing-diameter,PROF. LAB | PLA Wood | Black Walnut | 1.75mm | 1kg
 3dfil:3185,3dfil,8594233086372,offer:3dfil:3185,missing-diameter,PROF. LAB | TPU | Oranžová 95A | 1.75mm | 1kg
 3dfil:3190,3dfil,8594233086389,offer:3dfil:3190,missing-diameter,PROF. LAB | TPU | Transparent 95A | 1.75mm | 1kg
-3dfil:3191,3dfil,8594233085894,offer:3dfil:3191,missing-diameter,BAMBU LAB | PLA Matte | Bone White | 1.75mm | 1kg | Refill
 3dfil:320,3dfil,8720574345650,offer:3dfil:320,missing-diameter,KEXCELLED | PLA Silk | Multicolor | 1.75mm | 1kg
+3dfil:3202,3dfil,8594233082008,offer:3dfil:3202,missing-diameter,ELEGOO | PC | Black | 1.75mm | 1kg
 3dfil:3206,3dfil,8594233082022,offer:3dfil:3206,missing-diameter,ELEGOO | ASA | Blue | 1.75mm | 1kg
+3dfil:3207,3dfil,8594233082039,offer:3dfil:3207,missing-color|missing-diameter,ELEGOO | ASA | Blue | 1.75mm | 1kg
 3dfil:3208,3dfil,8594233082046,offer:3dfil:3208,missing-diameter,ELEGOO | ASA | Grey | 1.75mm | 1kg
 3dfil:3220,3dfil,8594233082084,offer:3dfil:3220,missing-diameter,ELEGOO | PLA Silk | Peach Pink | 1.75mm | 1kg
-3dfil:3222,3dfil,8594233082107,offer:3dfil:3222,missing-diameter,ELEGOO | PLA Silk | Bluish Purple | 1.75mm | 1kg
+3dfil:3243,3dfil,8594233082138,offer:3dfil:3243,missing-diameter,ELEGOO | PLA Glow | Zelená | 1.75mm | 1kg
+3dfil:3244,3dfil,8594233082145,offer:3dfil:3244,missing-diameter,ELEGOO | PLA Glow | Modrá | 1.75mm | 1kg
 3dfil:3246,3dfil,8594233082169,offer:3dfil:3246,missing-diameter,ELEGOO | PLA Glow | Žlutá | 1.75mm | 1kg
 3dfil:3248,3dfil,8594233084323,offer:3dfil:3248,missing-diameter,ERYONE | PLA Matte | Růžová | 1.75mm | 1kg
 3dfil:3261,3dfil,8594233085900,offer:3dfil:3261,missing-diameter,"BAMBU LAB | PLA BASIC | Bílá ""Jade"" | 1.75mm | 1kg | Spool"
 3dfil:3262,3dfil,8594233085917,offer:3dfil:3262,missing-diameter,BAMBU LAB | PLA Silk+ | Champagne | 1.75mm | 1kg | Spool
 3dfil:3267,3dfil,8594233085924,offer:3dfil:3267,missing-diameter,"BAMBU LAB | PLA BASIC | Růžová ""Hot"" | 1.75mm | 1kg | Spool"
-3dfil:3270,3dfil,8594233085931,offer:3dfil:3270,missing-diameter,BAMBU LAB | PLA Silk+ | Rose Gold | 1.75mm | 1kg | Spool
+3dfil:3270,3dfil,8594233085931,offer:3dfil:3270,missing-color|missing-diameter,BAMBU LAB | PLA Silk+ | Rose Gold | 1.75mm | 1kg | Spool
 3dfil:3271,3dfil,8594233085948,offer:3dfil:3271,missing-diameter,"BAMBU LAB | PLA Matte | Fialová ""Plum"" | 1.75mm | 1kg | Refill"
+3dfil:3285,3dfil,8594233082183,offer:3dfil:3285,missing-diameter,ELEGOO | PETG-GF | Grey | 1.75mm | 1kg
+3dfil:3286,3dfil,8594233082190,offer:3dfil:3286,missing-diameter,ELEGOO | PETG-GF | White | 1.75mm | 1kg
 3dfil:3296,3dfil,8594233082220,offer:3dfil:3296,missing-diameter,ELEGOO | PETG Pro | Light Blue | 1.75mm | 1kg
 3dfil:3297,3dfil,8594233082237,offer:3dfil:3297,missing-diameter,ELEGOO | PC | Transparent | 1.75mm | 1kg
 3dfil:3313,3dfil,8594233085955,offer:3dfil:3313,missing-diameter,BAMBU LAB | ABS | Azure Modrá | 1.75mm | 1kg | Refill
 3dfil:3315,3dfil,8594233085979,offer:3dfil:3315,missing-diameter,"BAMBU LAB | PLA Silk+ | Modrá ""Baby"" | 1.75mm | 1kg | Spool"
 3dfil:3316,3dfil,5906269965508,ean:5906269965508,missing-diameter,NEBULA | PETG | Satin Silver | 1.75mm | 1kg
 3dfil:3317,3dfil,5906269965652,ean:5906269965652,missing-diameter,NEBULA | PETG | Emerald Green | 1.75mm | 1kg
-3dfil:3318,3dfil,5906269966307,ean:5906269966307,missing-diameter,NEBULA | PETG | Yellow Gold | 1.75mm | 1kg
+3dfil:3318,3dfil,5906269966307,ean:5906269966307,missing-color|missing-diameter,NEBULA | PETG | Yellow Gold | 1.75mm | 1kg
 3dfil:3319,3dfil,5906269966451,ean:5906269966451,missing-diameter,NEBULA | PETG | Orange | 1.75mm | 1kg
 3dfil:3340,3dfil,8594233087638,offer:3dfil:3340,missing-diameter,NEBULA | Nylon | PA12 CF15 Black (Černá) | 1.75mm | 0.5kg
 3dfil:3349,3dfil,8594233080905,offer:3dfil:3349,missing-diameter,ZIRO | Pla Silk | Metallic Fusion | 1.75mm | 1kg
 3dfil:3350,3dfil,8594233080912,offer:3dfil:3350,missing-diameter,ZIRO | PLA | Fluo oranžová | 1.75mm | 1kg
-3dfil:3383,3dfil,8594233084378,offer:3dfil:3383,missing-diameter,ERYONE | Pla Silk | Ultra Bronze | 1.75mm | 1kg
+3dfil:3383,3dfil,8594233084378,offer:3dfil:3383,missing-color|missing-diameter,ERYONE | Pla Silk | Ultra Bronze | 1.75mm | 1kg
 3dfil:3384,3dfil,8594233082275,offer:3dfil:3384,missing-diameter,ELEGOO | PC | White | 1.75mm | 1kg
 3dfil:3390,3dfil,8594233085986,offer:3dfil:3390,missing-diameter,BAMBU LAB | PETG Basic | Černá | 1.75mm | 1kg | Refill
-3dfil:3391,3dfil,8594233085993,offer:3dfil:3391,missing-diameter,BAMBU LAB | PETG Basic | Červená | 1.75mm | 1kg | Refill
 3dfil:3392,3dfil,8594233086006,offer:3dfil:3392,missing-diameter,BAMBU LAB | PETG Basic | Bílá | 1.75mm | 1kg | Refill
 3dfil:3393,3dfil,8594233086013,offer:3dfil:3393,missing-diameter,BAMBU LAB | PETG Basic | Žlutá | 1.75mm | 1kg | Refill
 3dfil:3394,3dfil,8594233086020,offer:3dfil:3394,missing-diameter,BAMBU LAB | PETG Basic | Šedá | 1.75mm | 1kg | Refill
@@ -369,25 +371,27 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3437,3dfil,8594233087010,offer:3dfil:3437,missing-diameter,Polymaker | PLA | PolyTerra™ Gradient PLA Cappuccino | 1.75mm | 1kg
 3dfil:3438,3dfil,8594233087027,offer:3dfil:3438,missing-diameter,Polymaker | PLA | PolyTerra™ Gradient PLA Wood | 1.75mm | 1kg
 3dfil:3455,3dfil,8594233087058,offer:3dfil:3455,missing-diameter,Polymaker | PETG | PolyLite™ Lime | 1.75mm | 1kg
-3dfil:3456,3dfil,8594233087065,offer:3dfil:3456,missing-diameter,Polymaker | PETG | PolyLite™ Magenta | 1.75mm | 1kg
+3dfil:3456,3dfil,8594233087065,offer:3dfil:3456,missing-color|missing-diameter,Polymaker | PETG | PolyLite™ Magenta | 1.75mm | 1kg
 3dfil:3457,3dfil,8594233087072,offer:3dfil:3457,missing-diameter,Polymaker | PETG | PolyLite™ Red | 1.75mm | 1kg
 3dfil:3460,3dfil,8594233086419,offer:3dfil:3460,missing-diameter,PROF. LAB | PLA Silk | Black | 1.75mm | 1kg
 3dfil:3461,3dfil,8594233086426,offer:3dfil:3461,missing-diameter,PROF. LAB | PLA Silk | Copper | 1.75mm | 1kg
 3dfil:3462,3dfil,8594233086433,offer:3dfil:3462,missing-diameter,PROF. LAB | TPU | Černá 95A | 1.75mm | 1kg
+3dfil:3464,3dfil,8594233086440,offer:3dfil:3464,missing-color|missing-diameter,PROF. LAB | PETG | Transparent | 1.75mm | 1kg
 3dfil:3492,3dfil,8594233086457,offer:3dfil:3492,missing-diameter,PROF. LAB | ASA | Černá | 1.75mm | 1kg
 3dfil:3495,3dfil,8594233086464,offer:3dfil:3495,missing-diameter,PROF. LAB | PETG | MATTE Černá | 1.75mm | 1kg
 3dfil:3496,3dfil,8594233086471,offer:3dfil:3496,missing-diameter,PROF. LAB | PETG | MATTE Bílá | 1.75mm | 1kg
+3dfil:3507,3dfil,8594233087393,offer:3dfil:3507,missing-diameter,PROF. LAB | Nylon | PA12 CF15 Black (Černá) | 1.75mm | 1kg
 3dfil:3510,3dfil,8594233087829,offer:3dfil:3510,missing-diameter,BAMBU LAB | PLA Silk+ | Zlatá | 1.75mm | 1kg | Spool
 3dfil:3513,3dfil,8594233087850,offer:3dfil:3513,missing-diameter,PROF. LAB | PETG | Olivově zelená | 1.75mm | 1kg
 3dfil:3514,3dfil,8594233087843,offer:3dfil:3514,missing-diameter,PROF. LAB | PETG | Žlutá | 1.75mm | 1kg
 3dfil:3515,3dfil,8594233087867,offer:3dfil:3515,missing-diameter,PROF. LAB | PETG | Beige | 1.75mm | 1kg
-3dfil:3516,3dfil,8594233087874,offer:3dfil:3516,missing-diameter,PROF. LAB | PETG | Coffee | 1.75mm | 1kg
+3dfil:3516,3dfil,8594233087874,ean:8594233087874,missing-diameter,PROF. LAB | PETG | Coffee | 1.75mm | 1kg
 3dfil:3517,3dfil,8594233087881,offer:3dfil:3517,missing-diameter,PROF. LAB | PETG | Hnědá | 1.75mm | 1kg
 3dfil:3518,3dfil,8594233087898,offer:3dfil:3518,missing-diameter,PROF. LAB | PETG | MATTE Tmavě zelená | 1.75mm | 1kg
 3dfil:3520,3dfil,8594233087928,offer:3dfil:3520,missing-diameter,ERYONE | ASA CF | Tmavě šedá | 1.75mm | 1kg
 3dfil:3521,3dfil,8594233087911,offer:3dfil:3521,missing-diameter,ERYONE | ASA CF | Olivově zelená | 1.75mm | 1kg
 3dfil:3522,3dfil,8594233087904,offer:3dfil:3522,missing-diameter,ERYONE | ASA CF | Modrá | 1.75mm | 1kg
-3dfil:3523,3dfil,8594233087935,offer:3dfil:3523,missing-diameter,ERYONE | ASA CF | Tmavě vínová (Purple Red) | 1.75mm | 1kg
+3dfil:3523,3dfil,8594233087935,offer:3dfil:3523,missing-color|missing-diameter,ERYONE | ASA CF | Tmavě vínová (Purple Red) | 1.75mm | 1kg
 3dfil:3525,3dfil,8594233080721,ean:8594233080721,missing-diameter,ZIRO | Pla Matte | Gradient - Gray Layer Rock | 1.75mm | 1kg
 3dfil:3526,3dfil,8594233080394,offer:3dfil:3526,missing-diameter,ZIRO | Pla Matte | Tri Color - Maple Forest | 1.75mm | 1kg
 3dfil:3527,3dfil,8594233080264,ean:8594233080264,missing-diameter,ZIRO | Pla Silk | Ember | 1.75mm | 1kg
@@ -405,12 +409,14 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3612,3dfil,5905143083574,offer:3dfil:3612,missing-diameter,3DPOWER | PETG | Select Černá | 1.75mm | 1kg
 3dfil:3613,3dfil,5905143083512,offer:3dfil:3613,missing-diameter,3DPOWER | PETG | Select Bílá | 1.75mm | 1kg
 3dfil:3614,3dfil,5905143083567,offer:3dfil:3614,missing-diameter,3DPOWER | PETG | Select Šedá | 1.75mm | 1kg
+3dfil:3615,3dfil,8594233088000,offer:3dfil:3615,missing-diameter,PROF. LAB | PETG | Oak | 1.75mm | 1kg
 3dfil:3616,3dfil,8594233088017,offer:3dfil:3616,missing-diameter,"PROF. LAB | PETG | Modrá ""Ocean"" | 1.75mm | 1kg"
 3dfil:3633,3dfil,5905143082423,offer:3dfil:3633,missing-diameter,3DPOWER | Hyper PA6-CF15 | Ink Black (Černá) | 1.75mm | 0.5kg
 3dfil:3635,3dfil,5905143082690,offer:3dfil:3635,missing-diameter,3DPOWER | PETG | Světle šedá | 1.75mm | 1kg
 3dfil:3642,3dfil,5906269968479,offer:3dfil:3642,missing-diameter,NEBULA | PLA Silk | Royal Gold | 1.75mm | 1kg
 3dfil:3643,3dfil,5906269968523,offer:3dfil:3643,missing-diameter,NEBULA | PLA Silk | Titanium Silver | 1.75mm | 1kg
 3dfil:3651,3dfil,5903707923946,offer:3dfil:3651,ean-conflict|ean-material-conflict|missing-diameter,PROF. LAB | PETG-CF | Grey | 1.75mm | 1kg
+3dfil:3653,3dfil,5903707923922,offer:3dfil:3653,ean-conflict|ean-material-conflict|missing-diameter,PROF. LAB | PETG-CF | Blue | 1.75mm | 1kg
 3dfil:3654,3dfil,8594233088048,offer:3dfil:3654,missing-diameter,ERYONE | PLA Matte | Zelená Army | 1.75mm | 1kg
 3dfil:3656,3dfil,8594233088062,offer:3dfil:3656,missing-diameter,ERYONE | PLA Silk | Fuchsia Metal | 1.75mm | 1kg
 3dfil:3658,3dfil,5903707922253,ean:5903707922253,missing-diameter,PROF. LAB | ASA | Šedá | 1.75mm | 1kg
@@ -443,16 +449,16 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3811,3dfil,8594233088345,offer:3dfil:3811,missing-diameter,"BAMBU LAB | PETG Basic | Modrá ""Navy"" | 1.75mm | 1kg | Refill"
 3dfil:3812,3dfil,8594233088338,offer:3dfil:3812,missing-diameter,"BAMBU LAB | PETG Basic | Modrá ""Misty"" | 1.75mm | 1kg | Refill"
 3dfil:3813,3dfil,8594233088321,offer:3dfil:3813,missing-diameter,BAMBU LAB | PETG Basic | Dark Beige | 1.75mm | 1kg | Refill
-3dfil:3814,3dfil,8594233088376,offer:3dfil:3814,missing-diameter,BAMBU LAB | PETG Basic | Zelená | 1.75mm | 1kg | Refill
 3dfil:3815,3dfil,8594233088369,offer:3dfil:3815,missing-diameter,"BAMBU LAB | PETG Basic | Zelená ""Pine"" | 1.75mm | 1kg | Refill"
 3dfil:3816,3dfil,8594233088352,offer:3dfil:3816,missing-diameter,BAMBU LAB | PETG Basic | Oranžová | 1.75mm | 1kg | Refill
 3dfil:3819,3dfil,8594233088383,offer:3dfil:3819,missing-diameter,ERYONE | TPU | 85A | Bílá | 1.75mm | 1kg
 3dfil:3820,3dfil,8594233088390,offer:3dfil:3820,missing-diameter,ERYONE | TPU | 85A | Transparentní | 1.75mm | 1kg
 3dfil:3821,3dfil,8594233088406,offer:3dfil:3821,missing-diameter,ERYONE | TPU | 85A | Šedá | 1.75mm | 1kg
-3dfil:3823,3dfil,8594233088420,offer:3dfil:3823,missing-diameter,PROF. LAB | PLA Wood | Wood | 1.75mm | 1kg
+3dfil:3823,3dfil,8594233088420,offer:3dfil:3823,missing-color|missing-diameter,PROF. LAB | PLA Wood | Wood | 1.75mm | 1kg
 3dfil:3824,3dfil,8594233088437,offer:3dfil:3824,missing-diameter,PROF. LAB | ABS | Bílá | 1.75mm | 1kg
 3dfil:3825,3dfil,8594233088444,offer:3dfil:3825,missing-diameter,PROF. LAB | ABS | Transparent | 1.75mm | 1kg
 3dfil:3826,3dfil,8594233088451,offer:3dfil:3826,missing-diameter,PROF. LAB | PETG | Modrá | 1.75mm | 1kg
+3dfil:3827,3dfil,8594233088468,offer:3dfil:3827,missing-diameter,PROF. LAB | Nylon | PA12 Black | 1.75mm | 1kg
 3dfil:3828,3dfil,8594233088475,offer:3dfil:3828,missing-diameter,BAMBU LAB | ABS | Stříbrná | 1.75mm | 1kg | Refill
 3dfil:3829,3dfil,8594233088482,offer:3dfil:3829,missing-diameter,BAMBU LAB | ABS | Stříbrná | 1.75mm | 1kg | Spool
 3dfil:3830,3dfil,5903707922239,ean:5903707922239,missing-diameter,PROF. LAB | ASA | Bílá | 1.75mm | 1kg
@@ -470,7 +476,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3908,3dfil,5905143083529,offer:3dfil:3908,missing-diameter,3DPOWER | PETG | Select Žlutá | 1.75mm | 1kg
 3dfil:3909,3dfil,5905143083543,offer:3dfil:3909,missing-diameter,3DPOWER | PETG | Select Zelená | 1.75mm | 1kg
 3dfil:3910,3dfil,5905143083550,offer:3dfil:3910,missing-diameter,3DPOWER | PETG | Select Zelená | 1.75mm | 1kg
-3dfil:3911,3dfil,5905143083536,offer:3dfil:3911,missing-diameter,3DPOWER | PETG | Select Žlutá | 1.75mm | 1kg
+3dfil:3911,3dfil,5905143083536,offer:3dfil:3911,missing-color|missing-diameter,3DPOWER | PETG | Select Žlutá | 1.75mm | 1kg
 3dfil:3930,3dfil,5905143083499,offer:3dfil:3930,missing-diameter,3DPOWER | PLA | Select Šedá | 1.75mm | 1kg
 3dfil:3931,3dfil,5905143083505,offer:3dfil:3931,missing-diameter,3DPOWER | PLA | Select Černá | 1.75mm | 1kg
 3dfil:3933,3dfil,5905143083598,offer:3dfil:3933,missing-diameter,3DPOWER | PLA | Select Stříbrná | 1.75mm | 1kg
@@ -479,6 +485,8 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3946,3dfil,5905143082782,offer:3dfil:3946,missing-diameter,3DPOWER | PETG | Hyper Speed Stříbrná | 1.75mm | 1kg
 3dfil:3947,3dfil,5934023179571,offer:3dfil:3947,missing-diameter,3DPOWER | PETG | Zlatá | 1.75mm | 1kg
 3dfil:3954,3dfil,8594233088543,offer:3dfil:3954,missing-diameter,"ELEGOO | PETG-GF | White | 1.75mm | 0,5kg"
+3dfil:3955,3dfil,8594233088550,offer:3dfil:3955,missing-diameter,"ELEGOO | PETG-GF | Black | 1.75mm | 0,5kg"
+3dfil:3956,3dfil,8594233088567,offer:3dfil:3956,missing-diameter,"ELEGOO | PETG-GF | Grey | 1.75mm | 0,5kg"
 3dfil:3964,3dfil,8594233088581,offer:3dfil:3964,missing-diameter,ELEGOO | Rapid TPU 95A | White | 1.75mm | 1kg
 3dfil:3965,3dfil,5904323179809,offer:3dfil:3965,missing-diameter,3DPOWER | PLA Silk | Bílá | 1.75mm | 1kg
 3dfil:3966,3dfil,5904323179816,offer:3dfil:3966,missing-diameter,3DPOWER | PLA Silk | Stříbrná | 1.75mm | 1kg
@@ -488,7 +496,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3987,3dfil,8594233088635,offer:3dfil:3987,missing-diameter,Polymaker | PETG | PolyLite Polymaker Teal | 1.75mm | 1kg
 3dfil:3988,3dfil,8594233088642,offer:3dfil:3988,missing-diameter,Polymaker | PETG | PolyLite Dark Purple | 1.75mm | 1kg
 3dfil:399,3dfil,8594233082282,offer:3dfil:399,missing-diameter,ERYONE | PLA Silk | Růžová | 1.75mm | 1kg
-3dfil:3999,3dfil,8594233088659,offer:3dfil:3999,missing-diameter,Polymaker | PLA Silk | PolyLite Rose Gold | 1.75mm | 1kg
+3dfil:3999,3dfil,8594233088659,offer:3dfil:3999,missing-color|missing-diameter,Polymaker | PLA Silk | PolyLite Rose Gold | 1.75mm | 1kg
 3dfil:4000,3dfil,8594233088666,offer:3dfil:4000,missing-diameter,Polymaker | PLA Silk | PolyLite Black | 1.75mm | 1kg
 3dfil:4002,3dfil,8594233088680,offer:3dfil:4002,missing-diameter,POLYMAKER | PLA | Panchroma Luminuous Yellow | 1.75mm | 1kg
 3dfil:401,3dfil,8594233082305,offer:3dfil:401,missing-diameter,ERYONE | PLA Silk | Modrá | 1.75mm | 1kg
@@ -501,6 +509,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4029,3dfil,5903707923960,offer:3dfil:4029,ean-conflict|ean-material-conflict|missing-diameter,PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg
 3dfil:403,3dfil,8594233082312,offer:3dfil:403,missing-diameter,ERYONE | PLA Silk | Ultra Red | 1.75mm | 1kg
 3dfil:4030,3dfil,5903707923939,offer:3dfil:4030,ean-conflict|ean-material-conflict|missing-diameter,PROF. LAB | PETG-CF | Red | 1.75mm | 1kg
+3dfil:4031,3dfil,5903707923670,ean:5903707923670,missing-diameter,PROF. LAB | PETG | Cyan | 1.75mm | 1kg
 3dfil:4033,3dfil,6937285508737,offer:3dfil:4033,missing-diameter,BAMBU LAB | PLA Silk+ | Bílá | 1.75mm | 1kg | Refill
 3dfil:4057,3dfil,8594233088789,offer:3dfil:4057,missing-diameter,BAMBU LAB | PETG Basic | Černá | 1.75mm | 1kg | Spool
 3dfil:4058,3dfil,8594233088765,offer:3dfil:4058,form-param-disagrees|missing-diameter,BAMBU LAB | PLA Silk+ | Titanová šedá | 1.75mm | 1kg | Refill
@@ -508,12 +517,13 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:406,3dfil,8594233082336,offer:3dfil:406,missing-diameter,ERYONE | PETG | Žlutá | 1.75mm | 1kg
 3dfil:4068,3dfil,8594233088819,offer:3dfil:4068,missing-diameter,ELEGOO | ASA CF | Black | 1.75mm | 1kg
 3dfil:4075,3dfil,8594233088826,offer:3dfil:4075,missing-diameter,BAMBU LAB | PETG HF | Žlutá | 1.75mm | 1kg | Refill
+3dfil:4080,3dfil,5903707922291,offer:3dfil:4080,missing-diameter,PROF. LAB | ASA GF | Černá | 1.75mm | 1kg
 3dfil:4083,3dfil,8594233088833,offer:3dfil:4083,form-param-disagrees|missing-diameter,BAMBU LAB | PETG HF | Zelená | 1.75mm | 1kg | Refill
 3dfil:410,3dfil,8594233082374,offer:3dfil:410,missing-diameter,ERYONE | PLA+ High Speed | Zelená | 1.75mm | 1kg
 3dfil:4107,3dfil,8594233088864,offer:3dfil:4107,missing-diameter,ERYONE | PLA Matte | Iced Latte | 1.75mm | 1kg
 3dfil:4108,3dfil,8594233088871,offer:3dfil:4108,missing-diameter,ERYONE | PLA Matte | Nut Brown | 1.75mm | 1kg
 3dfil:411,3dfil,8594233082381,offer:3dfil:411,missing-diameter,ERYONE | PLA+ High Speed | Žlutá | 1.75mm | 1kg
-3dfil:4114,3dfil,8594233088895,offer:3dfil:4114,missing-diameter,ERYONE | Pla Silk | Champagne Gold | 1.75mm | 1kg
+3dfil:4114,3dfil,8594233088895,offer:3dfil:4114,missing-color|missing-diameter,ERYONE | Pla Silk | Champagne Gold | 1.75mm | 1kg
 3dfil:4119,3dfil,8594233088901,offer:3dfil:4119,missing-diameter,ERYONE | PETG | MATTE Černá | 1.75mm | 1kg
 3dfil:412,3dfil,8594233082398,offer:3dfil:412,missing-diameter,ERYONE | PLA+ High Speed | Magenta | 1.75mm | 1kg
 3dfil:4120,3dfil,8594233088918,offer:3dfil:4120,missing-diameter,ERYONE | PETG | MATTE Béžová | 1.75mm | 1kg
@@ -523,12 +533,12 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4125,3dfil,5905143082768,offer:3dfil:4125,missing-diameter,"3DPOWER | PETG | Hyper Speed Modrá ""Arctic"" | 1.75mm | 1kg"
 3dfil:4126,3dfil,5905143082706,offer:3dfil:4126,missing-diameter,"3DPOWER | PETG | Hyper Speed Bílá ""Pure"" | 1.75mm | 1kg"
 3dfil:4127,3dfil,5905143082430,offer:3dfil:4127,missing-diameter,3DPOWER | PETG | Stříbrná | 1.75mm | 1kg
-3dfil:413,3dfil,8594233082404,offer:3dfil:413,missing-diameter,ERYONE | PLA+ High Speed | Azurová modrá | 1.75mm | 1kg
+3dfil:413,3dfil,8594233082404,offer:3dfil:413,missing-color|missing-diameter,ERYONE | PLA+ High Speed | Azurová modrá | 1.75mm | 1kg
 3dfil:414,3dfil,8594233082411,offer:3dfil:414,missing-diameter,ERYONE | PLA+ High Speed | Oranžová | 1.75mm | 1kg
-3dfil:4149,3dfil,8594233088949,offer:3dfil:4149,missing-diameter,ZIRO | PLA Wood | Walnut Wood | 1.75mm | 1kg
-3dfil:4150,3dfil,8594233088932,offer:3dfil:4150,missing-diameter,ZIRO | PLA Wood | Hard Maple Wood | 1.75mm | 1kg
-3dfil:4151,3dfil,8594233088956,offer:3dfil:4151,missing-diameter,ZIRO | PLA Wood | White Oak Wood | 1.75mm | 1kg
-3dfil:4152,3dfil,8594233088963,offer:3dfil:4152,missing-diameter,ZIRO | PLA Wood | Cherry Wood | 1.75mm | 1kg
+3dfil:4149,3dfil,8594233088949,offer:3dfil:4149,missing-color|missing-diameter,ZIRO | PLA Wood | Walnut Wood | 1.75mm | 1kg
+3dfil:4150,3dfil,8594233088932,offer:3dfil:4150,missing-color|missing-diameter,ZIRO | PLA Wood | Hard Maple Wood | 1.75mm | 1kg
+3dfil:4151,3dfil,8594233088956,offer:3dfil:4151,missing-color|missing-diameter,ZIRO | PLA Wood | White Oak Wood | 1.75mm | 1kg
+3dfil:4152,3dfil,8594233088963,offer:3dfil:4152,missing-color|missing-diameter,ZIRO | PLA Wood | Cherry Wood | 1.75mm | 1kg
 3dfil:4155,3dfil,8594233088994,offer:3dfil:4155,missing-diameter,ZIRO | TPU | Green 95A | 1.75mm | 0.8kg
 3dfil:4156,3dfil,8594233089007,offer:3dfil:4156,missing-diameter,ZIRO | TPU | Purple 95A | 1.75mm | 0.8kg
 3dfil:4158,3dfil,8594233089021,offer:3dfil:4158,missing-diameter,ZIRO | Pla Silk | Bílá | 1.75mm | 1kg
@@ -543,7 +553,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4170,3dfil,8594233089076,offer:3dfil:4170,form-param-disagrees|missing-diameter,BAMBU LAB | PETG Translucent | Clear | 1.75mm | 1kg | Spool
 3dfil:4171,3dfil,8594233089069,offer:3dfil:4171,form-param-disagrees|missing-diameter,BAMBU LAB | PETG Basic | Šedá | 1.75mm | 1kg | Spool
 3dfil:4173,3dfil,5903707918577,ean:5903707918577,missing-diameter,PROF. LAB | PETG | Růžová | 1.75mm | 1kg
-3dfil:4174,3dfil,5903707924226,ean:5903707924226,missing-diameter,PROF. LAB | PETG | Grass Green | 1.75mm | 1kg
 3dfil:418,3dfil,8594233082442,offer:3dfil:418,missing-diameter,ERYONE | PLA+ High Speed | Černá | 1.75mm | 1kg
 3dfil:419,3dfil,8594233087102,offer:3dfil:419,missing-diameter,3DPOWER | ASA | Bílá | 1.75mm | 1kg
 3dfil:421,3dfil,5904323179106,offer:3dfil:421,missing-diameter,3DPOWER | PETG | Bílá | 1.75mm | 1kg
@@ -557,13 +566,15 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4248,3dfil,8594233089120,offer:3dfil:4248,missing-diameter,ELEGOO | PETG-CF | Red | 1.75mm | 1kg
 3dfil:425,3dfil,5904323179557,offer:3dfil:425,missing-diameter,3DPOWER | PETG | Červená | 1.75mm | 1kg
 3dfil:426,3dfil,5904323179564,offer:3dfil:426,missing-diameter,3DPOWER | PETG | Mint mátová | 1.75mm | 1kg
-3dfil:4264,3dfil,8594233081421,offer:3dfil:4264,missing-diameter,ELEGOO | Rapid PETG | Silver | 1.75mm | 1kg
+3dfil:4263,3dfil,8594233089137,offer:3dfil:4263,missing-diameter,ELEGOO | PC-FR | Black | 1.75mm | 1kg
+3dfil:4264,3dfil,8594233081421,offer:3dfil:4264,missing-color|missing-diameter,ELEGOO | Rapid PETG | Silver | 1.75mm | 1kg
 3dfil:4268,3dfil,8594233089168,offer:3dfil:4268,missing-diameter,"ERYONE | Nylon PA12-CF | Black | 1.75mm | 0,8kg"
 3dfil:4269,3dfil,8594233089175,offer:3dfil:4269,missing-diameter,ERYONE | ABS-GF | Bílá | 1.75mm | 1kg
 3dfil:427,3dfil,5904323179540,offer:3dfil:427,missing-diameter,3DPOWER | PETG | Cherry | 1.75mm | 1kg
 3dfil:428,3dfil,5905143081389,offer:3dfil:428,missing-diameter,3DPOWER | PETG | Žlutá | 1.75mm | 1kg
+3dfil:4284,3dfil,8594233089182,offer:3dfil:4284,missing-diameter,"ERYONE | Nylon PA12-GF | Black | 1.75mm | 0,8kg"
 3dfil:4285,3dfil,8594233089205,offer:3dfil:4285,missing-diameter,ERYONE | TPU | Skin | 1.75mm | 1kg
-3dfil:4286,3dfil,8594233089199,offer:3dfil:4286,missing-diameter,ERYONE | TPU | Zelená transparent | 1.75mm | 1kg
+3dfil:4286,3dfil,8594233089199,offer:3dfil:4286,missing-color|missing-diameter,ERYONE | TPU | Zelená transparent | 1.75mm | 1kg
 3dfil:4288,3dfil,8594233089229,offer:3dfil:4288,missing-diameter,ERYONE | Nylon (PA6) | Clear | 1.75mm | 1kg
 3dfil:430,3dfil,5904323179649,offer:3dfil:430,missing-diameter,3DPOWER | PETG | Béžová | 1.75mm | 1kg
 3dfil:4305,3dfil,5906269967984,offer:3dfil:4305,missing-diameter,NEBULA | Nylon | PA12 CF15 Black (Černá) | 1.75mm | 0.5kg
@@ -575,10 +586,9 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:432,3dfil,5904323179021,offer:3dfil:432,missing-diameter,3DPOWER | PLA | Zelená | 1.75mm | 1kg
 3dfil:4320,3dfil,8594233089243,offer:3dfil:4320,missing-diameter,ELEGOO | TPU 72D | Black | 1.75mm | 1kg
 3dfil:4321,3dfil,8594233089250,offer:3dfil:4321,missing-diameter,ELEGOO | TPU 72D | White | 1.75mm | 1kg
-3dfil:4322,3dfil,8594233089267,offer:3dfil:4322,missing-diameter,ELEGOO | TPU 72D | White | 1.75mm | 1kg
+3dfil:4322,3dfil,8594233089267,offer:3dfil:4322,missing-color|missing-diameter,ELEGOO | TPU 72D | White | 1.75mm | 1kg
 3dfil:4323,3dfil,8594233089274,offer:3dfil:4323,missing-diameter,ELEGOO | TPU 72D | Blue | 1.75mm | 1kg
 3dfil:4324,3dfil,8594233089281,offer:3dfil:4324,missing-diameter,ELEGOO | TPU 72D | Green | 1.75mm | 1kg
-3dfil:4325,3dfil,8594233089298,offer:3dfil:4325,missing-diameter,ELEGOO | TPU 72D | Grey | 1.75mm | 1kg
 3dfil:433,3dfil,5904323179038,offer:3dfil:433,missing-diameter,3DPOWER | PLA | Třešňová | 1.75mm | 1kg
 3dfil:4338,3dfil,8594233089335,offer:3dfil:4338,missing-diameter,BAMBU LAB | PETG Matte | Bílá | 1.75mm | 1kg | Spool
 3dfil:4339,3dfil,8594233089359,offer:3dfil:4339,missing-diameter,BAMBU LAB | PETG Matte | Černá | 1.75mm | 1kg | Spool
@@ -607,12 +617,20 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4405,3dfil,8594233082329,offer:3dfil:4405,missing-diameter,BAMBU LAB | PLA | Tough+ White | 1.75mm | 1kg | Refill
 3dfil:4406,3dfil,5906269968875,offer:3dfil:4406,missing-diameter,NEBULA | PETG | Neon Yellow | 1.75mm | 1kg
 3dfil:441,3dfil,5904323179465,offer:3dfil:441,missing-diameter,3DPOWER | PLA | Světle modrá | 1.75mm | 1kg
+3dfil:4413,3dfil,6933582322250,offer:3dfil:4413,ean-brand-conflict|ean-conflict|ean-weight-conflict|missing-diameter,"SUNLU | PP | Natur | 1.75mm | 0,8kg"
+3dfil:4416,3dfil,6974662353696,offer:3dfil:4416,missing-diameter,ANYCUBIC | PC | Black | 1.75mm | 1kg
 3dfil:442,3dfil,5904323179472,offer:3dfil:442,missing-diameter,3DPOWER | PLA | Mátová | 1.75mm | 1kg
 3dfil:443,3dfil,5905143081358,offer:3dfil:443,missing-diameter,3DPOWER | PLA | Hnědá | 1.75mm | 1kg
+3dfil:4432,3dfil,6933582315290,offer:3dfil:4432,missing-diameter,SUNLU | PETG HS | MATTE Černá | 1.75mm | 1kg
+3dfil:4433,3dfil,6933582315306,offer:3dfil:4433,missing-diameter,SUNLU | PETG HS | MATTE Bílá | 1.75mm | 1kg
+3dfil:4434,3dfil,6933582315351,offer:3dfil:4434,missing-diameter,SUNLU | PETG HS | MATTE Oranžová | 1.75mm | 1kg
+3dfil:4435,3dfil,6933582315368,offer:3dfil:4435,missing-diameter,SUNLU | PETG HS | MATTE Žlutá | 1.75mm | 1kg
+3dfil:4437,3dfil,8594233087874,ean:8594233087874,missing-diameter,PROF. LAB | PETG | Copper | 1.75mm | 1kg
 3dfil:445,3dfil,5905143081372,offer:3dfil:445,missing-diameter,3DPOWER | PLA | Růžová | 1.75mm | 1kg
+3dfil:4453,3dfil,5906269961906,offer:3dfil:4453,missing-diameter,"NEBULA | PLA | Military Green | 1.75mm | 0,5kg"
 3dfil:446,3dfil,5905143081433,offer:3dfil:446,missing-diameter,3DPOWER | PLA | Světle šedá | 1.75mm | 1kg
-3dfil:447,3dfil,5905143081921,offer:3dfil:447,missing-diameter,3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg
-3dfil:449,3dfil,5905143081938,offer:3dfil:449,missing-diameter,3DPOWER | PLA | Zelená tráva | 1.75mm | 1kg
+3dfil:4464,3dfil,5906269965003,offer:3dfil:4464,missing-diameter,"NEBULA | ASA 301 | Black | 1.75mm | 0,5kg"
+3dfil:447,3dfil,5905143081921,offer:3dfil:447,missing-color|missing-diameter,3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg
 3dfil:562,3dfil,5904323179793,offer:3dfil:562,missing-diameter,3DPOWER | PLA Silk | Fialová | 1.75mm | 1kg
 3dfil:564,3dfil,5904323179823,offer:3dfil:564,missing-diameter,3DPOWER | PLA Silk | Červená | 1.75mm | 1kg
 3dfil:565,3dfil,5904323179830,offer:3dfil:565,missing-diameter,3DPOWER | PLA Silk | Modrá | 1.75mm | 1kg
@@ -631,7 +649,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:972,3dfil,8594233084477,offer:3dfil:972,missing-diameter,BAMBU LAB | PETG HF | Zelená | 1.75mm | 1kg | Spool
 3dfil:973,3dfil,8594233084484,offer:3dfil:973,missing-diameter,BAMBU LAB | PLA BASIC | Světle šedá | 1.75mm | 1kg | Refill
 3dfil:977,3dfil,8594233084521,offer:3dfil:977,missing-diameter,BAMBU LAB | PLA BASIC | Žlutá | 1.75mm | 1kg | Refill
-3dfil:978,3dfil,8594233084538,offer:3dfil:978,form-param-disagrees|missing-diameter,BAMBU LAB | PETG HF | Krémová | 1.75mm | 1kg | Spool
+3dfil:978,3dfil,8594233084538,offer:3dfil:978,form-param-disagrees|missing-color|missing-diameter,BAMBU LAB | PETG HF | Krémová | 1.75mm | 1kg | Spool
 3dfil:979,3dfil,8594233084545,offer:3dfil:979,missing-diameter,BAMBU LAB | PLA BASIC | Zlatá | 1.75mm | 1kg | Refill
 3dfil:981,3dfil,8594233084569,offer:3dfil:981,missing-diameter,BAMBU LAB | PLA BASIC | Oranžová | 1.75mm | 1kg | Refill
 3dfil:983,3dfil,8594233084583,offer:3dfil:983,missing-diameter,"BAMBU LAB | PLA BASIC | Zelená ""Bambu"" | 1.75mm | 1kg | Refill"
@@ -655,19 +673,60 @@ filamenty-brno:50_201_013300B,filamenty-brno,6976021763573,offer:filamenty-brno:
 filamenty-brno:50_201_014300B,filamenty-brno,6976021763597,offer:filamenty-brno:50_201_014300B,missing-color|missing-material,ELEGOO Neptune 4 Max FDM 3D tiskárna 50.201.014300B
 filamenty-brno:50_201_015300B,filamenty-brno,6976021763580,offer:filamenty-brno:50_201_015300B,missing-color|missing-material,ELEGOO Neptune 4 Plus FDM 3D tiskárna 50.201.015300B
 filamenty-brno:50_201_020300,filamenty-brno,6932704905128,offer:filamenty-brno:50_201_020300,missing-color|missing-material,ELEGOO Centauri Carbon FDM 3D printer 50.201.020300
+filamenty-brno:50_203_0110,filamenty-brno,6976021769568,offer:filamenty-brno:50_203_0110,missing-color,"Filament ELEGOO PLA 1,75 mm 1 kg, Galakticky černá"
+filamenty-brno:50_203_0254,filamenty-brno,6976021769643,offer:filamenty-brno:50_203_0254,missing-color,"Filament ELEGOO PLA MATTE 1,75 mm 1 kg, Tyrkysově zelená"
+filamenty-brno:50_203_0309,filamenty-brno,6932704912805,offer:filamenty-brno:50_203_0309,missing-color,"Filament ELEGOO PLA Silk 1,75 mm 1 kg, Červeno bronzová"
+filamenty-brno:50_203_0466,filamenty-brno,6932704908181,offer:filamenty-brno:50_203_0466,missing-color,"Filament ELEGOO PLA Silk 1,75 mm 1 kg, Černě fialová"
+filamenty-brno:50_203_0531,filamenty-brno,6932704920770,offer:filamenty-brno:50_203_0531,missing-color,"Filament ELEGOO PLA Special Marble 1,75 mm 1 kg, Cihlová"
+filamenty-brno:50_203_0532,filamenty-brno,6932704920787,offer:filamenty-brno:50_203_0532,missing-color,"Filament ELEGOO PLA Special Marble 1,75 mm 1 kg, Tmavě šedá"
+filamenty-brno:50_203_0539,filamenty-brno,6932704920992,offer:filamenty-brno:50_203_0539,missing-color,"Filament ELEGOO PLA Special Třpytivá 1,75 mm 1 kg, Fialově šedá"
 filamenty-brno:50_203_0648,filamenty-brno,6932704920299,shop:filamenty-brno:Elegoo**PETG*%C5%A1ed%C3%A1*500*1.75*spool,ean-conflict|ean-material-conflict,"Filament ELEGOO PETG-CF Carbon fiber 1,75 mm 0,5 kg, Šedá"
-filamenty-brno:FG-P210-E1,filamenty-brno,5903707923939,shop:filamenty-brno:Professional%20Lab**PETG*%C4%8Derven%C3%A1*1000*1.75*spool,ean-conflict|ean-material-conflict,"Filament Professional Lab PETG+CF 1,75 mm 1 kg, Červená FG-P210-E1"
+filamenty-brno:50_203_0654,filamenty-brno,6932704920800,offer:filamenty-brno:50_203_0654,missing-color,"Filament ELEGOO Special PLA 1,75 mm 1 kg, Rosewood"
+filamenty-brno:50_203_0767,filamenty-brno,6932704920756,offer:filamenty-brno:50_203_0767,missing-color,"Filament ELEGOO Basic PLA 1,75 mm 1 kg, Modro šedá"
+filamenty-brno:50_203_0849,filamenty-brno,6932704921302,offer:filamenty-brno:50_203_0849,missing-color,"Filament ELEGOO ABS 1,75 mm 1 kg, Oranžovo-žlutá"
+filamenty-brno:FG-P182-E1,filamenty-brno,5903707923168,offer:filamenty-brno:FG-P182-E1,missing-color,"Filament Professional Lab PLA 1,75 mm 1 kg, Cihlová FG-P182-E1"
+filamenty-brno:FG-P184-E1,filamenty-brno,5903707923182,offer:filamenty-brno:FG-P184-E1,missing-color,"Filament Professional Lab PLA Silk 1,75 mm 1 kg, Krémová FG-P184-E1"
+filamenty-brno:FG-P202-E1,filamenty-brno,5903707923731,offer:filamenty-brno:FG-P202-E1,missing-color,"Filament Professional Lab PETG 1,75 mm 1 kg, Barva oceánu FG-P202-E1"
+filamenty-brno:FG-P209-E1,filamenty-brno,5903707923922,offer:filamenty-brno:FG-P209-E1,ean-conflict|ean-material-conflict,"Filament Professional Lab PETG+CF 1,75 mm 1 kg, Modrá FG-P209-E1"
+filamenty-brno:FG-P210-E1,filamenty-brno,5903707923939,offer:filamenty-brno:FG-P210-E1,ean-conflict|ean-material-conflict,"Filament Professional Lab PETG+CF 1,75 mm 1 kg, Červená FG-P210-E1"
 filamenty-brno:FG-P211-E1,filamenty-brno,5903707923946,offer:filamenty-brno:FG-P211-E1,ean-conflict|ean-material-conflict,"Filament Professional Lab PETG+CF 1,75 mm 1 kg, Šedá FG-P211-E1"
 filamenty-brno:FG-P212-E1,filamenty-brno,5903707923953,shop:filamenty-brno:Professional%20Lab**PETG*zelen%C3%A1*1000*1.75*spool,ean-conflict|ean-material-conflict,"Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1"
 filamenty-brno:FG-P213-E1,filamenty-brno,5903707923960,offer:filamenty-brno:FG-P213-E1,ean-conflict|ean-material-conflict,"Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1"
+filamenty-brno:SUN-ABS-FR-PRIR,filamenty-brno,6933582316532,offer:filamenty-brno:SUN-ABS-FR-PRIR,missing-color,"Filament Sunlu ABS FR 1,75 mm 1 kg, Přírodní"
+filamenty-brno:SUN-EASY-PA-PRIRODNI,filamenty-brno,6933582317805,offer:filamenty-brno:SUN-EASY-PA-PRIRODNI,missing-color,"Filament Sunlu Easy PA 1,75 mm 1 kg, Přírodní"
+filamenty-brno:SUN-HS-PLA-MRAMOR-LES,filamenty-brno,6933582316648,offer:filamenty-brno:SUN-HS-PLA-MRAMOR-LES,missing-color,"Filament Sunlu HS PLA Mramor 1,75 mm 1 kg, Lesní zelený mramor"
+filamenty-brno:SUN-PLA-LUM-BIL-MOD,filamenty-brno,6933582315764,offer:filamenty-brno:SUN-PLA-LUM-BIL-MOD,missing-color,"Filament Sunlu PLA Luminiscenční 1,75 mm 1 kg, Bílo-modrá"
+filamenty-brno:SUN-PLA-MATTE-JIL,filamenty-brno,6933582317034,offer:filamenty-brno:SUN-PLA-MATTE-JIL,missing-color,"Filament Sunlu PLA Matte 1,75 mm 1 kg, Jílová"
+filamenty-brno:SUN-PLA-MATTE-SLO,filamenty-brno,6933582324476,offer:filamenty-brno:SUN-PLA-MATTE-SLO,missing-color,"Filament Sunlu PLA Matte 1,75 mm 1 kg, Slonová kost"
+filamenty-brno:SUN-PLA-META-KREM-BIL,filamenty-brno,6933582316365,offer:filamenty-brno:SUN-PLA-META-KREM-BIL,missing-color,"Filament Sunlu PLA Meta 1,75 mm 1 kg, Krémově bílá"
+filamenty-brno:SUN-PLA-PLUS-2-0-MAG,filamenty-brno,6933582314798,offer:filamenty-brno:SUN-PLA-PLUS-2-0-MAG,missing-color,"Filament Sunlu PLA+ 2.0 1,75 mm 1 kg, Magenta"
+filamenty-brno:SUN-PLA-PLUS-2-0-SLO,filamenty-brno,6933582314866,offer:filamenty-brno:SUN-PLA-PLUS-2-0-SLO,missing-color,"Filament Sunlu PLA+ 2.0 1,75 mm 1 kg, Slonová kost"
+filamenty-brno:SUN-PLA-PLUS-2-0-SV-KER,filamenty-brno,6933582314859,offer:filamenty-brno:SUN-PLA-PLUS-2-0-SV-KER,missing-color,"Filament Sunlu PLA+ 2.0 1,75 mm 1 kg, Světlá keramika"
+filamenty-brno:SUN-PLA-TRANS-HRO,filamenty-brno,6933582324117,offer:filamenty-brno:SUN-PLA-TRANS-HRO,missing-color,"Filament Sunlu PLA 1,75 mm 1 kg, Transparentní hroznová"
+filamenty-brno:SUN-PLA-TRANS-JAH,filamenty-brno,6933582324100,offer:filamenty-brno:SUN-PLA-TRANS-JAH,missing-color,"Filament Sunlu PLA 1,75 mm 1 kg, Transparentní jahodová"
+filamenty-brno:SUN-PLA-TRANS-MENT,filamenty-brno,6933582324124,offer:filamenty-brno:SUN-PLA-TRANS-MENT,missing-color,"Filament Sunlu PLA 1,75 mm 1 kg, Transparentní mentolová"
+filamenty-brno:SUN-PLA-TRANS-OCE,filamenty-brno,6933582324131,offer:filamenty-brno:SUN-PLA-TRANS-OCE,missing-color,"Filament Sunlu PLA 1,75 mm 1 kg, Transparentní oceánová"
+filamenty-brno:SUN-PLA-TRANS-POM,filamenty-brno,6933582324094,offer:filamenty-brno:SUN-PLA-TRANS-POM,missing-color,"Filament Sunlu PLA 1,75 mm 1 kg, Transparentní pomerančová"
+filamenty-brno:SUN-PLA-WOOD-DREVO,filamenty-brno,6933582315467,offer:filamenty-brno:SUN-PLA-WOOD-DREVO,missing-color,"Filament Sunlu PLA WOOD 1,75 mm 1 kg, Dřevo"
+filamenty-brno:SUN-PLA-WOOD-JAVOR,filamenty-brno,6933582315450,offer:filamenty-brno:SUN-PLA-WOOD-JAVOR,missing-color,"Filament Sunlu PLA WOOD 1,75 mm 1 kg, Javor"
+filamenty-brno:SUN-PLA-WOOD-TRESEN,filamenty-brno,6933582315443,offer:filamenty-brno:SUN-PLA-WOOD-TRESEN,missing-color,"Filament Sunlu PLA WOOD 1,75 mm 1 kg, Třešeň"
+filamenty-brno:SUN-PLA-WOOD-VLA,filamenty-brno,6933582316587,offer:filamenty-brno:SUN-PLA-WOOD-VLA,missing-color,"Filament Sunlu PLA WOOD 1,75 mm 1 kg, Vlašský ořech"
+filamenty-brno:SUN-PP-PRI,filamenty-brno,6933582322250,offer:filamenty-brno:SUN-PP-PRI,ean-brand-conflict|ean-conflict|ean-weight-conflict|missing-color,"Filament Sunlu PP 1,75 mm 1 kg, Přírodní"
+filamenty-brno:SUN-TPU-SILK-KREM,filamenty-brno,6933582316495,offer:filamenty-brno:SUN-TPU-SILK-KREM,missing-color,"Filament Sunlu TPU Silk 1,75 mm 1 kg, Krémová bílá"
+materialpro3d:ABS175FM75MGY,materialpro3d,8595632811176,offer:materialpro3d:ABS175FM75MGY,missing-color,"ABS Extrafill ""Metallic grey"" 1,75 mm 750 g Fillamentum"
 materialpro3d:AC0130,materialpro3d,6974662351548,offer:materialpro3d:AC0130,missing-diameter|missing-material,Anycubic UV Water Washable 2.0 černý 1 kg
 materialpro3d:AC0131,materialpro3d,6974662351555,offer:materialpro3d:AC0131,missing-diameter|missing-material,Anycubic UV Water Washable 2.0 bílý 1 kg
-materialpro3d:AC0132,materialpro3d,6974662351562,offer:materialpro3d:AC0132,missing-diameter|missing-material,Anycubic UV Water Washable 2.0 šedý 1 kg
 materialpro3d:AC0133,materialpro3d,6974662351579,offer:materialpro3d:AC0133,missing-diameter|missing-material,Anycubic UV Water Washable 2.0 čirý 1 kg
-materialpro3d:ASA175SP75KR,materialpro3d,5903175654939,offer:materialpro3d:ASA175SP75KR,missing-material,"ASA filament Kevlar 1,75 mm Spectrum 0,75 kg černá"
+materialpro3d:ASA175AP85BNKI,materialpro3d,0748367684876,offer:materialpro3d:ASA175AP85BNKI,missing-color,"ASA filament hnědá khaki 1,75 mm Aurapol 850 g"
+materialpro3d:ASA175FM75MGY,materialpro3d,8595632824046,offer:materialpro3d:ASA175FM75MGY,missing-color,"ASA Extrafill ""Metallic grey"" 1,75 mm 3D filament 750 g Fillamentum"
+materialpro3d:ASA175FM75VPK,materialpro3d,8595632824237,offer:materialpro3d:ASA175FM75VPK,missing-color,"ASA Extrafill ""Vivid Pink"" 1,75 mm 3D filament 750 g Fillamentum"
+materialpro3d:ASA175SP75KR,materialpro3d,5903175654939,offer:materialpro3d:ASA175SP75KR,missing-color|missing-material,"ASA filament Kevlar 1,75 mm Spectrum 0,75 kg černá"
+materialpro3d:ASA5PACK175SP125,materialpro3d,5903175655455,offer:materialpro3d:ASA5PACK175SP125,missing-color,"ASA 275 Spectrum 5Pack (5x 0,25 kg)"
 materialpro3d:BOUN175SF1NL,materialpro3d,8434429550471,offer:materialpro3d:BOUN175SF1NL,missing-material,"BOUN filament natural 1,75 mm Smartfil 1 Kg"
 materialpro3d:CLN175SF33NL,materialpro3d,8434000004461,offer:materialpro3d:CLN175SF33NL,missing-material,"CLEAN filament přírodní 1,75 mm Smartfil 330 g"
 materialpro3d:CLN175SF75NL,materialpro3d,843429868064,offer:materialpro3d:CLN175SF75NL,missing-material,"CLEAN filament přírodní 1,75 mm Smartfil 750 g"
+materialpro3d:CPEAL175FB05NL,materialpro3d,5902560996715,offer:materialpro3d:CPEAL175FB05NL,missing-color,"CPE Antibacterial filament natural 1,75 mm Fiberlogy 500 g"
+materialpro3d:CPECF175FM06BK,materialpro3d,8595632828105,offer:materialpro3d:CPECF175FM06BK,missing-color,"CPE CF112 Carbon 1,75 mm Fillamentum 600 g"
 materialpro3d:ELESAT4U16,materialpro3d,6932704905395,offer:materialpro3d:ELESAT4U16,missing-color|missing-diameter|missing-material,Elegoo Saturn 4 Ultra 16K
 materialpro3d:EP175SF1IWE,materialpro3d,8434429123330,offer:materialpro3d:EP175SF1IWE,missing-material,"E.P. filament bílý ivory 1,75 mm Smartfil 1 kg"
 materialpro3d:EP175SF56WE,materialpro3d,,offer:materialpro3d:EP175SF56WE,missing-material,"E.P. filament bílý 1,75 mm Smartfil 5600 g"
@@ -676,10 +735,16 @@ materialpro3d:FLEX98A175SP05LGN,materialpro3d,5903175652843,offer:materialpro3d:
 materialpro3d:FLEX98A175SP25DBK,materialpro3d,5903175652881,offer:materialpro3d:FLEX98A175SP25DBK,missing-material,"S-FLEX filament 98A deep black 1,75 mm Spectrum 0,25 kg"
 materialpro3d:GLACE175SF75NL,materialpro3d,8434000007790,offer:materialpro3d:GLACE175SF75NL,missing-material,"GLACE filament natural průhledný 1,75 mm Smartfil 750 g"
 materialpro3d:MEDI175SF75NL,materialpro3d,8434000004904,offer:materialpro3d:MEDI175SF75NL,missing-material,"MEDICAL filament přírodní 1,75 mm Smartfil 750 g"
+materialpro3d:NYL15CF175FB05,materialpro3d,5902560992946,offer:materialpro3d:NYL15CF175FB05,missing-color,"Nylon PA12 + CF15 černý 1,75 mm 500 g Fiberlogy"
+materialpro3d:NYL15CF175FB1,materialpro3d,5902560993073,offer:materialpro3d:NYL15CF175FB1,missing-color,"Nylon PA12 + CF15 filament černý 1,75 mm Fiberlogy 1 kg"
+materialpro3d:NYL15GF175FB05BK,materialpro3d,5902560993318,offer:materialpro3d:NYL15GF175FB05BK,missing-color,"Nylon PA12 + GF15 černý 1,75 mm 500 g Fiberlogy se skelnými vlákny"
+materialpro3d:NYL15GF175FB05NL,materialpro3d,5902560993301,offer:materialpro3d:NYL15GF175FB05NL,missing-color,"Nylon PA12 + GF15 natural 1,75 mm 500 g Fiberlogy se skelnými vlákny"
 materialpro3d:NYLLW175SP05BK,materialpro3d,5903175659521,offer:materialpro3d:NYLLW175SP05BK,missing-material,"Nylon PA6 Low Warp černá 1,75 mm 500 g Spectrum"
+materialpro3d:ORCA175FM06,materialpro3d,8595632828198,offer:materialpro3d:ORCA175FM06,missing-color,"OrCA® Nylon PA6 + CF10 1,75 mm Fishy Filaments Fillamentum 600 g"
+materialpro3d:PALWCF175SP05BK,materialpro3d,5903175654984,offer:materialpro3d:PALWCF175SP05BK,missing-color,"Nylon PA6 LW s carbonem CF15S černý 1,75 mm 0,5 kg Spectrum"
 materialpro3d:PCTG175SP1IGY,materialpro3d,5903175654045,offer:materialpro3d:PCTG175SP1IGY,missing-material,"PCTG filament Iron Grey 1,75 mm Spectrum 1 kg"
 materialpro3d:PCTG175SP1LGN,materialpro3d,5903175654021,offer:materialpro3d:PCTG175SP1LGN,missing-material,"PCTG filament světle zelený 1,75 mm Spectrum 1 kg"
-materialpro3d:PCTG175SP1SSL,materialpro3d,5903175654052,offer:materialpro3d:PCTG175SP1SSL,missing-material,"PCTG Premium filament Silver Steel 1,75 mm Spectrum 1 kg"
+materialpro3d:PCTG175SP1SSL,materialpro3d,5903175654052,offer:materialpro3d:PCTG175SP1SSL,missing-color|missing-material,"PCTG Premium filament Silver Steel 1,75 mm Spectrum 1 kg"
 materialpro3d:PCTG175SP1TBK,materialpro3d,5903175653987,offer:materialpro3d:PCTG175SP1TBK,missing-material,"PCTG filament černý 1,75 mm Spectrum 1 kg"
 materialpro3d:PCTGCF175SP05BK,materialpro3d,5903175655165,offer:materialpro3d:PCTGCF175SP05BK,missing-material,"PCTG CF10 filament černý 1,75 mm Spectrum 0,5 kg"
 materialpro3d:PEI175PM05NL,materialpro3d,8594185641827,offer:materialpro3d:PEI175PM05NL,missing-material,"Filament-PM PEIJet 1010 ULTEM natur filament 1,75 mm 0,5 kg Filament PM extra odolný"
@@ -696,9 +761,23 @@ materialpro3d:PELPLASF1NL,materialpro3d,8434000046386,offer:materialpro3d:PELPLA
 materialpro3d:PELPLASF5NL,materialpro3d,,offer:materialpro3d:PELPLASF5NL,missing-diameter,Pelety pro výrobu filamentu Smartfil PLA 5 kg natural
 materialpro3d:PELPPSF1NL,materialpro3d,,offer:materialpro3d:PELPPSF1NL,missing-diameter,Pelety pro výrobu filamentu Smartfil PP 1 kg natural
 materialpro3d:PELPVASF1NL,materialpro3d,,offer:materialpro3d:PELPVASF1NL,missing-diameter,Pelety pro výrobu filamentu Smartfil PVA 1 kg natural
+materialpro3d:PETG175DD1ART,materialpro3d,5902280034988,offer:materialpro3d:PETG175DD1ART,missing-color,"PET-G filament 1,75 mm jantarový transparentní Devil Design 1 kg"
+materialpro3d:PETG175DD1EGN,materialpro3d,5902280032106,offer:materialpro3d:PETG175DD1EGN,missing-color,"PET-G filament 1,75 mm smaragdově zelený emerald green Devil Design 1 kg"
+materialpro3d:PETG175DD1SR,materialpro3d,5902280031765,offer:materialpro3d:PETG175DD1SR,missing-color,"PET-G filament 1,75 mm stříbrný Devil Design 1 kg"
 materialpro3d:PETG175PM15PCK,materialpro3d,8594185643012,offer:materialpro3d:PETG175PM15PCK,missing-color,"Filament-PM PETG Tasty Pack (1,75 mm; 5x0,3 kg) Filament PM"
+materialpro3d:PETG175PM1CBE,materialpro3d,8594185643371,offer:materialpro3d:PETG175PM1CBE,missing-color,"Filament-PM PET-G struna kávová bronzová Filament PM 1,75 mm 1 kg"
+materialpro3d:PETG175PM1FGD,materialpro3d,8594185643357,offer:materialpro3d:PETG175PM1FGD,missing-color,"Filament-PM PET-G tisková struna žabí zlato Filament PM 1,75 mm 1 kg"
+materialpro3d:PETG175PM1TBE,materialpro3d,8594185641698,offer:materialpro3d:PETG175PM1TBE,missing-color,"Filament-PM PET-G tisková struna tyrkysová 1,75 mm 1 kg Filament PM"
+materialpro3d:PETG175PS75MGBN,materialpro3d,8594196452054,offer:materialpro3d:PETG175PS75MGBN,missing-color,"PETG filament BICOLOR METALLIC  1,75 mm GREEN BROWN Print With Smile 0,75 kg"
+materialpro3d:PETG175SP1AAGD,materialpro3d,5903175651815,offer:materialpro3d:PETG175SP1AAGD,missing-color,"PETG filament Aurora Gold 1,75 mm Spectrum 1 kg"
 materialpro3d:PETG175SP1DBK,materialpro3d,5903175657602,offer:materialpro3d:PETG175SP1DBK,missing-material,"PETG filament Deep Black 1,75 mm Spectrum 1 kg"
-materialpro3d:PETG5PACK175SP125PM,materialpro3d,5903175655448,offer:materialpro3d:PETG5PACK175SP125PM,missing-material,"PETG Spectrum 5Pack Premium (5x 0,25 kg)"
+materialpro3d:PETG175SP1TYW,materialpro3d,5903175657664,offer:materialpro3d:PETG175SP1TYW,missing-color,"PETG filament Transparent Yellow 1,75 mm Spectrum 1 kg"
+materialpro3d:PETG5PACK175SP125PM,materialpro3d,5903175655448,offer:materialpro3d:PETG5PACK175SP125PM,missing-color|missing-material,"PETG Spectrum 5Pack Premium (5x 0,25 kg)"
+materialpro3d:PETGC175SF1OGS,materialpro3d,8434429823049,offer:materialpro3d:PETGC175SF1OGS,missing-color,"PETG CLEAR filament Orchid Glass 1,75 mm Smartfil 1 kg"
+materialpro3d:PETGC175SF1SBK,materialpro3d,8434429518358,offer:materialpro3d:PETGC175SF1SBK,missing-color,"PETG CLEAR filament Smoked Black 1,75 mm Smartfil 1 kg"
+materialpro3d:PETGCF175IF05BK,materialpro3d,8434429650669,offer:materialpro3d:PETGCF175IF05BK,missing-color,"INNOVATEFIL PETG/CF filament černý (natural) 1,75 mm 750 g"
+materialpro3d:PETGHT175SP05IGY,materialpro3d,5903175650276,offer:materialpro3d:PETGHT175SP05IGY,missing-color,"PETG HT100 filament Iron Grey 1,75 mm Spectrum 0,5 kg"
+materialpro3d:PETGHT175SP05SSL,materialpro3d,5903175650290,offer:materialpro3d:PETGHT175SP05SSL,missing-color,"PETG HT100 filament Silver Steel 1,75 mm Spectrum 0,5 kg"
 materialpro3d:PIGSF100DGN,materialpro3d,,offer:materialpro3d:PIGSF100DGN,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 100 g tmavě zelená
 materialpro3d:PIGSF100GN,materialpro3d,,offer:materialpro3d:PIGSF100GN,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 100 g zelená
 materialpro3d:PIGSF25BE,materialpro3d,8434000043439,offer:materialpro3d:PIGSF25BE,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 25 g modrá
@@ -729,25 +808,124 @@ materialpro3d:PIGSF50RD,materialpro3d,,offer:materialpro3d:PIGSF50RD,missing-dia
 materialpro3d:PIGSF50VT,materialpro3d,8434000057191,offer:materialpro3d:PIGSF50VT,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 50 g fialová
 materialpro3d:PIGSF50WE,materialpro3d,8434000065080,offer:materialpro3d:PIGSF50WE,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 50 g bílá
 materialpro3d:PIGSF50YW,materialpro3d,,offer:materialpro3d:PIGSF50YW,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 50 g žlutá
+materialpro3d:PLA175AP1HSN,materialpro3d,712221718571,offer:materialpro3d:PLA175AP1HSN,missing-color,"PLA filament tělový skin human color 1,75 mm Aurapol 1 kg"
+materialpro3d:PLA175AP1HYT,materialpro3d,748367684753,offer:materialpro3d:PLA175AP1HYT,missing-color,"PLA filament medový semitransparentní 1,75 mm Aurapol 1 kg"
+materialpro3d:PLA175AP1RYT,materialpro3d,748367684760,offer:materialpro3d:PLA175AP1RYT,missing-color,"PLA filament malinový semitransparentní 1,75 mm Aurapol 1 kg"
+materialpro3d:PLA175AP1SBH,materialpro3d,739988435701,offer:materialpro3d:PLA175AP1SBH,missing-color,"PLA filament Sandy Blush 1,75 mm Aurapol 1 kg"
+materialpro3d:PLA175AP1SR,materialpro3d,748367684784,offer:materialpro3d:PLA175AP1SR,missing-color,"PLA filament stříbrný - tmavá šedá perleť 1,75 mm Aurapol 1 kg"
+materialpro3d:PLA175DD1CU,materialpro3d,5902280030997,offer:materialpro3d:PLA175DD1CU,missing-color,"PLA filament 1,75 mm měděný Devil Design 1 kg"
+materialpro3d:PLA175DD1EGN,materialpro3d,5902280032038,offer:materialpro3d:PLA175DD1EGN,missing-color,"PLA filament 1,75 mm smaragdově zelený Devil Design 1 kg"
+materialpro3d:PLA175DD1MED,materialpro3d,5902280032861,offer:materialpro3d:PLA175DD1MED,missing-color,"PLA filament 1,75 mm Marble dark mramor tmavý Devil Design 1 kg"
+materialpro3d:PLA175DD1MEL,materialpro3d,5902280032854,offer:materialpro3d:PLA175DD1MEL,missing-color,"PLA filament 1,75 mm Marble light mramor světlý Devil Design 1 kg"
+materialpro3d:PLA175FB85OX,materialpro3d,5902560994766,offer:materialpro3d:PLA175FB85OX,missing-color,"EASY PLA filament ONYX 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLA175FB85ROE,materialpro3d,5902560997170,offer:materialpro3d:PLA175FB85ROE,missing-color,"EASY PLA filament Red orange 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLA175FM1MA,materialpro3d,8595632800484,offer:materialpro3d:PLA175FM1MA,missing-color,"PLA filament Extrafill Mukha 1,75 mm 1 kg Fillamentum"
+materialpro3d:PLA175FM1MGY,materialpro3d,8595632800460,offer:materialpro3d:PLA175FM1MGY,missing-color,"PLA filament Extrafill Metallic Grey 1,75 mm 1 kg Fillamentum"
+materialpro3d:PLA175FM1TBE,materialpro3d,8595632800583,offer:materialpro3d:PLA175FM1TBE,missing-color,"PLA filament Extrafill tyrkysový modrý 1,75 mm 1 kg Fillamentum"
+materialpro3d:PLA175LB1CRW,materialpro3d,0796554140087,offer:materialpro3d:PLA175LB1CRW,missing-color,"PolyLight 1.0 LW PLA natural filament 1,75 mm 3DLabPrint 1 kg"
+materialpro3d:PLA175LB1DK,materialpro3d,796554140247,offer:materialpro3d:PLA175LB1DK,missing-color,"PolyLight 1.0 LW PLA dark filament 1,75 mm 3DLabPrint 1 kg"
+materialpro3d:PLA175PM05MED,materialpro3d,8594185641551,offer:materialpro3d:PLA175PM05MED,missing-color,"Filament-PM PLA tisková struna mramor tmavý 1,75 mm 0,5 kg Filament PM marble"
+materialpro3d:PLA175PM05MEL,materialpro3d,8594185641544,offer:materialpro3d:PLA175PM05MEL,missing-color,"Filament-PM PLA tisková struna mramor světlý 1,75 mm 0,5 kg Filament PM marble"
 materialpro3d:PLA175PM15PCK,materialpro3d,8594185643036,offer:materialpro3d:PLA175PM15PCK,missing-color,"Filament-PM PLA Tasty Pack (1,75 mm; 5x0,3 kg) Filament PM"
-materialpro3d:PLA5PACK175SP125ES,materialpro3d,5903175655486,offer:materialpro3d:PLA5PACK175SP125ES,missing-material,"PLA Spectrum 5Pack Essentials(5x 0,25 kg)"
+materialpro3d:PLA175PM1CU,materialpro3d,8594185640172,offer:materialpro3d:PLA175PM1CU,missing-color,"Filament-PM PLA tisková struna měděná 1,75 mm 1 kg Filament PM"
+materialpro3d:PLA175PM1GNYW,materialpro3d,8594185640127,offer:materialpro3d:PLA175PM1GNYW,missing-color,"Filament-PM PLA tisková struna zelenožlutá 1,75 mm 1 kg Filament PM"
+materialpro3d:PLA175SF1AE,materialpro3d,8434000003723,offer:materialpro3d:PLA175SF1AE,missing-color,"PLA filament modrofialový Aubergine 1,75 mm Smartfil 1 kg"
+materialpro3d:PLA175SF1IAE,materialpro3d,8434429144533,offer:materialpro3d:PLA175SF1IAE,missing-color,"PLA filament Iris Alexandrite 1,75 mm Smartfil 1 kg"
+materialpro3d:PLA175SF1ITE,materialpro3d,8434429141686,offer:materialpro3d:PLA175SF1ITE,missing-color,"PLA filament Iris Tanzanite 1,75 mm Smartfil 1 kg"
+materialpro3d:PLA175SF1ITZ,materialpro3d,8434429571759,offer:materialpro3d:PLA175SF1ITZ,missing-color,"PLA filament Iris Topaz 1,75 mm Smartfil 1 kg"
+materialpro3d:PLA175SF1MWE,materialpro3d,8434429155041,offer:materialpro3d:PLA175SF1MWE,missing-color,"PLA MARBLE filament bílý 1,75 mm Smartfil 1 kg"
+materialpro3d:PLA175SP05AAGD,materialpro3d,5903175651402,offer:materialpro3d:PLA175SP05AAGD,missing-color,"PLA filament Aurora Gold 1,75 mm Spectrum 0,5 kg"
+materialpro3d:PLA175SP05GID,materialpro3d,5903175651334,offer:materialpro3d:PLA175SP05GID,missing-color,"PLA filament Glow in the Dark Yellowgreen 1,75 mm Spectrum 0,5 kg"
+materialpro3d:PLA175SP05SEAD,materialpro3d,5903175651310,offer:materialpro3d:PLA175SP05SEAD,missing-color,"PLA filament Stone Age Dark 1,75 mm Spectrum 0,5 kg"
+materialpro3d:PLA175SP05SEAL,materialpro3d,5903175651327,offer:materialpro3d:PLA175SP05SEAL,missing-color,"PLA filament Stone Age Light 1,75 mm Spectrum 0,5 kg"
+materialpro3d:PLA175SP05TRD,materialpro3d,5903175651013,offer:materialpro3d:PLA175SP05TRD,missing-color,"PLA termosenzitivní filament Thermo Red 1,75 mm Spectrum 0,5 kg"
+materialpro3d:PLA175SP1AAGD,materialpro3d,5903175651396,offer:materialpro3d:PLA175SP1AAGD,missing-color,"PLA filament Aurora Gold 1,75 mm Spectrum 1 kg"
+materialpro3d:PLA175SP1GID,materialpro3d,5903175658005,offer:materialpro3d:PLA175SP1GID,missing-color,"PLA filament Glow in the Dark Yellowgreen 1,75 mm Spectrum 1 kg"
+materialpro3d:PLA175SP1PTE,materialpro3d,5903175657886,offer:materialpro3d:PLA175SP1PTE,missing-color,"PLA filament Pastel Turquoise 1,75 mm Spectrum 1 kg"
+materialpro3d:PLA175SP1RCU,materialpro3d,5903175657121,offer:materialpro3d:PLA175SP1RCU,missing-color,"PLA filament Rust Copper 1,75 mm Spectrum 1 kg"
+materialpro3d:PLA175SP1TRD,materialpro3d,5903175651358,offer:materialpro3d:PLA175SP1TRD,missing-color,"PLA termosenzitivní filament Thermo Red 1,75 mm Spectrum 1 kg"
+materialpro3d:PLA5PACK175SP125ES,materialpro3d,5903175655486,offer:materialpro3d:PLA5PACK175SP125ES,missing-color|missing-material,"PLA Spectrum 5Pack Essentials(5x 0,25 kg)"
+materialpro3d:PLA5PACK175SP125PM,materialpro3d,5903175655431,offer:materialpro3d:PLA5PACK175SP125PM,missing-color,"PLA Spectrum 5Pack Premium (5x 0,25 kg)"
+materialpro3d:PLA5PACK175SP125SL,materialpro3d,5903175655509,offer:materialpro3d:PLA5PACK175SP125SL,missing-color,"PLA Spectrum 5Pack Specials (5x 0,25 kg)"
+materialpro3d:PLAAB175SF75NL,materialpro3d,8434009430520,offer:materialpro3d:PLAAB175SF75NL,missing-color,"PLA Antibacterial se stříbrem filament natural 1,75 mm Smartfil 750 g"
+materialpro3d:PLAFS175FB85ANE,materialpro3d,5902560995978,offer:materialpro3d:PLAFS175FB85ANE,missing-color,"PLA FiberSilk filament antracitově šedý metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MBE,materialpro3d,5902560995800,offer:materialpro3d:PLAFS175FB85MBE,missing-color,"PLA FiberSilk filament modrý metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MBS,materialpro3d,5902560995930,offer:materialpro3d:PLAFS175FB85MBS,missing-color,"PLA FiberSilk filament mosazný brass metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MBZ,materialpro3d,5902560995916,offer:materialpro3d:PLAFS175FB85MBZ,missing-color,"PLA FiberSilk filament bronzový metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MCU,materialpro3d,5902560995947,offer:materialpro3d:PLAFS175FB85MCU,missing-color,"PLA FiberSilk filament měděný Copper metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MGD,materialpro3d,5902560995954,offer:materialpro3d:PLAFS175FB85MGD,missing-color,"PLA FiberSilk filament zlatý metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MIX,materialpro3d,5902560995923,offer:materialpro3d:PLAFS175FB85MIX,missing-color,"PLA FiberSilk filament inox metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MNBE,materialpro3d,5902560995855,offer:materialpro3d:PLAFS175FB85MNBE,missing-color,"PLA FiberSilk filament tmavě modrý metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MOE,materialpro3d,5902560995831,offer:materialpro3d:PLAFS175FB85MOE,missing-color,"PLA FiberSilk filament oranžový metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MPL,materialpro3d,5902560995961,offer:materialpro3d:PLAFS175FB85MPL,missing-color,"PLA FiberSilk filament bílý Pearl metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MRD,materialpro3d,5902560995817,offer:materialpro3d:PLAFS175FB85MRD,missing-color,"PLA FiberSilk filament červený metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAFS175FB85MSR,materialpro3d,5902560995909,offer:materialpro3d:PLAFS175FB85MSR,missing-color,"PLA FiberSilk filament stříbrný metallic 1,75 mm Fiberlogy 850 g"
+materialpro3d:PLAM175SF1LLE,materialpro3d,8434429664833,offer:materialpro3d:PLAM175SF1LLE,missing-color,"PLA MATTE filament Lemon Lime 1,75 mm Smartfil 1 kg"
 materialpro3d:PLAP175PM15PCK,materialpro3d,8594185643029,offer:materialpro3d:PLAP175PM15PCK,missing-color,"Filament-PM PLA+ Tasty Pack (1,75 mm; 5x0,3 kg) Filament PM"
+materialpro3d:PLAP175PM1DBGE,materialpro3d,8594185642565,offer:materialpro3d:PLAP175PM1DBGE,missing-color,"Filament-PM PLA+ filament ARMY Desert Beige 1,75 mm 1 kg Filament PM"
+materialpro3d:PLAP175PM1DBN,materialpro3d,8594185642558,offer:materialpro3d:PLAP175PM1DBN,missing-color,"Filament-PM PLA+ filament ARMY Dusty Brown  1,75 mm 1 kg Filament PM"
+materialpro3d:PLAP175PM1LPE,materialpro3d,8594185643135,offer:materialpro3d:PLAP175PM1LPE,missing-color,"Filament-PM PLA+ filament Lithophane 1,75 mm 1 kg Filament PM"
+materialpro3d:PLAP175PM1WGN,materialpro3d,8594185642534,offer:materialpro3d:PLAP175PM1WGN,missing-color,"Filament-PM PLA+ filament ARMY Woodland Green 1,75 mm 1 kg Filament PM"
+materialpro3d:PLAR175SF1GY,materialpro3d,8434429033196,offer:materialpro3d:PLAR175SF1GY,missing-color,"PLA filament z recyklátu stříbrný (šedý) 1,75 mm Smartfil 1 kg"
+materialpro3d:PLAS175PS1PCHRD,materialpro3d,8594196450562,offer:materialpro3d:PLAS175PS1PCHRD,missing-color,"PLA SATIN filament Peach Red  1,75 mm Print With Smile 1 kg"
+materialpro3d:PLAS175PS1PSPK,materialpro3d,8594196450579,offer:materialpro3d:PLAS175PS1PSPK,missing-color,"PLA SATIN filament Princess Pink 1,75 mm Print With Smile 1 kg"
+materialpro3d:PLAS175PS1YW,materialpro3d,8594196450555,offer:materialpro3d:PLAS175PS1YW,missing-color,"PLA SATIN filament Yellow 1,75 mm Print With Smile 1 kg"
+materialpro3d:PLAS175SP1ASR,materialpro3d,5903175652225,offer:materialpro3d:PLAS175SP1ASR,missing-color,"PLA Silk filament stříbrný Aluminium Silver 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1CBZ,materialpro3d,5903175652164,offer:materialpro3d:PLAS175SP1CBZ,missing-color,"PLA Silk filament bronzový Cinnamon Bronze 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1GGD,materialpro3d,5903175652157,offer:materialpro3d:PLAS175SP1GGD,missing-color,"PLA Silk filament zlatý Glorious Gold 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1IBE,materialpro3d,5903175652218,offer:materialpro3d:PLAS175SP1IBE,missing-color,"PLA Silk filament modrý Indigo Blue 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1PWE,materialpro3d,5903175652249,offer:materialpro3d:PLAS175SP1PWE,missing-color,"PLA Silk filament perlový Pearl White 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1RGD,materialpro3d,5903175652188,offer:materialpro3d:PLAS175SP1RGD,missing-color,"PLA Silk filament růžové zlato Rose Gold 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1RWAT,materialpro3d,5905991400851,offer:materialpro3d:PLAS175SP1RWAT,missing-color,"PLA SILK RAINBOW filament Ancient 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1RWEBD,materialpro3d,5905991400868,offer:materialpro3d:PLAS175SP1RWEBD,missing-color,"PLA SILK RAINBOW filament Earth Blend 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1SBE,materialpro3d,5903175652096,offer:materialpro3d:PLAS175SP1SBE,missing-color,"PLA Silk filament modrý Sapphire Blue 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1SCU,materialpro3d,5903175652171,offer:materialpro3d:PLAS175SP1SCU,missing-color,"PLA Silk filament měděný Spicy Copper 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1SSR,materialpro3d,5903175652201,offer:materialpro3d:PLAS175SP1SSR,missing-color,"PLA Silk filament stříbrný Sterling Silver 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1TGN,materialpro3d,5903175652089,offer:materialpro3d:PLAS175SP1TGN,missing-color,"PLA Silk filament zelený Tropical Green 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1TPK,materialpro3d,5903175652232,offer:materialpro3d:PLAS175SP1TPK,missing-color,"PLA Silk filament růžová Taffy Pink 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAS175SP1UYW,materialpro3d,5903175652072,offer:materialpro3d:PLAS175SP1UYW,missing-color,"PLA Silk filament žlutý Unmellow Yellow 1,75 mm Spectrum 1 kg"
+materialpro3d:PLAT175PO1MSG,materialpro3d,6938936709428,offer:materialpro3d:PLAT175PO1MSG,missing-color,"PLA PolyTerra filament Marble Slate Grey 1,75 mm Polymaker 1000 g"
 materialpro3d:PLN175FK1BK,materialpro3d,,offer:materialpro3d:PLN175FK1BK,missing-material,"PLN černý 1,75 mm 1 kg Filkemp"
 materialpro3d:PLN175FK1SGY,materialpro3d,,offer:materialpro3d:PLN175FK1SGY,missing-material,"PLN šedý 1,75 mm 1 kg Filkemp"
+materialpro3d:RNYL175FB1AE,materialpro3d,5902560991925,offer:materialpro3d:RNYL175FB1AE,missing-color,"rNylon filament antracitový 1,75 mm Fiberlogy 1 kg"
+materialpro3d:RPETG175PM1NL,materialpro3d,8594185642220,offer:materialpro3d:RPETG175PM1NL,missing-color,"Filament-PM RePETG filament z recyklátu 1,75 mm 1 kg Filament PM"
+materialpro3d:RPLA175SF75CE,materialpro3d,,offer:materialpro3d:RPLA175SF75CE,missing-color,"PLA filament COFFEE 1,75 mm Smartfil ECO 0,75 kg"
+materialpro3d:RPLAR175SF1GY,materialpro3d,8434429005490,offer:materialpro3d:RPLAR175SF1GY,missing-color,"PLA REFILL filament z recyklátu stříbrný (šedý) 1,75 mm Smartfil 1 kg"
+materialpro3d:SILK175DD1BE,materialpro3d,5902280031864,offer:materialpro3d:SILK175DD1BE,missing-color,"SILK filament modrý Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1BPK,materialpro3d,5902280031529,offer:materialpro3d:SILK175DD1BPK,missing-color,"SILK filament jasně růžový Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1BZ,materialpro3d,5902280031550,offer:materialpro3d:SILK175DD1BZ,missing-color,"SILK filament bronzový Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1CGN,materialpro3d,5902280033639,offer:materialpro3d:SILK175DD1CGN,missing-color,"SILK filament Cold Green Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1CR,materialpro3d,5902280033387,offer:materialpro3d:SILK175DD1CR,missing-color,"SILK filament měděný Copper Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1DRD,materialpro3d,5902280033721,offer:materialpro3d:SILK175DD1DRD,missing-color,"SILK filament tmavě červený Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1GD,materialpro3d,5902280031543,offer:materialpro3d:SILK175DD1GD,missing-color,"SILK filament zlatý Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1LTGD,materialpro3d,5902280032175,offer:materialpro3d:SILK175DD1LTGD,missing-color,"SILK filament světle zlatý Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1OE,materialpro3d,5902280033615,offer:materialpro3d:SILK175DD1OE,missing-color,"SILK filament oranžový Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1PKP,materialpro3d,5902280033431,offer:materialpro3d:SILK175DD1PKP,missing-color,"SILK filament Pink Pearl Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1PM,materialpro3d,5902280033622,offer:materialpro3d:SILK175DD1PM,missing-color,"SILK filament Platinum Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1RY,materialpro3d,5902280033738,offer:materialpro3d:SILK175DD1RY,missing-color,"SILK filament Rusty Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1SR,materialpro3d,5902280033073,offer:materialpro3d:SILK175DD1SR,missing-color,"SILK filament stříbrný Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD1WE,materialpro3d,5902280031772,offer:materialpro3d:SILK175DD1WE,missing-color,"SILK filament bílý Devil Design 1 kg 1,75 mm"
+materialpro3d:SILK175DD2SP,materialpro3d,5902280033141,offer:materialpro3d:SILK175DD2SP,missing-color,"SILK filamenty startpack 1,75 mm 6x330 g Devil Design 6 barev v jednom balení"
+materialpro3d:SILK175PM1CCHM,materialpro3d,8594185643500,offer:materialpro3d:SILK175PM1CCHM,missing-color,"Filament-PM SILK tisková struna Copper Charm 1,75 mm 1 kg Filament PM"
 materialpro3d:TESA12,materialpro3d,,offer:materialpro3d:TESA12,missing-color|missing-diameter|missing-material,Lepicí tyčinka Easy Stick TESA 12 g
 materialpro3d:TESA25,materialpro3d,4042448073532,offer:materialpro3d:TESA25,missing-color|missing-diameter|missing-material,Lepicí tyčinka Easy Stick TESA 25 g
 materialpro3d:TIF0521B1,materialpro3d,8716309103725,offer:materialpro3d:TIF0521B1,missing-color,"PLA filament mramorový 1,75 mm GEMBIRD 1 kg"
 materialpro3d:TIF0521P0,materialpro3d,8716309094924,offer:materialpro3d:TIF0521P0,missing-color,"PLA Carbon filament 1,75 mm GEMBIRD 0,8 kg"
+materialpro3d:TIF058113,materialpro3d,8716309123976,offer:materialpro3d:TIF058113,missing-color,"PLA Silk Rainbow filament modro-zelený 1,75 mm GEMBIRD 1 kg"
+materialpro3d:TIF058115,materialpro3d,8716309123983,offer:materialpro3d:TIF058115,missing-color,"PLA Silk Rainbow filament červeno-fialový 1,75 mm GEMBIRD 1 kg"
+materialpro3d:TIF058116,materialpro3d,8716309124034,offer:materialpro3d:TIF058116,missing-color,"PLA filament s efektem přírodního dřeva 1,75 mm GEMBIRD 1 kg"
 materialpro3d:TIFSC1207,materialpro3d,5903175658241,offer:materialpro3d:TIFSC1207,missing-color,"Filament Spectrum PLA Pro 1,75 mm CORAL 1 kg"
 materialpro3d:TIFSC1217,materialpro3d,5903175651075,offer:materialpro3d:TIFSC1217,missing-color,"Filament Spectrum PLA Pro 1,75 mm MILITARY KHAKI 1 kg"
-materialpro3d:TIFSC1220,materialpro3d,5903175651051,offer:materialpro3d:TIFSC1220,missing-color,"Filament Spectrum PLA Pro 1,75 mm PASTEL TURQUOISE 1 kg"
+materialpro3d:TIFSC1307,materialpro3d,5903175653413,offer:materialpro3d:TIFSC1307,missing-color,"Filament Spectrum r-PLA 1,75 mm YELLOW ORANGE 1 kg"
 materialpro3d:TIFSC1601,materialpro3d,5903175657985,offer:materialpro3d:TIFSC1601,missing-color,"Filament Spectrum PLA 1,75 mm STONE AGE DARK 1 kg"
 materialpro3d:TIFSC1602,materialpro3d,5903175657992,offer:materialpro3d:TIFSC1602,missing-color,"Filament Spectrum PLA 1,75 mm STONE AGE LIGHT 1 kg"
 materialpro3d:TIFSC1A01,materialpro3d,5903175652393,offer:materialpro3d:TIFSC1A01,missing-color,"Filament Spectrum Carbon PLA 1,75 mm 1 kg"
 materialpro3d:TIFSC1D04,materialpro3d,5903175654809,offer:materialpro3d:TIFSC1D04,missing-material,"Filament Spectrum GreenyHT 1,75 mm Signal White 1 kg"
 materialpro3d:TIFSC1D05,materialpro3d,5903175654793,offer:materialpro3d:TIFSC1D05,missing-material,"Filament Spectrum GreenyHT 1,75 mm Traffic Black 1 kg"
+materialpro3d:TIFSC1F23,materialpro3d,5903175653918,offer:materialpro3d:TIFSC1F23,missing-color,"Filament Spectrum Premium PET-G 1,75 mm TURQUOISE BLUE 1 kg"
 materialpro3d:TIFSC1F30,materialpro3d,5903175654700,offer:materialpro3d:TIFSC1F30,missing-color,"Filament Spectrum Premium PET-G 1,75 mm WIZARD CHARCOAL 1 kg"
 materialpro3d:TIFSC1F31,materialpro3d,5903175654694,offer:materialpro3d:TIFSC1F31,missing-color,"Filament Spectrum Premium PET-G 1,75 mm WIZARD INDIGO 1 kg"
+materialpro3d:TIFSC1G04,materialpro3d,5903175653826,offer:materialpro3d:TIFSC1G04,missing-color,"Filament Spectrum rPETG 1,75 mm YELLOW ORANGE 1 kg"
 materialpro3d:TIFSC1H08,materialpro3d,5903175653307,offer:materialpro3d:TIFSC1H08,missing-color,"Filament Spectrum PET-G MATT 1,75 mm DESERT STORM 1 kg"
 materialpro3d:TIFSC1H09,materialpro3d,5903175653314,offer:materialpro3d:TIFSC1H09,missing-color,"Filament Spectrum PET-G MATT 1,75 mm SAND KHAKI 1 kg"
 materialpro3d:TIFSC1L01,materialpro3d,5903175652416,offer:materialpro3d:TIFSC1L01,missing-color,"Filament Spectrum Carbon PET-G 1,75 mm 1 kg"
@@ -812,9 +990,11 @@ materialpro3d:TIFSCM122,materialpro3d,5903175655202,offer:materialpro3d:TIFSCM12
 materialpro3d:TIFSCM123,materialpro3d,5903175654908,offer:materialpro3d:TIFSCM123,missing-color,"Filament Spectrum Pastello PLA 1,75 mm PALE SALMON 1 kg"
 materialpro3d:TIFSCM128,materialpro3d,5903175659620,offer:materialpro3d:TIFSCM128,missing-material,"Filament Spectrum GreenyPro 1,75 mm TRAFFIC BLACK 1 kg"
 materialpro3d:TIFSCM141,materialpro3d,5903175659484,offer:materialpro3d:TIFSCM141,missing-color,"Filament Spectrum PLA Crystal 1,75 mm FROZEN BERRY 1 kg"
+materialpro3d:TIFSCM175,materialpro3d,5903175659125,offer:materialpro3d:TIFSCM175,missing-color,"Filament Spectrum ASA 275 1,75 mm BROWN RED 1 kg"
 materialpro3d:TIFSCM208,materialpro3d,5903175655462,offer:materialpro3d:TIFSCM208,missing-color,"Filament Spectrum 5PACK PLA SILK 1,75 mm (5x 0,25 kg)"
 materialpro3d:TIFSCM213,materialpro3d,5903175659514,offer:materialpro3d:TIFSCM213,missing-color,"Filament Spectrum 5PACK PLA Crystal 1,75 mm (5x 0,25 kg)"
 materialpro3d:TIFSCM217,materialpro3d,5903175659545,offer:materialpro3d:TIFSCM217,missing-color,"Filament Spectrum 5PACK Pastello PLA 1,75 mm (5x 0,25 kg)"
+materialpro3d:TIFSCM226,materialpro3d,5905991400820,offer:materialpro3d:TIFSCM226,missing-color,"Filament Spectrum PLA SILK RAINBOW 1,75 mm FIRE RED 1 kg"
 materialpro3d:TIFSCM253,materialpro3d,5905991401377,offer:materialpro3d:TIFSCM253,missing-color,"Filament Spectrum PLA High Speed 1,75 mm TELEGREY 1 kg"
 materialpro3d:TIFSCM270,materialpro3d,5907138401516,offer:materialpro3d:TIFSCM270,missing-color,"Filament Spectrum PLA Premium 1,75 mm TOOLING TURQUOISE 1 kg"
 materialpro3d:TIFSCM274,materialpro3d,5907138401134,offer:materialpro3d:TIFSCM274,missing-color,"Filament Spectrum PLA Premium 1,75 mm TOOLING LEMON 1 kg"
@@ -822,5 +1002,23 @@ materialpro3d:TIFSCR303,materialpro3d,5905991403593,offer:materialpro3d:TIFSCR30
 materialpro3d:TIFSCR305,materialpro3d,5905991403616,offer:materialpro3d:TIFSCR305,missing-color,"Filament Spectrum ReFill Pastello PLA 1,75 mm COSMETIC MAUVE 1 kg"
 materialpro3d:TIFSCR308,materialpro3d,5905991403647,offer:materialpro3d:TIFSCR308,missing-color,"Filament Spectrum ReFill Pastello PLA 1,75 mm LEMON CREAM 1 kg"
 materialpro3d:TIFSCR309,materialpro3d,5905991403654,offer:materialpro3d:TIFSCR309,missing-color,"Filament Spectrum ReFill Pastello PLA 1,75 mm PALE SALMON 1 kg"
+materialpro3d:TIFSCR602,materialpro3d,5905991403920,offer:materialpro3d:TIFSCR602,missing-color,"Filament Spectrum ReFill ASA 275 1,75 mm BROWN RED 1 kg"
 materialpro3d:TIFSCR614,materialpro3d,5905991404040,offer:materialpro3d:TIFSCR614,missing-color,"Filament Spectrum ReFill ASA-X CF10 1,75 mm BK 1 kg"
+materialpro3d:TIFSCR708,materialpro3d,5905991404125,offer:materialpro3d:TIFSCR708,missing-color,"Filament Spectrum ReFill rPETG 1,75 mm YELLOW ORANGE 1 kg"
 materialpro3d:TIFSCRA07,materialpro3d,5905991404217,offer:materialpro3d:TIFSCRA07,missing-color,"Filament Spectrum ReFill PET-G Premium 1,75 mm GLASSY 1 kg"
+materialpro3d:TPE88PM05TT,materialpro3d,8594185640929,offer:materialpro3d:TPE88PM05TT,missing-color,"Filament-PM TPE88 tisková struna translucent 1,75 mm 0,5 kg Filament PM"
+materialpro3d:WOO175FB1BN,materialpro3d,,offer:materialpro3d:WOO175FB1BN,missing-color,"WOOD filament hnědý 1,75 mm Fiberlogy 1 kg"
+materialpro3d:WOO175FB75BK,materialpro3d,5902560994339,offer:materialpro3d:WOO175FB75BK,missing-color,"WOOD filament černý 1,75 mm Fiberlogy 750 g"
+materialpro3d:WOO175FB75NL,materialpro3d,5902560994308,offer:materialpro3d:WOO175FB75NL,missing-color,"WOOD filament přírodní 1,75 mm Fiberlogy 750 g"
+materialpro3d:WOO175FB75WE,materialpro3d,5902560994322,offer:materialpro3d:WOO175FB75WE,missing-color,"WOOD filament bílý 1,75 mm Fiberlogy 750 g"
+materialpro3d:WOO175PM05NL,materialpro3d,8594185642480,offer:materialpro3d:WOO175PM05NL,missing-color,"Filament-PM WOODjet tisková struna natural 1,75 mm 0,5 kg Filament PM"
+materialpro3d:WOO175SF75AE,materialpro3d,8434429679646,offer:materialpro3d:WOO175SF75AE,missing-color,"PLA filament ALGAE natural 1,75 mm Smartfil ECO 0,75 kg"
+materialpro3d:WOO175SF75ME,materialpro3d,8434000378555,offer:materialpro3d:WOO175SF75ME,missing-color,"WOOD filament javor MAPLE 1,75 mm Smartfil 750 g"
+materialpro3d:WOO175SF75PE,materialpro3d,8434000590797,offer:materialpro3d:WOO175SF75PE,missing-color,"PLA filament PINE natural 1,75 mm Smartfil ECO 0,75 kg"
+materialpro3d:WOO175SF75SY,materialpro3d,8434000055760,offer:materialpro3d:WOO175SF75SY,missing-color,"WOOD filament SAPELLY 1,75 mm Smartfil 750 g"
+materialpro3d:WOO175SF75TA,materialpro3d,8434000060757,offer:materialpro3d:WOO175SF75TA,missing-color,"WOOD filament teakové dřevo TEKA 1,75 mm Smartfil 750 g"
+materialpro3d:WOO175SF75WW,materialpro3d,8434000711154,offer:materialpro3d:WOO175SF75WW,missing-color,"WOOD filament vrba WILLOW 1,75 mm Smartfil 750 g"
+materialpro3d:WOO175SP05EY,materialpro3d,5903175650061,offer:materialpro3d:WOO175SP05EY,missing-color,"WOOD filament ebony black 1,75 mm Spectrum 0,5 kg"
+materialpro3d:WOO175SP05NL,materialpro3d,5903175651341,offer:materialpro3d:WOO175SP05NL,missing-color,"WOOD filament natural 1,75 mm Spectrum 0,5 kg"
+materialpro3d:WOO175SP1EY,materialpro3d,5903175650054,offer:materialpro3d:WOO175SP1EY,missing-color,"WOOD filament ebony black 1,75 mm Spectrum 1 kg"
+materialpro3d:WOO175SP1NL,materialpro3d,5903175651365,offer:materialpro3d:WOO175SP1NL,missing-color,"WOOD filament natural 1,75 mm Spectrum 1 kg"

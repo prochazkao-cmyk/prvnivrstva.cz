@@ -16,6 +16,7 @@
     "facts:filament": "node scripts/extract-filament-facts.mjs",
     "normalize:filament": "node scripts/filament-normalize.mjs",
     "history:filament": "node scripts/append-filament-history.mjs",
+    "refresh:filament": "node scripts/refresh-filament-catalog.mjs",
     "astro": "astro"
   },
   "engines": {

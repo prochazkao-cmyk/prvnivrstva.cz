@@ -17,6 +17,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { canonicalizeColor } from './filament-color.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const PREVIEW_PATH = path.join(ROOT, 'src/data/filament-preview.generated.json');
@@ -166,7 +167,8 @@ function formatDiameter(mm) {
 }
 
 export function cardTitle(identity) {
-  const parts = [identity.brand, identity.productLine, identity.material, identity.color].filter((part) => part);
+  const parts = [identity.brand, identity.productLine, identity.material].filter((part) => part);
+  parts.push(identity.color || 'neuvedeno');
   if (identity.weightGrams > 0) parts.push(formatWeight(identity.weightGrams));
   if (identity.diameterMm != null) parts.push(formatDiameter(identity.diameterMm));
   if (identity.form === 'spool') parts.push('cívka');
@@ -222,7 +224,7 @@ export function normalizeOffers(offers, tables) {
       brand: applyAlias(aliases.brand, offer.brand),
       productLine,
       material: applyAlias(aliases.material, offer.material),
-      color: applyAlias(aliases.color, offer.color),
+      color: canonicalizeColor(aliases.color, offer.color),
       weightGrams: offer.weightGrams,
       diameterMm,
       form: form === 'spool' || form === 'refill' ? form : null,
@@ -342,13 +344,15 @@ export function normalizeOffers(offers, tables) {
     const lines = members.map((row) => row.identity.productLine);
     const productLine = lines.every((line) => line && line === lines[0]) ? lines[0] : null;
     const colors = presentValues(members, (row) => row.identity.color);
+    const missingColor = members.some((row) => !row.identity.color);
+    const colorLabel = missingColor ? null : (colors.length === 1 ? colors[0] : (colors.length > 1 ? colors.join(' / ') : null));
     const diameters = presentValues(members, (row) => row.identity.diameterMm);
     const forms = presentValues(members, (row) => row.identity.form);
     const identity = {
       brand: members[0].identity.brand,
       productLine,
       material: members[0].identity.material,
-      color: colors.length === 1 ? colors[0] : (colors.length > 1 ? colors.join(' / ') : null),
+      color: colorLabel,
       weightGrams: members[0].identity.weightGrams,
       diameterMm: diameters.length === 1 ? diameters[0] : null,
       form: forms.length === 1 ? forms[0] : null,
@@ -360,8 +364,8 @@ export function normalizeOffers(offers, tables) {
       brand: members[0].identity.brand,
       productLine,
       material: members[0].identity.material,
-      color: colors.length === 1 ? colors[0] : null,
-      colorVariants: colors.length > 1 ? colors : undefined,
+      color: !missingColor && colors.length === 1 ? colors[0] : null,
+      colorVariants: !missingColor && colors.length > 1 ? colors : undefined,
       weightGrams: identity.weightGrams,
       diameterMm: identity.diameterMm,
       form: identity.form,
@@ -398,7 +402,7 @@ export function normalizeOffers(offers, tables) {
 
   const splitSource = [...oldBuckets.values()]
     .filter((list) => new Set(list.map((offer) => offer.brand).filter(Boolean)).size >= 3)
-    .sort((a, b) => b.length - a.length || a[0].productId.localeCompare(b[0].productId))[0];
+    .sort((a, b) => b.length - a.length || a.map((offer) => offer.productId).sort()[0].localeCompare(b.map((offer) => offer.productId).sort()[0]))[0];
 
   const splitExamples = [];
   if (splitSource) {
@@ -524,7 +528,7 @@ function renderReview(review) {
   return [
     '# Revize identity filamentu',
     '',
-    'Vygenerováno `scripts/filament-normalize.mjs`. Nabídka bez značky, materiálu, barvy, hmotnosti nebo ověřeného průměru zůstává na vlastní dlaždici.',
+    'Vygenerováno `scripts/filament-normalize.mjs`. Nabídka bez značky, materiálu, barvy, hmotnosti nebo ověřeného průměru zůstává na vlastní dlaždici. Barva, kterou feed a název nepotvrdí, je prázdná a na dlaždici je `neuvedeno`.',
     'Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová řada se přidá, jen když je v tabulce. Mezi obchody spojuje stejné EAN (značka, materiál a hmotnost po aliasu sedí) nebo `product-map.json`. V jednom obchodě stejný klíč sdílí dlaždici.',
     '',
     '## Souhrn',
@@ -827,6 +831,17 @@ function selfTest() {
     chained = true;
   }
   assert(chained, 'alias chains are rejected');
+  assert(canonicalizeColor({ Bílá: 'bílá', transparent: 'transparentní' }, 'Bílá') === 'bílá', 'Bílá and bílá are one color');
+  assert(canonicalizeColor({ transparent: 'transparentní' }, 'Transparent') === 'transparentní', 'Transparent and transparentní are one color');
+  assert(canonicalizeColor({}, 'Tyrkysová') === 'tyrkysová', 'an unlisted color still has one case');
+  const unknownColor = normalizeOffers(
+    [{ ...base, productId: 'shop-a:10', shopId: 'shop-a', productName: 'PETG Transparent', color: undefined }],
+    { aliases, productMap: { version: 1, groups: [] }, productLines: { version: 1, byOfferId: {}, byEan: {} }, factsById: {} },
+  );
+  assert(unknownColor.cardsDoc.cards.length === 1, 'unknown color stays one card');
+  assert(unknownColor.cardsDoc.cards[0].color == null, 'unknown color is not stored as a guessed hue');
+  assert(unknownColor.cardsDoc.cards[0].title.includes('neuvedeno'), 'unknown color is an explicit bucket');
+  assert(!unknownColor.cardsDoc.cards[0].title.includes('bílá'), 'unknown color must not join bílá');
 
   const history = historySnapshot('2026-10-21', 'test', offers, merged.byOfferId);
   assert(history.offers[0].pricePerKg === history.offers[0].price / (history.offers[0].weightGrams / 1000), 'Kč/kg is price over kilograms');
@@ -882,10 +897,12 @@ async function main() {
     assert(reviewMd === built.reviewMd, 'review.md is stale');
     assert(reviewCsv === built.reviewCsv, 'review.csv is stale');
     const dates = history.snapshots.map((snapshot) => snapshot.date);
-    assert(dates.join() === '2026-10-03,2026-10-21', `history dates drifted: ${dates.join()}`);
+    assert(dates.includes('2026-10-03') && dates.includes('2026-10-21'), `history lost a frozen day: ${dates.join()}`);
+    assert(dates.join() === [...dates].sort((a, b) => a.localeCompare(b)).join(), 'history dates unsorted');
+    assert(new Set(dates).size === dates.length, 'history dates duplicated');
     const preview = await readJson(PREVIEW_PATH);
-    const current = history.snapshots.find((snapshot) => snapshot.date === '2026-10-21');
-    assert(current.offers.length === preview.offers.length, 'history offer count drifted');
+    const current = history.snapshots[history.snapshots.length - 1];
+    assert(current.offers.length === preview.offers.length, 'latest history offer count drifted');
     const previewById = new Map(preview.offers.map((offer) => [offer.productId, offer]));
     for (const row of current.offers) {
       const source = previewById.get(row.offerId);

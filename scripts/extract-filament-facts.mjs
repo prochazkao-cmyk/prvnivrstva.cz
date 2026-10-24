@@ -52,7 +52,7 @@ function readParams(block) {
   return params;
 }
 
-function indexShop(xml) {
+export function indexShop(xml) {
   const items = new Map();
   for (const match of xml.matchAll(/<SHOPITEM>([\s\S]*?)<\/SHOPITEM>/gi)) {
     const block = match[1];
@@ -104,31 +104,32 @@ function diameterEvidence(xml) {
   return { items, values, range285 };
 }
 
-function assertDiameterEvidence(shopId, xml, rules) {
+export function assertDiameterEvidence(shopId, xml, rules) {
   const found = diameterEvidence(xml);
   const allowed = (rules.diameterDefaults ?? []).find((row) => row.shopId === shopId);
   const refused = (rules.diameterNoDefault ?? []).find((row) => row.shopId === shopId);
   if (allowed) {
     const distinct = [...found.values.keys()];
-    if (found.items !== allowed.feedItems) {
-      throw new Error(`${shopId} feed size ${found.items} != documented ${allowed.feedItems}`);
-    }
-    if (distinct.length !== 1 || distinct[0] !== allowed.diameterMm || found.values.get(allowed.diameterMm) !== allowed.rowsWithDiameter) {
-      throw new Error(`${shopId} diameters ${JSON.stringify(Object.fromEntries(found.values))} do not match the documented 1.75 default`);
+    const rows = found.values.get(allowed.diameterMm) ?? 0;
+    if (distinct.length !== 1 || distinct[0] !== allowed.diameterMm || rows < 1) {
+      throw new Error(
+        `${shopId} diameters ${JSON.stringify(Object.fromEntries(found.values))} do not match the documented ${allowed.diameterMm} default`,
+      );
     }
   }
   if (refused) {
-    if (shopId === '3dfil' && (found.values.size !== 0 || found.items !== refused.feedItems)) {
-      throw new Error(`3dfil diameter evidence changed: ${found.values.size} values, ${found.items} items`);
+    if (shopId === '3dfil' && found.values.size !== 0) {
+      throw new Error(`3dfil diameter evidence changed: ${found.values.size} values across ${found.items} items`);
     }
     if (shopId === 'materialpro3d' && found.range285 < 1) {
       throw new Error('materialpro3d no longer has a 2.85 mm diameter range; the no-default rule needs a human check');
     }
   }
+  return found;
 }
 
 /** Param observation only. The card form is decided later from refill tokens. */
-function observeParamForm(params) {
+export function observeParamForm(params) {
   const found = [];
   for (const [name, value] of params) {
     if (name === 'Refill' && value === 'Ano') found.push('refill');
@@ -141,7 +142,7 @@ function observeParamForm(params) {
   return { form: null, formRule: null, formConflict: false };
 }
 
-function normalizeEan(raw) {
+export function normalizeEan(raw) {
   if (!raw) return { ean: null, invalidEan: null };
   const digits = raw.replace(/\s+/g, '');
   if (/^\d{8,14}$/.test(digits)) return { ean: digits, invalidEan: null };
@@ -216,7 +217,10 @@ async function main() {
   console.log(`Wrote facts for ${Object.keys(ordered).length} offers. EAN ${withEan}, form ${withForm}.`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+const invokedDirectly = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
+if (invokedDirectly) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
