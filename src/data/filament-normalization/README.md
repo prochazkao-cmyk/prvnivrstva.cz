@@ -23,7 +23,7 @@ Chybí-li značka, materiál, barva, hmotnost, nebo průměr, který tabulka ned
 - `product-lines.json` — ruční řada. `byOfferId` je `shopId:ITEM_ID`. `byEan` je přesný řetězec číslic.
 - `product-map.json` — ruční spojení bez společného EAN.
 
-Hmotnost se z názvu nečte. Průměr taky ne.
+Hmotnost se z názvu nečte. Průměr taky ne. Barva je parametr `Barva` nebo `Color`. Název ji nedoplní. Když název pojmenuje jiný odstín než parametr, nebo je víc základních barev bez pravidla (průhledný odstín, nebo parametr Multicolor), barva zůstane prázdná a dlaždice říká `neuvedeno`. Kanonický tvar je malými písmeny (`bílá`, `transparentní`).
 
 ## Příkazy
 
@@ -36,7 +36,7 @@ npm run history:filament -- --date YYYY-MM-DD --preview src/data/filament-previe
 
 `facts:filament` čte `.cache/filament-feeds/` z téhož stažení a odmítne zápis, když cena nebo důkaz o průměru nesedí. `normalize:filament -- --check` cache nepotřebuje.
 
-`history:filament` připíše jeden den do `src/data/filament-history.json`. Stejný den se nepřepíše. Skript nic neplánuje.
+`history:filament` připíše jeden den do `src/data/filament-history.json`. Stejný den se nepřepíše. Skript sám nic neplánuje. Noční GitHub Action `filament-nightly.yml` ve 02:00 UTC (03:00 SEČ, v létě 04:00 SELČ) spustí `npm run refresh:filament` a při splněných kontrolách commitne katalog přímo do `main`, aby ho Cloudflare Pages nasadil. Pull request neotevírá. Když feed selže, předchozí řádky toho obchodu zůstanou a job skončí červeně.
 
 Snímek `2026-10-03` je z gitu `4caab44` a nemá EAN (`--no-facts`). Po doplnění mapy, která odkazuje na `productId` z toho souboru chybějící, ten den znovu nespouštějte.
 

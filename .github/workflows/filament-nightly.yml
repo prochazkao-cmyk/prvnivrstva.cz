@@ -1,0 +1,67 @@
+name: Filament prices
+
+# GitHub cron is UTC. 02:00 UTC is 03:00 Europe/Prague in winter (CET)
+# and 04:00 in summer (CEST). Prague is on CET for most of the year.
+# Cloudflare Pages deploys main, so a green catalog is committed there.
+# A pull request would sit unmerged and the prices would not update.
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: filament-prices
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch and check the three feeds
+        id: refresh
+        run: node scripts/refresh-filament-catalog.mjs
+        continue-on-error: true
+
+      - name: Commit the catalog to main
+        if: steps.refresh.outputs.publish == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            src/data/filament-preview.generated.json \
+            src/data/filament-feed-facts.generated.json \
+            src/data/filament-cards.generated.json \
+            src/data/filament-history.json \
+            src/data/filament-normalization/review.md \
+            src/data/filament-normalization/review.json \
+            src/data/filament-normalization/review.csv
+          if git diff --cached --quiet; then
+            echo "Catalog matches main. Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Refresh filament prices"
+          git push origin HEAD:main
+
+      - name: Fail when a feed was not refreshed
+        if: steps.refresh.outcome != 'success'
+        run: |
+          echo "At least one feed failed or the catalog was not published. See the fetch step."
+          exit 1

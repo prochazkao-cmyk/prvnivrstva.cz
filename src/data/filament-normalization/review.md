@@ -1,38 +1,40 @@
 # Revize identity filamentu
 
-Vygenerováno `scripts/filament-normalize.mjs`. Nabídka bez značky, materiálu, barvy, hmotnosti nebo ověřeného průměru zůstává na vlastní dlaždici.
+Vygenerováno `scripts/filament-normalize.mjs`. Nabídka bez značky, materiálu, barvy, hmotnosti nebo ověřeného průměru zůstává na vlastní dlaždici. Barva, kterou feed a název nepotvrdí, je prázdná a na dlaždici je `neuvedeno`.
 Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová řada se přidá, jen když je v tabulce. Mezi obchody spojuje stejné EAN (značka, materiál a hmotnost po aliasu sedí) nebo `product-map.json`. V jednom obchodě stejný klíč sdílí dlaždici.
 
 ## Souhrn
 
 | | počet |
 | --- | ---: |
-| nabídky | 3166 |
-| dlaždice dřív (materiál + barva + hmotnost) | 633 |
-| dlaždice teď | 1875 |
-| nabídky spojené podle EAN | 88 |
+| nabídky | 3175 |
+| dlaždice dřív (materiál + barva + hmotnost) | 709 |
+| dlaždice teď | 2124 |
+| nabídky spojené podle EAN | 90 |
 | z toho mezi obchody | 64 |
-| skupiny EAN mezi obchody spojené / nespojené | 32 / 5 |
-| skupiny EAN spojené | 43 |
-| skupiny EAN viděné a nespojené | 6 |
-| nabídky na společné dlaždici v jednom obchodě | 1615 |
+| skupiny EAN mezi obchody spojené / nespojené | 32 / 7 |
+| skupiny EAN spojené | 44 |
+| skupiny EAN viděné a nespojené | 8 |
+| nabídky na společné dlaždici v jednom obchodě | 1308 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 825 |
+| nabídky v revizi | 1023 |
 | značky před aliasem / po aliasu | 37 / 35 |
-| materiály před aliasem / po aliasu | 44 / 43 |
-| barvy před aliasem / po aliasu | 59 / 35 |
+| materiály před aliasem / po aliasu | 46 / 45 |
+| barvy před aliasem / po aliasu | 68 / 68 |
 
 ## Důvody revize
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 704 |
-| missing-color | 92 |
-| missing-material | 73 |
-| ean-conflict | 12 |
-| ean-material-conflict | 12 |
+| missing-diameter | 721 |
+| missing-color | 318 |
+| missing-material | 72 |
+| ean-conflict | 16 |
+| ean-material-conflict | 14 |
 | form-param-disagrees | 12 |
+| ean-brand-conflict | 2 |
+| ean-weight-conflict | 2 |
 
 ## EAN přes víc obchodů
 
@@ -50,18 +52,20 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 ## Příklad rozdělené dlaždice
 
-Původní klíč `pla|modrá|1000`: 160 nabídek, 19 značek.
-- `shop:materialpro3d:3DLabPrint**PLA*modr%C3%A1*1000*1.75*spool` — 3DLabPrint · PLA · modrá · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA námořnicky modrý filament 1,75 mm 3DLabPrint 1 kg)
-- `offer:3dfil:436` — 3DPower · PLA · modrá · 1 kg · cívka (3dfil, 3DPOWER | PLA | Modrá | 1.75mm | 1kg)
-- `ean:8594210630499` — ABAFLEX · PLA · modrá · 1 kg · 1,75 mm · cívka (filamenty-brno, Filament ABAFLEX PLA 1,75 mm 1 kg, Modrá)
+Původní klíč `pla||1000`: 131 nabídek, 17 značek.
+- `offer:materialpro3d:PLA175LB1CRW` — 3DLabPrint · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA natural filament 1,75 mm 3DLabPrint 1 kg)
+- `offer:3dfil:447` — 3DPower · PLA · neuvedeno · 1 kg · cívka (3dfil, 3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg)
+- `offer:materialpro3d:PLA175AP1HSN` — Aurapol · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PLA filament tělový skin human color 1,75 mm Aurapol 1 kg)
 
 ## EAN, které se nespojilo
 
+- EAN 5903707923922 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3653 (PROF. LAB | PETG-CF | Blue | 1.75mm | 1kg); filamenty-brno:FG-P209-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Modrá FG-P209-E1)
 - EAN 5903707923939 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4030 (PROF. LAB | PETG-CF | Red | 1.75mm | 1kg); filamenty-brno:FG-P210-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Červená FG-P210-E1)
 - EAN 5903707923946 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3651 (PROF. LAB | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:FG-P211-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Šedá FG-P211-E1)
 - EAN 5903707923953 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3708 (PROF. LAB | PETG-CF | Green | 1.75mm | 1kg); filamenty-brno:FG-P212-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1)
 - EAN 5903707923960 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4029 (PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg); filamenty-brno:FG-P213-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1)
 - EAN 6932704920299 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3697 (ELEGOO | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:50_203_0648 (Filament ELEGOO PETG-CF Carbon fiber 1,75 mm 0,5 kg, Šedá)
+- EAN 6933582322250 — 3dfil, filamenty-brno — ean-brand-conflict, ean-conflict, ean-weight-conflict — 3dfil:4413 (SUNLU | PP | Natur | 1.75mm | 0,8kg); filamenty-brno:SUN-PP-PRI (Filament Sunlu PP 1,75 mm 1 kg, Přírodní)
 - EAN 6973090163327 — 3dfil — ean-conflict, ean-material-conflict — 3dfil:1354_ERN (PHAETUS | Aeworthy PETG-CF | černá | 1.75mm | 1kg Barva: Černá); 3dfil:211_CER (PHAETUS | ToughPETG-HF | zelená | 1.75mm | 1kg Barva: Černá)
 
 Aliasové návrhy, které se neaplikují, jsou v `alias-candidates.json`.

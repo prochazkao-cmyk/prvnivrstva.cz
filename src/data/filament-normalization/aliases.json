@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "note": "Přesná hodnota pole z feedu → kanonická hodnota. Žádné podobnostní párování, žádné čtení z názvu produktu. Cíl aliasu nesmí být zároveň klíčem (řetězení se odmítne).",
+  "note": "Přesná hodnota pole z feedu → kanonická hodnota. Žádné podobnostní párování. Název produktu barvu nedoplňuje; importer ho použije jen k tomu, aby zahodil Barvu, která pojmenovává jiný odstín. Cíl aliasu nesmí být zároveň klíčem (řetězení se odmítne). Kanonická barva je malými písmeny.",
   "brand": {
     "ELEGOO": "Elegoo",
     "Prof. Lab": "Professional Lab",
@@ -37,7 +37,22 @@
     "Vícebarevná": "vícebarevná",
     "Tělová": "tělová",
     "Transparent": "transparentní",
+    "transparent": "transparentní",
+    "Průhledná": "transparentní",
+    "průhledná": "transparentní",
     "Natur": "přírodní",
-    "natural": "přírodní"
+    "natural": "přírodní",
+    "Black": "černá",
+    "black": "černá",
+    "White": "bílá",
+    "white": "bílá",
+    "Silver": "stříbrná",
+    "silver": "stříbrná",
+    "Gold": "zlatá",
+    "gold": "zlatá",
+    "Grey": "šedá",
+    "Gray": "šedá",
+    "grey": "šedá",
+    "gray": "šedá"
   }
 }
