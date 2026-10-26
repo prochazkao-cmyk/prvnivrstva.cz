@@ -1,36 +1,36 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3175,
-    "cardsBefore": 709,
-    "cardsAfter": 2124,
+    "offers": 3170,
+    "cardsBefore": 712,
+    "cardsAfter": 2121,
     "offersMatchedByEan": 90,
     "offersMatchedAcrossShopsByEan": 64,
     "eanGroupsMerged": 44,
     "eanGroupsCrossShop": 39,
     "eanGroupsCrossShopMerged": 32,
     "eanGroupsCrossShopBlocked": 7,
-    "eanGroupsBlocked": 8,
-    "eanGroupsSeen": 52,
-    "offersSharingShopKey": 1308,
-    "shopKeyCards": 303,
+    "eanGroupsBlocked": 7,
+    "eanGroupsSeen": 51,
+    "offersSharingShopKey": 1305,
+    "shopKeyCards": 302,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1023,
+    "reviewOffers": 1022,
     "brandsBefore": 37,
     "brandsAfter": 35,
-    "materialsBefore": 46,
-    "materialsAfter": 45,
+    "materialsBefore": 48,
+    "materialsAfter": 47,
     "colorsBefore": 68,
     "colorsAfter": 68,
     "reasons": {
       "ean-brand-conflict": 2,
-      "ean-conflict": 16,
-      "ean-material-conflict": 14,
+      "ean-conflict": 14,
+      "ean-material-conflict": 12,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 12,
       "missing-color": 318,
-      "missing-diameter": 721,
+      "missing-diameter": 720,
       "missing-material": 72
     }
   },
@@ -777,44 +777,6 @@
             "ean-conflict",
             "ean-weight-conflict",
             "missing-color"
-          ]
-        }
-      ]
-    },
-    {
-      "ean": "6973090163327",
-      "status": "blocked",
-      "shops": [
-        "3dfil"
-      ],
-      "offerIds": [
-        "3dfil:1354_ERN",
-        "3dfil:211_CER"
-      ],
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:1354_ERN",
-          "shopId": "3dfil",
-          "productName": "PHAETUS | Aeworthy PETG-CF | černá | 1.75mm | 1kg Barva: Černá",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict",
-            "missing-diameter"
-          ]
-        },
-        {
-          "offerId": "3dfil:211_CER",
-          "shopId": "3dfil",
-          "productName": "PHAETUS | ToughPETG-HF | zelená | 1.75mm | 1kg Barva: Černá",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict",
-            "missing-color",
-            "missing-diameter"
           ]
         }
       ]
@@ -1623,18 +1585,6 @@
       ]
     },
     {
-      "offerId": "3dfil:1354_ERN",
-      "shopId": "3dfil",
-      "productName": "PHAETUS | Aeworthy PETG-CF | černá | 1.75mm | 1kg Barva: Černá",
-      "ean": "6973090163327",
-      "cardId": "offer:3dfil:1354_ERN",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict",
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:1367",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Silk+ | Titanová šedá | 1.75mm | 1kg | Spool",
@@ -2127,16 +2077,6 @@
       ]
     },
     {
-      "offerId": "3dfil:1720",
-      "shopId": "3dfil",
-      "productName": "KEXCELLED | Pla Matte | Olivově Zelená | 1.75mm | 1kg",
-      "ean": "8719689597849",
-      "cardId": "offer:3dfil:1720",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:1721",
       "shopId": "3dfil",
       "productName": "KEXCELLED | Pla Silk | Zlatá | 1.75mm | 1kg",
@@ -2613,19 +2553,6 @@
       ]
     },
     {
-      "offerId": "3dfil:211_CER",
-      "shopId": "3dfil",
-      "productName": "PHAETUS | ToughPETG-HF | zelená | 1.75mm | 1kg Barva: Černá",
-      "ean": "6973090163327",
-      "cardId": "offer:3dfil:211_CER",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict",
-        "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2122",
       "shopId": "3dfil",
       "productName": "ZIRO | Pla Matte | Tri Color - Neon | 1.75mm | 1kg",
@@ -3043,16 +2970,6 @@
       "productName": "ERYONE | ABS | Modrá | 1.75mm | 1kg",
       "ean": "8594233083876",
       "cardId": "offer:3dfil:2311",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:2313",
-      "shopId": "3dfil",
-      "productName": "ERYONE | Asa | Černá | 1.75mm | 1kg",
-      "ean": "8594233080103",
-      "cardId": "offer:3dfil:2313",
       "reasons": [
         "missing-diameter"
       ]
@@ -4008,16 +3925,6 @@
       "productName": "ELEGOO | ABS | Šedá | 1.75mm | 1kg",
       "ean": "8594233081933",
       "cardId": "offer:3dfil:3024",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3026",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PETG HF | Tmavě šedá | 1.75mm | 1kg | Spool",
-      "ean": "8594233085818",
-      "cardId": "offer:3dfil:3026",
       "reasons": [
         "missing-diameter"
       ]
@@ -7145,16 +7052,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4389",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG | Gold | 1.75mm | 1kg",
-      "ean": "5903707924240",
-      "cardId": "offer:3dfil:4389",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:439",
       "shopId": "3dfil",
       "productName": "3DPOWER | PLA | Červená | 1.75mm | 1kg",
@@ -7383,6 +7280,57 @@
       "productName": "3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg",
       "ean": "5905143081921",
       "cardId": "offer:3dfil:447",
+      "reasons": [
+        "missing-color",
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4477",
+      "shopId": "3dfil",
+      "productName": "Phaetus | aeWorthy PETG CF | Černá | 1.75mm | 1kg",
+      "ean": "6973090163594",
+      "cardId": "offer:3dfil:4477",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4478",
+      "shopId": "3dfil",
+      "productName": "Phaetus | aeWorthy Tough PETG-HF | Černá | 1.75mm | 1kg",
+      "ean": "6973090163327",
+      "cardId": "offer:3dfil:4478",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4479",
+      "shopId": "3dfil",
+      "productName": "PHAETUS | aeForce PET-CF | Černá | 1,75 mm | 1 kg",
+      "ean": "6973090163719",
+      "cardId": "offer:3dfil:4479",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4480",
+      "shopId": "3dfil",
+      "productName": "Phaetus | aeForce PC/ABS-FR | Natur | 1,75 mm | 1 kg",
+      "ean": null,
+      "cardId": "offer:3dfil:4480",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4481",
+      "shopId": "3dfil",
+      "productName": "PHAETUS | aeForce PET-GF | Black | 1.75mm | 1kg",
+      "ean": "6973090163303",
+      "cardId": "offer:3dfil:4481",
       "reasons": [
         "missing-color",
         "missing-diameter"

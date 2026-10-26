@@ -7,31 +7,31 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3175 |
-| dlaždice dřív (materiál + barva + hmotnost) | 709 |
-| dlaždice teď | 2124 |
+| nabídky | 3170 |
+| dlaždice dřív (materiál + barva + hmotnost) | 712 |
+| dlaždice teď | 2121 |
 | nabídky spojené podle EAN | 90 |
 | z toho mezi obchody | 64 |
 | skupiny EAN mezi obchody spojené / nespojené | 32 / 7 |
 | skupiny EAN spojené | 44 |
-| skupiny EAN viděné a nespojené | 8 |
-| nabídky na společné dlaždici v jednom obchodě | 1308 |
+| skupiny EAN viděné a nespojené | 7 |
+| nabídky na společné dlaždici v jednom obchodě | 1305 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1023 |
+| nabídky v revizi | 1022 |
 | značky před aliasem / po aliasu | 37 / 35 |
-| materiály před aliasem / po aliasu | 46 / 45 |
+| materiály před aliasem / po aliasu | 48 / 47 |
 | barvy před aliasem / po aliasu | 68 / 68 |
 
 ## Důvody revize
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 721 |
+| missing-diameter | 720 |
 | missing-color | 318 |
 | missing-material | 72 |
-| ean-conflict | 16 |
-| ean-material-conflict | 14 |
+| ean-conflict | 14 |
+| ean-material-conflict | 12 |
 | form-param-disagrees | 12 |
 | ean-brand-conflict | 2 |
 | ean-weight-conflict | 2 |
@@ -66,7 +66,6 @@ Původní klíč `pla||1000`: 131 nabídek, 17 značek.
 - EAN 5903707923960 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4029 (PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg); filamenty-brno:FG-P213-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1)
 - EAN 6932704920299 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3697 (ELEGOO | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:50_203_0648 (Filament ELEGOO PETG-CF Carbon fiber 1,75 mm 0,5 kg, Šedá)
 - EAN 6933582322250 — 3dfil, filamenty-brno — ean-brand-conflict, ean-conflict, ean-weight-conflict — 3dfil:4413 (SUNLU | PP | Natur | 1.75mm | 0,8kg); filamenty-brno:SUN-PP-PRI (Filament Sunlu PP 1,75 mm 1 kg, Přírodní)
-- EAN 6973090163327 — 3dfil — ean-conflict, ean-material-conflict — 3dfil:1354_ERN (PHAETUS | Aeworthy PETG-CF | černá | 1.75mm | 1kg Barva: Černá); 3dfil:211_CER (PHAETUS | ToughPETG-HF | zelená | 1.75mm | 1kg Barva: Černá)
 
 Aliasové návrhy, které se neaplikují, jsou v `alias-candidates.json`.
 Celý seznam nabídek v revizi je v `review.csv` a `review.json`.

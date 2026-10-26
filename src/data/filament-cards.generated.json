@@ -2127,25 +2127,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:1354_ERN",
-      "match": "single",
-      "ean": null,
-      "brand": "Phaetus",
-      "productLine": null,
-      "material": "PETG-CF",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Phaetus · PETG-CF · černá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:1354_ERN"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:1367",
       "match": "single",
       "ean": null,
@@ -3039,25 +3020,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:1720",
-      "match": "single",
-      "ean": null,
-      "brand": "Kexcelled",
-      "productLine": null,
-      "material": "PLA",
-      "color": "zelená",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Kexcelled · PLA · zelená · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:1720"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:1722",
       "match": "single",
       "ean": null,
@@ -3913,25 +3875,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:211_CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Phaetus",
-      "productLine": null,
-      "material": "PETG-HF",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Phaetus · PETG-HF · neuvedeno · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:211_CER"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:2122",
       "match": "single",
       "ean": null,
@@ -4708,25 +4651,6 @@
       "title": "Eryone · ABS · modrá · 1 kg · cívka",
       "offerIds": [
         "3dfil:2311"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:2313",
-      "match": "single",
-      "ean": null,
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "ASA",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Eryone · ASA · černá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:2313"
       ]
     },
     {
@@ -6437,25 +6361,6 @@
       "title": "Elegoo · ABS · šedá · 1 kg · cívka",
       "offerIds": [
         "3dfil:3024"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:3026",
-      "match": "single",
-      "ean": null,
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "PETG",
-      "color": "šedá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Bambu Lab · PETG · šedá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3026"
       ]
     },
     {
@@ -11855,25 +11760,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:4389",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PETG",
-      "color": "zlatá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Professional Lab · PETG · zlatá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:4389"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:439",
       "match": "single",
       "ean": null,
@@ -12251,6 +12137,101 @@
       "title": "3DPower · PLA · neuvedeno · 1 kg · cívka",
       "offerIds": [
         "3dfil:447"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4477",
+      "match": "single",
+      "ean": null,
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PETG-CF",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Phaetus · PETG-CF · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4477"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4478",
+      "match": "single",
+      "ean": null,
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PETG-HF",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Phaetus · PETG-HF · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4478"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4479",
+      "match": "single",
+      "ean": null,
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PET-CF",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Phaetus · PET-CF · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4479"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4480",
+      "match": "single",
+      "ean": null,
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PC/ABS",
+      "color": "přírodní",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Phaetus · PC/ABS · přírodní · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4480"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4481",
+      "match": "single",
+      "ean": null,
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PET-GF",
+      "color": null,
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Phaetus · PET-GF · neuvedeno · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4481"
       ]
     },
     {
@@ -13109,25 +13090,6 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:50_203_0263",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "růžová",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PETG · růžová · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0263"
-      ]
-    },
-    {
       "cardId": "offer:filamenty-brno:50_203_0309",
       "match": "single",
       "ean": null,
@@ -13334,6 +13296,25 @@
       "title": "Elegoo · TPU · šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0573"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:50_203_0637",
+      "match": "single",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "PETG",
+      "color": "šedá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · PETG · šedá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0637"
       ]
     },
     {
@@ -20421,25 +20402,6 @@
       "title": "Aurapol · PETG · černá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:PETG175AP1BK"
-      ]
-    },
-    {
-      "cardId": "offer:materialpro3d:PETG175AP1DSM",
-      "match": "single",
-      "ean": null,
-      "brand": "Aurapol",
-      "productLine": null,
-      "material": "PETG",
-      "color": "béžová",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Aurapol · PETG · béžová · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:PETG175AP1DSM"
       ]
     },
     {
@@ -34812,26 +34774,6 @@
       ]
     },
     {
-      "cardId": "shop:filamenty-brno:Elegoo**PETG*%C5%A1ed%C3%A1*1000*1.75*spool",
-      "match": "shop",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "šedá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PETG · šedá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0635",
-        "filamenty-brno:50_203_0637"
-      ]
-    },
-    {
       "cardId": "shop:filamenty-brno:Elegoo**PETG*%C5%A1ed%C3%A1*500*1.75*spool",
       "match": "shop",
       "ean": null,
@@ -35118,8 +35060,7 @@
         "filamenty-brno:50_203_0189",
         "filamenty-brno:50_203_0251",
         "filamenty-brno:50_203_0468",
-        "filamenty-brno:50_203_0761",
-        "filamenty-brno:50_203_0813"
+        "filamenty-brno:50_203_0761"
       ]
     },
     {
@@ -41971,14 +41912,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:1354_ERN": {
-      "brand": "Phaetus",
-      "productLine": null,
-      "material": "PETG-CF",
-      "color": "černá",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:1367": {
       "brand": "Bambu Lab",
       "productLine": null,
@@ -42371,14 +42304,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:1720": {
-      "brand": "Kexcelled",
-      "productLine": null,
-      "material": "PLA",
-      "color": "zelená",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:1721": {
       "brand": "Kexcelled",
       "productLine": null,
@@ -42755,14 +42680,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:211_CER": {
-      "brand": "Phaetus",
-      "productLine": null,
-      "material": "PETG-HF",
-      "color": null,
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:2122": {
       "brand": "Ziro",
       "productLine": null,
@@ -43096,14 +43013,6 @@
       "productLine": null,
       "material": "ABS",
       "color": "modrá",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:2313": {
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "ASA",
-      "color": "černá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -43863,14 +43772,6 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "ABS",
-      "color": "šedá",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:3026": {
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "PETG",
       "color": "šedá",
       "diameterMm": null,
       "form": "spool"
@@ -46339,14 +46240,6 @@
       "diameterMm": null,
       "form": "refill"
     },
-    "3dfil:4389": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PETG",
-      "color": "zlatá",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:439": {
       "brand": "3DPower",
       "productLine": null,
@@ -46527,6 +46420,46 @@
       "brand": "3DPower",
       "productLine": null,
       "material": "PLA",
+      "color": null,
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4477": {
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PETG-CF",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4478": {
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PETG-HF",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4479": {
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PET-CF",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4480": {
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PC/ABS",
+      "color": "přírodní",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4481": {
+      "brand": "Phaetus",
+      "productLine": null,
+      "material": "PET-GF",
       "color": null,
       "diameterMm": null,
       "form": "spool"
@@ -47283,14 +47216,6 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
-    "filamenty-brno:50_203_0263": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "růžová",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
     "filamenty-brno:50_203_0285": {
       "brand": "Elegoo",
       "productLine": null,
@@ -47600,14 +47525,6 @@
       "productLine": null,
       "material": "TPU",
       "color": "červená",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "filamenty-brno:50_203_0635": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48048,14 +47965,6 @@
       "productLine": null,
       "material": "PET",
       "color": "černá",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "filamenty-brno:50_203_0813": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PLA",
-      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -54112,14 +54021,6 @@
       "productLine": null,
       "material": "PETG",
       "color": "černá",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:PETG175AP1DSM": {
-      "brand": "Aurapol",
-      "productLine": null,
-      "material": "PETG",
-      "color": "béžová",
       "diameterMm": 1.75,
       "form": "spool"
     },

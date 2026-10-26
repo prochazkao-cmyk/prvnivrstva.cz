@@ -61,7 +61,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1281,3dfil,8594233082695,offer:3dfil:1281,missing-diameter,"ERYONE | PLA Silk Dual-color | Černá - ""rose"" | 1.75mm | 1kg"
 3dfil:1282,3dfil,8594233082701,offer:3dfil:1282,missing-diameter,ERYONE | PLA Silk Macaron Rainbow | Mini Rainbow | 1.75mm | 1kg
 3dfil:1353,3dfil,8594233087188,offer:3dfil:1353,missing-diameter,3DPOWER | PLA Dual Silk | Černá - Modrá | 1.75mm | 1kg
-3dfil:1354_ERN,3dfil,6973090163327,offer:3dfil:1354_ERN,ean-conflict|ean-material-conflict|missing-diameter,PHAETUS | Aeworthy PETG-CF | černá | 1.75mm | 1kg Barva: Černá
 3dfil:1367,3dfil,8594233085429,offer:3dfil:1367,missing-diameter,BAMBU LAB | PLA Silk+ | Titanová šedá | 1.75mm | 1kg | Spool
 3dfil:1375,3dfil,8594233085443,offer:3dfil:1375,missing-diameter,BAMBU LAB | PLA Glow | Zelená | 1.75mm | 1kg
 3dfil:1407,3dfil,8594233082732,offer:3dfil:1407,missing-diameter,ERYONE | PLA Silk Triple-color | Červená - Zlatá - Fialová | 1.75mm | 1kg
@@ -111,7 +110,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1676,3dfil,8594233083098,offer:3dfil:1676,missing-diameter,ERYONE | Pla Silk Triple-color | Oranžová - Modrá - Zelená | 1.75mm | 1kg
 3dfil:1710,3dfil,8594233083135,offer:3dfil:1710,missing-diameter,ERYONE | Pla Silk Triple-color | Fialová - Tyrkysová - Oranžová | 1.75mm | 1kg
 3dfil:1719,3dfil,8719689597887,offer:3dfil:1719,missing-diameter,KEXCELLED | Pla Matte | Hořčicová Žlutá | 1.75mm | 1kg
-3dfil:1720,3dfil,8719689597849,offer:3dfil:1720,missing-diameter,KEXCELLED | Pla Matte | Olivově Zelená | 1.75mm | 1kg
 3dfil:1721,3dfil,8720574342376,ean:8720574342376,missing-diameter,KEXCELLED | Pla Silk | Zlatá | 1.75mm | 1kg
 3dfil:1722,3dfil,8594233083142,offer:3dfil:1722,missing-diameter,ERYONE | Pla Silk | Steampunk | 1.75mm | 1kg
 3dfil:1723,3dfil,8594233083159,offer:3dfil:1723,missing-diameter,ERYONE | Pla | Černá | 1.75mm | 1kg
@@ -159,7 +157,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2089,3dfil,8594233083753,offer:3dfil:2089,missing-diameter,ERYONE | Pla+ filament High Speed | Fialová | 1.75mm | 1kg
 3dfil:2099,3dfil,8594233080301,offer:3dfil:2099,missing-diameter,ZIRO | Pla Silk | Pastel Pearl | 1.75mm | 1kg
 3dfil:2101,3dfil,8594233080325,offer:3dfil:2101,missing-diameter,ZIRO | Pla Silk | Earth Tone | 1.75mm | 1kg
-3dfil:211_CER,3dfil,6973090163327,offer:3dfil:211_CER,ean-conflict|ean-material-conflict|missing-color|missing-diameter,PHAETUS | ToughPETG-HF | zelená | 1.75mm | 1kg Barva: Černá
 3dfil:2122,3dfil,8594233080370,offer:3dfil:2122,missing-diameter,ZIRO | Pla Matte | Tri Color - Neon | 1.75mm | 1kg
 3dfil:2123,3dfil,8594233080387,offer:3dfil:2123,missing-diameter,ZIRO | Pla Matte | Tri Color - Colorful Mist | 1.75mm | 1kg
 3dfil:2125,3dfil,8594233080400,offer:3dfil:2125,missing-diameter,ZIRO | Pla Matte | Tri Color - Frosted Berry | 1.75mm | 1kg
@@ -202,7 +199,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2308,3dfil,8594233083845,offer:3dfil:2308,missing-diameter,ERYONE | ABS | Černá | 1.75mm | 1kg
 3dfil:2309,3dfil,8594233083852,offer:3dfil:2309,missing-color|missing-diameter,ERYONE | ABS | Černá | 1.75mm | 1kg
 3dfil:2311,3dfil,8594233083876,offer:3dfil:2311,missing-diameter,ERYONE | ABS | Modrá | 1.75mm | 1kg
-3dfil:2313,3dfil,8594233080103,offer:3dfil:2313,missing-diameter,ERYONE | Asa | Černá | 1.75mm | 1kg
 3dfil:2327,3dfil,8594233080165,offer:3dfil:2327,missing-diameter,ERYONE | ABS-CF | Černá | 1.75mm | 1kg
 3dfil:2350,3dfil,8594233085597,offer:3dfil:2350,missing-diameter,BAMBU LAB | TPU 90A | Černá | 1.75mm | 1kg
 3dfil:2351,3dfil,8594233085603,offer:3dfil:2351,missing-diameter,"BAMBU LAB | PLA Silk+ | Červená ""Candy"" | 1.75mm | 1kg | Spool"
@@ -298,7 +294,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3022,3dfil,8594233081919,offer:3dfil:3022,missing-diameter,ELEGOO | ABS | Oranžová | 1.75mm | 1kg
 3dfil:3023,3dfil,8594233081926,offer:3dfil:3023,missing-diameter,ELEGOO | ABS | Modrá | 1.75mm | 1kg
 3dfil:3024,3dfil,8594233081933,offer:3dfil:3024,missing-diameter,ELEGOO | ABS | Šedá | 1.75mm | 1kg
-3dfil:3026,3dfil,8594233085818,offer:3dfil:3026,missing-diameter,BAMBU LAB | PETG HF | Tmavě šedá | 1.75mm | 1kg | Spool
 3dfil:3046,3dfil,8594233084309,offer:3dfil:3046,missing-diameter,ERYONE | TPU | 85A | Černá | 1.75mm | 1kg
 3dfil:3066,3dfil,8594233080776,offer:3dfil:3066,missing-diameter,ZIRO | TPU | Flex Nightsky 95A | 1.75mm | 0.8kg
 3dfil:3069,3dfil,8594233085856,offer:3dfil:3069,missing-diameter,"BAMBU LAB | PLA Matte | Zelená ""jablko"" | 1.75mm | 1kg | Refill"
@@ -607,7 +602,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4369,3dfil,8594233089465,offer:3dfil:4369,missing-diameter,"BAMBU LAB | PETG Matte | Modrá ""Baby"" | 1.75mm | 1kg | Spool"
 3dfil:437,3dfil,5904323179410,offer:3dfil:437,missing-diameter,3DPOWER | PLA | Šedá | 1.75mm | 1kg
 3dfil:4370,3dfil,8594233089472,offer:3dfil:4370,missing-diameter,"BAMBU LAB | PETG Matte | Modrá ""Baby"" | 1.75mm | 1kg | Refill"
-3dfil:4389,3dfil,5903707924240,offer:3dfil:4389,missing-diameter,PROF. LAB | PETG | Gold | 1.75mm | 1kg
 3dfil:439,3dfil,5904323179441,offer:3dfil:439,missing-diameter,3DPOWER | PLA | Červená | 1.75mm | 1kg
 3dfil:4390,3dfil,8594233089533,offer:3dfil:4390,missing-diameter,BAMBU LAB | PETG Matte | Lime | 1.75mm | 1kg | Refill
 3dfil:4391,3dfil,8594233089540,ean:8594233089540,missing-diameter,ERYONE | TPU | 85A | Transparentní modrá | 1.75mm | 1kg
@@ -631,6 +625,11 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:446,3dfil,5905143081433,offer:3dfil:446,missing-diameter,3DPOWER | PLA | Světle šedá | 1.75mm | 1kg
 3dfil:4464,3dfil,5906269965003,offer:3dfil:4464,missing-diameter,"NEBULA | ASA 301 | Black | 1.75mm | 0,5kg"
 3dfil:447,3dfil,5905143081921,offer:3dfil:447,missing-color|missing-diameter,3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg
+3dfil:4477,3dfil,6973090163594,offer:3dfil:4477,missing-diameter,Phaetus | aeWorthy PETG CF | Černá | 1.75mm | 1kg
+3dfil:4478,3dfil,6973090163327,offer:3dfil:4478,missing-diameter,Phaetus | aeWorthy Tough PETG-HF | Černá | 1.75mm | 1kg
+3dfil:4479,3dfil,6973090163719,offer:3dfil:4479,missing-diameter,"PHAETUS | aeForce PET-CF | Černá | 1,75 mm | 1 kg"
+3dfil:4480,3dfil,,offer:3dfil:4480,missing-diameter,"Phaetus | aeForce PC/ABS-FR | Natur | 1,75 mm | 1 kg"
+3dfil:4481,3dfil,6973090163303,offer:3dfil:4481,missing-color|missing-diameter,PHAETUS | aeForce PET-GF | Black | 1.75mm | 1kg
 3dfil:562,3dfil,5904323179793,offer:3dfil:562,missing-diameter,3DPOWER | PLA Silk | Fialová | 1.75mm | 1kg
 3dfil:564,3dfil,5904323179823,offer:3dfil:564,missing-diameter,3DPOWER | PLA Silk | Červená | 1.75mm | 1kg
 3dfil:565,3dfil,5904323179830,offer:3dfil:565,missing-diameter,3DPOWER | PLA Silk | Modrá | 1.75mm | 1kg
