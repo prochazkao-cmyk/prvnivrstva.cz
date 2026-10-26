@@ -4,18 +4,18 @@
   "shops": [
     {
       "shopId": "3dfil",
-      "fetchedAt": "2026-10-26T07:11:38.191Z",
+      "fetchedAt": "2026-10-26T08:28:18.646Z",
       "xmlBytes": 6122859
     },
     {
       "shopId": "filamenty-brno",
-      "fetchedAt": "2026-10-26T07:11:34.281Z",
+      "fetchedAt": "2026-10-26T08:28:14.875Z",
       "xmlBytes": 5824350
     },
     {
       "shopId": "materialpro3d",
-      "fetchedAt": "2026-10-26T07:11:30.033Z",
-      "xmlBytes": 15296627
+      "fetchedAt": "2026-10-26T08:28:11.086Z",
+      "xmlBytes": 15296648
     }
   ],
   "offers": {
