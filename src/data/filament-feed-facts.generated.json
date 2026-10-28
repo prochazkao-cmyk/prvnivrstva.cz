@@ -4,18 +4,18 @@
   "shops": [
     {
       "shopId": "3dfil",
-      "fetchedAt": "2026-10-26T08:28:18.646Z",
-      "xmlBytes": 6122859
+      "fetchedAt": "2026-10-28T07:41:14.632Z",
+      "xmlBytes": 6117484
     },
     {
       "shopId": "filamenty-brno",
-      "fetchedAt": "2026-10-26T08:28:14.875Z",
-      "xmlBytes": 5824350
+      "fetchedAt": "2026-10-28T07:41:09.736Z",
+      "xmlBytes": 5794059
     },
     {
       "shopId": "materialpro3d",
-      "fetchedAt": "2026-10-26T08:28:11.086Z",
-      "xmlBytes": 15296648
+      "fetchedAt": "2026-10-28T07:41:04.721Z",
+      "xmlBytes": 15180518
     }
   ],
   "offers": {
@@ -131,14 +131,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
-    "3dfil:1016": {
-      "ean": "8594233084903",
-      "invalidEan": null,
-      "form": "refill",
-      "formRule": "param-refill",
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
     "3dfil:1123": {
       "ean": "8594233084910",
       "invalidEan": null,
@@ -157,14 +149,6 @@
     },
     "3dfil:1125": {
       "ean": "8594233084934",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
-    "3dfil:1126": {
-      "ean": "8594233084941",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -684,7 +668,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:148": {
-      "ean": "8719689597313",
+      "ean": "8594233089595",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -716,7 +700,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:1533": {
-      "ean": "8719689597351",
+      "ean": "8594233089601",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -724,7 +708,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:1534": {
-      "ean": "8720574342383",
+      "ean": "8594233089663",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -732,7 +716,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:1535": {
-      "ean": "8720574342437",
+      "ean": "8594233089656",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -779,8 +763,16 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
+    "3dfil:1546": {
+      "ean": "5904323179427",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
+    },
     "3dfil:1594": {
-      "ean": "8719689597870",
+      "ean": "8594233089571",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -900,7 +892,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:1719": {
-      "ean": "8719689597887",
+      "ean": "8594233089588",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -908,7 +900,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:1721": {
-      "ean": "8720574342376",
+      "ean": "8594233089632",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -1004,7 +996,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:1792": {
-      "ean": "8720574347296",
+      "ean": "8594233089670",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -1531,14 +1523,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
-    "3dfil:227": {
-      "ean": "8720297802409",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
     "3dfil:2278": {
       "ean": "8594233081384",
       "invalidEan": null,
@@ -1652,7 +1636,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:2360": {
-      "ean": "8594233086082",
+      "ean": "5903707918508",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -1755,14 +1739,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
-    "3dfil:245": {
-      "ean": "8720297800160",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
     "3dfil:2457": {
       "ean": "8594233083913",
       "invalidEan": null,
@@ -1784,6 +1760,14 @@
       "invalidEan": null,
       "form": null,
       "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
+    },
+    "3dfil:2478": {
+      "ean": "8594233081414",
+      "invalidEan": null,
+      "form": "spool",
+      "formRule": "param-spool",
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
@@ -2475,14 +2459,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
-    "3dfil:3116": {
-      "ean": "8594233081988",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
     "3dfil:3117": {
       "ean": "8594233081995",
       "invalidEan": null,
@@ -2596,7 +2572,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:320": {
-      "ean": "8720574345650",
+      "ean": "8594233089625",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -3060,7 +3036,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:3515": {
-      "ean": "8594233087867",
+      "ean": "5903707923748",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -3084,7 +3060,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:3518": {
-      "ean": "8594233087898",
+      "ean": "5903707924059",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -3204,7 +3180,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "3dfil:3535": {
-      "ean": "8594233087973",
+      "ean": "5903707924042",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -3915,14 +3891,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
-    "3dfil:3969": {
-      "ean": "8594233088604",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
     "3dfil:3985": {
       "ean": "5905143083604",
       "invalidEan": null,
@@ -4483,6 +4451,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
+    "3dfil:4245": {
+      "ean": "8594233089106",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
+    },
     "3dfil:4246": {
       "ean": "8594233089113",
       "invalidEan": null,
@@ -4571,14 +4547,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
-    "3dfil:4285": {
-      "ean": "8594233089205",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
     "3dfil:4286": {
       "ean": "8594233089199",
       "invalidEan": null,
@@ -4653,14 +4621,6 @@
     },
     "3dfil:432": {
       "ean": "5904323179021",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
-    "3dfil:4320": {
-      "ean": "8594233089243",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -5067,6 +5027,38 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
+    "3dfil:4482": {
+      "ean": "8594233089564",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
+    },
+    "3dfil:4483": {
+      "ean": "8594233089618",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
+    },
+    "3dfil:4484": {
+      "ean": "8594233089649",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
+    },
+    "3dfil:4485": {
+      "ean": "8594233089687",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
+    },
     "3dfil:562": {
       "ean": "5904323179793",
       "invalidEan": null,
@@ -5168,14 +5160,6 @@
       "invalidEan": null,
       "form": "spool",
       "formRule": "param-spool",
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
-    },
-    "3dfil:970": {
-      "ean": "8594233084453",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
@@ -5618,14 +5602,6 @@
       "formRule": null,
       "formConflict": false,
       "categoryText": "Filamenty pro 3D tiskárny | PLA filament | Rapid PLA+ filament"
-    },
-    "filamenty-brno:50_203_0167": {
-      "ean": "6976021769230",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | Náplně a barvy do tiskáren | Tiskové struny"
     },
     "filamenty-brno:50_203_0188": {
       "ean": "6976021769421",
@@ -8115,14 +8091,6 @@
       "formConflict": false,
       "categoryText": "Filamenty pro 3D tiskárny | ABS filament | ABS+ filamenty"
     },
-    "filamenty-brno:FG-P60-E1": {
-      "ean": "5903707918843",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Filamenty pro 3D tiskárny | PLA filament | Standardní PLA filament"
-    },
     "filamenty-brno:FG-P61-E1": {
       "ean": "5903707918850",
       "invalidEan": null,
@@ -8989,14 +8957,6 @@
     },
     "filamenty-brno:SUN-PLA-MATTE-CERV-ZLU": {
       "ean": "6933582324025",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Filamenty pro 3D tiskárny | PLA filament | PLA Matte filament"
-    },
-    "filamenty-brno:SUN-PLA-MATTE-DUB": {
-      "ean": "6933582324483",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -10171,16 +10131,16 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:ABS175FB85GY": {
-      "ean": "5902560993813",
+    "materialpro3d:ABS175FB85GGY": {
+      "ean": "5902560993882",
       "invalidEan": null,
       "form": null,
       "formRule": null,
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:ABS175FB85LGN": {
-      "ean": "5902560993929",
+    "materialpro3d:ABS175FB85GY": {
+      "ean": "5902560993813",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -10395,38 +10355,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:ABSE175FB75NBET": {
-      "ean": "5902560996524",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:ABSE175FB75OET": {
-      "ean": "5902560996517",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:ABSE175FB75PT": {
-      "ean": "5902560996500",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:ABSESD175FB05BK": {
-      "ean": "5902560994193",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:ABSF175SF75NL": {
       "ean": "8434000001910",
       "invalidEan": null,
@@ -10525,14 +10453,6 @@
     },
     "materialpro3d:AC0067": {
       "ean": "6974662352767",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:AC0068": {
-      "ean": "6974662352774",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -10796,7 +10716,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:ASA175FB1GGY": {
-      "ean": null,
+      "ean": "5902560999846",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -10811,16 +10731,16 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:ASA175FB250BK": {
-      "ean": "5902560991956",
+    "materialpro3d:ASA175FB1OE": {
+      "ean": "5902560992441",
       "invalidEan": null,
       "form": null,
       "formRule": null,
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:ASA175FB75BE": {
-      "ean": "5902560991833",
+    "materialpro3d:ASA175FB1WE": {
+      "ean": "5902560992434",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -10843,14 +10763,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:ASA175FB75YW": {
-      "ean": "5902560991895",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:ASA175FM75GNGS": {
       "ean": "8595632824077",
       "invalidEan": null,
@@ -10861,30 +10773,6 @@
     },
     "materialpro3d:ASA175FM75MGY": {
       "ean": "8595632824046",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:ASA175FM75NL": {
-      "ean": "8595632824008",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:ASA175FM75TBK": {
-      "ean": "8595632824039",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:ASA175FM75TRD": {
-      "ean": "8595632824060",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -10917,6 +10805,14 @@
     },
     "materialpro3d:ASA175PA08LRDNFC": {
       "ean": "8594173675698",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
+    "materialpro3d:ASA175PA08POENFC": {
+      "ean": "8594173675223",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -11203,6 +11099,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:BVOH175FB05NL": {
+      "ean": "5902560999631",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:CF5PACK175SP125": {
       "ean": "5903175655547",
       "invalidEan": null,
@@ -11235,14 +11139,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:CPECF175FM06BK": {
-      "ean": "8595632828105",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:CPEHT175FB75BK": {
       "ean": "5902560996722",
       "invalidEan": null,
@@ -11253,14 +11149,6 @@
     },
     "materialpro3d:CPEHT175FB75PT": {
       "ean": "5902560996708",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:ELESAT4U16": {
-      "ean": "6932704905395",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -11803,22 +11691,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:HIPS175FB85BK": {
-      "ean": "5902560994230",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:HIPS175FB85NL": {
-      "ean": "5902560994209",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:HIPS175SF1BK": {
       "ean": "8434429395232",
       "invalidEan": null,
@@ -11843,16 +11715,16 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:NYL15CF175FB05": {
-      "ean": "5902560992946",
+    "materialpro3d:NYL15CF175FB1": {
+      "ean": "5902560993073",
       "invalidEan": null,
       "form": null,
       "formRule": null,
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:NYL15CF175FB1": {
-      "ean": "5902560993073",
+    "materialpro3d:NYL15CF175FB25": {
+      "ean": "5902560993103",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -11892,7 +11764,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:NYL175FB1BE": {
-      "ean": null,
+      "ean": "5908130990190",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -11900,7 +11772,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:NYL175FB1BK": {
-      "ean": null,
+      "ean": "5902560991901",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -11916,7 +11788,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:NYL175FB1LGN": {
-      "ean": null,
+      "ean": "5902560990720",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -11924,7 +11796,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:NYL175FB1NL": {
-      "ean": null,
+      "ean": "5902560990713",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -12139,16 +12011,8 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PCESD175XT75BK": {
-      "ean": null,
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PCTG175FB1BK": {
-      "ean": "5902560996623",
+      "ean": "5902560999938",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -12204,7 +12068,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PCTG175FB1PT": {
-      "ean": null,
+      "ean": "5902560992052",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -12219,32 +12083,8 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PCTG175FB75BE": {
-      "ean": "5902560996647",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PCTG175FB75BYT": {
-      "ean": "5902560996814",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PCTG175FB75LGNT": {
       "ean": "5902560996692",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PCTG175FB75OET": {
-      "ean": "5902560996807",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -12403,14 +12243,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PCTGRE175FB75GGY": {
-      "ean": "5902560997637",
-      "invalidEan": null,
-      "form": "refill",
-      "formRule": "param-refill",
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PEI175IF75NL": {
       "ean": "8434000010141",
       "invalidEan": null,
@@ -12516,14 +12348,6 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PELPPSF1NL": {
-      "ean": null,
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PELPVASF1NL": {
       "ean": null,
       "invalidEan": null,
       "form": null,
@@ -13035,14 +12859,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PETG175DD1WEI": {
-      "ean": "5902280034377",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PETG175DD1WRD": {
       "ean": "5902280034223",
       "invalidEan": null,
@@ -13091,6 +12907,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:PETG175DD5BK": {
+      "ean": "5902280030973",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:PETG175DD5BOE": {
       "ean": null,
       "invalidEan": null,
@@ -13124,7 +12948,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETG175FB1GGY": {
-      "ean": null,
+      "ean": "5902560998245",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13132,7 +12956,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETG175FB1GY": {
-      "ean": null,
+      "ean": "5902560998191",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13156,7 +12980,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETG175FB1PBE": {
-      "ean": null,
+      "ean": "5902560996586",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13165,6 +12989,14 @@
     },
     "materialpro3d:PETG175FB1PPK": {
       "ean": "5902560996593",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
+    "materialpro3d:PETG175FB1PT": {
+      "ean": "5902560994292",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13180,7 +13012,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETG175PA1CHBENFC": {
-      "ean": null,
+      "ean": "8594173675407",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13204,7 +13036,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETG175PA1JGNNFC": {
-      "ean": null,
+      "ean": "8594173675537",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13220,7 +13052,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETG175PA1OBENFC": {
-      "ean": null,
+      "ean": "8594173675445",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13244,7 +13076,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETG175PA1UBENFC": {
-      "ean": null,
+      "ean": "8594173675209",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -13980,15 +13812,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETGE175FB2500BK": {
-      "ean": "5902560995725",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGE175FB85BE": {
-      "ean": "5902560995565",
+      "ean": "5902560995671",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -14005,22 +13829,6 @@
     },
     "materialpro3d:PETGE175FB85LGNT": {
       "ean": "5902560995602",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGE175FB85NBET": {
-      "ean": "5902560995633",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGE175FB85OE": {
-      "ean": "5902560995541",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -14053,46 +13861,6 @@
     },
     "materialpro3d:PETGE175FB85PLC": {
       "ean": "5902560997569",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGE175FB85PT": {
-      "ean": "5902560995640",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGE175FB85SR": {
-      "ean": "5902560995572",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGE175FB85VO": {
-      "ean": "5902560995589",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGE175FB85YW": {
-      "ean": "5902560995664",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGESD175FB05BK": {
-      "ean": "5902560992892",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -14155,6 +13923,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:PETGHT175SP05OBK": {
+      "ean": "5903175650283",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:PETGHT175SP05PWE": {
       "ean": "5903175650269",
       "invalidEan": null,
@@ -14187,8 +13963,24 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:PETGHT175SP1OBK": {
+      "ean": "5903175650214",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:PETGHT175SP1PWE": {
       "ean": "5903175650191",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
+    "materialpro3d:PETGM175FB1BK": {
+      "ean": "5902560997897",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -14229,30 +14021,6 @@
     },
     "materialpro3d:PETGR175PA1CR": {
       "ean": null,
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGRE175FB85BK": {
-      "ean": "5902560995404",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGRE175FB85GY": {
-      "ean": "5902560995329",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PETGRE175FB85WE": {
-      "ean": "5902560995435",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -14340,7 +14108,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PETGV0175FB85BK": {
-      "ean": "5902560992571",
+      "ean": "5902560992588",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -15291,22 +15059,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PLA175FB250BK": {
-      "ean": "5902560994704",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PLA175FB250GGY": {
-      "ean": "5902560994735",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PLA175FB250GY": {
       "ean": "5902560994698",
       "invalidEan": null,
@@ -15333,14 +15085,6 @@
     },
     "materialpro3d:PLA175FB85BE": {
       "ean": "5902560994612",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PLA175FB85BEG": {
-      "ean": "5902560994650",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -15387,14 +15131,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PLA175FB85GY": {
-      "ean": "5902560994599",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PLA175FB85IGN": {
       "ean": "5902560994544",
       "invalidEan": null,
@@ -15427,14 +15163,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PLA175FB85NBE": {
-      "ean": "5902560994629",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PLA175FB85OE": {
       "ean": "5902560994636",
       "invalidEan": null,
@@ -15451,24 +15179,8 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PLA175FB85PK": {
-      "ean": "5902560994506",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PLA175FB85PMT": {
       "ean": "5902560997712",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PLA175FB85PYW": {
-      "ean": "5902560997705",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -15493,22 +15205,6 @@
     },
     "materialpro3d:PLA175FB85VO": {
       "ean": "5902560994759",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PLA175FB85WE": {
-      "ean": "5902560994575",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PLA175FB85YW": {
-      "ean": "5902560994643",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -15924,6 +15620,14 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PLA175PA1LRDNFC": {
+      "ean": "8594173675025",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
+    "materialpro3d:PLA175PA1MGNNFC": {
       "ean": null,
       "invalidEan": null,
       "form": null,
@@ -17524,7 +17228,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:PLAML175FB1WE": {
-      "ean": null,
+      "ean": "5902560992342",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -17549,14 +17253,6 @@
     },
     "materialpro3d:PLAML175FB85ME": {
       "ean": "5902560990737",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PLAML175FB85NL": {
-      "ean": "5902560990768",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -18307,14 +18003,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PP175FB85BK": {
-      "ean": "5902560993431",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PP175FB85GGY": {
       "ean": "5902560993417",
       "invalidEan": null,
@@ -18339,14 +18027,6 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
-    "materialpro3d:PP175FB85NL": {
-      "ean": "5902560993400",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
     "materialpro3d:PP175FB85OE": {
       "ean": "5902560993486",
       "invalidEan": null,
@@ -18365,14 +18045,6 @@
     },
     "materialpro3d:PP175FB85WE": {
       "ean": "5902560993516",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:PP175FB85YW": {
-      "ean": "5902560993479",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -19491,6 +19163,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:TIF056190": {
+      "ean": "8716309090780",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:TIF0561F0": {
       "ean": "8716309090773",
       "invalidEan": null,
@@ -19509,14 +19189,6 @@
     },
     "materialpro3d:TIF057160": {
       "ean": "8716309103695",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:TIF0571D0": {
-      "ean": "8716309103640",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -19629,14 +19301,6 @@
     },
     "materialpro3d:TIF058119": {
       "ean": "8716309127073",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:TIF058121": {
-      "ean": "8716309127141",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -21083,6 +20747,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:TIFSCE345": {
+      "ean": "5905991404743",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:TIFSCE346": {
       "ean": "5905991404576",
       "invalidEan": null,
@@ -21389,6 +21061,14 @@
     },
     "materialpro3d:TIFSCE388": {
       "ean": "5905991404880",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
+    "materialpro3d:TIFSCE390": {
+      "ean": "5905991405542",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -22315,6 +21995,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:TIFSCF207": {
+      "ean": "5907138401448",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:TIFSCF208": {
       "ean": "5907138401455",
       "invalidEan": null,
@@ -22643,6 +22331,14 @@
       "formConflict": false,
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
+    "materialpro3d:TIFSCF256": {
+      "ean": "5907138402131",
+      "invalidEan": null,
+      "form": null,
+      "formRule": null,
+      "formConflict": false,
+      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
+    },
     "materialpro3d:TIFSCF257": {
       "ean": "5907138401752",
       "invalidEan": null,
@@ -22861,14 +22557,6 @@
     },
     "materialpro3d:TIFSCF284": {
       "ean": "5907138402865",
-      "invalidEan": null,
-      "form": null,
-      "formRule": null,
-      "formConflict": false,
-      "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
-    },
-    "materialpro3d:TIFSCF286": {
-      "ean": "5907138402889",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -24988,7 +24676,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:TPU175PA05NLNFC": {
-      "ean": null,
+      "ean": "8594173676268",
       "invalidEan": null,
       "form": null,
       "formRule": null,
@@ -25204,7 +24892,7 @@
       "categoryText": "Heureka.cz | Elektronika | Počítače a notebooky | Tiskárny a příslušenství | 3D tiskárny"
     },
     "materialpro3d:WOO175FB1BN": {
-      "ean": null,
+      "ean": "5902560992427",
       "invalidEan": null,
       "form": null,
       "formRule": null,

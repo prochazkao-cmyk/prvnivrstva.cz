@@ -7,19 +7,19 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3170 |
-| dlaždice dřív (materiál + barva + hmotnost) | 712 |
-| dlaždice teď | 2121 |
-| nabídky spojené podle EAN | 90 |
-| z toho mezi obchody | 64 |
-| skupiny EAN mezi obchody spojené / nespojené | 32 / 7 |
-| skupiny EAN spojené | 44 |
+| nabídky | 3131 |
+| dlaždice dřív (materiál + barva + hmotnost) | 684 |
+| dlaždice teď | 2088 |
+| nabídky spojené podle EAN | 95 |
+| z toho mezi obchody | 71 |
+| skupiny EAN mezi obchody spojené / nespojené | 35 / 7 |
+| skupiny EAN spojené | 46 |
 | skupiny EAN viděné a nespojené | 7 |
-| nabídky na společné dlaždici v jednom obchodě | 1305 |
+| nabídky na společné dlaždici v jednom obchodě | 1291 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1022 |
-| značky před aliasem / po aliasu | 37 / 35 |
+| nabídky v revizi | 1021 |
+| značky před aliasem / po aliasu | 36 / 34 |
 | materiály před aliasem / po aliasu | 48 / 47 |
 | barvy před aliasem / po aliasu | 68 / 68 |
 
@@ -27,9 +27,9 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 720 |
-| missing-color | 318 |
-| missing-material | 72 |
+| missing-diameter | 716 |
+| missing-color | 317 |
+| missing-material | 74 |
 | ean-conflict | 14 |
 | ean-material-conflict | 12 |
 | form-param-disagrees | 12 |
@@ -38,6 +38,11 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 ## EAN přes víc obchodů
 
+`ean:5903707918508` — Professional Lab · PETG · černá · 1 kg · 1,75 mm · cívka (EAN 5903707918508)
+- 3dfil `3dfil:2360` — PROF. LAB | PETG | Černá | 1.75mm | 1kg
+- filamenty-brno `filamenty-brno:FG-P26-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Černá FG-P26-E1
+- materialpro3d `materialpro3d:PETG175PL1BK` — PETG filament 1,75 mm černý Professional Lab 1 kg
+
 `ean:5903707918300` — Professional Lab · ABS · šedá · 1 kg · 1,75 mm · cívka (EAN 5903707918300)
 - 3dfil `3dfil:3703` — PROF. LAB | ABS | Šedá | 1.75mm | 1kg
 - filamenty-brno `filamenty-brno:FG-P3-E1` — Filament Professional Lab ABS+ 1,75 mm 1 kg, Šedá FG-P3-E1
@@ -45,10 +50,6 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 `ean:5903707918317` — Professional Lab · ABS · žlutá · 1 kg · 1,75 mm · cívka (EAN 5903707918317)
 - 3dfil `3dfil:4161` — PROF. LAB | ABS | Žlutá | 1.75mm | 1kg
 - filamenty-brno `filamenty-brno:FG-P7-E1` — Filament Professional Lab ABS+ 1,75 mm 1 kg, Žlutá FG-P7-E1
-
-`ean:5903707918508` — Professional Lab · PETG · černá · 1 kg · 1,75 mm · cívka (EAN 5903707918508)
-- filamenty-brno `filamenty-brno:FG-P26-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Černá FG-P26-E1
-- materialpro3d `materialpro3d:PETG175PL1BK` — PETG filament 1,75 mm černý Professional Lab 1 kg
 
 ## Příklad rozdělené dlaždice
 
