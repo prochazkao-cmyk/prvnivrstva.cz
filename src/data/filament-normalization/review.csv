@@ -114,7 +114,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1748,3dfil,8594233083173,offer:3dfil:1748,missing-diameter,ERYONE | Pla Silk Triple-color | Černá - Zlatá - Fialová | 1.75mm | 1kg
 3dfil:1749,3dfil,8594233083180,offer:3dfil:1749,missing-diameter,ERYONE | Pla Silk Dual-color | Zlatá-měděná | 1.75mm | 1kg
 3dfil:1758,3dfil,8594233086495,offer:3dfil:1758,missing-diameter,GEEETECH | Pla Silk | Magenta | 1.75mm | 1kg
-3dfil:1759,3dfil,8594233086501,offer:3dfil:1759,missing-diameter,GEEETECH | Pla Silk Dual-color | Černá - Červená | 1.75mm | 1kg
 3dfil:1768,3dfil,8594233086518,offer:3dfil:1768,missing-diameter,GEEETECH | Pla Silk Dual-color | Zlatá - Černá | 1.75mm | 1kg
 3dfil:1769,3dfil,8594233086525,offer:3dfil:1769,missing-diameter,GEEETECH | Pla Silk Dual-color | Modrá - Zelená | 1.75mm | 1kg
 3dfil:1770,3dfil,8594233083203,offer:3dfil:1770,missing-diameter,ERYONE | Pla Silk Dual-color HS | Modrá - Stříbrná | 1.75mm | 1kg
@@ -371,7 +370,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3492,3dfil,8594233086457,offer:3dfil:3492,missing-diameter,PROF. LAB | ASA | Černá | 1.75mm | 1kg
 3dfil:3495,3dfil,8594233086464,offer:3dfil:3495,missing-diameter,PROF. LAB | PETG | MATTE Černá | 1.75mm | 1kg
 3dfil:3496,3dfil,8594233086471,offer:3dfil:3496,missing-diameter,PROF. LAB | PETG | MATTE Bílá | 1.75mm | 1kg
-3dfil:3507,3dfil,8594233087393,offer:3dfil:3507,missing-diameter,PROF. LAB | Nylon | PA12 CF15 Black (Černá) | 1.75mm | 1kg
 3dfil:3510,3dfil,8594233087829,offer:3dfil:3510,missing-diameter,BAMBU LAB | PLA Silk+ | Zlatá | 1.75mm | 1kg | Spool
 3dfil:3513,3dfil,8594233087850,offer:3dfil:3513,missing-diameter,PROF. LAB | PETG | Olivově zelená | 1.75mm | 1kg
 3dfil:3514,3dfil,8594233087843,offer:3dfil:3514,missing-diameter,PROF. LAB | PETG | Žlutá | 1.75mm | 1kg
@@ -575,7 +573,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4314,3dfil,8594233089304,offer:3dfil:4314,form-param-disagrees|missing-diameter,"BAMBU LAB | PLA Matte | Bílá ""Ivory"" | 1.75mm | 1kg | Spool"
 3dfil:4315,3dfil,8594233089236,offer:3dfil:4315,missing-diameter,ELEGOO | Rapid TPU 95A | Red | 1.75mm | 1kg
 3dfil:432,3dfil,5904323179021,offer:3dfil:432,missing-diameter,3DPOWER | PLA | Zelená | 1.75mm | 1kg
-3dfil:4321,3dfil,8594233089250,offer:3dfil:4321,missing-diameter,ELEGOO | TPU 72D | White | 1.75mm | 1kg
 3dfil:4322,3dfil,8594233089267,offer:3dfil:4322,missing-color|missing-diameter,ELEGOO | TPU 72D | White | 1.75mm | 1kg
 3dfil:4323,3dfil,8594233089274,offer:3dfil:4323,missing-diameter,ELEGOO | TPU 72D | Blue | 1.75mm | 1kg
 3dfil:4324,3dfil,8594233089281,offer:3dfil:4324,missing-diameter,ELEGOO | TPU 72D | Green | 1.75mm | 1kg
@@ -635,7 +632,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:567,3dfil,5905143082096,offer:3dfil:567,missing-diameter,3DPOWER | PLA Silk | Zelená | 1.75mm | 1kg
 3dfil:568,3dfil,5904323179854,offer:3dfil:568,missing-diameter,3DPOWER | PLA Silk | Růžová | 1.75mm | 1kg
 3dfil:857,3dfil,8594233082497,offer:3dfil:857,missing-diameter,ERYONE | PLA Silk Dual-color | Zlatá-fialová | 1.75mm | 1kg
-3dfil:858,3dfil,8594233082503,offer:3dfil:858,missing-diameter,ERYONE | PLA Silk Dual-color | Modrozelená-oranžová | 1.75mm | 1kg
 3dfil:861,3dfil,8594233082534,offer:3dfil:861,missing-diameter,ERYONE | PLA Silk Triple-color | Červená - Žlutá - Modrá | 1.75mm | 1kg
 3dfil:862,3dfil,8594233082541,offer:3dfil:862,missing-diameter,ERYONE | PLA Silk Triple-color | Červená - Modrá - Zelená | 1.75mm | 1kg
 3dfil:865,3dfil,8594233082565,offer:3dfil:865,missing-diameter,ERYONE | PLA Silk Macaron Rainbow | Waterfall Rainbow | 1.75mm | 1kg

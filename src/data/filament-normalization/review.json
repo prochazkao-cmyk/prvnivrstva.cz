@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3131,
-    "cardsBefore": 684,
-    "cardsAfter": 2086,
+    "offers": 3125,
+    "cardsBefore": 683,
+    "cardsAfter": 2080,
     "offersMatchedByEan": 98,
     "offersMatchedAcrossShopsByEan": 74,
     "eanGroupsMerged": 47,
@@ -16,7 +16,7 @@
     "shopKeyCards": 297,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1022,
+    "reviewOffers": 1018,
     "brandsBefore": 36,
     "brandsAfter": 34,
     "materialsBefore": 48,
@@ -30,7 +30,7 @@
       "ean-weight-conflict": 2,
       "form-param-disagrees": 12,
       "missing-color": 317,
-      "missing-diameter": 716,
+      "missing-diameter": 712,
       "missing-material": 74
     }
   },
@@ -2205,16 +2205,6 @@
       "productName": "GEEETECH | Pla Silk | Magenta | 1.75mm | 1kg",
       "ean": "8594233086495",
       "cardId": "offer:3dfil:1758",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1759",
-      "shopId": "3dfil",
-      "productName": "GEEETECH | Pla Silk Dual-color | Černá - Červená | 1.75mm | 1kg",
-      "ean": "8594233086501",
-      "cardId": "offer:3dfil:1759",
       "reasons": [
         "missing-diameter"
       ]
@@ -4805,16 +4795,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3507",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | Nylon | PA12 CF15 Black (Černá) | 1.75mm | 1kg",
-      "ean": "8594233087393",
-      "cardId": "offer:3dfil:3507",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3510",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Silk+ | Zlatá | 1.75mm | 1kg | Spool",
@@ -6876,16 +6856,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4321",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | TPU 72D | White | 1.75mm | 1kg",
-      "ean": "8594233089250",
-      "cardId": "offer:3dfil:4321",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4322",
       "shopId": "3dfil",
       "productName": "ELEGOO | TPU 72D | White | 1.75mm | 1kg",
@@ -7477,16 +7447,6 @@
       "productName": "ERYONE | PLA Silk Dual-color | Zlatá-fialová | 1.75mm | 1kg",
       "ean": "8594233082497",
       "cardId": "offer:3dfil:857",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:858",
-      "shopId": "3dfil",
-      "productName": "ERYONE | PLA Silk Dual-color | Modrozelená-oranžová | 1.75mm | 1kg",
-      "ean": "8594233082503",
-      "cardId": "offer:3dfil:858",
       "reasons": [
         "missing-diameter"
       ]
