@@ -23,7 +23,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1170,3dfil,8594233085078,offer:3dfil:1170,missing-diameter,BAMBU LAB | TPU 95A HF | Šedá | 1.75mm | 1kg
 3dfil:1180,3dfil,8594233085177,offer:3dfil:1180,missing-diameter,"BAMBU LAB | PLA Matte | Hnědá ""Latte"" | 1.75mm | 1kg | Refill"
 3dfil:1181,3dfil,8594233085184,offer:3dfil:1181,missing-diameter,"BAMBU LAB | PLA Matte | Šedá ""popel"" | 1.75mm | 1kg | Refill"
-3dfil:1182,3dfil,8594233085191,offer:3dfil:1182,missing-diameter,"BAMBU LAB | PLA Matte | Béžová ""Desert Tan"" | 1.75mm | 1kg | Refill"
 3dfil:1183,3dfil,8594233085207,offer:3dfil:1183,form-param-disagrees|missing-diameter,"BAMBU LAB | PLA Matte | Žlutá ""citron"" | 1.75mm | 1kg"
 3dfil:1184,3dfil,8594233085214,offer:3dfil:1184,form-param-disagrees|missing-diameter,"BAMBU LAB | PLA Matte | Oranžová ""mandarinka"" | 1.75mm | 1kg"
 3dfil:1185,3dfil,8594233085221,offer:3dfil:1185,missing-diameter,"BAMBU LAB | PLA Matte | Růžová ""Sakura"" | 1.75mm | 1kg | Refill"
@@ -388,7 +387,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3529,3dfil,8594233080738,ean:8594233080738,missing-diameter,ZIRO | Pla Silk | Tri Color - Metal Blossom | 1.75mm | 1kg
 3dfil:3530,3dfil,8594233080578,offer:3dfil:3530,missing-diameter,ZIRO | PLA Matte | Stripes - Marshmallow | 1.75mm | 1kg
 3dfil:3531,3dfil,,offer:3dfil:3531,missing-diameter,ZIRO | PLA Matte | Stripes - Zebra | 1.75mm | 1kg
-3dfil:3532,3dfil,8594233087942,offer:3dfil:3532,missing-diameter,PROF. LAB | TPU | Zelená 95A | 1.75mm | 1kg
 3dfil:3533,3dfil,8594233087959,offer:3dfil:3533,missing-diameter,PROF. LAB | TPU | Žlutá 95A | 1.75mm | 1kg
 3dfil:3534,3dfil,8594233087966,offer:3dfil:3534,missing-diameter,PROF. LAB | TPU | Šedá 95A | 1.75mm | 1kg
 3dfil:3535,3dfil,5903707924042,ean:5903707924042,missing-diameter,PROF. LAB | PETG | MATTE Béžová | 1.75mm | 1kg
@@ -771,6 +769,7 @@ materialpro3d:PETGCF175IF05BK,materialpro3d,8434429650669,offer:materialpro3d:PE
 materialpro3d:PETGHT175SP05IGY,materialpro3d,5903175650276,offer:materialpro3d:PETGHT175SP05IGY,missing-color,"PETG HT100 filament Iron Grey 1,75 mm Spectrum 0,5 kg"
 materialpro3d:PETGHT175SP05OBK,materialpro3d,5903175650283,offer:materialpro3d:PETGHT175SP05OBK,missing-material,"PETG HT100 filament Obsidian Black 1,75 mm Spectrum 0,5 kg"
 materialpro3d:PETGHT175SP05SSL,materialpro3d,5903175650290,offer:materialpro3d:PETGHT175SP05SSL,missing-color,"PETG HT100 filament Silver Steel 1,75 mm Spectrum 0,5 kg"
+materialpro3d:PETGHT175SP1IGY,materialpro3d,5903175650207,offer:materialpro3d:PETGHT175SP1IGY,missing-material,"PETG HT100 filament Iron Grey 1,75 mm Spectrum 1 kg"
 materialpro3d:PETGHT175SP1OBK,materialpro3d,5903175650214,offer:materialpro3d:PETGHT175SP1OBK,missing-material,"PETG HT100 filament Obsidian Black 1,75 mm Spectrum 1 kg"
 materialpro3d:PIGSF100DGN,materialpro3d,,offer:materialpro3d:PIGSF100DGN,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 100 g tmavě zelená
 materialpro3d:PIGSF100GN,materialpro3d,,offer:materialpro3d:PIGSF100GN,missing-diameter|missing-material,Pigment pro obarvení pelet Smartfil 100 g zelená

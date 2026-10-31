@@ -1469,25 +1469,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:1182",
-      "match": "single",
-      "ean": null,
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "PLA Matte",
-      "color": "béžová",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "refill",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Bambu Lab · PLA Matte · béžová · 1 kg · refill",
-      "offerIds": [
-        "3dfil:1182"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:1183",
       "match": "single",
       "ean": null,
@@ -7945,25 +7926,6 @@
       "title": "Ziro · PLA Matte · vícebarevná · 1 kg · cívka",
       "offerIds": [
         "3dfil:3531"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:3532",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "TPU",
-      "color": "zelená",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Professional Lab · TPU · zelená · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3532"
       ]
     },
     {
@@ -16422,6 +16384,25 @@
       ]
     },
     {
+      "cardId": "offer:materialpro3d:ABSESD175FB05BK",
+      "match": "single",
+      "ean": null,
+      "brand": "Fiberlogy",
+      "productLine": null,
+      "material": "ABS",
+      "color": "černá",
+      "weightGrams": 500,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "materialpro3d"
+      ],
+      "title": "Fiberlogy · ABS · černá · 500 g · 1,75 mm · cívka",
+      "offerIds": [
+        "materialpro3d:ABSESD175FB05BK"
+      ]
+    },
+    {
       "cardId": "offer:materialpro3d:ABSF175SF75NL",
       "match": "single",
       "ean": null,
@@ -19899,25 +19880,6 @@
       ]
     },
     {
-      "cardId": "offer:materialpro3d:PETG175AP1RD",
-      "match": "single",
-      "ean": null,
-      "brand": "Aurapol",
-      "productLine": null,
-      "material": "PETG",
-      "color": "červená",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Aurapol · PETG · červená · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:PETG175AP1RD"
-      ]
-    },
-    {
       "cardId": "offer:materialpro3d:PETG175AP1SGY",
       "match": "single",
       "ean": null,
@@ -19934,25 +19896,6 @@
       "title": "Aurapol · PETG · šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:PETG175AP1SGY"
-      ]
-    },
-    {
-      "cardId": "offer:materialpro3d:PETG175AP1WE",
-      "match": "single",
-      "ean": null,
-      "brand": "Aurapol",
-      "productLine": null,
-      "material": "PETG",
-      "color": "bílá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Aurapol · PETG · bílá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:PETG175AP1WE"
       ]
     },
     {
@@ -21742,6 +21685,25 @@
       ]
     },
     {
+      "cardId": "offer:materialpro3d:PETGESD175FB05BK",
+      "match": "single",
+      "ean": null,
+      "brand": "Fiberlogy",
+      "productLine": null,
+      "material": "PETG",
+      "color": "černá",
+      "weightGrams": 500,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "materialpro3d"
+      ],
+      "title": "Fiberlogy · PETG · černá · 500 g · 1,75 mm · cívka",
+      "offerIds": [
+        "materialpro3d:PETGESD175FB05BK"
+      ]
+    },
+    {
       "cardId": "offer:materialpro3d:PETGFP175IF75NL",
       "match": "single",
       "ean": null,
@@ -21929,6 +21891,25 @@
       "title": "Spectrum · PETG · transparentní · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:PETGHT175SP1CR"
+      ]
+    },
+    {
+      "cardId": "offer:materialpro3d:PETGHT175SP1IGY",
+      "match": "single",
+      "ean": null,
+      "brand": "Spectrum",
+      "productLine": null,
+      "material": null,
+      "color": "šedá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "materialpro3d"
+      ],
+      "title": "Spectrum · šedá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "materialpro3d:PETGHT175SP1IGY"
       ]
     },
     {
@@ -39658,6 +39639,7 @@
         "materialpro3d:TIFSCF218",
         "materialpro3d:TIFSCF267",
         "materialpro3d:TIFSCF312",
+        "materialpro3d:TIFSCM157",
         "materialpro3d:TIFSCM256"
       ]
     },
@@ -40485,6 +40467,7 @@
       "title": "Spectrum · PLA · vícebarevná · 1 kg · 1,75 mm · refill",
       "offerIds": [
         "materialpro3d:TIFSCR201",
+        "materialpro3d:TIFSCR203",
         "materialpro3d:TIFSCR204",
         "materialpro3d:TIFSCR205",
         "materialpro3d:TIFSCR206"
@@ -40824,14 +40807,6 @@
       "productLine": null,
       "material": "PLA Matte",
       "color": "šedá",
-      "diameterMm": null,
-      "form": "refill"
-    },
-    "3dfil:1182": {
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "PLA Matte",
-      "color": "béžová",
       "diameterMm": null,
       "form": "refill"
     },
@@ -43744,14 +43719,6 @@
       "productLine": null,
       "material": "PLA Matte",
       "color": "vícebarevná",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:3532": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "TPU",
-      "color": "zelená",
       "diameterMm": null,
       "form": "spool"
     },
@@ -50947,6 +50914,14 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
+    "materialpro3d:ABSESD175FB05BK": {
+      "brand": "Fiberlogy",
+      "productLine": null,
+      "material": "ABS",
+      "color": "černá",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
     "materialpro3d:ABSF175SF75NL": {
       "brand": "Smartfil",
       "productLine": null,
@@ -53043,27 +53018,11 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
-    "materialpro3d:PETG175AP1RD": {
-      "brand": "Aurapol",
-      "productLine": null,
-      "material": "PETG",
-      "color": "červená",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
     "materialpro3d:PETG175AP1SGY": {
       "brand": "Aurapol",
       "productLine": null,
       "material": "PETG",
       "color": "šedá",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:PETG175AP1WE": {
-      "brand": "Aurapol",
-      "productLine": null,
-      "material": "PETG",
-      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -54451,6 +54410,14 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
+    "materialpro3d:PETGESD175FB05BK": {
+      "brand": "Fiberlogy",
+      "productLine": null,
+      "material": "PETG",
+      "color": "černá",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
     "materialpro3d:PETGFP175IF75NL": {
       "brand": "Innovatefil",
       "productLine": null,
@@ -54544,6 +54511,14 @@
       "productLine": null,
       "material": "PETG",
       "color": "transparentní",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
+    "materialpro3d:PETGHT175SP1IGY": {
+      "brand": "Spectrum",
+      "productLine": null,
+      "material": null,
+      "color": "šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -63883,6 +63858,14 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
+    "materialpro3d:TIFSCM157": {
+      "brand": "Spectrum",
+      "productLine": null,
+      "material": "PLA",
+      "color": "černá",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
     "materialpro3d:TIFSCM158": {
       "brand": "Spectrum",
       "productLine": null,
@@ -64588,6 +64571,14 @@
       "form": "refill"
     },
     "materialpro3d:TIFSCR201": {
+      "brand": "Spectrum",
+      "productLine": null,
+      "material": "PLA",
+      "color": "vícebarevná",
+      "diameterMm": 1.75,
+      "form": "refill"
+    },
+    "materialpro3d:TIFSCR203": {
       "brand": "Spectrum",
       "productLine": null,
       "material": "PLA",

@@ -7,18 +7,18 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3125 |
-| dlaždice dřív (materiál + barva + hmotnost) | 683 |
-| dlaždice teď | 2080 |
+| nabídky | 3126 |
+| dlaždice dřív (materiál + barva + hmotnost) | 684 |
+| dlaždice teď | 2079 |
 | nabídky spojené podle EAN | 98 |
 | z toho mezi obchody | 74 |
 | skupiny EAN mezi obchody spojené / nespojené | 36 / 8 |
 | skupiny EAN spojené | 47 |
 | skupiny EAN viděné a nespojené | 8 |
-| nabídky na společné dlaždici v jednom obchodě | 1291 |
+| nabídky na společné dlaždici v jednom obchodě | 1293 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1018 |
+| nabídky v revizi | 1017 |
 | značky před aliasem / po aliasu | 36 / 34 |
 | materiály před aliasem / po aliasu | 48 / 47 |
 | barvy před aliasem / po aliasu | 68 / 68 |
@@ -27,9 +27,9 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 712 |
+| missing-diameter | 710 |
 | missing-color | 317 |
-| missing-material | 74 |
+| missing-material | 75 |
 | ean-conflict | 16 |
 | ean-material-conflict | 14 |
 | form-param-disagrees | 12 |

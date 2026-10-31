@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3125,
-    "cardsBefore": 683,
-    "cardsAfter": 2080,
+    "offers": 3126,
+    "cardsBefore": 684,
+    "cardsAfter": 2079,
     "offersMatchedByEan": 98,
     "offersMatchedAcrossShopsByEan": 74,
     "eanGroupsMerged": 47,
@@ -12,11 +12,11 @@
     "eanGroupsCrossShopBlocked": 8,
     "eanGroupsBlocked": 8,
     "eanGroupsSeen": 55,
-    "offersSharingShopKey": 1291,
+    "offersSharingShopKey": 1293,
     "shopKeyCards": 297,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1018,
+    "reviewOffers": 1017,
     "brandsBefore": 36,
     "brandsAfter": 34,
     "materialsBefore": 48,
@@ -30,8 +30,8 @@
       "ean-weight-conflict": 2,
       "form-param-disagrees": 12,
       "missing-color": 317,
-      "missing-diameter": 712,
-      "missing-material": 74
+      "missing-diameter": 710,
+      "missing-material": 75
     }
   },
   "splitExamples": [
@@ -1291,16 +1291,6 @@
       "productName": "BAMBU LAB | PLA Matte | Šedá \"popel\" | 1.75mm | 1kg | Refill",
       "ean": "8594233085184",
       "cardId": "offer:3dfil:1181",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1182",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA Matte | Béžová \"Desert Tan\" | 1.75mm | 1kg | Refill",
-      "ean": "8594233085191",
-      "cardId": "offer:3dfil:1182",
       "reasons": [
         "missing-diameter"
       ]
@@ -4971,16 +4961,6 @@
       "productName": "ZIRO | PLA Matte | Stripes - Zebra | 1.75mm | 1kg",
       "ean": null,
       "cardId": "offer:3dfil:3531",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3532",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | TPU | Zelená 95A | 1.75mm | 1kg",
-      "ean": "8594233087942",
-      "cardId": "offer:3dfil:3532",
       "reasons": [
         "missing-diameter"
       ]
@@ -8864,6 +8844,16 @@
       "cardId": "offer:materialpro3d:PETGHT175SP05SSL",
       "reasons": [
         "missing-color"
+      ]
+    },
+    {
+      "offerId": "materialpro3d:PETGHT175SP1IGY",
+      "shopId": "materialpro3d",
+      "productName": "PETG HT100 filament Iron Grey 1,75 mm Spectrum 1 kg",
+      "ean": "5903175650207",
+      "cardId": "offer:materialpro3d:PETGHT175SP1IGY",
+      "reasons": [
+        "missing-material"
       ]
     },
     {
