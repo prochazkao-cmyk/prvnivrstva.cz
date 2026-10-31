@@ -22,3 +22,16 @@ Nejsou to fotografie dílny První vrstvy, výtisky čtenářů ani podklady vý
 | `print-bins.jpg` | Pás komunity | Přihrádky na spojovací materiál |
 
 Produktové fotky strojů a diagnostické snímky vad zůstávají u zdrojů výrobců. Popisky jsou u záznamů v `src/lib/visuals.ts` (Prusa Research, Bambu Lab, Creality, Formlabs, Prusa Knowledge Base).
+
+## Praktické průvodce, říjen 2026
+
+Soubory ve `/public/media/pruvodce/` jsou stažené fotografie a oficiální snímky dokumentace. Nejsou to ilustrace vygenerované pro homepage. U každého je v článku český alt a figcaption se zdrojem a licencí.
+
+Wikimedia Commons: CC0, CC BY, CC BY-SA. Autor a licence jsou ve figcaption článku.
+
+Oficiální snímky bez samostatné Creative Commons licence, použité jako dokumentace výrobce a popsané ve figcaption:
+
+- `slicer-bambu-filamenty.jpg`, `barvy-bambu-skupiny.png`, `barvy-obarveni.png`, `barvy-odpad.jpg` — wiki Bambu Lab, článek o vícebarevném tisku a o odpadu při výměně filamentu
+- `app-handy-*.png` — wiki Bambu Lab, rychlý návod Bambu Handy
+
+Snímek rozhraní OrcaSliceru, Chituboxu, Lychee a programu HueForge ve velikosti vhodné do článku a pod svobodnou licencí nebyl k dispozici. U těch průvodců jsou buď oficiální snímky příbuzného programu, nebo reálné fotografie výtisků a strojů. V popisku je řečené, co na snímku je.

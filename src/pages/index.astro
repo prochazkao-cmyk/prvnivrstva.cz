@@ -7,6 +7,19 @@ import { editorialVisuals, machineVisuals, problemVisuals } from '../lib/visuals
 const heroPrusa = 'https://images.unsplash.com/photo-1742971500442-8fb8610dfbf5?auto=format&fit=crop&fm=jpg&q=84&w=2400';
 const heroBambu = 'https://images.unsplash.com/photo-1762579318096-8e9bc45b8feb?auto=format&fit=crop&fm=jpg&q=84&w=2400';
 
+const guides = [
+  { n: '01', href: '/clanky/servis-3d-tiskaren/', title: 'Servis tiskáren', copy: 'Výdej v Ostravě na Zahradní 1471/1 a záruční cesta k výrobci.' },
+  { n: '02', href: '/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/', title: 'FDM slicery', copy: 'Bambu Studio, OrcaSlicer a PrusaSlicer podle stroje.' },
+  { n: '03', href: '/clanky/barevny-tisk-ams-mmu/', title: 'Barevný tisk', copy: 'AMS, MMU a výměna celých cívek.' },
+  { n: '04', href: '/clanky/otevrene-cad-freecad-openscad/', title: 'Otevřené CAD', copy: 'FreeCAD a OpenSCAD, než přijde slicer.' },
+  { n: '05', href: '/clanky/databaze-modelu-printables-makerworld-thingiverse/', title: 'Databáze modelů', copy: 'Printables, MakerWorld, Thingiverse a licence.' },
+  { n: '06', href: '/clanky/3d-skenery/', title: '3D skenery', copy: 'Laser, hloubková kamera a kdy sken objednat.' },
+  { n: '07', href: '/clanky/mobilni-aplikace-3d-tisk/', title: 'Mobilní aplikace', copy: 'Bambu Handy a aplikace Prusa podle dokumentace.' },
+  { n: '08', href: '/clanky/multicolor-hueforge/', title: 'Plné spektrum', copy: 'Obraz z propustnosti filamentu, zvlášť od AMS.' },
+  { n: '09', href: '/clanky/sla-slicery-chitubox-lychee/', title: 'SLA slicery', copy: 'Chitubox a Lychee pro resin.' },
+  { n: '10', href: '/clanky/sls-stroje-nebo-servis/', title: 'SLS, nebo zakázka', copy: 'Kdy práškový stroj a kdy jeden díl mimo dům.' },
+];
+
 const communityPrints = [
   editorialVisuals.printToolHolder,
   editorialVisuals.printLamp,
@@ -34,8 +47,8 @@ const jsonLd = {
           <h2>3D tisk bez chaosu.<br />Přehledně, lidsky, odborně.</h2>
           <p class="ref-hero-dek">Nezávislé testy, srozumitelné návody a praktické tipy pro každého, kdo chce z 3D tisku vytěžit maximum.</p>
           <div class="ref-actions">
-            <a class="ref-btn ref-btn-accent" href="/clanky/">Prozkoumat články <span aria-hidden="true">→</span></a>
-            <a class="ref-btn ref-btn-ghost" href="/o-nas/">O nás</a>
+            <a class="ref-btn ref-btn-accent" href="/srovnavac/">Filament podle Kč/kg <span aria-hidden="true">→</span></a>
+            <a class="ref-btn ref-btn-ghost" href="/clanky/servis-3d-tiskaren/">Servis tiskáren</a>
           </div>
         </div>
 
@@ -48,6 +61,38 @@ const jsonLd = {
         </div>
       </div>
       <ExtrusionTrace className="ref-hero-trace" />
+    </section>
+
+    <section class="ref-lead" aria-labelledby="lead-title">
+      <div class="page">
+        <p class="ref-eyebrow">ZAČNĚTE TADY</p>
+        <h2 id="lead-title">Nejdřív filament v Kč/kg. Potom praktický průvodce.</h2>
+        <div class="ref-lead-grid">
+          <a class="ref-lead-card" href="/srovnavac/">
+            <span class="ref-lead-kicker">Srovnávač</span>
+            <strong>Cena filamentu za kilogram.</strong>
+            <p>Veřejné Heureka XML obchodů Materialpro3D, Filamenty Brno a 3Dfil. Pořadí je Kč/kg, doprava je vedle. Stránka není ve vyhledávání, dokud cívky mezi obchody nejsou sloučené.</p>
+            <b>Otevřít srovnávač →</b>
+          </a>
+          <a class="ref-lead-card" href="/clanky/servis-3d-tiskaren/">
+            <span class="ref-lead-kicker">Průvodce 01</span>
+            <strong>Servis tiskáren, nejdřív Ostrava.</strong>
+            <p>Výdejní místo Zahradní 1471/1. Záruční cesta Prusa Research je v Praze. Vztah autora k servisu je v článku napsaný hned.</p>
+            <b>Jak poslat tiskárnu →</b>
+          </a>
+        </div>
+        <ol class="ref-guide-list">
+          {guides.map((guide) => (
+            <li>
+              <a href={guide.href}>
+                <span>{guide.n}</span>
+                <strong>{guide.title}</strong>
+                <small>{guide.copy}</small>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
 
     <nav class="ref-value-rail" aria-label="Hlavní témata">
