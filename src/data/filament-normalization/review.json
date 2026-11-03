@@ -1,37 +1,37 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3150,
-    "cardsBefore": 687,
-    "cardsAfter": 2101,
+    "offers": 3167,
+    "cardsBefore": 689,
+    "cardsAfter": 2118,
     "offersMatchedByEan": 96,
-    "offersMatchedAcrossShopsByEan": 72,
+    "offersMatchedAcrossShopsByEan": 70,
     "eanGroupsMerged": 47,
-    "eanGroupsCrossShop": 47,
-    "eanGroupsCrossShopMerged": 36,
+    "eanGroupsCrossShop": 46,
+    "eanGroupsCrossShopMerged": 35,
     "eanGroupsCrossShopBlocked": 11,
     "eanGroupsBlocked": 11,
     "eanGroupsSeen": 58,
-    "offersSharingShopKey": 1300,
-    "shopKeyCards": 300,
+    "offersSharingShopKey": 1298,
+    "shopKeyCards": 298,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1041,
-    "brandsBefore": 36,
-    "brandsAfter": 34,
-    "materialsBefore": 48,
-    "materialsAfter": 47,
-    "colorsBefore": 68,
-    "colorsAfter": 68,
+    "reviewOffers": 1057,
+    "brandsBefore": 37,
+    "brandsAfter": 35,
+    "materialsBefore": 49,
+    "materialsAfter": 48,
+    "colorsBefore": 69,
+    "colorsAfter": 69,
     "reasons": {
       "ean-brand-conflict": 2,
       "ean-conflict": 22,
       "ean-material-conflict": 20,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 14,
-      "missing-color": 319,
-      "missing-diameter": 731,
-      "missing-material": 75
+      "missing-color": 322,
+      "missing-diameter": 745,
+      "missing-material": 77
     }
   },
   "splitExamples": [
@@ -472,10 +472,11 @@
         {
           "offerId": "filamenty-brno:FG-P139-E1",
           "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab ASA-GF Glass Fiber 1,75 mm 1 kg, Černá FG-P139-E1",
+          "productName": "Filament Professional Lab ASA-GF Glass Fiber 1,75 mm 1 kg, Hnědočerná FG-P139-E1",
           "reasons": [
             "ean-conflict",
-            "ean-material-conflict"
+            "ean-material-conflict",
+            "missing-color"
           ]
         }
       ]
@@ -1035,19 +1036,6 @@
       "reasons": []
     },
     {
-      "ean": "8594210630529",
-      "status": "merged",
-      "shops": [
-        "filamenty-brno",
-        "materialpro3d"
-      ],
-      "offerIds": [
-        "filamenty-brno:ABA-PETG-PLUS-CER",
-        "materialpro3d:PETG175AF1BK"
-      ],
-      "reasons": []
-    },
-    {
       "ean": "8594210630550",
       "status": "merged",
       "shops": [
@@ -1120,6 +1108,18 @@
       "offerIds": [
         "3dfil:2584",
         "3dfil:3529"
+      ],
+      "reasons": []
+    },
+    {
+      "ean": "8594233085108",
+      "status": "merged",
+      "shops": [
+        "3dfil"
+      ],
+      "offerIds": [
+        "3dfil:1173",
+        "3dfil:4526"
       ],
       "reasons": []
     },
@@ -1382,6 +1382,16 @@
       ]
     },
     {
+      "offerId": "3dfil:1137",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU For AMS | Bílá | 1.75mm | 1kg",
+      "ean": "8594233085047",
+      "cardId": "offer:3dfil:1137",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:1168",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Matte | Bílá \"Ivory\" | 1.75mm | 1kg | Refill",
@@ -1416,7 +1426,7 @@
       "shopId": "3dfil",
       "productName": "BAMBU LAB | TPU 95A HF | Červená | 1.75mm | 1kg",
       "ean": "8594233085108",
-      "cardId": "offer:3dfil:1173",
+      "cardId": "ean:8594233085108",
       "reasons": [
         "missing-diameter"
       ]
@@ -3578,16 +3588,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2650",
-      "shopId": "3dfil",
-      "productName": "ERYONE | PETG CF | Oranžová | 1.75mm | 1kg",
-      "ean": "8594233084125",
-      "cardId": "offer:3dfil:2650",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2653",
       "shopId": "3dfil",
       "productName": "ERYONE | PETG CF | Zelená \"tráva | 1.75mm | 1kg",
@@ -4091,6 +4091,17 @@
       ]
     },
     {
+      "offerId": "3dfil:3053",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU 90A | Černá | 1.75mm | 1kg",
+      "ean": "8594233085825",
+      "cardId": "offer:3dfil:3053",
+      "reasons": [
+        "missing-color",
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:3054",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | TPU 90A | Grape Jelly | 1.75mm | 1kg",
@@ -4106,16 +4117,6 @@
       "productName": "BAMBU LAB | TPU 90A | Cocoa Brown | 1.75mm | 1kg",
       "ean": "8594233085849",
       "cardId": "offer:3dfil:3055",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3066",
-      "shopId": "3dfil",
-      "productName": "ZIRO | TPU | Flex Nightsky 95A | 1.75mm | 0.8kg",
-      "ean": "8594233080776",
-      "cardId": "offer:3dfil:3066",
       "reasons": [
         "missing-diameter"
       ]
@@ -6055,16 +6056,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3987",
-      "shopId": "3dfil",
-      "productName": "Polymaker | PETG | PolyLite Polymaker Teal | 1.75mm | 1kg",
-      "ean": "8594233088635",
-      "cardId": "offer:3dfil:3987",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3988",
       "shopId": "3dfil",
       "productName": "Polymaker | PETG | PolyLite Dark Purple | 1.75mm | 1kg",
@@ -7099,6 +7090,16 @@
       ]
     },
     {
+      "offerId": "3dfil:4343",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PETG Matte | Zelená \"Avocado\" | 1.75mm | 1kg | Spool",
+      "ean": "8594233089380",
+      "cardId": "offer:3dfil:4343",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4344",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PETG Matte | Lime | 1.75mm | 1kg | Spool",
@@ -7332,11 +7333,61 @@
       ]
     },
     {
+      "offerId": "3dfil:4417",
+      "shopId": "3dfil",
+      "productName": "NAGA | TPU 95A | Black | 1.75mm | 1kg",
+      "ean": "8594233089816",
+      "cardId": "offer:3dfil:4417",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4418",
+      "shopId": "3dfil",
+      "productName": "NAGA | TPU 95A | Orange | 1.75mm | 1kg",
+      "ean": "8594233089847",
+      "cardId": "offer:3dfil:4418",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4419",
+      "shopId": "3dfil",
+      "productName": "NAGA | TPU 95A | Yellow | 1.75mm | 1kg",
+      "ean": "8594233089861",
+      "cardId": "offer:3dfil:4419",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:442",
       "shopId": "3dfil",
       "productName": "3DPOWER | PLA | Mátová | 1.75mm | 1kg",
       "ean": "5904323179472",
       "cardId": "offer:3dfil:442",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4420",
+      "shopId": "3dfil",
+      "productName": "NAGA | TPU 95A | Grey | 1.75mm | 1kg",
+      "ean": "8594233089830",
+      "cardId": "offer:3dfil:4420",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4421",
+      "shopId": "3dfil",
+      "productName": "NAGA | TPU 95A | Green | 1.75mm | 1kg",
+      "ean": "8594233089823",
+      "cardId": "offer:3dfil:4421",
       "reasons": [
         "missing-diameter"
       ]
@@ -7443,6 +7494,26 @@
       ]
     },
     {
+      "offerId": "3dfil:4474",
+      "shopId": "3dfil",
+      "productName": "NAGA | PEBA | Black | 1.75mm | 1kg",
+      "ean": "8594233089878",
+      "cardId": "offer:3dfil:4474",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4475",
+      "shopId": "3dfil",
+      "productName": "NAGA | TPU 95A | Purple | 1.75mm | 1kg",
+      "ean": "8594233089854",
+      "cardId": "offer:3dfil:4475",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4477",
       "shopId": "3dfil",
       "productName": "Phaetus | aeWorthy PETG CF | Černá | 1.75mm | 1kg",
@@ -7544,6 +7615,46 @@
       ]
     },
     {
+      "offerId": "3dfil:4513",
+      "shopId": "3dfil",
+      "productName": "NAGA | ASA | Black | 1.75mm | 1kg",
+      "ean": "8594233083487",
+      "cardId": "offer:3dfil:4513",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4514",
+      "shopId": "3dfil",
+      "productName": "NAGA | ASA | Coffee | 1.75mm | 1kg",
+      "ean": "8594233083500",
+      "cardId": "offer:3dfil:4514",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4515",
+      "shopId": "3dfil",
+      "productName": "NAGA | ASA | White | 1.75mm | 1kg",
+      "ean": "8594233084019",
+      "cardId": "offer:3dfil:4515",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4522",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU For AMS | Neon Green (Zelená) | 1.75mm | 1kg | Spool",
+      "ean": "8594233086082",
+      "cardId": "offer:3dfil:4522",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4523",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | TPU For AMS | Gray (šedá) | 1.75mm | 1kg | Spool",
@@ -7569,6 +7680,36 @@
       "productName": "BAMBU LAB | TPU For AMS | Red (červená) | 1.75mm | 1kg | Spool",
       "ean": "8594233086792",
       "cardId": "offer:3dfil:4525",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4526",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU 95A HF | Žlutá | 1.75mm | 1kg",
+      "ean": "8594233085108",
+      "cardId": "ean:8594233085108",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4527",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU 90A | Frozen | 1.75mm | 1kg",
+      "ean": "8594233086808",
+      "cardId": "offer:3dfil:4527",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4528",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Matte | Červená \"Scarlet\" | 1.75mm | 1kg | Spool",
+      "ean": "8594233086761",
+      "cardId": "offer:3dfil:4528",
       "reasons": [
         "missing-diameter"
       ]
@@ -7672,6 +7813,16 @@
       "productName": "BAMBU LAB | PLA Silk Multi Color | Aurora Purple | 1.75mm | 1kg",
       "ean": "8594233086136",
       "cardId": "offer:3dfil:4599",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4600",
+      "shopId": "3dfil",
+      "productName": "NAGA | PEBA | White | 1.75mm | 1kg",
+      "ean": "8594233089885",
+      "cardId": "offer:3dfil:4600",
       "reasons": [
         "missing-diameter"
       ]
@@ -7782,16 +7933,6 @@
       "productName": "BAMBU LAB | PLA BASIC | Bílá \"Jade\" | 1.75mm | 1kg | Refill",
       "ean": "8594233084392",
       "cardId": "offer:3dfil:964",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:966",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PETG HF | Modrá | 1.75mm | 1kg | Spool",
-      "ean": "8594233084415",
-      "cardId": "offer:3dfil:966",
       "reasons": [
         "missing-diameter"
       ]
@@ -8220,12 +8361,13 @@
     {
       "offerId": "filamenty-brno:FG-P139-E1",
       "shopId": "filamenty-brno",
-      "productName": "Filament Professional Lab ASA-GF Glass Fiber 1,75 mm 1 kg, Černá FG-P139-E1",
+      "productName": "Filament Professional Lab ASA-GF Glass Fiber 1,75 mm 1 kg, Hnědočerná FG-P139-E1",
       "ean": "5903707922291",
-      "cardId": "shop:filamenty-brno:Professional%20Lab**ASA*%C4%8Dern%C3%A1*1000*1.75*spool",
+      "cardId": "offer:filamenty-brno:FG-P139-E1",
       "reasons": [
         "ean-conflict",
-        "ean-material-conflict"
+        "ean-material-conflict",
+        "missing-color"
       ]
     },
     {
@@ -8759,6 +8901,27 @@
       "ean": "8434000004904",
       "cardId": "offer:materialpro3d:MEDI175SF75NL",
       "reasons": [
+        "missing-material"
+      ]
+    },
+    {
+      "offerId": "materialpro3d:MTL175CF75BZ",
+      "shopId": "materialpro3d",
+      "productName": "METAL filament BRONZEFILL 1,75 mm ColorFabb 750 g",
+      "ean": "8719033555075",
+      "cardId": "offer:materialpro3d:MTL175CF75BZ",
+      "reasons": [
+        "missing-material"
+      ]
+    },
+    {
+      "offerId": "materialpro3d:MTL175CF75SL",
+      "shopId": "materialpro3d",
+      "productName": "METAL filament STEELFILL 1,75 mm ColorFabb 750 g",
+      "ean": "8719033555655",
+      "cardId": "offer:materialpro3d:MTL175CF75SL",
+      "reasons": [
+        "missing-color",
         "missing-material"
       ]
     },
