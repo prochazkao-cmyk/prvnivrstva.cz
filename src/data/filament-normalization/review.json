@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3167,
-    "cardsBefore": 689,
-    "cardsAfter": 2118,
-    "offersMatchedByEan": 96,
-    "offersMatchedAcrossShopsByEan": 70,
-    "eanGroupsMerged": 47,
-    "eanGroupsCrossShop": 46,
-    "eanGroupsCrossShopMerged": 35,
+    "offers": 3161,
+    "cardsBefore": 686,
+    "cardsAfter": 2115,
+    "offersMatchedByEan": 94,
+    "offersMatchedAcrossShopsByEan": 68,
+    "eanGroupsMerged": 46,
+    "eanGroupsCrossShop": 45,
+    "eanGroupsCrossShopMerged": 34,
     "eanGroupsCrossShopBlocked": 11,
     "eanGroupsBlocked": 11,
-    "eanGroupsSeen": 58,
-    "offersSharingShopKey": 1298,
+    "eanGroupsSeen": 57,
+    "offersSharingShopKey": 1296,
     "shopKeyCards": 298,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1057,
+    "reviewOffers": 1063,
     "brandsBefore": 37,
     "brandsAfter": 35,
     "materialsBefore": 49,
@@ -28,9 +28,9 @@
       "ean-conflict": 22,
       "ean-material-conflict": 20,
       "ean-weight-conflict": 2,
-      "form-param-disagrees": 14,
-      "missing-color": 322,
-      "missing-diameter": 745,
+      "form-param-disagrees": 13,
+      "missing-color": 321,
+      "missing-diameter": 751,
       "missing-material": 77
     }
   },
@@ -518,19 +518,6 @@
           ]
         }
       ]
-    },
-    {
-      "ean": "5903707923663",
-      "status": "merged",
-      "shops": [
-        "filamenty-brno",
-        "materialpro3d"
-      ],
-      "offerIds": [
-        "filamenty-brno:FG-P195-E1",
-        "materialpro3d:PETG175PL1OGN"
-      ],
-      "reasons": []
     },
     {
       "ean": "5903707923670",
@@ -1804,16 +1791,6 @@
       ]
     },
     {
-      "offerId": "3dfil:1375",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA Glow | Zelená | 1.75mm | 1kg",
-      "ean": "8594233085443",
-      "cardId": "offer:3dfil:1375",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:1407",
       "shopId": "3dfil",
       "productName": "ERYONE | PLA Silk Triple-color | Červená - Zlatá - Fialová | 1.75mm | 1kg",
@@ -1909,6 +1886,16 @@
       "productName": "ERYONE | PLA Silk Classical Rainbow | 1.75mm | 1kg",
       "ean": "8594233080158",
       "cardId": "offer:3dfil:1435",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1438",
+      "shopId": "3dfil",
+      "productName": "ELEGOO | PLA Silk | Silk Gold | 1.75mm | 1kg",
+      "ean": "8594233081056",
+      "cardId": "offer:3dfil:1438",
       "reasons": [
         "missing-diameter"
       ]
@@ -2191,16 +2178,6 @@
       "productName": "ERYONE | TPU | Černá | 1.75mm | 0.5kg",
       "ean": "8594233080073",
       "cardId": "offer:3dfil:1663",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1666",
-      "shopId": "3dfil",
-      "productName": "ERYONE | Pla Silk Triple-color | Twisted Rainbow-Fire - Červená-Zlatá-Fialová | 1.75mm | 1kg",
-      "ean": "8594233083036",
-      "cardId": "offer:3dfil:1666",
       "reasons": [
         "missing-diameter"
       ]
@@ -2948,6 +2925,16 @@
       "productName": "ELEGOO | Rapid PETG | Beige | 1.75mm | 1kg",
       "ean": "8594233081223",
       "cardId": "offer:3dfil:2198",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:2199",
+      "shopId": "3dfil",
+      "productName": "ELEGOO | Rapid PETG | Brown | 1.75mm | 1kg",
+      "ean": "8594233081230",
+      "cardId": "offer:3dfil:2199",
       "reasons": [
         "missing-diameter"
       ]
@@ -4549,6 +4536,16 @@
       ]
     },
     {
+      "offerId": "3dfil:3287",
+      "shopId": "3dfil",
+      "productName": "ELEGOO | PETG-GF | Black | 1.75mm | 1kg",
+      "ean": "8594233082206",
+      "cardId": "offer:3dfil:3287",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:3296",
       "shopId": "3dfil",
       "productName": "ELEGOO | PETG Pro | Light Blue | 1.75mm | 1kg",
@@ -4574,6 +4571,16 @@
       "productName": "BAMBU LAB | ABS | Azure Modrá | 1.75mm | 1kg | Refill",
       "ean": "8594233085955",
       "cardId": "offer:3dfil:3313",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:3314",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | ABS | Zelená \"Olive\" | 1.75mm | 1kg | Refill",
+      "ean": "8594233085962",
+      "cardId": "offer:3dfil:3314",
       "reasons": [
         "missing-diameter"
       ]
@@ -6041,6 +6048,16 @@
       "productName": "3DPOWER | TPU | Tmavě modrá | 1.75mm | 0.5kg",
       "ean": "5905143082157",
       "cardId": "offer:3dfil:3967",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:3969",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU 90A | Quicksilver | 1.75mm | 1kg",
+      "ean": "8594233088604",
+      "cardId": "offer:3dfil:3969",
       "reasons": [
         "missing-diameter"
       ]
@@ -7828,6 +7845,46 @@
       ]
     },
     {
+      "offerId": "3dfil:4619",
+      "shopId": "3dfil",
+      "productName": "ELEGOO | PETG-GF | Black | 1.75mm | 1kg POŠKOZENÝ OBAL",
+      "ean": null,
+      "cardId": "offer:3dfil:4619",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4620",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | SUPPORT | PLA-PETG (Natur) | 1.75mm | 0,5kg | Spool",
+      "ean": "8594233089892",
+      "cardId": "offer:3dfil:4620",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4627",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | SUPPORT | PVA | 1.75mm | 0,5kg | Spool",
+      "ean": "8594233089908",
+      "cardId": "offer:3dfil:4627",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4630",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Pure | Pure White | 1.75mm | 1kg | Spool",
+      "ean": null,
+      "cardId": "offer:3dfil:4630",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:562",
       "shopId": "3dfil",
       "productName": "3DPOWER | PLA Silk | Fialová | 1.75mm | 1kg",
@@ -7974,18 +8031,6 @@
       "ean": "8594233084521",
       "cardId": "offer:3dfil:977",
       "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:978",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PETG HF | Krémová | 1.75mm | 1kg | Spool",
-      "ean": "8594233084538",
-      "cardId": "offer:3dfil:978",
-      "reasons": [
-        "form-param-disagrees",
-        "missing-color",
         "missing-diameter"
       ]
     },

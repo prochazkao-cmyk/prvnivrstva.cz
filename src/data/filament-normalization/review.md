@@ -7,18 +7,18 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3167 |
-| dlaždice dřív (materiál + barva + hmotnost) | 689 |
-| dlaždice teď | 2118 |
-| nabídky spojené podle EAN | 96 |
-| z toho mezi obchody | 70 |
-| skupiny EAN mezi obchody spojené / nespojené | 35 / 11 |
-| skupiny EAN spojené | 47 |
+| nabídky | 3161 |
+| dlaždice dřív (materiál + barva + hmotnost) | 686 |
+| dlaždice teď | 2115 |
+| nabídky spojené podle EAN | 94 |
+| z toho mezi obchody | 68 |
+| skupiny EAN mezi obchody spojené / nespojené | 34 / 11 |
+| skupiny EAN spojené | 46 |
 | skupiny EAN viděné a nespojené | 11 |
-| nabídky na společné dlaždici v jednom obchodě | 1298 |
+| nabídky na společné dlaždici v jednom obchodě | 1296 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1057 |
+| nabídky v revizi | 1063 |
 | značky před aliasem / po aliasu | 37 / 35 |
 | materiály před aliasem / po aliasu | 49 / 48 |
 | barvy před aliasem / po aliasu | 69 / 69 |
@@ -27,12 +27,12 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 745 |
-| missing-color | 322 |
+| missing-diameter | 751 |
+| missing-color | 321 |
 | missing-material | 77 |
 | ean-conflict | 22 |
 | ean-material-conflict | 20 |
-| form-param-disagrees | 14 |
+| form-param-disagrees | 13 |
 | ean-brand-conflict | 2 |
 | ean-weight-conflict | 2 |
 
