@@ -41,4 +41,4 @@ Orientace a packing více dílů do cake ovlivňují cenu i kvalitu.
 
 ## Praktický závěr
 
-SLS volte, když potřebujete **nylonovou geometrii bez support hell** a FDM/SLA nestačí. Nejdřív vyzkoušejte service bureau na jednom dílu, než investujete do vlastního práškového stroje.
+SLS volte, když potřebujete **nylonovou geometrii bez support hell** a FDM/SLA nestačí. Nejdřív vyzkoušejte service bureau na jednom dílu, než investujete do vlastního práškového stroje. Rozhodnutí mezi strojem a zakázkou, bez cen, je v [průvodci SLS](/clanky/sls-stroje-nebo-servis/).

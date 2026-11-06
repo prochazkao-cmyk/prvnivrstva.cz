@@ -18,7 +18,7 @@ evidence: "vyrobce"
 sourceNote: "Licenční principy kontrolovány 30. 9. 2026 proti Creative Commons a veřejným informacím Printables, MakerWorld a Thingiverse. Nejde o právní radu; rozhodující je licence konkrétního modelu a případná další práva."
 ---
 
-**Model stažený zdarma není automaticky „volný k čemukoli“.** Před tiskem pro zákazníka, prodejem výtisku, úpravou modelu nebo jeho dalším sdílením vždy otevřete licenci konkrétního modelu.
+**Model stažený zdarma není automaticky „volný k čemukoli“.** Před tiskem pro zákazníka, prodejem výtisku, úpravou modelu nebo jeho dalším sdílením vždy otevřete licenci konkrétního modelu. Praktický postup stahování, rozdíl STL a 3MF a odkazy na knihovny jsou v [průvodci databázemi](/clanky/databaze-modelu-printables-makerworld-thingiverse/).
 
 Pro běžné hledání modelů jsou nejpraktičtější velké knihovny jako Printables, MakerWorld a Thingiverse. Důležitější než logo platformy je ale konkrétní autor, původ modelu a licence uvedená na jeho stránce.
 
