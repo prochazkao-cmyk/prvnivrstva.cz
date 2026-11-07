@@ -7,34 +7,34 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3149 |
-| dlaždice dřív (materiál + barva + hmotnost) | 683 |
-| dlaždice teď | 2161 |
+| nabídky | 3145 |
+| dlaždice dřív (materiál + barva + hmotnost) | 684 |
+| dlaždice teď | 2101 |
 | nabídky spojené podle EAN | 96 |
 | z toho mezi obchody | 70 |
 | skupiny EAN mezi obchody spojené / nespojené | 34 / 10 |
 | skupiny EAN spojené | 46 |
 | skupiny EAN viděné a nespojené | 10 |
-| nabídky na společné dlaždici v jednom obchodě | 1224 |
+| nabídky na společné dlaždici v jednom obchodě | 1289 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1127 |
+| nabídky v revizi | 1048 |
 | značky před aliasem / po aliasu | 37 / 35 |
-| materiály před aliasem / po aliasu | 50 / 49 |
-| barvy před aliasem / po aliasu | 68 / 68 |
+| materiály před aliasem / po aliasu | 49 / 48 |
+| barvy před aliasem / po aliasu | 69 / 69 |
 
 ## Důvody revize
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 739 |
-| missing-color | 394 |
+| missing-diameter | 736 |
+| missing-color | 318 |
 | missing-material | 78 |
 | ean-conflict | 20 |
-| ean-material-conflict | 20 |
+| ean-material-conflict | 18 |
 | form-param-disagrees | 12 |
-| ean-weight-conflict | 4 |
 | ean-brand-conflict | 2 |
+| ean-weight-conflict | 2 |
 
 ## EAN přes víc obchodů
 
@@ -54,7 +54,7 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 ## Příklad rozdělené dlaždice
 
-Původní klíč `pla||1000`: 186 nabídek, 17 značek.
+Původní klíč `pla||1000`: 131 nabídek, 17 značek.
 - `offer:materialpro3d:PLA175LB1CRW` — 3DLabPrint · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA natural filament 1,75 mm 3DLabPrint 1 kg)
 - `offer:3dfil:447` — 3DPower · PLA · neuvedeno · 1 kg · cívka (3dfil, 3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg)
 - `offer:materialpro3d:PLA175AP1HSN` — Aurapol · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PLA filament tělový skin human color 1,75 mm Aurapol 1 kg)
@@ -69,8 +69,8 @@ Původní klíč `pla||1000`: 186 nabídek, 17 značek.
 - EAN 5903707923946 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3651 (PROF. LAB | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:FG-P211-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Šedá FG-P211-E1)
 - EAN 5903707923953 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3708 (PROF. LAB | PETG-CF | Green | 1.75mm | 1kg); filamenty-brno:FG-P212-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1)
 - EAN 5903707923960 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4029 (PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg); filamenty-brno:FG-P213-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1)
-- EAN 6932704920299 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict, ean-weight-conflict — 3dfil:3697 (ELEGOO | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:50_203_0648 (Filament ELEGOO PETG-CF Carbon fiber 1,75 mm 0,5 kg, Šedá)
-- EAN 6933582322250 — 3dfil, filamenty-brno — ean-brand-conflict, ean-conflict, ean-material-conflict, ean-weight-conflict — 3dfil:4413 (SUNLU | PP | Natur | 1.75mm | 0,8kg); filamenty-brno:SUN-PP-PRI (Filament Sunlu PP 1,75 mm 1 kg, Přírodní)
+- EAN 6932704920299 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3697 (ELEGOO | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:50_203_0648 (Filament ELEGOO PETG-CF Carbon fiber 1,75 mm 0,5 kg, Šedá)
+- EAN 6933582322250 — 3dfil, filamenty-brno — ean-brand-conflict, ean-conflict, ean-weight-conflict — 3dfil:4413 (SUNLU | PP | Natur | 1.75mm | 0,8kg); filamenty-brno:SUN-PP-PRI (Filament Sunlu PP 1,75 mm 1 kg, Přírodní)
 
 Aliasové návrhy, které se neaplikují, jsou v `alias-candidates.json`.
 Celý seznam nabídek v revizi je v `review.csv` a `review.json`.

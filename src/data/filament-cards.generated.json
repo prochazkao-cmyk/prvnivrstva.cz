@@ -2484,25 +2484,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:1458",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Elegoo · PETG · černá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:1458"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:148",
       "match": "single",
       "ean": null,
@@ -4970,25 +4951,6 @@
       "title": "Eryone · TPU · neuvedeno · 1 kg · cívka",
       "offerIds": [
         "3dfil:2459"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:2478",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "transparentní",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Elegoo · PETG · transparentní · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:2478"
       ]
     },
     {
@@ -7478,25 +7440,6 @@
       "title": "Polymaker · PETG · červená · 1 kg · cívka",
       "offerIds": [
         "3dfil:3457"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:3460",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Professional Lab · PLA Silk · černá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3460"
       ]
     },
     {
@@ -12592,6 +12535,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:4650",
+      "match": "single",
+      "ean": null,
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "PLA",
+      "color": "oranžová",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Bambu Lab · PLA · oranžová · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4650"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:562",
       "match": "single",
       "ean": null,
@@ -12627,25 +12589,6 @@
       "title": "3DPower · PLA Silk · červená · 1 kg · cívka",
       "offerIds": [
         "3dfil:564"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:565",
-      "match": "single",
-      "ean": null,
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "modrá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "3DPower · PLA Silk · modrá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:565"
       ]
     },
     {
@@ -13352,6 +13295,25 @@
       ]
     },
     {
+      "cardId": "offer:filamenty-brno:50_203_0110",
+      "match": "single",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "PLA",
+      "color": null,
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0110"
+      ]
+    },
+    {
       "cardId": "offer:filamenty-brno:50_203_0120",
       "match": "single",
       "ean": null,
@@ -13485,58 +13447,20 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:50_203_0540",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PC",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PC · černá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0540"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:50_203_0541",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PC",
-      "color": "bílá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PC · bílá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0541"
-      ]
-    },
-    {
       "cardId": "offer:filamenty-brno:50_203_0542",
       "match": "single",
       "ean": null,
       "brand": "Elegoo",
       "productLine": null,
-      "material": "Nylon",
-      "color": null,
+      "material": "PC",
+      "color": "transparentní černá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · Nylon · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PC · transparentní černá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0542"
       ]
@@ -13634,6 +13558,63 @@
       "title": "Elegoo · TPU · šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0573"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:50_203_0637",
+      "match": "single",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "PETG",
+      "color": "šedá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · PETG · šedá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0637"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:50_203_0639",
+      "match": "single",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "Nylon",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · Nylon · černá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0639"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:50_203_0640",
+      "match": "single",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "Nylon",
+      "color": "černá",
+      "weightGrams": 500,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · Nylon · černá · 500 g · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0640"
       ]
     },
     {
@@ -13738,14 +13719,14 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
-      "weightGrams": 1000,
+      "color": "černá",
+      "weightGrams": 500,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · černá · 500 g · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0649"
       ]
@@ -13757,20 +13738,20 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
-      "weightGrams": 1000,
+      "color": "bílá",
+      "weightGrams": 500,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · bílá · 500 g · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0651"
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:50_203_0693",
+      "cardId": "offer:filamenty-brno:50_203_0654",
       "match": "single",
       "ean": null,
       "brand": "Elegoo",
@@ -13784,6 +13765,25 @@
         "filamenty-brno"
       ],
       "title": "Elegoo · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0654"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:50_203_0693",
+      "match": "single",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "PLA",
+      "color": "měděná",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · PLA · měděná · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0693"
       ]
@@ -13865,79 +13865,22 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:50_203_0770",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PC-FR",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PC-FR · černá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0770"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:50_203_0771",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PC-FR",
-      "color": "bílá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PC-FR · bílá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0771"
-      ]
-    },
-    {
       "cardId": "offer:filamenty-brno:50_203_0772",
       "match": "single",
       "ean": null,
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní modrá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · transparentní modrá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0772"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:50_203_0773",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0773"
       ]
     },
     {
@@ -13947,14 +13890,14 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní oranžová",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · transparentní oranžová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0774"
       ]
@@ -13966,14 +13909,14 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní fialová",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · transparentní fialová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0775"
       ]
@@ -13985,35 +13928,16 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní šedá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · transparentní šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0776"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:50_203_0777",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0777"
       ]
     },
     {
@@ -14023,14 +13947,14 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní hnědá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · transparentní hnědá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0778"
       ]
@@ -14042,14 +13966,14 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní růžová",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · transparentní růžová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0779"
       ]
@@ -14644,6 +14568,44 @@
       ]
     },
     {
+      "cardId": "offer:filamenty-brno:FG-P182-E1",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA",
+      "color": null,
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:FG-P182-E1"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:FG-P184-E1",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA",
+      "color": null,
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:FG-P184-E1"
+      ]
+    },
+    {
       "cardId": "offer:filamenty-brno:FG-P187-E1",
       "match": "single",
       "ean": null,
@@ -14872,7 +14834,7 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:FG-P204-E1",
+      "cardId": "offer:filamenty-brno:FG-P202-E1",
       "match": "single",
       "ean": null,
       "brand": "Professional Lab",
@@ -14887,7 +14849,45 @@
       ],
       "title": "Professional Lab · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
+        "filamenty-brno:FG-P202-E1"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:FG-P204-E1",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PETG",
+      "color": "měděná",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · PETG · měděná · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
         "filamenty-brno:FG-P204-E1"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:FG-P209-E1",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PETG",
+      "color": "modrá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · PETG · modrá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:FG-P209-E1"
       ]
     },
     {
@@ -14964,25 +14964,6 @@
       "title": "Professional Lab · PETG · fialová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:FG-P213-E1"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:FG-P215-E1",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PETG",
-      "color": "bílá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Professional Lab · PETG · bílá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:FG-P215-E1"
       ]
     },
     {
@@ -15100,25 +15081,6 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:FG-P46-E1",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA+",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Professional Lab · PLA+ · černá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:FG-P46-E1"
-      ]
-    },
-    {
       "cardId": "offer:filamenty-brno:FG-P5-E1",
       "match": "single",
       "ean": null,
@@ -15154,6 +15116,25 @@
       "title": "Professional Lab · ABS · zelená · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:FG-P6-E1"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:FG-P69-E1",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA",
+      "color": "béžová",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · PLA · béžová · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:FG-P69-E1"
       ]
     },
     {
@@ -15220,14 +15201,14 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "měděná",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Professional Lab · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Professional Lab · PLA · měděná · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:FG-P92-E1"
       ]
@@ -15258,73 +15239,16 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "ABS",
-      "color": null,
+      "color": "béžová",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Sunlu · ABS · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Sunlu · ABS · béžová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-ABS-BEZ"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-ABS-BIL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "ABS",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · ABS · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-ABS-BIL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-ABS-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "ABS",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · ABS · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-ABS-CER"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-ABS-FR-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "ABS",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · ABS · černá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-ABS-FR-CER"
       ]
     },
     {
@@ -15537,98 +15461,22 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-HS-PLA-PLUS-BIL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-HS-PLA-PLUS-BIL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-HS-PLA-PLUS-SED",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-HS-PLA-PLUS-SED"
-      ]
-    },
-    {
       "cardId": "offer:filamenty-brno:SUN-PA6-GF-SED",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
       "productLine": null,
       "material": "Nylon",
-      "color": null,
+      "color": "šedá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Sunlu · Nylon · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Sunlu · Nylon · šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-PA6-GF-SED"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PC-ABS-BIL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "ABS",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · ABS · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PC-ABS-BIL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PC-ABS-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "ABS",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · ABS · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PC-ABS-CER"
       ]
     },
     {
@@ -15638,14 +15486,14 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "bílá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Sunlu · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Sunlu · PETG · bílá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-PETG-BIL"
       ]
@@ -15657,14 +15505,14 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "hnědá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Sunlu · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Sunlu · PETG · hnědá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-PETG-HNE"
       ]
@@ -15784,26 +15632,7 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-PLA-LUM-CERV",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": "červená",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · červená · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-LUM-CERV"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-CER",
+      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-JIL",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
@@ -15818,11 +15647,11 @@
       ],
       "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-CER"
+        "filamenty-brno:SUN-PLA-MATTE-JIL"
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-CER-CERV",
+      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-SLO",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
@@ -15837,11 +15666,11 @@
       ],
       "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-CER-CERV"
+        "filamenty-brno:SUN-PLA-MATTE-SLO"
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-CER-MOD",
+      "cardId": "offer:filamenty-brno:SUN-PLA-META-KREM-BIL",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
@@ -15856,11 +15685,11 @@
       ],
       "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-CER-MOD"
+        "filamenty-brno:SUN-PLA-META-KREM-BIL"
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-CERV",
+      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-MAG",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
@@ -15875,11 +15704,11 @@
       ],
       "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-CERV"
+        "filamenty-brno:SUN-PLA-PLUS-2-0-MAG"
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-CERV-MOD",
+      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-SLO",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
@@ -15894,11 +15723,11 @@
       ],
       "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-CERV-MOD"
+        "filamenty-brno:SUN-PLA-PLUS-2-0-SLO"
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-CERV-ORA",
+      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-SV-KER",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
@@ -15913,634 +15742,26 @@
       ],
       "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-CERV-ORA"
+        "filamenty-brno:SUN-PLA-PLUS-2-0-SV-KER"
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-CERV-ZLU",
+      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-TYR",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "tyrkysová",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Sunlu · PLA · tyrkysová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-CERV-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-LEV",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-LEV"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-SAF-MOD",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-SAF-MOD"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-SED",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-SED"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-ZEL-FIA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-ZEL-FIA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-ZLU",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-ZLU-TYR",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-MATTE-ZLU-TYR"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-CER"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-CERV",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-CERV"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-CITRO-ZLU",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-CITRO-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-FIA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-FIA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-JAB-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-JAB-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-LED-MOD",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-LED-MOD"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-MAT-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-MAT-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-RUZ",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": "růžová",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · růžová · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-RUZ"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-SAKURA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-SAKURA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-META-SED",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-META-SED"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-BEZ",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-BEZ"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-CER"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-CERV",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-CERV"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-HNE",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-HNE"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-ORA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-ORA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-SAF",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-SAF"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-SED",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-SED"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-2-0-ZLU",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-2-0-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-CER"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-CERV",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-CERV"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-SAF",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-SAF"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-PLUS-ZLU",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-PLUS-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-TRANS",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": "transparentní",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · transparentní · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-TRANS"
+        "filamenty-brno:SUN-PLA-PLUS-2-0-TYR"
       ]
     },
     {
@@ -16560,82 +15781,6 @@
       "title": "Sunlu · PLA · transparentní černá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-PLA-TRANS-CER"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-TRANS-DUH1",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-TRANS-DUH1"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-TRANS-DUH2",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-TRANS-DUH2"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-TRANS-DUH3",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-TRANS-DUH3"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-PLA-TRANS-DUH4",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-PLA-TRANS-DUH4"
       ]
     },
     {
@@ -16815,7 +15960,7 @@
       "ean": null,
       "brand": "Sunlu",
       "productLine": null,
-      "material": "Nylon",
+      "material": "PP",
       "color": null,
       "weightGrams": 1000,
       "diameterMm": 1.75,
@@ -16823,7 +15968,7 @@
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Sunlu · Nylon · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Sunlu · PP · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-PP-PRI"
       ]
@@ -16962,440 +16107,22 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CER",
+      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-MOSAZ",
       "match": "single",
       "ean": null,
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "zlatá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "title": "Sunlu · PLA · zlatá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CER-FIA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-FIA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CER-MOD",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-MOD"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CER-SED-CERV-ZLU",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-SED-CERV-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZLA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZLA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZLA-FIA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZLA-FIA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CERV",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CERV-MOD",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-MOD"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-MOD",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-MOD"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-ZEL-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-ZEL-CER"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-MOD-FIA-CERV-ZLA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-FIA-CERV-ZLA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-MOD-FIA-ORA-ZLU",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-FIA-ORA-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-MOD-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-MOD-ZEL-FIA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-ZEL-FIA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-ORA-MOD-ZEL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-ORA-MOD-ZEL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-RUZ-ZLA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-RUZ-ZLA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-SILK-PLA-PLUS-ZEL-FIA",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "PLA",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-SILK-PLA-PLUS-ZEL-FIA"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-TPU-90A-BIL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "TPU",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · TPU · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-TPU-90A-BIL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-TPU-95A-BIL",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "TPU",
-      "color": "bílá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · TPU · bílá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-TPU-95A-BIL"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-TPU-95A-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "TPU",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · TPU · černá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-TPU-95A-CER"
+        "filamenty-brno:SUN-SILK-PLA-PLUS-MOSAZ"
       ]
     },
     {
@@ -17491,25 +16218,6 @@
       "title": "Sunlu · TPU · žlutá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-TPU-95A-ZLU"
-      ]
-    },
-    {
-      "cardId": "offer:filamenty-brno:SUN-TPU-SILK-CER",
-      "match": "single",
-      "ean": null,
-      "brand": "Sunlu",
-      "productLine": null,
-      "material": "TPU",
-      "color": null,
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Sunlu · TPU · neuvedeno · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:SUN-TPU-SILK-CER"
       ]
     },
     {
@@ -26120,6 +24828,25 @@
       ]
     },
     {
+      "cardId": "offer:materialpro3d:PLA175LB1LTG",
+      "match": "single",
+      "ean": null,
+      "brand": "3DLabPrint",
+      "productLine": null,
+      "material": "PLA",
+      "color": "šedá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "materialpro3d"
+      ],
+      "title": "3DLabPrint · PLA · šedá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "materialpro3d:PLA175LB1LTG"
+      ]
+    },
+    {
       "cardId": "offer:materialpro3d:PLA175LB1O",
       "match": "single",
       "ean": null,
@@ -30699,25 +29426,6 @@
       ]
     },
     {
-      "cardId": "offer:materialpro3d:TIF0531D0",
-      "match": "single",
-      "ean": null,
-      "brand": "GEMBIRD",
-      "productLine": null,
-      "material": "HIPS",
-      "color": "červená",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "GEMBIRD · HIPS · červená · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:TIF0531D0"
-      ]
-    },
-    {
       "cardId": "offer:materialpro3d:TIF055110",
       "match": "single",
       "ean": null,
@@ -31057,25 +29765,6 @@
       "title": "GEMBIRD · PLA · neuvedeno · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:TIF058116"
-      ]
-    },
-    {
-      "cardId": "offer:materialpro3d:TIF059110",
-      "match": "single",
-      "ean": null,
-      "brand": "GEMBIRD",
-      "productLine": null,
-      "material": "PVA",
-      "color": "přírodní",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "GEMBIRD · PVA · přírodní · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:TIF059110"
       ]
     },
     {
@@ -35774,12 +34463,12 @@
       ]
     },
     {
-      "cardId": "shop:filamenty-brno:Elegoo**Nylon*%C4%8Dern%C3%A1*1000*1.75*spool",
+      "cardId": "shop:filamenty-brno:Elegoo**PC*%C4%8Dern%C3%A1*1000*1.75*spool",
       "match": "shop",
       "ean": null,
       "brand": "Elegoo",
       "productLine": null,
-      "material": "Nylon",
+      "material": "PC",
       "color": "černá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
@@ -35787,10 +34476,30 @@
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · Nylon · černá · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PC · černá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:50_203_0639",
-        "filamenty-brno:50_203_0640"
+        "filamenty-brno:50_203_0540",
+        "filamenty-brno:50_203_0770"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Elegoo**PC*b%C3%ADl%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "PC",
+      "color": "bílá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · PC · bílá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0541",
+        "filamenty-brno:50_203_0771"
       ]
     },
     {
@@ -35814,22 +34523,21 @@
       ]
     },
     {
-      "cardId": "shop:filamenty-brno:Elegoo**PETG*%C5%A1ed%C3%A1*1000*1.75*spool",
+      "cardId": "shop:filamenty-brno:Elegoo**PETG*%C5%A1ed%C3%A1*500*1.75*spool",
       "match": "shop",
       "ean": null,
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
       "color": "šedá",
-      "weightGrams": 1000,
+      "weightGrams": 500,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Elegoo · PETG · šedá · 1 kg · 1,75 mm · cívka",
+      "title": "Elegoo · PETG · šedá · 500 g · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:50_203_0637",
         "filamenty-brno:50_203_0648",
         "filamenty-brno:50_203_0650"
       ]
@@ -35918,6 +34626,26 @@
       ]
     },
     {
+      "cardId": "shop:filamenty-brno:Elegoo**PETG*transparentn%C3%AD%20zelen%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "PETG",
+      "color": "transparentní zelená",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · PETG · transparentní zelená · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0773",
+        "filamenty-brno:50_203_0777"
+      ]
+    },
+    {
       "cardId": "shop:filamenty-brno:Elegoo**PETG*zelen%C3%A1*1000*1.75*spool",
       "match": "shop",
       "ean": null,
@@ -35954,7 +34682,6 @@
       ],
       "title": "Elegoo · PLA · černá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:50_203_0110",
         "filamenty-brno:50_203_0188",
         "filamenty-brno:50_203_0464",
         "filamenty-brno:50_203_0533",
@@ -36057,7 +34784,6 @@
       ],
       "title": "Elegoo · PLA · béžová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:50_203_0168",
         "filamenty-brno:50_203_0656",
         "filamenty-brno:50_203_0763"
       ]
@@ -36104,7 +34830,6 @@
       "offerIds": [
         "filamenty-brno:50_203_0105",
         "filamenty-brno:50_203_0196",
-        "filamenty-brno:50_203_0230",
         "filamenty-brno:50_203_0234",
         "filamenty-brno:50_203_0754",
         "filamenty-brno:50_203_0821"
@@ -36129,7 +34854,6 @@
         "filamenty-brno:50_203_0313",
         "filamenty-brno:50_203_0652",
         "filamenty-brno:50_203_0653",
-        "filamenty-brno:50_203_0654",
         "filamenty-brno:50_203_0657",
         "filamenty-brno:50_203_0755"
       ]
@@ -36155,7 +34879,6 @@
         "filamenty-brno:50_203_0117",
         "filamenty-brno:50_203_0191",
         "filamenty-brno:50_203_0192",
-        "filamenty-brno:50_203_0753",
         "filamenty-brno:50_203_0758",
         "filamenty-brno:50_203_0818",
         "filamenty-brno:50_203_0822"
@@ -36245,6 +34968,7 @@
         "filamenty-brno:50_203_0108",
         "filamenty-brno:50_203_0162",
         "filamenty-brno:50_203_0538",
+        "filamenty-brno:50_203_0753",
         "filamenty-brno:50_203_0760",
         "filamenty-brno:50_203_0823"
       ]
@@ -36266,6 +34990,7 @@
       "title": "Elegoo · PLA · vícebarevná · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:50_203_0090",
+        "filamenty-brno:50_203_0230",
         "filamenty-brno:50_203_0335",
         "filamenty-brno:50_203_0336",
         "filamenty-brno:50_203_0467",
@@ -36420,23 +35145,23 @@
       ]
     },
     {
-      "cardId": "shop:filamenty-brno:Professional%20Lab**PETG*modr%C3%A1*1000*1.75*spool",
+      "cardId": "shop:filamenty-brno:Professional%20Lab**PETG*b%C3%ADl%C3%A1*1000*1.75*spool",
       "match": "shop",
       "ean": null,
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PETG",
-      "color": "modrá",
+      "color": "bílá",
       "weightGrams": 1000,
       "diameterMm": 1.75,
       "form": "spool",
       "shopIds": [
         "filamenty-brno"
       ],
-      "title": "Professional Lab · PETG · modrá · 1 kg · 1,75 mm · cívka",
+      "title": "Professional Lab · PETG · bílá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:FG-P202-E1",
-        "filamenty-brno:FG-P209-E1"
+        "filamenty-brno:FG-P215-E1",
+        "filamenty-brno:FG-P27-E1"
       ]
     },
     {
@@ -36457,8 +35182,8 @@
       "offerIds": [
         "filamenty-brno:FG-P12-E1",
         "filamenty-brno:FG-P129-E1",
-        "filamenty-brno:FG-P175-E1",
         "filamenty-brno:FG-P21-E1",
+        "filamenty-brno:FG-P46-E1",
         "filamenty-brno:FG-P60-E1",
         "filamenty-brno:FG-P81-E1",
         "filamenty-brno:FG-P88-E1"
@@ -36503,7 +35228,6 @@
         "filamenty-brno:FG-P131-E1",
         "filamenty-brno:FG-P15-E1",
         "filamenty-brno:FG-P174-E1",
-        "filamenty-brno:FG-P182-E1",
         "filamenty-brno:FG-P25-E1",
         "filamenty-brno:FG-P58-E1",
         "filamenty-brno:FG-P61-E1",
@@ -36550,33 +35274,12 @@
       ],
       "title": "Professional Lab · PLA · žlutá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
-        "filamenty-brno:FG-P160-E1",
         "filamenty-brno:FG-P170-E1",
         "filamenty-brno:FG-P18-E1",
         "filamenty-brno:FG-P52-E1",
         "filamenty-brno:FG-P66-E1",
         "filamenty-brno:FG-P86-E1",
         "filamenty-brno:FG-P95-E1"
-      ]
-    },
-    {
-      "cardId": "shop:filamenty-brno:Professional%20Lab**PLA*b%C3%A9%C5%BEov%C3%A1*1000*1.75*spool",
-      "match": "shop",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA",
-      "color": "béžová",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Professional Lab · PLA · béžová · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:FG-P184-E1",
-        "filamenty-brno:FG-P69-E1"
       ]
     },
     {
@@ -36641,7 +35344,6 @@
       "title": "Professional Lab · PLA · fialová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:FG-P171-E1",
-        "filamenty-brno:FG-P176-E1",
         "filamenty-brno:FG-P54-E1",
         "filamenty-brno:FG-P76-E1",
         "filamenty-brno:FG-P93-E1"
@@ -36859,6 +35561,8 @@
         "filamenty-brno:FG-P115-E1",
         "filamenty-brno:FG-P116-E1",
         "filamenty-brno:FG-P117-E1",
+        "filamenty-brno:FG-P175-E1",
+        "filamenty-brno:FG-P176-E1",
         "filamenty-brno:FG-P177-E1",
         "filamenty-brno:FG-P180-E1",
         "filamenty-brno:FG-P183-E1",
@@ -36911,8 +35615,50 @@
       ],
       "title": "Professional Lab · PLA · zlatá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
+        "filamenty-brno:FG-P160-E1",
         "filamenty-brno:FG-P50-E1",
         "filamenty-brno:FG-P91-E1"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**ABS*%C4%8Dern%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "ABS",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · ABS · černá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-ABS-CER",
+        "filamenty-brno:SUN-ABS-FR-CER",
+        "filamenty-brno:SUN-PC-ABS-CER"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**ABS*b%C3%ADl%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "ABS",
+      "color": "bílá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · ABS · bílá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-ABS-BIL",
+        "filamenty-brno:SUN-PC-ABS-BIL"
       ]
     },
     {
@@ -36954,7 +35700,36 @@
       "offerIds": [
         "filamenty-brno:SUN-HS-PLA-PLUS-CER",
         "filamenty-brno:SUN-PLA-CER",
-        "filamenty-brno:SUN-PLA-CF-CER"
+        "filamenty-brno:SUN-PLA-CF-CER",
+        "filamenty-brno:SUN-PLA-MATTE-CER",
+        "filamenty-brno:SUN-PLA-META-CER",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-CER",
+        "filamenty-brno:SUN-PLA-PLUS-CER",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**PLA*%C4%8Derven%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "PLA",
+      "color": "červená",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · PLA · červená · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-PLA-LUM-CERV",
+        "filamenty-brno:SUN-PLA-MATTE-CERV",
+        "filamenty-brno:SUN-PLA-META-CERV",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-CERV",
+        "filamenty-brno:SUN-PLA-PLUS-CERV",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV"
       ]
     },
     {
@@ -36973,6 +35748,10 @@
       ],
       "title": "Sunlu · PLA · šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
+        "filamenty-brno:SUN-HS-PLA-PLUS-SED",
+        "filamenty-brno:SUN-PLA-MATTE-SED",
+        "filamenty-brno:SUN-PLA-META-SED",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-SED",
         "filamenty-brno:SUN-PLA-PLUS-SED",
         "filamenty-brno:SUN-PLA-SED"
       ]
@@ -36995,6 +35774,10 @@
       "offerIds": [
         "filamenty-brno:SUN-PLA-LUM-ZLU",
         "filamenty-brno:SUN-PLA-MATTE-JAS-ZLU",
+        "filamenty-brno:SUN-PLA-MATTE-ZLU",
+        "filamenty-brno:SUN-PLA-META-CITRO-ZLU",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-ZLU",
+        "filamenty-brno:SUN-PLA-PLUS-ZLU",
         "filamenty-brno:SUN-PLA-SYT-ZLU"
       ]
     },
@@ -37015,7 +35798,8 @@
       "title": "Sunlu · PLA · béžová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:SUN-PLA-BEZ",
-        "filamenty-brno:SUN-PLA-KER"
+        "filamenty-brno:SUN-PLA-KER",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-BEZ"
       ]
     },
     {
@@ -37034,40 +35818,14 @@
       ],
       "title": "Sunlu · PLA · bílá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
+        "filamenty-brno:SUN-HS-PLA-PLUS-BIL",
         "filamenty-brno:SUN-PLA-BIL",
-        "filamenty-brno:SUN-PLA-DUH1",
-        "filamenty-brno:SUN-PLA-DUH2",
-        "filamenty-brno:SUN-PLA-DUH3",
-        "filamenty-brno:SUN-PLA-DUH4",
-        "filamenty-brno:SUN-PLA-HVE-GALAXIE",
         "filamenty-brno:SUN-PLA-KOST-BIL",
         "filamenty-brno:SUN-PLA-MATTE-BIL",
-        "filamenty-brno:SUN-PLA-MATTE-DUB",
-        "filamenty-brno:SUN-PLA-MATTE-JIL",
-        "filamenty-brno:SUN-PLA-MATTE-SLO",
         "filamenty-brno:SUN-PLA-META-BIL",
-        "filamenty-brno:SUN-PLA-META-COKO",
-        "filamenty-brno:SUN-PLA-META-KREM-BIL",
         "filamenty-brno:SUN-PLA-PLUS-2-0-BIL",
-        "filamenty-brno:SUN-PLA-PLUS-2-0-DUB",
-        "filamenty-brno:SUN-PLA-PLUS-2-0-KAST",
-        "filamenty-brno:SUN-PLA-PLUS-2-0-LEV",
-        "filamenty-brno:SUN-PLA-PLUS-2-0-MAG",
-        "filamenty-brno:SUN-PLA-PLUS-2-0-SLO",
-        "filamenty-brno:SUN-PLA-PLUS-2-0-SV-KER",
-        "filamenty-brno:SUN-PLA-PLUS-2-0-TYR",
         "filamenty-brno:SUN-PLA-PLUS-BIL",
-        "filamenty-brno:SUN-PLA-PLUS-KAV",
-        "filamenty-brno:SUN-PLA-PLUS-LEV",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-BIL",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-BIL",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH1",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH2",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH3",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH4",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH5",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH6",
-        "filamenty-brno:SUN-SILK-PLA-PLUS-MOSAZ"
+        "filamenty-brno:SUN-SILK-PLA-PLUS-BIL"
       ]
     },
     {
@@ -37088,6 +35846,10 @@
       "offerIds": [
         "filamenty-brno:SUN-PLA-GALAXY-HVE-FIA",
         "filamenty-brno:SUN-PLA-LEV-FIA",
+        "filamenty-brno:SUN-PLA-MATTE-LEV",
+        "filamenty-brno:SUN-PLA-META-FIA",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-LEV",
+        "filamenty-brno:SUN-PLA-PLUS-LEV",
         "filamenty-brno:SUN-PLA-PUR"
       ]
     },
@@ -37112,7 +35874,13 @@
         "filamenty-brno:SUN-PLA-GALAXY-HVE-HNE",
         "filamenty-brno:SUN-PLA-KAST",
         "filamenty-brno:SUN-PLA-KAV-HNE",
-        "filamenty-brno:SUN-PLA-META-KAV"
+        "filamenty-brno:SUN-PLA-MATTE-DUB",
+        "filamenty-brno:SUN-PLA-META-COKO",
+        "filamenty-brno:SUN-PLA-META-KAV",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-DUB",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-HNE",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-KAST",
+        "filamenty-brno:SUN-PLA-PLUS-KAV"
       ]
     },
     {
@@ -37136,10 +35904,14 @@
         "filamenty-brno:SUN-PLA-LUM-TEC-MOD",
         "filamenty-brno:SUN-PLA-MATTE-OCE-MOD",
         "filamenty-brno:SUN-PLA-MATTE-PUD-MOD",
+        "filamenty-brno:SUN-PLA-MATTE-SAF-MOD",
         "filamenty-brno:SUN-PLA-MATTE-SVE-MOD",
+        "filamenty-brno:SUN-PLA-META-LED-MOD",
         "filamenty-brno:SUN-PLA-META-NEB-MOD",
         "filamenty-brno:SUN-PLA-NEB-MOD",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-SAF",
         "filamenty-brno:SUN-PLA-PLUS-2-0-TMA-MOD",
+        "filamenty-brno:SUN-PLA-PLUS-SAF",
         "filamenty-brno:SUN-PLA-PUL-MOD",
         "filamenty-brno:SUN-PLA-TWINK-MOD"
       ]
@@ -37163,7 +35935,106 @@
         "filamenty-brno:SUN-PLA-LUM-KYB-ORA",
         "filamenty-brno:SUN-PLA-MATTE-ORA",
         "filamenty-brno:SUN-PLA-META-ORA",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-ORA",
         "filamenty-brno:SUN-PLA-SLU-ORA"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**PLA*r%C5%AF%C5%BEov%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "PLA",
+      "color": "růžová",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · PLA · růžová · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-PLA-META-RUZ",
+        "filamenty-brno:SUN-PLA-META-SAKURA"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**PLA*transparentn%C3%AD*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "PLA",
+      "color": "transparentní",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · PLA · transparentní · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-PLA-TRANS",
+        "filamenty-brno:SUN-PLA-TRANS-DUH1",
+        "filamenty-brno:SUN-PLA-TRANS-DUH2",
+        "filamenty-brno:SUN-PLA-TRANS-DUH3",
+        "filamenty-brno:SUN-PLA-TRANS-DUH4"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**PLA*v%C3%ADcebarevn%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "PLA",
+      "color": "vícebarevná",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · PLA · vícebarevná · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-PLA-DUH1",
+        "filamenty-brno:SUN-PLA-DUH2",
+        "filamenty-brno:SUN-PLA-DUH3",
+        "filamenty-brno:SUN-PLA-DUH4",
+        "filamenty-brno:SUN-PLA-HVE-GALAXIE",
+        "filamenty-brno:SUN-PLA-MATTE-CER-CERV",
+        "filamenty-brno:SUN-PLA-MATTE-CER-MOD",
+        "filamenty-brno:SUN-PLA-MATTE-CERV-MOD",
+        "filamenty-brno:SUN-PLA-MATTE-CERV-ORA",
+        "filamenty-brno:SUN-PLA-MATTE-CERV-ZLU",
+        "filamenty-brno:SUN-PLA-MATTE-ZEL-FIA",
+        "filamenty-brno:SUN-PLA-MATTE-ZLU-TYR",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-BIL",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-FIA",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-MOD",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-SED-CERV-ZLU",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZEL",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZLA",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CER-ZLA-FIA",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-MOD",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLA",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-MOD",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-ZEL",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-CERV-ZLU-ZEL-CER",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH1",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH2",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH3",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH4",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH5",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-DUH6",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-FIA-CERV-ZLA",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-FIA-ORA-ZLU",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-ZEL",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-MOD-ZEL-FIA",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-ORA-MOD-ZEL",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-RUZ-ZLA",
+        "filamenty-brno:SUN-SILK-PLA-PLUS-ZEL-FIA"
       ]
     },
     {
@@ -37186,11 +36057,36 @@
         "filamenty-brno:SUN-PLA-LUM-FUT-ZEL",
         "filamenty-brno:SUN-PLA-LUM-ZEL",
         "filamenty-brno:SUN-PLA-MATTE-VYH-ZEL",
+        "filamenty-brno:SUN-PLA-MATTE-ZEL",
         "filamenty-brno:SUN-PLA-MENT-ZEL",
+        "filamenty-brno:SUN-PLA-META-JAB-ZEL",
+        "filamenty-brno:SUN-PLA-META-MAT-ZEL",
         "filamenty-brno:SUN-PLA-META-MOD-ZEL",
         "filamenty-brno:SUN-PLA-META-OLIV-ZEL",
         "filamenty-brno:SUN-PLA-OLIV-ZEL",
+        "filamenty-brno:SUN-PLA-PLUS-2-0-ZEL",
+        "filamenty-brno:SUN-PLA-PLUS-ZEL",
         "filamenty-brno:SUN-PLA-TRA-ZEL"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**TPU*%C4%8Dern%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · TPU · černá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-TPU-95A-CER",
+        "filamenty-brno:SUN-TPU-SILK-CER"
       ]
     },
     {
@@ -37211,6 +36107,26 @@
       "offerIds": [
         "filamenty-brno:SUN-TPU-90A-CERV",
         "filamenty-brno:SUN-TPU-95A-CERV"
+      ]
+    },
+    {
+      "cardId": "shop:filamenty-brno:Sunlu**TPU*b%C3%ADl%C3%A1*1000*1.75*spool",
+      "match": "shop",
+      "ean": null,
+      "brand": "Sunlu",
+      "productLine": null,
+      "material": "TPU",
+      "color": "bílá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Sunlu · TPU · bílá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:SUN-TPU-90A-BIL",
+        "filamenty-brno:SUN-TPU-95A-BIL"
       ]
     },
     {
@@ -42747,14 +41663,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:1458": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "černá",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:148": {
       "brand": "Kexcelled",
       "productLine": null,
@@ -43832,14 +42740,6 @@
       "productLine": null,
       "material": "TPU",
       "color": null,
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:2478": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG",
-      "color": "transparentní",
       "diameterMm": null,
       "form": "spool"
     },
@@ -44984,14 +43884,6 @@
       "productLine": null,
       "material": "PETG",
       "color": "červená",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:3460": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "černá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -47339,6 +46231,14 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:4650": {
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "PLA",
+      "color": "oranžová",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:562": {
       "brand": "3DPower",
       "productLine": null,
@@ -47352,14 +46252,6 @@
       "productLine": null,
       "material": "PLA Silk",
       "color": "červená",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:565": {
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "modrá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -47791,7 +46683,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PLA",
-      "color": "černá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -47872,14 +46764,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "stříbrná",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "filamenty-brno:50_203_0168": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PLA",
-      "color": "béžová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48023,7 +46907,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PLA",
-      "color": "fialová",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48294,8 +47178,8 @@
     "filamenty-brno:50_203_0542": {
       "brand": "Elegoo",
       "productLine": null,
-      "material": "Nylon",
-      "color": null,
+      "material": "PC",
+      "color": "transparentní černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48479,7 +47363,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48495,7 +47379,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48519,7 +47403,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PLA",
-      "color": "hnědá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48559,7 +47443,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "měděná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48615,7 +47499,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PLA",
-      "color": "modrá",
+      "color": "tyrkysová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48734,7 +47618,7 @@
     "filamenty-brno:50_203_0770": {
       "brand": "Elegoo",
       "productLine": null,
-      "material": "PC-FR",
+      "material": "PC",
       "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
@@ -48742,7 +47626,7 @@
     "filamenty-brno:50_203_0771": {
       "brand": "Elegoo",
       "productLine": null,
-      "material": "PC-FR",
+      "material": "PC",
       "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
@@ -48751,7 +47635,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní modrá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48759,7 +47643,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48767,7 +47651,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní oranžová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48775,7 +47659,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní fialová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48783,7 +47667,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48791,7 +47675,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48799,7 +47683,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48807,7 +47691,7 @@
       "brand": "Elegoo",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "transparentní růžová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -49535,7 +48419,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PLA",
-      "color": "žlutá",
+      "color": "zlatá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -49647,7 +48531,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PLA",
-      "color": "černá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -49655,7 +48539,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PLA",
-      "color": "fialová",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -49711,7 +48595,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PLA",
-      "color": "červená",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -49727,7 +48611,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PLA",
-      "color": "béžová",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -49895,7 +48779,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PETG",
-      "color": "modrá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -49911,7 +48795,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "měděná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50075,6 +48959,14 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
+    "filamenty-brno:FG-P27-E1": {
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PETG",
+      "color": "bílá",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
     "filamenty-brno:FG-P28-E1": {
       "brand": "Professional Lab",
       "productLine": null,
@@ -50222,7 +49114,7 @@
     "filamenty-brno:FG-P46-E1": {
       "brand": "Professional Lab",
       "productLine": null,
-      "material": "PLA+",
+      "material": "PLA",
       "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
@@ -50631,7 +49523,7 @@
       "brand": "Professional Lab",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "měděná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50703,7 +49595,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "ABS",
-      "color": null,
+      "color": "béžová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50711,7 +49603,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "ABS",
-      "color": null,
+      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50719,7 +49611,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "ABS",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50823,7 +49715,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50839,7 +49731,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50871,7 +49763,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "Nylon",
-      "color": null,
+      "color": "šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50879,7 +49771,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "ABS",
-      "color": null,
+      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50887,7 +49779,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "ABS",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50895,7 +49787,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50903,7 +49795,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PETG",
-      "color": null,
+      "color": "hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -50999,7 +49891,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51007,7 +49899,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51015,7 +49907,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51023,7 +49915,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51055,7 +49947,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51183,7 +50075,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51191,7 +50083,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51199,7 +50091,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51207,7 +50099,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "červená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51215,7 +50107,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51223,7 +50115,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51231,7 +50123,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51239,7 +50131,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51255,7 +50147,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51263,7 +50155,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "fialová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51295,7 +50187,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "modrá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51303,7 +50195,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51311,7 +50203,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51335,7 +50227,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51343,7 +50235,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51351,7 +50243,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "žlutá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51359,7 +50251,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51383,7 +50275,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51391,7 +50283,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "červená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51399,7 +50291,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "žlutá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51407,7 +50299,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51415,7 +50307,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "fialová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51423,7 +50315,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51439,7 +50331,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51447,7 +50339,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "modrá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51455,7 +50347,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51503,7 +50395,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "růžová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51511,7 +50403,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51535,7 +50427,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "béžová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51551,7 +50443,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51559,7 +50451,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "červená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51567,7 +50459,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51575,7 +50467,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51583,7 +50475,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51591,7 +50483,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "fialová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51599,7 +50491,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51607,7 +50499,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "oranžová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51615,7 +50507,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "modrá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51623,7 +50515,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "šedá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51631,7 +50523,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51639,7 +50531,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": null,
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51655,7 +50547,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "tyrkysová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51663,7 +50555,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51671,7 +50563,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "žlutá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51687,7 +50579,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51695,7 +50587,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "červená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51703,7 +50595,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51711,7 +50603,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "fialová",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51719,7 +50611,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "modrá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51735,7 +50627,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51743,7 +50635,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "žlutá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51815,7 +50707,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "transparentní",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51823,7 +50715,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "transparentní",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51831,7 +50723,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "transparentní",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51839,7 +50731,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "transparentní",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51926,7 +50818,7 @@
     "filamenty-brno:SUN-PP-PRI": {
       "brand": "Sunlu",
       "productLine": null,
-      "material": "Nylon",
+      "material": "PP",
       "color": null,
       "diameterMm": 1.75,
       "form": "spool"
@@ -51999,7 +50891,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52007,7 +50899,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52015,7 +50907,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52023,7 +50915,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52031,7 +50923,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52039,7 +50931,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52047,7 +50939,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52055,7 +50947,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52063,7 +50955,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "červená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52071,7 +50963,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52079,7 +50971,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52087,7 +50979,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52095,7 +50987,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52103,7 +50995,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52111,7 +51003,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52119,7 +51011,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52127,7 +51019,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52135,7 +51027,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52143,7 +51035,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52151,7 +51043,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52159,7 +51051,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52167,7 +51059,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52175,7 +51067,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52183,7 +51075,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52191,7 +51083,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": "bílá",
+      "color": "zlatá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52199,7 +51091,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52207,7 +51099,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52215,7 +51107,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "PLA",
-      "color": null,
+      "color": "vícebarevná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52223,7 +51115,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "TPU",
-      "color": null,
+      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -52319,7 +51211,7 @@
       "brand": "Sunlu",
       "productLine": null,
       "material": "TPU",
-      "color": null,
+      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -57795,6 +56687,14 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
+    "materialpro3d:PLA175LB1LTG": {
+      "brand": "3DLabPrint",
+      "productLine": null,
+      "material": "PLA",
+      "color": "šedá",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
     "materialpro3d:PLA175LB1NYB": {
       "brand": "3DLabPrint",
       "productLine": null,
@@ -61395,14 +60295,6 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
-    "materialpro3d:TIF0531D0": {
-      "brand": "GEMBIRD",
-      "productLine": null,
-      "material": "HIPS",
-      "color": "červená",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
     "materialpro3d:TIF055110": {
       "brand": "GEMBIRD",
       "productLine": null,
@@ -61592,14 +60484,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "bílá",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:TIF059110": {
-      "brand": "GEMBIRD",
-      "productLine": null,
-      "material": "PVA",
-      "color": "přírodní",
       "diameterMm": 1.75,
       "form": "spool"
     },
