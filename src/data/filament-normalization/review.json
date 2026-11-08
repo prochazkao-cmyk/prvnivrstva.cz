@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3145,
-    "cardsBefore": 684,
-    "cardsAfter": 2101,
-    "offersMatchedByEan": 96,
-    "offersMatchedAcrossShopsByEan": 70,
-    "eanGroupsMerged": 46,
-    "eanGroupsCrossShop": 44,
-    "eanGroupsCrossShopMerged": 34,
-    "eanGroupsCrossShopBlocked": 10,
-    "eanGroupsBlocked": 10,
-    "eanGroupsSeen": 56,
-    "offersSharingShopKey": 1289,
+    "offers": 3141,
+    "cardsBefore": 682,
+    "cardsAfter": 2099,
+    "offersMatchedByEan": 94,
+    "offersMatchedAcrossShopsByEan": 68,
+    "eanGroupsMerged": 45,
+    "eanGroupsCrossShop": 42,
+    "eanGroupsCrossShopMerged": 33,
+    "eanGroupsCrossShopBlocked": 9,
+    "eanGroupsBlocked": 9,
+    "eanGroupsSeen": 54,
+    "offersSharingShopKey": 1288,
     "shopKeyCards": 295,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1048,
+    "reviewOffers": 1044,
     "brandsBefore": 37,
     "brandsAfter": 35,
     "materialsBefore": 49,
@@ -25,12 +25,12 @@
     "colorsAfter": 69,
     "reasons": {
       "ean-brand-conflict": 2,
-      "ean-conflict": 20,
-      "ean-material-conflict": 18,
+      "ean-conflict": 18,
+      "ean-material-conflict": 16,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 12,
-      "missing-color": 318,
-      "missing-diameter": 736,
+      "missing-color": 317,
+      "missing-diameter": 733,
       "missing-material": 78
     }
   },
@@ -382,19 +382,6 @@
       "reasons": []
     },
     {
-      "ean": "5903707922239",
-      "status": "merged",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:3830",
-        "filamenty-brno:FG-P133-E1"
-      ],
-      "reasons": []
-    },
-    {
       "ean": "5903707922246",
       "status": "merged",
       "shops": [
@@ -714,43 +701,6 @@
           "offerId": "filamenty-brno:FG-P212-E1",
           "shopId": "filamenty-brno",
           "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict"
-          ]
-        }
-      ]
-    },
-    {
-      "ean": "5903707923960",
-      "status": "blocked",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:4029",
-        "filamenty-brno:FG-P213-E1"
-      ],
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:4029",
-          "shopId": "3dfil",
-          "productName": "PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict",
-            "missing-diameter"
-          ]
-        },
-        {
-          "offerId": "filamenty-brno:FG-P213-E1",
-          "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1",
           "reasons": [
             "ean-conflict",
             "ean-material-conflict"
@@ -1166,6 +1116,16 @@
       ]
     },
     {
+      "offerId": "3dfil:1005",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PETG Translucent | Šedá | 1.75mm | 1kg | Refill",
+      "ean": "8594233084804",
+      "cardId": "offer:3dfil:1005",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:1007",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA BASIC | Černá | 1.75mm | 1kg Refill",
@@ -1417,6 +1377,16 @@
       ]
     },
     {
+      "offerId": "3dfil:1182",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Matte | Béžová \"Desert Tan\" | 1.75mm | 1kg | Refill",
+      "ean": "8594233085191",
+      "cardId": "offer:3dfil:1182",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:1183",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Matte | Žlutá \"citron\" | 1.75mm | 1kg",
@@ -1435,6 +1405,16 @@
       "cardId": "offer:3dfil:1184",
       "reasons": [
         "form-param-disagrees",
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1185",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Matte | Růžová \"Sakura\" | 1.75mm | 1kg | Refill",
+      "ean": "8594233085221",
+      "cardId": "offer:3dfil:1185",
+      "reasons": [
         "missing-diameter"
       ]
     },
@@ -3129,16 +3109,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2389",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | ABS | Černá | 1.75mm | 1kg",
-      "ean": "8594233086167",
-      "cardId": "offer:3dfil:2389",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2392",
       "shopId": "3dfil",
       "productName": "PROF. LAB | PLA Silk | Gold | 1.75mm | 1kg",
@@ -3965,17 +3935,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3053",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | TPU 90A | Černá | 1.75mm | 1kg",
-      "ean": "8594233085825",
-      "cardId": "offer:3dfil:3053",
-      "reasons": [
-        "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3054",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | TPU 90A | Grape Jelly | 1.75mm | 1kg",
@@ -4398,16 +4357,6 @@
       "productName": "ELEGOO | PETG-GF | Grey | 1.75mm | 1kg",
       "ean": "8594233082183",
       "cardId": "offer:3dfil:3285",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3286",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | PETG-GF | White | 1.75mm | 1kg",
-      "ean": "8594233082190",
-      "cardId": "offer:3dfil:3286",
       "reasons": [
         "missing-diameter"
       ]
@@ -5447,6 +5396,16 @@
       ]
     },
     {
+      "offerId": "3dfil:3814",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PETG Basic | Zelená | 1.75mm | 1kg | Refill",
+      "ean": "8594233088376",
+      "cardId": "offer:3dfil:3814",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:3815",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PETG Basic | Zelená \"Pine\" | 1.75mm | 1kg | Refill",
@@ -5563,16 +5522,6 @@
       "productName": "BAMBU LAB | ABS | Stříbrná | 1.75mm | 1kg | Spool",
       "ean": "8594233088482",
       "cardId": "offer:3dfil:3829",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3830",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | ASA | Bílá | 1.75mm | 1kg",
-      "ean": "5903707922239",
-      "cardId": "ean:5903707922239",
       "reasons": [
         "missing-diameter"
       ]
@@ -6006,18 +5955,6 @@
       "ean": "8594233088758",
       "cardId": "offer:3dfil:4028",
       "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:4029",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg",
-      "ean": "5903707923960",
-      "cardId": "offer:3dfil:4029",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict",
         "missing-diameter"
       ]
     },
@@ -7040,16 +6977,6 @@
       ]
     },
     {
-      "offerId": "3dfil:439",
-      "shopId": "3dfil",
-      "productName": "3DPOWER | PLA | Červená | 1.75mm | 1kg",
-      "ean": "5904323179441",
-      "cardId": "offer:3dfil:439",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4390",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PETG Matte | Lime | 1.75mm | 1kg | Refill",
@@ -7918,16 +7845,6 @@
       ]
     },
     {
-      "offerId": "3dfil:987",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA BASIC | Červená | 1.75mm | 1kg | Refill",
-      "ean": "8594233084620",
-      "cardId": "offer:3dfil:987",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:988",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA BASIC | Fialová | 1.75mm | 1kg | Refill",
@@ -8317,17 +8234,6 @@
       "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1",
       "ean": "5903707923953",
       "cardId": "offer:filamenty-brno:FG-P212-E1",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ]
-    },
-    {
-      "offerId": "filamenty-brno:FG-P213-E1",
-      "shopId": "filamenty-brno",
-      "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1",
-      "ean": "5903707923960",
-      "cardId": "offer:filamenty-brno:FG-P213-E1",
       "reasons": [
         "ean-conflict",
         "ean-material-conflict"
