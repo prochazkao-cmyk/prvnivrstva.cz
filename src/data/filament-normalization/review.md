@@ -7,18 +7,18 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3141 |
+| nabídky | 3127 |
 | dlaždice dřív (materiál + barva + hmotnost) | 682 |
-| dlaždice teď | 2099 |
-| nabídky spojené podle EAN | 94 |
-| z toho mezi obchody | 68 |
-| skupiny EAN mezi obchody spojené / nespojené | 33 / 9 |
-| skupiny EAN spojené | 45 |
-| skupiny EAN viděné a nespojené | 9 |
-| nabídky na společné dlaždici v jednom obchodě | 1288 |
+| dlaždice teď | 2090 |
+| nabídky spojené podle EAN | 90 |
+| z toho mezi obchody | 64 |
+| skupiny EAN mezi obchody spojené / nespojené | 31 / 8 |
+| skupiny EAN spojené | 43 |
+| skupiny EAN viděné a nespojené | 8 |
+| nabídky na společné dlaždici v jednom obchodě | 1285 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1044 |
+| nabídky v revizi | 1033 |
 | značky před aliasem / po aliasu | 37 / 35 |
 | materiály před aliasem / po aliasu | 49 / 48 |
 | barvy před aliasem / po aliasu | 69 / 69 |
@@ -27,12 +27,12 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 733 |
+| missing-diameter | 723 |
 | missing-color | 317 |
 | missing-material | 78 |
-| ean-conflict | 18 |
-| ean-material-conflict | 16 |
-| form-param-disagrees | 12 |
+| ean-conflict | 16 |
+| ean-material-conflict | 14 |
+| form-param-disagrees | 11 |
 | ean-brand-conflict | 2 |
 | ean-weight-conflict | 2 |
 
@@ -61,7 +61,6 @@ Původní klíč `pla||1000`: 131 nabídek, 17 značek.
 
 ## EAN, které se nespojilo
 
-- EAN 5903707920525 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:2399 (PROF. LAB | Pla Dual Silk | Černá-fialová | 1.75mm | 1kg); filamenty-brno:FG-P102-E1 (Filament Professional Lab PLA Silk 1,75 mm 1 kg, Dvoubarevný černě-fialová FG-P102-E1)
 - EAN 5903707922932 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4594 (PROF. LAB | PLA Wood | Maple Wood | 1.75mm | 1kg); filamenty-brno:FG-P159-E1 (Filament Professional Lab PLA 1,75 mm 1 kg, Javorová FG-P159-E1)
 - EAN 5903707923915 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3652 (PROF. LAB | PETG-CF | Black | 1.75mm | 1kg); filamenty-brno:FG-P208-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Černá FG-P208-E1)
 - EAN 5903707923922 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3653 (PROF. LAB | PETG-CF | Blue | 1.75mm | 1kg); filamenty-brno:FG-P209-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Modrá FG-P209-E1)
