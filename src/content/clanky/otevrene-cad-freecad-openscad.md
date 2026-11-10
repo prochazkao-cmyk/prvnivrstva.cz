@@ -2,7 +2,7 @@
 title: "Otevřené CAD: FreeCAD a OpenSCAD"
 description: "Dva svobodné způsoby, jak vznikne model pro tiskárnu. FreeCAD jako parametrický modelář s pracovními stoly. OpenSCAD jako geometrie napsaná kódem. Oba jen tam, kde to říká jejich dokumentace."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Redakce První vrstvy"
 tags:
@@ -17,7 +17,7 @@ evidence: "vyrobce"
 sourceNote: "Kontrola 3. 10. 2026 proti freecad.org, stránce features.php a openscad.org. Snímky ukazují FreeCAD 1.0 a okno OpenSCAD. Nejsou to návodové klikací mapy všech budoucích verzí."
 ---
 
-**Model pro tiskárnu může vzniknout ve svobodném CADu, ne jen ve sliceru.** FreeCAD je parametrický modelář pro díly z reálného světa. OpenSCAD je program, ve kterém geometrii píšete. Slicer z hotového modelu teprve udělá dráhy. Ten krok je v [průvodci FDM slicery](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/).
+**Model pro tiskárnu může vzniknout ve svobodném CADu, ne jen ve sliceru.** FreeCAD je parametrický modelář pro díly z reálného světa. OpenSCAD je program, ve kterém geometrii píšete. Slicer z hotového modelu teprve udělá dráhy. Ten krok je v [průvodci slicerem pro začátečníky](/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/).
 
 ## FreeCAD
 

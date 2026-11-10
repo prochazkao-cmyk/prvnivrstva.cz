@@ -2,7 +2,7 @@
 title: "3D skenery: laser, hloubková kamera a kdy objednat sken"
 description: "Čtyři reálné způsoby, jak vznikne síť z fyzického dílu, a rozhodnutí, kdy skener kupovat a kdy nechat sken udělat. Bez vymyšlené přesnosti v milimetrech a bez cen."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Redakce První vrstvy"
 tags:
@@ -13,7 +13,7 @@ tags:
 level: "pokročilý"
 technologies:
   - "FDM"
-evidence: "kombinace"
+evidence: "redakce"
 sourceNote: "Kontrola 3. 10. 2026 proti popiskům použitých fotografií na Wikimedia Commons a proti veřejné nabídce 3dtiskostrava.cz, která skenování a opravu STL uvádí. Přesnost konkrétního skeneru v milimetrech tu není, protože ji nemáme z datasheetu daného kusu."
 ---
 

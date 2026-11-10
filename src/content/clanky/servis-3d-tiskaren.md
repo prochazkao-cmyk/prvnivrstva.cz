@@ -2,10 +2,9 @@
 title: "Servis 3D tiskáren: kdy ho použít a kam v Ostravě tiskárnu předat"
 description: "Praktický postup, když tiskárna potřebuje opravu. Nejdřív servis, který provozuje autor První vrstvy: výdejní místo Zahradní 1471/1 v Ostravě. Bez recenzí a bez vymyšlených cen."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Ondřej Procházka"
-featured: true
 tags:
   - servis
   - průvodce
@@ -15,7 +14,7 @@ tags:
 level: "začátečník"
 technologies:
   - "FDM"
-evidence: "kombinace"
+evidence: "redakce"
 sourceNote: "Kontrola 3. 10. 2026 proti veřejným stránkám 3dtiskostrava.cz a servisprusa.cz a proti článkům Prusa Knowledge Base o zákaznické podpoře a servisních střediscích. Ceník se mění, proto ho tady neopisujeme."
 disclosure: "Ondřej Procházka provozuje 3dtiskostrava.cz a servisprusa.cz. Proto je vlastní servis v průvodci první a vztah je napsaný hned v úvodu. Jiné servisy tu nejsou hodnocené."
 ---
@@ -121,7 +120,7 @@ Po opravě chtějte vědět, co se měnilo a co se tisklo na zkoušku. Web Servi
 - [ ] Poptávka servisu jde na [servisprusa.cz](https://www.servisprusa.cz/), zakázkový tisk na [3dtiskostrava.cz](https://www.3dtiskostrava.cz/).
 - [ ] Cena je ta, kterou servis potvrdí ke konkrétní zakázce.
 
-Další krok, když stroj tiskne a řešíte software: [FDM slicery](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/). Když vybíráte novou tiskárnu i podle toho, kdo ji opraví: [Prusa a Bambu Lab](/clanky/prusa-vs-bambu-lab-srovnani/).
+Další krok, když stroj tiskne a řešíte software: [slicer pro začátečníky](/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/). Když vybíráte novou tiskárnu i podle toho, kdo ji opraví: [Prusa a Bambu Lab](/clanky/prusa-vs-bambu-lab-srovnani/).
 
 ## Zdroje
 

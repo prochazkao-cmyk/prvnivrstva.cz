@@ -2,7 +2,7 @@
 title: "SLA slicery: Chitubox a Lychee"
 description: "Dva programy, které z modelu udělají vrstvy pro resinovou tiskárnu. Co o nich říká jejich dokumentace: soubory, podpěry, odeslání na tiskárnu. Bez žebříčku a bez cen."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Redakce První vrstvy"
 tags:
@@ -18,7 +18,7 @@ evidence: "vyrobce"
 sourceNote: "Kontrola 3. 10. 2026 proti docs.chitubox.com (úvod, podpěry, úvod k Pro) a docs.mango3d.io (export řezů a síťový tisk Lychee). Snímky jsou resinové výtisky a resinová tiskárna. Rozhraní Chituboxu ani Lychee pod svobodnou licencí k dispozici není."
 ---
 
-**Resinová tiskárna nečte STL. Čte soubor vrstev, který pro ni připraví slicer dané technologie.** Dva programy s veřejnou dokumentací jsou CHITUBOX a Lychee Slicer. FDM slicer z [průvodce Bambu Studio, OrcaSlicer a PrusaSlicer](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/) jim soubor pro vaničku s pryskyřicí nepřipraví.
+**Resinová tiskárna nečte STL. Čte soubor vrstev, který pro ni připraví slicer dané technologie.** Dva programy s veřejnou dokumentací jsou CHITUBOX a Lychee Slicer. FDM slicer z [průvodce PrusaSlicer, Bambu Studio a OrcaSlicer](/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/) jim soubor pro vaničku s pryskyřicí nepřipraví.
 
 Bezpečnost pryskyřice, mytí a vytvrzení je v [primeru SLA](/technologie/sla/). Slicer tu chemii neřeší. Řeší geometrii vrstev a podpěry.
 
@@ -80,7 +80,7 @@ Hotový výtisk není hotový díl. Mytí a dovytvrzení patří k technologii a
 - [ ] Send and Print jen na prázdnou desku. Když síťový seznam vaši tiskárnu nemá, použijte USB.
 - [ ] Soubor řezu už nepřekreslujte. Špatný tvar se vrací do STL a řeže znovu.
 
-Když je resinových dílů málo a nechcete vaničku, chemii a mytí doma, porovnejte to s práškovým servisem v [průvodci SLS](/clanky/sls-stroje-nebo-servis/). Jsou to různé technologie. Společné mají jen to, že malá série často vyjde levněji mimo dům, aniž bychom tu uváděli cenu, kterou nemáme změřenou.
+Když je resinových dílů málo a nechcete vaničku, chemii a mytí doma, porovnejte to s práškovým servisem v [průvodci SLS](/clanky/sls-stroje-nebo-servis/). Jsou to různé technologie. U malé série dává smysl poptat zakázku dřív, než pořizovat stroj a chemii. Cenu sem nepíšeme.
 
 ## Zdroje
 

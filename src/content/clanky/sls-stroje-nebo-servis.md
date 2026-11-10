@@ -2,7 +2,7 @@
 title: "SLS: kdy dává smysl stroj a kdy zakázka"
 description: "Prášek a laser místo cívky. Co SLS umí, proč je kolem stroje víc práce než kolem FDM, a kdy jeden díl patří do zakázkového prachu místo do nákupu stroje. Bez cen a bez vymyšlených parametrů."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Redakce První vrstvy"
 tags:
@@ -13,7 +13,7 @@ tags:
 level: "pokročilý"
 technologies:
   - "SLS"
-evidence: "kombinace"
+evidence: "redakce"
 sourceNote: "Kontrola 3. 10. 2026 proti primeru SLS na tomhle webu, proti popisku oficiálního snímku Formlabs z roku 2025 na Wikimedia Commons a proti fotografiím Sharebot SnowWhite z 3D Printshow 2014. Ceny strojů ani zakázek tu nejsou."
 ---
 
@@ -55,7 +55,7 @@ Na veletrhu 3D Printshow v Londýně v roce 2014 fotil Creative Tools stroj Shar
   <figcaption>Detail SnowWhite, 2014. Foto: Creative Tools, CC BY 2.0, Wikimedia Commons. Historický snímek, ne aktuální nabídka.</figcaption>
 </figure>
 
-Kolem stroje je prášek ve vzduchu, čištění dílů, třídění použitého a nového prášku a čas, kdy komora chladne a nejde do ní sáhnout. To je práce, kterou FDM dílna v ceně „jedné cívky“ nemá. Než stroj koupíte, potřebujete místnost, odsávání podle pokynu výrobce a postup, kam přijde odpadní prášek. Ty podmínky jsou v dokumentaci konkrétního stroje. Obecný průvodce je nenahrazuje.
+Kolem stroje je prášek ve vzduchu, čištění dílů, třídění použitého a nového prášku a čas, kdy komora chladne a nejde do ní sáhnout. To je práce, kterou FDM dílna při tisku z jedné cívky neřeší. Než stroj koupíte, potřebujete místnost, odsávání podle pokynu výrobce a postup, kam přijde odpadní prášek. Ty podmínky jsou v dokumentaci konkrétního stroje. Obecný průvodce je nenahrazuje.
 
 ## Kdy vyhraje zakázka
 

@@ -2,7 +2,7 @@
 title: "Mobilní aplikace kolem 3D tisku: Bambu Handy a Prusa"
 description: "Co oficiální aplikace Bambu Lab a Prusa Research umí podle jejich dokumentace: dohled nad tiskárnou, úlohy a oznámení. Příprava nového modelu zůstává ve sliceru na počítači."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Redakce První vrstvy"
 tags:
@@ -28,7 +28,7 @@ Bambu Lab popisuje Handy jako aplikaci ke svým tiskárnám. Rychlý návod ří
 
 Po přihlášení a spárování tiskárny návod popisuje obrazovku zařízení s těmito částmi: přepínání tiskáren, nastavení, skenování, živý náhled, postup tisku a ovládání stroje. Přesné popisky se v jazyce aplikace liší. Snímky níže jsou z anglického a čínského rozhraní v oficiální wiki, ne z české lokalizace.
 
-Stejná dokumentace aplikaci spojuje s MakerWorld: z telefonu se jde ke knihovně modelů a k odeslání vybraného projektu na tiskárnu. Knihovna sama je v [průvodci databázemi](/clanky/databaze-modelu-printables-makerworld-thingiverse/). Licence modelu platí i tehdy, když ho odesíláte z telefonu.
+Stejná dokumentace aplikaci spojuje s MakerWorld: z telefonu se jde ke knihovně modelů a k odeslání vybraného projektu na tiskárnu. Knihovna sama je v [průvodci ke stažení modelů a licencím](/clanky/kde-stahnout-3d-modely-zdarma-a-licence/). Licence modelu platí i tehdy, když ho odesíláte z telefonu.
 
 <figure>
   <img src="/media/pruvodce/app-handy-uvod.png" alt="Úvodní obrazovka aplikace Bambu Handy s přihlášením a seznamem zařízení" loading="lazy" decoding="async" />
@@ -52,7 +52,7 @@ Stejná dokumentace aplikaci spojuje s MakerWorld: z telefonu se jde ke knihovn�
 
 Živý náhled není náhrada za člověka u prvního tisku nové konstrukce. Kamera ukáže, že se díl odlepil, až když se odlepil. První vrstvu u nového materiálu pořád stojí za to vidět osobně. Postup, když nedrží, je v [článku o první vrstvě](/rady-a-tipy/prvni-vrstva-nedrzi/).
 
-Úprava běžícího tisku, o které návod mluví, není totéž co překreslení modelu. Geometrii, výplň a podpěry mění slicer. Když telefon nabídne změnu, kterou návod k vaší verzi aplikace nepopisuje, nechte ji být a úlohu připravte znovu v [Bambu Studiu](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/).
+Úprava běžícího tisku, o které návod mluví, není totéž co překreslení modelu. Geometrii, výplň a podpěry mění slicer. Když telefon nabídne změnu, kterou návod k vaší verzi aplikace nepopisuje, nechte ji být a úlohu připravte znovu ve [sliceru své tiskárny](/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/).
 
 ## Aplikace Prusa
 

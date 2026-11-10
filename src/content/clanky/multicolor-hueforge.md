@@ -2,7 +2,7 @@
 title: "Plné spektrum z filamentu: tisk obrazu a HueForge"
 description: "Obraz z několika filamentů, u kterých rozhoduje tloušťka a propustnost světla. HueForge k tomu není slicer. Diskrétní AMS a MMU mají vlastní průvodce."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Redakce První vrstvy"
 tags:
@@ -30,7 +30,7 @@ Stránka About uvádí tři věci:
 - slicer, který umí výměnu barvy podle vrstvy, v textu stránky jsou OrcaSlicer, Bambu Studio a PrusaSlicer,
 - obraz, který chcete vytisknout.
 
-HueForge podle stejné stránky není slicer. Vyrobí model a seznam výšek, na kterých se mění filament. G-code pořád připraví slicer z [průvodce FDM slicery](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/).
+HueForge podle stejné stránky není slicer. Vyrobí model a seznam výšek, na kterých se mění filament. G-code pořád připraví slicer z [průvodce pro začátečníky](/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/).
 
 Export, který stránka popisuje, je STL a soubor Describe.txt s výměnami vrstev. Ty výšky se do sliceru zadají ručně. Stránka také zmiňuje doplněk pro 3MF. Jestli ho vaše verze má, uvidíte v účtu po stažení, ne v tomhle odstavci.
 
@@ -90,5 +90,5 @@ Průsvitný a světlý filament je na TD citlivější než sytě krycí. Dvě c
 
 - [About HueForge](https://shop.thehueforge.com/pages/about-hueforge)
 - [HueForge FAQ](https://shop.thehueforge.com/pages/hueforge-faq-1)
-- [FDM slicery](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/)
+- [Slicer pro začátečníky](/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/)
 - [Diskrétní barevný tisk](/clanky/barevny-tisk-ams-mmu/)

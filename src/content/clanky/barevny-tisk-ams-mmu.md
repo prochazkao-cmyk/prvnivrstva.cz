@@ -2,7 +2,7 @@
 title: "Barevný tisk: AMS, MMU a výměna celých filamentů"
 description: "Diskrétní vícebarevný tisk mění celé cívky. AMS, MMU, dva extrudery a co z toho plyne pro odpad, materiál a slicer. Obraz z propustnosti filamentu je jiný průvodce."
 publishedAt: 2026-10-03
-updatedAt: 2026-10-03
+updatedAt: 2026-11-10
 reviewedAt: 2026-10-03
 author: "Redakce První vrstvy"
 tags:
@@ -98,7 +98,7 @@ Podpůrný materiál je pořád výměna filamentu. Patří do stejného účtov
 - [ ] Každá výměna v jedné trysce je čas a odpad. Výplň ho umí schovat jen zčásti.
 - [ ] Materiály, které výrobce u jednotky neuvádí, do ní nedávejte naslepo.
 
-Slicer, ve kterém se barva maluje, je v [průvodci FDM slicery](/clanky/fdm-slicery-bambu-studio-orcaslicer-prusaslicer/).
+Slicer, ve kterém se barva maluje, je v [průvodci pro začátečníky](/clanky/slicer-pro-zacatecniky-prusaslicer-bambu-studio-orcaslicer/).
 
 ## Zdroje
 
