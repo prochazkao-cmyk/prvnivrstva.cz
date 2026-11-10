@@ -29,13 +29,13 @@ const jsonLd = {
     <section class="ref-hero" aria-labelledby="hero-title">
       <div class="ref-hero-grid">
         <div class="ref-hero-copy">
-          <p class="ref-eyebrow">ZNALOSTI / TESTY / PRAXE / KOMUNITA</p>
+          <p class="ref-eyebrow">DÍLNA / SERVIS / MATERIÁLY / KOMUNITA</p>
           <h1 id="hero-title"><span>První</span><span>Vrstva<span class="ref-dot">.</span></span></h1>
-          <h2>3D tisk bez chaosu.<br />Přehledně, lidsky, odborně.</h2>
-          <p class="ref-hero-dek">Nezávislé testy, srozumitelné návody a praktické tipy pro každého, kdo chce z 3D tisku vytěžit maximum.</p>
+          <h2>3D tisk bez omáčky.<br />Co funguje, co ne a proč.</h2>
+          <p class="ref-hero-dek">Praktické návody, zdrojované rozbory a zkušenosti ze servisu. Když něco skutečně změříme nebo otestujeme, řekneme to. Když ne, uvedeme zdroje.</p>
           <div class="ref-actions">
-            <a class="ref-btn ref-btn-accent" href="/clanky/">Prozkoumat články <span aria-hidden="true">→</span></a>
-            <a class="ref-btn ref-btn-ghost" href="/o-nas/">O nás</a>
+            <a class="ref-btn ref-btn-accent" href="/problemy/">Vyřešit problém <span aria-hidden="true">→</span></a>
+            <a class="ref-btn ref-btn-ghost" href="#na-stole">Co právě řešíme</a>
           </div>
         </div>
 
@@ -79,10 +79,10 @@ const jsonLd = {
     <section class="ref-projects" aria-labelledby="projects-title">
       <div class="page ref-project-grid">
         <div class="ref-project-copy">
-          <p class="ref-eyebrow">VÍCE NEŽ JEN TISK</p>
-          <h2 id="projects-title">Skutečné projekty.<br />Skuteční lidé.</h2>
-          <p>Inspirace z dílny, testy v reálných podmínkách a zkušenosti, které vám ušetří čas i materiál.</p>
-          <a class="ref-btn ref-btn-ghost" href="/o-nas/">Nahlédnout do dílny <span aria-hidden="true">→</span></a>
+          <p class="ref-eyebrow">Z DÍLNY A SERVISU</p>
+          <h2 id="projects-title">Méně marketingu.<br />Více toho, co se opravdu řeší.</h2>
+          <p>Závady, nastavení, materiály a rozhodnutí, která se opakují u reálných tiskáren. Vlastní zkušenost oddělujeme od údajů výrobce a od redakční analýzy.</p>
+          <a class="ref-btn ref-btn-ghost" href="/metodika/">Jak obsah vzniká <span aria-hidden="true">→</span></a>
         </div>
 
         <figure class="ref-project-photo ref-project-workshop">
@@ -101,6 +101,38 @@ const jsonLd = {
         </figure>
       </div>
       <ExtrusionTrace className="ref-project-trace" />
+    </section>
+
+    <section class="ref-desk" id="na-stole" aria-labelledby="desk-title">
+      <div class="page ref-desk-grid">
+        <div class="ref-desk-intro">
+          <p class="ref-eyebrow">NA STOLE V REDAKCI</p>
+          <h2 id="desk-title">Co teď řešíme.</h2>
+          <p>Nechceme chrlit články jen proto, aby přibývaly URL. Bereme témata, která se opravdu opakují v dílně, servisu a mezi lidmi kolem 3D tisku.</p>
+          <a class="ref-btn ref-btn-ghost" href={`mailto:${site.email}?subject=Co%20m%C3%A1%20Prvn%C3%AD%20vrstva%20zpracovat`}>Navrhnout téma <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="ref-desk-list">
+          <a class="ref-desk-item is-live" href="/rady-a-tipy/vlhky-filament/">
+            <span>01 / PORADNA</span>
+            <strong>Mokrý filament: než začnete ladit retrakci, ověřte vodu</strong>
+            <p>Jedna změna, stejný model, stejný profil. Praktický diagnostický postup místo náhodného přepínání parametrů.</p>
+            <em>Číst teď →</em>
+          </a>
+          <a class="ref-desk-item is-live" href="/clanky/jak-vybrat-prumer-trysky/">
+            <span>02 / ROZHODOVÁNÍ</span>
+            <strong>0,25 vs. 0,4 vs. 0,6 vs. 0,8 mm bez zbytečných slibů</strong>
+            <p>Kdy menší tryska opravdu pomůže a kdy jen prodlouží tisk. Zdrojovaný průvodce s jasně přiznanými limity.</p>
+            <em>Číst teď →</em>
+          </a>
+          <article class="ref-desk-item is-next">
+            <span>03 / PŘIPRAVUJEME</span>
+            <strong>PLA vs. PLA+, barvy stejného filamentu a proč levná cívka nemusí být levná</strong>
+            <p>Tři články, které postavíme na více zdrojích, technickém kontextu a konkrétních rozhodnutích. Bez vymyšlených testovacích hodin.</p>
+            <em>Další obsahový sprint</em>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="ref-numbers" aria-labelledby="numbers-title">
@@ -146,10 +178,10 @@ const jsonLd = {
       <div class="page">
         <div class="ref-topic-head">
           <div>
-            <p class="ref-eyebrow">OBJEVTE HLAVNÍ TÉMATA</p>
-            <h2 id="topics-title">Vše pro lepší<br />3D tisk na jednom místě.</h2>
+            <p class="ref-eyebrow">KAM JÍT PODLE TOHO, CO ŘEŠÍTE</p>
+            <h2 id="topics-title">Nečtěte všechno.<br />Najděte další správný krok.</h2>
           </div>
-          <p>Recenze, návody, srovnání a praktické tipy. Vyberte si téma, které vás zajímá, a posuňte svůj 3D tisk na další úroveň.</p>
+          <p>Problém, materiál, tiskárna nebo nastavení. Každá cesta má vést ke konkrétnímu rozhodnutí, ne k další hodině hledání.</p>
         </div>
 
         <div class="ref-topic-grid">
@@ -158,7 +190,7 @@ const jsonLd = {
               <img class="theme-shot prusa-shot contain" src={machineVisuals['prusa-mk4s'].src} alt={machineVisuals['prusa-mk4s'].alt} loading="lazy" decoding="async" />
               <img class="theme-shot bambu-shot contain" src={machineVisuals['bambu-p1s-x1c'].src} alt={machineVisuals['bambu-p1s-x1c'].alt} loading="lazy" decoding="async" />
             </div>
-            <div><strong>Testy tiskáren</strong><p>Nezávislé recenze, reálné zkušenosti, plusy a mínusy.</p><span>→</span></div>
+            <div><strong>Tiskárny pod lupou</strong><p>Zdrojované profily, servisní souvislosti a plné testy jen tam, kde máme skutečná data.</p><span>→</span></div>
           </a>
           <a class="ref-topic-card" href="/materialy/">
             <div class="ref-topic-photo">
@@ -197,9 +229,9 @@ const jsonLd = {
       </div>
       <p class="page ref-community-credit">Ilustrační záběry výtisků</p>
       <div class="page ref-community-grid">
-        <div><p class="ref-eyebrow">KOMUNITA / ZKUŠENOSTI / LEPŠÍ VÝSLEDKY</p><h2 id="community-title">Společně tvoříme lepší 3D tisk.</h2></div>
-        <p>Přidejte se k lidem, kteří sdílí zkušenosti, řeší problémy a posouvají 3D tisk dál.</p>
-        <a class="ref-btn ref-btn-accent" href="/o-nas/">Staňte se součástí <span aria-hidden="true">→</span></a>
+        <div><p class="ref-eyebrow">DÍLNA / SERVIS / ČTENÁŘI</p><h2 id="community-title">Pošli problém. My z něj uděláme užitečný návod.</h2></div>
+        <p>Fotka zmetku, chybový kód, nastavení nebo krátký popis závady často vydá za víc než obecná poučka. Nejlepší témata zpracujeme do poradny a vždy odlišíme zkušenost od skutečného testu.</p>
+        <a class="ref-btn ref-btn-accent" href={`mailto:${site.email}?subject=Tip%20pro%20Prvn%C3%AD%20vrstvu`}>Poslat téma redakci <span aria-hidden="true">→</span></a>
       </div>
     </section>
   </main>
