@@ -35,6 +35,7 @@ type AnyEntry =
   | CollectionEntry<'clanky'>
   | CollectionEntry<'rady-a-tipy'>
   | CollectionEntry<'stroje'>
+  | CollectionEntry<'tiskarny'>
   | CollectionEntry<'recenze'>
   | CollectionEntry<'novinky'>
   | CollectionEntry<'technologie'>;
@@ -92,6 +93,8 @@ async function loadCategory(category: CategoryId): Promise<AnyEntry[]> {
       return getCollection('rady-a-tipy');
     case 'stroje':
       return getCollection('stroje');
+    case 'tiskarny':
+      return getCollection('tiskarny');
     case 'recenze':
       return getCollection('recenze');
     case 'novinky':

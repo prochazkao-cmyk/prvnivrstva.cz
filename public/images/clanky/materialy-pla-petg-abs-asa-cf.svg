@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+<title id="title">PLA, PETG, ABS, ASA a CF: co musí 3D tiskárna umět</title>
+<desc id="desc">Redakční infografika ukazuje, že s náročnějšími materiály roste význam teplotní stability, uzavřené konstrukce a trysky vhodné pro abrazivní plniva.</desc>
+<rect width="1200" height="675" rx="32" fill="#111827"/>
+<text x="70" y="92" fill="#fff" font-family="system-ui,sans-serif" font-size="44" font-weight="700">Materiál → co řešit na tiskárně</text>
+<text x="70" y="137" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="23">Ne žebříček. Praktická mapa požadavků před nákupem.</text>
+<g font-family="system-ui,sans-serif">
+<rect x="70" y="195" width="320" height="365" rx="26" fill="#1f2937"/>
+<text x="105" y="250" fill="#fff" font-size="34" font-weight="700">PLA / PETG</text>
+<text x="105" y="300" fill="#e5e7eb" font-size="23">• široká kompatibilita</text>
+<text x="105" y="342" fill="#e5e7eb" font-size="23">• enclosure není základní</text>
+<text x="105" y="384" fill="#e5e7eb" font-size="23">  podmínkou výběru</text>
+<text x="105" y="450" fill="#fbbf24" font-size="21" font-weight="700">Sleduj hlavně:</text>
+<text x="105" y="487" fill="#e5e7eb" font-size="21">spolehlivost, workflow,</text>
+<text x="105" y="520" fill="#e5e7eb" font-size="21">velikost a servis</text>
+<rect x="440" y="195" width="320" height="365" rx="26" fill="#1f2937"/>
+<text x="475" y="250" fill="#fff" font-size="34" font-weight="700">ABS / ASA</text>
+<text x="475" y="300" fill="#e5e7eb" font-size="23">• řeš tepelnou stabilitu</text>
+<text x="475" y="342" fill="#e5e7eb" font-size="23">• uzavřená konstrukce</text>
+<text x="475" y="384" fill="#e5e7eb" font-size="23">  dává praktický smysl</text>
+<text x="475" y="450" fill="#fbbf24" font-size="21" font-weight="700">Ověř u výrobce:</text>
+<text x="475" y="487" fill="#e5e7eb" font-size="21">podporu materiálu, bed,</text>
+<text x="475" y="520" fill="#e5e7eb" font-size="21">hotend a typ komory</text>
+<rect x="810" y="195" width="320" height="365" rx="26" fill="#1f2937"/>
+<text x="845" y="250" fill="#fff" font-size="34" font-weight="700">CF kompozity</text>
+<text x="845" y="300" fill="#e5e7eb" font-size="23">• CF není jeden polymer</text>
+<text x="845" y="342" fill="#e5e7eb" font-size="23">• plnivo je abrazivní</text>
+<text x="845" y="384" fill="#e5e7eb" font-size="23">• tryska musí odpovídat</text>
+<text x="845" y="450" fill="#fbbf24" font-size="21" font-weight="700">Nejdřív zjisti:</text>
+<text x="845" y="487" fill="#e5e7eb" font-size="21">PLA-CF / PET-CF / PA-CF</text>
+<text x="845" y="520" fill="#e5e7eb" font-size="21">a požadavky konkrétního filamentu</text>
+<path d="M390 378h42" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/><path d="m420 360 20 18-20 18" fill="none" stroke="#fbbf24" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M760 378h42" stroke="#fbbf24" stroke-width="8" stroke-linecap="round"/><path d="m790 360 20 18-20 18" fill="none" stroke="#fbbf24" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="70" y="622" fill="#94a3b8" font-size="19">Redakční AI ilustrace • schéma, nikoli výsledek fyzického testu • První Vrstva</text>
+</g></svg>

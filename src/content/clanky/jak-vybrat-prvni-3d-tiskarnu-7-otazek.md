@@ -2,8 +2,8 @@
 title: "Jak vybrat první 3D tiskárnu: 7 otázek před nákupem"
 description: "První tiskárnu nevybírejte podle maximální rychlosti. Sedm otázek rychle ukáže, jestli potřebujete otevřený stroj, komoru, multimateriál nebo hlavně jednoduchý provoz."
 publishedAt: 2026-09-30
-updatedAt: 2026-09-30
-reviewedAt: 2026-09-30
+updatedAt: 2026-10-04
+reviewedAt: 2026-10-04
 author: "Redakce První vrstvy"
 featured: true
 hero: false
@@ -22,6 +22,30 @@ sourceNote: "Rozhodovací průvodce vychází z běžných technických omezení
 **První 3D tiskárnu vybírejte podle toho, co chcete tisknout a kolik práce chcete věnovat samotnému stroji.** Rychlost, počet senzorů ani marketingový seznam funkcí nejsou dobrý začátek.
 
 Než začnete porovnávat konkrétní modely, odpovězte si na sedm otázek. Když u některé nevíte, začněte konzervativně — většina lidí nepotřebuje hned technické materiály ani čtyři barvy.
+
+## Nejdřív si vyberte cestu: otevřená, uzavřená, nebo CoreXY?
+
+Tyto pojmy nepopisují totéž. **Otevřená vs. uzavřená** říká hlavně něco o prostředí kolem výtisku. **CoreXY** popisuje kinematiku pohybu os X/Y; CoreXY tiskárna může být uzavřená, ale samotné označení CoreXY ještě neznamená vyhřívanou nebo aktivně řízenou komoru.
+
+### Otevřená tiskárna
+
+Dává smysl, pokud začínáte hlavně s PLA a PETG, chcete dobrý přístup k mechanice a nemáte předem požadavek na pravidelný tisk velkých dílů z ABS/ASA. Otevřená konstrukce sama o sobě není známkou horší tiskárny — jen řeší jiný soubor priorit.
+
+Typický příklad rozhodování v této kategorii najdete ve [srovnání Bambu Lab A1 vs. P1S](/clanky/bambu-a1-vs-p1s/): důležitější než papírová rychlost je otázka, zda skutečně potřebujete uzavřený stroj.
+
+### Uzavřená tiskárna
+
+Kryt omezuje průvan a pomáhá stabilizovat prostředí kolem dílu. To je důležité zejména tehdy, když plánujete ABS/ASA nebo jiné materiály citlivé na teplotní změny. **Uzavřený kryt ale automaticky neznamená aktivně vyhřívanou komoru.**
+
+Pokud jsou ABS, ASA nebo CF kompozity součástí vašeho plánu, pokračujte na samostatný [průvodce výběrem tiskárny pro ABS/ASA/CF](/clanky/jakou-tiskarnu-pro-abs-asa-cf/), kde jsou požadavky rozdělené podle materiálu.
+
+### CoreXY
+
+CoreXY je způsob vedení pohybu tiskové hlavy v rovině X/Y. Pro kupujícího je podstatné neplést si kinematiku s materiálovou způsobilostí: o tom, co lze rozumně tisknout, rozhoduje celý stroj — hotend, podložka, komora či enclosure, tryska, profily a doporučení výrobce.
+
+Proto při porovnávání CoreXY modelů neberte samotné slovo „CoreXY“ jako důvod ke koupi. V katalogu můžete vedle sebe otevřít profily [Bambu Lab P1S](/stroje/bambu-p1s-x1c/), [Creality K1C](/stroje/creality-k1-k1c/) a [Prusa CORE One+](/recenze/prusa-core-one/) a porovnat konkrétní konstrukční a materiálové možnosti.
+
+**Rychlá orientace:** PLA/PETG a jednoduchý start → otevřený stroj může být zcela dostačující. Časté ABS/ASA → dívejte se po vhodně uzavřené konstrukci a doporučeních výrobce. CoreXY → berte jako konstrukční vlastnost, ne jako automatickou záruku vhodnosti pro technické materiály.
 
 ## 1. Co na ní chcete opravdu tisknout?
 

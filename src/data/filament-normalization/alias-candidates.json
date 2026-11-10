@@ -1,0 +1,18 @@
+{
+  "applied": false,
+  "note": "Návrhy, které normalizátor neaplikuje. Prof. Lab, Prof.Lab, SILK/silk, cf/Cf, Natur/natural a Vícebarevná/Multicolor/multicolor už jsou v aliases.json. SILK není PLA Silk a CF není PETG-CF: to by měnilo polymer, ne velikost písmen.",
+  "brand": [],
+  "material": [
+    {
+      "from": "SILK",
+      "to": "PLA Silk",
+      "why": "Odmítnuto. Pole Materiál říká jen SILK. V aliases.json je jen sjednocení velikosti písmen na Silk."
+    },
+    {
+      "from": "CF",
+      "to": "PETG-CF",
+      "why": "Odmítnuto. PLA-CF, PETG-CF a ASA CF jsou ve feedu odděleně. V aliases.json je jen sjednocení cf/Cf na CF."
+    }
+  ],
+  "color": []
+}

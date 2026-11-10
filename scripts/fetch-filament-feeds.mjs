@@ -16,11 +16,12 @@
 
 import { mkdir, readFile, stat, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { generatedModule, mapXmlFeed, pricePerKg, provePublicSnapshots } from './import-filament-feed.mjs';
 import { BOT_UA, CACHE_MAX_AGE_MS, PUBLIC_SHOPS, REQUEST_GAP_MS, SKIPPED_SHOPS } from './filament-shops.mjs';
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
-const CACHE_DIR = path.join(ROOT, '.cache/filament-feeds');
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+export const CACHE_DIR = path.join(ROOT, '.cache/filament-feeds');
 const DEFAULT_PREVIEW = path.join(ROOT, 'src/data/filament-preview.generated.json');
 const MAX_BYTES = 40_000_000;
 const PREVIEW_FIELDS = [
@@ -110,7 +111,7 @@ function previewDocument(offers) {
   };
 }
 
-async function writePreview(offers, target) {
+export async function writePreview(offers, target) {
   const output = assertLocalWrite(target);
   const document = previewDocument(offers);
   await writeFile(output, `${JSON.stringify(document, null, 2)}\n`, 'utf8');
@@ -135,7 +136,7 @@ function summarize(shop, result) {
   if (shops.size !== 1) throw new Error(`${shop.shopId}: mapped rows did not stay in one shop`);
 }
 
-async function readFreshCache(shop) {
+export async function readFreshCache(shop) {
   const xmlPath = path.join(CACHE_DIR, `${shop.shopId}.xml`);
   const metaPath = path.join(CACHE_DIR, `${shop.shopId}.json`);
   const info = await stat(xmlPath);
@@ -146,7 +147,8 @@ async function readFreshCache(shop) {
   return { xml: await readFile(xmlPath, 'utf8'), fetchedAt: meta.fetchedAt, fromCache: true };
 }
 
-async function downloadShop(shop) {
+export async function downloadShop(shop, options = {}) {
+  const writeCache = options.writeCache !== false;
   const response = await fetch(shop.url, {
     redirect: 'follow',
     signal: AbortSignal.timeout(60_000),
@@ -167,6 +169,11 @@ async function downloadShop(shop) {
   if (xml.length > MAX_BYTES) throw new Error(`${shop.shopName}: response is over 40 MB. Stopped.`);
   if (!xml.includes('<SHOPITEM')) throw new Error(`${shop.shopName}: response has no SHOPITEM. Stopped.`);
   const fetchedAt = new Date().toISOString();
+  if (writeCache) await writeShopCache(shop, xml, fetchedAt);
+  return { xml, fetchedAt, fromCache: false, bytes: xml.length };
+}
+
+export async function writeShopCache(shop, xml, fetchedAt) {
   await mkdir(CACHE_DIR, { recursive: true });
   await writeFile(path.join(CACHE_DIR, `${shop.shopId}.xml`), xml, 'utf8');
   await writeFile(
@@ -174,7 +181,6 @@ async function downloadShop(shop) {
     JSON.stringify({ url: shop.url, fetchedAt, bytes: xml.length, kind: shop.kind }, null, 2),
     'utf8',
   );
-  return { xml, fetchedAt, fromCache: false };
 }
 
 async function loadShop(shop, refresh) {
@@ -247,7 +253,10 @@ async function main() {
   await runLive(args);
 }
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exit(1);
-});
+const invokedDirectly = process.argv[1] && path.resolve(process.argv[1]) === path.resolve(fileURLToPath(import.meta.url));
+if (invokedDirectly) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exit(1);
+  });
+}

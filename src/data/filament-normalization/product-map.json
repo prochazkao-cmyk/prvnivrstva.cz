@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "note": "Jediný způsob, jak spojit nabídky bez stejného EAN. Skupina musí vyjmenovat shopId:ITEM_ID. productLine a form sem patří jen jako ručně zapsaná hodnota, ne jako odhad z názvu. Prázdné groups znamená, že žádná ruční vazba není schválená.",
+  "groups": []
+}

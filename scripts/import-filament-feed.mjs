@@ -25,8 +25,10 @@
  * 5. /srovnavac/ stays noindex until uniqueShopCount() sees at least 3 non-example shops.
  */
 
+import { readFileSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
+import { proveColorRules, resolveFeedColor } from './filament-color.mjs';
 import { PUBLIC_SHOPS, SNAPSHOT_FETCHED_AT } from './filament-shops.mjs';
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
@@ -168,9 +170,18 @@ function parsePackaging(raw) {
   return null;
 }
 
-function looksLikeNonFilament(name) {
+export function looksLikeNonFilament(name) {
   const text = fold(name);
   return NON_FILAMENT.some((pattern) => pattern.test(text));
+}
+
+let colorAliasCache;
+function feedColorAliases() {
+  if (!colorAliasCache) {
+    const file = path.join(ROOT, 'src/data/filament-normalization/aliases.json');
+    colorAliasCache = JSON.parse(readFileSync(file, 'utf8')).color ?? {};
+  }
+  return colorAliasCache;
 }
 
 function readParams(block) {
@@ -342,7 +353,7 @@ export function mapXmlFeed(xml, options) {
     if (shipping.shippingPrice !== undefined) offer.shippingPrice = shipping.shippingPrice;
     const material = paramValue(params, /^material$/);
     const brand = readTag(block, 'MANUFACTURER');
-    const color = paramValue(params, /^barva$|^color$/);
+    const color = resolveFeedColor(params, productName, feedColorAliases());
     if (imageUrl) offer.imageUrl = imageUrl;
     if (material) offer.material = material;
     if (brand) offer.brand = brand;
@@ -449,7 +460,51 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+function colorFixtureItem(id, name, colors, extra = '') {
+  const params = colors
+    .map((color) => `<PARAM><PARAM_NAME>Barva</PARAM_NAME><VAL>${color}</VAL></PARAM>`)
+    .join('');
+  return `<SHOPITEM><ITEM_ID>${id}</ITEM_ID><PRODUCTNAME>${name}</PRODUCTNAME><URL>https://example.invalid/${id}</URL><PRICE_VAT>100</PRICE_VAT><DELIVERY_DATE>0</DELIVERY_DATE><MANUFACTURER>Test</MANUFACTURER><PARAM><PARAM_NAME>Váha</PARAM_NAME><VAL>1kg</VAL></PARAM><PARAM><PARAM_NAME>Materiál</PARAM_NAME><VAL>PETG</VAL></PARAM>${params}${extra}</SHOPITEM>`;
+}
+
 async function selfTest() {
+  proveColorRules();
+  const colorXml = `<SHOP>${[
+    colorFixtureItem('white-ok', 'PROF. LAB | PETG | MATTE Bílá | 1kg', ['Bílá']),
+    colorFixtureItem('white-clear', 'PROF. LAB | PETG | Transparent | 1kg', ['Bílá']),
+    colorFixtureItem('white-black', 'ERYONE | ABS | Černá | 1kg', ['Bílá']),
+    colorFixtureItem('red-yellow', '3DPOWER | PETG | Select Žlutá | 1kg', ['Červená']),
+    colorFixtureItem('brown-white', 'GEEETECH | Pla | Bílá | 1kg', ['Hnědá']),
+    colorFixtureItem('black-ok', 'PROF. LAB | PETG | Černá | 1kg', ['Černá']),
+    colorFixtureItem('tint', 'Filament PETG Transparentně žlutá', ['Transparentní', 'Žlutá']),
+    colorFixtureItem('name-only', 'PROF. LAB | PETG | Černá | 1kg', []),
+    colorFixtureItem(
+      'multi',
+      'PLA Silk Dual-color Černá - Červená',
+      ['Černá', 'Červená'],
+      '<PARAM><PARAM_NAME>Multicolor</PARAM_NAME><VAL>Dvě barvy</VAL></PARAM>',
+    ),
+  ].join('')}</SHOP>`;
+  const colored = mapXmlFeed(colorXml, {
+    shopId: 'color-fixture',
+    shopName: 'Color',
+    country: 'CZ',
+    currency: 'CZK',
+    source: 'xml',
+    fetchedAt: '2026-10-24T00:00:00.000Z',
+  });
+  const colorOf = (id) => colored.accepted.find((offer) => offer.productId === `color-fixture:${id}`)?.color;
+  assert(colorOf('white-ok') === 'bílá', 'fixture white agrees');
+  assert(colorOf('white-clear') === undefined, 'fixture transparent must not join bílá');
+  assert(colorOf('white-black') === undefined, 'fixture black must not join bílá');
+  assert(colorOf('red-yellow') === undefined, 'fixture yellow must not join červená');
+  assert(colorOf('brown-white') === undefined, 'fixture white must not join hnědá');
+  assert(colorOf('black-ok') === 'černá', 'fixture black agrees');
+  assert(colorOf('tint') === 'transparentní žlutá', 'fixture tint is not the first Barva');
+  assert(colorOf('name-only') === undefined, 'fixture name must not fill a missing Barva');
+  assert(colorOf('multi') === 'vícebarevná', 'fixture multicolor param wins');
+  assert(colored.accepted.length === 9, 'color fixture should accept every weighted row');
+
   const offersSource = await readFile(path.join(ROOT, 'src/data/offers.ts'), 'utf8');
   assert(
     offersSource.includes('return offer.price / (grams / 1000);'),
