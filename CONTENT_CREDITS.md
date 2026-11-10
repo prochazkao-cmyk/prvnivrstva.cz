@@ -34,4 +34,15 @@ Oficiální snímky bez samostatné Creative Commons licence, použité jako dok
 - `barvy-bambu-skupiny.png`, `barvy-obarveni.png`, `barvy-odpad.jpg` — wiki Bambu Lab, článek o vícebarevném tisku a o odpadu při výměně filamentu
 - `app-handy-*.png` — wiki Bambu Lab, rychlý návod Bambu Handy
 
-Snímek rozhraní Chituboxu, Lychee, programu HueForge a mobilní aplikace Prusa ve velikosti vhodné do článku a pod svobodnou licencí nebyl k dispozici. U těch průvodců jsou oficiální snímky Bambu Handy, nebo reálné fotografie výtisků a strojů. V popisku je řečené, co na snímku je a co na něm není.
+Snímky CHITUBOX Basic 2.3 (`sla-chitubox-*.webp`) jsou obrazovka linuxového instalátoru z download.chitubox.com, pořízená 10. 11. 2026. Není to výtisk redakce.
+
+Nové fotografie z Wikimedia Commons, každá s autorstvím a licencí ve figcaption:
+
+- `sls-formlabs-2026.webp` — tisková fotografie Formlabs, CC BY 4.0, 13. 10. 2026, autor na stránce souboru neuveden
+- `sls-sinterit-phs.webp` — Wzgardafull, CC BY-SA 4.0, 12. 1. 2021
+- `sls-bambshell.webp` — FREEDEE, CC BY-SA 4.0, 29. 5. 2018
+- `sls-pulley.webp` — newman72, CC BY 2.0, 30. 5. 2019
+- `servis-tryska.webp` — David Elliott, CC BY 2.0, 23. 10. 2014
+- `servis-ridici.webp` a `servis-ramps.webp` — Tony Buser, CC BY-SA 2.0
+
+Rozhraní Lychee, programu HueForge a aplikace Prusa k 10. 11. 2026 pořád není. HueForge není volně stažitelný. Lychee se spustil, pracovní plocha se nevykreslila. U Prusy chybí licence ke snímku z dokumentace.

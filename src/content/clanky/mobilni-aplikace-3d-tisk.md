@@ -15,7 +15,7 @@ level: "začátečník"
 technologies:
   - "FDM"
 evidence: "vyrobce"
-sourceNote: "Kontrola 3. 10. 2026 proti Bambu Handy Quick Start, stránce Software and App na wiki Bambu Lab a článku Prusa Mobile App v Prusa Knowledge Base. Snímky jsou z oficiálního návodu Bambu Handy. Snímek rozhraní aplikace Prusa pod svobodnou licencí není, proto tu chybí."
+sourceNote: "Kontrola 3. 10. 2026 proti Bambu Handy Quick Start a článku Prusa Mobile App. Snímky Handy jsou z wiki Bambu Lab. K 10. 11. 2026 není snímek aplikace Prusa pod licencí, kterou smíme vložit."
 ---
 
 **Telefon u 3D tiskárny hlídá běžící úlohu a umí ji podle návodu výrobce spustit znovu. Nový model pořád připravíte ve sliceru na počítači.** Dvě aplikace, ke kterým existuje oficiální návod, jsou Bambu Handy a mobilní aplikace Prusa.
@@ -67,7 +67,7 @@ Prusa Knowledge Base má samostatný článek [Prusa Mobile App](https://help.pr
 
 Aplikace je podle článku pro iOS i Android. Článek ji řadí vedle Prusa Connect a PrusaLink. Connect je vzdálená služba, Link je cesta v místní síti. Který režim váš stroj použije, rozhoduje návod k modelu: Knowledge Base má samostatné postupy pro CORE One, MK4/S, MK3.9, MK3.5, XL a MINI/+. Obecný průvodce ty postupy nenahrazuje.
 
-Snímek rozhraní aplikace Prusa, který by šlo zveřejnit se stejnou jistotou jako wiki Bambu Lab, k dispozici není. Funkce výše jsou proto jen parafráze článku výrobce, ne popis tlačítek z fotografie.
+Snímek aplikace Prusa k 10. 11. 2026 pořád chybí. Na Wikimedia Commons není. Blog výrobce ani Knowledge Base neuvádějí licenci, pod kterou by šel snímek vložit, a aplikace nejde spustit jako volně stažený program na tomhle počítači. Funkce výše jsou proto parafráze článku výrobce, ne popis tlačítek z fotografie.
 
 ## Co telefon nespraví
 

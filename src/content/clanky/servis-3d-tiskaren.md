@@ -41,8 +41,8 @@ Hodinovou sazbu a ceny přestaveb nechte na ceníku toho webu. Mění se a do pr
 Školení na webu servisu nejsou totéž co oficiální záruční středisko Prusa Research. Rozdíl je v další části.
 
 <figure>
-  <img src="/media/pruvodce/servis-hotend.jpg" alt="Sestavený hotend s heatbreakem, tryskou, topným tělesem a silikonovým návlekem" loading="lazy" decoding="async" />
-  <figcaption>Hotend, kolem kterého se točí velká část servisu extruze. Foto: A7N8X, CC0, Wikimedia Commons. Není to snímek z ostravského výdejního místa.</figcaption>
+  <img src="/media/pruvodce/servis-tryska.webp" alt="Detail trysky 3D tiskárny, ze které vytéká plast" loading="lazy" decoding="async" />
+  <figcaption>Tryska, kolem které se točí ucpání a výměna. Foto: David Elliott, 23. 10. 2014, CC BY 2.0, Wikimedia Commons. Není to snímek z ostravského výdeje ani náš test.</figcaption>
 </figure>
 
 ## Kdy stačí postup výrobce a kdy už servis
@@ -58,8 +58,8 @@ Nejdřív jedna změna a jeden test. Ucpaná tryska, špatná první vrstva nebo
 Samostatná práce dává smysl, když výrobce publikuje postup, díl jde objednat a vy umíte stroj znovu složit. U Prusy je tahle cesta součástí konstrukce. U uzavřenějšího stroje si nejdřív přečtěte, jestli zásah záruční podmínky nemění.
 
 <figure>
-  <img src="/media/pruvodce/servis-extruder.jpg" alt="Sestavený extruder na tiskárně Prusa i3" loading="lazy" decoding="async" />
-  <figcaption>Sestavený extruder Prusa i3. Foto: John Abella, CC BY 2.0, Wikimedia Commons.</figcaption>
+  <img src="/media/pruvodce/servis-montaz-hotendu.jpg" alt="Montáž hotendu, termočlánek je zatím přichycený páskou" loading="lazy" decoding="async" />
+  <figcaption>Montáž hotendu. Foto: syvwlch, CC BY 2.0, Wikimedia Commons. Není to zakázka z Ostravy.</figcaption>
 </figure>
 
 ## Co poslat společně s tiskárnou
@@ -78,8 +78,8 @@ U Prusy Knowledge Base výslovně žádá číslo objednávky, fakturu nebo sér
 Filament vyndejte. Rozbitou cívku, uvolněné sklo podložky a visící kabely zabalte tak, aby se v přepravě neodřely. Přesný postup balení má servis na vlastní stránce „Jak poslat tiskárnu“. Řiďte se jí, ne obecným odhadem z fóra.
 
 <figure>
-  <img src="/media/pruvodce/servis-dily.jpg" alt="Rozložené díly tiskárny Prusa i3 před sestavením" loading="lazy" decoding="async" />
-  <figcaption>Díly před sestavením. Servis má smysl i tehdy, když stavebnice nebo přestavba nedojde do funkčního stavu. Foto: John Abella, CC BY 2.0, Wikimedia Commons.</figcaption>
+  <img src="/media/pruvodce/servis-ridici.webp" alt="Řídicí deska extruderu RepRap s chladiči na výkonových obvodech" loading="lazy" decoding="async" />
+  <figcaption>Chladiče na řídicí desce extruderu RepRap. Foto: Tony Buser, 30. 1. 2012, CC BY-SA 2.0, Wikimedia Commons. Starší elektronika, ne současný servisní stůl.</figcaption>
 </figure>
 
 ## Záruční cesta u Prusa Research
@@ -96,8 +96,8 @@ Kontakt výrobce:
 Po záruce Prusa dovoluje poslat stroj do oficiálního střediska, nebo do nezávislého servisu ze svého seznamu. U nezávislých míst Knowledge Base výslovně říká, že s nimi není přímo spojená a za tiskárny k nim odeslané neodpovídá. Než stroj někam pošlete, otevřete aktuální seznam. Tenhle průvodce ho nekopíruje, protože se mění.
 
 <figure>
-  <img src="/media/pruvodce/servis-montaz-hotendu.jpg" alt="Montáž hotendu, termočlánek je zatím přichycený páskou" loading="lazy" decoding="async" />
-  <figcaption>Montáž hotendu. Foto: syvwlch, CC BY 2.0, Wikimedia Commons.</figcaption>
+  <img src="/media/pruvodce/servis-ramps.webp" alt="Sestavená elektronika RAMPS pro tiskárnu RepRap" loading="lazy" decoding="async" />
+  <figcaption>Sestavená elektronika RAMPS. Foto: Tony Buser, 30. 1. 2012, CC BY-SA 2.0, Wikimedia Commons. Deska, jakou servis mění, ne fotka z Ostravy.</figcaption>
 </figure>
 
 ## Bambu Lab a ostatní značky

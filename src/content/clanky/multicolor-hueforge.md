@@ -15,7 +15,7 @@ level: "pokročilý"
 technologies:
   - "FDM"
 evidence: "vyrobce"
-sourceNote: "Kontrola 3. 10. 2026 proti stránce About HueForge a FAQ na shop.thehueforge.com. Fotografie jsou 3D tištěné litofánie pod svobodnou licencí. Nejsou to snímky programu HueForge ani oficiální ukázkové výtisky autora programu."
+sourceNote: "Kontrola 3. 10. 2026 proti stránce About HueForge a FAQ na shop.thehueforge.com. Program není volně stažitelný a k 10. 11. 2026 k němu není snímek pod licencí, kterou smíme vložit. Fotografie jsou 3D tištěné litofánie pod svobodnou licencí."
 ---
 
 **Obraz z filamentu vzniká tak, že se na sebe skládají tenké vrstvy různě propustných barev.** Oko pak vidí odstín, který v žádné jednotlivé cívce není. To je jiná práce než [diskrétní barevný tisk](/clanky/barevny-tisk-ams-mmu/), kde každá barva na dílu je pořád jedna celá cívka na svém místě modelu.
@@ -46,7 +46,7 @@ Druhá chyba z FAQ: výška vrstvy a základní vrstva v HueForge musí sedět s
 
 Litofánie je starší princip: tloušťka průsvitného materiálu mění jas, když za obraz dáte světlo. 3D tisk totéž umí z průsvitného filamentu. Fotografie níže jsou takové výtisky. Nejsou to obrazovky HueForge a nejsou to výtisky dodané s programem. Jsou tu proto, že na nich je vidět vztah tloušťky a světla, na kterém stránka HueForge staví TD.
 
-Svobodně šiřitelný snímek samotného programu ani oficiální ukázkový výtisk HueForge se k datu kontroly nepodařilo dohledat.
+HueForge se ke 10. 11. 2026 nestahuje zdarma a zkušební verzi stránka výrobce neuvádí. Na Wikimedia Commons snímek programu není. Tiskové materiály výrobce nemají licenci, pod kterou by šly vložit sem. Rozhraní proto v článku není.
 
 <figure>
   <img src="/media/pruvodce/spektrum-lithophane-logo.jpg" alt="3D tištěná litofánie loga Wikipedie, tloušťka materiálu tvoří obraz" loading="lazy" decoding="async" />

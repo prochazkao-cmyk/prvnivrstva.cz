@@ -14,7 +14,7 @@ level: "pokročilý"
 technologies:
   - "SLS"
 evidence: "redakce"
-sourceNote: "Kontrola 3. 10. 2026 proti primeru SLS na tomhle webu, proti popisku oficiálního snímku Formlabs z roku 2025 na Wikimedia Commons a proti fotografiím Sharebot SnowWhite z 3D Printshow 2014. Ceny strojů ani zakázek tu nejsou."
+sourceNote: "Kontrola 3. 10. 2026 proti primeru SLS na tomhle webu. Snímky jsou tisková fotografie Formlabs z 13. 10. 2026, Sinterit Lisa Pro z 12. 1. 2021 a dva práškové díly. Ceny strojů ani zakázek tu nejsou."
 ---
 
 **SLS speče prášek laserem. Okolní prášek díl drží, takže klasické podpěry jako u FDM odpadají.** Jeden díl nebo malá série proto často patří do zakázky. Vlastní stroj dává smysl až ve chvíli, kdy tu práci s práškem budete dělat pořád.
@@ -30,29 +30,29 @@ Nejčastější polymer v tomhle režimu je nylon, typicky PA12. Povrch je zrnit
 Kovový tisk, který některé zakázkové weby označují jako SLM, je jiný proces. Název [3dtiskostrava.cz](https://www.3dtiskostrava.cz/) k 3. 10. 2026 zní FDM–SLM. To není nabídka polymerového SLS a tenhle průvodce ji tak nepoužívá.
 
 <figure>
-  <img src="/media/pruvodce/sls-formlabs-2025.png" alt="Oficiální řada Formlabs z roku 2025: Form 4L, práškový Fuse 1+ 30W a Form 4" loading="lazy" decoding="async" />
-  <figcaption>Snímek Formlabs z roku 2025. Popisek výrobce na Commons uvádí Form 4L, Fuse 1+ 30W a Form 4. Práškový stroj je uprostřed. Foto: Formlabs Inc., CC BY 4.0, Wikimedia Commons. Není to test První vrstvy.</figcaption>
+  <img src="/media/pruvodce/sls-formlabs-2026.webp" alt="Tisková fotografie řady Formlabs z roku 2026, resinové stroje vlevo a práškové stroje vpravo" loading="lazy" decoding="async" />
+  <figcaption>Tisková fotografie Formlabs z 13. 10. 2026. Popis souboru na Commons uvádí Form Studio 1, Form 4, Form 4L, Fuse 1+ a Fuse X1. Oranžové stroje vlevo jsou resin, šedé vpravo prášek. Licence CC BY 4.0, Wikimedia Commons. Jméno autora stránka souboru neuvádí. Není to test První vrstvy.</figcaption>
 </figure>
 
-Form 4 a Form 4L na krajích snímku jsou resinové tiskárny. Do SLS patří prostřední Fuse. Resinový řez je v [průvodci Chitubox a Lychee](/clanky/sla-slicery-chitubox-lychee/). Míchat ty dvě technologie v jedné poptávce skončí špatným materiálem.
+Resinový řez je v [průvodci Chitubox a Lychee](/clanky/sla-slicery-chitubox-lychee/). Míchat ty dvě technologie v jedné poptávce skončí špatným materiálem.
 
 ## Stolní SLS existuje a pořád je to prášková dílna
 
-Na veletrhu 3D Printshow v Londýně v roce 2014 fotil Creative Tools stroj Sharebot SnowWhite. Snímky jsou dobové. Nejsou to aktuální parametry a nejsou to doporučení ke koupi. Ukazují něco jiného: i menší SLS je uzavřený práškový stroj, ne tichá krabička vedle FDM.
+Menší SLS není tichá krabička vedle FDM. Na snímku z 12. 1. 2021 je Sinterit Lisa Pro vedle stanice na prášek, pískovačky a vysavače do výbušného prostředí. To je obsluha prášku, ne jen tisk.
 
 <figure>
-  <img src="/media/pruvodce/sls-snowwhite-01.jpg" alt="Prášková tiskárna Sharebot SnowWhite na veletrhu 3D Printshow 2014 v Londýně" loading="lazy" decoding="async" />
-  <figcaption>Sharebot SnowWhite, 3D Printshow Londýn 2014. Foto: Creative Tools, CC BY 2.0, Wikimedia Commons.</figcaption>
+  <img src="/media/pruvodce/sls-sinterit-phs.webp" alt="Sinterit Lisa Pro vedle stanice na prášek, pískovačky a vysavače" loading="lazy" decoding="async" />
+  <figcaption>Sinterit Lisa Pro, Powder Handling Station, pískovačka a vysavač ATEX. Foto: Wzgardafull, 12. 1. 2021, CC BY-SA 4.0, Wikimedia Commons. Není to dílna První vrstvy.</figcaption>
 </figure>
 
 <figure>
-  <img src="/media/pruvodce/sls-snowwhite-03.jpg" alt="Jiný úhel na tiskárnu Sharebot SnowWhite na 3D Printshow 2014" loading="lazy" decoding="async" />
-  <figcaption>Stejný stroj z jiného úhlu, stejný veletrh. Foto: Creative Tools, CC BY 2.0, Wikimedia Commons.</figcaption>
+  <img src="/media/pruvodce/sls-bambshell.webp" alt="Ohebné mřížované díly vytištěné práškem na Sinterit Lisa" loading="lazy" decoding="async" />
+  <figcaption>Ohebné díly ze Sinterit Lisa. Foto: FREEDEE, 29. 5. 2018, CC BY-SA 4.0, Wikimedia Commons. Není to náš výtisk.</figcaption>
 </figure>
 
 <figure>
-  <img src="/media/pruvodce/sls-snowwhite-05.jpg" alt="Detail práškové tiskárny Sharebot SnowWhite na veletrhu v roce 2014" loading="lazy" decoding="async" />
-  <figcaption>Detail SnowWhite, 2014. Foto: Creative Tools, CC BY 2.0, Wikimedia Commons. Historický snímek, ne aktuální nabídka.</figcaption>
+  <img src="/media/pruvodce/sls-pulley.webp" alt="Bílý práškový díl hřídele kladky vytištěný u 3D Systems" loading="lazy" decoding="async" />
+  <figcaption>Díl, který si autor snímku nechal vytisknout u 3D Systems. Popis souboru říká Duraform HST, nylon 12 s vláknem. Foto: newman72, 30. 5. 2019, CC BY 2.0, Wikimedia Commons. Není to zakázka První vrstvy.</figcaption>
 </figure>
 
 Kolem stroje je prášek ve vzduchu, čištění dílů, třídění použitého a nového prášku a čas, kdy komora chladne a nejde do ní sáhnout. To je práce, kterou FDM dílna při tisku z jedné cívky neřeší. Než stroj koupíte, potřebujete místnost, odsávání podle pokynu výrobce a postup, kam přijde odpadní prášek. Ty podmínky jsou v dokumentaci konkrétního stroje. Obecný průvodce je nenahrazuje.
@@ -83,12 +83,14 @@ Když váháte mezi technologií, projděte [FDM](/technologie/fdm/), [SLA](/tec
 - [ ] Do poptávky napište SLS, ať zakázka neskončí na FDM nebo na SLA.
 - [ ] SLM a SLS nezaměňujte. Kov v názvu služby není nylonový prášek.
 - [ ] Vlastní stroj počítejte včetně chladnutí, čištění a prášku, který mezi joby leží.
-- [ ] Dobové fotky SnowWhite z roku 2014 nejsou nákupní rada. Aktuální řadu, včetně Fuse na snímku Formlabs z roku 2025, si ověřte u výrobce.
+- [ ] Tiskové fotografie Formlabs a Sinteritu nejsou nákupní rada. Aktuální řadu si ověřte u výrobce.
 
 ## Zdroje
 
 - [SLS na První vrstvě](/technologie/sls/)
 - [FDM na První vrstvě](/technologie/fdm/)
 - [SLA na První vrstvě](/technologie/sla/)
-- Oficiální snímek Formlabs 2025 na Wikimedia Commons, soubor Formlabs3Dprinters2025, licence CC BY 4.0, autor Formlabs Inc.
-- Fotografie Sharebot SnowWhite, Creative Tools, CC BY 2.0, 3D Printshow Londýn 2014
+- [Formlabs3dprinters2026 na Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Formlabs3dprinters2026.png), CC BY 4.0, 13. 10. 2026
+- [Sinterit PHS na Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sinterit_PHS.jpg), Wzgardafull, CC BY-SA 4.0, 12. 1. 2021
+- [Bambshell SLS na Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Bambshell_SLS_3D_printed_Sinterit_Lisa_009-e1532684478202.jpg), FREEDEE, CC BY-SA 4.0, 29. 5. 2018
+- [SLS díl 3D Systems na Wikimedia Commons](https://commons.wikimedia.org/wiki/File:SLS_3D_Systems_Printed_Duraform_HST_Pulley_Shaft_(49014691207).jpg), newman72, CC BY 2.0, 30. 5. 2019
