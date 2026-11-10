@@ -7,32 +7,32 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3127 |
-| dlaždice dřív (materiál + barva + hmotnost) | 682 |
-| dlaždice teď | 2090 |
+| nabídky | 3131 |
+| dlaždice dřív (materiál + barva + hmotnost) | 683 |
+| dlaždice teď | 2093 |
 | nabídky spojené podle EAN | 90 |
 | z toho mezi obchody | 64 |
 | skupiny EAN mezi obchody spojené / nespojené | 31 / 8 |
 | skupiny EAN spojené | 43 |
 | skupiny EAN viděné a nespojené | 8 |
-| nabídky na společné dlaždici v jednom obchodě | 1285 |
+| nabídky na společné dlaždici v jednom obchodě | 1286 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1033 |
+| nabídky v revizi | 1026 |
 | značky před aliasem / po aliasu | 37 / 35 |
-| materiály před aliasem / po aliasu | 49 / 48 |
+| materiály před aliasem / po aliasu | 48 / 47 |
 | barvy před aliasem / po aliasu | 69 / 69 |
 
 ## Důvody revize
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 723 |
-| missing-color | 317 |
+| missing-diameter | 716 |
+| missing-color | 316 |
 | missing-material | 78 |
 | ean-conflict | 16 |
 | ean-material-conflict | 14 |
-| form-param-disagrees | 11 |
+| form-param-disagrees | 10 |
 | ean-brand-conflict | 2 |
 | ean-weight-conflict | 2 |
 
@@ -54,7 +54,7 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 ## Příklad rozdělené dlaždice
 
-Původní klíč `pla||1000`: 131 nabídek, 17 značek.
+Původní klíč `pla||1000`: 130 nabídek, 17 značek.
 - `offer:materialpro3d:PLA175LB1CRW` — 3DLabPrint · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA natural filament 1,75 mm 3DLabPrint 1 kg)
 - `offer:3dfil:447` — 3DPower · PLA · neuvedeno · 1 kg · cívka (3dfil, 3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg)
 - `offer:materialpro3d:PLA175AP1HSN` — Aurapol · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PLA filament tělový skin human color 1,75 mm Aurapol 1 kg)
