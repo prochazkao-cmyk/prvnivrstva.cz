@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3124,
-    "cardsBefore": 683,
-    "cardsAfter": 2087,
-    "offersMatchedByEan": 90,
+    "offers": 3119,
+    "cardsBefore": 682,
+    "cardsAfter": 2086,
+    "offersMatchedByEan": 89,
     "offersMatchedAcrossShopsByEan": 64,
     "eanGroupsMerged": 43,
     "eanGroupsCrossShop": 38,
@@ -12,11 +12,11 @@
     "eanGroupsCrossShopBlocked": 7,
     "eanGroupsBlocked": 7,
     "eanGroupsSeen": 50,
-    "offersSharingShopKey": 1286,
+    "offersSharingShopKey": 1283,
     "shopKeyCards": 296,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1018,
+    "reviewOffers": 1017,
     "brandsBefore": 37,
     "brandsAfter": 35,
     "materialsBefore": 48,
@@ -29,7 +29,7 @@
       "ean-material-conflict": 12,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 10,
-      "missing-color": 313,
+      "missing-color": 312,
       "missing-diameter": 710,
       "missing-material": 78
     }
@@ -896,7 +896,6 @@
         "3dfil"
       ],
       "offerIds": [
-        "3dfil:1902",
         "3dfil:3527",
         "3dfil:3528"
       ],
@@ -1046,6 +1045,16 @@
       ]
     },
     {
+      "offerId": "3dfil:1009",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA BASIC | Hnědá \"kakao\" | 1.75mm | 1kg | Refill",
+      "ean": "6977252426985",
+      "cardId": "offer:3dfil:1009",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:1010",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA BASIC | Žlutá \"slunečnice\" | 1.75mm | 1kg | Refill",
@@ -1122,6 +1131,16 @@
       "productName": "BAMBU LAB | PLA Silk+ | Růžová | 1.75mm | 1kg | Spool",
       "ean": "8594233084910",
       "cardId": "offer:3dfil:1123",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1124",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU For AMS | Černá | 1.75mm | 1kg | Refill",
+      "ean": "8594233084927",
+      "cardId": "offer:3dfil:1124",
       "reasons": [
         "missing-diameter"
       ]
@@ -2278,16 +2297,6 @@
       "productName": "ERYONE | TPU | Transparentní | 1.75mm | 0.5kg",
       "ean": "8594233083357",
       "cardId": "offer:3dfil:1872",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1902",
-      "shopId": "3dfil",
-      "productName": "ZIRO | Pla Silk | Passionate | 1.75mm | 1kg",
-      "ean": "8594233080264",
-      "cardId": "ean:8594233080264",
       "reasons": [
         "missing-diameter"
       ]
@@ -4160,16 +4169,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3262",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA Silk+ | Champagne | 1.75mm | 1kg | Spool",
-      "ean": "8594233085917",
-      "cardId": "offer:3dfil:3262",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3267",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA BASIC | Růžová \"Hot\" | 1.75mm | 1kg | Spool",
@@ -4236,6 +4235,16 @@
       "productName": "BAMBU LAB | ABS | Azure Modrá | 1.75mm | 1kg | Refill",
       "ean": "8594233085955",
       "cardId": "offer:3dfil:3313",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:3314",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | ABS | Zelená \"Olive\" | 1.75mm | 1kg | Refill",
+      "ean": "8594233085962",
+      "cardId": "offer:3dfil:3314",
       "reasons": [
         "missing-diameter"
       ]
@@ -4358,6 +4367,16 @@
       "productName": "BAMBU LAB | PETG Basic | Červená | 1.75mm | 1kg | Refill",
       "ean": "8594233085993",
       "cardId": "offer:3dfil:3391",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:3392",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PETG Basic | Bílá | 1.75mm | 1kg | Refill",
+      "ean": "8594233086006",
+      "cardId": "offer:3dfil:3392",
       "reasons": [
         "missing-diameter"
       ]
@@ -6062,17 +6081,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4170",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PETG Translucent | Clear | 1.75mm | 1kg | Spool",
-      "ean": "8594233089076",
-      "cardId": "offer:3dfil:4170",
-      "reasons": [
-        "form-param-disagrees",
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4171",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PETG Basic | Šedá | 1.75mm | 1kg | Spool",
@@ -6363,6 +6371,17 @@
       "ean": "5904323179007",
       "cardId": "offer:3dfil:431",
       "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4311",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PETG Basic | Bílá | 1.75mm | 1kg | Spool",
+      "ean": "8594233089328",
+      "cardId": "offer:3dfil:4311",
+      "reasons": [
+        "form-param-disagrees",
         "missing-diameter"
       ]
     },
@@ -7014,16 +7033,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4523",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | TPU For AMS | Gray (šedá) | 1.75mm | 1kg | Spool",
-      "ean": "8594233086938",
-      "cardId": "offer:3dfil:4523",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4524",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | TPU For AMS | Blue (modrá) | 1.75mm | 1kg | Spool",
@@ -7362,16 +7371,6 @@
       "productName": "ERYONE | PLA Silk Macaron Rainbow | Waterfall Rainbow | 1.75mm | 1kg",
       "ean": "8594233082565",
       "cardId": "offer:3dfil:865",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:867",
-      "shopId": "3dfil",
-      "productName": "ERYONE | PLA Matte | Rainbow Watercolor Five | 1.75mm | 1kg",
-      "ean": "8594233080028",
-      "cardId": "offer:3dfil:867",
       "reasons": [
         "missing-diameter"
       ]
@@ -7914,16 +7913,6 @@
       "productName": "Filament Sunlu PLA Matte 1,75 mm 1 kg, Jílová",
       "ean": "6933582317034",
       "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-JIL",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "filamenty-brno:SUN-PLA-MATTE-SLO",
-      "shopId": "filamenty-brno",
-      "productName": "Filament Sunlu PLA Matte 1,75 mm 1 kg, Slonová kost",
-      "ean": "6933582324476",
-      "cardId": "offer:filamenty-brno:SUN-PLA-MATTE-SLO",
       "reasons": [
         "missing-color"
       ]
