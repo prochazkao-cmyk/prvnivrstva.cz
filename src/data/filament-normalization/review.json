@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3119,
+    "offers": 3110,
     "cardsBefore": 682,
-    "cardsAfter": 2086,
+    "cardsAfter": 2081,
     "offersMatchedByEan": 89,
     "offersMatchedAcrossShopsByEan": 64,
     "eanGroupsMerged": 43,
@@ -12,11 +12,11 @@
     "eanGroupsCrossShopBlocked": 7,
     "eanGroupsBlocked": 7,
     "eanGroupsSeen": 50,
-    "offersSharingShopKey": 1283,
-    "shopKeyCards": 296,
+    "offersSharingShopKey": 1278,
+    "shopKeyCards": 295,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1017,
+    "reviewOffers": 1013,
     "brandsBefore": 37,
     "brandsAfter": 35,
     "materialsBefore": 48,
@@ -30,8 +30,8 @@
       "ean-weight-conflict": 2,
       "form-param-disagrees": 10,
       "missing-color": 312,
-      "missing-diameter": 710,
-      "missing-material": 78
+      "missing-diameter": 705,
+      "missing-material": 79
     }
   },
   "splitExamples": [
@@ -1462,16 +1462,6 @@
       "productName": "ERYONE | PLA | Žlutá \"mango\" | 1.75mm | 1kg",
       "ean": "8594233082596",
       "cardId": "offer:3dfil:1261",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1262",
-      "shopId": "3dfil",
-      "productName": "ERYONE | PLA | Šedá \"Agate\" | 1.75mm | 1kg",
-      "ean": "8594233082602",
-      "cardId": "offer:3dfil:1262",
       "reasons": [
         "missing-diameter"
       ]
@@ -3536,16 +3526,6 @@
       "productName": "BAMBU LAB | PLA Matte | Šedá \"Nardo\" | 1.75mm | 1kg | Refill",
       "ean": "8594233085719",
       "cardId": "offer:3dfil:2855",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:2868",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PLA Silk | Silver | 1.75mm | 1kg",
-      "ean": "8594233086303",
-      "cardId": "offer:3dfil:2868",
       "reasons": [
         "missing-diameter"
       ]
@@ -6212,16 +6192,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4248",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | PETG-CF | Red | 1.75mm | 1kg",
-      "ean": "8594233089120",
-      "cardId": "offer:3dfil:4248",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:425",
       "shopId": "3dfil",
       "productName": "3DPOWER | PETG | Červená | 1.75mm | 1kg",
@@ -7256,16 +7226,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4649",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | TPU 72D | Black | 1.75mm | 1kg | POŠKOZENÝ OBAL",
-      "ean": null,
-      "cardId": "offer:3dfil:4649",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4650",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Pure | Apricot | 1.75mm | 1kg | Spool",
@@ -7602,16 +7562,6 @@
       "productName": "BAMBU LAB | PETG Translucent | Pink | 1.75mm | 1kg | Refill",
       "ean": "8594233084729",
       "cardId": "offer:3dfil:997",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:998",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA BASIC | Šedá | 1.75mm | 1kg | Refill",
-      "ean": "8594233084736",
-      "cardId": "offer:3dfil:998",
       "reasons": [
         "missing-diameter"
       ]
@@ -8653,6 +8603,16 @@
       "productName": "PETG filament Deep Black 1,75 mm Spectrum 1 kg",
       "ean": "5903175657602",
       "cardId": "offer:materialpro3d:PETG175SP1DBK",
+      "reasons": [
+        "missing-material"
+      ]
+    },
+    {
+      "offerId": "materialpro3d:PETG175SP1LGN",
+      "shopId": "materialpro3d",
+      "productName": "PETG filament Lime Green 1,75 mm Spectrum 1 kg",
+      "ean": "5903175657565",
+      "cardId": "offer:materialpro3d:PETG175SP1LGN",
       "reasons": [
         "missing-material"
       ]
