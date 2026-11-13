@@ -1242,6 +1242,26 @@
     margin: 0.9rem 0;
   }
 
+  .article-body figure {
+    margin: 1.4rem 0 1.6rem;
+  }
+
+  .article-body figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--color-line);
+    border-radius: 1rem;
+    background: #ececf1;
+  }
+
+  .article-body figcaption {
+    margin-top: 0.45rem;
+    color: var(--color-muted);
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
   .article-body a {
     color: var(--color-accent-ink);
     text-decoration: underline;

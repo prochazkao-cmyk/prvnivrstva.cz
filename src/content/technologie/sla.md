@@ -38,6 +38,8 @@ Bez wash/cure není díl hotový — je to toxický polo-produkt.
 - Dlouhodobá UV stabilita venku bývá horší bez správného resin/lakování.  
 - Levný hobby stroj ≠ nulový čas; FEP, leveling, supports se učí.
 
+Řez pro resinovou tiskárnu připraví [Chitubox nebo Lychee](/clanky/sla-slicery-chitubox-lychee/). FDM slicer zůstává u filamentu.
+
 ## Praktický závěr
 
 Zvolte SLA, když **vyhrává detail a povrch**, ne když chcete držák na zeď. Spočítejte consumables + ochranu zdraví. Hobby figurky = levnější MSLA + disciplína; klientská přesnost = zvažte Formlabs-class workflow.
