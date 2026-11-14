@@ -3,27 +3,6 @@
   "sourcePreview": "src/data/filament-preview.generated.json",
   "cards": [
     {
-      "cardId": "ean:5903707918300",
-      "match": "ean",
-      "ean": "5903707918300",
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "ABS",
-      "color": "šedá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "title": "Professional Lab · ABS · šedá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "3dfil:3703",
-        "filamenty-brno:FG-P3-E1"
-      ]
-    },
-    {
       "cardId": "ean:5903707918317",
       "match": "ean",
       "ean": "5903707918317",
@@ -382,6 +361,31 @@
       "offerIds": [
         "3dfil:4162",
         "filamenty-brno:FG-P138-E1"
+      ]
+    },
+    {
+      "cardId": "ean:5903707923670",
+      "match": "ean",
+      "ean": "5903707923670",
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PETG",
+      "color": null,
+      "colorVariants": [
+        "modrá",
+        "tyrkysová"
+      ],
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "3dfil",
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · PETG · modrá / tyrkysová · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "3dfil:4031",
+        "filamenty-brno:FG-P196-E1"
       ]
     },
     {
@@ -892,30 +896,6 @@
       "offerIds": [
         "3dfil:3516",
         "3dfil:4437"
-      ]
-    },
-    {
-      "cardId": "ean:8594233089540",
-      "match": "ean",
-      "ean": "8594233089540",
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "TPU",
-      "color": null,
-      "colorVariants": [
-        "transparentní červená",
-        "transparentní modrá"
-      ],
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Eryone · TPU · transparentní červená / transparentní modrá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:4391",
-        "3dfil:4392"
       ]
     },
     {
@@ -1885,25 +1865,6 @@
       "title": "Eryone · PLA Matte · modrá · 1 kg · cívka",
       "offerIds": [
         "3dfil:1265"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:1266",
-      "match": "single",
-      "ean": null,
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Eryone · PLA Silk · vícebarevná · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:1266"
       ]
     },
     {
@@ -3044,25 +3005,6 @@
       "title": "Geeetech · PLA Silk · červená · 1 kg · cívka",
       "offerIds": [
         "3dfil:1758"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:1768",
-      "match": "single",
-      "ean": null,
-      "brand": "Geeetech",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Geeetech · PLA Silk · vícebarevná · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:1768"
       ]
     },
     {
@@ -4602,25 +4544,6 @@
       "title": "Professional Lab · PLA Silk · zlatá · 1 kg · cívka",
       "offerIds": [
         "3dfil:2392"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:2395",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Professional Lab · PLA Silk · vícebarevná · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:2395"
       ]
     },
     {
@@ -6258,25 +6181,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:3119",
-      "match": "single",
-      "ean": null,
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "PLA",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Bambu Lab · PLA · černá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3119"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:3145",
       "match": "single",
       "ean": null,
@@ -6445,6 +6349,25 @@
       "title": "Professional Lab · TPU · bílá · 1 kg · cívka",
       "offerIds": [
         "3dfil:3184"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:3185",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "TPU",
+      "color": "oranžová",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Professional Lab · TPU · oranžová · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:3185"
       ]
     },
     {
@@ -6730,25 +6653,6 @@
       "title": "Bambu Lab · PLA Matte · fialová · 1 kg · refill",
       "offerIds": [
         "3dfil:3271"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:3285",
-      "match": "single",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG-GF",
-      "color": "šedá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Elegoo · PETG-GF · šedá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3285"
       ]
     },
     {
@@ -8994,25 +8898,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:3988",
-      "match": "single",
-      "ean": null,
-      "brand": "Polymaker",
-      "productLine": null,
-      "material": "PETG",
-      "color": "fialová",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Polymaker · PETG · fialová · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3988"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:399",
       "match": "single",
       "ean": null,
@@ -9238,6 +9123,25 @@
       "title": "Eryone · PLA Silk · červená · 1 kg · cívka",
       "offerIds": [
         "3dfil:403"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4030",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PETG-CF",
+      "color": "červená",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Professional Lab · PETG-CF · červená · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4030"
       ]
     },
     {
@@ -10590,6 +10494,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:4339",
+      "match": "single",
+      "ean": null,
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "PETG",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Bambu Lab · PETG · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4339"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:4340",
       "match": "single",
       "ean": null,
@@ -10872,6 +10795,25 @@
       "title": "Bambu Lab · PETG · zelená · 1 kg · refill",
       "offerIds": [
         "3dfil:4390"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4392",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "TPU",
+      "color": "transparentní červená",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · TPU · transparentní červená · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4392"
       ]
     },
     {
@@ -11974,6 +11916,25 @@
       "title": "Bambu Lab · PLA · oranžová · 1 kg · cívka",
       "offerIds": [
         "3dfil:4650"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4654",
+      "match": "single",
+      "ean": null,
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "žlutá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Altikra · TPU · žlutá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4654"
       ]
     },
     {
@@ -14200,25 +14161,6 @@
       ]
     },
     {
-      "cardId": "offer:filamenty-brno:FG-P196-E1",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PETG",
-      "color": "tyrkysová",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Professional Lab · PETG · tyrkysová · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:FG-P196-E1"
-      ]
-    },
-    {
       "cardId": "offer:filamenty-brno:FG-P197-E1",
       "match": "single",
       "ean": null,
@@ -14501,6 +14443,25 @@
       "title": "Professional Lab · PETG · bílá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:FG-P215-E1"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:FG-P3-E1",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "ABS",
+      "color": "šedá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · ABS · šedá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:FG-P3-E1"
       ]
     },
     {
@@ -24479,6 +24440,25 @@
       ]
     },
     {
+      "cardId": "offer:materialpro3d:PLA175PA1GBKNFC",
+      "match": "single",
+      "ean": null,
+      "brand": "Prusa Research",
+      "productLine": null,
+      "material": "PLA",
+      "color": "černá s třpytkami",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "materialpro3d"
+      ],
+      "title": "Prusa Research · PLA · černá s třpytkami · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "materialpro3d:PLA175PA1GBKNFC"
+      ]
+    },
+    {
       "cardId": "offer:materialpro3d:PLA175PA1GRDNFC",
       "match": "single",
       "ean": null,
@@ -24552,6 +24532,25 @@
       "title": "Prusa Research · PLA · oranžová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:PLA175PA1POENFC"
+      ]
+    },
+    {
+      "cardId": "offer:materialpro3d:PLA175PA1PWENFC",
+      "match": "single",
+      "ean": null,
+      "brand": "Prusa Research",
+      "productLine": null,
+      "material": "PLA",
+      "color": "bílá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "materialpro3d"
+      ],
+      "title": "Prusa Research · PLA · bílá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "materialpro3d:PLA175PA1PWENFC"
       ]
     },
     {
@@ -34626,7 +34625,6 @@
       "offerIds": [
         "filamenty-brno:50_203_0071",
         "filamenty-brno:50_203_0118",
-        "filamenty-brno:50_203_0193",
         "filamenty-brno:50_203_0286",
         "filamenty-brno:50_203_0339",
         "filamenty-brno:50_203_0535",
@@ -34735,7 +34733,6 @@
         "filamenty-brno:FG-P129-E1",
         "filamenty-brno:FG-P21-E1",
         "filamenty-brno:FG-P46-E1",
-        "filamenty-brno:FG-P60-E1",
         "filamenty-brno:FG-P81-E1",
         "filamenty-brno:FG-P88-E1"
       ]
@@ -41041,14 +41038,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:1266": {
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:1267": {
       "brand": "Eryone",
       "productLine": null,
@@ -41534,14 +41523,6 @@
       "productLine": null,
       "material": "PLA Silk",
       "color": "červená",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:1768": {
-      "brand": "Geeetech",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
       "diameterMm": null,
       "form": "spool"
     },
@@ -42214,14 +42195,6 @@
       "productLine": null,
       "material": "PLA Silk",
       "color": "zlatá",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:2395": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
       "diameterMm": null,
       "form": "spool"
     },
@@ -42961,14 +42934,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:3119": {
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "PLA",
-      "color": "černá",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:3137": {
       "brand": "Nebula",
       "productLine": null,
@@ -43046,6 +43011,14 @@
       "productLine": null,
       "material": "TPU",
       "color": "bílá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:3185": {
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "TPU",
+      "color": "oranžová",
       "diameterMm": null,
       "form": "spool"
     },
@@ -43176,14 +43149,6 @@
       "color": "fialová",
       "diameterMm": null,
       "form": "refill"
-    },
-    "3dfil:3285": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PETG-GF",
-      "color": "šedá",
-      "diameterMm": null,
-      "form": "spool"
     },
     "3dfil:3296": {
       "brand": "Elegoo",
@@ -43801,14 +43766,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:3703": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "ABS",
-      "color": "šedá",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:3705": {
       "brand": "Elegoo",
       "productLine": null,
@@ -44257,14 +44214,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:3988": {
-      "brand": "Polymaker",
-      "productLine": null,
-      "material": "PETG",
-      "color": "fialová",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:399": {
       "brand": "Eryone",
       "productLine": null,
@@ -44358,6 +44307,22 @@
       "productLine": null,
       "material": "PLA Silk",
       "color": "červená",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4030": {
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PETG-CF",
+      "color": "červená",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4031": {
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PETG",
+      "color": "modrá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -44969,6 +44934,14 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:4339": {
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "PETG",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:434": {
       "brand": "3DPower",
       "productLine": null,
@@ -45096,14 +45069,6 @@
       "color": "zelená",
       "diameterMm": null,
       "form": "refill"
-    },
-    "3dfil:4391": {
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "TPU",
-      "color": "transparentní modrá",
-      "diameterMm": null,
-      "form": "spool"
     },
     "3dfil:4392": {
       "brand": "Eryone",
@@ -45590,6 +45555,14 @@
       "productLine": null,
       "material": "PLA",
       "color": "oranžová",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4654": {
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "žlutá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -46134,14 +46107,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "modrá",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "filamenty-brno:50_203_0193": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PLA",
-      "color": "zelená",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -48550,14 +48515,6 @@
       "productLine": null,
       "material": "ABS",
       "color": "zelená",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "filamenty-brno:FG-P60-E1": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA",
-      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -56057,6 +56014,14 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
+    "materialpro3d:PLA175PA1GBKNFC": {
+      "brand": "Prusa Research",
+      "productLine": null,
+      "material": "PLA",
+      "color": "černá s třpytkami",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
     "materialpro3d:PLA175PA1GRDNFC": {
       "brand": "Prusa Research",
       "productLine": null,
@@ -56110,6 +56075,14 @@
       "productLine": null,
       "material": "PLA",
       "color": "oranžová",
+      "diameterMm": 1.75,
+      "form": "spool"
+    },
+    "materialpro3d:PLA175PA1PWENFC": {
+      "brand": "Prusa Research",
+      "productLine": null,
+      "material": "PLA",
+      "color": "bílá",
       "diameterMm": 1.75,
       "form": "spool"
     },
