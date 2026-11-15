@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3107,
+    "offers": 3115,
     "cardsBefore": 680,
-    "cardsAfter": 2081,
+    "cardsAfter": 2089,
     "offersMatchedByEan": 87,
     "offersMatchedAcrossShopsByEan": 64,
     "eanGroupsMerged": 42,
@@ -16,7 +16,7 @@
     "shopKeyCards": 295,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1011,
+    "reviewOffers": 1020,
     "brandsBefore": 38,
     "brandsAfter": 36,
     "materialsBefore": 48,
@@ -30,7 +30,7 @@
       "ean-weight-conflict": 2,
       "form-param-disagrees": 10,
       "missing-color": 312,
-      "missing-diameter": 702,
+      "missing-diameter": 711,
       "missing-material": 79
     }
   },
@@ -1156,16 +1156,6 @@
       "productName": "BAMBU LAB | PLA Silk+ | Růžová | 1.75mm | 1kg | Spool",
       "ean": "8594233084910",
       "cardId": "offer:3dfil:1123",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1124",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | TPU For AMS | Černá | 1.75mm | 1kg | Refill",
-      "ean": "8594233084927",
-      "cardId": "offer:3dfil:1124",
       "reasons": [
         "missing-diameter"
       ]
@@ -3526,6 +3516,26 @@
       ]
     },
     {
+      "offerId": "3dfil:2866",
+      "shopId": "3dfil",
+      "productName": "PROF. LAB | Pla Silk | Rainbow | 1.75mm | 1kg",
+      "ean": "8594233086280",
+      "cardId": "offer:3dfil:2866",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:2867",
+      "shopId": "3dfil",
+      "productName": "PROF. LAB | Pla Silk | Rainbow light | 1.75mm | 1kg",
+      "ean": "8594233086297",
+      "cardId": "offer:3dfil:2867",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:2881",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Glow | Modrá | 1.75mm | 1kg",
@@ -4488,6 +4498,16 @@
       ]
     },
     {
+      "offerId": "3dfil:3462",
+      "shopId": "3dfil",
+      "productName": "PROF. LAB | TPU | Černá 95A | 1.75mm | 1kg",
+      "ean": "8594233086433",
+      "cardId": "offer:3dfil:3462",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:3495",
       "shopId": "3dfil",
       "productName": "PROF. LAB | PETG | MATTE Černá | 1.75mm | 1kg",
@@ -5365,16 +5385,6 @@
       "cardId": "offer:3dfil:3911",
       "reasons": [
         "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3930",
-      "shopId": "3dfil",
-      "productName": "3DPOWER | PLA | Select Šedá | 1.75mm | 1kg",
-      "ean": "5905143083499",
-      "cardId": "offer:3dfil:3930",
-      "reasons": [
         "missing-diameter"
       ]
     },
@@ -7183,6 +7193,16 @@
       ]
     },
     {
+      "offerId": "3dfil:4615",
+      "shopId": "3dfil",
+      "productName": "ALTIKRA | TPU 85A | Oranžová lesklá | 1.75mm | 1kg",
+      "ean": "8595749100040",
+      "cardId": "offer:3dfil:4615",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4620",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | SUPPORT | PLA-PETG (Natur) | 1.75mm | 0,5kg | Spool",
@@ -7213,11 +7233,61 @@
       ]
     },
     {
+      "offerId": "3dfil:4631",
+      "shopId": "3dfil",
+      "productName": "ALTIKRA | TPU 85A | Červená lesklá | 1.75mm | 1kg",
+      "ean": "8595749100057",
+      "cardId": "offer:3dfil:4631",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4632",
+      "shopId": "3dfil",
+      "productName": "ALTIKRA | TPU 85A | Černá matná | 1.75mm | 1kg",
+      "ean": "8595749100064",
+      "cardId": "offer:3dfil:4632",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4633",
+      "shopId": "3dfil",
+      "productName": "ALTIKRA | TPU 85A | Černá lesklá | 1.75mm | 1kg",
+      "ean": "8595749100071",
+      "cardId": "offer:3dfil:4633",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4650",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Pure | Apricot | 1.75mm | 1kg | Spool",
       "ean": null,
       "cardId": "offer:3dfil:4650",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4651",
+      "shopId": "3dfil",
+      "productName": "ALTIKRA | TPU 90A | Černá matná | 1.75mm | 1kg",
+      "ean": "8595749100033",
+      "cardId": "offer:3dfil:4651",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4652",
+      "shopId": "3dfil",
+      "productName": "ALTIKRA | TPU 95A | Černá matná | 1.75mm | 1kg",
+      "ean": "8595749100019",
+      "cardId": "offer:3dfil:4652",
       "reasons": [
         "missing-diameter"
       ]
@@ -7258,6 +7328,16 @@
       "productName": "BAMBU LAB | PC | Transparent | 1.75mm | 1kg | Spool",
       "ean": "8594233089922",
       "cardId": "offer:3dfil:4673",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4693",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | ABS | Černá | 1.75mm | 1kg | Spool",
+      "ean": "8594233089977",
+      "cardId": "offer:3dfil:4693",
       "reasons": [
         "missing-diameter"
       ]
@@ -7328,6 +7408,16 @@
       "productName": "ERYONE | PLA Silk Macaron Rainbow | Waterfall Rainbow | 1.75mm | 1kg",
       "ean": "8594233082565",
       "cardId": "offer:3dfil:865",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:867",
+      "shopId": "3dfil",
+      "productName": "ERYONE | PLA Matte | Rainbow Watercolor Five | 1.75mm | 1kg",
+      "ean": "8594233080028",
+      "cardId": "offer:3dfil:867",
       "reasons": [
         "missing-diameter"
       ]

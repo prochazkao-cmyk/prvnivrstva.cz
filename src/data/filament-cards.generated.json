@@ -1222,25 +1222,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:1124",
-      "match": "single",
-      "ean": null,
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "TPU",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "refill",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Bambu Lab · TPU · černá · 1 kg · refill",
-      "offerIds": [
-        "3dfil:1124"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:1125",
       "match": "single",
       "ean": null,
@@ -5554,6 +5535,44 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:2866",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Professional Lab · PLA Silk · vícebarevná · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:2866"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:2867",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Professional Lab · PLA Silk · vícebarevná · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:2867"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:2881",
       "match": "single",
       "ean": null,
@@ -7169,6 +7188,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:3462",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Professional Lab · TPU · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:3462"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:3495",
       "match": "single",
       "ean": null,
@@ -8610,25 +8648,6 @@
       "title": "3DPower · PETG · neuvedeno · 1 kg · cívka",
       "offerIds": [
         "3dfil:3911"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:3930",
-      "match": "single",
-      "ean": null,
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA",
-      "color": "šedá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "3DPower · PLA · šedá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3930"
       ]
     },
     {
@@ -11843,6 +11862,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:4615",
+      "match": "single",
+      "ean": null,
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "oranžová",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Altikra · TPU · oranžová · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4615"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:4620",
       "match": "single",
       "ean": null,
@@ -11900,6 +11938,63 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:4631",
+      "match": "single",
+      "ean": null,
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "červená",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Altikra · TPU · červená · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4631"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4632",
+      "match": "single",
+      "ean": null,
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Altikra · TPU · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4632"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4633",
+      "match": "single",
+      "ean": null,
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Altikra · TPU · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4633"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:4650",
       "match": "single",
       "ean": null,
@@ -11916,6 +12011,44 @@
       "title": "Bambu Lab · PLA · oranžová · 1 kg · cívka",
       "offerIds": [
         "3dfil:4650"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4651",
+      "match": "single",
+      "ean": null,
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Altikra · TPU · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4651"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4652",
+      "match": "single",
+      "ean": null,
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Altikra · TPU · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4652"
       ]
     },
     {
@@ -11992,6 +12125,25 @@
       "title": "Bambu Lab · PC · transparentní · 1 kg · cívka",
       "offerIds": [
         "3dfil:4673"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4693",
+      "match": "single",
+      "ean": null,
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "ABS",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Bambu Lab · ABS · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4693"
       ]
     },
     {
@@ -12125,6 +12277,25 @@
       "title": "Eryone · PLA Silk · vícebarevná · 1 kg · cívka",
       "offerIds": [
         "3dfil:865"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:867",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Matte",
+      "color": "vícebarevná",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · PLA Matte · vícebarevná · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:867"
       ]
     },
     {
@@ -16400,25 +16571,6 @@
       "title": "Anycubic · PLA · šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:AC0015"
-      ]
-    },
-    {
-      "cardId": "offer:materialpro3d:AC0017",
-      "match": "single",
-      "ean": null,
-      "brand": "Anycubic",
-      "productLine": null,
-      "material": "PLA",
-      "color": "modrá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Anycubic · PLA · modrá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:AC0017"
       ]
     },
     {
@@ -40758,14 +40910,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:1124": {
-      "brand": "Bambu Lab",
-      "productLine": null,
-      "material": "TPU",
-      "color": "černá",
-      "diameterMm": null,
-      "form": "refill"
-    },
     "3dfil:1125": {
       "brand": "Bambu Lab",
       "productLine": null,
@@ -42638,6 +42782,22 @@
       "diameterMm": null,
       "form": "refill"
     },
+    "3dfil:2866": {
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:2867": {
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:2881": {
       "brand": "Bambu Lab",
       "productLine": null,
@@ -43398,6 +43558,14 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:3462": {
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:3495": {
       "brand": "Professional Lab",
       "productLine": null,
@@ -44091,14 +44259,6 @@
       "productLine": null,
       "material": "PETG",
       "color": null,
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:3930": {
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA",
-      "color": "šedá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -45526,6 +45686,14 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:4615": {
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "oranžová",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:4620": {
       "brand": "Bambu Lab",
       "productLine": null,
@@ -45550,11 +45718,51 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:4631": {
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "červená",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4632": {
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4633": {
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:4650": {
       "brand": "Bambu Lab",
       "productLine": null,
       "material": "PLA",
       "color": "oranžová",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4651": {
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4652": {
+      "brand": "Altikra",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -45587,6 +45795,14 @@
       "productLine": null,
       "material": "PC",
       "color": "transparentní",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4693": {
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "ABS",
+      "color": "černá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -45642,6 +45858,14 @@
       "brand": "Eryone",
       "productLine": null,
       "material": "PLA Silk",
+      "color": "vícebarevná",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:867": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Matte",
       "color": "vícebarevná",
       "diameterMm": null,
       "form": "spool"
@@ -50795,14 +51019,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "šedá",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:AC0017": {
-      "brand": "Anycubic",
-      "productLine": null,
-      "material": "PLA",
-      "color": "modrá",
       "diameterMm": 1.75,
       "form": "spool"
     },

@@ -16,7 +16,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:1015,3dfil,8594233084897,offer:3dfil:1015,missing-diameter,"BAMBU LAB | PLA BASIC | Růžová ""hot"" | 1.75mm | 1kg | Refill"
 3dfil:1016,3dfil,8594233084903,offer:3dfil:1016,missing-diameter,"BAMBU LAB | PLA BASIC | Červená ""kaštan"" | 1.75mm | 1kg | Refill"
 3dfil:1123,3dfil,8594233084910,offer:3dfil:1123,missing-diameter,BAMBU LAB | PLA Silk+ | Růžová | 1.75mm | 1kg | Spool
-3dfil:1124,3dfil,8594233084927,offer:3dfil:1124,missing-diameter,BAMBU LAB | TPU For AMS | Černá | 1.75mm | 1kg | Refill
 3dfil:1125,3dfil,8594233084934,offer:3dfil:1125,missing-diameter,BAMBU LAB | PLA Silk+ | Bílá | 1.75mm | 1kg | Spool
 3dfil:1126,3dfil,8594233084941,offer:3dfil:1126,missing-diameter,"BAMBU LAB | PLA Silk+ | Zelená ""Candy"" | 1.75mm | 1kg | Spool"
 3dfil:1127,3dfil,8594233084958,offer:3dfil:1127,missing-diameter,BAMBU LAB | PLA Silk+ | Fialová | 1.75mm | 1kg | Spool
@@ -251,6 +250,8 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:2832,3dfil,8594233081735,offer:3dfil:2832,missing-diameter,ELEGOO | TPU 95A | Transparent | 1.75mm | 1kg
 3dfil:2833,3dfil,8594233081742,offer:3dfil:2833,missing-diameter,ELEGOO | TPU 95A | Grey | 1.75mm | 1kg
 3dfil:2855,3dfil,8594233085719,offer:3dfil:2855,missing-diameter,"BAMBU LAB | PLA Matte | Šedá ""Nardo"" | 1.75mm | 1kg | Refill"
+3dfil:2866,3dfil,8594233086280,offer:3dfil:2866,missing-diameter,PROF. LAB | Pla Silk | Rainbow | 1.75mm | 1kg
+3dfil:2867,3dfil,8594233086297,offer:3dfil:2867,missing-diameter,PROF. LAB | Pla Silk | Rainbow light | 1.75mm | 1kg
 3dfil:2881,3dfil,8594233085726,offer:3dfil:2881,missing-diameter,BAMBU LAB | PLA Glow | Modrá | 1.75mm | 1kg
 3dfil:2905,3dfil,8594233084293,offer:3dfil:2905,missing-diameter,ERYONE | Pla+ filament High Speed | Tmavě hnědá | 1.75mm | 1kg
 3dfil:2906,3dfil,8594233085740,offer:3dfil:2906,missing-diameter,"BAMBU LAB | PLA Matte | Hnědá ""Dark Chocolate"" | 1.75mm | 1kg | Refill"
@@ -346,6 +347,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3455,3dfil,8594233087058,offer:3dfil:3455,missing-diameter,Polymaker | PETG | PolyLite™ Lime | 1.75mm | 1kg
 3dfil:3456,3dfil,8594233087065,offer:3dfil:3456,missing-color|missing-diameter,Polymaker | PETG | PolyLite™ Magenta | 1.75mm | 1kg
 3dfil:3457,3dfil,8594233087072,offer:3dfil:3457,missing-diameter,Polymaker | PETG | PolyLite™ Red | 1.75mm | 1kg
+3dfil:3462,3dfil,8594233086433,offer:3dfil:3462,missing-diameter,PROF. LAB | TPU | Černá 95A | 1.75mm | 1kg
 3dfil:3495,3dfil,8594233086464,offer:3dfil:3495,missing-diameter,PROF. LAB | PETG | MATTE Černá | 1.75mm | 1kg
 3dfil:3496,3dfil,8594233086471,offer:3dfil:3496,missing-diameter,PROF. LAB | PETG | MATTE Bílá | 1.75mm | 1kg
 3dfil:3507,3dfil,8594233087393,offer:3dfil:3507,missing-diameter,PROF. LAB | Nylon | PA12 CF15 Black (Černá) | 1.75mm | 1kg
@@ -433,7 +435,6 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:3907,3dfil,5904323179458,ean:5904323179458,missing-diameter,3DPOWER | PLA | Světle zelená | 1.75mm | 1kg
 3dfil:3910,3dfil,5905143083550,offer:3dfil:3910,missing-diameter,3DPOWER | PETG | Select Zelená | 1.75mm | 1kg
 3dfil:3911,3dfil,5905143083536,offer:3dfil:3911,missing-color|missing-diameter,3DPOWER | PETG | Select Žlutá | 1.75mm | 1kg
-3dfil:3930,3dfil,5905143083499,offer:3dfil:3930,missing-diameter,3DPOWER | PLA | Select Šedá | 1.75mm | 1kg
 3dfil:3931,3dfil,5905143083505,offer:3dfil:3931,missing-diameter,3DPOWER | PLA | Select Černá | 1.75mm | 1kg
 3dfil:3934,3dfil,5905143081891,offer:3dfil:3934,missing-diameter,3DPOWER | PLA | Oranžová Papaya | 1.75mm | 1kg
 3dfil:3945,3dfil,5905143082737,offer:3dfil:3945,missing-diameter,3DPOWER | PETG | Hyper Speed Oranžová Papaya | 1.75mm | 1kg
@@ -612,14 +613,21 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:4571,3dfil,8594233089809,offer:3dfil:4571,missing-diameter,BAMBU LAB | PLA-CF | Black | 1.75mm | 1kg | Spool
 3dfil:4594,3dfil,5903707922932,offer:3dfil:4594,ean-conflict|ean-material-conflict|missing-color|missing-diameter,PROF. LAB | PLA Wood | Maple Wood | 1.75mm | 1kg
 3dfil:4600,3dfil,8594233089885,offer:3dfil:4600,missing-diameter,NAGA | PEBA | White | 1.75mm | 1kg
+3dfil:4615,3dfil,8595749100040,offer:3dfil:4615,missing-diameter,ALTIKRA | TPU 85A | Oranžová lesklá | 1.75mm | 1kg
 3dfil:4620,3dfil,8594233089892,offer:3dfil:4620,missing-diameter,"BAMBU LAB | SUPPORT | PLA-PETG (Natur) | 1.75mm | 0,5kg | Spool"
 3dfil:4627,3dfil,8594233089908,offer:3dfil:4627,missing-diameter,"BAMBU LAB | SUPPORT | PVA | 1.75mm | 0,5kg | Spool"
 3dfil:4630,3dfil,,offer:3dfil:4630,missing-diameter,BAMBU LAB | PLA Pure | Pure White | 1.75mm | 1kg | Spool
+3dfil:4631,3dfil,8595749100057,offer:3dfil:4631,missing-diameter,ALTIKRA | TPU 85A | Červená lesklá | 1.75mm | 1kg
+3dfil:4632,3dfil,8595749100064,offer:3dfil:4632,missing-diameter,ALTIKRA | TPU 85A | Černá matná | 1.75mm | 1kg
+3dfil:4633,3dfil,8595749100071,offer:3dfil:4633,missing-diameter,ALTIKRA | TPU 85A | Černá lesklá | 1.75mm | 1kg
 3dfil:4650,3dfil,,offer:3dfil:4650,missing-diameter,BAMBU LAB | PLA Pure | Apricot | 1.75mm | 1kg | Spool
+3dfil:4651,3dfil,8595749100033,offer:3dfil:4651,missing-diameter,ALTIKRA | TPU 90A | Černá matná | 1.75mm | 1kg
+3dfil:4652,3dfil,8595749100019,offer:3dfil:4652,missing-diameter,ALTIKRA | TPU 95A | Černá matná | 1.75mm | 1kg
 3dfil:4654,3dfil,8595749100002,offer:3dfil:4654,missing-diameter,ALTIKRA | TPU 95A | Žlutá lesklá | 1.75mm | 1kg
 3dfil:4655,3dfil,8594233089939,offer:3dfil:4655,missing-diameter,BAMBU LAB | PETG CF | Black (černá) | 1.75mm | 1kg | Spool
 3dfil:4672,3dfil,8594233089915,offer:3dfil:4672,missing-diameter,BAMBU LAB | PC | White | 1.75mm | 1kg | Spool
 3dfil:4673,3dfil,8594233089922,offer:3dfil:4673,missing-diameter,BAMBU LAB | PC | Transparent | 1.75mm | 1kg | Spool
+3dfil:4693,3dfil,8594233089977,offer:3dfil:4693,missing-diameter,BAMBU LAB | ABS | Černá | 1.75mm | 1kg | Spool
 3dfil:562,3dfil,5904323179793,offer:3dfil:562,missing-diameter,3DPOWER | PLA Silk | Fialová | 1.75mm | 1kg
 3dfil:567,3dfil,5905143082096,offer:3dfil:567,missing-diameter,3DPOWER | PLA Silk | Zelená | 1.75mm | 1kg
 3dfil:568,3dfil,5904323179854,offer:3dfil:568,missing-diameter,3DPOWER | PLA Silk | Růžová | 1.75mm | 1kg
@@ -627,6 +635,7 @@ offerId,shopId,ean,cardId,reasons,productName
 3dfil:861,3dfil,8594233082534,offer:3dfil:861,missing-diameter,ERYONE | PLA Silk Triple-color | Červená - Žlutá - Modrá | 1.75mm | 1kg
 3dfil:862,3dfil,8594233082541,offer:3dfil:862,missing-diameter,ERYONE | PLA Silk Triple-color | Červená - Modrá - Zelená | 1.75mm | 1kg
 3dfil:865,3dfil,8594233082565,offer:3dfil:865,missing-diameter,ERYONE | PLA Silk Macaron Rainbow | Waterfall Rainbow | 1.75mm | 1kg
+3dfil:867,3dfil,8594233080028,offer:3dfil:867,missing-diameter,ERYONE | PLA Matte | Rainbow Watercolor Five | 1.75mm | 1kg
 3dfil:964,3dfil,8594233084392,offer:3dfil:964,missing-diameter,"BAMBU LAB | PLA BASIC | Bílá ""Jade"" | 1.75mm | 1kg | Refill"
 3dfil:966,3dfil,8594233084415,offer:3dfil:966,missing-diameter,BAMBU LAB | PETG HF | Modrá | 1.75mm | 1kg | Refill
 3dfil:971,3dfil,8594233084460,offer:3dfil:971,missing-diameter,BAMBU LAB | PLA BASIC | Béžová | 1.75mm | 1kg | Refill
