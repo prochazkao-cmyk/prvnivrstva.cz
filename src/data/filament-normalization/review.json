@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3115,
-    "cardsBefore": 680,
-    "cardsAfter": 2089,
-    "offersMatchedByEan": 87,
+    "offers": 3107,
+    "cardsBefore": 679,
+    "cardsAfter": 2080,
+    "offersMatchedByEan": 89,
     "offersMatchedAcrossShopsByEan": 64,
-    "eanGroupsMerged": 42,
-    "eanGroupsCrossShop": 39,
+    "eanGroupsMerged": 43,
+    "eanGroupsCrossShop": 38,
     "eanGroupsCrossShopMerged": 31,
-    "eanGroupsCrossShopBlocked": 8,
-    "eanGroupsBlocked": 8,
+    "eanGroupsCrossShopBlocked": 7,
+    "eanGroupsBlocked": 7,
     "eanGroupsSeen": 50,
     "offersSharingShopKey": 1276,
     "shopKeyCards": 295,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1020,
+    "reviewOffers": 1011,
     "brandsBefore": 38,
     "brandsAfter": 36,
     "materialsBefore": 48,
@@ -25,44 +25,44 @@
     "colorsAfter": 69,
     "reasons": {
       "ean-brand-conflict": 2,
-      "ean-conflict": 16,
-      "ean-material-conflict": 14,
+      "ean-conflict": 14,
+      "ean-material-conflict": 12,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 10,
-      "missing-color": 312,
-      "missing-diameter": 711,
+      "missing-color": 310,
+      "missing-diameter": 704,
       "missing-material": 79
     }
   },
   "splitExamples": [
     {
-      "previousKey": "pla|zelená|1000",
-      "previousOffers": 129,
-      "previousBrands": 19,
+      "previousKey": "pla||1000",
+      "previousOffers": 128,
+      "previousBrands": 17,
       "cards": [
         {
-          "offerId": "materialpro3d:PLA175LB1AGN",
+          "offerId": "materialpro3d:PLA175LB1CRW",
           "shopId": "materialpro3d",
           "brand": "3DLabPrint",
-          "productName": "PolyLight 1.0 LW PLA army green filament 1,75 mm 3DLabPrint 1 kg",
-          "cardId": "offer:materialpro3d:PLA175LB1AGN",
-          "title": "3DLabPrint · PLA · zelená · 1 kg · 1,75 mm · cívka"
+          "productName": "PolyLight 1.0 LW PLA natural filament 1,75 mm 3DLabPrint 1 kg",
+          "cardId": "offer:materialpro3d:PLA175LB1CRW",
+          "title": "3DLabPrint · PLA · neuvedeno · 1 kg · 1,75 mm · cívka"
         },
         {
-          "offerId": "3dfil:2246",
+          "offerId": "3dfil:447",
           "shopId": "3dfil",
           "brand": "3DPower",
-          "productName": "3DPOWER | PLA | Zelená \"Military\" | 1.75mm | 1kg",
-          "cardId": "ean:5904323179458",
-          "title": "3DPower · PLA · zelená · 1 kg · cívka"
+          "productName": "3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg",
+          "cardId": "offer:3dfil:447",
+          "title": "3DPower · PLA · neuvedeno · 1 kg · cívka"
         },
         {
-          "offerId": "materialpro3d:PLA175AF1GN",
+          "offerId": "materialpro3d:PLA175AP1HSN",
           "shopId": "materialpro3d",
-          "brand": "ABAFLEX",
-          "productName": "PLA zelená 1 kg Abaflex 1,75 mm",
-          "cardId": "offer:materialpro3d:PLA175AF1GN",
-          "title": "ABAFLEX · PLA · zelená · 1 kg · 1,75 mm · cívka"
+          "brand": "Aurapol",
+          "productName": "PLA filament tělový skin human color 1,75 mm Aurapol 1 kg",
+          "cardId": "offer:materialpro3d:PLA175AP1HSN",
+          "title": "Aurapol · PLA · neuvedeno · 1 kg · 1,75 mm · cívka"
         }
       ]
     }
@@ -459,43 +459,6 @@
         "materialpro3d:PETG175PL1PE"
       ],
       "reasons": []
-    },
-    {
-      "ean": "5903707923915",
-      "status": "blocked",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:3652",
-        "filamenty-brno:FG-P208-E1"
-      ],
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:3652",
-          "shopId": "3dfil",
-          "productName": "PROF. LAB | PETG-CF | Black | 1.75mm | 1kg",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict",
-            "missing-diameter"
-          ]
-        },
-        {
-          "offerId": "filamenty-brno:FG-P208-E1",
-          "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Černá FG-P208-E1",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict"
-          ]
-        }
-      ]
     },
     {
       "ean": "5903707923922",
@@ -927,6 +890,18 @@
       "reasons": []
     },
     {
+      "ean": "8594233080202",
+      "status": "merged",
+      "shops": [
+        "3dfil"
+      ],
+      "offerIds": [
+        "3dfil:1804",
+        "3dfil:3371"
+      ],
+      "reasons": []
+    },
+    {
       "ean": "8594233080264",
       "status": "merged",
       "shops": [
@@ -1100,16 +1075,6 @@
       ]
     },
     {
-      "offerId": "3dfil:1012",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA BASIC | Zelená \"jas\" | 1.75mm | 1kg | Refill",
-      "ean": "8594233084866",
-      "cardId": "offer:3dfil:1012",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:1013",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA BASIC | Tyrkysová | 1.75mm | 1kg | Refill",
@@ -1136,16 +1101,6 @@
       "productName": "BAMBU LAB | PLA BASIC | Růžová \"hot\" | 1.75mm | 1kg | Refill",
       "ean": "8594233084897",
       "cardId": "offer:3dfil:1015",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1016",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA BASIC | Červená \"kaštan\" | 1.75mm | 1kg | Refill",
-      "ean": "8594233084903",
-      "cardId": "offer:3dfil:1016",
       "reasons": [
         "missing-diameter"
       ]
@@ -1256,16 +1211,6 @@
       "productName": "BAMBU LAB | PA6 GF | Černá | 1.75mm | 1kg",
       "ean": "8594233085122",
       "cardId": "offer:3dfil:1175",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1180",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA Matte | Hnědá \"Latte\" | 1.75mm | 1kg | Refill",
-      "ean": "8594233085177",
-      "cardId": "offer:3dfil:1180",
       "reasons": [
         "missing-diameter"
       ]
@@ -2045,16 +1990,6 @@
       ]
     },
     {
-      "offerId": "3dfil:1721",
-      "shopId": "3dfil",
-      "productName": "KEXCELLED | PLA Silk | Zlatá | 1.75mm | 1kg",
-      "ean": "8594233089632",
-      "cardId": "offer:3dfil:1721",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:1722",
       "shopId": "3dfil",
       "productName": "ERYONE | Pla Silk | Steampunk | 1.75mm | 1kg",
@@ -2170,7 +2105,7 @@
       "shopId": "3dfil",
       "productName": "ERYONE | PETG CF | Černá | 1.75mm | 1kg",
       "ean": "8594233080202",
-      "cardId": "offer:3dfil:1804",
+      "cardId": "ean:8594233080202",
       "reasons": [
         "missing-diameter"
       ]
@@ -2717,6 +2652,16 @@
       "productName": "ELEGOO | Rapid PETG | Red | 1.75mm | 1kg",
       "ean": "8594233081247",
       "cardId": "offer:3dfil:2200",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:2204",
+      "shopId": "3dfil",
+      "productName": "ELEGOO | Rapid PETG | Orange | 1.75mm | 1kg",
+      "ean": "8594233081285",
+      "cardId": "offer:3dfil:2204",
       "reasons": [
         "missing-diameter"
       ]
@@ -3330,16 +3275,6 @@
       "productName": "ELEGOO | PLA Silk | Coral Pink | 1.75mm | 1kg",
       "ean": "8594233081513",
       "cardId": "offer:3dfil:2673",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:2674",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | PLA Silk | Holly Green | 1.75mm | 1kg",
-      "ean": "8594233081520",
-      "cardId": "offer:3dfil:2674",
       "reasons": [
         "missing-diameter"
       ]
@@ -4306,6 +4241,16 @@
       ]
     },
     {
+      "offerId": "3dfil:3371",
+      "shopId": "3dfil",
+      "productName": "ERYONE | PETG CF | Šedá tmavá | 1.75mm | 1kg",
+      "ean": "8594233080202",
+      "cardId": "ean:8594233080202",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:3383",
       "shopId": "3dfil",
       "productName": "ERYONE | Pla Silk | Ultra Bronze | 1.75mm | 1kg",
@@ -4477,32 +4422,11 @@
       ]
     },
     {
-      "offerId": "3dfil:3456",
-      "shopId": "3dfil",
-      "productName": "Polymaker | PETG | PolyLite™ Magenta | 1.75mm | 1kg",
-      "ean": "8594233087065",
-      "cardId": "offer:3dfil:3456",
-      "reasons": [
-        "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3457",
       "shopId": "3dfil",
       "productName": "Polymaker | PETG | PolyLite™ Red | 1.75mm | 1kg",
       "ean": "8594233087072",
       "cardId": "offer:3dfil:3457",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3462",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | TPU | Černá 95A | 1.75mm | 1kg",
-      "ean": "8594233086433",
-      "cardId": "offer:3dfil:3462",
       "reasons": [
         "missing-diameter"
       ]
@@ -4823,18 +4747,6 @@
       "productName": "PROF. LAB | PETG-CF | Grey | 1.75mm | 1kg",
       "ean": "5903707923946",
       "cardId": "offer:3dfil:3651",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict",
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3652",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG-CF | Black | 1.75mm | 1kg",
-      "ean": "5903707923915",
-      "cardId": "offer:3dfil:3652",
       "reasons": [
         "ean-conflict",
         "ean-material-conflict",
@@ -5389,16 +5301,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3931",
-      "shopId": "3dfil",
-      "productName": "3DPOWER | PLA | Select Černá | 1.75mm | 1kg",
-      "ean": "5905143083505",
-      "cardId": "offer:3dfil:3931",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3934",
       "shopId": "3dfil",
       "productName": "3DPOWER | PLA | Oranžová Papaya | 1.75mm | 1kg",
@@ -5600,16 +5502,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4020",
-      "shopId": "3dfil",
-      "productName": "Polymaker | PLA Matte | Panchroma Matte Earth Brown | 1.75mm | 1kg",
-      "ean": "8594233088727",
-      "cardId": "offer:3dfil:4020",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4021",
       "shopId": "3dfil",
       "productName": "Polymaker | PLA Matte | Panchroma Matte Pastel Peanut | 1.75mm | 1kg",
@@ -5728,16 +5620,6 @@
       "productName": "ERYONE | PETG | Žlutá | 1.75mm | 1kg",
       "ean": "8594233082336",
       "cardId": "offer:3dfil:406",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:4068",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | ASA CF | Black | 1.75mm | 1kg",
-      "ean": "8594233088819",
-      "cardId": "offer:3dfil:4068",
       "reasons": [
         "missing-diameter"
       ]
@@ -6510,6 +6392,16 @@
       "productName": "BAMBU LAB | PETG Matte | Bílá | 1.75mm | 1kg | Refill",
       "ean": "8594233089410",
       "cardId": "offer:3dfil:4345",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4346",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PETG Matte | Černá | 1.75mm | 1kg | Refill",
+      "ean": "8594233089403",
+      "cardId": "offer:3dfil:4346",
       "reasons": [
         "missing-diameter"
       ]
@@ -7654,6 +7546,16 @@
       ]
     },
     {
+      "offerId": "3dfil:998",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA BASIC | Šedá | 1.75mm | 1kg | Refill",
+      "ean": "8594233084736",
+      "cardId": "offer:3dfil:998",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:999",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PETG Translucent | Olive | 1.75mm | 1kg | Refill",
@@ -7858,27 +7760,6 @@
       "cardId": "offer:filamenty-brno:FG-P184-E1",
       "reasons": [
         "missing-color"
-      ]
-    },
-    {
-      "offerId": "filamenty-brno:FG-P202-E1",
-      "shopId": "filamenty-brno",
-      "productName": "Filament Professional Lab PETG 1,75 mm 1 kg, Barva oceánu FG-P202-E1",
-      "ean": "5903707923731",
-      "cardId": "offer:filamenty-brno:FG-P202-E1",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "filamenty-brno:FG-P208-E1",
-      "shopId": "filamenty-brno",
-      "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Černá FG-P208-E1",
-      "ean": "5903707923915",
-      "cardId": "offer:filamenty-brno:FG-P208-E1",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
       ]
     },
     {
