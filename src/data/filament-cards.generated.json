@@ -1417,6 +1417,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:1183",
+      "match": "single",
+      "ean": null,
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "PLA Matte",
+      "color": "žlutá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Bambu Lab · PLA Matte · žlutá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:1183"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:1184",
       "match": "single",
       "ean": null,
@@ -1816,6 +1835,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:1266",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · PLA Silk · vícebarevná · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:1266"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:1267",
       "match": "single",
       "ean": null,
@@ -2025,6 +2063,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:1406",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · PLA Silk · vícebarevná · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:1406"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:1407",
       "match": "single",
       "ean": null,
@@ -2041,25 +2098,6 @@
       "title": "Eryone · PLA Silk · vícebarevná · 1 kg · cívka",
       "offerIds": [
         "3dfil:1407"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:1408",
-      "match": "single",
-      "ean": null,
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "PLA Matte",
-      "color": "zelená",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Eryone · PLA Matte · zelená · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:1408"
       ]
     },
     {
@@ -2706,6 +2744,25 @@
       "title": "Eryone · TPU · černá · 500 g · cívka",
       "offerIds": [
         "3dfil:1663"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:1666",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · PLA Silk · vícebarevná · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:1666"
       ]
     },
     {
@@ -3409,25 +3466,6 @@
       "title": "Geeetech · TPU · neuvedeno · 1 kg · cívka",
       "offerIds": [
         "3dfil:2008"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:2012",
-      "match": "single",
-      "ean": null,
-      "brand": "Geeetech",
-      "productLine": null,
-      "material": "PLA",
-      "color": "žlutá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Geeetech · PLA · žlutá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:2012"
       ]
     },
     {
@@ -4267,25 +4305,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:2299",
-      "match": "single",
-      "ean": null,
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
-      "weightGrams": 300,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "3DPower · PLA Silk · vícebarevná · 300 g · cívka",
-      "offerIds": [
-        "3dfil:2299"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:2305",
       "match": "single",
       "ean": null,
@@ -4454,25 +4473,6 @@
       "title": "Bambu Lab · PLA Silk · vícebarevná · 1 kg · cívka",
       "offerIds": [
         "3dfil:2356"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:2392",
-      "match": "single",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "zlatá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Professional Lab · PLA Silk · zlatá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:2392"
       ]
     },
     {
@@ -4704,6 +4704,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:2474",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · TPU · černá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:2474"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:2486",
       "match": "single",
       "ean": null,
@@ -4720,6 +4739,25 @@
       "title": "Eryone · PLA Silk · vícebarevná · 1 kg · cívka",
       "offerIds": [
         "3dfil:2486"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:2491",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "TPU",
+      "color": "šedá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · TPU · šedá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:2491"
       ]
     },
     {
@@ -5597,25 +5635,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:2941",
-      "match": "single",
-      "ean": null,
-      "brand": "Nebula",
-      "productLine": null,
-      "material": "PETG",
-      "color": "černá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Nebula · PETG · černá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:2941"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:2942",
       "match": "single",
       "ean": null,
@@ -6183,25 +6202,6 @@
       "title": "Creality · PLA GLOW · žlutá · 1 kg · cívka",
       "offerIds": [
         "3dfil:3147"
-      ]
-    },
-    {
-      "cardId": "offer:3dfil:3148",
-      "match": "single",
-      "ean": null,
-      "brand": "Creality",
-      "productLine": null,
-      "material": "PLA GLOW",
-      "color": "růžová",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Creality · PLA GLOW · růžová · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3148"
       ]
     },
     {
@@ -8523,25 +8523,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:3934",
-      "match": "single",
-      "ean": null,
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA",
-      "color": "oranžová",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "3DPower · PLA · oranžová · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:3934"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:3945",
       "match": "single",
       "ean": null,
@@ -9207,25 +9188,6 @@
       ]
     },
     {
-      "cardId": "offer:3dfil:4108",
-      "match": "single",
-      "ean": null,
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "PLA Matte",
-      "color": "hnědá",
-      "weightGrams": 1000,
-      "diameterMm": null,
-      "form": "spool",
-      "shopIds": [
-        "3dfil"
-      ],
-      "title": "Eryone · PLA Matte · hnědá · 1 kg · cívka",
-      "offerIds": [
-        "3dfil:4108"
-      ]
-    },
-    {
       "cardId": "offer:3dfil:411",
       "match": "single",
       "ean": null,
@@ -9242,6 +9204,25 @@
       "title": "Eryone · PLA+ · žlutá · 1 kg · cívka",
       "offerIds": [
         "3dfil:411"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4113",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": null,
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · PLA Silk · neuvedeno · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4113"
       ]
     },
     {
@@ -9929,6 +9910,25 @@
       ]
     },
     {
+      "cardId": "offer:3dfil:4267",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "šedá",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · PLA Silk · šedá · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4267"
+      ]
+    },
+    {
       "cardId": "offer:3dfil:4268",
       "match": "single",
       "ean": null,
@@ -10021,6 +10021,25 @@
       "title": "Eryone · Nylon · černá · 1 kg · cívka",
       "offerIds": [
         "3dfil:4284"
+      ]
+    },
+    {
+      "cardId": "offer:3dfil:4285",
+      "match": "single",
+      "ean": null,
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "TPU",
+      "color": "tělová",
+      "weightGrams": 1000,
+      "diameterMm": null,
+      "form": "spool",
+      "shopIds": [
+        "3dfil"
+      ],
+      "title": "Eryone · TPU · tělová · 1 kg · cívka",
+      "offerIds": [
+        "3dfil:4285"
       ]
     },
     {
@@ -12836,6 +12855,25 @@
       ]
     },
     {
+      "cardId": "offer:filamenty-brno:50_203_0534",
+      "match": "single",
+      "ean": null,
+      "brand": "Elegoo",
+      "productLine": null,
+      "material": "PLA",
+      "color": "zlatá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Elegoo · PLA · zlatá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:50_203_0534"
+      ]
+    },
+    {
       "cardId": "offer:filamenty-brno:50_203_0539",
       "match": "single",
       "ean": null,
@@ -14011,6 +14049,25 @@
       "title": "Professional Lab · ASA · šedá · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "filamenty-brno:FG-P135-E1"
+      ]
+    },
+    {
+      "cardId": "offer:filamenty-brno:FG-P159-E1",
+      "match": "single",
+      "ean": null,
+      "brand": "Professional Lab",
+      "productLine": null,
+      "material": "PLA",
+      "color": "světle hnědá",
+      "weightGrams": 1000,
+      "diameterMm": 1.75,
+      "form": "spool",
+      "shopIds": [
+        "filamenty-brno"
+      ],
+      "title": "Professional Lab · PLA · světle hnědá · 1 kg · 1,75 mm · cívka",
+      "offerIds": [
+        "filamenty-brno:FG-P159-E1"
       ]
     },
     {
@@ -17697,25 +17754,6 @@
       "title": "Smartfil · přírodní · 750 g · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:CLN175SF75NL"
-      ]
-    },
-    {
-      "cardId": "offer:materialpro3d:CPE175FM75BK",
-      "match": "single",
-      "ean": null,
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "CPE",
-      "color": "černá",
-      "weightGrams": 750,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Fillamentum · CPE · černá · 750 g · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:CPE175FM75BK"
       ]
     },
     {
@@ -23932,25 +23970,6 @@
       ]
     },
     {
-      "cardId": "offer:materialpro3d:PLA175FM1LC",
-      "match": "single",
-      "ean": null,
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "PLA",
-      "color": "fialová",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Fillamentum · PLA · fialová · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:PLA175FM1LC"
-      ]
-    },
-    {
       "cardId": "offer:materialpro3d:PLA175FM1MA",
       "match": "single",
       "ean": null,
@@ -24024,25 +24043,6 @@
       "title": "Fillamentum · PLA · oranžová · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:PLA175FM1OEOE"
-      ]
-    },
-    {
-      "cardId": "offer:materialpro3d:PLA175FM1RSR",
-      "match": "single",
-      "ean": null,
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "PLA",
-      "color": "stříbrná",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Fillamentum · PLA · stříbrná · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:PLA175FM1RSR"
       ]
     },
     {
@@ -24195,25 +24195,6 @@
       "title": "Fillamentum · PLA · modrá s třpytkami · 1 kg · 1,75 mm · cívka",
       "offerIds": [
         "materialpro3d:PLA175FM1VOST"
-      ]
-    },
-    {
-      "cardId": "offer:materialpro3d:PLA175FM250SYBE",
-      "match": "single",
-      "ean": null,
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "PLA",
-      "color": "modrá",
-      "weightGrams": 2500,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "materialpro3d"
-      ],
-      "title": "Fillamentum · PLA · modrá · 2,5 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "materialpro3d:PLA175FM250SYBE"
       ]
     },
     {
@@ -34620,26 +34601,6 @@
       ]
     },
     {
-      "cardId": "shop:filamenty-brno:Elegoo**PLA*zlat%C3%A1*1000*1.75*spool",
-      "match": "shop",
-      "ean": null,
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PLA",
-      "color": "zlatá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Elegoo · PLA · zlatá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:50_203_0091",
-        "filamenty-brno:50_203_0534"
-      ]
-    },
-    {
       "cardId": "shop:filamenty-brno:Elegoo**TPU*%C4%8Derven%C3%A1*1000*1.75*spool",
       "match": "shop",
       "ean": null,
@@ -35015,26 +34976,6 @@
         "filamenty-brno:FG-P49-E1",
         "filamenty-brno:FG-P67-E1",
         "filamenty-brno:FG-P90-E1"
-      ]
-    },
-    {
-      "cardId": "shop:filamenty-brno:Professional%20Lab**PLA*sv%C4%9Btle%20hn%C4%9Bd%C3%A1*1000*1.75*spool",
-      "match": "shop",
-      "ean": null,
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA",
-      "color": "světle hnědá",
-      "weightGrams": 1000,
-      "diameterMm": 1.75,
-      "form": "spool",
-      "shopIds": [
-        "filamenty-brno"
-      ],
-      "title": "Professional Lab · PLA · světle hnědá · 1 kg · 1,75 mm · cívka",
-      "offerIds": [
-        "filamenty-brno:FG-P159-E1",
-        "filamenty-brno:FG-P164-E1"
       ]
     },
     {
@@ -39942,7 +39883,6 @@
         "materialpro3d:PLA175SP1IBGE",
         "materialpro3d:TIFSC1212",
         "materialpro3d:TIFSCF139",
-        "materialpro3d:TIFSCF212",
         "materialpro3d:TIFSCF266",
         "materialpro3d:TIFSCM149",
         "materialpro3d:TIFSCM234"
@@ -40824,6 +40764,14 @@
       "diameterMm": null,
       "form": "refill"
     },
+    "3dfil:1183": {
+      "brand": "Bambu Lab",
+      "productLine": null,
+      "material": "PLA Matte",
+      "color": "žlutá",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:1184": {
       "brand": "Bambu Lab",
       "productLine": null,
@@ -40992,6 +40940,14 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:1266": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:1267": {
       "brand": "Eryone",
       "productLine": null,
@@ -41080,7 +41036,7 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:1407": {
+    "3dfil:1406": {
       "brand": "Eryone",
       "productLine": null,
       "material": "PLA Silk",
@@ -41088,11 +41044,11 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:1408": {
+    "3dfil:1407": {
       "brand": "Eryone",
       "productLine": null,
-      "material": "PLA Matte",
-      "color": "zelená",
+      "material": "PLA Silk",
+      "color": "vícebarevná",
       "diameterMm": null,
       "form": "spool"
     },
@@ -41373,6 +41329,14 @@
       "productLine": null,
       "material": "TPU",
       "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:1666": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "vícebarevná",
       "diameterMm": null,
       "form": "spool"
     },
@@ -41677,14 +41641,6 @@
       "productLine": null,
       "material": "TPU",
       "color": null,
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:2012": {
-      "brand": "Geeetech",
-      "productLine": null,
-      "material": "PLA",
-      "color": "žlutá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -42048,14 +42004,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:2299": {
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "vícebarevná",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:2305": {
       "brand": "3DPower",
       "productLine": null,
@@ -42141,14 +42089,6 @@
       "productLine": null,
       "material": "PETG",
       "color": "černá",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:2392": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA Silk",
-      "color": "zlatá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -42248,11 +42188,27 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:2474": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "TPU",
+      "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:2486": {
       "brand": "Eryone",
       "productLine": null,
       "material": "PLA Silk",
       "color": "vícebarevná",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:2491": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "TPU",
+      "color": "šedá",
       "diameterMm": null,
       "form": "spool"
     },
@@ -42640,14 +42596,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:2941": {
-      "brand": "Nebula",
-      "productLine": null,
-      "material": "PETG",
-      "color": "černá",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:2942": {
       "brand": "Nebula",
       "productLine": null,
@@ -42925,14 +42873,6 @@
       "productLine": null,
       "material": "PLA GLOW",
       "color": "žlutá",
-      "diameterMm": null,
-      "form": "spool"
-    },
-    "3dfil:3148": {
-      "brand": "Creality",
-      "productLine": null,
-      "material": "PLA GLOW",
-      "color": "růžová",
       "diameterMm": null,
       "form": "spool"
     },
@@ -44048,14 +43988,6 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:3934": {
-      "brand": "3DPower",
-      "productLine": null,
-      "material": "PLA",
-      "color": "oranžová",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:3945": {
       "brand": "3DPower",
       "productLine": null,
@@ -44344,19 +44276,19 @@
       "diameterMm": null,
       "form": "spool"
     },
-    "3dfil:4108": {
-      "brand": "Eryone",
-      "productLine": null,
-      "material": "PLA Matte",
-      "color": "hnědá",
-      "diameterMm": null,
-      "form": "spool"
-    },
     "3dfil:411": {
       "brand": "Eryone",
       "productLine": null,
       "material": "PLA+",
       "color": "žlutá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4113": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": null,
       "diameterMm": null,
       "form": "spool"
     },
@@ -44688,6 +44620,14 @@
       "diameterMm": null,
       "form": "spool"
     },
+    "3dfil:4267": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "PLA Silk",
+      "color": "šedá",
+      "diameterMm": null,
+      "form": "spool"
+    },
     "3dfil:4268": {
       "brand": "Eryone",
       "productLine": null,
@@ -44725,6 +44665,14 @@
       "productLine": null,
       "material": "Nylon",
       "color": "černá",
+      "diameterMm": null,
+      "form": "spool"
+    },
+    "3dfil:4285": {
+      "brand": "Eryone",
+      "productLine": null,
+      "material": "TPU",
+      "color": "tělová",
       "diameterMm": null,
       "form": "spool"
     },
@@ -45957,14 +45905,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "vícebarevná",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "filamenty-brno:50_203_0091": {
-      "brand": "Elegoo",
-      "productLine": null,
-      "material": "PLA",
-      "color": "zlatá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -47725,14 +47665,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "švestková",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "filamenty-brno:FG-P164-E1": {
-      "brand": "Professional Lab",
-      "productLine": null,
-      "material": "PLA",
-      "color": "světle hnědá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -51517,14 +51449,6 @@
       "productLine": null,
       "material": null,
       "color": "přírodní",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:CPE175FM75BK": {
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "CPE",
-      "color": "černá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -55680,14 +55604,6 @@
       "diameterMm": 1.75,
       "form": "spool"
     },
-    "materialpro3d:PLA175FM1LC": {
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "PLA",
-      "color": "fialová",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
     "materialpro3d:PLA175FM1LIY": {
       "brand": "Fillamentum",
       "productLine": null,
@@ -55757,14 +55673,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "oranžová",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:PLA175FM1RSR": {
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "PLA",
-      "color": "stříbrná",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -55853,14 +55761,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "modrá s třpytkami",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:PLA175FM250SYBE": {
-      "brand": "Fillamentum",
-      "productLine": null,
-      "material": "PLA",
-      "color": "modrá",
       "diameterMm": 1.75,
       "form": "spool"
     },
@@ -62429,14 +62329,6 @@
       "productLine": null,
       "material": "PLA",
       "color": "zelená",
-      "diameterMm": 1.75,
-      "form": "spool"
-    },
-    "materialpro3d:TIFSCF212": {
-      "brand": "Spectrum",
-      "productLine": null,
-      "material": "PLA",
-      "color": "béžová",
       "diameterMm": 1.75,
       "form": "spool"
     },

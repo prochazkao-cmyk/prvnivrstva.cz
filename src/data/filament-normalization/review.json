@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3107,
-    "cardsBefore": 679,
-    "cardsAfter": 2080,
+    "offers": 3101,
+    "cardsBefore": 680,
+    "cardsAfter": 2077,
     "offersMatchedByEan": 89,
     "offersMatchedAcrossShopsByEan": 64,
     "eanGroupsMerged": 43,
@@ -12,11 +12,11 @@
     "eanGroupsCrossShopBlocked": 7,
     "eanGroupsBlocked": 7,
     "eanGroupsSeen": 50,
-    "offersSharingShopKey": 1276,
-    "shopKeyCards": 295,
+    "offersSharingShopKey": 1271,
+    "shopKeyCards": 293,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1011,
+    "reviewOffers": 1012,
     "brandsBefore": 38,
     "brandsAfter": 36,
     "materialsBefore": 48,
@@ -28,9 +28,9 @@
       "ean-conflict": 14,
       "ean-material-conflict": 12,
       "ean-weight-conflict": 2,
-      "form-param-disagrees": 10,
-      "missing-color": 310,
-      "missing-diameter": 704,
+      "form-param-disagrees": 11,
+      "missing-color": 311,
+      "missing-diameter": 705,
       "missing-material": 79
     }
   },
@@ -1236,6 +1236,17 @@
       ]
     },
     {
+      "offerId": "3dfil:1183",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Matte | Žlutá \"citron\" | 1.75mm | 1kg",
+      "ean": "8594233085207",
+      "cardId": "offer:3dfil:1183",
+      "reasons": [
+        "form-param-disagrees",
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:1184",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Matte | Oranžová \"mandarinka\" | 1.75mm | 1kg",
@@ -1447,6 +1458,16 @@
       ]
     },
     {
+      "offerId": "3dfil:1266",
+      "shopId": "3dfil",
+      "productName": "ERYONE | PLA Silk Dual-color | Černá - Červená | 1.75mm | 1kg",
+      "ean": "8594233082640",
+      "cardId": "offer:3dfil:1266",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:1267",
       "shopId": "3dfil",
       "productName": "ERYONE | PLA Silk Dual-color | Černá - Tmavě zelená | 1.75mm | 1kg",
@@ -1558,21 +1579,21 @@
       ]
     },
     {
-      "offerId": "3dfil:1407",
+      "offerId": "3dfil:1406",
       "shopId": "3dfil",
-      "productName": "ERYONE | PLA Silk Triple-color | Červená - Zlatá - Fialová | 1.75mm | 1kg",
-      "ean": "8594233082732",
-      "cardId": "offer:3dfil:1407",
+      "productName": "ERYONE | PLA Silk Dual-color | Modrá-zelená | 1.75mm | 1kg",
+      "ean": "8594233082725",
+      "cardId": "offer:3dfil:1406",
       "reasons": [
         "missing-diameter"
       ]
     },
     {
-      "offerId": "3dfil:1408",
+      "offerId": "3dfil:1407",
       "shopId": "3dfil",
-      "productName": "ERYONE | PLA Matte | Zelená oliva | 1.75mm | 1kg",
-      "ean": "8594233082749",
-      "cardId": "offer:3dfil:1408",
+      "productName": "ERYONE | PLA Silk Triple-color | Červená - Zlatá - Fialová | 1.75mm | 1kg",
+      "ean": "8594233082732",
+      "cardId": "offer:3dfil:1407",
       "reasons": [
         "missing-diameter"
       ]
@@ -1925,6 +1946,16 @@
       "productName": "ERYONE | TPU | Černá | 1.75mm | 0.5kg",
       "ean": "8594233080073",
       "cardId": "offer:3dfil:1663",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1666",
+      "shopId": "3dfil",
+      "productName": "ERYONE | Pla Silk Triple-color | Twisted Rainbow-Fire - Červená-Zlatá-Fialová | 1.75mm | 1kg",
+      "ean": "8594233083036",
+      "cardId": "offer:3dfil:1666",
       "reasons": [
         "missing-diameter"
       ]
@@ -2310,16 +2341,6 @@
       "cardId": "offer:3dfil:2008",
       "reasons": [
         "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:2012",
-      "shopId": "3dfil",
-      "productName": "GEEETECH | Pla | Žlutá | 1.75mm | 1kg",
-      "ean": "8594233086709",
-      "cardId": "offer:3dfil:2012",
-      "reasons": [
         "missing-diameter"
       ]
     },
@@ -2777,16 +2798,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2299",
-      "shopId": "3dfil",
-      "productName": "3DPOWER | PLA Dual Silk | Černá - Modrá | 1.75mm | 0,3kg",
-      "ean": "8594233087263",
-      "cardId": "offer:3dfil:2299",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2305",
       "shopId": "3dfil",
       "productName": "3DPOWER | Pla Dual Silk | Zlatá-černá | 1.75mm | 0,3kg",
@@ -2893,16 +2904,6 @@
       "productName": "PROF. LAB | PETG | Černá | 1.75mm | 1kg",
       "ean": "5903707918508",
       "cardId": "ean:5903707918508",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:2392",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PLA Silk | Gold | 1.75mm | 1kg",
-      "ean": "8594233086174",
-      "cardId": "offer:3dfil:2392",
       "reasons": [
         "missing-diameter"
       ]
@@ -3030,11 +3031,31 @@
       ]
     },
     {
+      "offerId": "3dfil:2474",
+      "shopId": "3dfil",
+      "productName": "ERYONE | TPU | 90A | Černá | 1.75mm | 1kg",
+      "ean": "8594233083951",
+      "cardId": "offer:3dfil:2474",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:2486",
       "shopId": "3dfil",
       "productName": "ERYONE | PLA Silk Dual-color | Modrá - černá | 1.75mm | 1kg",
       "ean": "8594233083968",
       "cardId": "offer:3dfil:2486",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:2491",
+      "shopId": "3dfil",
+      "productName": "ERYONE | TPU | 90A | Šedá | 1.75mm | 1kg",
+      "ean": "8594233083999",
+      "cardId": "offer:3dfil:2491",
       "reasons": [
         "missing-diameter"
       ]
@@ -3523,16 +3544,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2941",
-      "shopId": "3dfil",
-      "productName": "NEBULA | PETG | Carbon Black | 1.75mm | 1kg",
-      "ean": "5906269965355",
-      "cardId": "offer:3dfil:2941",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2942",
       "shopId": "3dfil",
       "productName": "NEBULA | PETG | Chocolate Brown | 1.75mm | 1kg",
@@ -3881,16 +3892,6 @@
       "productName": "Creality | PLA Glow | Hyper Luminuous Yellow | 1.75mm | 1kg",
       "ean": "8594233087379",
       "cardId": "offer:3dfil:3147",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3148",
-      "shopId": "3dfil",
-      "productName": "Creality | PLA Glow | Hyper Luminuous Pink | 1.75mm | 1kg",
-      "ean": "8594233087386",
-      "cardId": "offer:3dfil:3148",
       "reasons": [
         "missing-diameter"
       ]
@@ -5301,16 +5302,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3934",
-      "shopId": "3dfil",
-      "productName": "3DPOWER | PLA | Oranžová Papaya | 1.75mm | 1kg",
-      "ean": "5905143081891",
-      "cardId": "offer:3dfil:3934",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3945",
       "shopId": "3dfil",
       "productName": "3DPOWER | PETG | Hyper Speed Oranžová Papaya | 1.75mm | 1kg",
@@ -5676,22 +5667,23 @@
       ]
     },
     {
-      "offerId": "3dfil:4108",
-      "shopId": "3dfil",
-      "productName": "ERYONE | PLA Matte | Nut Brown | 1.75mm | 1kg",
-      "ean": "8594233088871",
-      "cardId": "offer:3dfil:4108",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:411",
       "shopId": "3dfil",
       "productName": "ERYONE | PLA+ High Speed | Žlutá | 1.75mm | 1kg",
       "ean": "8594233082381",
       "cardId": "offer:3dfil:411",
       "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4113",
+      "shopId": "3dfil",
+      "productName": "ERYONE | Pla Silk | Coffee Gold | 1.75mm | 1kg",
+      "ean": "8594233088888",
+      "cardId": "offer:3dfil:4113",
+      "reasons": [
+        "missing-color",
         "missing-diameter"
       ]
     },
@@ -6112,6 +6104,16 @@
       ]
     },
     {
+      "offerId": "3dfil:4267",
+      "shopId": "3dfil",
+      "productName": "ERYONE | Pla Silk | Gunmetal | 1.75mm | 1kg",
+      "ean": "8594233089151",
+      "cardId": "offer:3dfil:4267",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4268",
       "shopId": "3dfil",
       "productName": "ERYONE | Nylon PA12-CF | Black | 1.75mm | 0,8kg",
@@ -6157,6 +6159,16 @@
       "productName": "ERYONE | Nylon PA12-GF | Black | 1.75mm | 0,8kg",
       "ean": "8594233089182",
       "cardId": "offer:3dfil:4284",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:4285",
+      "shopId": "3dfil",
+      "productName": "ERYONE | TPU | Skin | 1.75mm | 1kg",
+      "ean": "8594233089205",
+      "cardId": "offer:3dfil:4285",
       "reasons": [
         "missing-diameter"
       ]
@@ -7736,7 +7748,7 @@
       "shopId": "filamenty-brno",
       "productName": "Filament Professional Lab PLA 1,75 mm 1 kg, Javorová FG-P159-E1",
       "ean": "5903707922932",
-      "cardId": "shop:filamenty-brno:Professional%20Lab**PLA*sv%C4%9Btle%20hn%C4%9Bd%C3%A1*1000*1.75*spool",
+      "cardId": "offer:filamenty-brno:FG-P159-E1",
       "reasons": [
         "ean-conflict",
         "ean-material-conflict"
