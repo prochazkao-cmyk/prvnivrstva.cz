@@ -7,31 +7,31 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3101 |
-| dlaždice dřív (materiál + barva + hmotnost) | 680 |
-| dlaždice teď | 2077 |
-| nabídky spojené podle EAN | 89 |
-| z toho mezi obchody | 64 |
-| skupiny EAN mezi obchody spojené / nespojené | 31 / 7 |
-| skupiny EAN spojené | 43 |
-| skupiny EAN viděné a nespojené | 7 |
-| nabídky na společné dlaždici v jednom obchodě | 1271 |
+| nabídky | 3129 |
+| dlaždice dřív (materiál + barva + hmotnost) | 683 |
+| dlaždice teď | 2101 |
+| nabídky spojené podle EAN | 95 |
+| z toho mezi obchody | 70 |
+| skupiny EAN mezi obchody spojené / nespojené | 32 / 10 |
+| skupiny EAN spojené | 44 |
+| skupiny EAN viděné a nespojené | 10 |
+| nabídky na společné dlaždici v jednom obchodě | 1270 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1012 |
+| nabídky v revizi | 1044 |
 | značky před aliasem / po aliasu | 38 / 36 |
-| materiály před aliasem / po aliasu | 48 / 47 |
+| materiály před aliasem / po aliasu | 49 / 48 |
 | barvy před aliasem / po aliasu | 69 / 69 |
 
 ## Důvody revize
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 705 |
-| missing-color | 311 |
+| missing-diameter | 735 |
+| missing-color | 314 |
 | missing-material | 79 |
-| ean-conflict | 14 |
-| ean-material-conflict | 12 |
+| ean-conflict | 20 |
+| ean-material-conflict | 18 |
 | form-param-disagrees | 11 |
 | ean-brand-conflict | 2 |
 | ean-weight-conflict | 2 |
@@ -43,29 +43,33 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 - filamenty-brno `filamenty-brno:FG-P26-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Černá FG-P26-E1
 - materialpro3d `materialpro3d:PETG175PL1BK` — PETG filament 1,75 mm černý Professional Lab 1 kg
 
+`ean:5903707918539` — Professional Lab · PETG · modrá · 1 kg · 1,75 mm · cívka (EAN 5903707918539)
+- 3dfil `3dfil:3826` — PROF. LAB | PETG | Modrá | 1.75mm | 1kg
+- filamenty-brno `filamenty-brno:FG-P29-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Modrá FG-P29-E1
+- materialpro3d `materialpro3d:PETG175PL1BE` — PETG filament 1,75 mm modrý Professional Lab 1 kg
+
 `ean:5903707918546` — Professional Lab · PETG · červená · 1 kg · 1,75 mm · cívka (EAN 5903707918546)
 - 3dfil `3dfil:2359` — PROF. LAB | PETG | Červená | 1.75mm | 1kg
 - filamenty-brno `filamenty-brno:FG-P30-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Červená FG-P30-E1
 - materialpro3d `materialpro3d:PETG175PL1RD` — PETG filament 1,75 mm červený Professional Lab 1 kg
 
-`ean:5903707918317` — Professional Lab · ABS · žlutá · 1 kg · 1,75 mm · cívka (EAN 5903707918317)
-- 3dfil `3dfil:4161` — PROF. LAB | ABS | Žlutá | 1.75mm | 1kg
-- filamenty-brno `filamenty-brno:FG-P7-E1` — Filament Professional Lab ABS+ 1,75 mm 1 kg, Žlutá FG-P7-E1
-
 ## Příklad rozdělené dlaždice
 
-Původní klíč `pla||1000`: 128 nabídek, 17 značek.
-- `offer:materialpro3d:PLA175LB1CRW` — 3DLabPrint · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA natural filament 1,75 mm 3DLabPrint 1 kg)
-- `offer:3dfil:447` — 3DPower · PLA · neuvedeno · 1 kg · cívka (3dfil, 3DPOWER | PLA | Tyrkysová | 1.75mm | 1kg)
-- `offer:materialpro3d:PLA175AP1HSN` — Aurapol · PLA · neuvedeno · 1 kg · 1,75 mm · cívka (materialpro3d, PLA filament tělový skin human color 1,75 mm Aurapol 1 kg)
+Původní klíč `pla|zelená|1000`: 128 nabídek, 19 značek.
+- `offer:materialpro3d:PLA175LB1AGN` — 3DLabPrint · PLA · zelená · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA army green filament 1,75 mm 3DLabPrint 1 kg)
+- `ean:5904323179458` — 3DPower · PLA · zelená · 1 kg · cívka (3dfil, 3DPOWER | PLA | Zelená "Military" | 1.75mm | 1kg)
+- `offer:materialpro3d:PLA175AF1GN` — ABAFLEX · PLA · zelená · 1 kg · 1,75 mm · cívka (materialpro3d, PLA zelená 1 kg Abaflex 1,75 mm)
 
 ## EAN, které se nespojilo
 
+- EAN 5903707919130 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4709 (PROF. LAB | PLA Silk | White | 1.75mm | 1kg); filamenty-brno:FG-P89-E1 (Filament Professional Lab PLA Silk 1,75 mm 1 kg, Bílá FG-P89-E1)
+- EAN 5903707920525 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:2399 (PROF. LAB | Pla Dual Silk | Černá-fialová | 1.75mm | 1kg); filamenty-brno:FG-P102-E1 (Filament Professional Lab PLA Silk 1,75 mm 1 kg, Dvoubarevný černě-fialová FG-P102-E1)
 - EAN 5903707922932 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4594 (PROF. LAB | PLA Wood | Maple Wood | 1.75mm | 1kg); filamenty-brno:FG-P159-E1 (Filament Professional Lab PLA 1,75 mm 1 kg, Javorová FG-P159-E1)
 - EAN 5903707923922 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3653 (PROF. LAB | PETG-CF | Blue | 1.75mm | 1kg); filamenty-brno:FG-P209-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Modrá FG-P209-E1)
 - EAN 5903707923939 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4030 (PROF. LAB | PETG-CF | Red | 1.75mm | 1kg); filamenty-brno:FG-P210-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Červená FG-P210-E1)
 - EAN 5903707923946 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3651 (PROF. LAB | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:FG-P211-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Šedá FG-P211-E1)
 - EAN 5903707923953 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3708 (PROF. LAB | PETG-CF | Green | 1.75mm | 1kg); filamenty-brno:FG-P212-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1)
+- EAN 5903707923960 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4029 (PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg); filamenty-brno:FG-P213-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1)
 - EAN 6932704920299 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3697 (ELEGOO | PETG-CF | Grey | 1.75mm | 1kg); filamenty-brno:50_203_0648 (Filament ELEGOO PETG-CF Carbon fiber 1,75 mm 0,5 kg, Šedá)
 - EAN 6933582322250 — 3dfil, filamenty-brno — ean-brand-conflict, ean-conflict, ean-weight-conflict — 3dfil:4413 (SUNLU | PP | Natur | 1.75mm | 0,8kg); filamenty-brno:SUN-PP-PRI (Filament Sunlu PP 1,75 mm 1 kg, Přírodní)
 
