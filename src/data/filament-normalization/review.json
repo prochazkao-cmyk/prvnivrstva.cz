@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3129,
-    "cardsBefore": 683,
-    "cardsAfter": 2101,
-    "offersMatchedByEan": 95,
-    "offersMatchedAcrossShopsByEan": 70,
-    "eanGroupsMerged": 44,
-    "eanGroupsCrossShop": 42,
-    "eanGroupsCrossShopMerged": 32,
+    "offers": 3148,
+    "cardsBefore": 688,
+    "cardsAfter": 2077,
+    "offersMatchedByEan": 82,
+    "offersMatchedAcrossShopsByEan": 59,
+    "eanGroupsMerged": 38,
+    "eanGroupsCrossShop": 37,
+    "eanGroupsCrossShopMerged": 27,
     "eanGroupsCrossShopBlocked": 10,
     "eanGroupsBlocked": 10,
-    "eanGroupsSeen": 54,
-    "offersSharingShopKey": 1270,
-    "shopKeyCards": 293,
+    "eanGroupsSeen": 48,
+    "offersSharingShopKey": 1335,
+    "shopKeyCards": 308,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 1044,
-    "brandsBefore": 38,
-    "brandsAfter": 36,
+    "reviewOffers": 994,
+    "brandsBefore": 39,
+    "brandsAfter": 37,
     "materialsBefore": 49,
     "materialsAfter": 48,
     "colorsBefore": 69,
@@ -29,15 +29,15 @@
       "ean-material-conflict": 18,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 11,
-      "missing-color": 314,
-      "missing-diameter": 735,
-      "missing-material": 79
+      "missing-color": 289,
+      "missing-diameter": 720,
+      "missing-material": 64
     }
   },
   "splitExamples": [
     {
       "previousKey": "pla|zelená|1000",
-      "previousOffers": 128,
+      "previousOffers": 131,
       "previousBrands": 19,
       "cards": [
         {
@@ -68,33 +68,6 @@
     }
   ],
   "crossShopExamples": [
-    {
-      "cardId": "ean:5903707918508",
-      "title": "Professional Lab · PETG · černá · 1 kg · 1,75 mm · cívka",
-      "ean": "5903707918508",
-      "shops": [
-        "3dfil",
-        "filamenty-brno",
-        "materialpro3d"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:2360",
-          "shopId": "3dfil",
-          "productName": "PROF. LAB | PETG | Černá | 1.75mm | 1kg"
-        },
-        {
-          "offerId": "filamenty-brno:FG-P26-E1",
-          "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab PETG 1,75 mm 1 kg, Černá FG-P26-E1"
-        },
-        {
-          "offerId": "materialpro3d:PETG175PL1BK",
-          "shopId": "materialpro3d",
-          "productName": "PETG filament 1,75 mm černý Professional Lab 1 kg"
-        }
-      ]
-    },
     {
       "cardId": "ean:5903707918539",
       "title": "Professional Lab · PETG · modrá · 1 kg · 1,75 mm · cívka",
@@ -148,6 +121,33 @@
           "productName": "PETG filament 1,75 mm červený Professional Lab 1 kg"
         }
       ]
+    },
+    {
+      "cardId": "ean:5903707918553",
+      "title": "Professional Lab · PETG · zelená · 1 kg · 1,75 mm · cívka",
+      "ean": "5903707918553",
+      "shops": [
+        "3dfil",
+        "filamenty-brno",
+        "materialpro3d"
+      ],
+      "offers": [
+        {
+          "offerId": "3dfil:2361",
+          "shopId": "3dfil",
+          "productName": "PROF. LAB | PETG | Zelená | 1.75mm | 1kg"
+        },
+        {
+          "offerId": "filamenty-brno:FG-P31-E1",
+          "shopId": "filamenty-brno",
+          "productName": "Filament Professional Lab PETG 1,75 mm 1 kg, Zelená FG-P31-E1"
+        },
+        {
+          "offerId": "materialpro3d:PETG175PL1GN",
+          "shopId": "materialpro3d",
+          "productName": "PETG filament 1,75 mm zelený Professional Lab 1 kg"
+        }
+      ]
     }
   ],
   "eanGroups": [
@@ -168,12 +168,10 @@
       "ean": "5903707918508",
       "status": "merged",
       "shops": [
-        "3dfil",
         "filamenty-brno",
         "materialpro3d"
       ],
       "offerIds": [
-        "3dfil:2360",
         "filamenty-brno:FG-P26-E1",
         "materialpro3d:PETG175PL1BK"
       ],
@@ -262,19 +260,6 @@
       "offerIds": [
         "filamenty-brno:FG-P34-E1",
         "materialpro3d:PETG175PL1YW"
-      ],
-      "reasons": []
-    },
-    {
-      "ean": "5903707918591",
-      "status": "merged",
-      "shops": [
-        "filamenty-brno",
-        "materialpro3d"
-      ],
-      "offerIds": [
-        "filamenty-brno:FG-P35-E1",
-        "materialpro3d:PETG175PL1OE"
       ],
       "reasons": []
     },
@@ -405,32 +390,6 @@
       "reasons": []
     },
     {
-      "ean": "5903707920761",
-      "status": "merged",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:3190",
-        "filamenty-brno:FG-P126-E1"
-      ],
-      "reasons": []
-    },
-    {
-      "ean": "5903707922239",
-      "status": "merged",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:3830",
-        "filamenty-brno:FG-P133-E1"
-      ],
-      "reasons": []
-    },
-    {
       "ean": "5903707922246",
       "status": "merged",
       "shops": [
@@ -444,19 +403,6 @@
       "reasons": []
     },
     {
-      "ean": "5903707922260",
-      "status": "merged",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:4163",
-        "filamenty-brno:FG-P136-E1"
-      ],
-      "reasons": []
-    },
-    {
       "ean": "5903707922277",
       "status": "merged",
       "shops": [
@@ -466,19 +412,6 @@
       "offerIds": [
         "3dfil:3702",
         "filamenty-brno:FG-P137-E1"
-      ],
-      "reasons": []
-    },
-    {
-      "ean": "5903707922284",
-      "status": "merged",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:4162",
-        "filamenty-brno:FG-P138-E1"
       ],
       "reasons": []
     },
@@ -519,6 +452,19 @@
           ]
         }
       ]
+    },
+    {
+      "ean": "5903707923663",
+      "status": "merged",
+      "shops": [
+        "filamenty-brno",
+        "materialpro3d"
+      ],
+      "offerIds": [
+        "filamenty-brno:FG-P195-E1",
+        "materialpro3d:PETG175PL1OGN"
+      ],
+      "reasons": []
     },
     {
       "ean": "5903707923748",
@@ -769,19 +715,6 @@
       "offerIds": [
         "3dfil:3518",
         "filamenty-brno:FG-P222-E1"
-      ],
-      "reasons": []
-    },
-    {
-      "ean": "5903707924226",
-      "status": "merged",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:4174",
-        "filamenty-brno:FG-P223-E1"
       ],
       "reasons": []
     },
@@ -1048,18 +981,6 @@
       "offerIds": [
         "3dfil:3527",
         "3dfil:3528"
-      ],
-      "reasons": []
-    },
-    {
-      "ean": "8594233080721",
-      "status": "merged",
-      "shops": [
-        "3dfil"
-      ],
-      "offerIds": [
-        "3dfil:2581",
-        "3dfil:3525"
       ],
       "reasons": []
     },
@@ -1471,16 +1392,6 @@
       "productName": "BAMBU LAB | PLA Matte | Hnědá \"Dark\" | 1.75mm | 1kg | Refill",
       "ean": "8594233085290",
       "cardId": "offer:3dfil:1192",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1193",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA Matte | Zelená tmavá | 1.75mm | 1kg | Refill",
-      "ean": "8594233085306",
-      "cardId": "offer:3dfil:1193",
       "reasons": [
         "missing-diameter"
       ]
@@ -3068,16 +2979,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2360",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG | Černá | 1.75mm | 1kg",
-      "ean": "5903707918508",
-      "cardId": "ean:5903707918508",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2361",
       "shopId": "3dfil",
       "productName": "PROF. LAB | PETG | Zelená | 1.75mm | 1kg",
@@ -3396,7 +3297,7 @@
       "shopId": "3dfil",
       "productName": "ZIRO | Pla Matte | Gradient - Vibrant Coral | 1.75mm | 1kg",
       "ean": "8594233080721",
-      "cardId": "ean:8594233080721",
+      "cardId": "offer:3dfil:2581",
       "reasons": [
         "missing-diameter"
       ]
@@ -4189,16 +4090,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3190",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | TPU | Transparent 95A | 1.75mm | 1kg",
-      "ean": "5903707920761",
-      "cardId": "ean:5903707920761",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3191",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Matte | Bone White | 1.75mm | 1kg | Refill",
@@ -4694,16 +4585,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3462",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | TPU | Černá 95A | 1.75mm | 1kg",
-      "ean": "8594233086433",
-      "cardId": "offer:3dfil:3462",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3464",
       "shopId": "3dfil",
       "productName": "PROF. LAB | PETG | Transparent | 1.75mm | 1kg",
@@ -4711,16 +4592,6 @@
       "cardId": "ean:5903707918560",
       "reasons": [
         "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3492",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | ASA | Černá | 1.75mm | 1kg",
-      "ean": "8594233086457",
-      "cardId": "offer:3dfil:3492",
-      "reasons": [
         "missing-diameter"
       ]
     },
@@ -4852,16 +4723,6 @@
       "cardId": "offer:3dfil:3523",
       "reasons": [
         "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3525",
-      "shopId": "3dfil",
-      "productName": "ZIRO | Pla Matte | Gradient - Gray Layer Rock | 1.75mm | 1kg",
-      "ean": "8594233080721",
-      "cardId": "ean:8594233080721",
-      "reasons": [
         "missing-diameter"
       ]
     },
@@ -5145,16 +5006,6 @@
       "productName": "ERYONE | PLA HS Matte | Černá | 1.75mm | 1kg",
       "ean": "8594233088086",
       "cardId": "offer:3dfil:3680",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3681",
-      "shopId": "3dfil",
-      "productName": "ERYONE | PLA HS Matte | Bílá | 1.75mm | 1kg",
-      "ean": "8594233088093",
-      "cardId": "offer:3dfil:3681",
       "reasons": [
         "missing-diameter"
       ]
@@ -5549,16 +5400,6 @@
       "productName": "BAMBU LAB | ABS | Stříbrná | 1.75mm | 1kg | Spool",
       "ean": "8594233088482",
       "cardId": "offer:3dfil:3829",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3830",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | ASA | Bílá | 1.75mm | 1kg",
-      "ean": "5903707922239",
-      "cardId": "ean:5903707922239",
       "reasons": [
         "missing-diameter"
       ]
@@ -6195,17 +6036,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4149",
-      "shopId": "3dfil",
-      "productName": "ZIRO | PLA Wood | Walnut Wood | 1.75mm | 1kg",
-      "ean": "8594233088949",
-      "cardId": "offer:3dfil:4149",
-      "reasons": [
-        "missing-color",
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4152",
       "shopId": "3dfil",
       "productName": "ZIRO | PLA Wood | Cherry Wood | 1.75mm | 1kg",
@@ -6267,26 +6097,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4162",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | ASA | Červená | 1.75mm | 1kg",
-      "ean": "5903707922284",
-      "cardId": "ean:5903707922284",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:4163",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | ASA | Modrá | 1.75mm | 1kg",
-      "ean": "5903707922260",
-      "cardId": "ean:5903707922260",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4164",
       "shopId": "3dfil",
       "productName": "PROF. LAB | TPU | Modrá 95A | 1.75mm | 1kg",
@@ -6324,16 +6134,6 @@
       "cardId": "offer:3dfil:4171",
       "reasons": [
         "form-param-disagrees",
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:4174",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG | Grass Green | 1.75mm | 1kg",
-      "ean": "5903707924226",
-      "cardId": "ean:5903707924226",
-      "reasons": [
         "missing-diameter"
       ]
     },
@@ -7047,16 +6847,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4433",
-      "shopId": "3dfil",
-      "productName": "SUNLU | PETG HS | MATTE Bílá | 1.75mm | 1kg",
-      "ean": "6933582315306",
-      "cardId": "offer:3dfil:4433",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:4434",
       "shopId": "3dfil",
       "productName": "SUNLU | PETG HS | MATTE Oranžová | 1.75mm | 1kg",
@@ -7092,16 +6882,6 @@
       "productName": "3DPOWER | PLA | Růžová | 1.75mm | 1kg",
       "ean": "5905143081372",
       "cardId": "offer:3dfil:445",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:4453",
-      "shopId": "3dfil",
-      "productName": "NEBULA | PLA | Military Green | 1.75mm | 0,5kg",
-      "ean": "5906269961906",
-      "cardId": "offer:3dfil:4453",
       "reasons": [
         "missing-diameter"
       ]
@@ -7507,16 +7287,6 @@
       "productName": "BAMBU LAB | SUPPORT | PLA-PETG (Natur) | 1.75mm | 0,5kg | Spool",
       "ean": "8594233089892",
       "cardId": "offer:3dfil:4620",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:4627",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | SUPPORT | PVA | 1.75mm | 0,5kg | Spool",
-      "ean": "8594233089908",
-      "cardId": "offer:3dfil:4627",
       "reasons": [
         "missing-diameter"
       ]
@@ -8271,7 +8041,7 @@
       "shopId": "filamenty-brno",
       "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1",
       "ean": "5903707923953",
-      "cardId": "offer:filamenty-brno:FG-P212-E1",
+      "cardId": "shop:filamenty-brno:Professional%20Lab**PETG*zelen%C3%A1*1000*1.75*spool",
       "reasons": [
         "ean-conflict",
         "ean-material-conflict"
@@ -8562,8 +8332,7 @@
       "ean": "5903175654939",
       "cardId": "offer:materialpro3d:ASA175SP75KR",
       "reasons": [
-        "missing-color",
-        "missing-material"
+        "missing-color"
       ]
     },
     {
@@ -8647,36 +8416,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:FLEX175SP05DBK",
-      "shopId": "materialpro3d",
-      "productName": "S-FLEX filament 90A deep black 1,75 mm Spectrum 0,5 kg",
-      "ean": "5903175651976",
-      "cardId": "offer:materialpro3d:FLEX175SP05DBK",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:FLEX98A175SP05LGN",
-      "shopId": "materialpro3d",
-      "productName": "S-FLEX filament 98A Lime Green 1,75mm Spectrum 0,5kg",
-      "ean": "5903175652843",
-      "cardId": "offer:materialpro3d:FLEX98A175SP05LGN",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:FLEX98A175SP25DBK",
-      "shopId": "materialpro3d",
-      "productName": "S-FLEX filament 98A deep black 1,75 mm Spectrum 0,25 kg",
-      "ean": "5903175652881",
-      "cardId": "offer:materialpro3d:FLEX98A175SP25DBK",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
       "offerId": "materialpro3d:GLACE175SF75NL",
       "shopId": "materialpro3d",
       "productName": "GLACE filament natural průhledný 1,75 mm Smartfil 750 g",
@@ -8715,6 +8454,16 @@
       "reasons": [
         "missing-color",
         "missing-material"
+      ]
+    },
+    {
+      "offerId": "materialpro3d:NYL15CF175FB05",
+      "shopId": "materialpro3d",
+      "productName": "Nylon PA12 + CF15 černý 1,75 mm 500 g Fiberlogy",
+      "ean": "5902560992946",
+      "cardId": "offer:materialpro3d:NYL15CF175FB05",
+      "reasons": [
+        "missing-color"
       ]
     },
     {
@@ -8758,16 +8507,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:NYLLW175SP05BK",
-      "shopId": "materialpro3d",
-      "productName": "Nylon PA6 Low Warp černá 1,75 mm 500 g Spectrum",
-      "ean": "5903175659521",
-      "cardId": "offer:materialpro3d:NYLLW175SP05BK",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
       "offerId": "materialpro3d:NYLON175FM75MGY",
       "shopId": "materialpro3d",
       "productName": "Nylon FX256 1,75 mm metallic grey Fillamentum 750 g",
@@ -8798,54 +8537,13 @@
       ]
     },
     {
-      "offerId": "materialpro3d:PCTG175SP1IGY",
-      "shopId": "materialpro3d",
-      "productName": "PCTG filament Iron Grey 1,75 mm Spectrum 1 kg",
-      "ean": "5903175654045",
-      "cardId": "offer:materialpro3d:PCTG175SP1IGY",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:PCTG175SP1LGN",
-      "shopId": "materialpro3d",
-      "productName": "PCTG filament světle zelený 1,75 mm Spectrum 1 kg",
-      "ean": "5903175654021",
-      "cardId": "offer:materialpro3d:PCTG175SP1LGN",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
       "offerId": "materialpro3d:PCTG175SP1SSL",
       "shopId": "materialpro3d",
       "productName": "PCTG Premium filament Silver Steel 1,75 mm Spectrum 1 kg",
       "ean": "5903175654052",
       "cardId": "offer:materialpro3d:PCTG175SP1SSL",
       "reasons": [
-        "missing-color",
-        "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:PCTG175SP1TBK",
-      "shopId": "materialpro3d",
-      "productName": "PCTG filament černý 1,75 mm Spectrum 1 kg",
-      "ean": "5903175653987",
-      "cardId": "offer:materialpro3d:PCTG175SP1TBK",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:PCTGCF175SP05BK",
-      "shopId": "materialpro3d",
-      "productName": "PCTG CF10 filament černý 1,75 mm Spectrum 0,5 kg",
-      "ean": "5903175655165",
-      "cardId": "offer:materialpro3d:PCTGCF175SP05BK",
-      "reasons": [
-        "missing-material"
+        "missing-color"
       ]
     },
     {
@@ -9070,26 +8768,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:PETG175SP1DBK",
-      "shopId": "materialpro3d",
-      "productName": "PETG filament Deep Black 1,75 mm Spectrum 1 kg",
-      "ean": "5903175657602",
-      "cardId": "offer:materialpro3d:PETG175SP1DBK",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:PETG175SP1LGN",
-      "shopId": "materialpro3d",
-      "productName": "PETG filament Lime Green 1,75 mm Spectrum 1 kg",
-      "ean": "5903175657565",
-      "cardId": "offer:materialpro3d:PETG175SP1LGN",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
       "offerId": "materialpro3d:PETG175SP1TYW",
       "shopId": "materialpro3d",
       "productName": "PETG filament Transparent Yellow 1,75 mm Spectrum 1 kg",
@@ -9106,8 +8784,7 @@
       "ean": "5903175655448",
       "cardId": "offer:materialpro3d:PETG5PACK175SP125PM",
       "reasons": [
-        "missing-color",
-        "missing-material"
+        "missing-color"
       ]
     },
     {
@@ -9151,16 +8828,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:PETGHT175SP05OBK",
-      "shopId": "materialpro3d",
-      "productName": "PETG HT100 filament Obsidian Black 1,75 mm Spectrum 0,5 kg",
-      "ean": "5903175650283",
-      "cardId": "offer:materialpro3d:PETGHT175SP05OBK",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
       "offerId": "materialpro3d:PETGHT175SP05SSL",
       "shopId": "materialpro3d",
       "productName": "PETG HT100 filament Silver Steel 1,75 mm Spectrum 0,5 kg",
@@ -9168,26 +8835,6 @@
       "cardId": "offer:materialpro3d:PETGHT175SP05SSL",
       "reasons": [
         "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:PETGHT175SP1IGY",
-      "shopId": "materialpro3d",
-      "productName": "PETG HT100 filament Iron Grey 1,75 mm Spectrum 1 kg",
-      "ean": "5903175650207",
-      "cardId": "offer:materialpro3d:PETGHT175SP1IGY",
-      "reasons": [
-        "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:PETGHT175SP1OBK",
-      "shopId": "materialpro3d",
-      "productName": "PETG HT100 filament Obsidian Black 1,75 mm Spectrum 1 kg",
-      "ean": "5903175650214",
-      "cardId": "offer:materialpro3d:PETGHT175SP1OBK",
-      "reasons": [
-        "missing-material"
       ]
     },
     {
@@ -9887,8 +9534,7 @@
       "ean": "5903175655486",
       "cardId": "offer:materialpro3d:PLA5PACK175SP125ES",
       "reasons": [
-        "missing-color",
-        "missing-material"
+        "missing-color"
       ]
     },
     {
@@ -10596,16 +10242,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSC1217",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Pro 1,75 mm MILITARY KHAKI 1 kg",
-      "ean": "5903175651075",
-      "cardId": "offer:materialpro3d:TIFSC1217",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSC1307",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum r-PLA 1,75 mm YELLOW ORANGE 1 kg",
@@ -10646,6 +10282,16 @@
       ]
     },
     {
+      "offerId": "materialpro3d:TIFSC1D02",
+      "shopId": "materialpro3d",
+      "productName": "Filament Spectrum GreenyHT 1,75 mm Anthracite Grey 1 kg",
+      "ean": "5903175654816",
+      "cardId": "offer:materialpro3d:TIFSC1D02",
+      "reasons": [
+        "missing-material"
+      ]
+    },
+    {
       "offerId": "materialpro3d:TIFSC1D04",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum GreenyHT 1,75 mm Signal White 1 kg",
@@ -10676,26 +10322,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSC1F30",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum Premium PET-G 1,75 mm WIZARD CHARCOAL 1 kg",
-      "ean": "5903175654700",
-      "cardId": "offer:materialpro3d:TIFSC1F30",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSC1F31",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum Premium PET-G 1,75 mm WIZARD INDIGO 1 kg",
-      "ean": "5903175654694",
-      "cardId": "offer:materialpro3d:TIFSC1F31",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSC1G04",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum rPETG 1,75 mm YELLOW ORANGE 1 kg",
@@ -10711,16 +10337,6 @@
       "productName": "Filament Spectrum PET-G MATT 1,75 mm DESERT STORM 1 kg",
       "ean": "5903175653307",
       "cardId": "offer:materialpro3d:TIFSC1H08",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSC1H09",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PET-G MATT 1,75 mm SAND KHAKI 1 kg",
-      "ean": "5903175653314",
-      "cardId": "offer:materialpro3d:TIFSC1H09",
       "reasons": [
         "missing-color"
       ]
@@ -10776,6 +10392,16 @@
       ]
     },
     {
+      "offerId": "materialpro3d:TIFSCE121",
+      "shopId": "materialpro3d",
+      "productName": "Filament Spectrum PLA Nature FLAX 1,75 mm 0,25 kg",
+      "ean": "5905991400523",
+      "cardId": "offer:materialpro3d:TIFSCE121",
+      "reasons": [
+        "missing-color"
+      ]
+    },
+    {
       "offerId": "materialpro3d:TIFSCE123",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum PLA Nature PILS BEER 0,25 kg",
@@ -10819,16 +10445,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSCE158",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum Nylon PA6 Low Warp CF15S 1,75 mm BK 1 kg",
-      "ean": "5903175655004",
-      "cardId": "offer:materialpro3d:TIFSCE158",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSCE163",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum AquaPrint 1,75 mm NATURAL 0,5 kg",
@@ -10836,36 +10452,6 @@
       "cardId": "offer:materialpro3d:TIFSCE163",
       "reasons": [
         "missing-material"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE164",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum S-Flex Carbon 1,75 mm BK 0,25 kg",
-      "ean": "5905991400691",
-      "cardId": "offer:materialpro3d:TIFSCE164",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE165",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum S-Flex Carbon 1,75 mm BK 0,5 kg",
-      "ean": "5905991400707",
-      "cardId": "offer:materialpro3d:TIFSCE165",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE198",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PA6 CS20 FR V0 1,75 mm BK 0,75 kg",
-      "ean": "5903175653208",
-      "cardId": "offer:materialpro3d:TIFSCE198",
-      "reasons": [
-        "missing-color"
       ]
     },
     {
@@ -10884,36 +10470,6 @@
       "productName": "Filament Spectrum ABS Medical 1,75 mm 1 kg",
       "ean": "5903175650924",
       "cardId": "offer:materialpro3d:TIFSCE228",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE229",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum ABS Kevlar 1,75 mm BK 0,75 kg",
-      "ean": "5903175653451",
-      "cardId": "offer:materialpro3d:TIFSCE229",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE285",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PET-G Premium 1,75 mm GLASSY 2 kg",
-      "ean": "5903175652706",
-      "cardId": "offer:materialpro3d:TIFSCE285",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE332",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PETG Premium High Speed 1,75 mm LIGHT IVORY 1 kg",
-      "ean": "5907138400472",
-      "cardId": "offer:materialpro3d:TIFSCE332",
       "reasons": [
         "missing-color"
       ]
@@ -10949,31 +10505,11 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSCE346",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Magic SILK 1,75 mm ROYAL AMETHYST 0,25 kg",
-      "ean": "5905991404576",
-      "cardId": "offer:materialpro3d:TIFSCE346",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSCE347",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum PLA Magic SILK 1,75 mm FOREST FLAME 0,25 kg",
       "ean": "5905991404583",
       "cardId": "offer:materialpro3d:TIFSCE347",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE348",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Magic SILK 1,75 mm RASPBERRY BLUSH 0,25 kg",
-      "ean": "5905991404903",
-      "cardId": "offer:materialpro3d:TIFSCE348",
       "reasons": [
         "missing-color"
       ]
@@ -10994,16 +10530,6 @@
       "productName": "Filament Spectrum PLA Magic SILK 1,75 mm SOLAR FLARE 0,25 kg",
       "ean": "5905991404620",
       "cardId": "offer:materialpro3d:TIFSCE351",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE352",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Magic SILK 1,75 mm GOLDEN BERRY 0,25 kg",
-      "ean": "5905991404637",
-      "cardId": "offer:materialpro3d:TIFSCE352",
       "reasons": [
         "missing-color"
       ]
@@ -11069,31 +10595,11 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSCE361",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Magic SILK 1,75 mm ROYAL AMETHYST 1 kg",
-      "ean": "5905991404729",
-      "cardId": "offer:materialpro3d:TIFSCE361",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSCE362",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum PLA Magic SILK 1,75 mm FOREST FLAME 1 kg",
       "ean": "5905991404910",
       "cardId": "offer:materialpro3d:TIFSCE362",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE363",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Magic SILK 1,75 mm RASPBERRY BLUSH 1 kg",
-      "ean": "5905991406334",
-      "cardId": "offer:materialpro3d:TIFSCE363",
       "reasons": [
         "missing-color"
       ]
@@ -11114,16 +10620,6 @@
       "productName": "Filament Spectrum PLA Magic SILK 1,75 mm SOLAR FLARE 1 kg",
       "ean": "5905991404958",
       "cardId": "offer:materialpro3d:TIFSCE366",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE367",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Magic SILK 1,75 mm GOLDEN BERRY 1 kg",
-      "ean": "5905991404965",
-      "cardId": "offer:materialpro3d:TIFSCE367",
       "reasons": [
         "missing-color"
       ]
@@ -11189,16 +10685,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSCE378",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum ReFill PLA Magic SILK 1,75 mm RASPBERRY BLUSH 1 kg",
-      "ean": "5905991405023",
-      "cardId": "offer:materialpro3d:TIFSCE378",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSCE380",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum ReFill PLA Magic SILK 1,75 mm AMBER LEAF 1 kg",
@@ -11214,16 +10700,6 @@
       "productName": "Filament Spectrum ReFill PLA Magic SILK 1,75 mm SOLAR FLARE 1 kg",
       "ean": "5905991404811",
       "cardId": "offer:materialpro3d:TIFSCE381",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE382",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum ReFill PLA Magic SILK 1,75 mm GOLDEN BERRY 1 kg",
-      "ean": "5905991404828",
-      "cardId": "offer:materialpro3d:TIFSCE382",
       "reasons": [
         "missing-color"
       ]
@@ -11279,6 +10755,16 @@
       ]
     },
     {
+      "offerId": "materialpro3d:TIFSCF110",
+      "shopId": "materialpro3d",
+      "productName": "Spectrum Filament \"The Filament\" PLA 1,75 mm WOOD ASH 1 kg",
+      "ean": "5907138400380",
+      "cardId": "offer:materialpro3d:TIFSCF110",
+      "reasons": [
+        "missing-color"
+      ]
+    },
+    {
       "offerId": "materialpro3d:TIFSCF260",
       "shopId": "materialpro3d",
       "productName": "Spectrum Filament \"The Filament\" HT-PLA 1,75 mm TOOLING TURQUOISE 1 kg",
@@ -11294,26 +10780,6 @@
       "productName": "Spectrum Filament \"The Filament\" ReFill HT-PLA 1,75 mm TOOLING TURQUOISE 1 kg",
       "ean": "5907138403343",
       "cardId": "offer:materialpro3d:TIFSCF295",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCM117",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum Pastello PLA 1,75 mm BONBON ROSE 1 kg",
-      "ean": "5903175654861",
-      "cardId": "offer:materialpro3d:TIFSCM117",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCM119",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum Pastello PLA 1,75 mm COSMETIC MAUVE 1 kg",
-      "ean": "5903175654854",
-      "cardId": "offer:materialpro3d:TIFSCM119",
       "reasons": [
         "missing-color"
       ]
@@ -11336,6 +10802,16 @@
       "cardId": "offer:materialpro3d:TIFSCM123",
       "reasons": [
         "missing-color"
+      ]
+    },
+    {
+      "offerId": "materialpro3d:TIFSCM126",
+      "shopId": "materialpro3d",
+      "productName": "Filament Spectrum GreenyPro 1,75 mm TRAFFIC BLACK 0,25 kg",
+      "ean": "5905991400578",
+      "cardId": "offer:materialpro3d:TIFSCM126",
+      "reasons": [
+        "missing-material"
       ]
     },
     {
@@ -11409,51 +10885,11 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSCM253",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA High Speed 1,75 mm TELEGREY 1 kg",
-      "ean": "5905991401377",
-      "cardId": "offer:materialpro3d:TIFSCM253",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSCM270",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum PLA Premium 1,75 mm TOOLING TURQUOISE 1 kg",
       "ean": "5907138401516",
       "cardId": "offer:materialpro3d:TIFSCM270",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCM274",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum PLA Premium 1,75 mm TOOLING LEMON 1 kg",
-      "ean": "5907138401134",
-      "cardId": "offer:materialpro3d:TIFSCM274",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCR303",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum ReFill Pastello PLA 1,75 mm BONBON ROSE 1 kg",
-      "ean": "5905991403593",
-      "cardId": "offer:materialpro3d:TIFSCR303",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCR305",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum ReFill Pastello PLA 1,75 mm COSMETIC MAUVE 1 kg",
-      "ean": "5905991403616",
-      "cardId": "offer:materialpro3d:TIFSCR305",
       "reasons": [
         "missing-color"
       ]
@@ -11489,31 +10925,11 @@
       ]
     },
     {
-      "offerId": "materialpro3d:TIFSCR614",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum ReFill ASA-X CF10 1,75 mm BK 1 kg",
-      "ean": "5905991404040",
-      "cardId": "offer:materialpro3d:TIFSCR614",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:TIFSCR708",
       "shopId": "materialpro3d",
       "productName": "Filament Spectrum ReFill rPETG 1,75 mm YELLOW ORANGE 1 kg",
       "ean": "5905991404125",
       "cardId": "offer:materialpro3d:TIFSCR708",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCRA07",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum ReFill PET-G Premium 1,75 mm GLASSY 1 kg",
-      "ean": "5905991404217",
-      "cardId": "offer:materialpro3d:TIFSCRA07",
       "reasons": [
         "missing-color"
       ]

@@ -7,19 +7,19 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3129 |
-| dlaždice dřív (materiál + barva + hmotnost) | 683 |
-| dlaždice teď | 2101 |
-| nabídky spojené podle EAN | 95 |
-| z toho mezi obchody | 70 |
-| skupiny EAN mezi obchody spojené / nespojené | 32 / 10 |
-| skupiny EAN spojené | 44 |
+| nabídky | 3148 |
+| dlaždice dřív (materiál + barva + hmotnost) | 688 |
+| dlaždice teď | 2077 |
+| nabídky spojené podle EAN | 82 |
+| z toho mezi obchody | 59 |
+| skupiny EAN mezi obchody spojené / nespojené | 27 / 10 |
+| skupiny EAN spojené | 38 |
 | skupiny EAN viděné a nespojené | 10 |
-| nabídky na společné dlaždici v jednom obchodě | 1270 |
+| nabídky na společné dlaždici v jednom obchodě | 1335 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 1044 |
-| značky před aliasem / po aliasu | 38 / 36 |
+| nabídky v revizi | 994 |
+| značky před aliasem / po aliasu | 39 / 37 |
 | materiály před aliasem / po aliasu | 49 / 48 |
 | barvy před aliasem / po aliasu | 69 / 69 |
 
@@ -27,9 +27,9 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 735 |
-| missing-color | 314 |
-| missing-material | 79 |
+| missing-diameter | 720 |
+| missing-color | 289 |
+| missing-material | 64 |
 | ean-conflict | 20 |
 | ean-material-conflict | 18 |
 | form-param-disagrees | 11 |
@@ -37,11 +37,6 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 | ean-weight-conflict | 2 |
 
 ## EAN přes víc obchodů
-
-`ean:5903707918508` — Professional Lab · PETG · černá · 1 kg · 1,75 mm · cívka (EAN 5903707918508)
-- 3dfil `3dfil:2360` — PROF. LAB | PETG | Černá | 1.75mm | 1kg
-- filamenty-brno `filamenty-brno:FG-P26-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Černá FG-P26-E1
-- materialpro3d `materialpro3d:PETG175PL1BK` — PETG filament 1,75 mm černý Professional Lab 1 kg
 
 `ean:5903707918539` — Professional Lab · PETG · modrá · 1 kg · 1,75 mm · cívka (EAN 5903707918539)
 - 3dfil `3dfil:3826` — PROF. LAB | PETG | Modrá | 1.75mm | 1kg
@@ -53,9 +48,14 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 - filamenty-brno `filamenty-brno:FG-P30-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Červená FG-P30-E1
 - materialpro3d `materialpro3d:PETG175PL1RD` — PETG filament 1,75 mm červený Professional Lab 1 kg
 
+`ean:5903707918553` — Professional Lab · PETG · zelená · 1 kg · 1,75 mm · cívka (EAN 5903707918553)
+- 3dfil `3dfil:2361` — PROF. LAB | PETG | Zelená | 1.75mm | 1kg
+- filamenty-brno `filamenty-brno:FG-P31-E1` — Filament Professional Lab PETG 1,75 mm 1 kg, Zelená FG-P31-E1
+- materialpro3d `materialpro3d:PETG175PL1GN` — PETG filament 1,75 mm zelený Professional Lab 1 kg
+
 ## Příklad rozdělené dlaždice
 
-Původní klíč `pla|zelená|1000`: 128 nabídek, 19 značek.
+Původní klíč `pla|zelená|1000`: 131 nabídek, 19 značek.
 - `offer:materialpro3d:PLA175LB1AGN` — 3DLabPrint · PLA · zelená · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA army green filament 1,75 mm 3DLabPrint 1 kg)
 - `ean:5904323179458` — 3DPower · PLA · zelená · 1 kg · cívka (3dfil, 3DPOWER | PLA | Zelená "Military" | 1.75mm | 1kg)
 - `offer:materialpro3d:PLA175AF1GN` — ABAFLEX · PLA · zelená · 1 kg · 1,75 mm · cívka (materialpro3d, PLA zelená 1 kg Abaflex 1,75 mm)
