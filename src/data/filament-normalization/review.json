@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3148,
-    "cardsBefore": 688,
-    "cardsAfter": 2077,
-    "offersMatchedByEan": 82,
-    "offersMatchedAcrossShopsByEan": 59,
-    "eanGroupsMerged": 38,
-    "eanGroupsCrossShop": 37,
-    "eanGroupsCrossShopMerged": 27,
-    "eanGroupsCrossShopBlocked": 10,
-    "eanGroupsBlocked": 10,
-    "eanGroupsSeen": 48,
-    "offersSharingShopKey": 1335,
+    "offers": 3141,
+    "cardsBefore": 687,
+    "cardsAfter": 2071,
+    "offersMatchedByEan": 83,
+    "offersMatchedAcrossShopsByEan": 60,
+    "eanGroupsMerged": 39,
+    "eanGroupsCrossShop": 36,
+    "eanGroupsCrossShopMerged": 28,
+    "eanGroupsCrossShopBlocked": 8,
+    "eanGroupsBlocked": 8,
+    "eanGroupsSeen": 47,
+    "offersSharingShopKey": 1334,
     "shopKeyCards": 308,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 994,
+    "reviewOffers": 987,
     "brandsBefore": 39,
     "brandsAfter": 37,
     "materialsBefore": 49,
@@ -25,12 +25,12 @@
     "colorsAfter": 69,
     "reasons": {
       "ean-brand-conflict": 2,
-      "ean-conflict": 20,
-      "ean-material-conflict": 18,
+      "ean-conflict": 16,
+      "ean-material-conflict": 14,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 11,
       "missing-color": 289,
-      "missing-diameter": 720,
+      "missing-diameter": 715,
       "missing-material": 64
     }
   },
@@ -96,33 +96,6 @@
       ]
     },
     {
-      "cardId": "ean:5903707918546",
-      "title": "Professional Lab · PETG · červená · 1 kg · 1,75 mm · cívka",
-      "ean": "5903707918546",
-      "shops": [
-        "3dfil",
-        "filamenty-brno",
-        "materialpro3d"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:2359",
-          "shopId": "3dfil",
-          "productName": "PROF. LAB | PETG | Červená | 1.75mm | 1kg"
-        },
-        {
-          "offerId": "filamenty-brno:FG-P30-E1",
-          "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab PETG 1,75 mm 1 kg, Červená FG-P30-E1"
-        },
-        {
-          "offerId": "materialpro3d:PETG175PL1RD",
-          "shopId": "materialpro3d",
-          "productName": "PETG filament 1,75 mm červený Professional Lab 1 kg"
-        }
-      ]
-    },
-    {
       "cardId": "ean:5903707918553",
       "title": "Professional Lab · PETG · zelená · 1 kg · 1,75 mm · cívka",
       "ean": "5903707918553",
@@ -146,6 +119,33 @@
           "offerId": "materialpro3d:PETG175PL1GN",
           "shopId": "materialpro3d",
           "productName": "PETG filament 1,75 mm zelený Professional Lab 1 kg"
+        }
+      ]
+    },
+    {
+      "cardId": "ean:5903707918560",
+      "title": "Professional Lab · PETG · neuvedeno · 1 kg · 1,75 mm · cívka",
+      "ean": "5903707918560",
+      "shops": [
+        "3dfil",
+        "filamenty-brno",
+        "materialpro3d"
+      ],
+      "offers": [
+        {
+          "offerId": "3dfil:3464",
+          "shopId": "3dfil",
+          "productName": "PROF. LAB | PETG | Transparent | 1.75mm | 1kg"
+        },
+        {
+          "offerId": "filamenty-brno:FG-P32-E1",
+          "shopId": "filamenty-brno",
+          "productName": "Filament Professional Lab PETG 1,75 mm 1 kg, Transparentní FG-P32-E1"
+        },
+        {
+          "offerId": "materialpro3d:PETG175PL1T",
+          "shopId": "materialpro3d",
+          "productName": "PETG filament 1,75 mm transparentní Professional Lab 1 kg"
         }
       ]
     }
@@ -210,13 +210,11 @@
       "status": "merged",
       "shops": [
         "3dfil",
-        "filamenty-brno",
-        "materialpro3d"
+        "filamenty-brno"
       ],
       "offerIds": [
         "3dfil:2359",
-        "filamenty-brno:FG-P30-E1",
-        "materialpro3d:PETG175PL1RD"
+        "filamenty-brno:FG-P30-E1"
       ],
       "reasons": []
     },
@@ -362,6 +360,19 @@
           ]
         }
       ]
+    },
+    {
+      "ean": "5903707920716",
+      "status": "merged",
+      "shops": [
+        "3dfil",
+        "filamenty-brno"
+      ],
+      "offerIds": [
+        "3dfil:4032",
+        "filamenty-brno:FG-P121-E1"
+      ],
+      "reasons": []
     },
     {
       "ean": "5903707920723",
@@ -545,43 +556,6 @@
       ]
     },
     {
-      "ean": "5903707923939",
-      "status": "blocked",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:4030",
-        "filamenty-brno:FG-P210-E1"
-      ],
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:4030",
-          "shopId": "3dfil",
-          "productName": "PROF. LAB | PETG-CF | Red | 1.75mm | 1kg",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict",
-            "missing-diameter"
-          ]
-        },
-        {
-          "offerId": "filamenty-brno:FG-P210-E1",
-          "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Červená FG-P210-E1",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict"
-          ]
-        }
-      ]
-    },
-    {
       "ean": "5903707923946",
       "status": "blocked",
       "shops": [
@@ -648,43 +622,6 @@
           "offerId": "filamenty-brno:FG-P212-E1",
           "shopId": "filamenty-brno",
           "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict"
-          ]
-        }
-      ]
-    },
-    {
-      "ean": "5903707923960",
-      "status": "blocked",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:4029",
-        "filamenty-brno:FG-P213-E1"
-      ],
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:4029",
-          "shopId": "3dfil",
-          "productName": "PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict",
-            "missing-diameter"
-          ]
-        },
-        {
-          "offerId": "filamenty-brno:FG-P213-E1",
-          "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1",
           "reasons": [
             "ean-conflict",
             "ean-material-conflict"
@@ -1079,16 +1016,6 @@
       "productName": "BAMBU LAB | PETG Translucent | Šedá | 1.75mm | 1kg | Refill",
       "ean": "8594233084804",
       "cardId": "offer:3dfil:1005",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:1007",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PLA BASIC | Černá | 1.75mm | 1kg Refill",
-      "ean": "8594233084811",
-      "cardId": "offer:3dfil:1007",
       "reasons": [
         "missing-diameter"
       ]
@@ -3203,16 +3130,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2526",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | PETG-CF | Black | 1.75mm | 1kg",
-      "ean": "8594233081445",
-      "cardId": "offer:3dfil:2526",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2540",
       "shopId": "3dfil",
       "productName": "ELEGOO | TPU 95A | Black | 1.75mm | 1kg",
@@ -3979,16 +3896,6 @@
       ]
     },
     {
-      "offerId": "3dfil:3117",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | TPU 95A | Green | 1.75mm | 1kg",
-      "ean": "8594233081995",
-      "cardId": "offer:3dfil:3117",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:3137",
       "shopId": "3dfil",
       "productName": "NEBULA | PETG | Arctic Silver | 1.75mm | 1kg",
@@ -4034,16 +3941,6 @@
       "productName": "3DPOWER | Hyper PA6 | Ink Black (Černá) | 1.75mm | 0.5kg",
       "ean": "8594233087331",
       "cardId": "offer:3dfil:3160",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3166",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG | Oranžová | 1.75mm | 1kg",
-      "ean": "8594233086327",
-      "cardId": "offer:3dfil:3166",
       "reasons": [
         "missing-diameter"
       ]
@@ -5747,18 +5644,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4029",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG-CF | Purple | 1.75mm | 1kg",
-      "ean": "5903707923960",
-      "cardId": "offer:3dfil:4029",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict",
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:403",
       "shopId": "3dfil",
       "productName": "ERYONE | PLA Silk | Ultra Red | 1.75mm | 1kg",
@@ -5769,14 +5654,12 @@
       ]
     },
     {
-      "offerId": "3dfil:4030",
+      "offerId": "3dfil:4032",
       "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG-CF | Red | 1.75mm | 1kg",
-      "ean": "5903707923939",
-      "cardId": "offer:3dfil:4030",
+      "productName": "PROF. LAB | TPU | Červená 95A | 1.75mm | 1kg",
+      "ean": "5903707920716",
+      "cardId": "ean:5903707920716",
       "reasons": [
-        "ean-conflict",
-        "ean-material-conflict",
         "missing-diameter"
       ]
     },
@@ -8015,17 +7898,6 @@
       ]
     },
     {
-      "offerId": "filamenty-brno:FG-P210-E1",
-      "shopId": "filamenty-brno",
-      "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Červená FG-P210-E1",
-      "ean": "5903707923939",
-      "cardId": "offer:filamenty-brno:FG-P210-E1",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ]
-    },
-    {
       "offerId": "filamenty-brno:FG-P211-E1",
       "shopId": "filamenty-brno",
       "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Šedá FG-P211-E1",
@@ -8042,17 +7914,6 @@
       "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1",
       "ean": "5903707923953",
       "cardId": "shop:filamenty-brno:Professional%20Lab**PETG*zelen%C3%A1*1000*1.75*spool",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ]
-    },
-    {
-      "offerId": "filamenty-brno:FG-P213-E1",
-      "shopId": "filamenty-brno",
-      "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Fialová FG-P213-E1",
-      "ean": "5903707923960",
-      "cardId": "offer:filamenty-brno:FG-P213-E1",
       "reasons": [
         "ean-conflict",
         "ean-material-conflict"
