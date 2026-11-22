@@ -3,24 +3,24 @@
   "summary": {
     "offers": 3141,
     "cardsBefore": 687,
-    "cardsAfter": 2071,
-    "offersMatchedByEan": 83,
-    "offersMatchedAcrossShopsByEan": 60,
-    "eanGroupsMerged": 39,
-    "eanGroupsCrossShop": 36,
-    "eanGroupsCrossShopMerged": 28,
+    "cardsAfter": 2072,
+    "offersMatchedByEan": 81,
+    "offersMatchedAcrossShopsByEan": 58,
+    "eanGroupsMerged": 38,
+    "eanGroupsCrossShop": 35,
+    "eanGroupsCrossShopMerged": 27,
     "eanGroupsCrossShopBlocked": 8,
     "eanGroupsBlocked": 8,
-    "eanGroupsSeen": 47,
-    "offersSharingShopKey": 1334,
-    "shopKeyCards": 308,
+    "eanGroupsSeen": 46,
+    "offersSharingShopKey": 1335,
+    "shopKeyCards": 309,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 987,
+    "reviewOffers": 989,
     "brandsBefore": 39,
     "brandsAfter": 37,
-    "materialsBefore": 49,
-    "materialsAfter": 48,
+    "materialsBefore": 48,
+    "materialsAfter": 47,
     "colorsBefore": 69,
     "colorsAfter": 69,
     "reasons": {
@@ -28,16 +28,16 @@
       "ean-conflict": 16,
       "ean-material-conflict": 14,
       "ean-weight-conflict": 2,
-      "form-param-disagrees": 11,
+      "form-param-disagrees": 12,
       "missing-color": 289,
-      "missing-diameter": 715,
+      "missing-diameter": 717,
       "missing-material": 64
     }
   },
   "splitExamples": [
     {
       "previousKey": "pla|zelená|1000",
-      "previousOffers": 131,
+      "previousOffers": 132,
       "previousBrands": 19,
       "cards": [
         {
@@ -202,19 +202,6 @@
         "3dfil:3826",
         "filamenty-brno:FG-P29-E1",
         "materialpro3d:PETG175PL1BE"
-      ],
-      "reasons": []
-    },
-    {
-      "ean": "5903707918546",
-      "status": "merged",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:2359",
-        "filamenty-brno:FG-P30-E1"
       ],
       "reasons": []
     },
@@ -1061,6 +1048,16 @@
       ]
     },
     {
+      "offerId": "3dfil:1012",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA BASIC | Zelená \"jas\" | 1.75mm | 1kg | Refill",
+      "ean": "8594233084866",
+      "cardId": "offer:3dfil:1012",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:1013",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA BASIC | Tyrkysová | 1.75mm | 1kg | Refill",
@@ -1087,6 +1084,16 @@
       "productName": "BAMBU LAB | PLA BASIC | Růžová \"hot\" | 1.75mm | 1kg | Refill",
       "ean": "8594233084897",
       "cardId": "offer:3dfil:1015",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1016",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA BASIC | Červená \"kaštan\" | 1.75mm | 1kg | Refill",
+      "ean": "8594233084903",
+      "cardId": "offer:3dfil:1016",
       "reasons": [
         "missing-diameter"
       ]
@@ -1207,6 +1214,16 @@
       "productName": "BAMBU LAB | PA6 GF | Černá | 1.75mm | 1kg",
       "ean": "8594233085122",
       "cardId": "offer:3dfil:1175",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1180",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Matte | Hnědá \"Latte\" | 1.75mm | 1kg | Refill",
+      "ean": "8594233085177",
+      "cardId": "offer:3dfil:1180",
       "reasons": [
         "missing-diameter"
       ]
@@ -1972,6 +1989,16 @@
       "productName": "ERYONE | Pla Silk Triple-color | Zlatá - Zelená - Fialová | 1.75mm | 1kg",
       "ean": "8594233083067",
       "cardId": "offer:3dfil:1671",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1675",
+      "shopId": "3dfil",
+      "productName": "ERYONE | Pla Silk Dual-color | Žlutá-zelená | 1.75mm | 1kg",
+      "ean": "8594233083081",
+      "cardId": "offer:3dfil:1675",
       "reasons": [
         "missing-diameter"
       ]
@@ -2896,16 +2923,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2359",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG | Červená | 1.75mm | 1kg",
-      "ean": "5903707918546",
-      "cardId": "ean:5903707918546",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2361",
       "shopId": "3dfil",
       "productName": "PROF. LAB | PETG | Zelená | 1.75mm | 1kg",
@@ -2921,16 +2938,6 @@
       "productName": "PROF. LAB | ABS | Černá | 1.75mm | 1kg",
       "ean": "8594233086167",
       "cardId": "offer:3dfil:2389",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:2392",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PLA Silk | Gold | 1.75mm | 1kg",
-      "ean": "8594233086174",
-      "cardId": "offer:3dfil:2392",
       "reasons": [
         "missing-diameter"
       ]
@@ -3896,6 +3903,16 @@
       ]
     },
     {
+      "offerId": "3dfil:3119",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA BASIC | Černá | 1.75mm | 1kg | Spool",
+      "ean": "8594233085887",
+      "cardId": "offer:3dfil:3119",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:3137",
       "shopId": "3dfil",
       "productName": "NEBULA | PETG | Arctic Silver | 1.75mm | 1kg",
@@ -4104,6 +4121,16 @@
       "productName": "BAMBU LAB | PLA BASIC | Bílá \"Jade\" | 1.75mm | 1kg | Spool",
       "ean": "8594233085900",
       "cardId": "offer:3dfil:3261",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:3262",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Silk+ | Champagne | 1.75mm | 1kg | Spool",
+      "ean": "8594233085917",
+      "cardId": "offer:3dfil:3262",
       "reasons": [
         "missing-diameter"
       ]
@@ -4769,16 +4796,6 @@
       "productName": "3DPOWER | PETG | Select Šedá | 1.75mm | 1kg",
       "ean": "5905143083567",
       "cardId": "offer:3dfil:3614",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3615",
-      "shopId": "3dfil",
-      "productName": "PROF. LAB | PETG | Oak | 1.75mm | 1kg",
-      "ean": "8594233088000",
-      "cardId": "offer:3dfil:3615",
       "reasons": [
         "missing-diameter"
       ]
@@ -6010,6 +6027,17 @@
       ]
     },
     {
+      "offerId": "3dfil:4170",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PETG Translucent | Clear | 1.75mm | 1kg | Spool",
+      "ean": "8594233089076",
+      "cardId": "offer:3dfil:4170",
+      "reasons": [
+        "form-param-disagrees",
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4171",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PETG Basic | Šedá | 1.75mm | 1kg | Spool",
@@ -6407,16 +6435,6 @@
       ]
     },
     {
-      "offerId": "3dfil:4339",
-      "shopId": "3dfil",
-      "productName": "BAMBU LAB | PETG Matte | Černá | 1.75mm | 1kg | Spool",
-      "ean": "8594233089359",
-      "cardId": "offer:3dfil:4339",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:434",
       "shopId": "3dfil",
       "productName": "3DPOWER | PLA | Žlutá | 1.75mm | 1kg",
@@ -6592,16 +6610,6 @@
       "productName": "ERYONE | TPU | 85A | Transparentní červená | 1.75mm | 1kg",
       "ean": "8594233089540",
       "cardId": "offer:3dfil:4392",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:4401",
-      "shopId": "3dfil",
-      "productName": "Polymaker | PolyCast | 1.75mm | 0,75kg",
-      "ean": "8594233082350",
-      "cardId": "offer:3dfil:4401",
       "reasons": [
         "missing-diameter"
       ]
