@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "summary": {
-    "offers": 3113,
-    "cardsBefore": 684,
-    "cardsAfter": 2060,
-    "offersMatchedByEan": 80,
-    "offersMatchedAcrossShopsByEan": 57,
-    "eanGroupsMerged": 38,
-    "eanGroupsCrossShop": 34,
-    "eanGroupsCrossShopMerged": 27,
-    "eanGroupsCrossShopBlocked": 7,
-    "eanGroupsBlocked": 7,
-    "eanGroupsSeen": 45,
-    "offersSharingShopKey": 1315,
-    "shopKeyCards": 304,
+    "offers": 3107,
+    "cardsBefore": 687,
+    "cardsAfter": 2058,
+    "offersMatchedByEan": 76,
+    "offersMatchedAcrossShopsByEan": 55,
+    "eanGroupsMerged": 36,
+    "eanGroupsCrossShop": 32,
+    "eanGroupsCrossShopMerged": 26,
+    "eanGroupsCrossShopBlocked": 6,
+    "eanGroupsBlocked": 6,
+    "eanGroupsSeen": 42,
+    "offersSharingShopKey": 1312,
+    "shopKeyCards": 303,
     "offersMatchedByMap": 0,
     "mapGroupsMerged": 0,
-    "reviewOffers": 980,
+    "reviewOffers": 978,
     "brandsBefore": 39,
     "brandsAfter": 37,
     "materialsBefore": 48,
@@ -25,19 +25,19 @@
     "colorsAfter": 69,
     "reasons": {
       "ean-brand-conflict": 2,
-      "ean-conflict": 14,
-      "ean-material-conflict": 12,
+      "ean-conflict": 12,
+      "ean-material-conflict": 10,
       "ean-weight-conflict": 2,
       "form-param-disagrees": 12,
-      "missing-color": 285,
-      "missing-diameter": 712,
+      "missing-color": 283,
+      "missing-diameter": 713,
       "missing-material": 64
     }
   },
   "splitExamples": [
     {
       "previousKey": "pla|zelená|1000",
-      "previousOffers": 131,
+      "previousOffers": 130,
       "previousBrands": 19,
       "cards": [
         {
@@ -206,19 +206,6 @@
       "reasons": []
     },
     {
-      "ean": "5903707918546",
-      "status": "merged",
-      "shops": [
-        "filamenty-brno",
-        "materialpro3d"
-      ],
-      "offerIds": [
-        "filamenty-brno:FG-P30-E1",
-        "materialpro3d:PETG175PL1RD"
-      ],
-      "reasons": []
-    },
-    {
       "ean": "5903707918553",
       "status": "merged",
       "shops": [
@@ -284,43 +271,6 @@
         "materialpro3d:PETG175PL1BN"
       ],
       "reasons": []
-    },
-    {
-      "ean": "5903707919130",
-      "status": "blocked",
-      "shops": [
-        "3dfil",
-        "filamenty-brno"
-      ],
-      "offerIds": [
-        "3dfil:4709",
-        "filamenty-brno:FG-P89-E1"
-      ],
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ],
-      "offers": [
-        {
-          "offerId": "3dfil:4709",
-          "shopId": "3dfil",
-          "productName": "PROF. LAB | PLA Silk | White | 1.75mm | 1kg",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict",
-            "missing-diameter"
-          ]
-        },
-        {
-          "offerId": "filamenty-brno:FG-P89-E1",
-          "shopId": "filamenty-brno",
-          "productName": "Filament Professional Lab PLA Silk 1,75 mm 1 kg, Bílá FG-P89-E1",
-          "reasons": [
-            "ean-conflict",
-            "ean-material-conflict"
-          ]
-        }
-      ]
     },
     {
       "ean": "5903707920525",
@@ -653,18 +603,6 @@
       "reasons": []
     },
     {
-      "ean": "5906269966307",
-      "status": "merged",
-      "shops": [
-        "3dfil"
-      ],
-      "offerIds": [
-        "3dfil:2984",
-        "3dfil:3318"
-      ],
-      "reasons": []
-    },
-    {
       "ean": "5906269966451",
       "status": "merged",
       "shops": [
@@ -964,6 +902,16 @@
       "productName": "BAMBU LAB | PETG Translucent | Šedá | 1.75mm | 1kg | Refill",
       "ean": "8594233084804",
       "cardId": "offer:3dfil:1005",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1007",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA BASIC | Černá | 1.75mm | 1kg Refill",
+      "ean": "8594233084811",
+      "cardId": "offer:3dfil:1007",
       "reasons": [
         "missing-diameter"
       ]
@@ -1287,6 +1235,16 @@
       "productName": "BAMBU LAB | PLA Matte | Hnědá \"Dark\" | 1.75mm | 1kg | Refill",
       "ean": "8594233085290",
       "cardId": "offer:3dfil:1192",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
+      "offerId": "3dfil:1193",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | PLA Matte | Zelená tmavá | 1.75mm | 1kg | Refill",
+      "ean": "8594233085306",
+      "cardId": "offer:3dfil:1193",
       "reasons": [
         "missing-diameter"
       ]
@@ -2813,6 +2771,16 @@
       ]
     },
     {
+      "offerId": "3dfil:2337",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | ASA | Červená | 1.75mm | 1kg | Spool",
+      "ean": "8594233085566",
+      "cardId": "offer:3dfil:2337",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:2350",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | TPU 90A | Černá | 1.75mm | 1kg",
@@ -3327,16 +3295,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2725",
-      "shopId": "3dfil",
-      "productName": "ELEGOO | Rapid TPU 95A | Black | 1.75mm | 1kg",
-      "ean": "8594233081612",
-      "cardId": "offer:3dfil:2725",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2743",
       "shopId": "3dfil",
       "productName": "POLYMAKER | PLA Panchroma™ Luminuous | Multicolor | 1.75mm | 1kg",
@@ -3630,16 +3588,6 @@
       ]
     },
     {
-      "offerId": "3dfil:2984",
-      "shopId": "3dfil",
-      "productName": "NEBULA | PETG | Yellow | 1.75mm | 1kg",
-      "ean": "5906269966307",
-      "cardId": "ean:5906269966307",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
       "offerId": "3dfil:2991",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | PLA Silk+ | Zelená \"Mint\" | 1.75mm | 1kg | Spool",
@@ -3828,16 +3776,6 @@
       "productName": "NEBULA | PETG | Lime Green | 1.75mm | 1kg",
       "ean": "5906269965652",
       "cardId": "ean:5906269965652",
-      "reasons": [
-        "missing-diameter"
-      ]
-    },
-    {
-      "offerId": "3dfil:3080",
-      "shopId": "3dfil",
-      "productName": "NEBULA | PETG | Natural | 1.75mm | 1kg",
-      "ean": "5906269965805",
-      "cardId": "offer:3dfil:3080",
       "reasons": [
         "missing-diameter"
       ]
@@ -4191,7 +4129,7 @@
       "shopId": "3dfil",
       "productName": "NEBULA | PETG | Yellow Gold | 1.75mm | 1kg",
       "ean": "5906269966307",
-      "cardId": "ean:5906269966307",
+      "cardId": "offer:3dfil:3318",
       "reasons": [
         "missing-color",
         "missing-diameter"
@@ -6868,6 +6806,16 @@
       ]
     },
     {
+      "offerId": "3dfil:4523",
+      "shopId": "3dfil",
+      "productName": "BAMBU LAB | TPU For AMS | Gray (šedá) | 1.75mm | 1kg | Spool",
+      "ean": "8594233086938",
+      "cardId": "offer:3dfil:4523",
+      "reasons": [
+        "missing-diameter"
+      ]
+    },
+    {
       "offerId": "3dfil:4524",
       "shopId": "3dfil",
       "productName": "BAMBU LAB | TPU For AMS | Blue (modrá) | 1.75mm | 1kg | Spool",
@@ -7258,8 +7206,6 @@
       "ean": "5903707919130",
       "cardId": "offer:3dfil:4709",
       "reasons": [
-        "ean-conflict",
-        "ean-material-conflict",
         "missing-diameter"
       ]
     },
@@ -7819,17 +7765,6 @@
       "productName": "Filament Professional Lab PETG+CF 1,75 mm 1 kg, Zelená FG-P212-E1",
       "ean": "5903707923953",
       "cardId": "shop:filamenty-brno:Professional%20Lab**PETG*zelen%C3%A1*1000*1.75*spool",
-      "reasons": [
-        "ean-conflict",
-        "ean-material-conflict"
-      ]
-    },
-    {
-      "offerId": "filamenty-brno:FG-P89-E1",
-      "shopId": "filamenty-brno",
-      "productName": "Filament Professional Lab PLA Silk 1,75 mm 1 kg, Bílá FG-P89-E1",
-      "ean": "5903707919130",
-      "cardId": "shop:filamenty-brno:Professional%20Lab**PLA*b%C3%ADl%C3%A1*1000*1.75*spool",
       "reasons": [
         "ean-conflict",
         "ean-material-conflict"
@@ -9564,16 +9499,6 @@
       ]
     },
     {
-      "offerId": "materialpro3d:PLAS175SP1CBZ",
-      "shopId": "materialpro3d",
-      "productName": "PLA Silk filament bronzový Cinnamon Bronze 1,75 mm Spectrum 1 kg",
-      "ean": "5903175652164",
-      "cardId": "offer:materialpro3d:PLAS175SP1CBZ",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
       "offerId": "materialpro3d:PLAS175SP1GGD",
       "shopId": "materialpro3d",
       "productName": "PLA Silk filament zlatý Glorious Gold 1,75 mm Spectrum 1 kg",
@@ -10206,16 +10131,6 @@
       "productName": "Filament Spectrum ABS Medical 1,75 mm 1 kg",
       "ean": "5903175650924",
       "cardId": "offer:materialpro3d:TIFSCE228",
-      "reasons": [
-        "missing-color"
-      ]
-    },
-    {
-      "offerId": "materialpro3d:TIFSCE343",
-      "shopId": "materialpro3d",
-      "productName": "Filament Spectrum 5PACK PLA Magic SILK 1,75 mm (5x 0,25 kg)",
-      "ean": "5905991404866",
-      "cardId": "offer:materialpro3d:TIFSCE343",
       "reasons": [
         "missing-color"
       ]

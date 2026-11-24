@@ -7,18 +7,18 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | | počet |
 | --- | ---: |
-| nabídky | 3113 |
-| dlaždice dřív (materiál + barva + hmotnost) | 684 |
-| dlaždice teď | 2060 |
-| nabídky spojené podle EAN | 80 |
-| z toho mezi obchody | 57 |
-| skupiny EAN mezi obchody spojené / nespojené | 27 / 7 |
-| skupiny EAN spojené | 38 |
-| skupiny EAN viděné a nespojené | 7 |
-| nabídky na společné dlaždici v jednom obchodě | 1315 |
+| nabídky | 3107 |
+| dlaždice dřív (materiál + barva + hmotnost) | 687 |
+| dlaždice teď | 2058 |
+| nabídky spojené podle EAN | 76 |
+| z toho mezi obchody | 55 |
+| skupiny EAN mezi obchody spojené / nespojené | 26 / 6 |
+| skupiny EAN spojené | 36 |
+| skupiny EAN viděné a nespojené | 6 |
+| nabídky na společné dlaždici v jednom obchodě | 1312 |
 | nabídky spojené podle mapy | 0 |
 | skupiny mapy spojené | 0 |
-| nabídky v revizi | 980 |
+| nabídky v revizi | 978 |
 | značky před aliasem / po aliasu | 39 / 37 |
 | materiály před aliasem / po aliasu | 48 / 47 |
 | barvy před aliasem / po aliasu | 69 / 69 |
@@ -27,12 +27,12 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 | důvod | nabídek |
 | --- | ---: |
-| missing-diameter | 712 |
-| missing-color | 285 |
+| missing-diameter | 713 |
+| missing-color | 283 |
 | missing-material | 64 |
-| ean-conflict | 14 |
-| ean-material-conflict | 12 |
+| ean-conflict | 12 |
 | form-param-disagrees | 12 |
+| ean-material-conflict | 10 |
 | ean-brand-conflict | 2 |
 | ean-weight-conflict | 2 |
 
@@ -55,14 +55,13 @@ Klíč je značka, materiál, barva, hmotnost, průměr a balení. Produktová �
 
 ## Příklad rozdělené dlaždice
 
-Původní klíč `pla|zelená|1000`: 131 nabídek, 19 značek.
+Původní klíč `pla|zelená|1000`: 130 nabídek, 19 značek.
 - `offer:materialpro3d:PLA175LB1AGN` — 3DLabPrint · PLA · zelená · 1 kg · 1,75 mm · cívka (materialpro3d, PolyLight 1.0 LW PLA army green filament 1,75 mm 3DLabPrint 1 kg)
 - `ean:5904323179458` — 3DPower · PLA · zelená · 1 kg · cívka (3dfil, 3DPOWER | PLA | Zelená "Military" | 1.75mm | 1kg)
 - `offer:materialpro3d:PLA175AF1GN` — ABAFLEX · PLA · zelená · 1 kg · 1,75 mm · cívka (materialpro3d, PLA zelená 1 kg Abaflex 1,75 mm)
 
 ## EAN, které se nespojilo
 
-- EAN 5903707919130 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4709 (PROF. LAB | PLA Silk | White | 1.75mm | 1kg); filamenty-brno:FG-P89-E1 (Filament Professional Lab PLA Silk 1,75 mm 1 kg, Bílá FG-P89-E1)
 - EAN 5903707920525 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:2399 (PROF. LAB | Pla Dual Silk | Černá-fialová | 1.75mm | 1kg); filamenty-brno:FG-P102-E1 (Filament Professional Lab PLA Silk 1,75 mm 1 kg, Dvoubarevný černě-fialová FG-P102-E1)
 - EAN 5903707922932 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:4594 (PROF. LAB | PLA Wood | Maple Wood | 1.75mm | 1kg); filamenty-brno:FG-P159-E1 (Filament Professional Lab PLA 1,75 mm 1 kg, Javorová FG-P159-E1)
 - EAN 5903707923922 — 3dfil, filamenty-brno — ean-conflict, ean-material-conflict — 3dfil:3653 (PROF. LAB | PETG-CF | Blue | 1.75mm | 1kg); filamenty-brno:FG-P209-E1 (Filament Professional Lab PETG+CF 1,75 mm 1 kg, Modrá FG-P209-E1)
